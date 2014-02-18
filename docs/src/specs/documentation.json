@@ -1,0 +1,2987 @@
+{
+  "stylers": {
+    "PXAnimationStyler": {
+      "type": "styler",
+      "properties": {
+        "animation": {
+          "source": "<single-animation>#",
+          "ast": {
+            "#": {
+              "type": "single-animation"
+            }
+          }
+        },
+        "animation-name": {
+          "source": "<name>#",
+          "ast": {
+            "#": {
+              "type": "name"
+            }
+          }
+        },
+        "animation-duration": {
+          "source": "<time>#",
+          "ast": {
+            "#": {
+              "type": "time"
+            }
+          }
+        },
+        "animation-timing-function": {
+          "source": "<timing-function>#",
+          "ast": {
+            "#": {
+              "type": "timing-function"
+            }
+          }
+        },
+        "animation-iteration-count": {
+          "source": "<number>#",
+          "ast": {
+            "#": {
+              "type": "number"
+            }
+          }
+        },
+        "animation-direction": {
+          "source": "<direction>#",
+          "ast": {
+            "#": {
+              "type": "direction"
+            }
+          }
+        },
+        "animation-play-state": {
+          "source": "<play-state>#",
+          "ast": {
+            "#": {
+              "type": "play-state"
+            }
+          }
+        },
+        "animation-delay": {
+          "source": "<time>#",
+          "ast": {
+            "#": {
+              "type": "time"
+            }
+          }
+        },
+        "animation-fill-mode": {
+          "source": "<fill-mode>#",
+          "ast": {
+            "#": {
+              "type": "fill-mode"
+            }
+          }
+        }
+      }
+    },
+    "PXAttributedTextStyler": {
+      "type": "styler",
+      "properties": {
+        "text": {
+          "source": "<string>",
+          "ast": {
+            "type": "string"
+          }
+        },
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "font-family": {
+          "source": "<string>",
+          "ast": {
+            "type": "string"
+          }
+        },
+        "font-size": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "font-style": {
+          "source": "normal | italic | oblique",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "italic"
+              },
+              {
+                "identifier": "oblique"
+              }
+            ]
+          }
+        },
+        "font-weight": {
+          "source": "normal | bold | black | heavy | extra-bold | ultra-bold | semi-bold | demi-bold | medium | light | extra-thin | ultra-thin | thin | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "bold"
+              },
+              {
+                "identifier": "black"
+              },
+              {
+                "identifier": "heavy"
+              },
+              {
+                "identifier": "extra-bold"
+              },
+              {
+                "identifier": "ultra-bold"
+              },
+              {
+                "identifier": "semi-bold"
+              },
+              {
+                "identifier": "demi-bold"
+              },
+              {
+                "identifier": "medium"
+              },
+              {
+                "identifier": "light"
+              },
+              {
+                "identifier": "extra-thin"
+              },
+              {
+                "identifier": "ultra-thin"
+              },
+              {
+                "identifier": "thin"
+              },
+              {
+                "identifier": "100"
+              },
+              {
+                "identifier": "200"
+              },
+              {
+                "identifier": "300"
+              },
+              {
+                "identifier": "400"
+              },
+              {
+                "identifier": "500"
+              },
+              {
+                "identifier": "600"
+              },
+              {
+                "identifier": "700"
+              },
+              {
+                "identifier": "800"
+              },
+              {
+                "identifier": "900"
+              }
+            ]
+          }
+        },
+        "font-stretch": {
+          "source": "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "ultra-condensed"
+              },
+              {
+                "identifier": "extra-condensed"
+              },
+              {
+                "identifier": "condensed"
+              },
+              {
+                "identifier": "semi-condensed"
+              },
+              {
+                "identifier": "semi-expanded"
+              },
+              {
+                "identifier": "expanded"
+              },
+              {
+                "identifier": "extra-expanded"
+              },
+              {
+                "identifier": "ultra-expanded"
+              }
+            ]
+          }
+        },
+        "letter-spacing": {
+          "source": "<length> | ems | percent",
+          "ast": {
+            "xor": [
+              {
+                "type": "length"
+              },
+              {
+                "identifier": "ems"
+              },
+              {
+                "identifier": "percent"
+              }
+            ]
+          }
+        },
+        "text-transform": {
+          "source": "uppercase | lowercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-decoration": {
+          "source": "underline | line-through | letterpress",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "underline"
+              },
+              {
+                "identifier": "line-through"
+              },
+              {
+                "identifier": "letterpress"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "PXBarMetricsAdjustmentStyler": {
+      "type": "styler",
+      "properties": {
+        "vertical-position-adjustment": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        }
+      }
+    },
+    "PXBarShadowStyler": {
+      "type": "styler",
+      "properties": {
+        "shadow": {
+          "source": "<url>",
+          "ast": {
+            "type": "url"
+          }
+        },
+        "shadow-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "shadow-inset": {
+          "source": "<inset>",
+          "ast": {
+            "type": "inset"
+          }
+        },
+        "shadow-padding": {
+          "source": "<number>",
+          "ast": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "PXBorderStyler": {
+      "type": "styler",
+      "properties": {
+        "border": {
+          "source": "<width> || <border-style> || <paint>",
+          "ast": {
+            "ior": [
+              {
+                "type": "width"
+              },
+              {
+                "type": "border-style"
+              },
+              {
+                "type": "paint"
+              }
+            ]
+          }
+        },
+        "border-top": null,
+        "border-right": null,
+        "border-bottom": null,
+        "border-left": null,
+        "border-radius": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "border-top-left-radius": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "border-top-right-radius": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "border-bottom-right-radius": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "border-bottom-left-radius": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "border-width": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "border-top-width": null,
+        "border-right-width": null,
+        "border-bottom-width": null,
+        "border-left-width": null,
+        "border-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "border-top-color": null,
+        "border-right-color": null,
+        "border-bottom-color": null,
+        "border-left-color": null,
+        "border-style": {
+          "source": "<border-style>",
+          "ast": {
+            "type": "border-style"
+          }
+        },
+        "border-top-style": null,
+        "border-right-style": null,
+        "border-bottom-style": null,
+        "border-left-style": null
+      }
+    },
+    "PXBoxShadowStyler": {
+      "type": "styler",
+      "properties": {
+        "box-shadow": {
+          "source": "<shadow> [\",\" <shadow>]*",
+          "ast": {
+            "and": [
+              {
+                "type": "shadow"
+              },
+              {
+                "*": {
+                  "group": {
+                    "and": [
+                      {
+                        "string": ","
+                      },
+                      {
+                        "type": "shadow"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "PXColorStyler": {
+      "type": "styler",
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      }
+    },
+    "PXFillStyler": {
+      "type": "styler",
+      "properties": {
+        "background-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "background-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "background-inset": {
+          "source": "<inset>",
+          "ast": {
+            "type": "inset"
+          }
+        },
+        "background-inset-top": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-inset-right": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-inset-bottom": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-inset-left": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-image": {
+          "source": "<url>",
+          "ast": {
+            "type": "url"
+          }
+        },
+        "background-padding": {
+          "source": "<padding>",
+          "ast": {
+            "type": "padding"
+          }
+        },
+        "background-top-padding": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-right-padding": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-bottom-padding": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "background-left-padding": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        }
+      }
+    },
+    "PXFontStyler": {
+      "type": "styler",
+      "properties": {
+        "font-family": {
+          "source": "<string>",
+          "ast": {
+            "type": "string"
+          }
+        },
+        "font-size": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "font-style": {
+          "source": "normal | italic | oblique",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "italic"
+              },
+              {
+                "identifier": "oblique"
+              }
+            ]
+          }
+        },
+        "font-weight": {
+          "source": "normal | bold | black | heavy | extra-bold | ultra-bold | semi-bold | demi-bold | medium | light | extra-thin | ultra-thin | thin | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "bold"
+              },
+              {
+                "identifier": "black"
+              },
+              {
+                "identifier": "heavy"
+              },
+              {
+                "identifier": "extra-bold"
+              },
+              {
+                "identifier": "ultra-bold"
+              },
+              {
+                "identifier": "semi-bold"
+              },
+              {
+                "identifier": "demi-bold"
+              },
+              {
+                "identifier": "medium"
+              },
+              {
+                "identifier": "light"
+              },
+              {
+                "identifier": "extra-thin"
+              },
+              {
+                "identifier": "ultra-thin"
+              },
+              {
+                "identifier": "thin"
+              },
+              {
+                "identifier": "100"
+              },
+              {
+                "identifier": "200"
+              },
+              {
+                "identifier": "300"
+              },
+              {
+                "identifier": "400"
+              },
+              {
+                "identifier": "500"
+              },
+              {
+                "identifier": "600"
+              },
+              {
+                "identifier": "700"
+              },
+              {
+                "identifier": "800"
+              },
+              {
+                "identifier": "900"
+              }
+            ]
+          }
+        },
+        "font-stretch": {
+          "source": "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "ultra-condensed"
+              },
+              {
+                "identifier": "extra-condensed"
+              },
+              {
+                "identifier": "condensed"
+              },
+              {
+                "identifier": "semi-condensed"
+              },
+              {
+                "identifier": "semi-expanded"
+              },
+              {
+                "identifier": "expanded"
+              },
+              {
+                "identifier": "extra-expanded"
+              },
+              {
+                "identifier": "ultra-expanded"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "PXLayoutStyler": {
+      "type": "styler",
+      "properties": {
+        "top": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "left": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "width": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "height": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "position": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        }
+      }
+    },
+    "PXOpacityStyler": {
+      "type": "styler",
+      "properties": {
+        "opacity": {
+          "source": "<number>",
+          "ast": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "PXPaintStyler": {
+      "type": "styler",
+      "properties": {
+        "color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        }
+      }
+    },
+    "PXShapeStyler": {
+      "type": "styler",
+      "properties": {
+        "shape": {
+          "source": "ellipse | rectangle | arrow-button-left | arrow-button-right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "ellipse"
+              },
+              {
+                "identifier": "rectangle"
+              },
+              {
+                "identifier": "arrow-button-left"
+              },
+              {
+                "identifier": "arrow-button-right"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "PXTextContentStyler": {
+      "type": "styler",
+      "properties": {
+        "text": {
+          "source": "<string>",
+          "ast": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "PXTextShadowStyler": {
+      "type": "styler",
+      "properties": {
+        "text-shadow": {
+          "source": "<shadow>",
+          "ast": {
+            "type": "shadow"
+          }
+        }
+      }
+    },
+    "PXTransformStyler": {
+      "type": "styler",
+      "properties": {
+        "transform": {
+          "source": "<transform>+",
+          "ast": {
+            "+": {
+              "type": "transform"
+            }
+          }
+        }
+      }
+    },
+    "PXTransitionStyler": {
+      "type": "styler",
+      "properties": {
+        "transition": {
+          "source": "<single-transition>#",
+          "ast": {
+            "#": {
+              "type": "single-transition"
+            }
+          }
+        },
+        "transition-property": {
+          "source": "<name>#",
+          "ast": {
+            "#": {
+              "type": "name"
+            }
+          }
+        },
+        "transition-duration": {
+          "source": "<time>#",
+          "ast": {
+            "#": {
+              "type": "time"
+            }
+          }
+        },
+        "transition-timing-function": {
+          "source": "<timing-function>#",
+          "ast": {
+            "#": {
+              "type": "timing-function"
+            }
+          }
+        },
+        "transition-delay": {
+          "source": "<time>#",
+          "ast": {
+            "#": {
+              "type": "time"
+            }
+          }
+        }
+      }
+    }
+  },
+  "controls": {
+    "PXForceLoadControls": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "PXMKAnnotationView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "annotation-view"
+    },
+    "PXMKMapView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "map-view"
+    },
+    "PXMPVolumeView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "slider"
+      ],
+      "elementName": "volume-view"
+    },
+    "PXMPVolumeView.slider": {
+      "elementName": "slider",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUIActionSheet": {
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "action-sheet"
+    },
+    "PXUIActivityIndicatorView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXOpacityStyler",
+        "PXLayoutStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "style": {
+          "source": "large | small | small-gray",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "large"
+              },
+              {
+                "identifier": "small"
+              },
+              {
+                "identifier": "small-gray"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "elementName": "activity-indicator-view"
+    },
+    "PXUIButton": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-overflow": {
+          "source": "clip | ellipsis | ellipsis-head | ellipsis-middle | ellipsis-tail | character-wrap | word-wrap",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "clip"
+              },
+              {
+                "identifier": "ellipsis"
+              },
+              {
+                "identifier": "ellipsis-head"
+              },
+              {
+                "identifier": "ellipsis-middle"
+              },
+              {
+                "identifier": "ellipsis-tail"
+              },
+              {
+                "identifier": "character-wrap"
+              },
+              {
+                "identifier": "word-wrap"
+              }
+            ]
+          }
+        },
+        "content-edge-inset": {
+          "source": "<inset>",
+          "ast": {
+            "type": "inset"
+          }
+        },
+        "content-edge-top-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "content-edge-right-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "content-edge-bottom-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "content-edge-left-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "title-edge-inset": {
+          "source": "<inset>",
+          "ast": {
+            "type": "inset"
+          }
+        },
+        "title-edge-top-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "title-edge-right-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "title-edge-bottom-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "title-edge-left-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "image-edge-inset": {
+          "source": "<inset>",
+          "ast": {
+            "type": "inset"
+          }
+        },
+        "image-edge-top-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "image-edge-right-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "image-edge-bottom-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "image-edge-left-inset": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        }
+      },
+      "children": [
+        "icon",
+        "attributed-text"
+      ],
+      "elementName": "button",
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUIButton.icon": {
+      "elementName": "icon",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIButton.attributed-text": {
+      "elementName": "attributed-text",
+      "type": "view",
+      "stylers": [
+        "PXAttributedTextStyler"
+      ],
+      "properties": {}
+    },
+    "PXUICollectionView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "cell-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "cell-width": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "cell-height": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "selection-mode": {
+          "source": "single | multiple",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "single"
+              },
+              {
+                "identifier": "multiple"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "elementName": "collection-view"
+    },
+    "PXUICollectionViewCell": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "content-view"
+      ],
+      "elementName": "collection-view-cell",
+      "pseudoClasses": [
+        "normal (default)",
+        "selected"
+      ]
+    },
+    "PXUICollectionViewCell.content-view": {
+      "elementName": "content-view",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUICollectionViewDelegate": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "PXUIDatePicker": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "date-picker"
+    },
+    "PXUIImageView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "-ios-rendering-mode": {
+          "source": "original | template | automatic",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "original"
+              },
+              {
+                "identifier": "template"
+              },
+              {
+                "identifier": "automatic"
+              }
+            ]
+          },
+          "comment": "iOS 7 or later"
+        },
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          },
+          "comment": "iOS 7 or later"
+        }
+      },
+      "children": [],
+      "elementName": "image-view",
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted"
+      ]
+    },
+    "PXUILabel": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "text-overflow": {
+          "source": "clip | ellipsis | ellipsis-head | ellipsis-middle | ellipsis-tail | character-wrap | word-wrap",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "clip"
+              },
+              {
+                "identifier": "ellipsis"
+              },
+              {
+                "identifier": "ellipsis-head"
+              },
+              {
+                "identifier": "ellipsis-middle"
+              },
+              {
+                "identifier": "ellipsis-tail"
+              },
+              {
+                "identifier": "character-wrap"
+              },
+              {
+                "identifier": "word-wrap"
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "attributed-text"
+      ],
+      "elementName": "label",
+      "pseudoClasses": [
+        "normal",
+        "highlighted"
+      ]
+    },
+    "PXUILabel.attributed-text": {
+      "elementName": "attributed-text",
+      "type": "view",
+      "stylers": [
+        "PXAttributedTextStyler"
+      ],
+      "properties": {}
+    },
+    "PXUINavigationBar": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXBarMetricsAdjustmentStyler",
+        "PXPaintStyler",
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXBarShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "background-position": null,
+        "color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          },
+          "comment": "Deprecated in 1.1. Please use 'color' on the 'title' child element"
+        },
+        "text-shadow": {
+          "source": "<shadow>",
+          "ast": {
+            "type": "shadow"
+          },
+          "comment": "Deprecated in 1.1. Please use 'text-shadow' on the 'title' child element"
+        },
+        "font-family": {
+          "source": "<string>",
+          "ast": {
+            "type": "string"
+          },
+          "comment": "Deprecated in 1.1. Please use 'font-family' on the 'title' child element"
+        },
+        "font-size": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          },
+          "comment": "Deprecated in 1.1. Please use 'font-size' on the 'title' child element"
+        },
+        "font-style": {
+          "source": "normal | italic | oblique",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "italic"
+              },
+              {
+                "identifier": "oblique"
+              }
+            ]
+          },
+          "comment": "Deprecated in 1.1. Please use 'font-style' on the 'title' child element"
+        },
+        "font-weight": {
+          "source": "normal | bold | black | heavy | extra-bold | ultra-bold | semi-bold | demi-bold | medium | light | extra-thin | ultra-thin | thin | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "bold"
+              },
+              {
+                "identifier": "black"
+              },
+              {
+                "identifier": "heavy"
+              },
+              {
+                "identifier": "extra-bold"
+              },
+              {
+                "identifier": "ultra-bold"
+              },
+              {
+                "identifier": "semi-bold"
+              },
+              {
+                "identifier": "demi-bold"
+              },
+              {
+                "identifier": "medium"
+              },
+              {
+                "identifier": "light"
+              },
+              {
+                "identifier": "extra-thin"
+              },
+              {
+                "identifier": "ultra-thin"
+              },
+              {
+                "identifier": "thin"
+              },
+              {
+                "identifier": "100"
+              },
+              {
+                "identifier": "200"
+              },
+              {
+                "identifier": "300"
+              },
+              {
+                "identifier": "400"
+              },
+              {
+                "identifier": "500"
+              },
+              {
+                "identifier": "600"
+              },
+              {
+                "identifier": "700"
+              },
+              {
+                "identifier": "800"
+              },
+              {
+                "identifier": "900"
+              }
+            ]
+          },
+          "comment": "Deprecated in 1.1. Please use 'font-weight' on the 'title' child element"
+        },
+        "font-stretch": {
+          "source": "normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "normal"
+              },
+              {
+                "identifier": "ultra-condensed"
+              },
+              {
+                "identifier": "extra-condensed"
+              },
+              {
+                "identifier": "condensed"
+              },
+              {
+                "identifier": "semi-condensed"
+              },
+              {
+                "identifier": "semi-expanded"
+              },
+              {
+                "identifier": "expanded"
+              },
+              {
+                "identifier": "extra-expanded"
+              },
+              {
+                "identifier": "ultra-expanded"
+              }
+            ]
+          },
+          "comment": "Deprecated in 1.1. Please use 'font-stretch' on the 'title' child element"
+        },
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "title",
+        "navigation-item",
+        "back-indicator",
+        "back-indicator-mask",
+        "button-appearance",
+        "back-button-appearance"
+      ],
+      "elementName": "navigation-bar",
+      "pseudoClasses": [
+        "default (default)",
+        "landscape-iphone"
+      ],
+      "note": [
+        "For opacity, 1.0 is opaque and anything less means non-opaque",
+        "See UIBarButtonItem properties for back-,left-,right-bar-buttons"
+      ]
+    },
+    "PXUINavigationBar.title": {
+      "elementName": "title",
+      "type": "view",
+      "stylers": [
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {}
+    },
+    "PXUINavigationBar.navigation-item": {
+      "elementName": "navigation-item",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUINavigationBar.back-indicator": {
+      "elementName": "back-indicator",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUINavigationBar.back-indicator-mask": {
+      "elementName": "back-indicator-mask",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUINavigationBar.button-appearance": {
+      "elementName": "button-appearance",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "ios-tint-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      }
+    },
+    "PXUINavigationBar.back-button-appearance": {
+      "elementName": "back-button-appearance",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIPageControl": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          },
+          "comment": "iOS 6.x only - pageIndicatorTintColor"
+        },
+        "current-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          },
+          "comment": "iOS 6.x only - currentPageIndicatorTintColor"
+        }
+      },
+      "children": [],
+      "elementName": "page-control"
+    },
+    "PXUIPickerView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "picker-view"
+    },
+    "PXUIPickerViewDelegate": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "PXUIProgressView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "track"
+      ],
+      "elementName": "progress-view"
+    },
+    "PXUIProgressView.track": {
+      "elementName": "track",
+      "type": "view",
+      "stylers": [
+        "PXFillStyler",
+        "PXBorderStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIRefreshControl": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXOpacityStyler",
+        "PXPaintStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "refresh-control"
+    },
+    "PXUIScrollView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "content-offset": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-inset": {
+          "source": "<insets>",
+          "ast": {
+            "type": "insets"
+          }
+        }
+      },
+      "children": [],
+      "elementName": "scroll-view"
+    },
+    "PXUISearchBar": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXFillStyler",
+        "PXBoxShadowStyler",
+        "PXTextShadowStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "bar-style": {
+          "source": "default | black",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "default"
+              },
+              {
+                "identifier": "black"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "elementName": "search-bar",
+      "note": [
+        "For opacity, 1.0 is opaque and anything less means non-opaque"
+      ]
+    },
+    "PXUISegmentedControl": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "divider"
+      ],
+      "elementName": "segmented-control",
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUISegmentedControl.divider": {
+      "elementName": "divider",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUISlider": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "min-track",
+        "max-track",
+        "min-value",
+        "max-value",
+        "thumb"
+      ],
+      "elementName": "slider"
+    },
+    "PXUISlider.min-track": {
+      "elementName": "min-track",
+      "type": "view",
+      "stylers": [
+        "PXFillStyler",
+        "PXBorderStyler"
+      ],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      },
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUISlider.max-track": {
+      "elementName": "max-track",
+      "type": "view",
+      "stylers": [
+        "PXFillStyler",
+        "PXBorderStyler"
+      ],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      },
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUISlider.min-value": {
+      "elementName": "min-value",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUISlider.max-value": {
+      "elementName": "max-value",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUISlider.thumb": {
+      "elementName": "thumb",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      },
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUIStepper": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXPaintStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [
+        "divider",
+        "increment",
+        "decrement"
+      ],
+      "elementName": "stepper",
+      "pseudoClasses": [
+        "normal (default)",
+        "highlighted",
+        "selected",
+        "disabled"
+      ]
+    },
+    "PXUIStepper.divider": {
+      "elementName": "divider",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIStepper.increment": {
+      "elementName": "increment",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIStepper.decrement": {
+      "elementName": "decrement",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUISwitch": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "off-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          },
+          "comment": "iOS 6.x only"
+        }
+      },
+      "children": [
+        "thumb",
+        "on",
+        "off"
+      ],
+      "elementName": "switch"
+    },
+    "PXUISwitch.thumb": {
+      "elementName": "thumb",
+      "type": "view",
+      "stylers": [],
+      "properties": {
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      }
+    },
+    "PXUISwitch.on": {
+      "elementName": "on",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUISwitch.off": {
+      "elementName": "off",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUITabBar": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXBarShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "selected-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      },
+      "children": [
+        "tab-bar-item",
+        "selection"
+      ],
+      "elementName": "tab-bar"
+    },
+    "PXUITabBar.tab-bar-item": {
+      "elementName": "tab-bar-item",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUITabBar.selection": {
+      "elementName": "selection",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUITableView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "selection-mode": {
+          "source": "single | multiple",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "single"
+              },
+              {
+                "identifier": "multiple"
+              }
+            ]
+          }
+        },
+        "selection-mode-during-editing": {
+          "source": "single | multiple",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "single"
+              },
+              {
+                "identifier": "multiple"
+              }
+            ]
+          }
+        },
+        "row-height": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "header-height": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "footer-height": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "separator-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        },
+        "separator-style": {
+          "source": "none | single-line | etched-line",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "none"
+              },
+              {
+                "identifier": "single-line"
+              },
+              {
+                "identifier": "etched-line"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "elementName": "table-view"
+    },
+    "PXUITableViewCell": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-overflow": {
+          "source": "clip | ellipsis | ellipsis-head | ellipsis-middle | ellipsis-tail | character-wrap | word-wrap",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "clip"
+              },
+              {
+                "identifier": "ellipsis"
+              },
+              {
+                "identifier": "ellipsis-head"
+              },
+              {
+                "identifier": "ellipsis-middle"
+              },
+              {
+                "identifier": "ellipsis-tail"
+              },
+              {
+                "identifier": "character-wrap"
+              },
+              {
+                "identifier": "word-wrap"
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "content-view",
+        "text-label",
+        "detail-text-label",
+        "attributed-text"
+      ],
+      "elementName": "table-view-cell",
+      "pseudoClasses": [
+        "normal (default)",
+        "selected",
+        "multiple"
+      ]
+    },
+    "PXUITableViewCell.content-view": {
+      "elementName": "content-view",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUITableViewCell.text-label": {
+      "elementName": "text-label",
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXFontStyler",
+        "PXPaintStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-overflow": {
+          "source": "clip | ellipsis | ellipsis-head | ellipsis-middle | ellipsis-tail | character-wrap | word-wrap",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "clip"
+              },
+              {
+                "identifier": "ellipsis"
+              },
+              {
+                "identifier": "ellipsis-head"
+              },
+              {
+                "identifier": "ellipsis-middle"
+              },
+              {
+                "identifier": "ellipsis-tail"
+              },
+              {
+                "identifier": "character-wrap"
+              },
+              {
+                "identifier": "word-wrap"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "PXUITableViewCell.detail-text-label": {
+      "elementName": "detail-text-label",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUITableViewCell.attributed-text": {
+      "elementName": "attributed-text",
+      "type": "view",
+      "stylers": [
+        "PXAttributedTextStyler"
+      ],
+      "properties": {}
+    },
+    "PXUITableViewDelegate": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "PXUITableViewHeaderFooterView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        },
+        "text-overflow": {
+          "source": "clip | ellipsis | ellipsis-head | ellipsis-middle | ellipsis-tail | character-wrap | word-wrap",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "clip"
+              },
+              {
+                "identifier": "ellipsis"
+              },
+              {
+                "identifier": "ellipsis-head"
+              },
+              {
+                "identifier": "ellipsis-middle"
+              },
+              {
+                "identifier": "ellipsis-tail"
+              },
+              {
+                "identifier": "character-wrap"
+              },
+              {
+                "identifier": "word-wrap"
+              }
+            ]
+          }
+        },
+        "attributed-text-label": {
+          "source": "<PXAttributedTextStyler>",
+          "ast": {
+            "type": "PXAttributedTextStyler"
+          }
+        },
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        }
+      },
+      "children": [
+        "background-view",
+        "text-label"
+      ],
+      "elementName": "table-view-headerfooter-view"
+    },
+    "PXUITableViewHeaderFooterView.background-view": {
+      "elementName": "background-view",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUITableViewHeaderFooterView.text-label": {
+      "elementName": "text-label",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUITextField": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXFontStyler",
+        "PXColorStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "-ios-border-style": {
+          "source": "none | line | bezel | rounded-rect",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "none"
+              },
+              {
+                "identifier": "line"
+              },
+              {
+                "identifier": "bezel"
+              },
+              {
+                "identifier": "rounded-rect"
+              }
+            ]
+          }
+        },
+        "padding": {
+          "source": "<padding>",
+          "ast": {
+            "type": "padding"
+          }
+        },
+        "padding-top": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "padding-right": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "padding-bottom": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        },
+        "padding-left": {
+          "source": "<length>",
+          "ast": {
+            "type": "length"
+          }
+        }
+      },
+      "children": [
+        "placeholder",
+        "attributed-text"
+      ],
+      "elementName": "text-field"
+    },
+    "PXUITextField.placeholder": {
+      "elementName": "placeholder",
+      "type": "view",
+      "stylers": [
+        "PXTextShadowStyler",
+        "PXFontStyler",
+        "PXColorStyler",
+        "PXTextContentStyler"
+      ],
+      "properties": {}
+    },
+    "PXUITextField.attributed-text": {
+      "elementName": "attributed-text",
+      "type": "view",
+      "stylers": [
+        "PXAttributedTextStyler"
+      ],
+      "properties": {}
+    },
+    "PXUITextView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXFontStyler",
+        "PXColorStyler",
+        "PXTextContentStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "text-align": {
+          "source": "left | center | right",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "left"
+              },
+              {
+                "identifier": "center"
+              },
+              {
+                "identifier": "right"
+              }
+            ]
+          }
+        },
+        "content-offset": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-inset": {
+          "source": "<insets>",
+          "ast": {
+            "type": "insets"
+          }
+        }
+      },
+      "children": [
+        "attributed-text"
+      ],
+      "elementName": "text-view"
+    },
+    "PXUITextView.attributed-text": {
+      "elementName": "attributed-text",
+      "type": "view",
+      "stylers": [
+        "PXAttributedTextStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIToolbar": {
+      "type": "view",
+      "stylers": [
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXBarShadowStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        },
+        "color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        }
+      },
+      "children": [
+        "bar-button-item",
+        "button-appearance"
+      ],
+      "elementName": "toolbar",
+      "note": [
+        "For opacity, 1.0 is opaque and anything less means non-opaque",
+        "Setting an image or background pattern currently applies to all buttons inside all Toolbars."
+      ]
+    },
+    "PXUIToolbar.bar-button-item": {
+      "elementName": "bar-button-item",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "PXUIToolbar.button-appearance": {
+      "elementName": "button-appearance",
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXFontStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "ios-tint-color": {
+          "source": "<color>",
+          "ast": {
+            "type": "color"
+          }
+        }
+      }
+    },
+    "PXUIView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAnimationStyler",
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          },
+          "comment": "iOS 7 or later"
+        }
+      },
+      "children": [
+        "layer"
+      ],
+      "elementName": "view"
+    },
+    "PXUIView.layer": {
+      "elementName": "layer",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {}
+    },
+    "PXUIWebView": {
+      "type": "view",
+      "stylers": [
+        "PXTransformStyler",
+        "PXLayoutStyler",
+        "PXOpacityStyler",
+        "PXAnimationStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "web-view"
+    },
+    "PXUIWindow": {
+      "type": "view",
+      "stylers": [
+        "PXPaintStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          },
+          "comment": "iOS 7 or later"
+        }
+      },
+      "children": [],
+      "elementName": "window"
+    },
+    "PXForceLoadVirtualCategories": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "UIBarButtonItem+PXStyling": {
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXShapeStyler",
+        "PXBoxShadowStyler",
+        "PXAttributedTextStyler",
+        "PXTextContentStyler"
+      ],
+      "properties": {
+        "-ios-tint-color": {
+          "source": "<paint>",
+          "ast": {
+            "type": "paint"
+          }
+        }
+      },
+      "children": [
+        "icon"
+      ],
+      "elementName": "bar-button-item",
+      "pseudoClasses": [
+        "normal",
+        "highlighted",
+        "disabled"
+      ]
+    },
+    "UIBarButtonItem+PXStyling.icon": {
+      "elementName": "icon",
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler"
+      ],
+      "properties": {
+        "-ios-rendering-mode": {
+          "source": "original | template | automatic",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "original"
+              },
+              {
+                "identifier": "template"
+              },
+              {
+                "identifier": "automatic"
+              }
+            ]
+          },
+          "comment": "iOS7 or later"
+        }
+      }
+    },
+    "UIBarItem+PXStyling": {
+      "type": "view",
+      "stylers": [],
+      "properties": {},
+      "children": []
+    },
+    "UINavigationItem+PXStyling": {
+      "type": "view",
+      "stylers": [
+        "PXOpacityStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXTextContentStyler"
+      ],
+      "properties": {
+        "text-transform": {
+          "source": "lowercase | uppercase | capitalize",
+          "ast": {
+            "xor": [
+              {
+                "identifier": "lowercase"
+              },
+              {
+                "identifier": "uppercase"
+              },
+              {
+                "identifier": "capitalize"
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "back-bar-button",
+        "left-bar-button",
+        "right-bar-button"
+      ],
+      "elementName": "navigation-item"
+    },
+    "UINavigationItem+PXStyling.back-bar-button": {
+      "elementName": "back-bar-button",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "UINavigationItem+PXStyling.left-bar-button": {
+      "elementName": "left-bar-button",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "UINavigationItem+PXStyling.right-bar-button": {
+      "elementName": "right-bar-button",
+      "type": "view",
+      "stylers": [],
+      "properties": {}
+    },
+    "UITabBarItem+PXStyling": {
+      "type": "view",
+      "stylers": [
+        "PXShapeStyler",
+        "PXFillStyler",
+        "PXBorderStyler",
+        "PXBoxShadowStyler",
+        "PXAttributedTextStyler",
+        "PXTextContentStyler"
+      ],
+      "properties": {},
+      "children": [],
+      "elementName": "tab-bar-item",
+      "pseudoClasses": [
+        "normal (default)",
+        "selected",
+        "unselected"
+      ]
+    }
+  }
+}

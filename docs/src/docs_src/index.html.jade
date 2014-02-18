@@ -1,0 +1,16 @@
+extends ../web/templates/with-left-nav.jade
+
+block head
+  title Docs!
+
+block topnav
+  mixin nav()
+
+block content-column
+  h1 Table of contents
+
+  div
+    p: a(href='#{rootURL}/getting-started/index.html') Getting Started
+    p: a(href='#{rootURL}/style-reference/index.html') Style Reference
+    p: a(href='#{rootURL}/dev-reference/index.html') Developer Reference
+    p: a(href='#{rootURL}/transition-guide/index.html') 1.0 to 2.0 Transition Guide

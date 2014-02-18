@@ -1,0 +1,18 @@
+/* Note: color property is not supported on iOS 5.1 */
+
+#stepper1 {
+}
+
+#stepper2 {
+    color : #d33833;
+}
+#stepper3 {
+    color : #1959c9;
+}
+#stepper4 {
+    color : #24a667;
+}
+#stepper5 {
+    color : black;
+}
+

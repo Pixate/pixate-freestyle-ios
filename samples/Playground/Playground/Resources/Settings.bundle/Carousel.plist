@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupSpecifier</string>
+            <key>Title</key>
+            <string>
+Warning: These are advanced settings, modify at your own risk.</string>
+        </dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Arc</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Arc</string>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Key</key>
+			<string>carousel_arc</string>
+			<key>DefaultValue</key>
+			<real>0.465</real>
+			<key>MinimumValue</key>
+			<real>0.001</real>
+			<key>MaximumValue</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Radius</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Radius</string>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Key</key>
+			<string>carousel_radius</string>
+			<key>DefaultValue</key>
+			<real>1.180</real>
+			<key>MinimumValue</key>
+			<real>0.001</real>
+			<key>MaximumValue</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Spacing</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Spacing</string>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+			<key>Key</key>
+			<string>carousel_spacing</string>
+			<key>DefaultValue</key>
+			<real>0.867</real>
+			<key>MinimumValue</key>
+			<real>0.001</real>
+			<key>MaximumValue</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

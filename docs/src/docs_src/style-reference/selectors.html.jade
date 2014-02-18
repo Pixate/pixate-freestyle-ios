@@ -1,0 +1,113 @@
+extends ../../web/templates/style-reference-base.jade
+
+block content-column
+  :markdown
+    ## Selectors
+
+    Selectors are used to designate to which controls a given rule set applies. Below you will find a list of selectors and combinators supported by the Pixate Engine. Note that each entry is a link to its associated section in the CSS3 specification. Simply click the entry to find detailed information about the given selector or combinator.
+
+  a#simple_selectors
+  :markdown
+    ### Simple Selectors
+
+    Simple selectors allow for the selection of controls by `name`, `class`, and `id`. A selector may include further restrictions on a selected element via attribute expressions; the Pixate Engine does not currently support those. Below is a list of simple selectors supported in the Pixate Engine.
+
+    * [element type selector](http://www.w3.org/TR/css3-selectors/#type-selectors) - Select a control by element name
+    * [universal selector](http://www.w3.org/TR/css3-selectors/#universal-selector) - Select any control
+    * [class selector](http://www.w3.org/TR/css3-selectors/#class-html) - Select a control by class name
+    * [id selector](http://www.w3.org/TR/css3-selectors/#id-selectors) - Select a control by ID
+
+    Below is a sample of each of the simple selectors.
+
+    ```pixate
+    /* element type selector */
+    button {}
+
+    /* universal selector */
+    * {}
+
+    /* class selector */
+    .my-class {}
+
+    /* id selector */
+    #my-id {}
+    ```
+
+    See the [Cascading Style Sheets Overview](#sheets) section to learn how to specify the the `id` and `class` elements for a control.
+
+    NOTE: Pseudo-elements will parse but they are not implemented.
+
+  a#attribute_selectors
+  :markdown
+    ### Attribute Selectors
+
+    Attribute selectors allow for controls to be selected based on the content of their attributes. Objective-c classes do not have attributes, per se, but these can be thought of as objective-c properties, in simple cases. Internally, the Pixate Engine will use Key-value Coding (KVC) to look up a property name. If that lookup is successful, then one of the following tests is performed, returning true only if the match is successful.
+
+    * [Attribute Presence](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has the specified attribute
+    * [Equals](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has an attribute equal to a specific value
+    * [List Item Equals](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has an attribute with an item in a whitespace-delimited list equal to a specific value
+    * [Equal with Optional Hyphen](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has an attribute  equal to a specific value or that is prefixed by the value followed by a hyphen
+    * [Starts With](http://www.w3.org/TR/selectors/#attribute-substrings) - Select a control that has an attribute starting with a specific value
+    * [Ends With](http://www.w3.org/TR/selectors/#attribute-substrings) - Select a control that has an attribute ending with a specific value
+    * [Contains](http://www.w3.org/TR/selectors/#attribute-substrings) - Select a control that has an attribute containing a specific value
+
+  a#pseudo_classes
+  :markdown
+    ### Pseudo-classes
+
+    Many of the controls in UIKit allow settings to be associated with specific states: `normal`, `highlighted`, `disabled`, etc. The Pixate Engine uses pseudo-classes to indicate to which state a given rule set should apply.
+
+    Below is a sample of some pseudo-classes in use.
+
+    ```pixate
+    /* normal button state */
+    button:normal {}
+
+    /* highlighted button state */
+    button:highlighted {}
+    ```
+
+    Pseudo-classes representing control states are currently limited to the last selector in a selector sequence.
+
+    Pseudo-classes are also used to match controls that meet a certain criteria. For example, it is possible to indicate that a control can match only if it is the first child of its parent, or the last child, etc. The Pixate Engine supports the following pseudo-classes in this category:
+
+    * [:root](http://www.w3.org/TR/selectors/#root-pseudo) - Select a control that is the root of a view and has no parent
+    * [:first-child ](http://www.w3.org/TR/selectors/#first-child-pseudo)- Select a control that is the first child of its parent
+    * [:last-child ](http://www.w3.org/TR/selectors/#last-child-pseudo)- Select a control that is the last child of its parent
+    * [:first-of-type](http://www.w3.org/TR/selectors/#first-of-type-pseudo) - Select a control that is the first child of its type
+    * [:last-of-type](http://www.w3.org/TR/selectors/#last-of-type-pseudo) - Select a control that is the last child of its type
+    * [:only-child](http://www.w3.org/TR/selectors/#only-child-pseudo) - Select a control that is the only child of its parent
+    * [:only-of-type](http://www.w3.org/TR/selectors/#only-of-type-pseudo) - Select a control that is the only child of its type
+    * [:empty](http://www.w3.org/TR/selectors/#empty-pseudo) - Select a control that does not have any children
+    * [:nth-child()](http://www.w3.org/TR/selectors/#nth-child-pseudo) - Select the nth child based on the specified pattern
+    * [:nth-last-child()](http://www.w3.org/TR/selectors/#nth-last-child-pseudo) - Select the nth child from the end based on the specified pattern
+    * [:nth-of-type()](http://www.w3.org/TR/selectors/#nth-of-type-pseudo) -Select the nth child of its type based on the specified pattern
+    * [:nth-last-of-type()](http://www.w3.org/TR/selectors/#nth-last-of-type-pseudo) - Select the nth child of its type from the end based on the specified pattern
+
+  a#combinators
+  :markdown
+    ### Combinators
+
+    Combinators allow the expression of complex relationships between controls. A combinator combines any combination of simple selectors and other combinators. Each combinator represents a tree relationship that must be met to select a target control.
+
+    * [Descendant combinator](http://www.w3.org/TR/css3-selectors/#descendant-combinators) - Select a control that descends from another control
+    * [Child combinator](http://www.w3.org/TR/css3-selectors/#child-combinators) - Select a control that is a child of another control
+    * [Adjacent sibling combinator](http://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) - Select a control that comes immediately after another control
+    * [General sibling combinator](http://www.w3.org/TR/css3-selectors/#general-sibling-combinators) - Select a control that comes after another control
+
+
+    Below is a sample of each of these combinators.
+
+    ```pixate
+    /* descendant combinator */
+    view button {}
+
+    /* child combinator */
+    view > label {}
+
+    /* adjacent sibling combinator */
+    button + label
+
+    /* general sibling combinator */
+    button ~ label
+    ```

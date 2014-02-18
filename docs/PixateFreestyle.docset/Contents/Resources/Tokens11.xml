@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIView+PXStyling.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIView(PXStyling)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>
+			
+			<NodeRef refid="11"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/setStyleId:</TokenIdentifier>
+			<Abstract type="html">The ID for this styleable object. Ideally, this value should be unique within the context being styled.</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleId</Declaration>
+			
+			
+			<Anchor>//api/name/styleId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/styleId</TokenIdentifier>
+			<Abstract type="html">The ID for this styleable object. Ideally, this value should be unique within the context being styled.</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleId</Declaration>
+			
+			
+			<Anchor>//api/name/styleId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIView/styleId</TokenIdentifier>
+			<Abstract type="html">The ID for this styleable object. Ideally, this value should be unique within the context being styled.</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleId</Declaration>
+			
+			
+			<Anchor>//api/name/styleId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/setStyleClass:</TokenIdentifier>
+			<Abstract type="html">The CSS classes associated with this styleable object. One or more classes may be specified by delimiting each with
+whitespace</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleClass</Declaration>
+			
+			
+			<Anchor>//api/name/styleClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/styleClass</TokenIdentifier>
+			<Abstract type="html">The CSS classes associated with this styleable object. One or more classes may be specified by delimiting each with
+whitespace</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleClass</Declaration>
+			
+			
+			<Anchor>//api/name/styleClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIView/styleClass</TokenIdentifier>
+			<Abstract type="html">The CSS classes associated with this styleable object. One or more classes may be specified by delimiting each with
+whitespace</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleClass</Declaration>
+			
+			
+			<Anchor>//api/name/styleClass</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/setStyleCSS:</TokenIdentifier>
+			<Abstract type="html">Inline styles to apply to this object</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleCSS</Declaration>
+			
+			
+			<Anchor>//api/name/styleCSS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/UIView/styleCSS</TokenIdentifier>
+			<Abstract type="html">Inline styles to apply to this object</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleCSS</Declaration>
+			
+			
+			<Anchor>//api/name/styleCSS</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/UIView/styleCSS</TokenIdentifier>
+			<Abstract type="html">Inline styles to apply to this object</Abstract>
+			<DeclaredIn>UIView+PXStyling.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy) NSString *styleCSS</Declaration>
+			
+			
+			<Anchor>//api/name/styleCSS</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

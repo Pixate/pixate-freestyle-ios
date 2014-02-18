@@ -1,0 +1,26 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#ifndef DEBUG
+#undef NSAssert
+#define NSAssert(condition, desc, ...)
+#endif
+
+#ifdef PX_LOGGING
+#ifdef __OBJC__
+#import "PXLog.h"
+#endif
+#else
+#define DDLogInfo(...)
+#define DDLogVerbose(...)
+#define DDLogError(...)
+#define LOG_VERBOSE 0
+#endif

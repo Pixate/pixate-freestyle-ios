@@ -1,0 +1,72 @@
+@import "default_views.css";
+
+pixate-config {
+    update-styles: auto;
+    cache-styles: auto;
+    parse-error-destination: console;
+}
+
+.appButton {
+    color            : rgb(134,135,136);
+    background-color : #303132;
+    box-shadow       : inset 0 1px 4px #000, 0 1px 1px rgba(255,255,255,0.2);
+}
+
+#topBanner {
+    background-color : linear-gradient(rgb(39, 40, 41), rgb(74, 76, 78));
+    border-radius    : 5px;
+    height           : 55px;
+}
+
+#textEditor {
+    color            : white;
+    background-color : rgb(44, 45, 46);
+}
+
+#themePickerList {
+    background-color : linear-gradient(rgb(11,12,13), rgb(51,52,53));
+    separator-style  : none;
+}
+
+.themePickerCell text-label {
+    color            : rgb(134,135,136);
+    font-family      : "Helvetica";
+    font-size        : 12;
+}
+
+.themePickerCell text-label:highlighted {
+    color            : black;
+}
+
+#shareButton {
+    border-radius    : 3px;
+}
+
+#docsButton {
+    border-radius    : 3px;
+}
+
+#themeSelectButton {
+    border-radius    : 5px;
+}
+
+#prefsButton {
+    background-image : url(gear.svg);
+    top   : 15px;
+    size  : 24px 24px;
+}
+
+@media (device-os-version: '7') {
+    #topBanner {
+        height           : 75px;
+    }
+    #themeSelectButton {
+        top           : 25px;
+    }
+    #prefsButton {
+        top           : 35px;
+    }
+    #pixateLogo {
+        top           : 20px;
+    }
+}

@@ -1,0 +1,29 @@
+/*
+ * Buttons
+ * --------------------------------
+ */
+
+.button {
+    border-radius: $button-border-radius;
+    color: $button-text-color;
+    background-color: $button-bg-color;
+    font-family: $button-text-font;
+    font-size: $button-text-size;
+    text-transform: uppercase;
+    title-edge-top-inset: 1pt;
+}
+
+.button:highlighted {
+    background-color: $button-bg-color-highlighted;
+    border-radius: $button-border-radius;
+}
+
+.button.large {
+    font-size: $button-text-size-large;
+    title-edge-top-inset: 2pt;
+}
+
+.button.small {
+    font-size: $button-text-size-small;
+    title-edge-top-inset: 2pt;
+}

@@ -1,0 +1,22 @@
+#label1 {
+  font-size   : 14px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+#label2 {
+  font-size   : 24px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+#label3 {
+  font-size   : 34px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}

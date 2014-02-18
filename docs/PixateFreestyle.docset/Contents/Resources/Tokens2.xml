@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PXBoxModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PXBoxModel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>PXBoxModel.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXBoxModel/setCornerRadius:</TokenIdentifier>
+			<Abstract type="html">Set the corner radius of all corners to the specified value</Abstract>
+			<DeclaredIn>PXBoxModel.h</DeclaredIn>			
+			
+			<Declaration>- (void)setCornerRadius:(CGFloat)radius</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>radius</Name>
+					<Abstract type="html">A corner radius</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setCornerRadius:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXBoxModel/setCornerRadii:</TokenIdentifier>
+			<Abstract type="html">Set the corner radius of all corners to the specified value</Abstract>
+			<DeclaredIn>PXBoxModel.h</DeclaredIn>			
+			
+			<Declaration>- (void)setCornerRadii:(CGSize)radii</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>radii</Name>
+					<Abstract type="html">The x and y radii</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setCornerRadii:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -1,0 +1,190 @@
+/* TRY THE SECOND STYLING BELOW AS WELL */
+
+table-view {
+    row-height: 85;
+    header-height: 40;
+    separator-style: single-line;
+    separator-color: #efefef;
+    background-color: white;
+}
+
+table-view-headerfooter-view {
+    background-color: #f47564;
+}
+
+table-view-headerfooter-view text-label {
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    font-family: "Open Sans";
+    letter-spacing: 1px;
+    text: "People to follow:";
+    box-shadow: 0 0;
+    text-transform: uppercase;
+}
+
+table-view-cell {
+    background-color: white;
+}
+
+table-view-cell:selected { background-color: #262221 }
+
+
+table-view-cell:nth-child(even) { background-color: lightgray; }
+
+.cellImage {
+    background-image: url(paulcolton_2012.jpg);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+}
+
+.cellName {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: #f47564;
+    text: "Paul Colton";
+}
+
+.cellFollowers {
+    font-weight: 600;
+    font-size: 10px;
+    font-family: "Open Sans";
+    color: #776b5d;
+    text: "1,231 Followers";
+}
+
+.cellButton {
+    background-image: url(icon-add.svg);
+}
+
+
+.cellImage {
+    animation-name   : bubble;
+    animation-duration : 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bubble {
+    from {
+        opacity: .5;
+        scale: .2;
+    }
+    50% {
+        scale: 1.1;
+    }
+    65% {
+        scale: .9;
+    }
+    75% {
+        scale: 1.1;
+    }
+    85% {
+        scale: .95;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+/* SECOND TABLE STYLING */
+
+/*
+table-view {
+    row-height: 60;
+    header-height: 50;
+    separator-style: single-line;
+    separator-color: #edebdf;
+    background-color: #fffbf5;
+}
+
+table-view-headerfooter-view  {
+    background-image: url(header_bg.png);
+}
+
+table-view-headerfooter-view label {
+    color: white;
+    font-size: 22px;
+    font-family: "Gill Sans";
+    text: "           People to Follow";
+    text-shadow: 0 -2px 1px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+table-view-cell {
+    background-image: url(cell-background-yellow.png);
+}
+
+.cellImage {
+    border-radius: 5px;
+    background-image: url(annie.png);
+    left: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.75);
+}
+
+.cellName {
+    top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Helvetica";
+    color: #515258;
+    text: "St. Vincent";
+}
+
+.cellFollowers {
+    top: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    font-style: italic;
+    font-family: "Palatino";
+    color: #8d8f97;
+    text: "1,231 Followers";
+}
+
+.cellButton {
+    top: 18px;
+    background-image: url(icon-info.svg);
+    background-size: 25 25;
+}
+
+
+.cellImage {
+    animation-name   : bubble;
+    animation-duration : 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bubble {
+    from {
+        opacity: .5;
+        scale: .2;
+    }
+    50% {
+        scale: 1.1;
+    }
+    65% {
+        scale: .9;
+    }
+    75% {
+        scale: 1.1;
+    }
+    85% {
+        scale: .95;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+*/
+

@@ -1,0 +1,48 @@
+/* Images loaded into UIImageViews. Rotation and translation of
+ * the view has also been applied in some cases.
+ */
+#image1 {
+    background-image : url(1.jpg);
+    transform : rotate(15);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 75 40;
+    box-shadow : 10 10 5;
+}
+
+#image2 {
+    background-image : url(2.jpg);
+    transform : rotate(-5);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 210 40;
+    box-shadow : 10 10 5;
+}
+
+#image3 {
+    background-image : url(3.jpg);
+    transform : rotate(-10);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 50 160;
+    box-shadow : 10 10 5;
+}
+
+#image4 {
+    background-image : url(4.jpg);
+    transform : rotate(15);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 210 150;
+    box-shadow : 10 10 5;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+

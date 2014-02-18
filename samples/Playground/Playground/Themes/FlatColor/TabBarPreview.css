@@ -1,0 +1,36 @@
+#tab-bar1 {
+  color            : #d14836;
+}
+
+#tab-bar2 {
+  background-color : #4787ed;
+  shadow           : url(tabBarShadow.png);
+  color            : grey;
+}
+
+#tab-bar2 tab-bar-item {
+  color            : white;
+}
+
+#tab-bar3 {
+  background-image : linear-gradient(#cccccc, #f2f4f6);
+  color            : #d14836;
+}
+
+/* Use a custom vector image for the selected image. */
+#tab-bar3 tab-bar-item:selected {
+    background-image : url(gear.svg);
+    background-size  : 30px 30px;
+}
+
+/* Use a custom vector image for the unselected image. */
+#tab-bar3 tab-bar-item:unselected {
+    background-image : url(star.svg);
+    background-size  : 30px 30px;
+}
+
+/* Place an image around the current selection */
+#tab-bar3 selection {
+    background-image : url(tab_select_indicator.png);
+    background-size  : 60px 60px;
+}

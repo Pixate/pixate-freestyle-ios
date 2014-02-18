@@ -1,0 +1,102 @@
+/*
+ * Forms
+ * --------------------------------
+ */
+
+/* Text fields */
+
+.text-field:normal {
+    color: $input-text-color;
+    -ios-border-style: none;
+    background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, $input-border-color 99%); /* Note: to achieve a bottom border, which is not currently supported */
+    font-family: $input-text-font;
+    font-size: $input-text-size;
+    padding: 2pt 5pt;
+}
+
+.text-field:highlighted {
+    background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, $blue 99%);
+}
+
+.text-field.large {
+    font-size: $input-text-size-large;
+}
+
+.text-field.small {
+    font-size: $input-text-size-small;
+}
+
+.text-field.success,
+.text-field.success:highlighted {
+    background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, $input-state-success-border 99%);
+}
+
+.text-field.warning,
+.text-field.warning:highlighted {
+    background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, $input-state-warning-border 99%);
+}
+
+.text-field.error,
+.text-field.error:highlighted {
+    background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, $input-state-error-border 99%);
+}
+
+
+/* Text views */
+
+.text-view {
+    color: $input-text-color;
+    -ios-border-style: none;
+    background-color: $text-view-bg-color;
+    border: 1pt solid $text-view-border-color;
+    font-family: $input-text-font;
+    font-size: $input-text-size;
+}
+
+
+/* Segmented controls */
+
+.segmented-control {
+    background-color: $segmented-control-bg;
+    color: $segmented-control-text-color;
+    font-family: $segmented-control-text-font;
+    font-size: $segmented-control-text-size;
+}
+
+.segmented-control:selected {
+    color: $segmented-control-text-color-selected;
+}
+
+
+/* Switches */
+
+.switch {
+    color: $switch-on-bg;
+    -ios-tint-color: $switch-off-bg;
+}
+
+.switch thumb {
+    color: $switch-thumb-bg;
+}
+
+
+/* Sliders */
+
+.slider thumb {
+    background-color: $slider-bg;
+    border: 1px solid $slider-border;
+    background-size: 28 28;
+    border-radius: 14px;
+}
+
+.slider min-track {
+    color: $slider-track-min-bg;
+}
+
+.slider max-track {
+    color: $slider-track-max-bg;
+}
+
+
+
+

@@ -1,0 +1,31 @@
+/* UICollecitonView with a "Circle" UICollectionViewLayout.
+ * Tap to add new views; tap on a specific view to remove it.
+ *
+ * Note: UICollectionView is only supported in iOS 6
+ */
+#myCollectionView {
+    border-radius    : 3;
+    position         : 3 3;
+    size             : 495 330;
+}
+
+#myCollectionView .collectionCell:nth-child(3n) {
+    background-color : white;
+    border-radius    : 5;
+    border-color     : black;
+    border-width     : 1;
+}
+
+#myCollectionView .collectionCell:nth-child(3n+1) {
+    background-color : #4787ed;
+    border-radius    : 5;
+    border-color     : black;
+    border-width     : 1;
+}
+
+#myCollectionView .collectionCell:nth-child(3n+2) {
+    background-color : #D14836;
+    border-radius    : 5;
+    border-color     : black;
+    border-width     : 1;
+}

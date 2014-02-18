@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A14A23D185A7546006C964B /* polyline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0A14A23C185A7546006C964B /* polyline.svg */; };
+		0A72E58D1709E16500AAF7F6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A72E58C1709E16500AAF7F6 /* QuartzCore.framework */; };
+		0A74703E157FCB6C007430E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A74703D157FCB6C007430E5 /* UIKit.framework */; };
+		0A747040157FCB6C007430E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A74703F157FCB6C007430E5 /* Foundation.framework */; };
+		0A747042157FCB6C007430E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A747041157FCB6C007430E5 /* CoreGraphics.framework */; };
+		0A747048157FCB6C007430E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A747046157FCB6C007430E5 /* InfoPlist.strings */; };
+		0A74704A157FCB6C007430E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A747049157FCB6C007430E5 /* main.m */; };
+		0A747064157FCC51007430E5 /* PXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A747061157FCC51007430E5 /* PXAppDelegate.m */; };
+		0A747065157FCC51007430E5 /* PXShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A747063157FCC51007430E5 /* PXShapeViewController.m */; };
+		0A747077157FD0C9007430E5 /* lion.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0A747073157FD0C9007430E5 /* lion.svg */; };
+		0A747078157FD0C9007430E5 /* people.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0A747074157FD0C9007430E5 /* people.svg */; };
+		0A747079157FD0C9007430E5 /* toucan.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0A747075157FD0C9007430E5 /* toucan.svg */; };
+		0A747080157FD2AE007430E5 /* pixate.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0A74707F157FD2AE007430E5 /* pixate.svg */; };
+		0A9FC6F4171A10550091D117 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A582DE815A263CD00F42175 /* CoreText.framework */; };
+		0ACB030F181B26CF00D3C565 /* icon1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB030E181B26CF00D3C565 /* icon1.svg */; };
+		0ACB0319181B32ED00D3C565 /* icon2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB0318181B32ED00D3C565 /* icon2.svg */; };
+		0ACB031D181B4F4300D3C565 /* icon4.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB031C181B4F4300D3C565 /* icon4.svg */; };
+		0ACB0332181B68A900D3C565 /* icon3.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB0331181B68A900D3C565 /* icon3.svg */; };
+		0AD0340E182155E4003017CE /* moveCommand2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0AD0340D182155E4003017CE /* moveCommand2.svg */; };
+		0AD0341318216516003017CE /* arcCommand.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0AD0341118216516003017CE /* arcCommand.svg */; };
+		0AD0341418216516003017CE /* relativeArcCommand.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0AD0341218216516003017CE /* relativeArcCommand.svg */; };
+		0AEAA412158BB30D00A4278B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAA411158BB30D00A4278B /* Icon.png */; };
+		0AEAA415158BB31000A4278B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAA414158BB31000A4278B /* Icon@2x.png */; };
+		0AEAA419158BB32700A4278B /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAA418158BB32700A4278B /* Icon-72.png */; };
+		0AEAA41B158BB32900A4278B /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEAA41A158BB32900A4278B /* Icon-72@2x.png */; };
+		128ED09116440915004BD94B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 128ED09016440915004BD94B /* Default-568h@2x.png */; };
+		9C4ACD4818AF1233008F5A2F /* PixateFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4ACD4718AF1233008F5A2F /* PixateFreestyle.framework */; };
+		9CB37B4A1581192900985BA9 /* strawberries.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB37B491581192900985BA9 /* strawberries.svg */; };
+		9CB37B4E15811CFA00985BA9 /* wallpaper.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB37B4D15811CFA00985BA9 /* wallpaper.svg */; };
+		9CB37B501581207C00985BA9 /* logos.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB37B4F1581207C00985BA9 /* logos.svg */; };
+		9CB37B52158120FD00985BA9 /* target.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB37B51158120FD00985BA9 /* target.svg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A14A23C185A7546006C964B /* polyline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = polyline.svg; sourceTree = "<group>"; };
+		0A582DE815A263CD00F42175 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0A72E58C1709E16500AAF7F6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0A747039157FCB6C007430E5 /* PXShapeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXShapeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A74703D157FCB6C007430E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A74703F157FCB6C007430E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A747041157FCB6C007430E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A747045157FCB6C007430E5 /* PXShapeDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PXShapeDemo-Info.plist"; sourceTree = "<group>"; };
+		0A747047157FCB6C007430E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A747049157FCB6C007430E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A74704B157FCB6C007430E5 /* PXShapeDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PXShapeDemo-Prefix.pch"; sourceTree = "<group>"; };
+		0A747060157FCC51007430E5 /* PXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAppDelegate.h; sourceTree = "<group>"; };
+		0A747061157FCC51007430E5 /* PXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAppDelegate.m; sourceTree = "<group>"; };
+		0A747062157FCC51007430E5 /* PXShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXShapeViewController.h; sourceTree = "<group>"; };
+		0A747063157FCC51007430E5 /* PXShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShapeViewController.m; sourceTree = "<group>"; };
+		0A747073157FD0C9007430E5 /* lion.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lion.svg; sourceTree = "<group>"; };
+		0A747074157FD0C9007430E5 /* people.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = people.svg; sourceTree = "<group>"; };
+		0A747075157FD0C9007430E5 /* toucan.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = toucan.svg; sourceTree = "<group>"; };
+		0A74707F157FD2AE007430E5 /* pixate.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pixate.svg; sourceTree = "<group>"; };
+		0ACB030E181B26CF00D3C565 /* icon1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icon1.svg; sourceTree = "<group>"; };
+		0ACB0318181B32ED00D3C565 /* icon2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icon2.svg; sourceTree = "<group>"; };
+		0ACB031C181B4F4300D3C565 /* icon4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icon4.svg; sourceTree = "<group>"; };
+		0ACB0331181B68A900D3C565 /* icon3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = icon3.svg; sourceTree = "<group>"; };
+		0AD0340D182155E4003017CE /* moveCommand2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = moveCommand2.svg; sourceTree = "<group>"; };
+		0AD0341118216516003017CE /* arcCommand.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arcCommand.svg; sourceTree = "<group>"; };
+		0AD0341218216516003017CE /* relativeArcCommand.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = relativeArcCommand.svg; sourceTree = "<group>"; };
+		0AEAA411158BB30D00A4278B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0AEAA414158BB31000A4278B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0AEAA416158BB31300A4278B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0AEAA418158BB32700A4278B /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		0AEAA41A158BB32900A4278B /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		128ED09016440915004BD94B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C4ACD4718AF1233008F5A2F /* PixateFreestyle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PixateFreestyle.framework; path = ../../build/PixateFreestyle.framework; sourceTree = "<group>"; };
+		9CB37B491581192900985BA9 /* strawberries.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = strawberries.svg; sourceTree = "<group>"; };
+		9CB37B4D15811CFA00985BA9 /* wallpaper.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = wallpaper.svg; sourceTree = "<group>"; };
+		9CB37B4F1581207C00985BA9 /* logos.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = logos.svg; sourceTree = "<group>"; };
+		9CB37B51158120FD00985BA9 /* target.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = target.svg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A747036157FCB6C007430E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9FC6F4171A10550091D117 /* CoreText.framework in Frameworks */,
+				9C4ACD4818AF1233008F5A2F /* PixateFreestyle.framework in Frameworks */,
+				0A72E58D1709E16500AAF7F6 /* QuartzCore.framework in Frameworks */,
+				0A74703E157FCB6C007430E5 /* UIKit.framework in Frameworks */,
+				0A747040157FCB6C007430E5 /* Foundation.framework in Frameworks */,
+				0A747042157FCB6C007430E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A74702E157FCB6C007430E5 = {
+			isa = PBXGroup;
+			children = (
+				0A747043157FCB6C007430E5 /* PXShapeDemo */,
+				0A74703C157FCB6C007430E5 /* Frameworks */,
+				0A747072157FD0B6007430E5 /* Resources */,
+				0A74703A157FCB6C007430E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A74703A157FCB6C007430E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A747039157FCB6C007430E5 /* PXShapeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A74703C157FCB6C007430E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C4ACD4718AF1233008F5A2F /* PixateFreestyle.framework */,
+				0A72E58C1709E16500AAF7F6 /* QuartzCore.framework */,
+				0A747041157FCB6C007430E5 /* CoreGraphics.framework */,
+				0A582DE815A263CD00F42175 /* CoreText.framework */,
+				0A74703F157FCB6C007430E5 /* Foundation.framework */,
+				0A74703D157FCB6C007430E5 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A747043157FCB6C007430E5 /* PXShapeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0A747060157FCC51007430E5 /* PXAppDelegate.h */,
+				0A747061157FCC51007430E5 /* PXAppDelegate.m */,
+				0A747062157FCC51007430E5 /* PXShapeViewController.h */,
+				0A747063157FCC51007430E5 /* PXShapeViewController.m */,
+				0A747044157FCB6C007430E5 /* Supporting Files */,
+			);
+			path = PXShapeDemo;
+			sourceTree = "<group>";
+		};
+		0A747044157FCB6C007430E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A747046157FCB6C007430E5 /* InfoPlist.strings */,
+				0A747049157FCB6C007430E5 /* main.m */,
+				0A747045157FCB6C007430E5 /* PXShapeDemo-Info.plist */,
+				0A74704B157FCB6C007430E5 /* PXShapeDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A747072157FD0B6007430E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AEB31C915BB42610077F6BE /* Images */,
+				0AEB31C815BB42590077F6BE /* Vectors */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0AEB31C815BB42590077F6BE /* Vectors */ = {
+			isa = PBXGroup;
+			children = (
+				0AD0341118216516003017CE /* arcCommand.svg */,
+				0ACB030E181B26CF00D3C565 /* icon1.svg */,
+				0ACB0318181B32ED00D3C565 /* icon2.svg */,
+				0ACB0331181B68A900D3C565 /* icon3.svg */,
+				0ACB031C181B4F4300D3C565 /* icon4.svg */,
+				0A747073157FD0C9007430E5 /* lion.svg */,
+				9CB37B4F1581207C00985BA9 /* logos.svg */,
+				0AD0340D182155E4003017CE /* moveCommand2.svg */,
+				0A747074157FD0C9007430E5 /* people.svg */,
+				0A74707F157FD2AE007430E5 /* pixate.svg */,
+				0AD0341218216516003017CE /* relativeArcCommand.svg */,
+				9CB37B491581192900985BA9 /* strawberries.svg */,
+				9CB37B51158120FD00985BA9 /* target.svg */,
+				0A747075157FD0C9007430E5 /* toucan.svg */,
+				9CB37B4D15811CFA00985BA9 /* wallpaper.svg */,
+				0A14A23C185A7546006C964B /* polyline.svg */,
+			);
+			name = Vectors;
+			sourceTree = "<group>";
+		};
+		0AEB31C915BB42610077F6BE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				128ED09016440915004BD94B /* Default-568h@2x.png */,
+				0AEAA416158BB31300A4278B /* Default.png */,
+				0AEAA418158BB32700A4278B /* Icon-72.png */,
+				0AEAA41A158BB32900A4278B /* Icon-72@2x.png */,
+				0AEAA411158BB30D00A4278B /* Icon.png */,
+				0AEAA414158BB31000A4278B /* Icon@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A747038157FCB6C007430E5 /* PXShapeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A747051157FCB6C007430E5 /* Build configuration list for PBXNativeTarget "PXShapeDemo" */;
+			buildPhases = (
+				0A747035157FCB6C007430E5 /* Sources */,
+				0A747036157FCB6C007430E5 /* Frameworks */,
+				0A747037157FCB6C007430E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PXShapeDemo;
+			productName = PXShapeDemo;
+			productReference = 0A747039157FCB6C007430E5 /* PXShapeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A747030157FCB6C007430E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PX;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Pixate, Inc.";
+			};
+			buildConfigurationList = 0A747033157FCB6C007430E5 /* Build configuration list for PBXProject "PXShapeDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A74702E157FCB6C007430E5;
+			productRefGroup = 0A74703A157FCB6C007430E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A747038157FCB6C007430E5 /* PXShapeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A747037157FCB6C007430E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A14A23D185A7546006C964B /* polyline.svg in Resources */,
+				0A747048157FCB6C007430E5 /* InfoPlist.strings in Resources */,
+				0A747077157FD0C9007430E5 /* lion.svg in Resources */,
+				0ACB0319181B32ED00D3C565 /* icon2.svg in Resources */,
+				0A747078157FD0C9007430E5 /* people.svg in Resources */,
+				0A747079157FD0C9007430E5 /* toucan.svg in Resources */,
+				0AD0341318216516003017CE /* arcCommand.svg in Resources */,
+				0AD0341418216516003017CE /* relativeArcCommand.svg in Resources */,
+				0A747080157FD2AE007430E5 /* pixate.svg in Resources */,
+				0ACB030F181B26CF00D3C565 /* icon1.svg in Resources */,
+				9CB37B4A1581192900985BA9 /* strawberries.svg in Resources */,
+				0ACB031D181B4F4300D3C565 /* icon4.svg in Resources */,
+				9CB37B4E15811CFA00985BA9 /* wallpaper.svg in Resources */,
+				9CB37B501581207C00985BA9 /* logos.svg in Resources */,
+				9CB37B52158120FD00985BA9 /* target.svg in Resources */,
+				0AEAA412158BB30D00A4278B /* Icon.png in Resources */,
+				0AEAA415158BB31000A4278B /* Icon@2x.png in Resources */,
+				0AEAA419158BB32700A4278B /* Icon-72.png in Resources */,
+				0AEAA41B158BB32900A4278B /* Icon-72@2x.png in Resources */,
+				128ED09116440915004BD94B /* Default-568h@2x.png in Resources */,
+				0ACB0332181B68A900D3C565 /* icon3.svg in Resources */,
+				0AD0340E182155E4003017CE /* moveCommand2.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A747035157FCB6C007430E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A74704A157FCB6C007430E5 /* main.m in Sources */,
+				0A747064157FCC51007430E5 /* PXAppDelegate.m in Sources */,
+				0A747065157FCC51007430E5 /* PXShapeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A747046157FCB6C007430E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A747047157FCB6C007430E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A74704F157FCB6C007430E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A747050157FCB6C007430E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../Frameworks/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A747052157FCB6C007430E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Framework\"",
+					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PXShapeDemo/PXShapeDemo-Prefix.pch";
+				INFOPLIST_FILE = "PXShapeDemo/PXShapeDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A747053157FCB6C007430E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Framework\"",
+					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PXShapeDemo/PXShapeDemo-Prefix.pch";
+				INFOPLIST_FILE = "PXShapeDemo/PXShapeDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A747033157FCB6C007430E5 /* Build configuration list for PBXProject "PXShapeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A74704F157FCB6C007430E5 /* Debug */,
+				0A747050157FCB6C007430E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A747051157FCB6C007430E5 /* Build configuration list for PBXNativeTarget "PXShapeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A747052157FCB6C007430E5 /* Debug */,
+				0A747053157FCB6C007430E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A747030157FCB6C007430E5 /* Project object */;
+}

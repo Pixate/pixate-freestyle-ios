@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#
+# Copyright 2014-present Pixate, Inc.
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#    http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+. ${PX_FREESTYLE_SCRIPT:-$(dirname $0)}/common.sh
+
+# stop if we encounter an error
+#set -e
+
+# set variables
+DOCS_ROOT="${PX_FREESTYLE_ROOT}/docs"
+
+DOCS_WORKSPACE="${DOCS_ROOT}/src/specs"
+DOCS_METADATA="${DOCS_WORKSPACE}/documentation.json"
+CONTROLS_METADATA="${DOCS_WORKSPACE}/controls.json"
+
+DOCS_TOOLS="${PX_FREESTYLE_SCRIPT}/build_documentation_tools"
+
+# generate Styling Reference metadata
+mkdir -p "${DOCS_WORKSPACE}"
+
+# this is used by scripts below
+PIXATE_PROJECTS_HOME="${PX_FREESTYLE_ROOT}/src"
+
+# extract metadata from iOS framework source code
+echo Building documentation.json.
+"${DOCS_TOOLS}/collect_documentation.js" "${PIXATE_PROJECTS_HOME}" > "${DOCS_METADATA}"
+
+# expand stylers to create control property lists
+echo Building controls.json.
+"${DOCS_TOOLS}/generate_stats.js" -cn "${DOCS_METADATA}" > "${CONTROLS_METADATA}"
+
+# build the main documentation set
+echo Building core documentation.
+cd "${DOCS_ROOT}/src/"
+grunt
+
+# move back to the starting directory
+cd "${PX_FREESTYLE_SCRIPT}"
+
+# generate the appledocs
+echo Building appledocs.
+./build_appledocs "${PX_FREESTYLE_ROOT}"
+

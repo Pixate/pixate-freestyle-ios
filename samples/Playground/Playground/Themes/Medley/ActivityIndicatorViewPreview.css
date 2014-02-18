@@ -1,0 +1,29 @@
+#activity1  {
+  style            : small;
+  color            : white;
+  background-image : linear-gradient(#202020, #4d4d4c);
+  size             : 50px 50px;
+  border-radius    : 10px;
+  border-width     : 2px;
+  border-color     : gray;
+}
+
+#activity2  {
+  style            : small;
+  color            : red;
+  background-image : linear-gradient(#202020, #4d4d4c);
+  size             : 50px 50px;
+  border-radius    : 10px;
+  border-width     : 2px;
+  border-color     : gray;
+}
+
+#activity3  {
+  style            : large;
+  color            : lightgreen;
+  background-image : linear-gradient(#202020, #4d4d4c);
+  size             : 70px 70px;
+  border-radius    : 10px;
+  border-width     : 2px;
+  border-color     : gray;
+}

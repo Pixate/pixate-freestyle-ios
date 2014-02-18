@@ -1,0 +1,29 @@
+#backButton {
+  border-radius    : 5px;
+  font-family      : "American Typewriter";
+  font-size        : 13px;
+  font-weight      : bold;
+  text-transform   : uppercase;
+  color            : #ffffff;
+  background-color : #008ed4;
+}
+
+#urlField {
+  font-family : "American Typewriter";
+  font-size   : 15px;
+  color       : #008ed4;
+}
+
+#myWebView  {
+  top         : 50;
+  left        : 10;
+  size        : 478, 270;
+}
+
+#browserView {
+  background-image   : linear-gradient(45deg, #202020 50%, #4d4d4c 60%);
+    background-size  : 495 330;
+    border-radius    : 3;
+    position         : 3 3;
+    size             : 495 330;
+}

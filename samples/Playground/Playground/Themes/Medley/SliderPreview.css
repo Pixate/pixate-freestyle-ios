@@ -1,0 +1,33 @@
+/* Dynamically generate thumb using a linear
+   gradient and rounded corners. No bitmap req'd.  */
+
+#slider1 thumb {
+  background-color : rgb(20,127,216);
+  background-size  : 24px 24px;
+  border-radius    : 12px;
+}
+
+#slider1 min-track {
+  color            : rgb(132, 190, 225);
+}
+
+#slider1 max-track {
+  color            : rgb(200, 200, 200);
+}
+
+/* Dynamically generate star image using SVG. */
+
+#slider2 thumb {
+  background-image : url(star.svg);
+  background-size  : 32px 32px;
+}
+
+#slider2 min-track {
+  background-image : linear-gradient(#202020, lightcoral);
+  background-size  : 1px 15px;
+}
+
+#slider2 max-track {
+  background-image : linear-gradient(#202020, lightgreen);
+  background-size  : 1px 15px;
+}

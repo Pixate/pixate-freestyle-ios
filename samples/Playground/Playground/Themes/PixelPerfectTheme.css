@@ -1,0 +1,1009 @@
+
+/** ActionSheetPreview **/
+
+.actionSheetButton {
+  border-radius    : 5px;
+  font-family      : "Helvetica";
+  font-size        : 13px;
+  font-weight      : bold;
+  color            : #ffffff;
+  background-image : linear-gradient(#215a88, #4d93dd);
+  border-width     : 1px;
+  border-color     : #212325;
+  box-shadow       : inset 0 0 1px rgba(101, 177, 232, 0.9),
+  0 1px 2px rgba(0,0,0,0.5);
+}
+
+#myActionSheet1 {
+  background-image: linear-gradient(#3c4145, #585e62);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5);
+}
+
+#myActionSheet1 label {
+  font-family      : "Helvetica";
+  font-size        : 15px;
+  font-weight      : bold;
+  color            : #ffffff;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ActionSheetPreview **/
+
+
+
+
+/** ActivityIndicatorViewPreview **/
+
+#activity1  {
+  style            : small;
+  color            : #306daa;
+  background-color : #2b2e31
+  size             : 50px 50px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+}
+
+#activity2  {
+  style            : small;
+  color            : #5d894e;
+  background-color : #2b2e31;
+  size             : 50px 50px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+  
+}
+
+#activity3  {
+  style            : large;
+  color            : #a74142;
+  background-color : #2b2e31;
+  size             : 70px 70px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+  
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ActivityIndicatorViewPreview **/
+
+
+
+
+/** ButtonPreview **/
+
+/* Define common gray buttons */
+#button1, #button2, #button3 {
+  border-radius   : 5px;
+  font-family     : "Helvetica";
+  font-size       : 13px;
+  font-weight     : bold;
+  color           : #ffffff;
+  background-image: linear-gradient(#3c4145, #585e62);
+  border-width    : 1px;
+  border-color    : #212325;
+  box-shadow      : inset 0 1px 0 rgba(255,255,255,0.3),
+                          0 1px 1px rgba(0,0,0,0.5);
+}
+/* Adjust shadow for inset look */
+#button2 {
+  box-shadow      : inset 0 2px 5px rgba(0,0,0,0.6),
+                          0 1px 0 rgba(255,255,255,0.1);
+}
+/* Adjust shadow for 3D look */
+#button3 {
+  box-shadow     : inset 0 0 2px rgba(255,255,255,0.5),
+                         0 3px 0 #212325;
+}
+
+#button4, #button5, #button6 {
+  border-radius  : 5px;
+  font-family    : "Helvetica";
+  font-size      : 13px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image: linear-gradient(#215a88, #4d93dd);
+  border-width   : 1px;
+  border-color   : #212325;
+  box-shadow     : inset 0 1px 0 rgba(101,177,232,0.9),
+                           0 1px 2px rgba(0,0,0,0.5);
+}
+/* Adjust shadow for inset look */
+#button5 {
+  box-shadow     : inset 0 1px 0 rgba(101,177,232,0.9),
+                         0 1px 0 rgba(255,255,255,0.1);
+}
+/* Adjust shadow for 3D look */
+#button6 {
+  box-shadow     : inset 0 0 2px rgba(101,177,232,0.9),
+                         0 3px 0 #212325;
+}
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ButtonPreview **/
+
+
+
+
+/** CollectionViewPreview **/
+
+/* UICollecitonView with a "Circle" UICollectionViewLayout.
+ * Tap to add new views; tap on a specific view to remove it.
+ *
+ * Note: UICollectionView is only supported in iOS 6
+ */
+#myCollectionView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+    background-size  : 495 330;
+    border-radius    : 3px;
+    position         : 3px 3px;
+    size             : 495 330;
+}
+
+#myCollectionView .collectionCell:nth-child(odd) {
+    background-image : linear-gradient(#3c4145, #585e62);
+    border-radius    : 35px;
+    border-color     : #212325;
+    border-width     : 1px;
+  box-shadow         : inset 0 2px 0 rgba(255,255,255, 0.3),
+                             0 1px 1px rgba(0,0,0,0.5);
+}
+
+#myCollectionView .collectionCell:nth-child(even) {
+    background-image : linear-gradient(#215a88, #4d93dd);
+    border-radius    : 25px;
+    border-color     : #212325;
+    border-width     : 1px;
+    box-shadow       : inset 0 2px 0 rgba(255,255,255, 0.3),
+                             0 1px 1px rgba(0,0,0,0.5);
+}
+
+/** End of CollectionViewPreview **/
+
+
+
+
+/** ImageViewPreview **/
+
+/* Images loaded into UIImageViews. Rotation and translation of
+ * the view has also been applied in some cases.
+ */
+#image1 {
+    background-image : url(1.jpg);
+    transform : rotate(15);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 75 40;
+    box-shadow : 10 10 5;
+}
+
+#image2 {
+    background-image : url(2.jpg);
+    transform : rotate(-5);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 210 40;
+    box-shadow : 10 10 5;
+}
+
+#image3 {
+    background-image : url(3.jpg);
+    transform : rotate(-10);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 50 160;
+    box-shadow : 10 10 5;
+}
+
+#image4 {
+    background-image : url(4.jpg);
+    transform : rotate(15);
+    border-color : #ccc;
+    border-width : 10;
+    border-style: solid;
+    position : 210 150;
+    box-shadow : 10 10 5;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of ImageViewPreview **/
+
+
+
+
+/** LabelPreview **/
+
+#label1 {
+  font-size   : 14px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+#label2 {
+  font-size   : 24px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+#label3 {
+  font-size   : 34px;
+  font-weight : regular;
+  color       : #c8cbcd
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of LabelPreview **/
+
+
+
+
+/** MapViewPreview **/
+
+/* MKMapView with custom pins (annotations).
+ */
+#myMap {
+    position  : 25 25;
+    size      : 450 285;
+}
+
+#myMapBackground {
+  background-image : linear-gradient(#292e31, #3a3f42);
+  background-size  : 495 330;
+  border-radius    : 3;
+  position         : 3 3;
+  size             : 495 330;
+}
+
+.myAnnotations {
+  border-radius    : 8px
+  background-image : linear-gradient(#215a88, #4d93dd);
+  background-size  : 16px 16px;
+  border-width     : 1px;
+  border-color     : #163d61
+  box-shadow       : inset 0 1px 0 #39acff,
+                           0 0 6px rgb(0, 132, 255);
+}
+
+/** End of MapViewPreview **/
+
+
+
+
+/** NavigationBarPreview **/
+
+/* UINavigationBar with first 3 back buttons as
+ * custom UIButtons and remaining back buttons as
+ * default BarButtonItems.
+ */
+#bar1 {
+  color          : white;
+  font-family    : "Helvetica";
+  font-size      : 20px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image : linear-gradient(#3c4145, #585e62);
+  box-shadow     : inset 0 1px 0 rgba(255,255,255,0.3),
+                   0 1px 1px rgba(0,0,0,0.5);  
+}
+
+#bar1 back-bar-button {
+    background-size : 30 30;
+    shape           : arrow-button-left;
+    content-edge-inset  : 15 4 15 4;
+    font-weight     : regular;
+    font-size       : 12px;
+    color           : #ffffff;
+    border-radius   : 3px;
+    background-image: linear-gradient(#215a88, #4d93dd);
+    border-width    : 1px;
+    border-color    : #212325;
+    box-shadow      : inset 0 1px 0 rgba(101,177,232,0.9),
+    0 1px 0 rgba(255,255,255,0.1);
+}
+#navPushButton {
+  border-radius  : 5px;
+  font-family    : "Helvetica";
+  font-size      : 13px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image: linear-gradient(#215a88, #4d93dd);
+  border-width   : 1px;
+  border-color   : #212325;
+  box-shadow     : inset 0 0 2px rgba(101,177,232,0.9),
+                         0 3px 0 #212325;
+}
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of NavigationBarPreview **/
+
+
+
+
+/** PageControlPreview **/
+
+/* Note: color and current-color not supported on iOS 5.1 */
+
+#page1 {
+  color          : #2b2e31;
+  current-color  : #8d9194;
+  background-image: linear-gradient(#3c4145, #585e62);
+  border-width   : 1px;
+  border-color   : #212325;
+  border-radius  : 3px;
+  box-shadow     : inset 0 1px 0 rgba(255,255,255,0.3),
+                     0 1px 1px rgba(0,0,0,0.5);
+}
+
+#page2 {
+  color            : white;
+  current-color    : gray;
+  background-color : #2b2e31;
+  border-radius    : 3px;
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                       0 1px 0 rgba(255,255,255,0.1);
+}
+
+#page3 {
+  color            : white;
+  current-color    : #5d894e;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of PageControlPreview **/
+
+
+
+
+/** PickerViewPreview **/
+
+/* UIPickerView styled by accessing the underlying 
+ * UITableView and UITableViewCells.
+ */
+#picker2 table-view{
+  background-image: linear-gradient(#292e31, #3a3f42);
+}
+
+#picker2 table-view-cell {
+  color            : #ffffff;
+  background-image : linear-gradient(#3c4145, #585e62);
+  border-width     : 1px;
+  border-color     : #212325;
+  border-radius    : 5px;
+  box-shadow       : inset 0 1px 0 rgba(255,255,255, 0.3),
+                     0 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of PickerViewPreview **/
+
+
+
+
+/** ProgressViewPreview **/
+
+/* UIProgressView with custom backgrounds and tracks,
+ * including using an svg vector image as the scalable
+ * track image.
+ */
+.myProgressBars {
+    width : 250px;
+}
+
+#myProgress1 {
+    top              : 90;
+    left             : 125;
+    background-color : #4d93dd;
+}
+
+#myProgress1 track {
+    background-color : #d5d9de;
+}
+
+#myProgress2 {
+    top              : 160;
+    left             : 125;
+    height           : 10px;
+    background-color : #2b2e31;
+    border-width     : 1px;
+    box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                         0 1px 0 rgba(255,255,255,0.1);
+}
+
+#myProgress2 track {
+    background-image : linear-gradient(45deg,
+                        #6d9b5d 30%, #8eb579 31%, 
+                        #8eb579 60%, #6d9b5d 61%
+                     );
+    background-size  : 30px 10px;
+    height           : 9;
+}
+
+#myProgress3 {
+    top              : 230;
+    left             : 125;
+    background-color : lightgray;
+}
+
+#myProgress3 track {
+    background-image : url(star.svg);
+    background-size  : 11px 10px;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ProgressViewPreview **/
+
+
+
+
+/** SearchBarPreview **/
+
+#mySearch1 {
+    background-color : #575d61
+    box-shadow       : 0 2px 1px rgba(0,0,0,0.5);
+}
+
+#mySearch2 {
+    background-color : #4b91dd;
+    box-shadow       : 0 2px 1px rgba(0,0,0,0.5);
+}
+
+#mySearch3 {
+    background-color : #6a965a;
+    box-shadow       : 0 2px 1px rgba(0,0,0,0.5);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of SearchBarPreview **/
+
+
+
+
+/** SegmentedControlPreview **/
+
+#seg1  {
+  background-image : linear-gradient(#7c8084,#c8ced2);
+  border-radius    : 3px;
+  border-color     : #1f2124;
+  border-width     : 1px;
+  color            : #191a1b;
+  box-shadow       : inset 0 1px 0 #e2e6e8, 
+                           0 0 1px rgba(0,0,0,0.3);
+}
+
+#seg1 divider {
+  background-image : linear-gradient(#505354, #7f8385);
+  background-size  : 1 20;
+}
+
+#seg2  {
+  border-radius    : 5px;
+  color            : white;
+  background-color : #2b2e31
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                       0 1px 0 rgba(255,255,255,0.1);
+}
+#seg2 divider { 
+  background-color : #212325; 
+  background-size  : 1 10 }
+
+#seg3  {
+  background-color : #4d93dd;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of SegmentedControlPreview **/
+
+
+
+
+/** SliderPreview **/
+
+/* Dynamically generate thumb using a linear
+   gradient and rounded corners. No bitmap req'd.  */
+
+#slider1 thumb {
+  background-image : linear-gradient(#808487, #cbd1d5);
+  background-size  : 16px 16px;
+  border-radius    : 8px;
+}
+
+#slider1 min-track {
+  background-image : linear-gradient(#215a88, #4d93dd);
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  border-radius    : 5px;
+}
+
+#slider1 max-track {
+  background-color : #2b2e31;
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  border-radius    : 5px;
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                           0 1px 0 rgba(255,255,255,0.1);  
+}
+
+/* Dynamically generate star image using SVG. */
+
+#slider2 thumb {
+  background-image : url(star.svg);
+  background-size  : 16px 16px;
+}
+
+#slider2 min-track, #slider2 max-track {
+  background-color : #2b2e31;
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                           0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of SliderPreview **/
+
+
+
+
+/** StepperPreview **/
+
+/* Note: color property is not supported on iOS 5.1 */
+
+#stepper1 {
+  color   : #306daa;
+  opacity : 1;
+}
+
+#stepper2 {
+  color   : #306daa;
+  opacity : .8;
+}
+
+#stepper3 {
+  color   : #306daa;
+  opacity : .6;
+}
+
+#stepper4 {
+  color   : #306daa;
+  opacity : .4;
+}
+
+#stepper5 {
+  color   : #306daa;
+  opacity : .2;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of StepperPreview **/
+
+
+
+
+/** SwitchPreview **/
+
+/* Note: off-color property is not supported on iOS 5.1 */
+
+#switch1 {
+   color     : #69D2E7;
+   off-color : #E0E4CC;
+}
+
+#switch2 {
+    color     : #8FBE00;
+    off-color : #F9F2E7;
+}
+
+#switch3 {
+    color     : black;
+    off-color : white;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of SwitchPreview **/
+
+
+
+
+/** TabBarPreview **/
+
+#tab-bar1 {
+    color            : #2f6ba6;
+}
+
+#tab-bar2 {
+    oolor: gray;
+    selected-color: green;
+    background-image : linear-gradient(#3c4145, #585e62);
+    border-width     : 1px;
+    border-color     : #212325;
+    box-shadow       : inset 0 1px 0 rgba(255,255,255,0.3),
+    0 1px 1px rgba(0,0,0,0.5);
+}
+
+#tab-bar2 tab-bar-item {
+    color            : white;
+}
+
+/* Change the tint of the selected item */
+#tab-bar3 {
+    color            : #555;
+    selected-color   : green;
+}
+
+/* Use a custom vector image for the selected image. */
+#tab-bar3 tab-bar-item:selected {
+    background-image : url(gear.svg);
+    background-size  : 30px 30px;
+}
+
+/* Use a custom vector image for the unselected image. */
+#tab-bar3 tab-bar-item:unselected {
+    background-image : url(star.svg);
+    background-size  : 30px 30px;
+}
+
+/* Place an image around the current selection */
+#tab-bar3 selection {
+    background-image : url(tab_select_indicator.png);
+    background-size  : 60px 60px;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of TabBarPreview **/
+
+
+
+
+/** TableViewPreview **/
+
+/* UITableView with optional (iOS 6 only) UIRefreshControl;
+ * pull table cells down to see the custom styled refresh.
+ */
+#myTable {
+    background-color : #f1f1f1;
+    separator-style  : solid-line;
+}
+#myTable label { 
+    color : #444444;
+}
+#myTable table-view-headerfooter-view {
+    background-color : #1959c9;
+}
+#myTable table-view-headerfooter-view label {
+    color : white;
+}
+
+#myRefreshControl image-view:nth-child(2) {
+    background-image : linear-gradient(red, #1959c9);
+    border-radius    : 10px;
+    border-width     : 1px;
+    border-color     : gray;
+}
+
+/********************************************************/
+
+.myTableCell label {
+    color : darkblue;
+}
+
+.myCellImage {
+    background-image : url("star.svg");
+    size  : 30px, 30px;
+}
+
+
+
+/** End of TableViewPreview **/
+
+
+
+
+/** TextFieldPreview **/
+
+#textfield1 {
+  opacity     : 0.5;
+}
+
+#textfield2 {
+  color       : red;
+}
+
+#textfield3 {
+  font-family : "American Typewriter";
+  font-size   : 18px;
+}
+
+#textfield4 {
+  text-align  : right;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of TextFieldPreview **/
+
+
+
+
+/** TextViewPreview **/
+
+#textview1 {
+  opacity          : 0.5;
+}
+
+#textview2 {
+  color            : red;
+}
+
+#textview3 {
+  font-family      : "American Typewriter";
+  font-size        : 18px;
+}
+
+#textview4 {
+  text-align       : right;
+}
+
+#textview5 {
+  background-color : rgb(200, 200, 200);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of TextViewPreview **/
+
+
+
+
+/** ToolbarPreview **/
+
+#myToolbar1 {
+  background-color : #2b2e31;
+}
+
+#myToolbar2 {
+  background-color : #a1a6aa;
+}
+
+#myToolbar3 {
+  background-color : #454b4f;
+}
+
+#myToolbar3 bar-button-item:nth-child(even) {
+    background-color : #2f6ba6;
+}
+
+#myToolbar3 bar-button-item:nth-child(odd) {
+    background-color : #5d894e;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ToolbarPreview **/
+
+
+
+
+/** VectorGraphicsPreview **/
+
+/* Scaled svg vector graphics file. Also note the 
+ * rotation transform applied to the view.
+ */
+#myContentView  {
+    background-image : url(gear.svg);
+    background-size  : 500 335;
+}
+
+#myContentView2 {
+    background-image : url(gear.svg);
+    background-size  : 120 120;
+    transform        : rotate(35);
+}
+
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+
+/** End of VectorGraphicsPreview **/
+
+
+
+
+/** ViewPreview **/
+
+#view1 {
+    background-image: linear-gradient(#215a88,#4d93dd);
+    box-shadow      : inset 0 2px 3px #000000;
+}
+
+#view2 {
+    background-image : linear-gradient(#588449,#5f8b50);
+    box-shadow       : inset 0 2px 3px #000000;
+}
+
+#view3 {
+    background-image: linear-gradient(#9a3839,#c05556);
+    box-shadow      : inset 0 2px 3px #000000;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+/** End of ViewPreview **/
+
+
+
+
+/** WebViewPreview **/
+
+#backButton {
+  border-radius    : 5px;
+  font-family      : "Helvetica";
+  font-size        : 13px;
+  font-weight      : bold;
+  color            : #ffffff;
+  background-image : linear-gradient(#215a88, #4d93dd);
+  border-width     : 1px;
+  border-color     : #212325;
+  box-shadow: inset 0 0 2px rgba(101, 177, 232, 0.9),
+  0 1px 0 #212325;
+}
+
+#urlField {
+  font-family : "Helvetica";
+  font-size   : 15px;
+  color       : #4d93dd;
+}
+
+#myWebView  {
+  top  : 50;
+  left : 10;
+  size : 478, 270;
+}
+
+#browserView {
+  background-image  : linear-gradient(#292e31, #3a3f42);
+    background-size : 495 330;
+    position        : 3 3;
+    size            : 495 330;
+}
+
+/** End of WebViewPreview **/
+
+
+
+
+/** n **/
+
+/* Style the main nav bar */
+#bar1 {
+  color          : white;
+  font-family    : "Helvetica";
+  font-size      : 20px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image : linear-gradient(#3c4145, #585e62);
+  box-shadow     : inset 0 1px 0 rgba(255,255,255,0.3),
+                   0 1px 1px rgba(0,0,0,0.5);  
+}
+
+.myLeftNavButtons {
+  top             : 6;
+  size            : 115 31;
+  shape           : arrow-button-left;
+  content-edge-inset : 0 0 0 6;
+  font-weight     : regular;
+  font-size       : 12px;
+  color           : #ffffff;
+  border-radius   : 3px;
+  background-image: linear-gradient(#215a88, #4d93dd);
+  border-width    : 1px;
+  border-color    : #212325;
+  box-shadow      : inset 0 1px 0 rgba(101,177,232,0.9),
+                          0 1px 0 rgba(255,255,255,0.1);
+}
+
+#navPushButton {
+  border-radius  : 5px;
+  font-family    : "Helvetica";
+  font-size      : 13px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image: linear-gradient(#215a88, #4d93dd);
+  border-width   : 1px;
+  border-color   : #212325;
+  box-shadow     : inset 0 0 2px rgba(101,177,232,0.9),
+                         0 3px 0 #212325;
+}
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+
+/** End of n **/
+
+
+

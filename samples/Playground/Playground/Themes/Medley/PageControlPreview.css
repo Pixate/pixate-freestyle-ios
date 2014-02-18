@@ -1,0 +1,24 @@
+/* Note: color and current-color not supported on iOS 5.1 */
+
+#page1 {
+  color            : red;
+  current-color    : blue;
+  background-image : linear-gradient(#202020, purple);
+  border-radius    : 5px;
+  border-width     : 1px;
+  border-color     : black;
+}
+
+#page2 {
+  color            : yellow;
+  current-color    : gray;
+  background-image : linear-gradient(#202020, #4d4d4c);
+  border-radius    : 5px;
+  border-width     : 1px;
+  border-color     : black;
+}
+
+#page3 {
+  color            : white;
+  current-color    : green;
+}

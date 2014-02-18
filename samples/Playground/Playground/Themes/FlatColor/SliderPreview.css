@@ -1,0 +1,22 @@
+#slider1 thumb {
+    size             : 16px 16px;
+    background-image : linear-gradient(#4787ed, #4d90fe);
+    border-radius    : 2px;
+    border-width     : 1px;
+    border-color     : #3079ed;
+}
+#slider1 min-track {
+    color            : rgba(219, 231, 252, 0.5);
+}
+#slider2 thumb {
+    background-image : url(star.svg);
+    background-size  : 32px 32px;
+}
+#slider2 min-track {
+    background-color : #aaa;
+    background-size  : 1px 15px;
+}
+#slider2 max-track {
+    background-color : white;
+    background-size  : 1px 15px;
+}

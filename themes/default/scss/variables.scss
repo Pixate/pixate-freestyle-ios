@@ -1,0 +1,135 @@
+/*
+ * Variables
+ * --------------------------------
+ */
+
+
+/* Palette */
+
+$blue:              #0096D7;
+$blue-light:        #00B2FF;
+$blue-semidark:     #0070A3;
+$blue-dark:         #002C40;
+$white:             #FFFFFF;
+$white-smoke:       #F7F8FA;
+$gray:              #B0B1B4;
+$gray-superlight:   #F7F7F7;
+$gray-light:        #D8D9DC;
+$gray-dark:         #53555A;
+$green:             #00D705;
+$yellow:            #D7D400;
+$red:               #D70000;
+
+
+/* Theme */
+
+$app-bg:                                $white;
+$icon-bg:                               transparent; /* Note: optimize by setting to your preferred color - either here, or in more specific contexts where you use icons */
+
+
+/* Typography */
+
+$font-family-base:                      'Avenir';
+$font-size-base:                        14pt;
+$font-size-superlarge:                  22pt;
+$font-size-large:                       18pt;
+$font-size-small:                       12pt;
+$font-size-supersmall:                  10pt;
+$heading-font-family:                   $font-family-base;
+
+
+/* Navigation bar */
+
+$navbar-bg:                             $blue;
+$navbar-text-color:                     $white;
+$navbar-text-font:                      $font-family-base;
+$navbar-title-text-weight:              bold;
+$navbar-text-weight:                    light;
+$navbar-text-size:                      17pt;
+$navbar-bar-button-font:                $font-family-base;
+$navbar-bar-button-color:               $white;
+
+
+/* Tab bar */
+
+$tabbar-bg:                             $white;
+$tabbar-border-color:                   $gray-light;
+$tabbar-text-color:                     $gray;
+$tabbar-text-color-selected:            $blue;
+$tabbar-text-font:                      $font-family-base;
+$tabbar-text-size:                      $font-size-supersmall;
+
+
+/* Table views */
+
+$table-text-color:                      $gray-dark;
+$table-text-font:                       $font-family-base;
+$table-text-size:                       $font-size-base;
+$table-heading-text-color:              $white;
+$table-heading-text-size:               $font-size-small;
+$table-heading-bg-color:                $blue-semidark;
+
+
+/* Collection views */
+
+$collection-background-color:           $gray-superlight;
+$collection-cell-border-width:          0px;
+$collection-cell-border-color:          $gray;
+$collection-cell-border-radius:         5pt;
+$collection-cell-box-shadow-color:      $gray-light;
+$collection-cell-background-color:      $white;
+
+
+/* Forms */
+
+$input-bg:                              transparent;
+$input-border-color:                    $gray-dark;
+$input-border-color-active:             $gray-dark;
+$input-text-color:                      $gray;
+$input-text-color-active:               $gray-dark;
+$input-text-font:                       $font-family-base;
+$input-text-size:                       $font-size-base;
+$input-text-size-large:                 $font-size-large;
+$input-text-size-small:                 $font-size-small;
+
+$input-state-success-border:            $green;
+$input-state-warning-border:            $yellow;
+$input-state-error-border:              $red;
+
+$text-view-bg-color:                    $gray-superlight;
+$text-view-border-color:                $gray-superlight;
+
+$slider-bg:                             $blue;
+$slider-border:                         $gray-dark;
+$slider-track-min-bg:                   $blue;
+$slider-track-max-bg:                   $gray-light;
+
+$switch-thumb-bg:                       $blue;
+$switch-thumb-border-color:             $white;
+$switch-on-bg:                          $gray-dark;
+$switch-off-bg:                         $gray-dark;
+
+$segmented-control-bg:                  $blue;
+$segmented-control-border-radius:       5pt;
+$segmented-control-text-font:           $font-family-base;
+$segmented-control-text-size:           $font-size-base;
+$segmented-control-text-color:          $blue;
+$segmented-control-text-color-selected: $white;
+
+
+/* Buttons */
+
+$button-bg-color:                       $blue;
+$button-bg-color-highlighted:           darken($blue, 20%);
+$button-text-color:                     $white;
+$button-text-color-highlighted:         darken($button-text-color, 50%);
+$button-text-font:                      $font-family-base;
+$button-border-radius:                  3pt;
+$button-text-size:                      $font-size-base;
+$button-text-size-large:                $font-size-superlarge;
+$button-text-size-small:                $font-size-small;
+
+
+
+
+

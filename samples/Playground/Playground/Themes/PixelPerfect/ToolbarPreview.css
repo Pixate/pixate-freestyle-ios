@@ -1,0 +1,24 @@
+#myToolbar1 {
+  background-color : #2b2e31;
+}
+
+#myToolbar2 {
+  background-color : #a1a6aa;
+}
+
+#myToolbar3 {
+  background-color : #454b4f;
+}
+
+#myToolbar3 bar-button-item:nth-child(even) {
+    background-color : #2f6ba6;
+}
+
+#myToolbar3 bar-button-item:nth-child(odd) {
+    background-color : #5d894e;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}

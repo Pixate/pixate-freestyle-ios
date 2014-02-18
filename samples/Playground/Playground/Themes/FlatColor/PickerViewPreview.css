@@ -1,0 +1,23 @@
+/* UIPickerView styled by accessing the underlying
+ * UITableView and UITableViewCells.
+ */
+#picker1 table-view {
+    background-color : #2d2d2d;
+}
+
+#picker1 table-view-cell {
+    background-color : #1959c9;
+    color            : white;
+}
+
+#picker2 table-view {
+    background-color : #D14836;
+}
+
+#picker2 table-view-cell {
+    border-color     : #2d2d2d;
+    border-width     : 1px;
+    border-radius    : 6px;
+    background-color : #f1f1f1;
+}
+

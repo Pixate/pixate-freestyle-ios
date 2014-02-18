@@ -1,0 +1,17 @@
+#myToolbar1 {
+    background-color : #2d2d2d;
+}
+#myToolbar2 {
+    background-color : #1959c9;
+}
+#myToolbar3 {
+    background-image : linear-gradient(#D14836, #DD4B39);
+}
+
+#myToolbar3 bar-button-item:nth-child(even) {
+    background-color : darkred;
+}
+
+#myToolbar3 bar-button-item:nth-child(odd) {
+    background-color : blue;
+}

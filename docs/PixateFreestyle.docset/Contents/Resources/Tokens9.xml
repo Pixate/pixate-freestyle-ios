@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UINavigationItem+PXStyling.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UINavigationItem(PXStyling)</TokenIdentifier>
+			<Abstract type="html">UINavigationItem supports the following element name:</Abstract>
+			<DeclaredIn>UINavigationItem+PXStyling.h</DeclaredIn>
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

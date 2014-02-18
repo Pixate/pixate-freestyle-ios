@@ -1,0 +1,10 @@
+extends ../../web/templates/with-left-nav.jade
+
+block scripts
+  script(src='#{rootURL}/js/nested-nav.js')
+
+block topnav
+  mixin nav(pages, {url:'style-reference', title:'Style Reference'})
+
+block left-nav
+  mixin nested-left-nav(navItems)

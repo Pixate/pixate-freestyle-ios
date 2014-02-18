@@ -1,0 +1,30 @@
+#activity1 {
+    style            : small;
+    color            : #d14836;
+    background-color : #f3f3f3;
+    border-radius    : 2px;
+    size             : 50px 50px;
+    border-width     : 1px;
+    border-color     : #d6d6d6;
+}
+#activity2 {
+    style            : small;
+    color            : #4b8cf8;
+    background-color : #f3f3f3;
+    border-radius    : 2px;
+    size             : 50px 50px;
+    border-width     : 1px;
+    border-color     : #d6d6d6;
+}
+#activity3 {
+    style            : large;
+    color            : #6e6e6e;
+    background-color : transparent;
+    size             : 70px 70px;
+}
+
+#previewView {
+    background-color : #f1f1f1;
+    border-width     : 1px;
+    border-color     : #e5e5e5;
+}

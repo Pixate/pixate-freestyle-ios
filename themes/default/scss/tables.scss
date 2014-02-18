@@ -1,0 +1,32 @@
+/*
+ * Tables
+ * --------------------------------
+ */
+
+
+.table-cell text-label {
+    color: $table-text-color;
+    font-family: $table-text-font;
+    font-size: $table-text-size;
+    font-weight: light;
+}
+
+.table-cell {
+    background-color: $white;
+}
+
+.table-cell:nth-child(odd) {
+    background-color: $gray-superlight;
+}
+
+/* Note: would prefer to use classes here, but since we're not using a custom section view, there's no easy way to set one */
+table-view-headerfooter-view {
+    background-color: $table-heading-bg-color;
+    font-family: $font-family-base;
+}
+
+table-view-headerfooter-view text-label {
+    text-transform: uppercase;
+    color: $table-heading-text-color;
+    font-size: $table-heading-text-size;
+}

@@ -1,0 +1,19 @@
+/*
+ * Collections
+ * --------------------------------
+ */
+
+collection-view {
+    background-color: $collection-background-color;
+}
+
+collection-view .icon {
+    background-color: $collection-background-color;
+}
+
+.collection-view-cell {
+    border: $collection-cell-border-width solid $collection-cell-border-color;
+    border-radius: $collection-cell-border-radius;
+    box-shadow: 0px 1px 1px 0px $collection-cell-box-shadow-color;
+    background-color: $collection-cell-background-color;
+}

@@ -1,0 +1,115 @@
+extends ../../web/templates/with-left-nav.jade
+include ../../web/templates/video-mixin.jade
+
+block topnav
+  mixin nav(pages, {url:'getting-started', title:'Getting Started'})
+
+block left-nav
+  mixin left-nav(navItems)
+
+block content-column
+  a#introduction
+  :markdown
+    # Getting Started with Pixate
+
+    **Pixate is a framework for styling native components using CSS.** It provides the simplicity and flexibility of CSS to style the same native iOS components that ship with XCode.
+
+    **Pixate is not a web framework**. If you're already familiar with using CSS on the web, you're going to feel right at home using Pixate. If you've never used CSS before, trust us, this is going to make front end development a lot easier.
+
+    This **five-minute guide** will show you how to get Pixate working inside of your XCode project, and styling native components using CSS.
+
+  a#installation
+  :markdown
+    ## Installation
+
+    If you haven't already [download](http://download.pixate.com) Pixate. Then, copy the Pixate folder to a convenient location.
+
+  a#app_setup
+  :markdown
+    ## App Setup
+
+    Here's how to get Pixate working in your native iOS app. There are three steps:
+
+    ### 1. Add Pixate to your XCode project.
+
+    First, start a new project in XCode. Configure it however you like.
+
+    <img class="screenshot" src="assets/new-Xcode-project.png" alt="New Xcode Project"/>
+
+    Then, add `Pixate.framework` to the frameworks folder of your project and add `-ObjC` to the _Other Linker Flags_ in _Build Settings_.
+
+  mixin vimeo("79831912")
+
+  :markdown
+    ### 2. Add the Linked Libraries that Pixate needs.
+
+    Before you use Pixate, `CoreText.framework` and `QuartzCore.framework` need to be added to your project.
+
+  mixin vimeo("79828918")
+  
+  :markdown
+    ### 3. Add Pixate to main.m.
+
+    To enable Pixate in your app, import `Pixate.h`, and add this `Pixate` call, with your license information.
+
+    #### In **main.m**: 
+
+    ```objectivec
+    #import <UIKit/UIKit.h>;
+    #import <Pixate/Pixate.h>;
+
+    #import "AppDelegate.h"
+
+    int main(int argc, char *argv[])
+    {
+      @autoreleasepool {
+          [Pixate licenseKey:@"YOUR LICENSE KEY" forUser:@"YOUR USER NAME"];
+          return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+      }
+    }
+    ```
+
+    <p class="note">Note: Pixate will still work without a License Key. If you haven't entered your key, a splash screen will appear every time your app launches.</p>
+
+  a#using_css
+  :markdown
+    ## CSS in your Native App
+
+    Let's make a simple app that styles a button using Pixate. We're going to make a green button, on a white background using this CSS:
+
+    ```pixate
+    view {
+      background-color: #ffffff
+    }
+
+    .btn-green {
+      color            : #446620;
+      background-color : linear-gradient(#87c44a, #b4da77);
+      border-width     : 1px;
+      border-color     : #84a254;
+      border-style     : solid;
+      border-radius    : 10px;
+      font-size        : 13px;
+    }
+    ```
+
+  mixin vimeo('79832578')
+   
+  :markdown
+    Congratulations! You are now using CSS to style a native application.
+
+  a#now_what
+  :markdown
+    ## Now what?
+
+    Now that you understand the basics of using Pixate, it might be a good time to [check out the docs](http://www.pixate.com/documentation.html), which cover how to use Pixate for [other native components](#{rootURL}/style-reference/index.html).
+
+    It's worth noting that, while Pixate uses the same CSS syntax as the web, it _does not_ use all of the same property names as the web does. Native apps have different properties, and so does our CSS.
+
+    **If you're new to CSS**, [this guide by Code Academy](http://www.codecademy.com/courses/css-coding-with-style) is a good place to start.
+
+    And of course, if you have any questions, you can always get them answered by Pixate engineers and the Pixate community at [answers.pixate.com](http://answers.pixate.com).
+
+    Happy coding!
+
+   

@@ -1,0 +1,283 @@
+// Variables
+
+$light-gray: rgb(85,85,86)
+$dark-gray: rgb(48,48,49)
+
+$base_size: 16px
+$leading: 1.5
+
+$navbar_padding_top: 52px
+
+$search_btn_width: 40px
+
+
+
+// Element selectors
+
+body
+  box-sizing: border-box
+  font-family: "Whitney SSm A", "Whitney SSm B", Calibri, Lucida Grande, Arial, sans-serif
+  font-size: $base_size
+  line-height: $leading * $base_size
+  font-weight: normal
+  color: $light-gray
+  padding-top: $navbar_padding_top
+  padding-bottom: $leading * $base_size
+
+body strong
+  font-weight: 600
+  color: $dark-gray
+
+h1, h2, h3
+  color: $dark-gray
+  font-family: 'Whitney A', 'Whitney B', Calibri, Lucida Grande, Arial, sans-serif
+
+$h1_margin_top: $base_size * 0.5
+h1
+  font-weight: 300
+  font-size: $base_size * 3
+  line-height: $base_size * $leading * 2.5
+
+  padding-top: $navbar_padding_top + $h1_margin_top
+  margin-top: -$navbar_padding_top + -$h1_margin_top
+  margin-bottom: $base_size * $leading /2
+
+h2
+  font-size: $base_size * 2
+  line-height: $base_size * $leading * 2
+  margin-bottom: $base_size * $leading
+
+h3
+  font-size: $base_size * $leading
+  line-height: $base_size * $leading
+  margin-bottom: $base_size * $leading
+
+h4
+  font-size: $base_size
+  line-height: $base_size * $leading
+  font-weight: normal
+
+p
+  margin-bottom: $base_size * $leading
+
+code strong
+  background-color: rgba(52,255,52,0.2)
+  font-weight: normal
+
+.child-link code
+  display: inline-block
+  text-decoration: underline
+  margin-right: 1em
+  margin-bottom: $base_size * $leading * 0.5
+
+
+
+// Navbar
+
+.navbar-brand
+  padding: 0px 15px 0px 15px
+  margin-left: 15px
+
+.pixate-logo-dark
+  display: inline-block
+  margin-top: 13px
+  background: url('../img/pixate-dark.png')
+  background-size: 100%
+  background-repeat: no-repeat
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+  width: 63px
+  height: 22px
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background: url('../img/pixate-dark@2x.png')
+    background-size: 63px 22px
+
+.logo-docs, .logo-docs:hover
+  color: black
+  text-decoration: none
+  text-transform: uppercase
+
+.btn-search
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
+  margin-left: -2px
+  width: $search_btn_width
+  float: right
+
+.input-search
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+  border-right-style: none
+  float: left
+
+.search-wrap
+  padding-right: $search_btn_width
+  height: auto
+
+.form-search
+  margin-bottom: 0
+  border-bottom-style: none
+
+
+
+// Sidebar
+
+.extra-body-padding
+  padding-top: 70px
+
+.nav.nav-tabs
+  margin-bottom: $base_size * $leading
+
+.nav .nav
+  height: 0
+  opacity: 0
+  display: none
+  margin-left: 1em
+
+.nav .nav.active
+  height: auto
+  display: block
+  opacity: 1
+  -webkit-transition: opacity 0.25s ease-out
+
+.note
+  font-style: italic
+
+
+.column-list
+  clear: both
+
+.sidebar .nav li a
+  font-size: $base_size
+  line-size: $base_size
+  padding-top: $base_size/2
+  padding-bottom: $base_size/2
+
+.sidebar
+  position: static
+  width: 213px
+  top: 0
+  bottom: 0
+  text-align: left
+  font-size: $base_size
+  line-height: $base_size * $leading
+  overflow-y: scroll
+  overflow-x: hidden
+  text-overflow: ellipsis
+  padding-bottom: $base_size * $leading * 2
+  padding-top: $base_size * $leading * 0.5 + 4
+  @media (min-width: 1200px)
+    width: 262px
+
+.sidebar-fixed
+  top: $navbar_padding_top
+
+.side-nav
+  margin-top: $base_size * $leading * 2
+
+.sidebar:before
+  content: ""
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+  position: fixed
+  margin: 0
+  padding: 0
+  z-index: 1
+  display: block
+  width: 213px
+  height: $base_size * $leading * 2
+  @media (min-width: 1200px)
+    width: 262px
+
+.sidebar:after
+  content: ""
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+  position: fixed
+  z-index: 1
+  display: block
+  width: 213px
+  bottom: 0
+  height: $base_size * $leading * 2
+  @media (min-width: 1200px)
+    width: 262px
+
+
+
+// Content Styles
+
+.screenshot
+  max-width: 100%
+  text-align: center
+  margin-bottom: $base_size * $leading
+
+.tab-label
+  padding: 10px 15px 10px 0
+  font-weight: 600
+  margin: 0
+
+.screenshot.dark
+  border-style: solid
+  border-color: black
+  border-width: 1px
+
+.video-wrapper
+  position: relative
+  padding-bottom: 75%
+  height: 0
+
+.video-wrapper .video-js
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.property-table
+  width: 100%
+
+.property-table td
+  padding: $base_size * $leading * 0.5 0
+
+.property-table tr
+  border-bottom: 1px solid #f7f7f7
+  &:last-child
+    border-bottom: none
+
+.property-name
+  width: 35%
+  min-width: 35%
+  padding-right: 2em
+
+.property-value
+  width: 65%
+  min-width: 65%
+
+.property-comment
+  display: block
+  color: #AAA
+  font-size: 12px
+  font-weight: 400
+  font-style: italic
+
+
+
+// Content Scrolling Hacky Stuff
+
+.content-wrapper
+  @media (min-width: 992px)
+    position: fixed
+    top: $navbar_padding_top
+    bottom: 0
+    right: 0
+    left: 0
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+
+
+// Hacking Pixate site CSS
+
+#content
+  background-color: white
+
+#content > ul > li
+  padding: 0

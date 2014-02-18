@@ -1,0 +1,19 @@
+/* Scaled svg vector graphics file. Also note the 
+ * rotation transform applied to the view.
+ */
+#myContentView  {
+    background-image : url(gear.svg);
+    background-size  : 500 335;
+}
+
+#myContentView2 {
+    background-image : url(gear.svg);
+    background-size  : 120 120;
+    transform        : rotate(35);
+}
+
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+
+

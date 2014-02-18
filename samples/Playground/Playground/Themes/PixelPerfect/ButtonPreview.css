@@ -1,0 +1,50 @@
+/* Define common gray buttons */
+#button1, #button2, #button3 {
+  border-radius   : 5px;
+  font-family     : "Helvetica";
+  font-size       : 13px;
+  font-weight     : bold;
+  color           : #ffffff;
+  background-image: linear-gradient(#3c4145, #585e62);
+  border-width    : 1px;
+  border-color    : #212325;
+  box-shadow      : inset 0 1px 0 rgba(255,255,255,0.3),
+                          0 1px 1px rgba(0,0,0,0.5);
+}
+/* Adjust shadow for inset look */
+#button2 {
+  box-shadow      : inset 0 2px 5px rgba(0,0,0,0.6),
+                          0 1px 0 rgba(255,255,255,0.1);
+}
+/* Adjust shadow for 3D look */
+#button3 {
+  box-shadow     : inset 0 0 2px rgba(255,255,255,0.5),
+                         0 3px 0 #212325;
+}
+
+#button4, #button5, #button6 {
+  border-radius  : 5px;
+  font-family    : "Helvetica";
+  font-size      : 13px;
+  font-weight    : bold;
+  color          : #ffffff;
+  background-image: linear-gradient(#215a88, #4d93dd);
+  border-width   : 1px;
+  border-color   : #212325;
+  box-shadow     : inset 0 1px 0 rgba(101,177,232,0.9),
+                           0 1px 2px rgba(0,0,0,0.5);
+}
+/* Adjust shadow for inset look */
+#button5 {
+  box-shadow     : inset 0 1px 0 rgba(101,177,232,0.9),
+                         0 1px 0 rgba(255,255,255,0.1);
+}
+/* Adjust shadow for 3D look */
+#button6 {
+  box-shadow     : inset 0 0 2px rgba(101,177,232,0.9),
+                         0 3px 0 #212325;
+}
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}

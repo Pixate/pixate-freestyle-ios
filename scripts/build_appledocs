@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+# stop if we encounter an error
+#set -e
+
+# check args
+if [ $# -ne 1 ]; then
+    echo "usage: $0 <output-directory>"
+    exit 1
+fi
+
+# set variables
+DOCS_WORKSPACE="$1/docs"
+
+DOCUMENTATION_DIR="${DOCS_WORKSPACE}/src"
+MARKDOWN_DIR="${DOCUMENTATION_DIR}/markdown"
+APPLEDOC_TEMPLATES_DIR="${DOCUMENTATION_DIR}/appledoc-templates"
+APPLEDOC_SETTINGS_PLIST="${APPLEDOC_TEMPLATES_DIR}/GlobalSettings.plist"
+
+PXENGINE_DIR="$1/src"
+PXENGINE_CLASSES_DIR="${PXENGINE_DIR}"
+PXENGINE_PROJECT_FILE="${PXENGINE_DIR}/pixate-freestyle.xcodeproj/project.pbxproj"
+
+# convenience variables for appledoc
+DEV_REFERENCE_TMP_DIR="${DOCS_WORKSPACE}/api-reference-tmp-$$"
+PXENGINE_COPIES_DIR="${DOCS_WORKSPACE}/public-headers-$$"
+
+DEV_REFERENCE_DIR="dev-reference"
+DEV_REFERENCE_HTML="${DEV_REFERENCE_DIR}.html"
+DEV_REFERENCE_DOCSET="PixateFreestyle.docset"
+PUBLIC_HEADER_EXCLUDES="CG"
+
+# make sure docs workspace exists
+mkdir -p "${DOCS_WORKSPACE}"
+
+# generate HTML and docset versions of developer docs using appledoc
+
+mkdir -p "${PXENGINE_COPIES_DIR}"
+
+# generate a copy of the AppleDocSettings.plist and public header files
+# Public headers are pulled from the project file and are indicated by having
+# the Public attribute
+for f in "${APPLEDOC_SETTINGS_PLIST}" $(grep 'ATTRIBUTES = (Public,' $PXENGINE_PROJECT_FILE | sed -e 's|^[^/]*/\* \([A-Za-z.+]*\) in \([A-Za-z.]*\) .*|\1|g')
+do
+    # file references do not include the location of the file in the headers so locate this file
+    # N.B., this assumes that that there are no header files with the same base name
+    find "${PXENGINE_CLASSES_DIR}" \( -type d -name CG -prune \) -o -name "${f}" -print
+
+    # use tar to create a copy of public headers with the dir hierarchy intact.
+    # remove the leading ../Frameworks/Pixate from the extracted filenames
+done  |  tar cfT - - |  tar xCf "${PXENGINE_COPIES_DIR}"  - --strip-components 1
+
+# generate developer HTML and docset documentation in temp directory
+mkdir -p "${DEV_REFERENCE_TMP_DIR}"
+
+# generate docs..
+appledoc --keep-intermediate-files \
+         --output "${DEV_REFERENCE_TMP_DIR}" \
+         --templates "${APPLEDOC_TEMPLATES_DIR}"  \
+         --index-desc "${MARKDOWN_DIR}/dev-reference-intro.md"  \
+         --exit-threshold 2 \
+         "${PXENGINE_COPIES_DIR}"
+
+# move HTML developer documentation from temp directory to Documents workspace directory
+rm  -rf "${DEV_REFERENCE_DIR}"
+rm  -rf "${DEV_REFERENCE_DOCSET}"
+mv  "${DEV_REFERENCE_TMP_DIR}/html" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}"
+
+# create top-level HTML page.  Update embedded URLs to point to reference directory
+sed -e "s|href=\"|href=\"${DEV_REFERENCE_DIR}/|g" -e "s|href=\"${DEV_REFERENCE_DIR}/index.html|href=\"${DEV_REFERENCE_HTML}|g" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}/index.html" > "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}"
+
+# rename docset
+mv  "${DEV_REFERENCE_TMP_DIR}/docset" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DOCSET}"
+
+# remove temp directories
+rm -rf "${DEV_REFERENCE_TMP_DIR}"
+rm -rf "${PXENGINE_COPIES_DIR}"

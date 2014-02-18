@@ -1,0 +1,25 @@
+#mainView {
+	background-color: rgb(232, 233, 234);
+}
+
+#previewView {
+	background-color: rgb(244, 245, 246);
+    border-radius   : 5px;
+	border-width    : 1px;
+    border-color    : rgb(192,193,194);
+}
+
+#textView {
+    border-radius   : 5px;
+    border-width    : 1px;
+    border-color    : rgb(192,193,194);
+}
+
+@media (device-os-version: '7') {
+    #previewView {
+        top           : 90px;
+    }
+    #textView {
+        top           : 90px;
+    }
+}

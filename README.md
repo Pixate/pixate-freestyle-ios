@@ -1,4 +1,4 @@
-pixate-freestyle-ios
-====================
+pixate-ios-freestyle-staging
+============================
 
 Pixate Freestyle for iOS

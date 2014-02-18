@@ -1,0 +1,56 @@
+/*
+ * Base styles
+ * --------------------------------
+ */
+
+
+/* Containers */
+
+.container {
+    border: 1px solid $gray-light;
+}
+
+.horizontal-line {
+    background-color: $gray-light;
+    height: 1;
+}
+
+
+
+/* Navigation Bar */
+
+navigation-bar {
+    background-color: $navbar-bg;
+    opacity: 1;
+    color: $white;
+}
+
+navigation-bar title {
+    color: $navbar-text-color;
+    font-family: $navbar-text-font;
+    font-size: $navbar-text-size;    
+    font-weight: $navbar-title-text-weight;
+}
+
+navigation-bar button-appearance {
+    font-family: $navbar-bar-button-font;
+    color: $navbar-bar-button-color;
+    font-weight: $navbar-text-weight;
+}
+
+
+/* Tab Bar */
+
+tab-bar {
+    background-color: $tabbar-bg;
+}
+
+tab-bar tab-bar-item {
+    color: $tabbar-text-color;
+    font-family: $tabbar-text-font;
+    font-size: $tabbar-text-size;
+}
+
+tab-bar tab-bar-item:selected {
+    color: $tabbar-text-color-selected;
+}

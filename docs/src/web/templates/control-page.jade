@@ -1,0 +1,74 @@
+extends with-left-nav.jade
+
+mixin property-table(properties)
+  //- Since we can't get the length of an object. I'm doing this weird for loop thing to see if it's empty or not.
+  - if (properties.length > 0)
+    h3 Properties
+    table.property-table
+      thead
+        th Property
+        th Value
+      - for (var i = 0; i < properties.length; i++)
+        - if (properties[i].values[0].name != "")
+          tr
+            td.property-name=properties[i].name
+            td.property-value
+              - var values = properties[i].values
+              - for (var j = 0; j < values.length ; j++)
+                - if (values[j].url)
+                  a(href=rootURL+values[j].url)=values[j].name
+                - else
+                  span=values[j].name
+                - if (values.length > 1 && j < values.length-1)
+                  span ,
+              - if (properties[i].comment)
+                small.property-comment=properties[i].comment
+
+block scripts
+  script(src='#{rootURL}/js/nested-nav.js')
+
+block topnav
+  mixin nav(pages, {url:'style-reference', title:'Style Reference'})
+
+block left-nav
+  mixin nested-left-nav(navItems)
+
+block content-column
+
+  //- Main Definition
+
+  h2=controlData.name
+
+  block description
+
+  h3 Selector
+
+  code=controlData.definition.elementName
+
+  - if (controlData.children.length > 0)
+    h3 Children
+
+    p
+      - for (var i = 0; i < controlData.children.length; i++)
+        a.child-link(href = '##{controlData.children[i].elementName}')
+          code=controlData.children[i].elementName
+        span
+
+
+  mixin property-table(controlData.definition.properties)
+
+  //- Children
+
+  - if (controlData.children.length > 0)
+    h2 #{controlData.name} Children
+
+    - for (var i = 0; i < controlData.children.length; i++)
+      a(id=controlData.children[i].elementName)
+      h3 Selector
+
+      code #{controlData.definition.elementName} #{controlData.children[i].elementName}
+
+      mixin property-table(controlData.children[i].properties)
+
+
+

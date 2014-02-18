@@ -1,0 +1,43 @@
+/* Images loaded into UIImageViews. Rotation and translation of
+ * the view has also been applied in some cases.
+ */
+#image1 {
+    background-image : url(1.jpg);
+    transform : rotate(15);
+    border-color : white;
+    border-width : 10;
+    border-style: solid;
+    position : 75 40;
+    box-shadow : 10 10 5;
+}
+
+#image2 {
+    background-image : url(2.jpg);
+    transform : rotate(-5);
+    border-color : white;
+    border-width : 10;
+    border-style: solid;
+    position : 210 40;
+    box-shadow : 10 10 5;
+}
+
+#image3 {
+    background-image : url(3.jpg);
+    transform : rotate(-10);
+    border-color : white;
+    border-width : 10;
+    border-style: solid;
+    position : 50 180;
+    box-shadow : 10 10 5;
+}
+
+#image4 {
+    background-image : url(4.jpg);
+    transform : rotate(15);
+    border-color : white;
+    border-width : 10;
+    border-style: solid;
+    position : 210 190;
+    box-shadow : 10 10 5;
+}
+

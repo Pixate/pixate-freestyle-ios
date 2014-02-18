@@ -1,0 +1,48 @@
+/* UITableView with optional (iOS 6 only) UIRefreshControl;
+ * pull table cells down to see the custom styled refresh.
+ */
+#myTable {
+    background-image : linear-gradient(black, white);
+      separator-style: etched-line;
+}
+
+#myTable label {
+    color            : black;
+}
+
+#myTable refresh-control {
+    color            : #44f;
+}
+
+/**
+ * Set the opacity of the cell to 50% to show through
+ * some of the background color
+ */
+#myTable table-view-cell {
+    background-color : blue;
+    opacity          : .5;
+}
+
+/**
+ * Style the header/footer cells -- iOS 6.x ONLY
+ */
+#myTable table-view-headerfooter-view {
+    background-color : lightblue;
+    opacity          : 0.5;
+}
+
+#myTable table-view-headerfooter-view label {
+    color            : black;
+}
+
+/********************************************************/
+
+.myTableCell label {
+    color : darkblue;
+}
+
+.myCellImage {
+    background-image : url("star.svg");
+    size  : 30px, 30px;
+}
+

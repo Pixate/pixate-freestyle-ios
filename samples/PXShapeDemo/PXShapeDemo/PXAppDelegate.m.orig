@@ -1,0 +1,42 @@
+//
+//  PXAppDelegate.m
+//  Shapes
+//
+//  Created by Kevin Lindsey on 5/30/12.
+//  Copyright (c) 2012 Pixate, Inc. All rights reserved.
+//
+
+#import "PXAppDelegate.h"
+#import "PXShapeViewController.h"
+<<<<<<< HEAD
+#import <PXEngine/PXEngine.h>
+=======
+#import <Pixate/Pixate.h>
+#import "../../License.h"
+>>>>>>> 8940206c39b8be201889f9c98a658446f12bc826
+
+@implementation PXAppDelegate
+
+@synthesize window = _window;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    PXShapeViewController *controller = [[PXShapeViewController alloc] init];
+    self.window.rootViewController = controller;
+
+    // Set licensing information for Pixate Engine
+<<<<<<< HEAD
+    [PXEngine initializeFrameworkWithKey:@"LICENSE_SERIAL" forUser:@"LICENSE_EMAIL"];
+=======
+    [Pixate licenseKey:@PX_LICENSE_KEY forUser:@PX_LICENSE_USER];
+>>>>>>> 8940206c39b8be201889f9c98a658446f12bc826
+
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+@end

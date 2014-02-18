@@ -1,0 +1,21 @@
+
+.actionSheetButton {
+  border-radius    : 5px;
+  font-family      : "American Typewriter";
+  font-size        : 13px;
+  font-weight      : bold;
+  color            : #ffffff;
+  background-image : linear-gradient(#2c4880, #5c78af);
+  box-shadow       : inset 0 1px 4px #000, 0 1px 1px rgba(255,255,255,0.2);
+}
+
+#myActionSheet1 {
+    background-image: linear-gradient(white,#2c4880);
+}
+
+#myActionSheet1 label {
+  font-family      : "American Typewriter";
+  font-size        : 13px;
+  font-weight      : bold;
+  color            : #ffffff;
+}

@@ -1,0 +1,23 @@
+#myToolbar1 {
+  background-color : #171c1c;
+}
+
+#myToolbar2 {
+  background-image : url("star.svg");
+  opacity          : 1;
+}
+
+#myToolbar3 {
+  background-image : linear-gradient(45deg, 
+                            red, 
+                            rgb(200,200,240));
+}
+
+#myToolbar3 bar-button-item:nth-child(even) {
+    background-color : darkred;
+}
+
+#myToolbar3 bar-button-item:nth-child(odd) {
+    background-color : blue;
+}
+

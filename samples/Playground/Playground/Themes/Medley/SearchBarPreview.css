@@ -1,0 +1,30 @@
+#mySearch1  {
+  background-color : red;
+}
+
+#mySearch1 text-field {
+  font-family : "American Typewriter";
+  font-size   : 14px;
+  color : green;
+}
+
+#mySearch2  {
+  background-color : green;
+}
+
+#mySearch2 text-field {
+  font-family : "Times";
+  font-size   : 13px;
+  color : blue;
+}
+
+#mySearch3  {
+  bar-style   : black;
+  opacity     : .5;
+}
+
+#mySearch3 text-field {
+  font-family : "Helvetica";
+  font-size   : 12px;
+  color : red;
+}

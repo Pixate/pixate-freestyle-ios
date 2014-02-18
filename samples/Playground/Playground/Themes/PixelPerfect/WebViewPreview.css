@@ -1,0 +1,31 @@
+#backButton {
+  border-radius    : 5px;
+  font-family      : "Helvetica";
+  font-size        : 13px;
+  font-weight      : bold;
+  color            : #ffffff;
+  background-image : linear-gradient(#215a88, #4d93dd);
+  border-width     : 1px;
+  border-color     : #212325;
+  box-shadow: inset 0 0 2px rgba(101, 177, 232, 0.9),
+  0 1px 0 #212325;
+}
+
+#urlField {
+  font-family : "Helvetica";
+  font-size   : 15px;
+  color       : #4d93dd;
+}
+
+#myWebView  {
+  top  : 50;
+  left : 10;
+  size : 478, 270;
+}
+
+#browserView {
+  background-image  : linear-gradient(#292e31, #3a3f42);
+    background-size : 495 330;
+    position        : 3 3;
+    size            : 495 330;
+}

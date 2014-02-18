@@ -1,0 +1,52 @@
+/* UIProgressView with custom backgrounds and tracks,
+ * including using an svg vector image as the scalable
+ * track image.
+ */
+.myProgressBars {
+    width : 250px;
+}
+
+#myProgress1 {
+    top              : 90;
+    left             : 125;
+    background-color : #4d93dd;
+}
+
+#myProgress1 track {
+    background-color : #d5d9de;
+}
+
+#myProgress2 {
+    top              : 160;
+    left             : 125;
+    height           : 10px;
+    background-color : #2b2e31;
+    border-width     : 1px;
+    box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                         0 1px 0 rgba(255,255,255,0.1);
+}
+
+#myProgress2 track {
+    background-image : linear-gradient(45deg,
+                        #6d9b5d 30%, #8eb579 31%, 
+                        #8eb579 60%, #6d9b5d 61%
+                     );
+    background-size  : 30px 10px;
+    height           : 9;
+}
+
+#myProgress3 {
+    top              : 230;
+    left             : 125;
+    background-color : lightgray;
+}
+
+#myProgress3 track {
+    background-image : url(star.svg);
+    background-size  : 11px 10px;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}

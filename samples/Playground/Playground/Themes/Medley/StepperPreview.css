@@ -1,0 +1,26 @@
+/* Note: color property is not supported on iOS 5.1 */
+
+#stepper1 {
+  color   : blue;
+  opacity : 1;
+}
+
+#stepper2 {
+  color   : blue;
+  opacity : .8;
+}
+
+#stepper3 {
+  color   : blue;
+  opacity : .6;
+}
+
+#stepper4 {
+  color   : blue;
+  opacity : .4;
+}
+
+#stepper5 {
+  color   : blue;
+  opacity : .2;
+}

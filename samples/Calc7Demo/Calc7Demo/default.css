@@ -1,0 +1,29 @@
+#app {
+    background-color: #000;
+    font-family: "Helvetica Neue";
+}
+#screen {
+    color: white;
+    font-weight: 100;
+    font-size: 78pt;
+}
+
+button {
+    color: #333;
+    font-weight: 100;
+    font-size: 24pt;
+    border: 0.5px solid rgba(#000000, 0.75);
+}
+
+button.orange {
+    background-image: linear-gradient(#f28327, #f06e25);
+    color: #fff7ba;
+}
+button.dark-gray {
+    background-image: linear-gradient(#c8c9cb, #c1c2c4)
+}
+
+button.light-gray {
+    background-image: linear-gradient(#d7d8da, #b9babf);
+    font-size: 36pt;
+}

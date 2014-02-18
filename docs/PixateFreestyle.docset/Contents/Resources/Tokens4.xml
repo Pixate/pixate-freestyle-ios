@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/PXStylesheet.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/PXStylesheet</TokenIdentifier>
+			<Abstract type="html">A PXStylesheet typically corresponds to a single CSS file. Each stylesheet contains a list of rule sets defined
+within it.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/setOrigin:</TokenIdentifier>
+			<Abstract type="html">A PXStylesheetOrigin enumeration value indicating the origin of this stylesheet. Origin values are used in
+specificity calculations.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) PXStylesheetOrigin origin</Declaration>
+			
+			
+			<Anchor>//api/name/origin</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/origin</TokenIdentifier>
+			<Abstract type="html">A PXStylesheetOrigin enumeration value indicating the origin of this stylesheet. Origin values are used in
+specificity calculations.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) PXStylesheetOrigin origin</Declaration>
+			
+			
+			<Anchor>//api/name/origin</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PXStylesheet/origin</TokenIdentifier>
+			<Abstract type="html">A PXStylesheetOrigin enumeration value indicating the origin of this stylesheet. Origin values are used in
+specificity calculations.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (readonly, nonatomic) PXStylesheetOrigin origin</Declaration>
+			
+			
+			<Anchor>//api/name/origin</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/setErrors:</TokenIdentifier>
+			<Abstract type="html">A nonmutable array of error strings that were encountered when parsing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSArray *errors</Declaration>
+			
+			
+			<Anchor>//api/name/errors</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/errors</TokenIdentifier>
+			<Abstract type="html">A nonmutable array of error strings that were encountered when parsing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSArray *errors</Declaration>
+			
+			
+			<Anchor>//api/name/errors</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PXStylesheet/errors</TokenIdentifier>
+			<Abstract type="html">A nonmutable array of error strings that were encountered when parsing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSArray *errors</Declaration>
+			
+			
+			<Anchor>//api/name/errors</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/setFilePath:</TokenIdentifier>
+			<Abstract type="html">The string path to the file containing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/filePath</TokenIdentifier>
+			<Abstract type="html">The string path to the file containing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PXStylesheet/filePath</TokenIdentifier>
+			<Abstract type="html">The string path to the file containing the source of this stylesheet</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong) NSString *filePath</Declaration>
+			
+			
+			<Anchor>//api/name/filePath</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/setMonitorChanges:</TokenIdentifier>
+			<Abstract type="html">A flag to watch the file for changes. If file changes, then a call to sendChangeNotifation is made.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL monitorChanges</Declaration>
+			
+			
+			<Anchor>//api/name/monitorChanges</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/PXStylesheet/monitorChanges</TokenIdentifier>
+			<Abstract type="html">A flag to watch the file for changes. If file changes, then a call to sendChangeNotifation is made.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL monitorChanges</Declaration>
+			
+			
+			<Anchor>//api/name/monitorChanges</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/PXStylesheet/monitorChanges</TokenIdentifier>
+			<Abstract type="html">A flag to watch the file for changes. If file changes, then a call to sendChangeNotifation is made.</Abstract>
+			<DeclaredIn>PXStylesheet.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) BOOL monitorChanges</Declaration>
+			
+			
+			<Anchor>//api/name/monitorChanges</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

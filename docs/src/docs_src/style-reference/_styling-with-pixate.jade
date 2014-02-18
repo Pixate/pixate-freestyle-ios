@@ -1,0 +1,163 @@
+a#styling_with_pixate
+:markdown
+  ## App Styling with Pixate Engine for iOS
+
+  Pixate styles native iOS controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with iOS native controls.
+
+  Pixate has tailored the familiar CSS3 language for the styling needs of native mobile components. Pixate CSS is "full CSS" with the exception of not supporting pseudo-elements and a few minor differences noted in this document.
+
+a#app_structure
+:markdown
+  ## Application Structure
+
+  Let's begin with an overview of a Pixate-based application.  At application start-up, Pixate looks for your application's CSS in a file named `default.css`, which can be located anywhere within your project.  The default.css file can include other CSS files by using `@import`.
+
+  CSS rules are applied using a control's `element name`, `class`, `id` or other attributes.  This information is represented at runtime by properties on Objective-C objects.
+
+  The `element name` is determined by the type of control.  For example, all UIButton controls have the `button` element name.  The control descriptions (see <a href="#{rootURL}/style-reference/controls.html">Native iOS Controls</a>) lists the element name for each iOS control.
+
+  `class` and `id` are determined by the `styleClass` and `styleId` properties respectively of individual control instances. By convention, `styleClass` is shared by all controls with a related function or layout in the application, perhaps members within the same view.  `styleId` is expected to be unique across the application.  These conventions are not enforced by the Pixate Engine, and setting of these properties is not required unless you want to select controls using these properties.  These properties are typically set by the application developer.
+
+a#inline_css
+:markdown
+  ## Inline CSS
+
+  Application developers can style a specific control by setting the control's `styleCSS` property. This property is analogous to the style property of web CSS.
+
+a#specificity
+:markdown
+  ## Specificity
+
+  CSS Specificity determines which rules apply to controls.  Pixate follows standard CSS specificity rules.
+
+  Tip: Specificity is not simple and is usually the reason why your CSS-rules don't apply to some controls in the way you think they should.  Some excellent Specificity tutorials are available, including: [CSS Specificity: Things You Should Know](http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/).
+
+a#media
+:markdown
+  ## CSS Media Queries
+
+  `@media` rules use CSS media queries to conditionally apply styles for different devices, screen resolutions, and orientations.
+
+  The following media expressions are allowed:
+
+  * orientation: portrait | landscape
+  * device: ipad | iphone | ipad-mini
+  * device-width: <number> | <length>
+  * min-device-width: <number> | <length>
+  * max-device-width: <number> | <length>
+  * device-height: <number> | <length>
+  * min-device-height: <number> | <length>
+  * max-device-height: <number> | <length>
+  * scale: <number>
+  * min-scale: <number>
+  * max-scale: <number>
+
+  Media types (e.g., 'print') are not supported.  Use 'and' to join multiple media expressions.
+
+  Below are example uses of the `@media` rule:
+
+  ```pixate
+  /* Rule sets apply only when the device is in portrait orientation */
+  @media (orientation:portrait) { }
+
+  /* Rule sets apply if the device's height (ignores orientation)
+   is at least 1000 pixels and if the device has a retina display. */
+  @media (min-device-height:1000px) and (scale:2) { }
+
+  /* Apply rules to iPad Mini in landscape mode. */ 
+  @media (orientation:landscape) and (device:ipad-mini) { }
+  ```
+
+  iPod and iPhone devices appear the same and are both targeted using device:iphone. The iPad-Mini form factor is not supported in the simulator so it appears as an iPad in the simulator.
+
+  Finally, note that CSS does not support `@import` statements within `@media` rules.
+
+a#imports
+:markdown
+  ## Importing Style Sheets
+
+  The `@import` rule allows importing style rules from other style sheets.  The `@import` statement must be followed by a URL that references a file within the application bundle or the device's Documents folder.  The following statements are equivalent.
+
+  ```pixate
+  @import url("style.css")
+  @import "style.css"
+  ```
+
+  Note that the `@import` does not support the CSS3 `@media` rule for specifying conditional style sheets or alternative style sheets. Also `@import` is not supported within an `@media` statement.  This restriction is silently enforced.
+
+a#assets
+:markdown
+  ## Media Assets
+
+  Media assets are accessed using the [url function](#{rootURL}/style-reference/values.html#url) and must be contained within the Application's bundle or on the device filesystem. Resources in the application bundle can be accessed using bundle://, files on the device are acessessed using file://,  and resources in the device documents folder can be accessed using documents://.  If no protocol is specified, the resources will be searched for first in the documents folder then in the resource bundle.
+
+  ```pixate
+  /* search in documents folder and application bundle for resource */
+  background-image:    url(star.svg);
+
+  /* search for resource in a subfolder of Documents */
+  background-image:    url(documents://myResources/star.svg);
+
+  /* search for resource in a subfolder of  */
+  background-image:    url(file://images/star.svg);
+
+  /* search for resource in application bundle */
+  background-image:    url(bundle://star.svg);
+  ```
+
+a#configuration
+:markdown
+  ## Runtime Configuration
+
+  The Pixate engine allows you to customize some of its behavior, using CSS and a custom configuration element. You can access the configuration element by referencing it with the `pixate-config` selector. For example:
+
+  ```
+  pixate-config {
+    parse-error-destination: console;
+    cache-styles: auto;
+    image-cache-count: 100;
+  }
+  ```
+
+  In the example above, adding this snippet to `default.css` would send parse errors to the console, set up default cache settings, and bump the image cache count to 100 images.
+
+  ### Configuration Properties
+
+table.property-table
+  thead
+    th Property
+    th Value
+      tr
+        td.property-name parse-error-destination
+        td
+          :markdown
+            `none` or `console`
+
+            Setting it to `console` displays any parse errors in your project's CSS in the XCode console during debugging. The default value is `none`.
+
+      tr
+        td.property-name cache-styles
+        td
+          :markdown
+            `auto`, `none`, `all`, `minimize-styling`, and `cache-images`
+
+            Used to toggle caching and to set limits for those caches. This property accepts a comma-delimited list of the preceding values. Values are processed in order and are accumulated. `auto` is the same as `minimize-styling, cache-images`. `minimize-styling` tries to prevent styling of an element if its styling has not changed. `cache-images` caches images generated during styling to avoid unnecessary rendering on future stylings and to generally increase styling speeds. The default (and recommended) value is `auto`.
+
+      tr
+        td.property-name image-cache-count
+        td
+          :markdown
+            [number](#{rootURL}/style-reference/values.html#number)
+
+            Determines how many images we be retained in the image cache, assuming it has been turned on with `cache-styles`. If this is set to `0`, then there will be no upper limit to how many images live in the cache. The default value is `10`.
+
+      tr
+        td.property-name image-cache-size
+        td
+          :markdown
+            [number](#{rootURL}/style-reference/values.html#number)
+
+            Determines how many bytes of image data are retained in the image cache. A value of `0` indicates that there is no upper limit to how many bytes can live in the cache. Note that `image-cache-count` will still be honored. The default value is `0`.
+
+
+

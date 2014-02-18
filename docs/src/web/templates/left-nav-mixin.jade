@@ -1,0 +1,15 @@
+mixin left-nav(nav_data)
+  .sidebar
+    ul.nav.side-nav(role='navigation')
+      - for (var i = 0 ; i < nav_data.length ; i++)
+        li: a(href=nav_data[i].url)=nav_data[i].title
+
+mixin nested-left-nav(nav_data)
+  .sidebar
+    ul.nav.nav-nested.side-nav
+      - for (var i = 0 ; i < nav_data.length ; i++)
+        li
+          a(href=rootURL+nav_data[i].url)=nav_data[i].title
+          ul.nav
+            - for (var j = 0 ; j < nav_data[i].children.length ; j++)
+              li: a(href=rootURL+nav_data[i].children[j].url)=nav_data[i].children[j].title

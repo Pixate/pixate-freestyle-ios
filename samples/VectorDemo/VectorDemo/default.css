@@ -1,0 +1,32 @@
+#mainView {
+    background-color: linear-gradient(white, rgb(200,200,200));
+}
+
+#vectorView {
+    background-image: url(toucan.svg);
+    background-size: 320 500;
+}
+
+#vectorView {
+    animation-name   : rotate;
+    animation-duration : 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        scale: 0;
+        rotation: 0;
+    }
+    75% {
+        scale: 1.5;
+        rotation: 6.5;
+    }
+    to {
+        scale: 1;
+        rotation: 6.2;
+    }
+}
+
+

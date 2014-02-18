@@ -1,0 +1,26 @@
+#textview1 {
+  opacity          : 0.5;
+}
+
+#textview2 {
+  color            : red;
+}
+
+#textview3 {
+  font-family      : "American Typewriter";
+  font-size        : 18px;
+}
+
+#textview4 {
+  text-align       : right;
+}
+
+#textview5 {
+  background-color : rgb(200, 200, 200);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+

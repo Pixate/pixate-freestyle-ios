@@ -1,0 +1,52 @@
+include _offline-header.jade
+
+doctype 5
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    
+    //- Third party
+    link(href='#{rootURL}/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='#{rootURL}/js/google-code-prettify/prettify.css', type='text/css', rel='stylesheet')
+
+    //- Our Stuff
+    link(href='#{rootURL}/css/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
+
+    //- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='#{rootURL}/js/html5shiv.js')
+      script(src='#{rootURL}/js/respond.min.js')
+    
+    // if IE
+      link(href='#{rootURL}/stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
+    
+    //-
+    //- Page specific head stuff goes here
+    //-
+    block head
+
+  body
+
+    block topnav
+
+    //-
+    //- Page content goes here.
+    //-
+    block content
+
+    //- Scripts
+    script(src='#{rootURL}/js/jquery.js')
+    script(src='#{rootURL}/js/bootstrap.min.js')
+    script(type='text/javascript', src='#{rootURL}/js/google-code-prettify/prettify.js')
+    script.
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()   
+        })
+      }(window.jQuery)
+
+    //-
+    //- Page specific scripts go here.  
+    //-
+    block scripts

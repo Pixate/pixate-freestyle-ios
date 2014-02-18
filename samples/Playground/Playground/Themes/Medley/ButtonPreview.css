@@ -1,0 +1,78 @@
+/* Define normal button state */
+#button1 {
+  border-radius    : 5px;
+  font-family      : "American Typewriter";
+  font-size        : 13px;
+  font-weight      : bold;
+  text-transform   : uppercase;
+  color            : #ffffff;
+  background-image : linear-gradient(#2c4880, #5c78af);
+  box-shadow       : inset 0 1px 4px #000,
+                       0 1px 1px rgba(255,255,255,0.2);
+}
+
+/* Define button1 as purple with very round
+ corners when clicked  */
+#button1:highlighted {
+  border-radius    : 25px;
+  font-family      : "American Typewriter";
+  font-size        : 20px;
+  font-weight      : bold;
+  text-transform   : uppercase;
+  color            : #ffffff;
+  background-color : purple;
+}
+
+#button2 {
+  border-radius    : 10px;
+  font-size        : 13px;
+  color            : #3e434f;
+  background-image : linear-gradient(#e7e8ea, #f2f4f6);
+  border-width     : 1px;
+  border-color     : rgba(0, 0, 0, 0.1);
+  icon             : url("star.svg");
+  icon-padding     : 4px;
+}
+
+#button3 {
+  color            : #446620;
+  background-image : linear-gradient(#87c44a, #b4da77);
+  border-width     : 1px;
+  border-color     : #84a254;
+  border-radius    : 10px;
+  font-size        : 13px;
+}
+
+#button4  {
+  border-radius    : 7px;
+  font-size        : 12px;
+  font-weight      : 700;
+  border-width     : 2px;
+  border-color     : #0f7cce;
+  background-image : linear-gradient(#0979c3, #57bdfb);
+  color            : #ffffff;
+  text-transform   : uppercase;
+}
+
+#button5 {
+  border-radius    : 7px;
+  font-size        : 12px;
+  font-weight      : bold;
+  border-width     : 2px;
+  border-color     : #44610b;
+  background-image : linear-gradient(#6c9b1a, #abd64f);
+  color            : #476710;
+  text-transform   : uppercase;
+}
+
+#button6 {
+  border-radius    : 7px;
+  font-size        : 12px;
+  font-weight      : bold;
+  border-width     : 2px;
+  border-color     : #e55736;
+  background-image : linear-gradient(#85311d, #7f2f1b);
+  color            : #da4f30;
+  text-transform   : uppercase;
+}
+

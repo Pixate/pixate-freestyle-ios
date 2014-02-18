@@ -1,0 +1,53 @@
+{
+  "navItems": [
+    {
+      "url": "/style-reference/index.html#styling_with_pixate",
+      "title": "App Styling with Pixate for iOS",
+      "children": [
+        {"url": "/style-reference/index.html#app_structure", "title": "Application Structure" },
+        {"url": "/style-reference/index.html#specificity", "title": "Specificity" },
+        {"url": "/style-reference/index.html#media", "title": "CSS Media Queries" },
+        {"url": "/style-reference/index.html#inline_css", "title": "Inline CSS" },
+        {"url": "/style-reference/index.html#imports", "title": "Importing Style Sheets" },
+        {"url": "/style-reference/index.html#assets", "title": "Media Assets" },
+        {"url": "/style-reference/index.html#configuration", "title": "Runtime Configuration" }
+      ]
+    },
+    {
+      "url": "/style-reference/selectors.html",
+      "title": "CSS Selectors",
+      "children": [
+        {"url": "/style-reference/selectors.html#simple_selectors", "title": "Simple Selectors" },
+        {"url": "/style-reference/selectors.html#attribute_selectors", "title": "Attribute Selectors" },
+        {"url": "/style-reference/selectors.html#pseudo_classes", "title": "Pseudo-Classes" },
+        {"url": "/style-reference/selectors.html#combinators", "title": "Combinators" }
+      ]
+    },
+    {
+      "url": "/style-reference/controls.html",
+      "title": "iOS Native Controls",
+      "children": []
+    },
+    {
+      "url": "/style-reference/values.html",
+      "title": "Values",
+      "children": [
+        {"url": "/style-reference/values.html#angle", "title": "Angle" },
+        {"url": "/style-reference/values.html#blend_modes", "title": "Blend Modes" },
+        {"url": "/style-reference/values.html#color", "title": "Color" },
+        {"url": "/style-reference/values.html#inset", "title": "Inset" },
+        {"url": "/style-reference/values.html#length", "title": "Length" },
+        {"url": "/style-reference/values.html#number", "title": "Number" },
+        {"url": "/style-reference/values.html#padding", "title": "Padding" },
+        {"url": "/style-reference/values.html#paint", "title": "Paint" },
+        {"url": "/style-reference/values.html#percentage", "title": "Percentage" },
+        {"url": "/style-reference/values.html#shadow", "title": "Shadow" },
+        {"url": "/style-reference/values.html#shape", "title": "Shape" },
+        {"url": "/style-reference/values.html#string", "title": "String" },
+        {"url": "/style-reference/values.html#size", "title": "Size" },
+        {"url": "/style-reference/values.html#transform", "title": "Transform" },
+        {"url": "/style-reference/values.html#url", "title": "URL" }
+      ]
+    }
+  ]
+}

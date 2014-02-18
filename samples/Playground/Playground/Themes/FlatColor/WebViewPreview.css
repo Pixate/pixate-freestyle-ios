@@ -1,0 +1,23 @@
+#backButton {
+    color            : #ffffff;
+    font-family      : Arial;
+    font-size        : 11px;
+    font-weight      : bold;
+    background-image : linear-gradient(#4787ed, #4d90fe);
+    border-radius    : 2px;
+    border-width     : 1px;
+    border-color     : #3079ed;
+}
+#urlField {
+    font-family      : Arial;
+    font-size        : 16px;
+    color            : #3079ed;
+}
+#browserView {
+    background-color : #2d2d2d;
+    border-radius    : 5;
+    background-size  : 495 330;
+    border-radius    : 3;
+    position         : 3 3;
+    size             : 495 330;
+}

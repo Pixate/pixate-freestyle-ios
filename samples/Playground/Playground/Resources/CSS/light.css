@@ -1,0 +1,66 @@
+@import "light_views.css";
+
+.appButton {
+    color      : rgb(100,101,102);
+    background-color : rgb(222, 223, 224);
+    box-shadow : inset 0 1px 4px rgb(114,115,116), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+#topBanner {
+	background-color: linear-gradient(rgb(189, 190, 191), rgb(214, 215, 216));
+	border-radius   : 5px;
+    height          : 55px;
+}
+
+#textEditor {
+    color: rgb(94,95,96);
+    background-color : rgb(222, 223, 224);
+}
+
+#themePickerList {
+    background-color: linear-gradient(rgb(111,112,113), rgb(151,152,153));
+    separator-style : none;
+}
+
+.themePickerCell text-label {
+    color            : black;
+    font-family      : "Helvetica";
+    font-size        : 12;
+}
+
+.themePickerCell text-label:highlighted {
+    color            : black;
+}
+
+#shareButton {
+    border-radius : 3px;
+}
+
+#docsButton {
+    border-radius : 3px;
+}
+
+#themeSelectButton {
+    border-radius : 5px;
+}
+
+#prefsButton {
+    background-image : url(gear.svg);
+    top   : 15px;
+    size  : 24px 24px;
+}
+
+@media (device-os-version: '7') {
+    #topBanner {
+        height           : 75px;
+    }
+    #themeSelectButton {
+        top           : 25px;
+    }
+    #prefsButton {
+        top           : 35px;
+    }
+    #pixateLogo {
+        top           : 20px;
+    }
+}

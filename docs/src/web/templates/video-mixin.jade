@@ -1,0 +1,8 @@
+mixin video(video_url, poster_url)
+  .video-wrapper
+    video(width='100%', height='100%', controls, poster=poster_url)
+      source(src=video_url, type='video/mp4')
+
+mixin vimeo(video_id)
+  .video-wrapper
+    iframe(src="http://player.vimeo.com/video/"+video_id, width="100%", height="100%", frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)

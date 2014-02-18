@@ -1,0 +1,18 @@
+/* Images loaded into UIImageViews. Rotation and translation of
+ * the view has also been applied in some cases.
+ */
+#image1 {
+  background-image : url(1.jpg);
+}
+
+#image2 {
+  background-image : url(2.jpg);
+}
+
+#image3 {
+  background-image : url(3.jpg);
+}
+
+#image4 {
+  background-image : url(4.jpg);
+}

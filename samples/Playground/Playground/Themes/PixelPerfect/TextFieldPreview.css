@@ -1,0 +1,22 @@
+#textfield1 {
+  opacity     : 0.5;
+}
+
+#textfield2 {
+  color       : red;
+}
+
+#textfield3 {
+  font-family : "American Typewriter";
+  font-size   : 18px;
+}
+
+#textfield4 {
+  text-align  : right;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}
+

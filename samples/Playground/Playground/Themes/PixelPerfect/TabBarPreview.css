@@ -1,0 +1,47 @@
+#tab-bar1 {
+    color            : #2f6ba6;
+}
+
+#tab-bar2 {
+    oolor: gray;
+    selected-color: green;
+    background-image : linear-gradient(#3c4145, #585e62);
+    border-width     : 1px;
+    border-color     : #212325;
+    box-shadow       : inset 0 1px 0 rgba(255,255,255,0.3),
+    0 1px 1px rgba(0,0,0,0.5);
+}
+
+#tab-bar2 tab-bar-item {
+    color            : white;
+}
+
+/* Change the tint of the selected item */
+#tab-bar3 {
+    color            : #555;
+    selected-color   : green;
+}
+
+/* Use a custom vector image for the selected image. */
+#tab-bar3 tab-bar-item:selected {
+    background-image : url(gear.svg);
+    background-size  : 30px 30px;
+}
+
+/* Use a custom vector image for the unselected image. */
+#tab-bar3 tab-bar-item:unselected {
+    background-image : url(star.svg);
+    background-size  : 30px 30px;
+}
+
+/* Place an image around the current selection */
+#tab-bar3 selection {
+    background-image : url(tab_select_indicator.png);
+    background-size  : 60px 60px;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}
+

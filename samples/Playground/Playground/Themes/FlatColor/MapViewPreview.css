@@ -1,0 +1,35 @@
+/* MKMapView with custom pins (annotations).
+ * Alternate pin designs below, comment out current
+ * style for .myAnnotations and uncomment one of the
+ * others.
+ */
+#myMap {
+    position         : 25 25;
+    size             : 450 285;
+}
+
+/*
+ * Pin image courtesy http://www.icons-land.com
+ */
+.myAnnotations {
+    background-image : url(pin.png);
+}
+
+/* Use vector image as pin image */
+/*
+.myAnnotations {
+    background-image : url("star.svg");
+    background-size  : 32 32;
+}
+*/
+
+/* Use custom background as pin image */
+/*
+.myAnnotations {
+    background-color : radial-gradient(blue, white);
+    background-size  : 32 32;
+    border-radius    : 16;
+    border-color     : gray;
+    border-width     : 1;
+}
+*/

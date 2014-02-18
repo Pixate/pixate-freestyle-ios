@@ -1,0 +1,14 @@
+/* Note: off-color property is not supported on iOS 5.1 */
+
+#switch1 {
+    color     : #2d2d2d;
+    off-color : #f3f3f3;
+}
+#switch2 {
+    color     : #1959c9;
+    off-color : #f3f3f3;
+}
+#switch3 {
+    color     : #d33833;
+    off-color : #f3f3f3;
+}

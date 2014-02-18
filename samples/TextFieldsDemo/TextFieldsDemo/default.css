@@ -1,0 +1,73 @@
+.myButtons
+{
+        border-radius   : 5px;
+        font-family     : "Helvetica";
+        font-size       : 13px;
+        font-weight     : bold;
+        color           : #ffffff;
+        background-color: linear-gradient(#3c4145, #585e62);
+        border-width    : 1px;
+        border-color    : #212325;
+        box-shadow      : inset 0 1px 0 rgba(255,255,255,0.3),
+        0 1px 1px rgba(0,0,0,0.5);
+}
+
+text-field:normal {
+    border-radius: 5;
+    -ios-border-style: none;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #cccccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+text-field:highlighted {
+    background-color: #ffffff;
+    border-radius: 5;
+    -ios-border-style: none;
+    border-width: 1px;
+    border-color: rgba(0, 148, 217, 0.8);
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 148, 217, 1.0);
+}
+
+
+text-field:normal {
+    transition: box-shadow 1s linear;
+}
+
+text-field:highlighted {
+    transition: box-shadow 1s linear;
+}
+
+#button1 {
+    animation-name   : move_right;
+    animation-duration : 2s;
+}
+
+#button2 {
+    animation-name   : move_left;
+    animation-duration : 2s;
+}
+
+@keyframes move_right {
+    0% {
+        left: -200;
+        opacity: -1;
+    }
+    100% {
+        left: 160;
+        opacity: 1;
+    }
+}
+
+@keyframes move_left {
+    from {
+        left: 500;
+        opacity: -1;
+    }
+    to {
+        left: 160;
+        opacity: 1.0;
+    }
+}
+

@@ -1,0 +1,16 @@
+/* Scaled svg vector graphics file. Also note the
+ * rotation transform applied to the view.
+ */
+#myContentView  {
+    background-image : url(toucan.svg);
+    background-size  : 500 335;
+}
+
+#myContentView2  {
+    background-image : url(toucan.svg);
+    background-size  : 120 120;
+}
+
+#previewView  {
+    background-color : rgb(244, 245, 246);
+}

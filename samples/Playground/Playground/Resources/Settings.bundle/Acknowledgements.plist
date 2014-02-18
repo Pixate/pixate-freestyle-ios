@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupSpecifier</string>
+            <key>Title</key>
+            <string>
+Copyright 2012 Pixate, Inc. - All Rights Reserved
+
+   ----
+
+iCarousel, ReflectionView, iVersion, iConsole, iNotify
+ Copyright (c) 2011 Charcoal Design
+
+InAppSettingsKit Copyright (c) 2009-2010:
+ Luc Vandal, Edovia Inc. and Ortwin Gentz, FutureTap GmbH
+
+DejalActivityView Copyright (c) 2009-2012 Dejal Systems, LLC.
+
+Gear icon courtesy http://commons.wikimedia.org/wiki/File:Human-applications-system.svg
+            </string>
+        </dict>
+	</array>
+</dict>
+</plist>

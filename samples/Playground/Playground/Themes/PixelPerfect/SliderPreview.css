@@ -1,0 +1,44 @@
+/* Dynamically generate thumb using a linear
+   gradient and rounded corners. No bitmap req'd.  */
+
+#slider1 thumb {
+  background-image : linear-gradient(#808487, #cbd1d5);
+  background-size  : 16px 16px;
+  border-radius    : 8px;
+}
+
+#slider1 min-track {
+  background-image : linear-gradient(#215a88, #4d93dd);
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  border-radius    : 5px;
+}
+
+#slider1 max-track {
+  background-color : #2b2e31;
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  border-radius    : 5px;
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                           0 1px 0 rgba(255,255,255,0.1);  
+}
+
+/* Dynamically generate star image using SVG. */
+
+#slider2 thumb {
+  background-image : url(star.svg);
+  background-size  : 16px 16px;
+}
+
+#slider2 min-track, #slider2 max-track {
+  background-color : #2b2e31;
+  background-size  : 10px 10px;
+  background-inset : 0px 5px;
+  box-shadow       : inset 0 1px 1px rgba(0,0,0,0.5),
+                           0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}

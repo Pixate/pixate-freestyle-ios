@@ -1,0 +1,36 @@
+#activity1  {
+  style            : small;
+  color            : #306daa;
+  background-color : #2b2e31
+  size             : 50px 50px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+}
+
+#activity2  {
+  style            : small;
+  color            : #5d894e;
+  background-color : #2b2e31;
+  size             : 50px 50px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+  
+}
+
+#activity3  {
+  style            : large;
+  color            : #a74142;
+  background-color : #2b2e31;
+  size             : 70px 70px;
+  border-radius    : 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.5),
+  0 1px 0 rgba(255,255,255,0.1);
+  
+}
+
+/* Alter preview pane appearance */
+#previewView {
+  background-image : linear-gradient(#292e31, #3a3f42);
+}

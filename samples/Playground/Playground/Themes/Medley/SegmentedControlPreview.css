@@ -1,0 +1,22 @@
+#seg1  {
+  background-image : linear-gradient(red,white);
+  border-radius    : 30px;
+  color            : white;
+}
+
+#seg1 divider {
+  background-image : linear-gradient(red,pink,red);
+  background-size  : 2 20;
+}
+
+#seg2  {
+  background-image : linear-gradient(45deg, #ddd, black);
+  border-radius    : 10px;
+  border-color     : gray;
+  border-width     : 4px;
+  color            : white;
+}
+
+#seg3  {
+  background-color : blue;
+}

@@ -1,0 +1,19 @@
+#view1 {
+    background-image: linear-gradient(#215a88,#4d93dd);
+    box-shadow      : inset 0 2px 3px #000000;
+}
+
+#view2 {
+    background-image : linear-gradient(#588449,#5f8b50);
+    box-shadow       : inset 0 2px 3px #000000;
+}
+
+#view3 {
+    background-image: linear-gradient(#9a3839,#c05556);
+    box-shadow      : inset 0 2px 3px #000000;
+}
+
+/* Alter preview pane appearance */
+#previewView {
+    background-image : linear-gradient(#292e31, #3a3f42);
+}

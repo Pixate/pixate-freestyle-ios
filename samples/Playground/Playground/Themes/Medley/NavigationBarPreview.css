@@ -1,0 +1,103 @@
+/* UINavigationBar with first 3 back buttons as
+ * custom UIButtons and remaining back buttons as
+ * default BarButtonItems.
+ */
+#bar1 {
+    background-color : rgb(30,30,30);
+    border-width     : 1px;
+    border-color     : gray;
+    color            : white;
+    font-family      : "Helvetica";
+    font-size        : 20px;
+    font-weight      : bold;
+}
+
+#bar1 back-bar-button
+{
+    top                 : 6;
+    size                : 115 31;
+    shape               : arrow-button-left;
+    content-edge-inset  : 0 0 0 6;
+    border-radius       : 5px;
+    font-family         : "American Typewriter";
+    font-weight         : bold;
+    font-size           : 12px;
+    font-weight         : normal;
+    color               : #ffffff;
+    background-color    : #008ed4;
+}
+
+/* Make the first three back buttons 
+    different colors */
+#myLeftNavButton2 {
+     background-color : red;
+}
+#myLeftNavButton3 {
+     background-color : green;
+}
+#myLeftNavButton4 {
+     background-color : blue;
+}
+
+/* Use percentages on linear gradient to
+   uniformly distribute colors */
+#bar2 {
+   background-image : linear-gradient(
+                        #E23622 49%,
+                        #FC684E 50%
+                      );
+   border-radius    : 10px;
+   border-width     : 2px;
+   border-color     : gray;
+   color            : black;
+   font-family      : "Helvetica";
+   font-size        : 20px;
+   font-weight      : bold;
+}
+
+/* Create horizontal gradient with angle
+   on linear gradient */
+#bar3 {
+   background-image : linear-gradient(
+                        -90deg,
+                        #1e5799 0%, 
+                        #2989d8 50%, 
+                        #207cca 51%, 
+                        #7db9e8 100%
+                        );
+   border-radius    : 10px;
+   border-width     : 2px;
+   border-color     : gray;
+   color            : black;
+   font-family      : "Helvetica";
+   font-size        : 20px;
+   font-weight      : bold;
+}
+
+/* horizontal linear gradient with solid fill colors */
+#bar4 {
+   background-image : linear-gradient(
+                        #0a0a0a 0%,
+                        #0c0c0c 50%,
+                        #222 51%,
+                        #333 100%
+                      );
+   border-radius    : 10px;
+   border-width     : 2px;
+   border-color     : gray;
+   color            : gray;
+   font-family      : "Helvetica";
+   font-size        : 20px;
+   font-weight      : bold;
+}
+
+#navPushButton {
+   border-radius    : 5px;
+   font-family      : "American Typewriter";
+   font-size        : 13px;
+   font-weight      : bold;
+   color            : #ffffff;
+   background-color : #008ed4;
+}
+
+
