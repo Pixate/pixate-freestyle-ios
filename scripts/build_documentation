@@ -53,5 +53,5 @@ cd "${PX_FREESTYLE_SCRIPT}"
 
 # generate the appledocs
 echo Building appledocs.
-./build_appledocs "${PX_FREESTYLE_ROOT}"
+./build_appledocs "${PX_FREESTYLE_ROOT}" "${PX_FREESTYLE_ROOT}/../pixate-freestyle-ios-gh-pages"
 

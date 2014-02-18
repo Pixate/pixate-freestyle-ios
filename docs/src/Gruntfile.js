@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  var buildPath = grunt.option('build-path') || '../../docs' ;
+  var buildPath = grunt.option('build-path') || '../../../pixate-freestyle-ios-gh-pages' ;
 
   var rootURL = grunt.option('root-url') || '' ;
 

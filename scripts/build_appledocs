@@ -4,13 +4,14 @@
 #set -e
 
 # check args
-if [ $# -ne 1 ]; then
-    echo "usage: $0 <output-directory>"
+if [ $# -ne 2 ]; then
+    echo "usage: $0 <project-directory> <output-directory>" 
     exit 1
 fi
 
 # set variables
 DOCS_WORKSPACE="$1/docs"
+OUTPUT_DIR="$2"
 
 DOCUMENTATION_DIR="${DOCS_WORKSPACE}/src"
 MARKDOWN_DIR="${DOCUMENTATION_DIR}/markdown"
@@ -69,9 +70,10 @@ mv  "${DEV_REFERENCE_TMP_DIR}/html" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}"
 # create top-level HTML page.  Update embedded URLs to point to reference directory
 sed -e "s|href=\"|href=\"${DEV_REFERENCE_DIR}/|g" -e "s|href=\"${DEV_REFERENCE_DIR}/index.html|href=\"${DEV_REFERENCE_HTML}|g" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}/index.html" > "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}"
 
-# rename docset
-mv  "${DEV_REFERENCE_TMP_DIR}/docset" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DOCSET}"
-
 # remove temp directories
 rm -rf "${DEV_REFERENCE_TMP_DIR}"
 rm -rf "${PXENGINE_COPIES_DIR}"
+
+# move dev-reference to output directory
+mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}" "${OUTPUT_DIR}/${DEV_REFERENCE_DIR}"
+mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}" "${OUTPUT_DIR}/${DEV_REFERENCE_HTML}"
