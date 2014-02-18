@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-. ${FB_SDK_SCRIPT:-$(dirname $0)}/common.sh
+. ${PX_FREESTYLE_SCRIPT:-$(dirname $0)}/common.sh
 
 if [ "$#" -lt 2 ]; then
     echo "Usage: $0 MAJOR MINOR [HOTFIX [BETA]]"
@@ -30,7 +30,7 @@ if [ "$#" -lt 2 ]; then
     die 'Arguments do not conform to usage'
 fi
 
-cd $FB_SDK_SRC
+cd $PX_FREESTYLE_SRC
 
 VERSION_STRING="$1"."$2"
 
@@ -42,7 +42,7 @@ if [ "$4" != "" ]; then
     VERSION_STRING="$VERSION_STRING".b
 fi
 
-TAG_NAME=sdk-version-"$VERSION_STRING"
+TAG_NAME=v"$VERSION_STRING"
 
 git tag -a "$TAG_NAME" HEAD \
     || die 'Failed to tag HEAD. If this is a duplicate tag, please delete the old one first.'
