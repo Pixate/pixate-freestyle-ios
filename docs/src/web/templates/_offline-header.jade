@@ -7,6 +7,8 @@ mixin nav(pages, current_page)
   - pages.push({url:'style-reference/index.html', title:'Style Reference'})
   - pages.push({url:'dev-reference/index.html', title:'Developer Reference'})
 
+  - if (!current_page) current_page = {title:'', url:''}
+
   nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
@@ -24,7 +26,8 @@ mixin nav(pages, current_page)
     .collapse.navbar-collapse.navbar-ex1-collapse
       ul.nav.navbar-nav.navbar-right
         - for (var i = 0 ; i < pages.length ; i++)
-          li: a(href='#{rootURL}/'+pages[i].url)=pages[i].title
+          - var liClass = current_page && current_page.url && (pages[i].title == current_page.title) ? "active" : "";
+          li(class='#{liClass}'): a(href='#{rootURL}/'+pages[i].url)=pages[i].title
 
 
 
