@@ -395,7 +395,7 @@
 		393C76B91845270200DE1716 /* icon-youtube-square.svg in Resources */ = {isa = PBXBuildFile; fileRef = 393C75481845270200DE1716 /* icon-youtube-square.svg */; };
 		393C76BA1845270200DE1716 /* icon-youtube.svg in Resources */ = {isa = PBXBuildFile; fileRef = 393C75491845270200DE1716 /* icon-youtube.svg */; };
 		9CB1819C18AEF0800049BB2B /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9CB1819B18AEF0800049BB2B /* default.css */; };
-		9CD65CA018B5665600413DAD /* PixateFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD65C9F18B5665600413DAD /* PixateFreestyle.framework */; };
+		9CD65CA418B56CD200413DAD /* PixateFreestyle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD65CA318B56CD200413DAD /* PixateFreestyle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -814,7 +814,7 @@
 		393C75481845270200DE1716 /* icon-youtube-square.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "icon-youtube-square.svg"; sourceTree = "<group>"; };
 		393C75491845270200DE1716 /* icon-youtube.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "icon-youtube.svg"; sourceTree = "<group>"; };
 		9CB1819B18AEF0800049BB2B /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = default.css; path = "../../../themes/pixate-blue/css/default.css"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
-		9CD65C9F18B5665600413DAD /* PixateFreestyle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PixateFreestyle.framework; path = ../../build/PixateFreestyle.framework; sourceTree = "<group>"; };
+		9CD65CA318B56CD200413DAD /* PixateFreestyle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PixateFreestyle.framework; path = ../../build/PixateFreestyle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -823,7 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C73C2184524ED00DE1716 /* QuartzCore.framework in Frameworks */,
-				9CD65CA018B5665600413DAD /* PixateFreestyle.framework in Frameworks */,
+				9CD65CA418B56CD200413DAD /* PixateFreestyle.framework in Frameworks */,
 				393C73C0184524E600DE1716 /* CoreText.framework in Frameworks */,
 				393C738B1845246E00DE1716 /* CoreGraphics.framework in Frameworks */,
 				393C738D1845246E00DE1716 /* UIKit.framework in Frameworks */,
@@ -854,7 +854,7 @@
 		393C73871845246E00DE1716 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CD65C9F18B5665600413DAD /* PixateFreestyle.framework */,
+				9CD65CA318B56CD200413DAD /* PixateFreestyle.framework */,
 				393C73C1184524ED00DE1716 /* QuartzCore.framework */,
 				393C73BF184524E600DE1716 /* CoreText.framework */,
 				393C73881845246E00DE1716 /* Foundation.framework */,
@@ -1318,7 +1318,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PixateBootstrap;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Pixate;
 			};
 			buildConfigurationList = 393C73801845246E00DE1716 /* Build configuration list for PBXProject "PixateFreestyleShowcase" */;
@@ -1766,7 +1766,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1805,7 +1804,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1841,8 +1839,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"\"$(SRCROOT)/ /Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build /Users/pcolton/Development/Pixate/products/pixate-freestyle-ios/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PixateFreestyleShowcase/PixateFreestyleShowcase-Prefix.pch";
@@ -1860,8 +1857,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"\"$(SRCROOT)/ /Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build /Users/pcolton/Development/Pixate/products/pixate-freestyle-ios/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PixateFreestyleShowcase/PixateFreestyleShowcase-Prefix.pch";

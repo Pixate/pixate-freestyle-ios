@@ -42,6 +42,10 @@ if [ -z "$PX_FREESTYLE_SCRIPT" ]; then
   # Path to sample files for Pixate Freestyle
   PX_FREESTYLE_SAMPLES=$PX_FREESTYLE_ROOT/samples
 
+    # Path to theme files for Pixate Freestyle
+  PX_FREESTYLE_THEMES=$PX_FREESTYLE_ROOT/themes
+
+
   # The directory where the target is built
   PX_FREESTYLE_BUILD=$PX_FREESTYLE_ROOT/build
   PX_FREESTYLE_BUILD_LOG=$PX_FREESTYLE_BUILD/build.log
