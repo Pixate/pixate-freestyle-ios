@@ -1,22 +1,22 @@
-a#styling_with_pixate
+a#styling_with_freestyle
 :markdown
-  ## App Styling with Pixate Engine for iOS
+  ## App Styling with Freestyle
 
-  Pixate styles native iOS controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with iOS native controls.
+  Freestyle styles native iOS controls using CSS. The runtime is built on a scalable vector graphics engine, a standards-based CSS styling language, and a lightweight library for interacting with iOS native controls.
 
-  Pixate has tailored the familiar CSS3 language for the styling needs of native mobile components. Pixate CSS is "full CSS" with the exception of not supporting pseudo-elements and a few minor differences noted in this document.
+  Freestyle has tailored the familiar CSS3 language for the styling needs of native mobile components. Freestyle CSS is "full CSS" with the exception of not supporting pseudo-elements and a few minor differences noted in this document.
 
 a#app_structure
 :markdown
   ## Application Structure
 
-  Let's begin with an overview of a Pixate-based application.  At application start-up, Pixate looks for your application's CSS in a file named `default.css`, which can be located anywhere within your project.  The default.css file can include other CSS files by using `@import`.
+  Let's begin with an overview of a Freestyle-based application.  At application start-up, Freestyle looks for your application's CSS in a file named `default.css`, which can be located anywhere within your project.  The default.css file can include other CSS files by using `@import`.
 
   CSS rules are applied using a control's `element name`, `class`, `id` or other attributes.  This information is represented at runtime by properties on Objective-C objects.
 
   The `element name` is determined by the type of control.  For example, all UIButton controls have the `button` element name.  The control descriptions (see <a href="#{rootURL}/style-reference/controls.html">Native iOS Controls</a>) lists the element name for each iOS control.
 
-  `class` and `id` are determined by the `styleClass` and `styleId` properties respectively of individual control instances. By convention, `styleClass` is shared by all controls with a related function or layout in the application, perhaps members within the same view.  `styleId` is expected to be unique across the application.  These conventions are not enforced by the Pixate Engine, and setting of these properties is not required unless you want to select controls using these properties.  These properties are typically set by the application developer.
+  `class` and `id` are determined by the `styleClass` and `styleId` properties respectively of individual control instances. By convention, `styleClass` is shared by all controls with a related function or layout in the application, perhaps members within the same view.  `styleId` is expected to be unique across the application.  These conventions are not enforced by the Freestyle, and setting of these properties is not required unless you want to select controls using these properties.  These properties are typically set by the application developer.
 
 a#inline_css
 :markdown
@@ -28,7 +28,7 @@ a#specificity
 :markdown
   ## Specificity
 
-  CSS Specificity determines which rules apply to controls.  Pixate follows standard CSS specificity rules.
+  CSS Specificity determines which rules apply to controls.  Freestyle follows standard CSS specificity rules.
 
   Tip: Specificity is not simple and is usually the reason why your CSS-rules don't apply to some controls in the way you think they should.  Some excellent Specificity tutorials are available, including: [CSS Specificity: Things You Should Know](http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/).
 
@@ -56,7 +56,7 @@ a#media
 
   Below are example uses of the `@media` rule:
 
-  ```pixate
+  ```freestyle
   /* Rule sets apply only when the device is in portrait orientation */
   @media (orientation:portrait) { }
 
@@ -78,7 +78,7 @@ a#imports
 
   The `@import` rule allows importing style rules from other style sheets.  The `@import` statement must be followed by a URL that references a file within the application bundle or the device's Documents folder.  The following statements are equivalent.
 
-  ```pixate
+  ```freestyle
   @import url("style.css")
   @import "style.css"
   ```
@@ -91,7 +91,7 @@ a#assets
 
   Media assets are accessed using the [url function](#{rootURL}/style-reference/values.html#url) and must be contained within the Application's bundle or on the device filesystem. Resources in the application bundle can be accessed using bundle://, files on the device are acessessed using file://,  and resources in the device documents folder can be accessed using documents://.  If no protocol is specified, the resources will be searched for first in the documents folder then in the resource bundle.
 
-  ```pixate
+  ```freestyle
   /* search in documents folder and application bundle for resource */
   background-image:    url(star.svg);
 
@@ -109,10 +109,10 @@ a#configuration
 :markdown
   ## Runtime Configuration
 
-  The Pixate engine allows you to customize some of its behavior, using CSS and a custom configuration element. You can access the configuration element by referencing it with the `pixate-config` selector. For example:
+  The Freestyle engine allows you to customize some of its behavior, using CSS and a custom configuration element. You can access the configuration element by referencing it with the `freestyle-config` selector. For example:
 
   ```
-  pixate-config {
+  freestyle-config {
     parse-error-destination: console;
     cache-styles: auto;
     image-cache-count: 100;

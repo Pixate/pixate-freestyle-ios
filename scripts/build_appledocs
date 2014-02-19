@@ -74,6 +74,10 @@ sed -e "s|href=\"|href=\"${DEV_REFERENCE_DIR}/|g" -e "s|href=\"${DEV_REFERENCE_D
 rm -rf "${DEV_REFERENCE_TMP_DIR}"
 rm -rf "${PXENGINE_COPIES_DIR}"
 
+# remove existing output in output directory
+rm -rf "${OUTPUT_DIR}/${DEV_REFERENCE_DIR}"
+rm -rf "${OUTPUT_DIR}/${DEV_REFERENCE_HTML}"
+
 # move dev-reference to output directory
 mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}" "${OUTPUT_DIR}/${DEV_REFERENCE_DIR}"
 mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}" "${OUTPUT_DIR}/${DEV_REFERENCE_HTML}"
