@@ -20,9 +20,9 @@ mixin nav(pages, current_page)
           span.pixate-logo-dark Pixate
           span.logo-docs Docs
 
-    
-    .collapse.navbar-collapse.navbar-ex1-collapse.pull-right
-      ul.nav.navbar-nav
+
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      ul.nav.navbar-nav.navbar-right
         - for (var i = 0 ; i < pages.length ; i++)
           li: a(href='#{rootURL}/'+pages[i].url)=pages[i].title
 
