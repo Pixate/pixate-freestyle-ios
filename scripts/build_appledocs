@@ -76,8 +76,6 @@ rm -rf "${PXENGINE_COPIES_DIR}"
 
 # remove existing output in output directory
 rm -rf "${OUTPUT_DIR}/${DEV_REFERENCE_DIR}"
-rm -rf "${OUTPUT_DIR}/${DEV_REFERENCE_HTML}"
 
 # move dev-reference to output directory
 mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}" "${OUTPUT_DIR}/${DEV_REFERENCE_DIR}"
-mv "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}" "${OUTPUT_DIR}/${DEV_REFERENCE_HTML}"
