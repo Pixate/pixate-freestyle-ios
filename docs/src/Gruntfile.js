@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 
   var buildPath = grunt.option('build-path') || '../../../pixate-freestyle-ios-gh-pages' ;
 
-  var rootURL = grunt.option('root-url') || '' ;
+  // Root URL is hard-coded to ''
+  var rootURL = ''; //grunt.option('root-url') || '' ;
 
   // Used by jade and validate-and-build-controls
   var controlsNavItems = [];
@@ -60,11 +61,6 @@ module.exports = function(grunt) {
 
               else if (grunt.file.exists(getNavFilePath(filePath))) {
                 locals.navItems = grunt.file.readJSON(getNavFilePath(filePath)).navItems;
-              }
-
-              //translate for relativeURLs
-              if (rootURL === '') {
-                locals.rootURL = getRelativeRoot(filePath);
               }
 
               return locals;
@@ -270,6 +266,8 @@ module.exports = function(grunt) {
     return './' + enclosingFolderPath + '/nav.json';
   };
 
+  // DEPRECATED.
+  // Keeping this in the code in case the docs are ever deployed with a root url that's not /
   var getRelativeRoot = function (filePath) {
     var root = '';
     var depth = filePath.split('/').length - 2;
