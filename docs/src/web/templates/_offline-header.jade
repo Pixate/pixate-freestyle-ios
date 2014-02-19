@@ -1,10 +1,12 @@
 - var pages = []
-- pages.push({url:'getting-started/index.html', title:'Getting Started'})
-- pages.push({url:'style-reference/index.html', title:'Style Reference'})
-- pages.push({url:'dev-reference/index.html', title:'Developer Reference'})
-- pages.push({url:'transition-guide/index.html', title:'1.0 to 2.0 Transition Guide'})
 
 mixin nav(pages, current_page)
+  - var pages = []
+  - pages.push({url:'getting-started/index.html', title:'Getting Started'})
+  - pages.push({url:'getting-started/index.html', title:'Themes'})
+  - pages.push({url:'style-reference/index.html', title:'Style Reference'})
+  - pages.push({url:'dev-reference/index.html', title:'Developer Reference'})
+
   nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
     .navbar-header
       button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
@@ -18,17 +20,11 @@ mixin nav(pages, current_page)
           span.pixate-logo-dark Pixate
           span.logo-docs Docs
 
-    - if (current_page)
-      .collapse.navbar-collapse.navbar-ex1-collapse
-        ul.nav.navbar-nav
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown')
-              span=current_page.title
-              span <b class='caret'></b>
-            ul.dropdown-menu
-              - for (var i = 0 ; i < pages.length ; i++)
-                  - if (pages[i].url != current_page.url)
-                    li: a(href='#{rootURL}/'+pages[i].url)=pages[i].title
+    
+    .collapse.navbar-collapse.pull-right
+      ul.nav.navbar-nav
+        - for (var i = 0 ; i < pages.length ; i++)
+          li: a(href='#{rootURL}/'+pages[i].url)=pages[i].title
 
 
 
