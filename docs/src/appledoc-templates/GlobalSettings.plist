@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>--project-name</key>
-	<string>Pixate</string>
+	<string>PixateFreestyle</string>
 	<key>--project-version</key>
-	<string>1.0 (Beta 3)</string>
+	<string>2.1.0</string>
 	<key>--project-company</key>
 	<string>Pixate, Inc</string>
 	<key>--company-id</key>
 	<string>com.pixate</string>
 	<key>--output</key>
-    <string>~/.pixate/docs</string>
+    <string>~/.pixatefreestyle/docs</string>
 	<key>--docset-atom-filename</key>
-	<string>pixate-docs.atom</string>
+	<string>pixatefreestyle-docs.atom</string>
 	<key>--docset-package-filename</key>
-	<string>com.pixate.Pixate.xar</string>
+	<string>com.pixate.PixateFreestyle.xar</string>
 	<key>--docset-feed-url</key>
 	<string>dev-reference</string>
 	<key>--docset-package-url</key>
