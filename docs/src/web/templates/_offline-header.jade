@@ -21,7 +21,7 @@ mixin nav(pages, current_page)
           span.logo-docs Docs
 
     
-    .collapse.navbar-collapse.pull-right
+    .collapse.navbar-collapse.navbar-ex1-collapse.pull-right
       ul.nav.navbar-nav
         - for (var i = 0 ; i < pages.length ; i++)
           li: a(href='#{rootURL}/'+pages[i].url)=pages[i].title
