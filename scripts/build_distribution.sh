@@ -49,9 +49,8 @@ CODE_SIGN_IDENTITY='Developer ID Installer: Pixate, Inc. (ANZCG56DAH)'
 # Call out to build prerequisites.
 #
 if is_outermost_build; then
-    #. $PX_FREESTYLE_SCRIPT/build_framework.sh -c Release
+    # Building samples also builds the framework
     . $PX_FREESTYLE_SCRIPT/build_samples.sh -c Release
-    #. $PX_FREESTYLE_SCRIPT/build_documentation.sh
 fi
 echo Building Distribution.
 
