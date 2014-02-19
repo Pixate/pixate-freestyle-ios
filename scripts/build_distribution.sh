@@ -46,10 +46,10 @@ CODE_SIGN_IDENTITY='Developer ID Installer: Pixate, Inc. (ANZCG56DAH)'
 # -----------------------------------------------------------------------------
 # Call out to build prerequisites.
 #
-#if is_outermost_build; then
-    #. $PX_FREESTYLE_SCRIPT/build_framework.sh -c Release
+if is_outermost_build; then
+    . $PX_FREESTYLE_SCRIPT/build_framework.sh -c Release
     #. $PX_FREESTYLE_SCRIPT/build_documentation.sh
-#fi
+fi
 echo Building Distribution.
 
 # -----------------------------------------------------------------------------
@@ -61,7 +61,7 @@ mkdir $PX_FREESTYLE_BUILD_PACKAGE \
   || die "Could not create directory $PX_FREESTYLE_BUILD_PACKAGE"
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_SAMPLES
-mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCS
+#mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCS
 
 \cp -R $PX_FREESTYLE_FRAMEWORK $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK \
   || die "Could not copy $PX_FREESTYLE_FRAMEWORK"
@@ -78,7 +78,7 @@ mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCS
 # Fixup projects to point to the SDK framework
 #
 for fname in $(find $PX_FREESTYLE_BUILD_PACKAGE_SAMPLES -name "project.pbxproj" -print); do \
-  sed "s|../../build|../../../../${PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK_SUBDIR}|g" \
+  sed "s|../../build|../..|g" \
     ${fname} > ${fname}.tmpfile  && mv ${fname}.tmpfile ${fname}; \
 done
 
