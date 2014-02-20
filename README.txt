@@ -6,7 +6,7 @@ Freestyle is a simple, powerful way to define the look and feel of your app, via
 INSTALLATION LOCATION
 ---------------------
 
-THe PixateFreestyle folder has been placed into your Documents folder.
+The PixateFreestyle folder has been placed into your Documents folder.
 
 LICENSE
 -------
