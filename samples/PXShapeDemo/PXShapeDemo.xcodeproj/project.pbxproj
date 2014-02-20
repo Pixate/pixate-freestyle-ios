@@ -373,8 +373,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PXShapeDemo/PXShapeDemo-Prefix.pch";
@@ -390,8 +389,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PXShapeDemo/PXShapeDemo-Prefix.pch";

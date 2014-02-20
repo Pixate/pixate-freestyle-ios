@@ -280,9 +280,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Pixate_Engine-cxbqfllitlqcspcaxewxldmpknhu/Build/Products/Debug-iphoneos",
-					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calc7Demo/Calc7Demo-Prefix.pch";
@@ -299,9 +297,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Framework\"",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Pixate_Engine-cxbqfllitlqcspcaxewxldmpknhu/Build/Products/Debug-iphoneos",
-					"/Users/pcolton/Development/Pixate/products/pixate-ios-freestyle-staging/build",
+					"\"$(SRCROOT)/../../build/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calc7Demo/Calc7Demo-Prefix.pch";

@@ -42,16 +42,7 @@ fi
 # Determine which samples to build.
 #
 
-# Certain subdirs of samples are not samples to be built, exclude them from the find query
-FB_SAMPLES_EXCLUDED=(FBConnect.bundle Configurations)
-for excluded in "${FB_SAMPLES_EXCLUDED[@]}"; do
-  if [ -n "$FB_FIND_ARGS" ]; then
-    FB_FIND_ARGS="$FB_FIND_ARGS -o"
-  fi
-  FB_FIND_ARGS="$FB_FIND_ARGS -name $excluded"
-done
-
-FB_FIND_SAMPLES_CMD="find $PX_FREESTYLE_SAMPLES -type d -depth 1 ! ( $FB_FIND_ARGS )"
+PX_FREESTYLE_FIND_SAMPLES_CMD="find $PX_FREESTYLE_SAMPLES -type d -depth 1"
 
 # -----------------------------------------------------------------------------
 # Build each sample
@@ -69,7 +60,7 @@ function xcode_build_sample() {
     || die "XCode build failed for sample '${1}' for platform '${2}(${3})' using configuration '${4}'."
 }
 
-for sampledir in `$FB_FIND_SAMPLES_CMD`; do
+for sampledir in `$PX_FREESTYLE_FIND_SAMPLES_CMD`; do
   xcode_build_sample `basename $sampledir` "iphonesimulator" "i386" "$BUILDCONFIGURATION"
 done
 
