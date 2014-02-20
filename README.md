@@ -41,7 +41,7 @@ pod 'PixateFreestyle'
 
 ### Migrating from Pixate Framework
 
-If you are coming from the previous Pixate Framework, you’ll only need to make a few changes, namely updating your imports to use ‘PixateFreestyle’ and updating your initialization method in your main.m.
+If you are migrating from the Pixate Framework, you’ll only need to make a few changes, namely updating your imports to use ‘PixateFreestyle’ and updating your initialization method in your main.m.
 
 In terms of your ‘#import” lines, just update them to read as follows:
 
@@ -49,7 +49,7 @@ In terms of your ‘#import” lines, just update them to read as follows:
 #import <PixateFreestyle/PixateFreestyle.h>
 ```
 
-And like the Installation step above, just change your main.m to look like the following, you no longer need to submit your license key and user name.
+And like the Installation step above, just change your main.m to look like the following, you no longer need to use a license key or user name.
 
 ```
 #import <PixateFreestyle/PixateFreestyle.h>
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 
 ### Styling Apps with CSS
 
-Pixate Freestyle allows you to add ids, classes, and inline styles to your native components, and style them with CSS. Learn more about this [here](style-reference/index.html#app_structure).
+Pixate Freestyle allows you to add IDs, Class'es, and inline styles to your native components, and style them with CSS. Learn more about this [here](style-reference/index.html#app_structure).
 
 For now, let’s make a simple app that styles a single button. Follow along with the video below, and add the following CSS code to a new file, `default.css`, in your Xcode project.
 
@@ -90,8 +90,6 @@ mixin vimeo('79832578')
 ### Moving Faster with Themes
 
 You can build the style of your app piece-by-piece using the method above. For even faster development, use a pre-built [Freestyle theme](themes).
-
-More TKTK
 
 ## Docs
 
