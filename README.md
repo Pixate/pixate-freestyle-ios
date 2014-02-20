@@ -7,9 +7,13 @@ Pixate Freestyle is a native iOS (and [Android](pixate.github.io/pixate-freestyl
 
 ### Installation
 
-There are two ways to install the Pixate Freestyle framework.
+There are several ways to download and install the Pixate Freestyle framework.
 
-The easiest is to [download the installer](http://www.pixate.com/downloads/freestyle/PixateFreestyle-2.1.pkg), and drag **PixateFreestyle.framework** into your Xcode project. Once installed, add the following import to the top of your `main.m`:
+The easiest is to [download the installer](http://www.pixate.com/downloads/freestyle/PixateFreestyle-2.1.pkg), which always contains the latest  version, and drag **PixateFreestyle.framework** into your Xcode project. Alternatively, you can download the framework file only (i.e. no samples) by going to the [releases section](https://github.com/Pixate/pixate-freestyle-ios/releases) of this repo.
+
+*NOTE: The installer will place the files into your **Documents** folder in a folder named **PixateFreestyle***. 
+
+ Once installed, add the following import to the top of your **main.m** file:
 
 ```
 #import <PixateFreestyle/PixateFreestyle.h>
@@ -67,7 +71,7 @@ int main(int argc, char *argv[])
 
 Pixate Freestyle allows you to add IDs, Class'es, and inline styles to your native components, and style them with CSS. Learn more about this [here](style-reference/index.html#app_structure).
 
-For now, let’s make a simple app that styles a single button. Follow [this short video](LINK TO VIMEO VIDEO) and then add the following CSS code to a new file, `default.css`, in your Xcode project.
+For now, let’s make a simple app that styles a single button. Follow [this short video](LINK HERE) and then add the following CSS code to a new file, `default.css`, in your Xcode project.
 
     ```
     view {
@@ -91,15 +95,15 @@ You can build the style of your app piece-by-piece using the method above. For e
 
 ## Docs
 
-You can find the latest Pixate Freestyle documentation [here](LINK TO DOCS).
+You can find the latest Pixate Freestyle documentation [here](LINK HERE).
 
 ## Compiling Freestyle Source
 
-To compile the Pixate Freestyle source outside of Xcode or your project, just check out the repo and go into the **scripts/** directory. From there, run the '**build_framework.sh**' script. It will compile the framework and create a "FAT" binary and place it in a **build/** folder at the root level of the repo.
+To compile the Pixate Freestyle source outside of Xcode or your project, just clone the repo and go into the **scripts/** directory. From there, run the '**build_framework.sh**' script. It will compile the framework and create a "FAT" binary and place it in a **build/** folder at the root level of the repo.
 
 ## Contributing
 
-Pixate welcomes contributions to our product. All contributors must sign a CLA (contributor license agreement).
+Pixate welcomes contributions to our product. Just fork, make your changes, and submit a pull request. All contributors must sign a CLA (contributor license agreement).
 
 To contribute on behalf of yourself, sign the individual CLA here:
 
