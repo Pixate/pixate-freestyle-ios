@@ -85,7 +85,7 @@ For now, let’s make a simple app that styles a single button. Follow along wit
     }
     ```
 
-mixin vimeo('79832578')
+<iframe src="http://player.vimeo.com/video/79832578" width="100%" height="100%" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
 
 ### Moving Faster with Themes
 
