@@ -2,10 +2,11 @@
 
 mixin nav(current_page)
   - var pages = []
-  - pages.push({url:'getting-started/index.html', title:'Getting Started'})
-  - pages.push({url:'themes/index.html', title:'Themes'})
-  - pages.push({url:'style-reference/index.html', title:'Style Reference'})
-  - pages.push({url:'dev-reference.html', title:'Developer Reference'})
+  - pages.push({url:rootURL+'/getting-started/index.html', title:'Getting Started'})
+  - pages.push({url:rootURL+'/themes/index.html', title:'Themes'})
+  - pages.push({url:rootURL+'/style-reference/index.html', title:'Style Reference'})
+  - pages.push({url:rootURL+'/dev-reference.html', title:'Developer Reference'})
+  - pages.push({url:'https://github.com/pixate/pixate-freestyle-ios', title:'GitHub'})
 
   - if (!current_page) current_page = {title:'', url:''}
 
@@ -27,7 +28,7 @@ mixin nav(current_page)
       ul.nav.navbar-nav.navbar-right
         - for (var i = 0 ; i < pages.length ; i++)
           - var liClass = current_page && current_page.url && (pages[i].title == current_page.title) ? "active" : "";
-          li(class='#{liClass}'): a(href='#{rootURL}/'+pages[i].url)=pages[i].title
+          li(class='#{liClass}'): a(href=pages[i].url)=pages[i].title
 
 
 
