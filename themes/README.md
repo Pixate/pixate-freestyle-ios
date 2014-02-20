@@ -2,8 +2,8 @@
 
 Pixate Freestyle allows you to style an entire iOS app with CSS, making an app themeable by applying different collections of CSS classes. Changing the theme of an app is as simple as switching out the CSS file used by the Pixate Freestyle framework.
 
-![My image](https://raw.github.com/Pixate/Freestyle/gh-pages/freestyle_typography.png)
-![My image](https://raw.github.com/Pixate/Freestyle/gh-pages/freestyle_form_styles.png)
+![My image](https://raw.github.com/Pixate/pixate-freestyle-ios/themes/assets/pixate_blue_form_styles.png)
+![My image](https://raw.github.com/Pixate/pixate-freestyle-ios/themes/assets/pixate_blue_typography.png)
 
 
 ## Using themes
