@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 
 Pixate Freestyle allows you to add IDs, Class'es, and inline styles to your native components, and style them with CSS. Learn more about this [here](style-reference/index.html#app_structure).
 
-For now, let’s make a simple app that styles a single button. Follow [this short video](LINK HERE) and then add the following CSS code to a new file, `default.css`, in your Xcode project.
+For now, let’s make a simple app that styles a single button. Follow [this short video](http://player.vimeo.com/video/79832578) and then add the following CSS code to a new file, `default.css`, in your Xcode project.
 
     ```
     view {
@@ -95,7 +95,7 @@ You can build the style of your app piece-by-piece using the method above. For e
 
 ## Docs
 
-You can find the latest Pixate Freestyle documentation [here](LINK HERE).
+You can find the latest Pixate Freestyle documentation [here](http://pixate.github.io/pixate-freestyle-ios).
 
 ## Compiling Freestyle Source
 
