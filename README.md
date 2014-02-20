@@ -1,34 +1,43 @@
+
 # Pixate Freestyle
 
-Pixate Freestyle is a native iOS (and [Android](pixate.github.io/pixate-freestyle-android)) library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of Objective-C with a few lines of CSS. This simplifies and centralizes your styling code, and [offers other benefits](http://pixate.com/freestyle) as well.
+Pixate Freestyle is a native iOS (and [Android](pixate.github.io/pixate-freestyle-android)) library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of Objective-C with a few lines of CSS. This simplifies and centralizes your styling code, and [offers other benefits](http://www.pixate.com/) as well.
 
 ## Getting Started
 
 ### Installation
 
-There are two ways to install Pixate Freestyle.
+There are two ways to install the Pixate Freestyle framework.
 
-The easiest is to [download the installer](#download-link-tk), and drag the pixate-freestyle framework into your Xcode project. Once installed, add the following bolded lines of code to `main.m`:
+The easiest is to [download the installer](http://www.pixate.com/downloads/freestyle/PixateFreestyle-2.1.pkg), and drag **PixateFreestyle.framework** into your Xcode project. Once installed, add the following import to the top of your `main.m`:
 
 ```
 #import <PixateFreestyle/PixateFreestyle.h>
+```
 
+In the body of your main method, add the following line before the return:
+
+```
+[PixateFreestyle initializePixateFreestyle];
+```
+
+Your main method should look something like this:
+
+```
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        **[PixateFreestyle initializePixateFreestyle];**
+        [PixateFreestyle initializePixateFreestyle];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
 ```
 
-Or if you use [cocoapods](http://cocoapods.org), install the Freestyle cocoapod by adding Freestyle to your Podfile:
+If you use [CocoaPods](http://cocoapods.org), install the Freestyle cocoapod by adding **PixateFreestyle** to your Podfile:
 
 ```
 pod 'PixateFreestyle'
 ```
-
-Then ‘pod install’ or 'pod update', depending on your situation.
 
 ### Migrating from Pixate Framework
 
