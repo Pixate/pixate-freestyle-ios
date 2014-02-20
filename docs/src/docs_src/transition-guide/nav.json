@@ -1,8 +1,0 @@
-{
-  "navItems": [
-    {"url": "#introduction", "title": "Introduction" },
-    {"url": "#framework-setup", "title": "Framework Setup" },
-    {"url": "#css-name-changes", "title": "CSS Name Changes" },
-    {"url": "#other-css-changes", "title": "Other CSS Changes" }
-  ]
-}

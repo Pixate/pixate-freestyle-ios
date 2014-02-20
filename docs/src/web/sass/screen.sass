@@ -16,7 +16,7 @@ $search_btn_width: 40px
 
 body
   box-sizing: border-box
-  font-family: "Whitney SSm A", "Whitney SSm B", Calibri, Lucida Grande, Arial, sans-serif
+  font-family: 'Open Sans', Calibri, Lucida Grande, Arial, sans-serif
   font-size: $base_size
   line-height: $leading * $base_size
   font-weight: normal
@@ -30,13 +30,14 @@ body strong
 
 h1, h2, h3
   color: $dark-gray
-  font-family: 'Whitney A', 'Whitney B', Calibri, Lucida Grande, Arial, sans-serif
+  font-family: 'Open Sans', Calibri, Lucida Grande, Arial, sans-serif
 
 $h1_margin_top: $base_size * 0.5
 h1
   font-weight: 300
   font-size: $base_size * 3
   line-height: $base_size * $leading * 2.5
+  letter-spacing: -1px
 
   padding-top: $navbar_padding_top + $h1_margin_top
   margin-top: -$navbar_padding_top + -$h1_margin_top
@@ -81,17 +82,14 @@ code strong
 .pixate-logo-dark
   display: inline-block
   margin-top: 13px
-  background: url('../img/pixate-dark.png')
+  background: url('../img/freestyle-logo.svg')
   background-size: 100%
   background-repeat: no-repeat
   text-indent: 100%
   white-space: nowrap
   overflow: hidden
-  width: 63px
-  height: 22px
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background: url('../img/pixate-dark@2x.png')
-    background-size: 63px 22px
+  width: 200px
+  height: 40px
 
 .logo-docs, .logo-docs:hover
   color: black
@@ -118,6 +116,16 @@ code strong
 .form-search
   margin-bottom: 0
   border-bottom-style: none
+
+// Dev Reference iFrame
+
+.dev-iframe
+  position: fixed
+  top: $navbar_padding_top
+  left: 0
+  right: 0
+  bottom: 0
+
 
 
 
@@ -175,32 +183,6 @@ code strong
 
 .side-nav
   margin-top: $base_size * $leading * 2
-
-.sidebar:before
-  content: ""
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
-  position: fixed
-  margin: 0
-  padding: 0
-  z-index: 1
-  display: block
-  width: 213px
-  height: $base_size * $leading * 2
-  @media (min-width: 1200px)
-    width: 262px
-
-.sidebar:after
-  content: ""
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-  position: fixed
-  z-index: 1
-  display: block
-  width: 213px
-  bottom: 0
-  height: $base_size * $leading * 2
-  @media (min-width: 1200px)
-    width: 262px
-
 
 
 // Content Styles

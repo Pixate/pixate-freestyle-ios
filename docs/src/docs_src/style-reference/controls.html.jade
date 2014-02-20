@@ -3,12 +3,12 @@ extends ../../web/templates/style-reference-base.jade
 block content-column
   :markdown
     ## Native iOS Controls
-    This section documents all of the controls that can be styled with Pixate.
+    This section documents all of the controls that can be styled with Freestyle.
 
     Each page shows all of the CSS information about a control: the selectors that reference it, the properties it supports, its children, and its pseudo-classes. 
 
-    Since many UIKit controls contain important subviews, this guide lists each element's *child elements*, along with their properties. Pay close attention to these, as many common styling changes actually occur on the children of controls. For example, [`UISlider`](#{rootURL}/style-reference/controls/uislider.html) is composed of a `min-track`, a `max-track`, and a `thumb`. Pixate exposes these as children of the parent control. Styling these will change the appearance of the slider.
+    Since many UIKit controls contain important subviews, this guide lists each element's *child elements*, along with their properties. Pay close attention to these, as many common styling changes actually occur on the children of controls. For example, [`UISlider`](#{rootURL}/style-reference/controls/uislider.html) is composed of a `min-track`, a `max-track`, and a `thumb`. Freestyle exposes these as children of the parent control. Styling these will change the appearance of the slider.
     
-    Others controls have different visual states. For example, a [`UIButton`](#{rootURL}/style-reference/controls/uibutton.html) has a `normal` and `highlighted` state, as well as others. Each state allows for differing styles which take effect when the control is in that particular state. Pixate allows you to use pseudo-classes to indicate to which state the given rule set applies.
+    Others controls have different visual states. For example, a [`UIButton`](#{rootURL}/style-reference/controls/uibutton.html) has a `normal` and `highlighted` state, as well as others. Each state allows for differing styles which take effect when the control is in that particular state. Freestyle allows you to use pseudo-classes to indicate to which state the given rule set applies.
 
     Values are referenced by type or string values. Alternate selections for a single value type are separated by commas. Types appear as links to the corresponding information in the [Values](#{rootURL}/style-reference/values.html) section. String values are the literal text as they appear in this document.

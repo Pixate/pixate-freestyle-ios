@@ -1,8 +1,8 @@
 {
   "navItems": [
     {
-      "url": "/style-reference/index.html#styling_with_pixate",
-      "title": "App Styling with Pixate for iOS",
+      "url": "/style-reference/index.html#styling_with_freestyle",
+      "title": "App Styling with Freestyle for iOS",
       "children": [
         {"url": "/style-reference/index.html#app_structure", "title": "Application Structure" },
         {"url": "/style-reference/index.html#specificity", "title": "Specificity" },

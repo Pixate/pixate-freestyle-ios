@@ -1,0 +1,8 @@
+extends ../web/templates/base.jade
+include ../web/templates/video-mixin.jade
+
+block topnav
+  mixin nav({url:'dev-reference.html', title:'Developer Reference'})
+
+block content
+  iframe.dev-iframe(frameborder="0", width="100%", height="100%", src="dev-reference")

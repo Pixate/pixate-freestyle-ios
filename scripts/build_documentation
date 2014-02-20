@@ -46,12 +46,12 @@ echo Building controls.json.
 # build the main documentation set
 echo Building core documentation.
 cd "${DOCS_ROOT}/src/"
-grunt
+grunt --root-url "/pixate-freestyle-ios" --build-path "../../../pixate-freestyle-ios-gh-pages"
 
 # move back to the starting directory
 cd "${PX_FREESTYLE_SCRIPT}"
 
 # generate the appledocs
 echo Building appledocs.
-./build_appledocs "${PX_FREESTYLE_ROOT}"
+./build_appledocs "${PX_FREESTYLE_ROOT}" "${PX_FREESTYLE_ROOT}/../pixate-freestyle-ios-gh-pages"
 
