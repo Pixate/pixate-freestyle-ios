@@ -4,19 +4,22 @@ include ../../web/templates/video-mixin.jade
 block topnav
   mixin nav({url:'themes', title:'Themes'})
 
-block content-column
-  :markdown
+block left-nav
+  mixin left-nav(navItems)
 
+block content-column
+  
+  a#introduction
+  :markdown
     #Freestyle Themes
 
     Pixate Freestyle allows you to style an entire iOS app with CSS, making an app themeable by applying different collections of CSS classes. Changing the theme of an app is as simple as switching out the CSS file used by the Pixate Freestyle framework.
 
-    Hello
-
     ![My image](assets/pixate_blue_typography.png)
     ![My image](assets/pixate_blue_form_styles.png)
 
-
+  a#using-themes
+  :markdown
     ## Using themes
 
     If you haven't already, [add Pixate Freestyle to your app](https://github.com/Pixate/pixate-freestyle-ios).
@@ -35,7 +38,8 @@ block content-column
 
     Once the CSS or SCSS files are added, you can apply the contained classes to any relevant view or control by adding a `styleClass` runtime attribute in Interface Builder to the view or control, or importing `Pixate/Pixate.h` in your view controller and setting the `styleClass` property (e.g. `myButton.styleClass = @"button small";`. The Pixate [Getting Started](http://www.pixate.com/docs/framework/ios/latest/getting-started/#using_css) guide has more details on setting classes.
 
-
+  a#contributing
+  :markdown
     ## Contributing themes
     
     New theme contributions are welcome. We are working on a theme guideline and a base theme that everyone can clone and modify, but in the meantime, please use the control and class names included in the [pixate-blue theme](https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes/pixate-blue). Your theme can style any set of controls or views, and must include the following:
@@ -79,7 +83,8 @@ block content-column
     **IMPORTANT**: By submitting a theme, you agree to allow it to be
     licensed under the terms of the [Apache 2.0 License](https://github.com/Pixate/pixate-freestyle-ios/blob/master/LICENSE).
             
-
+  a#compiling
+  :markdown
     ## Compiling Sass 
 
     A theme may include several [Sass](http://sass-lang.com) files that, once compiled, generate the CSS that will be used by Pixate Freestyle. Sass allows themes to be modular. You can modify variables to theme the default styles, or edit any part of the Sass to your heart's content.

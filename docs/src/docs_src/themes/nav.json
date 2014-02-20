@@ -1,0 +1,8 @@
+{
+  "navItems": [
+    {"url": "#introduction", "title": "Introduction" },
+    {"url": "#using-themes", "title": "Using Themes" },
+    {"url": "#contributing", "title": "Contributing Themes" },
+    {"url": "#compiling", "title": "Compiling Sass" }
+  ]
+}
