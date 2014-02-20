@@ -84,8 +84,6 @@ For now, let’s make a simple app that styles a single button. Follow along wit
     }
     ```
 
-<iframe src="http://player.vimeo.com/video/79832578" width="500" height="500" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
-
 ### Moving Faster with Themes
 
 You can build the style of your app piece-by-piece using the method above. For even faster development, use a pre-built [Freestyle theme](themes).
