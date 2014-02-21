@@ -1,0 +1,32 @@
+- var pages = []
+
+mixin nav(current_page)
+  - var pages = []
+  - pages.push({url:rootURL+'/', title:'Getting Started'})
+  - pages.push({url:rootURL+'/themes/index.html', title:'Themes'})
+  - pages.push({url:rootURL+'/style-reference/index.html', title:'Style Reference'})
+  - pages.push({url:rootURL+'/dev-reference.html', title:'Developer Reference'})
+  - pages.push({url:'https://github.com/pixate/pixate-freestyle-ios', title:'GitHub'})
+
+  - if (!current_page) current_page = {title:'', url:''}
+
+  nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      .navbar-brand
+        a.logo-docs(href='#{rootURL}/index.html')
+          span.pixate-logo-dark Pixate
+
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      ul.nav.navbar-nav.navbar-right
+        - for (var i = 0 ; i < pages.length ; i++)
+          - var liClass = current_page && current_page.url && (pages[i].title == current_page.title) ? "active" : "";
+          li(class='#{liClass}'): a(href=pages[i].url)=pages[i].title
+
+
+

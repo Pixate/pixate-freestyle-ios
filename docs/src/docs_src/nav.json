@@ -1,0 +1,11 @@
+{
+  "navItems": [
+    {"url": "#introduction", "title": "Introduction" },
+    {"url": "#getting-started", "title": "Getting Started" },
+    {"url": "#docs", "title": "Docs" },
+    {"url": "#compiling", "title": "Compiling Freestyle Source" },
+    {"url": "#contributing", "title": "Contributing" },
+    {"url": "#support", "title": "Support" },
+    {"url": "#license", "title": "License" }
+  ]
+}

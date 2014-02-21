@@ -4,13 +4,13 @@ block content-column
   :markdown
     ## Selectors
 
-    Selectors are used to designate to which controls a given rule set applies. Below you will find a list of selectors and combinators supported by the Pixate Engine. Note that each entry is a link to its associated section in the CSS3 specification. Simply click the entry to find detailed information about the given selector or combinator.
+    Selectors are used to designate to which controls a given rule set applies. Below you will find a list of selectors and combinators supported by Freestyle. Note that each entry is a link to its associated section in the CSS3 specification. Simply click the entry to find detailed information about the given selector or combinator.
 
   a#simple_selectors
   :markdown
     ### Simple Selectors
 
-    Simple selectors allow for the selection of controls by `name`, `class`, and `id`. A selector may include further restrictions on a selected element via attribute expressions; the Pixate Engine does not currently support those. Below is a list of simple selectors supported in the Pixate Engine.
+    Simple selectors allow for the selection of controls by `name`, `class`, and `id`. A selector may include further restrictions on a selected element via attribute expressions; Freestyle does not currently support those. Below is a list of simple selectors supported in Freestyle.
 
     * [element type selector](http://www.w3.org/TR/css3-selectors/#type-selectors) - Select a control by element name
     * [universal selector](http://www.w3.org/TR/css3-selectors/#universal-selector) - Select any control
@@ -19,7 +19,7 @@ block content-column
 
     Below is a sample of each of the simple selectors.
 
-    ```pixate
+    ```freestyle
     /* element type selector */
     button {}
 
@@ -41,7 +41,7 @@ block content-column
   :markdown
     ### Attribute Selectors
 
-    Attribute selectors allow for controls to be selected based on the content of their attributes. Objective-c classes do not have attributes, per se, but these can be thought of as objective-c properties, in simple cases. Internally, the Pixate Engine will use Key-value Coding (KVC) to look up a property name. If that lookup is successful, then one of the following tests is performed, returning true only if the match is successful.
+    Attribute selectors allow for controls to be selected based on the content of their attributes. Objective-c classes do not have attributes, per se, but these can be thought of as objective-c properties, in simple cases. Internally, Freestyle will use Key-value Coding (KVC) to look up a property name. If that lookup is successful, then one of the following tests is performed, returning true only if the match is successful.
 
     * [Attribute Presence](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has the specified attribute
     * [Equals](http://www.w3.org/TR/selectors/#attribute-representation) - Select a control that has an attribute equal to a specific value
@@ -55,11 +55,11 @@ block content-column
   :markdown
     ### Pseudo-classes
 
-    Many of the controls in UIKit allow settings to be associated with specific states: `normal`, `highlighted`, `disabled`, etc. The Pixate Engine uses pseudo-classes to indicate to which state a given rule set should apply.
+    Many of the controls in UIKit allow settings to be associated with specific states: `normal`, `highlighted`, `disabled`, etc. Freestyle uses pseudo-classes to indicate to which state a given rule set should apply.
 
     Below is a sample of some pseudo-classes in use.
 
-    ```pixate
+    ```freestyle
     /* normal button state */
     button:normal {}
 
@@ -69,7 +69,7 @@ block content-column
 
     Pseudo-classes representing control states are currently limited to the last selector in a selector sequence.
 
-    Pseudo-classes are also used to match controls that meet a certain criteria. For example, it is possible to indicate that a control can match only if it is the first child of its parent, or the last child, etc. The Pixate Engine supports the following pseudo-classes in this category:
+    Pseudo-classes are also used to match controls that meet a certain criteria. For example, it is possible to indicate that a control can match only if it is the first child of its parent, or the last child, etc. Freestyle supports the following pseudo-classes in this category:
 
     * [:root](http://www.w3.org/TR/selectors/#root-pseudo) - Select a control that is the root of a view and has no parent
     * [:first-child ](http://www.w3.org/TR/selectors/#first-child-pseudo)- Select a control that is the first child of its parent
@@ -98,7 +98,7 @@ block content-column
 
     Below is a sample of each of these combinators.
 
-    ```pixate
+    ```freestyle
     /* descendant combinator */
     view button {}
 

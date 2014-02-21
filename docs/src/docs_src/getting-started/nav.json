@@ -1,9 +1,0 @@
-{
-  "navItems": [
-    {"url": "#introduction", "title": "Introduction" },
-    {"url": "#installation", "title": "Installation" },
-    {"url": "#app_setup", "title": "App Setup" },
-    {"url": "#using_css", "title": "CSS in your Native App" },
-    {"url": "#now_what", "title": "Now What?" }
-  ]
-}

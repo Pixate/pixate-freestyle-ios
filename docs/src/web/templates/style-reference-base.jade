@@ -1,10 +1,13 @@
 extends ../../web/templates/with-left-nav.jade
 
+block head
+  title Pixate Freestyle for iOS Styling Reference
+
 block scripts
   script(src='#{rootURL}/js/nested-nav.js')
 
 block topnav
-  mixin nav(pages, {url:'style-reference', title:'Style Reference'})
+  mixin nav({url:'style-reference', title:'Style Reference'})
 
 block left-nav
   mixin nested-left-nav(navItems)
