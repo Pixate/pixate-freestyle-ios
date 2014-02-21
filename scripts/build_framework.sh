@@ -94,7 +94,8 @@ function xcode_build_target() {
 
 xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "i386" "5.0" "i386"
 xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "x86_64" "7.0" "x86_64"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7 armv7s" "5.0" "Arm"
+xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7" "5.0" "Arm"
+xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7s" "5.0" "Arm7S"
 xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "arm64" "7.0" "Arm64"
 
 # -----------------------------------------------------------------------------
@@ -107,6 +108,7 @@ mkdir -p $(dirname $PX_FREESTYLE_UNIVERSAL_BINARY)
 $LIPO \
   -create \
     $PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}Arm/libpixate-freestyle.a \
+    $PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}Arm7S/libpixate-freestyle.a \
     $PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}Arm64/libpixate-freestyle.a \
     $PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}i386/libpixate-freestyle.a \
     $PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}x86_64/libpixate-freestyle.a \
