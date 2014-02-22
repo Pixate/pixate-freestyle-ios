@@ -20,6 +20,7 @@
 # stop if we encounter an error
 #set -e
 
+# set variables
 DOCS_ROOT="${PX_FREESTYLE_ROOT}/docs"
 
 DOCS_WORKSPACE="${DOCS_ROOT}/src/specs"
@@ -40,6 +41,13 @@ else
 	BUILD_PATH="${DOCS_ROOT}/build"
 	GRUNT_ROOT_URL="relative"
 fi
+
+# npm installs
+cd "${DOCS_ROOT}/src"
+npm install
+
+cd "${DOCS_TOOLS}"
+npm install
 
 # generate Styling Reference metadata
 mkdir -p "${DOCS_WORKSPACE}"
