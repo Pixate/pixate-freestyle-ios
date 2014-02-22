@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
   var buildPath = grunt.option('build-path') || '../../docs' ;
 
-  var rootURL = grunt.option('root-url') || '' ;
+  var rootURL = grunt.option('root-url') || 'relative' ;
 
   // Used by jade and validate-and-build-controls
   var controlsNavItems = [];
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
               }
 
               //translate for relativeURLs
-              if (rootURL === '') {
+              if (rootURL === 'relative') {
                 locals.rootURL = getRelativeRoot(filePath);
               }
 
