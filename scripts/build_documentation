@@ -15,6 +15,18 @@
 # limitations under the License.
 #
 
+# ABOUT THIS SCRIPT
+# =================
+#
+# This script builds the documentation shown on: 
+# http://pixate.github.io/pixate-freestyle-ios.
+# Running this script will build the docs locally in /docs/build, where you can
+# test them by running `python -m SimpleHTTPServer`.
+#
+# Adding the --gh-pages flag build the docs into a folder called:
+# pixate-freestyle-ios-gh-pages, in the same folder as the clone of this
+# repo.
+
 . ${PX_FREESTYLE_SCRIPT:-$(dirname $0)}/common.sh
 
 # stop if we encounter an error
