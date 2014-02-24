@@ -84,15 +84,14 @@ static int ddLogLevel = LOG_LEVEL_WARN;
     }
 
 #if LOG_VERBOSE
-
-        if (result)
-        {
-            DDLogVerbose(@"'%@' attribute exists on '%@'", _attributeName, [PXStyleUtils descriptionForStyleable:element]);
-        }
-        else
-        {
-            DDLogVerbose(@"'%@' attribute does not exist on '%@'", _attributeName, [PXStyleUtils descriptionForStyleable:element]);
-        }
+    if (result)
+    {
+        DDLogVerbose(@"'%@' attribute exists on '%@'", _attributeName, [PXStyleUtils descriptionForStyleable:element]);
+    }
+    else
+    {
+        DDLogVerbose(@"'%@' attribute does not exist on '%@'", _attributeName, [PXStyleUtils descriptionForStyleable:element]);
+    }
 #endif
 
     return result;
