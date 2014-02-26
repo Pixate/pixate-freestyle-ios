@@ -75,10 +75,7 @@ static int ddLogLevel = LOG_LEVEL_WARN;
 
     if (canMatch_)
     {
-        NSString *classValue = element.styleClass;
-        NSArray *components = [classValue componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-
-        result = [components containsObject:className_];
+        result = [element.styleClasses containsObject:className_];
     }
 
     if (result)

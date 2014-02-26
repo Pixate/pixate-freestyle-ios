@@ -56,6 +56,11 @@ typedef enum
 @property (nonatomic, copy) NSString *styleClass;
 
 /**
+*  Return an array of the styleClass separated by whitespace for faster performance
+*/
+@property (nonatomic, readonly) NSArray *styleClasses;
+
+/**
  * The styling mode of the styleable as defined by the PXStylingMode enumeration.
  */
 @property (nonatomic) PXStylingMode styleMode;

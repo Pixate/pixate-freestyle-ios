@@ -30,6 +30,7 @@
 #import "PXVirtualStyleableControl.h"
 
 static const char STYLE_CLASS_KEY;
+static const char STYLE_CLASSES_KEY;
 static const char STYLE_ID_KEY;
 static const char STYLE_CSS_KEY;
 static const char STYLE_PARENT_KEY;
@@ -51,6 +52,11 @@ void PXForceLoadUIBarItemPXStyling() {}
 - (NSString *)styleClass
 {
     return objc_getAssociatedObject(self, &STYLE_CLASS_KEY);
+}
+
+- (NSArray *)styleClasses
+{
+    return objc_getAssociatedObject(self, &STYLE_CLASSES_KEY);
 }
 
 - (NSString *)styleId
@@ -124,6 +130,14 @@ void PXForceLoadUIBarItemPXStyling() {}
     
     objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
+    
+    //Precalculate classes array for performance gain
+    NSArray *classes = [aClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
+        return [class1 compare:class2];
+    }];
+    objc_setAssociatedObject(self, &STYLE_CLASSES_KEY, classes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
     [self updateStylesNonRecursively];
 }
 

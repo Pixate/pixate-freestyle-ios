@@ -241,10 +241,7 @@ static const char viewDelegate;
     if (styleable.styleId) [parts addObject:[NSString stringWithFormat:@"#%@", styleable.styleId]];
 
     // add classes
-    NSArray *classes = [styleable.styleClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
-        return [class1 compare:class2];
-    }];
+    NSArray *classes = styleable.styleClasses;
 
     for (NSString *className in classes)
     {
