@@ -1,0 +1,58 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:hover pseudo-class on links</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+:link, :visited { color: navy; text-decoration: none; }
+:link:hover span { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-18b.xml" title=":hover pseudo-class"/>
+  <link rel="next" href="css3-modsel-19.xml" title=":active pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-18b.xml" title=":hover pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-19.xml" title=":active pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">28 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:hover pseudo-class on links (ID #18c)</td>
+    <td class="a">2004-02-29</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <p><a href="#foo">Hover <strong>here</strong> and the background of <span>this text should go green</span>.</a></p>
+</div>
+   <pre class="rules">
+:link, :visited { color: navy; text-decoration: none; }
+:link:hover span { background-color : lime }
+</pre>
+   <pre class="rules">
+ &lt;p&gt;&lt;a href=&quot;#foo&quot;&gt;Hover &lt;strong&gt;here&lt;/strong&gt; and the background of &lt;span&gt;this text should go green&lt;/span&gt;.&lt;/a&gt;&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

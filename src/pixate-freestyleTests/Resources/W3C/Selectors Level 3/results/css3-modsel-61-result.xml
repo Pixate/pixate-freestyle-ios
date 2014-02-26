@@ -1,0 +1,12 @@
+<test>
+	<title>NEGATED :link pseudo-class</title>
+	<style type="text/css">div.stub > * { background-color : red }
+div.stub *:not(:link) { background-color : lime }
+</style>
+	<div class="testText">
+<div class="stub">
+<a href="http://www.w3.org/" background-color="lime">This anchor should have a green background</a>
+(Note: You must have visited http://www.w3.org/ for this test to be valid.)
+</div>
+</div>
+</test>

@@ -1,0 +1,11 @@
+<test>
+	<title>Contains attribute selector with empty value</title>
+	<style type="text/css">
+p { color: lime; }
+p[class*=""] { color: red; }
+</style>
+	<div class="testText">
+<p class="" color="lime">This text should be green.</p>
+<p color="lime">This text should be green.</p>
+</div>
+</test>

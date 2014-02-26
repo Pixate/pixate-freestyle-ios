@@ -1,0 +1,120 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Syntax and parsing of unknown pseudo-classes and pseudo-elements</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+  p { background: lime; }
+  p   * { background: lime; }
+  p > * { background: lime; }
+  p + * { background: lime; }
+  p ~ * { background: lime; }
+
+  /* let's try some pseudos that are not valid CSS but are likely to
+  be implemented as extensions in some UAs. These should not be
+  recognised, as UAs implementing such extensions should use the
+  :-vnd-ident syntax. */
+
+  :canvas { background: red; }
+  :viewport { background: red; }
+  :window { background: red; }
+  :menu { background: red; }
+  :table { background: red; }
+  :select { background: red; }
+  ::canvas { background: red; }
+  ::viewport { background: red; }
+  ::window { background: red; }
+  ::menu { background: red; }
+  ::table { background: red; }
+  ::select { background: red; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-160.xml" title="Syntax and parsing of unknown pseudo-classes"/>
+  <link rel="next" href="css3-modsel-166.xml" title=":first-letter with ::first-letter"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-160.xml" title="Syntax and parsing of unknown pseudo-classes">&lt;==</a>
+     Test #
+     <a href="css3-modsel-166.xml" title=":first-letter with ::first-letter">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">252 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Syntax and parsing of unknown pseudo-classes and pseudo-elements (ID #161)</td>
+    <td class="a">2005-11-09</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <p>This line should have a green background.</p>
+ <p>
+  UAs may render the following element as a pop up menu. If so, please ensure the menu is unstyled (or green).
+  <select size="1">
+   <option>This should</option>
+   <option>have a green</option>
+   <option>background.</option>
+  </select>
+ </p>
+ <table><tr><td>This line should have a green background (or it might be unstyled).</td></tr></table>
+ <!-- only allowed to be unstyled if + and ~ are not supported -->
+</div>
+   <pre class="rules">
+  p { background: lime; }
+  p   * { background: lime; }
+  p &gt; * { background: lime; }
+  p + * { background: lime; }
+  p ~ * { background: lime; }
+
+  /* let&#39;s try some pseudos that are not valid CSS but are likely to
+  be implemented as extensions in some UAs. These should not be
+  recognised, as UAs implementing such extensions should use the
+  :-vnd-ident syntax. */
+
+  :canvas { background: red; }
+  :viewport { background: red; }
+  :window { background: red; }
+  :menu { background: red; }
+  :table { background: red; }
+  :select { background: red; }
+  ::canvas { background: red; }
+  ::viewport { background: red; }
+  ::window { background: red; }
+  ::menu { background: red; }
+  ::table { background: red; }
+  ::select { background: red; }
+</pre>
+   <pre class="rules">
+ &lt;p&gt;This line should have a green background.&lt;/p&gt;
+ &lt;p&gt;
+  UAs may render the following element as a pop up menu. If so, please ensure the menu is unstyled (or green).
+  &lt;select size=&quot;1&quot;&gt;
+   &lt;option&gt;This should&lt;/option&gt;
+   &lt;option&gt;have a green&lt;/option&gt;
+   &lt;option&gt;background.&lt;/option&gt;
+  &lt;/select&gt;
+ &lt;/p&gt;
+ &lt;table&gt;&lt;tr&gt;&lt;td&gt;This line should have a green background (or it might be unstyled).&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+ &lt;!-- only allowed to be unstyled if + and ~ are not supported --&gt;
+</pre>
+  </div>
+ </body>
+</html>

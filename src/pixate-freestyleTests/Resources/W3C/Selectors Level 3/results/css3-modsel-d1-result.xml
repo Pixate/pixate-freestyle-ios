@@ -1,0 +1,29 @@
+<test>
+	<title>NEGATED Dynamic handling of :empty</title>
+	<style type="text/css">
+   #test { background: red; display: block; padding: 1em; }
+   #test:not(:empty) { background: lime; }
+</style>
+	<div class="testText">
+
+ <div>
+
+  <script type="text/javascript">
+   
+
+    function test() {
+      document.getElementById('test').appendChild(document.createTextNode('This line should be green.'));
+    }
+
+    window.setTimeout("test()", 100);
+   
+  </script>
+
+  <p> The following bar should be green. </p>
+
+  <div id="test" background="lime" display="block" padding="1.000000em"/>
+
+ </div>
+
+</div>
+</test>

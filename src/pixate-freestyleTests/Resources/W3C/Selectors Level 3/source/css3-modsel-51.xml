@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED attribute value selector</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+div.stub > p {color : red }
+div.stub > a|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test="1"]) { color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-50.xml" title="NEGATED attribute existence selector"/>
+  <link rel="next" href="css3-modsel-52.xml" title="NEGATED attribute space-separated value selector"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-50.xml" title="NEGATED attribute existence selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-52.xml" title="NEGATED attribute space-separated value selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">78 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED attribute value selector (ID #51)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<div class="stub">
+<q xmlns="http://www.example.org/a" test="1">
+  <r test="11">This text should be</r>
+  <r>in green characters</r>
+</q>
+<s xmlns="http://www.example.org/a">This text should be in green characters</s>
+<p>This text should be in green characters</p>
+</div>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+div.stub &gt; p {color : red }
+div.stub &gt; a|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test=&quot;1&quot;]) { color : lime }</pre>
+   <pre class="rules">
+&lt;div class=&quot;stub&quot;&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; test=&quot;1&quot;&gt;
+  &lt;r test=&quot;11&quot;&gt;This text should be&lt;/r&gt;
+  &lt;r&gt;in green characters&lt;/r&gt;
+&lt;/q&gt;
+&lt;s xmlns=&quot;http://www.example.org/a&quot;&gt;This text should be in green characters&lt;/s&gt;
+&lt;p&gt;This text should be in green characters&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

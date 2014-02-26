@@ -1,0 +1,12 @@
+<test>
+	<title>Syntax and parsing of unknown pseudo-classes</title>
+	<style type="text/css">
+  p { background: lime; }
+  p:subject { background: red; } /* this is not valid CSS, and if UAs
+  implemented the experimental :subject pseudo-class they should have
+  used the :-vnd-ident syntax. */
+</style>
+	<div class="testText">
+ <p background="lime">This line should have a green background.</p>
+</div>
+</test>

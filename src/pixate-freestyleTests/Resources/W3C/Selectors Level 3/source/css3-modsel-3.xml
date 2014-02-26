@@ -1,0 +1,73 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Universal selector</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[* { color : lime }
+ul, p { color : red }
+*.t1 { color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-2.xml" title="Type element selectors"/>
+  <link rel="next" href="css3-modsel-3a.xml" title="Universal selector (no namespaces)"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-2.xml" title="Type element selectors">&lt;==</a>
+     Test #
+     <a href="css3-modsel-3a.xml" title="Universal selector (no namespaces)">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">3 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Universal selector (ID #3)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p>
+<span class="t1">This paragraph, and all textual contents in the document, 
+      should be green.</span>
+</p>
+<ul>
+  <li class="t1">This item should be green.</li>
+</ul>
+<foo xmlns="http://www.example.org/a">And this element, part of a non-HTML namespace,
+      should be green too</foo>
+</div>
+   <pre class="rules">* { color : lime }
+ul, p { color : red }
+*.t1 { color : lime }
+</pre>
+   <pre class="rules">
+&lt;p&gt;
+&lt;span class=&quot;t1&quot;&gt;This paragraph, and all textual contents in the document, 
+      should be green.&lt;/span&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li class=&quot;t1&quot;&gt;This item should be green.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;foo xmlns=&quot;http://www.example.org/a&quot;&gt;And this element, part of a non-HTML namespace,
+      should be green too&lt;/foo&gt;
+</pre>
+  </div>
+ </body>
+</html>

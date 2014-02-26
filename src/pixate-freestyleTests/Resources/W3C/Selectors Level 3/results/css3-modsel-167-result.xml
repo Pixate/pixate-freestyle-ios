@@ -1,0 +1,10 @@
+<test>
+	<title>:first-line with ::first-line</title>
+	<style type="text/css">
+  p:first-line { background-color: red; }
+  p::first-line { background-color: lime; }
+</style>
+	<div class="testText">
+   <p background-color="lime">The first line of this paragraph should have a green background.</p>
+</div>
+</test>

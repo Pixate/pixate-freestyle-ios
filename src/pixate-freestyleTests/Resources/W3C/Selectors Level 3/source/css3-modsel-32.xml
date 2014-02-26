@@ -1,0 +1,99 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:first-child pseudo-class</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.red { background-color : red }
+.t1 td:first-child { background-color : lime }
+p > *:first-child { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-31.xml" title=":nth-last-of-type() pseudo-class"/>
+  <link rel="next" href="css3-modsel-33.xml" title=":last-child pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-31.xml" title=":nth-last-of-type() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-33.xml" title=":last-child pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">48 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:first-child pseudo-class (ID #32)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<div>
+<table class="t1" border="1">
+  <tr>
+    <td class="red">green cell</td>
+    <td>1.2</td>
+    <td>1.3</td>
+  </tr>
+  <tr>
+    <td class="red">green cell</td>
+    <td>2.2</td>
+    <td>2.3</td>
+  </tr>
+  <tr>
+    <td class="red">green cell</td>
+    <td>3.2</td>
+    <td>3.3</td>
+  </tr>
+</table>
+</div>
+<p>This paragraph contains some text
+          <span>and a span that should have a green background</span>
+</p>
+</div>
+   <pre class="rules">.red { background-color : red }
+.t1 td:first-child { background-color : lime }
+p &gt; *:first-child { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;div&gt;
+&lt;table class=&quot;t1&quot; border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td&gt;1.2&lt;/td&gt;
+    &lt;td&gt;1.3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td&gt;2.2&lt;/td&gt;
+    &lt;td&gt;2.3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td&gt;3.2&lt;/td&gt;
+    &lt;td&gt;3.3&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;This paragraph contains some text
+          &lt;span&gt;and a span that should have a green background&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

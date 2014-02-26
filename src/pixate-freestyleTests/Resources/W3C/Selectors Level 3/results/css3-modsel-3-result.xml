@@ -1,0 +1,18 @@
+<test>
+	<title>Universal selector</title>
+	<style type="text/css">* { color : lime }
+ul, p { color : red }
+*.t1 { color : lime }
+</style>
+	<div class="testText">
+<p color="red">
+<span class="t1" color="lime">This paragraph, and all textual contents in the document, 
+      should be green.</span>
+</p>
+<ul color="red">
+  <li class="t1" color="lime">This item should be green.</li>
+</ul>
+<foo xmlns="http://www.example.org/a" color="lime">And this element, part of a non-HTML namespace,
+      should be green too</foo>
+</div>
+</test>

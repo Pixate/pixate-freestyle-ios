@@ -1,0 +1,9 @@
+<test>
+	<title>Impossible rules (* html, * :root)</title>
+	<style type="text/css">* html { background-color: red; }
+* :root { background-color: red; }
+p { color: green; }</style>
+	<div class="testText">
+<p color="green">This line should be green (there should be no red on this page).</p>
+</div>
+</test>

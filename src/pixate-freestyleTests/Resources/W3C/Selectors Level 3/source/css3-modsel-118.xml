@@ -1,0 +1,77 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED type element selector with declared namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+*|p, *|l { display : block ; margin-bottom : 1em }
+div.test * { background-color : red }
+div.test *:not(a|p) { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-117b.xml" title="Substring matching attribute selector on middle without declared namespace"/>
+  <link rel="next" href="css3-modsel-119.xml" title="NEGATED type element selector with universal namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-117b.xml" title="Substring matching attribute selector on middle without declared namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-119.xml" title="NEGATED type element selector with universal namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">178 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED type element selector with declared namespace (ID #118)</td>
+    <td class="a">2002-07-30</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<div class="test">
+ <p xmlns="http://www.w3.org/1999/xhtml">This paragraph should have a green background.</p>
+ <p xmlns="http://www.example.org/b">This paragraph should have a green background.</p>
+ <p xmlns="">This paragraph should have a green background.</p>
+ <p xmlns="http://www.example.org/a">
+ <l>This paragraph should have a green background.</l>
+ </p>
+</div>
+</div>
+   <pre class="rules">@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+*|p, *|l { display : block ; margin-bottom : 1em }
+div.test * { background-color : red }
+div.test *:not(a|p) { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;div class=&quot;test&quot;&gt;
+ &lt;p xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;This paragraph should have a green background.&lt;/p&gt;
+ &lt;p xmlns=&quot;http://www.example.org/b&quot;&gt;This paragraph should have a green background.&lt;/p&gt;
+ &lt;p xmlns=&quot;&quot;&gt;This paragraph should have a green background.&lt;/p&gt;
+ &lt;p xmlns=&quot;http://www.example.org/a&quot;&gt;
+ &lt;l&gt;This paragraph should have a green background.&lt;/l&gt;
+ &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

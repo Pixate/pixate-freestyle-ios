@@ -1,0 +1,12 @@
+<test>
+	<title>NEGATED :hover pseudo-class</title>
+	<style type="text/css">div.stub * { color: lime; text-decoration: none; }
+div.stub > * > *:not(:hover) { color: black }
+</style>
+	<div class="testText">
+ <div class="stub">
+  <p color="lime" text-decoration="none"> <span color="lime" text-decoration="none">The color of this text should be green when the pointing device hovers over it.</span> </p>
+  <p color="lime" text-decoration="none"> <a color="lime" text-decoration="none" href="http://dummy.example.org/dummy">The color of this text should be green when the pointing device hovers over it.</a> </p>
+ </div>
+</div>
+</test>

@@ -1,0 +1,16 @@
+<test>
+	<title>Attribute dash-separated value selector without declared namespace</title>
+	<style type="text/css">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|address, *|q, *|r { display : block ; margin-bottom : 1em }
+*|p, *|q { background-color : lime ! important }
+*|*[|lang|="foo-bar"], *|*[|myattr|="tat-tut"] { background-color : red }</style>
+	<div xmlns:b="http://www.example.org/b" class="testText">
+<p lang="foo-bar" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</p>
+<address lang="foo-b" display="block" margin-bottom="1.000000em">This address should be unstyled.</address>
+<address lang="foo-barbar-toto" display="block" margin-bottom="1.000000em">This address should be unstyled.</address>
+<q xmlns="http://www.example.org/a" myattr="tat-tut-tot" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</q>
+<r xmlns="http://www.example.org/b" b:myattr="tat-tut-tot" display="block" margin-bottom="1.000000em">This paragraph should be unstyled.</r>
+</div>
+</test>

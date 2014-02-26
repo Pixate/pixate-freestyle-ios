@@ -1,0 +1,302 @@
+<?xml version="1.0" ?>
+<module name="Selectors Level 3" level="3" href="http://www.w3.org//TR/selectors/" status="Completed">
+    <tests type="xhtml1" base="http://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/xhtml/full/flat/" body-selector="div.testText">
+        <test name="Groups of selectors" href="css3-modsel-1.xml"/>
+        <test name="Type element selectors" href="css3-modsel-2.xml"/>
+        <test name="Universal selector" href="css3-modsel-3.xml"/>
+        <test name="Universal selector (no namespaces)" href="css3-modsel-3a.xml"/>
+        <test name="Omitted universal selector" href="css3-modsel-4.xml"/>
+        <test name="Attribute existence selector" href="css3-modsel-5.xml"/>
+        <test name="Attribute value selector" href="css3-modsel-6.xml"/>
+        <test name="Attribute multivalue selector" href="css3-modsel-7.xml"/>
+        <test name="Attribute multivalue selector" href="css3-modsel-7b.xml"/>
+        <test name="Attribute value selectors (hyphen-separated attributes)" href="css3-modsel-8.xml"/>
+        <test name="Substring matching attribute selector (beginning)" href="css3-modsel-9.xml"/>
+        <test name="Substring matching attribute selector (end)" href="css3-modsel-10.xml"/>
+        <test name="Substring matching attribute selector (contains)" href="css3-modsel-11.xml"/>
+        <test name="Class selectors" href="css3-modsel-13.xml"/>
+        <test name="More than one class selector" href="css3-modsel-14.xml"/>
+        <test name="More than one class selector" href="css3-modsel-14b.xml"/>
+        <test name="More than one class selector" href="css3-modsel-14c.xml"/>
+        <test name="NEGATED More than one class selector" href="css3-modsel-14d.xml"/>
+        <test name="NEGATED More than one class selector" href="css3-modsel-14e.xml"/>
+        <test name="ID selectors" href="css3-modsel-15.xml"/>
+        <test name="Multiple ID selectors" href="css3-modsel-15b.xml"/>
+        <test name="Multiple IDs" href="css3-modsel-15c.xml"/>
+        <test name=":link pseudo-class" href="css3-modsel-16.xml"/>
+        <test name=":visited pseudo-class" href="css3-modsel-17.xml"/>
+        <test name=":hover pseudo-class" href="css3-modsel-18.xml"/>
+        <test name=":hover pseudo-class on links" href="css3-modsel-18a.xml"/>
+        <test name=":hover pseudo-class" href="css3-modsel-18b.xml"/>
+        <test name=":hover pseudo-class on links" href="css3-modsel-18c.xml"/>
+        <test name=":active pseudo-class" href="css3-modsel-19.xml"/>
+        <test name=":active pseudo-class on controls" href="css3-modsel-19b.xml"/>
+        <test name=":focus pseudo-class" href="css3-modsel-20.xml"/>
+        <test name=":target pseudo-class" href="css3-modsel-21.xml"/>
+        <test name=":target pseudo-class" href="css3-modsel-21b.xml"/>
+        <test name=":target pseudo-class" href="css3-modsel-21c.xml"/>
+        <test name=":lang() pseudo-class" href="css3-modsel-22.xml"/>
+        <test name=":enabled pseudo-class" href="css3-modsel-23.xml"/>
+        <test name=":disabled pseudo-class" href="css3-modsel-24.xml"/>
+        <test name=":checked pseudo-class" href="css3-modsel-25.xml"/>
+        <test name=":root pseudo-class" href="css3-modsel-27.xml"/>
+        <test name="Impossible rules (:root:first-child, etc)" href="css3-modsel-27a.xml"/>
+        <test name="Impossible rules (* html, * :root)" href="css3-modsel-27b.xml"/>
+        <test name=":nth-child() pseudo-class" href="css3-modsel-28.xml"/>
+        <test name=":nth-child() pseudo-class" href="css3-modsel-28b.xml"/>
+        <test name=":nth-last-child() pseudo-class" href="css3-modsel-29.xml"/>
+        <test name=":nth-last-child() pseudo-class" href="css3-modsel-29b.xml"/>
+        <test name=":nth-of-type() pseudo-class" href="css3-modsel-30.xml"/>
+        <test name=":nth-last-of-type() pseudo-class" href="css3-modsel-31.xml"/>
+        <test name=":first-child pseudo-class" href="css3-modsel-32.xml"/>
+        <test name=":last-child pseudo-class" href="css3-modsel-33.xml"/>
+        <test name=":first-of-type pseudo-class" href="css3-modsel-34.xml"/>
+        <test name=":last-of-type pseudo-class" href="css3-modsel-35.xml"/>
+        <test name=":only-child pseudo-class" href="css3-modsel-36.xml"/>
+        <test name=":only-of-type pseudo-class" href="css3-modsel-37.xml"/>
+        <test name="::first-line pseudo-element" href="css3-modsel-38.xml"/>
+        <test name="::first-letter pseudo-element" href="css3-modsel-39.xml"/>
+        <test name="::first-letter pseudo-element with ::before pseudo-element" href="css3-modsel-39a.xml"/>
+        <test name="::first-letter pseudo-element" href="css3-modsel-39b.xml"/>
+        <test name="::first-letter pseudo-element with ::before pseudo-element" href="css3-modsel-39c.xml"/>
+        <test name="::before pseudo-element" href="css3-modsel-41.xml"/>
+        <test name=":before pseudo-element" href="css3-modsel-41a.xml"/>
+        <test name="::after pseudo-element" href="css3-modsel-42.xml"/>
+        <test name=":after pseudo-element" href="css3-modsel-42a.xml"/>
+        <test name="Descendant combinator" href="css3-modsel-43.xml"/>
+        <test name="Descendant combinator" href="css3-modsel-43b.xml"/>
+        <test name="Child combinator" href="css3-modsel-44.xml"/>
+        <test name="Child combinator" href="css3-modsel-44b.xml"/>
+        <test name="Child combinator and classes" href="css3-modsel-44c.xml"/>
+        <test name="Child combinatior and IDs" href="css3-modsel-44d.xml"/>
+        <test name="Direct adjacent combinator" href="css3-modsel-45.xml"/>
+        <test name="Direct adjacent combinator" href="css3-modsel-45b.xml"/>
+        <test name="Direct adjacent combinator and classes" href="css3-modsel-45c.xml"/>
+        <test name="Indirect adjacent combinator" href="css3-modsel-46.xml"/>
+        <test name="Indirect adjacent combinator" href="css3-modsel-46b.xml"/>
+        <test name="NEGATED type element selector" href="css3-modsel-47.xml"/>
+        <test name="NEGATED universal selector" href="css3-modsel-48.xml"/>
+        <test name="NEGATED omitted universal selector is forbidden" href="css3-modsel-49.xml"/>
+        <test name="NEGATED attribute existence selector" href="css3-modsel-50.xml"/>
+        <test name="NEGATED attribute value selector" href="css3-modsel-51.xml"/>
+        <test name="NEGATED attribute space-separated value selector" href="css3-modsel-52.xml"/>
+        <test name="NEGATED attribute dash-separated value selector" href="css3-modsel-53.xml"/>
+        <test name="NEGATED substring matching attribute selector on beginning" href="css3-modsel-54.xml"/>
+        <test name="NEGATED substring matching attribute selector on end" href="css3-modsel-55.xml"/>
+        <test name="NEGATED substring matching attribute selector on middle" href="css3-modsel-56.xml"/>
+        <test name="NEGATED Attribute existence selector with declared namespace" href="css3-modsel-57.xml"/>
+        <test name="NEGATED Attribute existence selector with declared namespace" href="css3-modsel-57b.xml"/>
+        <test name="NEGATED class selector" href="css3-modsel-59.xml"/>
+        <test name="NEGATED ID selector" href="css3-modsel-60.xml"/>
+        <test name="NEGATED :link pseudo-class" href="css3-modsel-61.xml"/>
+        <test name="NEGATED :visited pseudo-class" href="css3-modsel-62.xml"/>
+        <test name="NEGATED :hover pseudo-class" href="css3-modsel-63.xml"/>
+        <test name="NEGATED :active pseudo-class" href="css3-modsel-64.xml"/>
+        <test name="NEGATED :focus pseudo-class" href="css3-modsel-65.xml"/>
+        <test name="NEGATED :target pseudo-class" href="css3-modsel-66.xml"/>
+        <test name="NEGATED :target pseudo-class" href="css3-modsel-66b.xml"/>
+        <test name="NEGATED :lang() pseudo-class" href="css3-modsel-67.xml"/>
+        <test name="NEGATED :enabled pseudo-class" href="css3-modsel-68.xml"/>
+        <test name="NEGATED :disabled pseudo-class" href="css3-modsel-69.xml"/>
+        <test name="NEGATED :checked pseudo-class" href="css3-modsel-70.xml"/>
+        <test name="NEGATED :root pseudo-class" href="css3-modsel-72.xml"/>
+        <test name="NEGATED :root pseudo-class" href="css3-modsel-72b.xml"/>
+        <test name="NEGATED :nth-child() pseudo-class" href="css3-modsel-73.xml"/>
+        <test name="NEGATED :nth-child() pseudo-class" href="css3-modsel-73b.xml"/>
+        <test name="NEGATED :nth-last-child() pseudo-class" href="css3-modsel-74.xml"/>
+        <test name="NEGATED :nth-last-child() pseudo-class" href="css3-modsel-74b.xml"/>
+        <test name="NEGATED :nth-of-type() pseudo-class" href="css3-modsel-75.xml"/>
+        <test name="NEGATED :nth-of-type() pseudo-class" href="css3-modsel-75b.xml"/>
+        <test name="NEGATED :nth-last-of-type() pseudo-class" href="css3-modsel-76.xml"/>
+        <test name="NEGATED :nth-last-of-type() pseudo-class" href="css3-modsel-76b.xml"/>
+        <test name="NEGATED :first-child pseudo-class" href="css3-modsel-77.xml"/>
+        <test name="NEGATED :first-child pseudo-class" href="css3-modsel-77b.xml"/>
+        <test name="NEGATED :last-child pseudo-class" href="css3-modsel-78.xml"/>
+        <test name="NEGATED :last-child pseudo-class" href="css3-modsel-78b.xml"/>
+        <test name="NEGATED :first-of-type pseudo-class" href="css3-modsel-79.xml"/>
+        <test name="NEGATED :last-of-type pseudo-class" href="css3-modsel-80.xml"/>
+        <test name="NEGATED :only-child pseudo-class" href="css3-modsel-81.xml"/>
+        <test name="NEGATED :only-child pseudo-class" href="css3-modsel-81b.xml"/>
+        <test name="NEGATED :only-of-type pseudo-class" href="css3-modsel-82.xml"/>
+        <test name="NEGATED :only-of-type pseudo-class" href="css3-modsel-82b.xml"/>
+        <test name="Negation pseudo-class cannot be an argument of itself" href="css3-modsel-83.xml"/>
+        <test name="Nondeterministic matching of descendant and child combinators" href="css3-modsel-86.xml"/>
+        <test name="Nondeterministic matching of direct and indirect adjacent combinators" href="css3-modsel-87.xml"/>
+        <test name="Nondeterministic matching of direct and indirect adjacent combinators" href="css3-modsel-87b.xml"/>
+        <test name="Nondeterministic matching of descendant and direct adjacent combinators" href="css3-modsel-88.xml"/>
+        <test name="Nondeterministic matching of descendant and direct adjacent combinators" href="css3-modsel-88b.xml"/>
+        <test name="Simple combination of descendant and child combinators" href="css3-modsel-89.xml"/>
+        <test name="Simple combination of direct and indirect adjacent combinators" href="css3-modsel-90.xml"/>
+        <test name="Simple combination of direct and indirect adjacent combinators" href="css3-modsel-90b.xml"/>
+        <test name="Type element selector with declared namespace" href="css3-modsel-91.xml"/>
+        <test name="Type element selector with universal namespace" href="css3-modsel-92.xml"/>
+        <test name="Type element selector without declared namespace" href="css3-modsel-93.xml"/>
+        <test name="Universal selector with declared namespace" href="css3-modsel-94.xml"/>
+        <test name="Universal selector with declared namespace" href="css3-modsel-94b.xml"/>
+        <test name="Universal selector with universal namespace" href="css3-modsel-95.xml"/>
+        <test name="Universal selector without declared namespace" href="css3-modsel-96.xml"/>
+        <test name="Universal selector without declared namespace" href="css3-modsel-96b.xml"/>
+        <test name="Attribute existence selector with declared namespace" href="css3-modsel-97.xml"/>
+        <test name="Attribute existence selector with declared namespace" href="css3-modsel-97b.xml"/>
+        <test name="Attribute value selector with declared namespace" href="css3-modsel-98.xml"/>
+        <test name="Attribute value selector with declared namespace" href="css3-modsel-98b.xml"/>
+        <test name="Attribute space-separated value selector with declared namespace" href="css3-modsel-99.xml"/>
+        <test name="Attribute space-separated value selector with declared namespace" href="css3-modsel-99b.xml"/>
+        <test name="Attribute dash-separated value selector with declared namespace" href="css3-modsel-100.xml"/>
+        <test name="Attribute dash-separated value selector with declared namespace" href="css3-modsel-100b.xml"/>
+        <test name="Substring matching attribute value selector on beginning with declared namespace" href="css3-modsel-101.xml"/>
+        <test name="Substring matching attribute value selector on beginning with declared namespace" href="css3-modsel-101b.xml"/>
+        <test name="Substring matching attribute value selector on end with declared namespace" href="css3-modsel-102.xml"/>
+        <test name="Substring matching attribute value selector on end with declared namespace" href="css3-modsel-102b.xml"/>
+        <test name="Substring matching attribute value selector on middle with declared namespace" href="css3-modsel-103.xml"/>
+        <test name="Substring matching attribute value selector on middle with declared namespace" href="css3-modsel-103b.xml"/>
+        <test name="Attribute existence selector with universal namespace" href="css3-modsel-104.xml"/>
+        <test name="Attribute existence selector with universal namespace" href="css3-modsel-104b.xml"/>
+        <test name="Attribute value selector with universal namespace" href="css3-modsel-105.xml"/>
+        <test name="Attribute value selector with universal namespace" href="css3-modsel-105b.xml"/>
+        <test name="Attribute space-separated value selector with universal namespace" href="css3-modsel-106.xml"/>
+        <test name="Attribute space-separated value selector with universal namespace" href="css3-modsel-106b.xml"/>
+        <test name="Attribute dash-separated value selector with universal namespace" href="css3-modsel-107.xml"/>
+        <test name="Attribute dash-separated value selector with universal namespace" href="css3-modsel-107b.xml"/>
+        <test name="Substring matching attribute selector on beginning with universal namespace" href="css3-modsel-108.xml"/>
+        <test name="Substring matching attribute selector on beginning with universal namespace" href="css3-modsel-108b.xml"/>
+        <test name="Substring matching attribute selector on end with universal namespace" href="css3-modsel-109.xml"/>
+        <test name="Substring matching attribute selector on end with universal namespace" href="css3-modsel-109b.xml"/>
+        <test name="Substring matching attribute selector on middle with universal namespace" href="css3-modsel-110.xml"/>
+        <test name="Substring matching attribute selector on middle with universal namespace" href="css3-modsel-110b.xml"/>
+        <test name="Attribute existence selector without declared namespace" href="css3-modsel-111.xml"/>
+        <test name="Attribute existence selector without declared namespace" href="css3-modsel-111b.xml"/>
+        <test name="Attribute value selector without declared namespace" href="css3-modsel-112.xml"/>
+        <test name="Attribute value selector without declared namespace" href="css3-modsel-112b.xml"/>
+        <test name="Attribute space-separated value selector without declared namespace" href="css3-modsel-113.xml"/>
+        <test name="Attribute space-separated value selector without declared namespace" href="css3-modsel-113b.xml"/>
+        <test name="Attribute dash-separated value selector without declared namespace" href="css3-modsel-114.xml"/>
+        <test name="Attribute dash-separated value selector without declared namespace" href="css3-modsel-114b.xml"/>
+        <test name="Substring matching attribute selector on beginning without declared namespace" href="css3-modsel-115.xml"/>
+        <test name="Substring matching attribute selector on beginning without declared namespace" href="css3-modsel-115b.xml"/>
+        <test name="Substring matching attribute selector on end without declared namespace" href="css3-modsel-116.xml"/>
+        <test name="Substring matching attribute selector on end without declared namespace" href="css3-modsel-116b.xml"/>
+        <test name="Substring matching attribute selector on middle without declared namespace" href="css3-modsel-117.xml"/>
+        <test name="Substring matching attribute selector on middle without declared namespace" href="css3-modsel-117b.xml"/>
+        <test name="NEGATED type element selector with declared namespace" href="css3-modsel-118.xml"/>
+        <test name="NEGATED type element selector with universal namespace" href="css3-modsel-119.xml"/>
+        <test name="NEGATED type element selector without declared namespace" href="css3-modsel-120.xml"/>
+        <test name="NEGATED universal selector with declared namespace" href="css3-modsel-121.xml"/>
+        <test name="NEGATED universal selector with universal namespace" href="css3-modsel-122.xml"/>
+        <test name="NEGATED universal selector with declared namespace" href="css3-modsel-123.xml"/>
+        <test name="NEGATED universal selector with declared namespace" href="css3-modsel-123b.xml"/>
+        <test name="NEGATED Attribute value selector with declared namespace" href="css3-modsel-124.xml"/>
+        <test name="NEGATED Attribute value selector with declared namespace" href="css3-modsel-124b.xml"/>
+        <test name="NEGATED Attribute space-separated value selector with declared namespace" href="css3-modsel-125.xml"/>
+        <test name="NEGATED Attribute space-separated value selector with declared namespace" href="css3-modsel-125b.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector with declared namespace" href="css3-modsel-126.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector with declared namespace" href="css3-modsel-126b.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on beginning with declared namespace" href="css3-modsel-127.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on beginning with declared namespace" href="css3-modsel-127b.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on end with declared namespace" href="css3-modsel-128.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on end with declared namespace" href="css3-modsel-128b.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on middle with declared namespace" href="css3-modsel-129.xml"/>
+        <test name="NEGATED Substring matching attribute value selector on middle with declared namespace" href="css3-modsel-129b.xml"/>
+        <test name="NEGATED Attribute existence selector with universal namespace" href="css3-modsel-130.xml"/>
+        <test name="NEGATED Attribute existence selector with universal namespace" href="css3-modsel-130b.xml"/>
+        <test name="NEGATED Attribute value selector with universal namespace" href="css3-modsel-131.xml"/>
+        <test name="NEGATED Attribute value selector with universal namespace" href="css3-modsel-131b.xml"/>
+        <test name="NEGATED Attribute space-separated value selector with universal namespace" href="css3-modsel-132.xml"/>
+        <test name="NEGATED Attribute space-separated value selector with universal namespace" href="css3-modsel-132b.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector with universal namespace" href="css3-modsel-133.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector with universal namespace" href="css3-modsel-133b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on beginning with universal namespace" href="css3-modsel-134.xml"/>
+        <test name="NEGATED Substring matching attribute selector on beginning with universal namespace" href="css3-modsel-134b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on end with universal namespace" href="css3-modsel-135.xml"/>
+        <test name="NEGATED Substring matching attribute selector on end with universal namespace" href="css3-modsel-135b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on middle with universal namespace" href="css3-modsel-136.xml"/>
+        <test name="NEGATED Substring matching attribute selector on middle with universal namespace" href="css3-modsel-136b.xml"/>
+        <test name="NEGATED Attribute existence selector without declared namespace" href="css3-modsel-137.xml"/>
+        <test name="NEGATED Attribute existence selector without declared namespace" href="css3-modsel-137b.xml"/>
+        <test name="NEGATED Attribute value selector without declared namespace" href="css3-modsel-138.xml"/>
+        <test name="NEGATED Attribute value selector without declared namespace" href="css3-modsel-138b.xml"/>
+        <test name="NEGATED Attribute space-separated value selector without declared namespace" href="css3-modsel-139.xml"/>
+        <test name="NEGATED Attribute space-separated value selector without declared namespace" href="css3-modsel-139b.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector without declared namespace" href="css3-modsel-140.xml"/>
+        <test name="NEGATED Attribute dash-separated value selector without declared namespace" href="css3-modsel-140b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on beginning without declared namespace" href="css3-modsel-141.xml"/>
+        <test name="NEGATED Substring matching attribute selector on beginning without declared namespace" href="css3-modsel-141b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on end without declared namespace" href="css3-modsel-142.xml"/>
+        <test name="NEGATED Substring matching attribute selector on end without declared namespace" href="css3-modsel-142b.xml"/>
+        <test name="NEGATED Substring matching attribute selector on middle without declared namespace" href="css3-modsel-143.xml"/>
+        <test name="NEGATED Substring matching attribute selector on middle without declared namespace" href="css3-modsel-143b.xml"/>
+        <test name="NEGATED :enabled:disabled pseudo-classes" href="css3-modsel-144.xml"/>
+        <test name=":nth-of-type() pseudo-class with hidden elements" href="css3-modsel-145a.xml"/>
+        <test name=":nth-of-type() pseudo-class with hidden elements" href="css3-modsel-145b.xml"/>
+        <test name=":nth-child() pseudo-class with hidden elements" href="css3-modsel-146a.xml"/>
+        <test name=":nth-child() pseudo-class with hidden elements" href="css3-modsel-146b.xml"/>
+        <test name=":nth-last-of-type() pseudo-class with collapsed elements" href="css3-modsel-147a.xml"/>
+        <test name=":nth-last-of-type() pseudo-class with collapsed elements" href="css3-modsel-147b.xml"/>
+        <test name=":empty pseudo-class and text" href="css3-modsel-148.xml"/>
+        <test name=":empty pseudo-class and empty elements" href="css3-modsel-149.xml"/>
+        <test name=":empty pseudo-class and empty elements" href="css3-modsel-149b.xml"/>
+        <test name=":empty pseudo-class and XML/SGML constructs" href="css3-modsel-150.xml"/>
+        <test name=":empty pseudo-class and whitespace" href="css3-modsel-151.xml"/>
+        <test name=":empty pseudo-class and elements" href="css3-modsel-152.xml"/>
+        <test name=":empty pseudo-class and CDATA" href="css3-modsel-153.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-154.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-155.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-155a.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-155b.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-155c.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-155d.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-156.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-156b.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-156c.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-157.xml"/>
+        <test name="Syntax and parsing" href="css3-modsel-158.xml"/>
+        <test name="Syntax and parsing of new pseudo-elements" href="css3-modsel-159.xml"/>
+        <test name="Syntax and parsing of unknown pseudo-classes" href="css3-modsel-160.xml"/>
+        <test name="Syntax and parsing of unknown pseudo-classes and pseudo-elements" href="css3-modsel-161.xml"/>
+        <test name=":first-letter with ::first-letter" href="css3-modsel-166.xml"/>
+        <test name=":first-letter with ::first-letter" href="css3-modsel-166a.xml"/>
+        <test name=":first-line with ::first-line" href="css3-modsel-167.xml"/>
+        <test name=":first-line with ::first-line" href="css3-modsel-167a.xml"/>
+        <test name=":before with ::before" href="css3-modsel-168.xml"/>
+        <test name=":before with ::before" href="css3-modsel-168a.xml"/>
+        <test name=":after with ::after" href="css3-modsel-169.xml"/>
+        <test name=":after with ::after" href="css3-modsel-169a.xml"/>
+        <test name="Long chains of selectors" href="css3-modsel-170.xml"/>
+        <test name="Long chains of selectors" href="css3-modsel-170a.xml"/>
+        <test name="Long chains of selectors" href="css3-modsel-170b.xml"/>
+        <test name="Long chains of selectors" href="css3-modsel-170c.xml"/>
+        <test name="Long chains of selectors" href="css3-modsel-170d.xml"/>
+        <test name="Classes: XHTML global class attribute" href="css3-modsel-171.xml"/>
+        <test name="Namespaced attribute selectors" href="css3-modsel-172a.xml"/>
+        <test name="Namespaced attribute selectors" href="css3-modsel-172b.xml"/>
+        <test name="Namespaced attribute selectors" href="css3-modsel-173a.xml"/>
+        <test name="Namespaced attribute selectors" href="css3-modsel-173b.xml"/>
+        <test name="Attribute selectors with multiple attributes" href="css3-modsel-174a.xml"/>
+        <test name="NEGATED Attribute selectors with multiple attributes" href="css3-modsel-174b.xml"/>
+        <test name="Parsing: Numbers in classes" href="css3-modsel-175a.xml"/>
+        <test name="Parsing: Numbers in classes" href="css3-modsel-175b.xml"/>
+        <test name="Parsing: Numbers in classes" href="css3-modsel-175c.xml"/>
+        <test name="Combinations: classes and IDs" href="css3-modsel-176.xml"/>
+        <test name="Parsing : vs ::" href="css3-modsel-177a.xml"/>
+        <test name="Parsing : vs ::" href="css3-modsel-177b.xml"/>
+        <test name="Parsing: :not and pseudo-elements" href="css3-modsel-178.xml"/>
+        <test name="::first-line on inlines" href="css3-modsel-179.xml"/>
+        <test name="::first-line after <br>" href="css3-modsel-179a.xml"/>
+        <test name="::first-letter after <br>" href="css3-modsel-180a.xml"/>
+        <test name="Case sensitivity" href="css3-modsel-181.xml"/>
+        <test name="Namespaces and \: in selectors" href="css3-modsel-182.xml"/>
+        <test name="Syntax and parsing of class selectors" href="css3-modsel-183.xml"/>
+        <test name="Ends-with attribute selector with empty value" href="css3-modsel-184a.xml"/>
+        <test name="Starts-with attribute selector with empty value" href="css3-modsel-184b.xml"/>
+        <test name="Contains attribute selector with empty value" href="css3-modsel-184c.xml"/>
+        <test name="NEGATED ends-with attribute selector with empty value" href="css3-modsel-184d.xml"/>
+        <test name="NEGATED starts-with attribute selector with empty value" href="css3-modsel-184e.xml"/>
+        <test name="NEGATED contains attribute selector with empty value" href="css3-modsel-184f.xml"/>
+        <test name="NEGATED Dynamic handling of :empty" href="css3-modsel-d1.xml"/>
+        <test name="Dynamic handling of :empty" href="css3-modsel-d1b.xml"/>
+        <test name="Dynamic handling of combinators" href="css3-modsel-d2.xml"/>
+        <test name="Dynamic handling of attribute selectors" href="css3-modsel-d3.xml"/>
+        <test name="Dynamic updating of :first-child and :last-child" href="css3-modsel-d4.xml"/>
+    </test>
+    <notes></notes>
+</module>

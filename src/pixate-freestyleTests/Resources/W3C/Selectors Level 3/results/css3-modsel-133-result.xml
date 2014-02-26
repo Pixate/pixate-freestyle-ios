@@ -1,0 +1,21 @@
+<test>
+	<title>NEGATED Attribute dash-separated value selector with universal namespace</title>
+	<style type="text/css">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p.foo, *|q, *|s { background-color : red }
+div.stub html|*:not([*|lang|="en"]),
+  div.stub *|*:not(html|*):not([a|foo|="un-d"]) { background-color : lime }
+</style>
+	<div xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b" class="testText">
+<div class="stub">
+<p lang="en-us" display="block" margin-bottom="1.000000em">This paragraph should be unstyled.</p>
+<p lang="fr" class="foo" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</p>
+<q xmlns="http://www.example.org/a" a:foo="un-deux-trois" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</q>
+<q xmlns="http://www.example.org/a" a:foo="un-second-deuxieme-trois" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</q>
+<r xmlns="http://www.example.org/a" a:foo="un-d-trois" display="block" margin-bottom="1.000000em">This paragraph should be unstyled.</r>
+<s xmlns="http://www.example.org/b" b:foo="un-d-trois" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</s>
+</div>
+</div>
+</test>

@@ -1,0 +1,23 @@
+<test>
+	<title>Child combinator</title>
+	<style type="text/css">.white { background-color: transparent ! important; }
+.red { background-color: red; }
+div > p.test { background-color: lime; }</style>
+	<div class="testText">
+ <div>
+  <p class="red test" background-color="lime">This paragraph should have a green background</p>
+  <div>
+   <p class="red test" background-color="lime">This paragraph should have a green background</p>
+  </div>
+ </div>
+ <table>
+  <tbody>
+   <tr>
+    <td>
+     <p class="white test" background-color="transparent">This paragraph should be unstyled.</p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+</test>

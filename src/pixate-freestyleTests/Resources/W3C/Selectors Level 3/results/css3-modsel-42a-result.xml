@@ -1,0 +1,8 @@
+<test>
+	<title>:after pseudo-element</title>
+	<style type="text/css">p:after { background-color : lime ; content : "GENERATED CONTENT "}
+</style>
+	<div class="testText">
+<p>You should see after this paragraph the words GENERATED CONTENT over green background</p>
+</div>
+</test>

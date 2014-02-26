@@ -1,0 +1,60 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:visited pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p.test a { background-color : red }
+p.test *:visited { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-16.xml" title=":link pseudo-class"/>
+  <link rel="next" href="css3-modsel-18.xml" title=":hover pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-16.xml" title=":link pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-18.xml" title=":hover pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">24 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:visited pseudo-class (ID #17)</td>
+    <td class="a">2001-11-01</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support the concept of a session history for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p class="test">
+<a href="http://www.w3.org/">You should see a green background assigned by the anchor.</a>
+(Note: You must have visited http://www.w3.org/ for this test to be valid.)
+</p>
+</div>
+   <pre class="rules">p.test a { background-color : red }
+p.test *:visited { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p class=&quot;test&quot;&gt;
+&lt;a href=&quot;http://www.w3.org/&quot;&gt;You should see a green background assigned by the anchor.&lt;/a&gt;
+(Note: You must have visited http://www.w3.org/ for this test to be valid.)
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

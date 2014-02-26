@@ -1,0 +1,11 @@
+<test>
+	<title>Child combinator and classes</title>
+	<style type="text/css">
+  .fail > div { background: red; color: yellow; }
+  .control { background: green; color: white; }
+</style>
+	<div class="testText">
+  <div> This should be unstyled. </div>
+  <div class="control" background="green" color="white"> This should have a green background. </div>
+</div>
+</test>

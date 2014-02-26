@@ -1,0 +1,225 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED :nth-child() pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.green { background-color : lime ! important; }
+ul > li:not(:nth-child(odd)) { background-color : red }
+ol > li:not(:nth-child(even)) { background-color : red }
+table.t1 tr:not(:nth-child(-n+4)) { background-color : red }
+table.t2 td:not(:nth-child(3n+1)) { background-color : red }
+table.t1 td, table.t2 td { border : thin black solid }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-73.xml" title="NEGATED :nth-child() pseudo-class"/>
+  <link rel="next" href="css3-modsel-74.xml" title="NEGATED :nth-last-child() pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-73.xml" title="NEGATED :nth-child() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-74.xml" title="NEGATED :nth-last-child() pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">102 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :nth-child() pseudo-class (ID #73b)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<ul>
+  <li>First list item</li>
+  <li class="green">This second list item should have a green background</li>
+  <li>Third list</li>
+  <li class="green">This fourth list item should have a green background</li>
+  <li>Fifth list item</li>
+  <li class="green">This sixth list item should have a green background</li>
+</ul>
+<ol>
+  <li class="green">This first list item should have a green background</li>
+  <li>Second list item</li>
+  <li class="green">This third list item should have a green background</li>
+  <li>Fourth list item</li>
+  <li class="green">This fifth list item should have a green background</li>
+  <li>Sixth list item</li>
+</ol>
+<div>
+<table border="1" class="t1">
+  <tr>
+<td>1.1</td>
+<td>1.2</td>
+     <td>1.3</td>
+</tr>
+  <tr>
+<td>2.1</td>
+<td>2.2</td>
+     <td>2.3</td>
+</tr>
+  <tr>
+<td>3.1</td>
+<td>3.2</td>
+     <td>3.3</td>
+</tr>
+  <tr>
+<td>4.1</td>
+<td>4.2</td>
+      <td>4.3</td>
+</tr>
+  <tr class="green">
+<td>Green row : 5.1</td>
+<td>5.2</td>
+<td>5.3</td>
+</tr>
+  <tr class="green">
+<td>Green row : 6.1</td>
+<td>6.2</td>
+<td>6.3</td>
+</tr>
+</table>
+<p></p>
+<table class="t2" border="1">
+  <tr>
+<td>1.1</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>1.4</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>1.7</td>
+<td class="green">green cell</td>
+</tr>
+  <tr>
+<td>2.1</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>2.4</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>2.7</td>
+<td class="green">green cell</td>
+</tr>
+  <tr>
+<td>3.1</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>3.4</td>
+<td class="green">green cell</td>
+<td class="green">green cell</td>
+      <td>3.7</td>
+<td class="green">green cell</td>
+</tr>
+</table>
+</div>
+</div>
+   <pre class="rules">.green { background-color : lime ! important; }
+ul &gt; li:not(:nth-child(odd)) { background-color : red }
+ol &gt; li:not(:nth-child(even)) { background-color : red }
+table.t1 tr:not(:nth-child(-n+4)) { background-color : red }
+table.t2 td:not(:nth-child(3n+1)) { background-color : red }
+table.t1 td, table.t2 td { border : thin black solid }</pre>
+   <pre class="rules">
+&lt;ul&gt;
+  &lt;li&gt;First list item&lt;/li&gt;
+  &lt;li class=&quot;green&quot;&gt;This second list item should have a green background&lt;/li&gt;
+  &lt;li&gt;Third list&lt;/li&gt;
+  &lt;li class=&quot;green&quot;&gt;This fourth list item should have a green background&lt;/li&gt;
+  &lt;li&gt;Fifth list item&lt;/li&gt;
+  &lt;li class=&quot;green&quot;&gt;This sixth list item should have a green background&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li class=&quot;green&quot;&gt;This first list item should have a green background&lt;/li&gt;
+  &lt;li&gt;Second list item&lt;/li&gt;
+  &lt;li class=&quot;green&quot;&gt;This third list item should have a green background&lt;/li&gt;
+  &lt;li&gt;Fourth list item&lt;/li&gt;
+  &lt;li class=&quot;green&quot;&gt;This fifth list item should have a green background&lt;/li&gt;
+  &lt;li&gt;Sixth list item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;
+&lt;table border=&quot;1&quot; class=&quot;t1&quot;&gt;
+  &lt;tr&gt;
+&lt;td&gt;1.1&lt;/td&gt;
+&lt;td&gt;1.2&lt;/td&gt;
+     &lt;td&gt;1.3&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+&lt;td&gt;2.1&lt;/td&gt;
+&lt;td&gt;2.2&lt;/td&gt;
+     &lt;td&gt;2.3&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+&lt;td&gt;3.1&lt;/td&gt;
+&lt;td&gt;3.2&lt;/td&gt;
+     &lt;td&gt;3.3&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+&lt;td&gt;4.1&lt;/td&gt;
+&lt;td&gt;4.2&lt;/td&gt;
+      &lt;td&gt;4.3&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr class=&quot;green&quot;&gt;
+&lt;td&gt;Green row : 5.1&lt;/td&gt;
+&lt;td&gt;5.2&lt;/td&gt;
+&lt;td&gt;5.3&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr class=&quot;green&quot;&gt;
+&lt;td&gt;Green row : 6.1&lt;/td&gt;
+&lt;td&gt;6.2&lt;/td&gt;
+&lt;td&gt;6.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;table class=&quot;t2&quot; border=&quot;1&quot;&gt;
+  &lt;tr&gt;
+&lt;td&gt;1.1&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;1.4&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;1.7&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+&lt;td&gt;2.1&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;2.4&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;2.7&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+&lt;td&gt;3.1&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;3.4&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+      &lt;td&gt;3.7&lt;/td&gt;
+&lt;td class=&quot;green&quot;&gt;green cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

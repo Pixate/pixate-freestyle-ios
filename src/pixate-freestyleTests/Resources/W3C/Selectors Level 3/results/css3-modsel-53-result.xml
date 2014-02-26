@@ -1,0 +1,23 @@
+<test>
+	<title>NEGATED attribute dash-separated value selector</title>
+	<style type="text/css">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+div.stub p { color : red }
+div.stub > a|*, div.stub > b|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test|="foo-bar"]) { color : lime }
+div.stub *|p:not([lang|="en-us"]) { color : lime }
+div.stub b|*[test|="foo2-bar"] { color : lime }
+</style>
+	<div class="testText">
+<div class="stub">
+<q xmlns="http://www.example.org/a" test="foo-bar" color="red" display="block" margin-bottom="1.000000em">
+  <r test="foo-bartut" color="lime">This text should be</r>
+  <r color="lime">in green characters</r>
+</q>
+<s xmlns="http://www.example.org/a" test="bar tut" color="lime" display="block" margin-bottom="1.000000em">This text should be in green characters</s>
+<t xmlns="http://www.example.org/a" color="lime" display="block" margin-bottom="1.000000em">This text should be in green characters</t>
+<p class="en-uk" color="lime">This text should be in green characters</p>
+<u xmlns="http://www.example.org/b" test="foo2-bar-lol" color="lime" display="block" margin-bottom="1.000000em">This text should be in green characters</u>
+</div>
+</div>
+</test>

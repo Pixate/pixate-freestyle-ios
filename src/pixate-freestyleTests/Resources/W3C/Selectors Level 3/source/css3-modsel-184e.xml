@@ -1,0 +1,59 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED starts-with attribute selector with empty value</title>
+  <meta name="author" content="Lachlan Hunt"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+p { color: red; }
+p:not([class^=""]) { color: lime; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-184d.xml" title="NEGATED ends-with attribute selector with empty value"/>
+  <link rel="next" href="css3-modsel-184f.xml" title="NEGATED contains attribute selector with empty value"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-184d.xml" title="NEGATED ends-with attribute selector with empty value">&lt;==</a>
+     Test #
+     <a href="css3-modsel-184f.xml" title="NEGATED contains attribute selector with empty value">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">290 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED starts-with attribute selector with empty value (ID #184e)</td>
+    <td class="a">2008-10-30</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p class="">This text should be green.</p>
+<p>This text should be green.</p>
+</div>
+   <pre class="rules">
+p { color: red; }
+p:not([class^=&quot;&quot;]) { color: lime; }
+</pre>
+   <pre class="rules">
+&lt;p class=&quot;&quot;&gt;This text should be green.&lt;/p&gt;
+&lt;p&gt;This text should be green.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

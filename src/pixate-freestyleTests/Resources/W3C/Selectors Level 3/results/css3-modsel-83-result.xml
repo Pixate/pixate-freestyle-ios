@@ -1,0 +1,8 @@
+<test>
+	<title>Negation pseudo-class cannot be an argument of itself</title>
+	<style type="text/css">p { background-color : lime }
+p:not(:not(p)) { background-color : red }</style>
+	<div class="testText">
+<p background-color="lime">This paragraph should have a green background</p>
+</div>
+</test>

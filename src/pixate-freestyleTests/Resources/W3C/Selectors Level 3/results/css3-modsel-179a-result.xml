@@ -1,0 +1,11 @@
+<test>
+	<title>::first-line after <br></title>
+	<style type="text/css">
+  p { color: green; }
+  p:first-line { background: red; color: yellow; font-size: 4em; }
+  p::first-line { background: red; color: yellow; font-size: 4em; }
+</style>
+	<div class="testText">
+   <p background="red" color="yellow" font-size="4.000000em"><br/>This line should be green.</p>
+</div>
+</test>

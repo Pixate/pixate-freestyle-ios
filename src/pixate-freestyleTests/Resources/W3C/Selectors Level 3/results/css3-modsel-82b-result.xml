@@ -1,0 +1,13 @@
+<test>
+	<title>NEGATED :only-of-type pseudo-class</title>
+	<style type="text/css">.green { background-color : lime ! important }
+.t1 *:not(:only-of-type) { background-color : red }
+</style>
+	<div class="testText">
+<div class="t1">
+<p class="green" background-color="lime">This paragraph should have green background.</p>
+<address>But this address should be unstyled.</address>
+<p class="green" background-color="lime">This paragraph should have green background.</p>
+</div>
+</div>
+</test>

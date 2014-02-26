@@ -1,0 +1,63 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Parsing: :not and pseudo-elements</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ div { color: green; }
+ p:not(:first-line) { color: yellow; background: red; }
+ p:not(:after) { color: yellow; background: red; content: ' THIS TEST HAS FAILED! '; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-177b.xml" title="Parsing : vs ::"/>
+  <link rel="next" href="css3-modsel-179.xml" title="::first-line on inlines"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-177b.xml" title="Parsing : vs ::">&lt;==</a>
+     Test #
+     <a href="css3-modsel-179.xml" title="::first-line on inlines">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">279 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Parsing: :not and pseudo-elements (ID #178)</td>
+    <td class="a">2003-06-22</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <div>
+  <p>This line should be green.</p>
+ </div>
+</div>
+   <pre class="rules">
+ div { color: green; }
+ p:not(:first-line) { color: yellow; background: red; }
+ p:not(:after) { color: yellow; background: red; content: &#39; THIS TEST HAS FAILED! &#39;; }
+</pre>
+   <pre class="rules">
+ &lt;div&gt;
+  &lt;p&gt;This line should be green.&lt;/p&gt;
+ &lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

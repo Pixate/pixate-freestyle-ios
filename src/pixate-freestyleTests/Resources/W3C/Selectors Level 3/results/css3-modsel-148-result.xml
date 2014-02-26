@@ -1,0 +1,10 @@
+<test>
+	<title>:empty pseudo-class and text</title>
+	<style type="text/css">
+ p { background: lime; }
+ p:empty { background: red; }
+</style>
+	<div class="testText">
+ <p background="lime">This line should have a green background.</p>
+</div>
+</test>

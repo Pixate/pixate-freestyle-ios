@@ -1,0 +1,69 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute value selectors (hyphen-separated attributes)</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p { background-color : red }
+p[lang|="en"] { background-color : lime }
+address { background-color : red }
+address[lang="fi"] { background-color : lime }
+span[lang|="fr"] { background-color : red }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-7b.xml" title="Attribute multivalue selector"/>
+  <link rel="next" href="css3-modsel-9.xml" title="Substring matching attribute selector (beginning)"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-7b.xml" title="Attribute multivalue selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-9.xml" title="Substring matching attribute selector (beginning)">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">10 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute value selectors (hyphen-separated attributes) (ID #8)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p lang="en-gb">This paragraph should have green background because its language is &quot;en-gb&quot;</p>
+<address lang="fi">
+<span lang="en-us">This address should also</span>
+  <span lang="en-fr">have green background because the language of the inner SPANs
+     is not French.</span>
+</address>
+</div>
+   <pre class="rules">p { background-color : red }
+p[lang|=&quot;en&quot;] { background-color : lime }
+address { background-color : red }
+address[lang=&quot;fi&quot;] { background-color : lime }
+span[lang|=&quot;fr&quot;] { background-color : red }</pre>
+   <pre class="rules">
+&lt;p lang=&quot;en-gb&quot;&gt;This paragraph should have green background because its language is &amp;quot;en-gb&amp;quot;&lt;/p&gt;
+&lt;address lang=&quot;fi&quot;&gt;
+&lt;span lang=&quot;en-us&quot;&gt;This address should also&lt;/span&gt;
+  &lt;span lang=&quot;en-fr&quot;&gt;have green background because the language of the inner SPANs
+     is not French.&lt;/span&gt;
+&lt;/address&gt;
+</pre>
+  </div>
+ </body>
+</html>

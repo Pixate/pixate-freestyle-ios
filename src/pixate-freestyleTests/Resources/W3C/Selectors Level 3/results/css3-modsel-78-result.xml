@@ -1,0 +1,30 @@
+<test>
+	<title>NEGATED :last-child pseudo-class</title>
+	<style type="text/css">.red { background-color : red }
+.t1 td:not(:last-child) { background-color : lime }
+p > *:not(:last-child) { background-color : lime }
+table.t1 td { border : thin black solid }
+</style>
+	<div class="testText">
+ <div>
+  <table border="1" class="t1">
+   <tr>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td border="thin black solid">1.3</td>
+   </tr>
+   <tr>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td border="thin black solid">2.3</td>
+   </tr>
+   <tr>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td class="red" background-color="lime" border="thin black solid">green cell</td>
+    <td border="thin black solid">3.3</td>
+   </tr>
+  </table>
+ </div>
+ <p>This <span>paragraph should</span> be unstyled.</p>
+</div>
+</test>

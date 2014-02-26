@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED :lang() pseudo-class</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[div.stub * { background-color : red  }
+div.stub *:not(:lang(fr)) { background-color : green }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-66b.xml" title="NEGATED :target pseudo-class"/>
+  <link rel="next" href="css3-modsel-68.xml" title="NEGATED :enabled pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-66b.xml" title="NEGATED :target pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-68.xml" title="NEGATED :enabled pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">95 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :lang() pseudo-class (ID #67)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<div lang="en" class="stub">
+<p>This paragraph should have a green background because the
+   enclosing div is in english.</p>
+<p lang="en">This paragraph should have a green background because
+   it is in english.</p>
+<div lang="fr">
+  <p lang="en">This paragraph should have a green background
+     because it is in english.</p>
+</div>
+</div>
+</div>
+   <pre class="rules">div.stub * { background-color : red  }
+div.stub *:not(:lang(fr)) { background-color : green }</pre>
+   <pre class="rules">
+&lt;div lang=&quot;en&quot; class=&quot;stub&quot;&gt;
+&lt;p&gt;This paragraph should have a green background because the
+   enclosing div is in english.&lt;/p&gt;
+&lt;p lang=&quot;en&quot;&gt;This paragraph should have a green background because
+   it is in english.&lt;/p&gt;
+&lt;div lang=&quot;fr&quot;&gt;
+  &lt;p lang=&quot;en&quot;&gt;This paragraph should have a green background
+     because it is in english.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,116 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Dynamic handling of attribute selectors</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+   [test] { background: red; display: block; padding: 1em; }
+   stub ~ [|attribute^=start]:not([|attribute~=mid])[|attribute*=dle][|attribute$=end] ~ t { background: lime; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-d2.xml" title="Dynamic handling of combinators"/>
+  <link rel="next" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-d2.xml" title="Dynamic handling of combinators">&lt;==</a>
+     Test #
+     <a href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">295 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Dynamic handling of attribute selectors (ID #d3)</td>
+    <td class="a">2005-02-24</td>
+    <td class="a">1.3</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support ECMA-262 and DOM Level 2 Core for this test.</p>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+
+ <div>
+
+  <script type="text/javascript">
+   <![CDATA[
+
+    function test() {
+      document.getElementsByTagNameNS('', 't')[1].setAttributeNS('', 'attribute', 'start middle end');
+    }
+
+    window.setTimeout("test()", 100);
+   ]]>
+  </script>
+
+  <p> The following block should be green. </p>
+
+  <!-- root of selector -->
+  <stub xmlns=""></stub>
+
+  <!-- middle part of selector does not match this -->
+  <t xmlns="" attribute="fake"></t>
+
+  <!-- middle part of selector matches this once attribute is fixed -->
+  <t xmlns="" attribute="start mid dle end"></t>
+
+  <!-- subject of selector -->
+  <t xmlns="" test="test"></t>
+
+ </div>
+
+</div>
+   <pre class="rules">
+   [test] { background: red; display: block; padding: 1em; }
+   stub ~ [|attribute^=start]:not([|attribute~=mid])[|attribute*=dle][|attribute$=end] ~ t { background: lime; }
+</pre>
+   <pre class="rules">
+
+ &lt;div&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+   &lt;![CDATA[
+
+    function test() {
+      document.getElementsByTagNameNS(&#39;&#39;, &#39;t&#39;)[1].setAttributeNS(&#39;&#39;, &#39;attribute&#39;, &#39;start middle end&#39;);
+    }
+
+    window.setTimeout(&quot;test()&quot;, 100);
+   ]]&gt;
+  &lt;/script&gt;
+
+  &lt;p&gt; The following block should be green. &lt;/p&gt;
+
+  &lt;!-- root of selector --&gt;
+  &lt;stub xmlns=&quot;&quot;&gt;&lt;/stub&gt;
+
+  &lt;!-- middle part of selector does not match this --&gt;
+  &lt;t xmlns=&quot;&quot; attribute=&quot;fake&quot;&gt;&lt;/t&gt;
+
+  &lt;!-- middle part of selector matches this once attribute is fixed --&gt;
+  &lt;t xmlns=&quot;&quot; attribute=&quot;start mid dle end&quot;&gt;&lt;/t&gt;
+
+  &lt;!-- subject of selector --&gt;
+  &lt;t xmlns=&quot;&quot; test=&quot;test&quot;&gt;&lt;/t&gt;
+
+ &lt;/div&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

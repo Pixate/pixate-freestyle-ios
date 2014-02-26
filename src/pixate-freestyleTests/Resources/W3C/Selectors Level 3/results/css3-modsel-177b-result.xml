@@ -1,0 +1,12 @@
+<test>
+	<title>Parsing : vs ::</title>
+	<style type="text/css">
+ div { color: green; }
+ p::first-child { color: yellow; background: red; }
+</style>
+	<div class="testText">
+ <div color="green">
+  <p>This line should be green.</p>
+ </div>
+</div>
+</test>

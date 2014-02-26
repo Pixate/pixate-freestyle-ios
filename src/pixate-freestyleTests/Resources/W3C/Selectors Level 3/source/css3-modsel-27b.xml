@@ -1,0 +1,55 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Impossible rules (* html, * :root)</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[* html { background-color: red; }
+* :root { background-color: red; }
+p { color: green; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-27a.xml" title="Impossible rules (:root:first-child, etc)"/>
+  <link rel="next" href="css3-modsel-28.xml" title=":nth-child() pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-27a.xml" title="Impossible rules (:root:first-child, etc)">&lt;==</a>
+     Test #
+     <a href="css3-modsel-28.xml" title=":nth-child() pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">41 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Impossible rules (* html, * :root) (ID #27b)</td>
+    <td class="a">2005-10-17</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>This line should be green (there should be no red on this page).</p>
+</div>
+   <pre class="rules">* html { background-color: red; }
+* :root { background-color: red; }
+p { color: green; }</pre>
+   <pre class="rules">
+&lt;p&gt;This line should be green (there should be no red on this page).&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

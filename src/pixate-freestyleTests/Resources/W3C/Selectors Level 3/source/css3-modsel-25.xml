@@ -1,0 +1,57 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:checked pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[input, span { background-color : red }
+input:checked, input:checked + span { background-color : lime}
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-24.xml" title=":disabled pseudo-class"/>
+  <link rel="next" href="css3-modsel-27.xml" title=":root pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-24.xml" title=":disabled pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-27.xml" title=":root pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">38 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:checked pseudo-class (ID #25)</td>
+    <td class="a">2004-05-29</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>
+<input type="checkbox" checked="checked"></input> <span>Everything in this paragraph should have a green background</span></p>
+</div>
+   <pre class="rules">input, span { background-color : red }
+input:checked, input:checked + span { background-color : lime}
+</pre>
+   <pre class="rules">
+&lt;p&gt;
+&lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt;&lt;/input&gt; &lt;span&gt;Everything in this paragraph should have a green background&lt;/span&gt;&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

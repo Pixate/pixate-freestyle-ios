@@ -1,0 +1,65 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute selectors with multiple attributes</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ tests, tests * { display: block; color: red; }
+ testA[*|attribute="pass"] { color: green; }
+ testB[*|attribute="pass"] { color: green; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-173b.xml" title="Namespaced attribute selectors"/>
+  <link rel="next" href="css3-modsel-174b.xml" title="NEGATED Attribute selectors with multiple attributes"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-173b.xml" title="Namespaced attribute selectors">&lt;==</a>
+     Test #
+     <a href="css3-modsel-174b.xml" title="NEGATED Attribute selectors with multiple attributes">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">271 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute selectors with multiple attributes (ID #174a)</td>
+    <td class="a">2002-09-20</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+  <tests xmlns="http://css.example.net/" xmlns:test="http://css.example.net/">
+   <testA attribute="pass" test:attribute="fail">This should be green.</testA>
+   <testB attribute="fail" test:attribute="pass">This should be green.</testB>
+  </tests>
+</div>
+   <pre class="rules">
+ tests, tests * { display: block; color: red; }
+ testA[*|attribute=&quot;pass&quot;] { color: green; }
+ testB[*|attribute=&quot;pass&quot;] { color: green; }
+</pre>
+   <pre class="rules">
+  &lt;tests xmlns=&quot;http://css.example.net/&quot; xmlns:test=&quot;http://css.example.net/&quot;&gt;
+   &lt;testA attribute=&quot;pass&quot; test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testA&gt;
+   &lt;testB attribute=&quot;fail&quot; test:attribute=&quot;pass&quot;&gt;This should be green.&lt;/testB&gt;
+  &lt;/tests&gt;
+</pre>
+  </div>
+ </body>
+</html>

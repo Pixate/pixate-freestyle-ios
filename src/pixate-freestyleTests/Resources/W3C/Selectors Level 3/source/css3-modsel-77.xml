@@ -1,0 +1,97 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED :first-child pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.red { background-color : red }
+.t1 td:not(:first-child) { background-color : lime }
+p > *:not(:first-child) { background-color : lime }
+table.t1 td { border : thin black solid }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-76b.xml" title="NEGATED :nth-last-of-type() pseudo-class"/>
+  <link rel="next" href="css3-modsel-77b.xml" title="NEGATED :first-child pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-76b.xml" title="NEGATED :nth-last-of-type() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-77b.xml" title="NEGATED :first-child pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">109 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :first-child pseudo-class (ID #77)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <div>
+  <table class="t1" border="1">
+   <tr>
+    <td>1.1</td>
+    <td class="red">green cell</td>
+    <td class="red">green cell</td>
+   </tr>
+   <tr>
+    <td>2.1</td>
+    <td class="red">green cell</td>
+    <td class="red">green cell</td>
+   </tr>
+   <tr>
+    <td>3.1</td>
+    <td class="red">green cell</td>
+    <td class="red">green cell</td>
+   </tr>
+ </table>
+ </div>
+ <p>This paragraph <span>should be</span> unstyled.</p>
+</div>
+   <pre class="rules">.red { background-color : red }
+.t1 td:not(:first-child) { background-color : lime }
+p &gt; *:not(:first-child) { background-color : lime }
+table.t1 td { border : thin black solid }
+</pre>
+   <pre class="rules">
+ &lt;div&gt;
+  &lt;table class=&quot;t1&quot; border=&quot;1&quot;&gt;
+   &lt;tr&gt;
+    &lt;td&gt;1.1&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;2.1&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;3.1&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+    &lt;td class=&quot;red&quot;&gt;green cell&lt;/td&gt;
+   &lt;/tr&gt;
+ &lt;/table&gt;
+ &lt;/div&gt;
+ &lt;p&gt;This paragraph &lt;span&gt;should be&lt;/span&gt; unstyled.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

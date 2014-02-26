@@ -1,0 +1,55 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Type element selector with declared namespace</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace test url(http://www.example.org/a);
+testa { background-color : red }
+test|testa { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-90b.xml" title="Simple combination of direct and indirect adjacent combinators"/>
+  <link rel="next" href="css3-modsel-92.xml" title="Type element selector with universal namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-90b.xml" title="Simple combination of direct and indirect adjacent combinators">&lt;==</a>
+     Test #
+     <a href="css3-modsel-92.xml" title="Type element selector with universal namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">128 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Type element selector with declared namespace (ID #91)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<testa xmlns="http://www.example.org/a">This paragraph should have a green background</testa>
+</div>
+   <pre class="rules">@namespace test url(http://www.example.org/a);
+testa { background-color : red }
+test|testa { background-color : lime }</pre>
+   <pre class="rules">
+&lt;testa xmlns=&quot;http://www.example.org/a&quot;&gt;This paragraph should have a green background&lt;/testa&gt;
+</pre>
+  </div>
+ </body>
+</html>

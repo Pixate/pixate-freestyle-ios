@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="400" height="125" viewBox="0 0 400 125">
+
+  <path
+    stroke="darkblue" stroke-width="10"
+    fill="blue"
+    d="M10,10 L100,100 L190,10"/>
+
+  <!-- Implied line follows line -->
+  <path
+    stroke="darkred" stroke-width="10"
+    fill="red"
+    d="M210,10 L300,100 390,10"/>
+
+</svg>

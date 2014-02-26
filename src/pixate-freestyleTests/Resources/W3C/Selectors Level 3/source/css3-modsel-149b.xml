@@ -1,0 +1,61 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:empty pseudo-class and empty elements</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ address:empty { background: lime; }
+ address { background: red; margin: 0; height: 1em; }
+ .text { margin: -1em 0 0 0; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-149.xml" title=":empty pseudo-class and empty elements"/>
+  <link rel="next" href="css3-modsel-150.xml" title=":empty pseudo-class and XML/SGML constructs"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-149.xml" title=":empty pseudo-class and empty elements">&lt;==</a>
+     Test #
+     <a href="css3-modsel-150.xml" title=":empty pseudo-class and XML/SGML constructs">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">234 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:empty pseudo-class and empty elements (ID #149b)</td>
+    <td class="a">2001-11-15</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <address></address>
+ <div class="text">This line should have a green background.</div>
+</div>
+   <pre class="rules">
+ address:empty { background: lime; }
+ address { background: red; margin: 0; height: 1em; }
+ .text { margin: -1em 0 0 0; }
+</pre>
+   <pre class="rules">
+ &lt;address&gt;&lt;/address&gt;
+ &lt;div class=&quot;text&quot;&gt;This line should have a green background.&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

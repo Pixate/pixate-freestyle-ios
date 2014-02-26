@@ -1,0 +1,8 @@
+<test>
+	<title>:before pseudo-element</title>
+	<style type="text/css">p:before { background-color : lime ; content : "GENERATED CONTENT "}
+</style>
+	<div class="testText">
+<p>You should see before this paragraph the words GENERATED CONTENT over green background</p>
+</div>
+</test>

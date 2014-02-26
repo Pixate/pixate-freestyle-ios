@@ -1,0 +1,9 @@
+<test>
+	<title>Type element selector with declared namespace</title>
+	<style type="text/css">@namespace test url(http://www.example.org/a);
+testa { background-color : red }
+test|testa { background-color : lime }</style>
+	<div class="testText">
+<testa xmlns="http://www.example.org/a" background-color="lime">This paragraph should have a green background</testa>
+</div>
+</test>

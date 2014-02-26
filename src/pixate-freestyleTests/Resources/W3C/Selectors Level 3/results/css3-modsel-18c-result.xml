@@ -1,0 +1,10 @@
+<test>
+	<title>:hover pseudo-class on links</title>
+	<style type="text/css">
+:link, :visited { color: navy; text-decoration: none; }
+:link:hover span { background-color : lime }
+</style>
+	<div class="testText">
+ <p><a href="#foo">Hover <strong>here</strong> and the background of <span>this text should go green</span>.</a></p>
+</div>
+</test>

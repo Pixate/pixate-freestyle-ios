@@ -1,0 +1,14 @@
+<test>
+	<title>Namespaces and \: in selectors</title>
+	<style type="text/css">
+p { color: green; }
+foo\:bar { background: red; color: yellow; }
+</style>
+	<div class="testText">
+<p color="green">
+<foo:bar xmlns:foo="http://www.example.org/">
+This text should be green.
+</foo:bar>
+</p>
+</div>
+</test>

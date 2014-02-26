@@ -1,0 +1,10 @@
+<test>
+	<title>:first-letter with ::first-letter</title>
+	<style type="text/css">
+  p::first-letter { background-color: red; }
+  p:first-letter { background-color: lime; }
+</style>
+	<div class="testText">
+   <p background-color="red">The first letter of this paragraph should have a green background.</p>
+</div>
+</test>

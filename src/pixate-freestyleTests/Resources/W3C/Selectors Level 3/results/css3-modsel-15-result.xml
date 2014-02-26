@@ -1,0 +1,15 @@
+<test>
+	<title>ID selectors</title>
+	<style type="text/css">li { background-color : red }
+#t1 { background-color : lime }
+li#t2 { background-color : lime }
+li#t3 { background-color : lime }
+#t4 { background-color : red }</style>
+	<div class="testText">
+<ul>
+  <li id="t1" background-color="lime">This list item should have a green background. because its ID is "t1"</li>
+  <li id="t2" background-color="lime">This list item should have a green background. because its ID is "t2"</li>
+  <li id="t3" background-color="lime"><span id="t44">This list item should have a green background. because the inner SPAN does not match "#t4"</span></li>
+</ul>
+</div>
+</test>

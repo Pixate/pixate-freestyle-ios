@@ -1,0 +1,57 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:first-letter with ::first-letter</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+  p:first-letter { background-color: red; }
+  p::first-letter { background-color: lime; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-161.xml" title="Syntax and parsing of unknown pseudo-classes and pseudo-elements"/>
+  <link rel="next" href="css3-modsel-166a.xml" title=":first-letter with ::first-letter"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-161.xml" title="Syntax and parsing of unknown pseudo-classes and pseudo-elements">&lt;==</a>
+     Test #
+     <a href="css3-modsel-166a.xml" title=":first-letter with ::first-letter">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">253 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:first-letter with ::first-letter (ID #166)</td>
+    <td class="a">2001-01-01</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+   <p>The first letter of this paragraph should have a green background.</p>
+</div>
+   <pre class="rules">
+  p:first-letter { background-color: red; }
+  p::first-letter { background-color: lime; }
+</pre>
+   <pre class="rules">
+   &lt;p&gt;The first letter of this paragraph should have a green background.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,9 @@
+<test>
+	<title>NEGATED :checked pseudo-class</title>
+	<style type="text/css">input, span { background-color : red }
+input:not(:checked), input:not(:checked) + span { background-color : lime}</style>
+	<div class="testText">
+<p>
+<input type="checkbox" background-color="lime"/> <span background-color="lime">Everything in this paragraph should have a green background</span></p>
+</div>
+</test>

@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Combinations: classes and IDs</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+p { background: red; color: yellow; }
+p:not(#other).class:not(.fail).test#id#id { background: green; color: white; }
+div { background: green; color: white; }
+div:not(#theid).class:not(.fail).test#theid#theid { background: red; color: yellow; }
+div:not(#other).notclass:not(.fail).test#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.test).test#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.fail).nottest#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.fail).nottest#theid#other { background: red; color: yellow; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-175c.xml" title="Parsing: Numbers in classes"/>
+  <link rel="next" href="css3-modsel-177a.xml" title="Parsing : vs ::"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-175c.xml" title="Parsing: Numbers in classes">&lt;==</a>
+     Test #
+     <a href="css3-modsel-177a.xml" title="Parsing : vs ::">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">276 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Combinations: classes and IDs (ID #176)</td>
+    <td class="a">2002-12-06</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+  <p id="id" class="class test">This line should be green.</p>
+  <div id="theid" class="class test">This line should be green.</div>
+</div>
+   <pre class="rules">
+p { background: red; color: yellow; }
+p:not(#other).class:not(.fail).test#id#id { background: green; color: white; }
+div { background: green; color: white; }
+div:not(#theid).class:not(.fail).test#theid#theid { background: red; color: yellow; }
+div:not(#other).notclass:not(.fail).test#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.test).test#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.fail).nottest#theid#theid { background: red; color: yellow; }
+div:not(#other).class:not(.fail).nottest#theid#other { background: red; color: yellow; }
+</pre>
+   <pre class="rules">
+  &lt;p id=&quot;id&quot; class=&quot;class test&quot;&gt;This line should be green.&lt;/p&gt;
+  &lt;div id=&quot;theid&quot; class=&quot;class test&quot;&gt;This line should be green.&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

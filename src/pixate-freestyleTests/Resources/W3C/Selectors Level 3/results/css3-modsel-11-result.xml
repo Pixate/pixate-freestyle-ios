@@ -1,0 +1,9 @@
+<test>
+	<title>Substring matching attribute selector (contains)</title>
+	<style type="text/css">p { background-color : red }
+p[title*="bar"] { background-color : lime }</style>
+	<div class="testText">
+<p title="foobarufoo" background-color="lime">This paragraph should have a green background because
+its title attribute contains "bar"</p>
+</div>
+</test>

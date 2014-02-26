@@ -1,0 +1,41 @@
+<test>
+	<title>Syntax and parsing of unknown pseudo-classes and pseudo-elements</title>
+	<style type="text/css">
+  p { background: lime; }
+  p   * { background: lime; }
+  p > * { background: lime; }
+  p + * { background: lime; }
+  p ~ * { background: lime; }
+
+  /* let's try some pseudos that are not valid CSS but are likely to
+  be implemented as extensions in some UAs. These should not be
+  recognised, as UAs implementing such extensions should use the
+  :-vnd-ident syntax. */
+
+  :canvas { background: red; }
+  :viewport { background: red; }
+  :window { background: red; }
+  :menu { background: red; }
+  :table { background: red; }
+  :select { background: red; }
+  ::canvas { background: red; }
+  ::viewport { background: red; }
+  ::window { background: red; }
+  ::menu { background: red; }
+  ::table { background: red; }
+  ::select { background: red; }
+</style>
+	<div class="testText">
+ <p background="lime">This line should have a green background.</p>
+ <p background="lime">
+  UAs may render the following element as a pop up menu. If so, please ensure the menu is unstyled (or green).
+  <select size="1" background="lime">
+   <option background="lime">This should</option>
+   <option background="lime">have a green</option>
+   <option background="lime">background.</option>
+  </select>
+ </p>
+ <table background="lime"><tr><td>This line should have a green background (or it might be unstyled).</td></tr></table>
+ 
+</div>
+</test>

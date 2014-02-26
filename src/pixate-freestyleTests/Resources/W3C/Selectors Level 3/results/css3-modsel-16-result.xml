@@ -1,0 +1,11 @@
+<test>
+	<title>:link pseudo-class</title>
+	<style type="text/css">p.test a { background-color : red }
+p.test *:link { background-color : lime }</style>
+	<div class="testText">
+<p class="test">
+<a href="http://unvisited.example.org/css3-modsel-16/" background-color="red">This link should have green background.</a>
+(Don't follow this link.)
+</p>
+</div>
+</test>

@@ -1,0 +1,75 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:lang() pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[ul > li { background-color : red }
+li:lang(en-GB) { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-21c.xml" title=":target pseudo-class"/>
+  <link rel="next" href="css3-modsel-23.xml" title=":enabled pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-21c.xml" title=":target pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-23.xml" title=":enabled pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">35 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:lang() pseudo-class (ID #22)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<ul>
+  <li lang="en-GB">This list item should be green because its language is
+        British English</li>
+  <li lang="en-GB-wa">This list item should be green because its language
+        is British English (Wales)</li>
+</ul>
+<ol>
+  <li lang="en-US">This list item should NOT be green because its language
+       is US English</li>
+  <li lang="fr">This list item should NOT be green because its language is
+       French</li>
+</ol>
+</div>
+   <pre class="rules">ul &gt; li { background-color : red }
+li:lang(en-GB) { background-color : lime }</pre>
+   <pre class="rules">
+&lt;ul&gt;
+  &lt;li lang=&quot;en-GB&quot;&gt;This list item should be green because its language is
+        British English&lt;/li&gt;
+  &lt;li lang=&quot;en-GB-wa&quot;&gt;This list item should be green because its language
+        is British English (Wales)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li lang=&quot;en-US&quot;&gt;This list item should NOT be green because its language
+       is US English&lt;/li&gt;
+  &lt;li lang=&quot;fr&quot;&gt;This list item should NOT be green because its language is
+       French&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+  </div>
+ </body>
+</html>

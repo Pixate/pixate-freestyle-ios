@@ -1,0 +1,13 @@
+<test>
+	<title>Attribute value selector</title>
+	<style type="text/css">address { background-color : red }
+address[title="foo"] { background-color : lime }
+span[title="a"] { background-color : red }</style>
+	<div class="testText">
+<address title="foo" background-color="lime">
+<span title="b">This line should </span>
+  <span title="aa">have a green background.
+</span>
+</address>
+</div>
+</test>

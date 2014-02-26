@@ -1,0 +1,27 @@
+<test>
+	<title>NEGATED :nth-last-of-type() pseudo-class</title>
+	<style type="text/css">.green { background-color : lime ! important }
+p:not(:nth-last-of-type(3)) { background-color : red }
+dl > *:not(:nth-last-of-type(3n+1)) { background-color : red }
+</style>
+	<div class="testText">
+<p>This paragraph should be unstyled.</p>
+<address>This address should be unstyled.</address>
+<p class="green" background-color="lime">This paragraph should have green background.</p>
+<p class="green" background-color="lime">This paragraph should have green background.</p>
+<dl>
+  <dt class="green" background-color="lime">First definition term that should have green background.</dt>
+    <dd class="green" background-color="lime">First definition that should also have a green background.</dd>
+  <dt class="green" background-color="lime">Second definition term that should have green background.</dt>
+    <dd class="green" background-color="lime">Second definition that should have green background.</dd>
+  <dt>Third definition term.</dt>
+    <dd>Third definition.</dd>
+  <dt class="green" background-color="lime">Fourth definition term that should have green background.</dt>
+    <dd class="green" background-color="lime">Fourth definition that should have green background.</dd>
+  <dt class="green" background-color="lime">Fifth definition term that should have green background.</dt>
+    <dd class="green" background-color="lime">Fifth definition that should have green background.</dd>
+  <dt>Sixth definition term.</dt>
+    <dd>Sixth definition.</dd>
+</dl>
+</div>
+</test>

@@ -1,0 +1,59 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Type element selector with universal namespace</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace test url(http://www.example.org/b);
+div.myTest * { background-color : red }
+div.myTest *|testA { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-91.xml" title="Type element selector with declared namespace"/>
+  <link rel="next" href="css3-modsel-93.xml" title="Type element selector without declared namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-91.xml" title="Type element selector with declared namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-93.xml" title="Type element selector without declared namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">129 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Type element selector with universal namespace (ID #92)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<div class="myTest">
+<testA xmlns="http://www.example.org/b">This paragraph should have a green background</testA>
+</div>
+</div>
+   <pre class="rules">@namespace test url(http://www.example.org/b);
+div.myTest * { background-color : red }
+div.myTest *|testA { background-color : lime }</pre>
+   <pre class="rules">
+&lt;div class=&quot;myTest&quot;&gt;
+&lt;testA xmlns=&quot;http://www.example.org/b&quot;&gt;This paragraph should have a green background&lt;/testA&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

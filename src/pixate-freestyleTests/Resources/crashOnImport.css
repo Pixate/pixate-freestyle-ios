@@ -1,0 +1,136 @@
+@import "messageSheet.css"
+
+#navBackButton
+{
+	font-family: "Avenir Next";
+	font-weight: regular;
+	color: #eaeaea;
+	left: 0px;
+	width: 80px;
+	image-edge-right-inset: 15px;
+	title-edge-right-inset: 5px;
+}
+
+#navCloseButton
+{
+	image-edge-top-inset: 0px;
+}
+
+#navCloseButton icon
+{
+    background-image: url("bundle://CloseIcon.svg");
+    background-size: 20px 20px;
+}
+
+#walletNavButton
+{
+	image-edge-inset: 4px 0 0 10px;
+}
+
+#walletNavButton icon
+{
+	background-image: url("bundle://WalletIcon.svg");
+	background-size: 18px 18px;
+}
+
+.unkown
+{
+	background-image: url("bundle://default.png");
+}
+
+.paddypower
+{
+	background-image: url("bundle://paddypower.png");
+}
+
+.sportsbet
+{
+	background-image: url("bundle://sportsbet.png");
+}
+
+.luxbet
+{
+	background-image: url("bundle://luxbet.png");
+}
+
+.betfair
+{
+	background-image: url("bundle://betfair.png");
+}
+
+.ladbrokes
+{
+	background-image: url("bundle://Ladbrokes.png");
+}
+
+.favourit-caps
+{
+	background-image: url("bundle://favourit-caps.png");
+}
+
+#unkown icon
+{
+	background-image: url("bundle://default.png");
+}
+
+#paddypower icon
+{
+	background-image: url("bundle://paddypower.png");
+}
+
+#sportsbet icon
+{
+	background-image: url("bundle://sportsbet.png");
+}
+
+#luxbet icon
+{
+	background-image: url("bundle://luxbet.png");
+}
+
+#betfair icon
+{
+	background-image: url("bundle://betfair.png");
+}
+
+#ladbrokes icon
+{
+	background-image: url("bundle://ladbrokes.png");
+}
+
+#favourit-caps icon
+{
+	background-image: url("bundle://favourit-caps.png");
+}
+
+.priceButton
+{
+	font-family: "Avenir Next";
+	font-size: 14px;
+	font-weight: demi-bold;
+	height: 29px;
+	title-edge-top-inset: 2px;
+}
+
+.virtual
+{
+	border-color: #2a3e51;
+	border-width: 1px;
+	background-color: #498fde;
+	color: #fffbfb;
+}
+
+.real
+{
+	border-color: #2a3e51;
+	border-width: 1px;
+	background-color: #498fde;
+	color: #fffbfb;
+}
+
+#hamburgerMenuButton icon
+{
+    background-image: url("bundle://MenuIcon.svg");
+	background-size: 26px 16px;
+}
+

@@ -1,0 +1,14 @@
+<test>
+	<title>:disabled pseudo-class</title>
+	<style type="text/css">button { background-color : red }
+input { background-color : red }
+button:disabled { background-color : lime }
+input:disabled { background-color : lime }</style>
+	<div class="testText">
+<p>
+ <button disabled="disabled" background-color="red">A button (disabled) with green background</button>
+ <br/>
+ <input type="text" value="a text area (disabled) with green background" disabled="disabled" size="36" background-color="red"/>
+</p>
+</div>
+</test>

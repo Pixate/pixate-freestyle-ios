@@ -1,0 +1,15 @@
+<test>
+	<title>Multiple ID selectors</title>
+	<style type="text/css">
+p { background: green; color: white; }
+#test#fail { background: red; color: yellow; }
+#fail#test { background: red; color: yellow; }
+#fail { background: red; color: yellow; }
+div { background: red; color: yellow; }
+#pass#pass { background: green; color: white; }
+</style>
+	<div class="testText">
+  <p id="test" background="green" color="white">This line should be green.</p>
+  <div id="pass" background="green" color="white">This line should be green.</div>
+</div>
+</test>

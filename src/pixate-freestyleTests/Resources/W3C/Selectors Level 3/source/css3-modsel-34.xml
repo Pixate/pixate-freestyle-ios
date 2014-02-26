@@ -1,0 +1,65 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:first-of-type pseudo-class</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:first-of-type { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-33.xml" title=":last-child pseudo-class"/>
+  <link rel="next" href="css3-modsel-35.xml" title=":last-of-type pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-33.xml" title=":last-child pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-35.xml" title=":last-of-type pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">50 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:first-of-type pseudo-class (ID #34)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<div>This div contains 3 addresses:
+<address class="red">A first address that should have a green background</address>
+<address>A second address with normal background</address>
+<address>A third address with normal background</address>
+</div>
+</div>
+   <pre class="rules">.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:first-of-type { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;div&gt;This div contains 3 addresses:
+&lt;address class=&quot;red&quot;&gt;A first address that should have a green background&lt;/address&gt;
+&lt;address&gt;A second address with normal background&lt;/address&gt;
+&lt;address&gt;A third address with normal background&lt;/address&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,39 @@
+<test>
+	<title>Dynamic handling of attribute selectors</title>
+	<style type="text/css">
+   [test] { background: red; display: block; padding: 1em; }
+   stub ~ [|attribute^=start]:not([|attribute~=mid])[|attribute*=dle][|attribute$=end] ~ t { background: lime; }
+</style>
+	<div class="testText">
+
+ <div>
+
+  <script type="text/javascript">
+   
+
+    function test() {
+      document.getElementsByTagNameNS('', 't')[1].setAttributeNS('', 'attribute', 'start middle end');
+    }
+
+    window.setTimeout("test()", 100);
+   
+  </script>
+
+  <p> The following block should be green. </p>
+
+  
+  <stub xmlns=""/>
+
+  
+  <t attribute="fake" xmlns=""/>
+
+  
+  <t attribute="start mid dle end" xmlns=""/>
+
+  
+  <t test="test" xmlns=""/>
+
+ </div>
+
+</div>
+</test>

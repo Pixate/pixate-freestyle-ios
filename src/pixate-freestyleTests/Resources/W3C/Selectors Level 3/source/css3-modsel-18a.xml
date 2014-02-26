@@ -1,0 +1,76 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:hover pseudo-class on links</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+p { color: navy; }
+
+.a a:hover { background: green; color: white; }
+
+.b a:hover { background: red; color: yellow; }
+.b a:link { background: green; color: white; }
+
+.c :link { background: green; color: white; }
+.c :visited:hover { background: red; color: yellow; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-18.xml" title=":hover pseudo-class"/>
+  <link rel="next" href="css3-modsel-18b.xml" title=":hover pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-18.xml" title=":hover pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-18b.xml" title=":hover pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">26 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:hover pseudo-class on links (ID #18a)</td>
+    <td class="a">2004-02-29</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p class="a">The background color of <a href="#foo">this anchor (<strong>here</strong>)</a> should turn to green when the pointing device hovers over it.</p>
+<p class="b">The background color of <a href="#foo">this anchor (<strong>here</strong>)</a> should <strong>remain green when you hover it</strong>.</p>
+<p class="c">The background color of <a href="http://link.example.com/">this anchor (<strong>here</strong>)</a> should <strong>remain green when the pointing device hovers over it</strong> (do not follow that link).</p>
+</div>
+   <pre class="rules">
+p { color: navy; }
+
+.a a:hover { background: green; color: white; }
+
+.b a:hover { background: red; color: yellow; }
+.b a:link { background: green; color: white; }
+
+.c :link { background: green; color: white; }
+.c :visited:hover { background: red; color: yellow; }
+</pre>
+   <pre class="rules">
+&lt;p class=&quot;a&quot;&gt;The background color of &lt;a href=&quot;#foo&quot;&gt;this anchor (&lt;strong&gt;here&lt;/strong&gt;)&lt;/a&gt; should turn to green when the pointing device hovers over it.&lt;/p&gt;
+&lt;p class=&quot;b&quot;&gt;The background color of &lt;a href=&quot;#foo&quot;&gt;this anchor (&lt;strong&gt;here&lt;/strong&gt;)&lt;/a&gt; should &lt;strong&gt;remain green when you hover it&lt;/strong&gt;.&lt;/p&gt;
+&lt;p class=&quot;c&quot;&gt;The background color of &lt;a href=&quot;http://link.example.com/&quot;&gt;this anchor (&lt;strong&gt;here&lt;/strong&gt;)&lt;/a&gt; should &lt;strong&gt;remain green when the pointing device hovers over it&lt;/strong&gt; (do not follow that link).&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

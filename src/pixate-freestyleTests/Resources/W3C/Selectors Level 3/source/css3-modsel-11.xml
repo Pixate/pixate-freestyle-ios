@@ -1,0 +1,55 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Substring matching attribute selector (contains)</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p { background-color : red }
+p[title*="bar"] { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-10.xml" title="Substring matching attribute selector (end)"/>
+  <link rel="next" href="css3-modsel-13.xml" title="Class selectors"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-10.xml" title="Substring matching attribute selector (end)">&lt;==</a>
+     Test #
+     <a href="css3-modsel-13.xml" title="Class selectors">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">13 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Substring matching attribute selector (contains) (ID #11)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p title="foobarufoo">This paragraph should have a green background because
+its title attribute contains &quot;bar&quot;</p>
+</div>
+   <pre class="rules">p { background-color : red }
+p[title*=&quot;bar&quot;] { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p title=&quot;foobarufoo&quot;&gt;This paragraph should have a green background because
+its title attribute contains &amp;quot;bar&amp;quot;&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

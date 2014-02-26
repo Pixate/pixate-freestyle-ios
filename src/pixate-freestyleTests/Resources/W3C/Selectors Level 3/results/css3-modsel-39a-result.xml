@@ -1,0 +1,30 @@
+<test>
+	<title>::first-letter pseudo-element with ::before pseudo-element</title>
+	<style type="text/css">p:first-letter { color: lime; font-size: xx-large; }
+p:before { color: red; content: 'T'; }</style>
+	<div class="testText">
+
+<p>his very long paragraph should
+have a big green first letter T.  Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text.</p>
+
+</div>
+</test>

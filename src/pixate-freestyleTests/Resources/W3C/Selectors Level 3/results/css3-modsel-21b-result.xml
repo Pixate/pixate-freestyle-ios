@@ -1,0 +1,8 @@
+<test>
+	<title>:target pseudo-class</title>
+	<style type="text/css">p { background-color: lime; }
+p:target { background-color: red; }</style>
+	<div class="testText">
+ <p background-color="lime">This paragraph should be green.</p>
+</div>
+</test>

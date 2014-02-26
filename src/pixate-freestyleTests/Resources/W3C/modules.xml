@@ -1,0 +1,191 @@
+<sections href="http://www.w3.org/Style/CSS/current-work">
+    <section name="Completed">
+        <module name="CSS Snapshot 2010" href="http://www.w3.org/TR/css-2010">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Snapshot 2007" href="http://www.w3.org/TR/css-beijing">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Color Level 3" href="http://www.w3.org/TR/css3-color">
+            <tests type="xhtml" href="http://www.w3.org/Style/CSS/Test/CSS3/Color/current/xhtml1/"/>
+        </module>
+        <module name="CSS Namespaces" href="http://www.w3.org/TR/css3-namespace">
+            <!-- no tests -->
+        </module>
+        <module name="Selectors Level 3" href="http://www.w3.org/TR/selectors">
+            <tests type="xhtml" href="http://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/xhtml/full/flat/"/>
+        </module>
+        <module name="CSS Level 2 Revision 1" href="http://www.w3.org/TR/CSS2">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Level 1" href="http://www.w3.org/TR/CSS1">
+            <!-- no tests -->
+        </module>
+        <module name="Media Queries" href="http://www.w3.org/TR/css3-mediaqueries">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Stable">
+        <module name="CSS Style Attributes" href="http://www.w3.org/TR/css-style-attr">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Testing">
+        <module name="CSS Backgrounds and Borders Level 3" href="http://www.w3.org/TR/css3-background">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Image Values and Replaced Content Level 3" href="http://www.w3.org/TR/css3-images">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Marquee" href="http://www.w3.org/TR/css3-marquee">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Multi-column Layout" href="http://www.w3.org/TR/css3-multicol">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Speech" href="http://www.w3.org/TR/css3-speech">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Values and Units Level 3" href="http://www.w3.org/TR/css3-values">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Mobile Profile 2.0" href="http://www.w3.org/TR/css-mobile">
+            <!-- no tests -->
+        </module>
+        <module name="CSS TV Profile 1.0" href="http://www.w3.org/TR/css-tv">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Refining">
+        <module name="CSS Animations" href="http://www.w3.org/TR/css3-animations">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Flexible Box Layout" href="http://www.w3.org/TR/css3-flexbox">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Text Level 3" href="http://www.w3.org/TR/css3-text">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Fragmentation Level 3" href="http://www.w3.org/TR/css3-break">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Transforms" href="http://www.w3.org/TR/css3-transforms">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Transitions" href="http://www.w3.org/TR/css3-transitions">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Print Profile" href="http://www.w3.org/TR/css-print">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Revising">
+        <module name="CSS Conditional Rules Level 3" href="http://www.w3.org/TR/css3-conditional">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Fonts Level 3" href="http://www.w3.org/TR/css3-fonts">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Paged Media Level 3" href="http://www.w3.org/TR/css3-page">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Basic User Interface Level 3" href="http://www.w3.org/TR/css3-ui">
+            <!-- no tests, but there is a section discussing them -->
+        </module>
+        <module name="CSS Writing Modes Level 3" href="http://www.w3.org/TR/css3-writing-modes">
+            <!-- no tests -->
+        </module>
+        <module name="CSSOM View" href="http://www.w3.org/TR/cssom-view">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Exploring">
+        <module name="CSS Cascading and Inheritance Level 3" href="http://www.w3.org/TR/css3-cascade">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Device Adaptation" href="http://www.w3.org/TR/css-device-adapt">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Exclusions and Shapes" href="http://www.w3.org/TR/css3-exclusions/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Generated Content for Paged Media" href="http://www.w3.org/TR/css3-gcpm">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Grid Layout" href="http://www.w3.org/TR/css3-grid-layout">
+            <!-- no tests -->
+        </module>
+        <module name="CSS (Grid) Template Layout" href="http://www.w3.org/TR/css3-layout">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Line Grid" href="http://www.w3.org">
+            <!-- invalid link to specification -->
+        </module>
+        <module name="CSS Lists Level 3" href="http://www.w3.org/TR/css3-lists">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Positioned Layout Level 3" href="http://www.w3.org/TR/css3-positioning/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Presentation Levels" href="http://www.w3.org/TR/css3-preslev">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Regions" href="http://www.w3.org/TR/css3-regions">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Tables Level 3" href="http://www.w3.org">
+            <!-- invalid link to specification -->
+        </module>
+        <module name="Selectors Level 4" href="http://www.w3.org/TR/selectors4">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Object Model" href="http://www.w3.org/TR/cssom">
+            <!-- no tests -->
+        </module>
+        <module name="Compositing and Blending" href="http://www.w3.org/TR/compositing/">
+            <!-- no tests -->
+        </module>
+        <module name="Filter Effects" href="http://www.w3.org/TR/filter-effects/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Masking" href="http://www.w3.org/TR/css-masking/"/>
+        <module name="CSS Box Alignment Module Level 3" href="http://www.w3.org/TR/css3-align/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Text Decoration Module Level 3" href="http://www.w3.org/TR/css-text-decor-3/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Intrinsic & Extrinsic Sizing Module Level 3" href="http://www.w3.org/TR/css3-sizing/">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Counter Styles Level 3" href="http://www.w3.org/TR/css-counter-styles-3/">
+            <!-- no tests -->
+        </module>
+    </section>
+    <section name="Rewriting">
+        <module name="CSS Basic Box Model Level 3" href="http://www.w3.org/TR/css3-box">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Generated Content Level 3" href="http://www.w3.org/TR/css3-content">
+            <!-- no tests, but there is a section discussing them -->
+        </module>
+        <module name="CSS Line Layout Level 3" href="http://www.w3.org/TR/css3-linebox">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Ruby" href="http://www.w3.org/TR/css3-ruby">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Syntax Level 3" href="http://www.w3.org/TR/css3-syntax">
+            <!-- no tests -->
+        </module>
+        <module name="CSS Backgrounds and Borders Level 4" href="http://www.w3.org">
+            <!-- invalid link to specification -->
+        </module>
+    </section>
+    <section name="Abandoned">
+        <!-- These modules are being ignored -->
+        <module name="Behavioral Extensions to CSS" href="http://www.w3.org/TR/becss"/>
+        <module name="CSS Hyperlink Presentation" href="http://www.w3.org/TR/css3-hyperlinks"/>
+        <module name="CSS Grid Positioning" href="http://www.w3.org/TR/css3-grid"/>
+    </section>
+</sections>

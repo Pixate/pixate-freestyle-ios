@@ -1,0 +1,53 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:after pseudo-element</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p:after { background-color : lime ; content : "GENERATED CONTENT "}
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-42.xml" title="::after pseudo-element"/>
+  <link rel="next" href="css3-modsel-43.xml" title="Descendant combinator"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-42.xml" title="::after pseudo-element">&lt;==</a>
+     Test #
+     <a href="css3-modsel-43.xml" title="Descendant combinator">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">62 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:after pseudo-element (ID #42a)</td>
+    <td class="a">2004-03-30</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>You should see after this paragraph the words GENERATED CONTENT over green background</p>
+</div>
+   <pre class="rules">p:after { background-color : lime ; content : &quot;GENERATED CONTENT &quot;}
+</pre>
+   <pre class="rules">
+&lt;p&gt;You should see after this paragraph the words GENERATED CONTENT over green background&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

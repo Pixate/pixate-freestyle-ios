@@ -1,0 +1,13 @@
+<test>
+	<title>:empty pseudo-class and XML/SGML constructs</title>
+	<style type="text/css">
+ address:empty { background: lime; }
+ address { background: red; margin: 0; height: 1em; }
+ .text { margin: -1em 0 0 0; }
+</style>
+	<div class="testText">
+ <address background="lime" margin="0" height="1.000000em"/>
+ <div class="text" margin="-1.000000em 0 0 0">This line should have a green background.</div>
+ <p>(Note: This test is based on unpublished errata.)</p>
+</div>
+</test>

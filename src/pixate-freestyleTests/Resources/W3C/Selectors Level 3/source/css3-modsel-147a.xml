@@ -1,0 +1,105 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:nth-last-of-type() pseudo-class with collapsed elements</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+  line { display: block; }
+  [type~=match] { background: red; }
+  line:nth-last-of-type(3n-1) { background: lime; }
+  [hidden] { visibility: collapse; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-146b.xml" title=":nth-child() pseudo-class with hidden elements"/>
+  <link rel="next" href="css3-modsel-147b.xml" title=":nth-last-of-type() pseudo-class with collapsed elements"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-146b.xml" title=":nth-child() pseudo-class with hidden elements">&lt;==</a>
+     Test #
+     <a href="css3-modsel-147b.xml" title=":nth-last-of-type() pseudo-class with collapsed elements">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">230 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:nth-last-of-type() pseudo-class with collapsed elements (ID #147a)</td>
+    <td class="a">2002-10-10</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <test xmlns="http://www.example.org/">
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match" hidden="hidden">This line should be green.</line>
+  <line type="" hidden="hidden">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="" hidden="hidden">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="">This line should be unstyled.</line>
+  <line type="match">This line should be green.</line>
+  <line type="">This line should be unstyled.</line>
+ </test> 
+</div>
+   <pre class="rules">
+  line { display: block; }
+  [type~=match] { background: red; }
+  line:nth-last-of-type(3n-1) { background: lime; }
+  [hidden] { visibility: collapse; }
+</pre>
+   <pre class="rules">
+ &lt;test xmlns=&quot;http://www.example.org/&quot;&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot; hidden=&quot;hidden&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot; hidden=&quot;hidden&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot; hidden=&quot;hidden&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+  &lt;line type=&quot;match&quot;&gt;This line should be green.&lt;/line&gt;
+  &lt;line type=&quot;&quot;&gt;This line should be unstyled.&lt;/line&gt;
+ &lt;/test&gt; 
+</pre>
+  </div>
+ </body>
+</html>

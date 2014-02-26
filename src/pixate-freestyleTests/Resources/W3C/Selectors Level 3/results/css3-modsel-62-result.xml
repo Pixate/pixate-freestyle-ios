@@ -1,0 +1,12 @@
+<test>
+	<title>NEGATED :visited pseudo-class</title>
+	<style type="text/css">div.stub > * { background-color : red }
+div.stub *:not(:visited) { background-color : lime }
+</style>
+	<div class="testText">
+<div class="stub">
+<a href="http://unvisited.example.org/css3-modsel-62/" background-color="lime">This anchor should have a green background</a>
+(Don't follow this link.)
+</div>
+</div>
+</test>

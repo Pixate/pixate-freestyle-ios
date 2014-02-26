@@ -1,0 +1,75 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED Substring matching attribute selector on end with universal namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s, *|t{ display : block ; margin-bottom : 1em }
+*|p.red, *|q, *|t { background-color : lime ! important }
+div.stub *|*:not([*|title$="tait"]) { background-color : red }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-135.xml" title="NEGATED Substring matching attribute selector on end with universal namespace"/>
+  <link rel="next" href="css3-modsel-136.xml" title="NEGATED Substring matching attribute selector on middle with universal namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-135.xml" title="NEGATED Substring matching attribute selector on end with universal namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-136.xml" title="NEGATED Substring matching attribute selector on middle with universal namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">208 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED Substring matching attribute selector on end with universal namespace (ID #135b)</td>
+    <td class="a">2001-11-13</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText" xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b">
+<div class="stub">
+<p title="si on chantait">This paragraph should be unstyled.</p>
+<p title="si tu chantais" class="red">This paragraph should have a green background.</p>
+<q xmlns="http://www.example.org/a" a:title="si nous chantions">This paragraph should have a green background.</q>
+<r xmlns="http://www.example.org/a" a:title="si on chantait">This paragraph should be unstyled.</r>
+<s xmlns="http://www.example.org/b" b:title="si on chantait">This paragraph should be unstyled.</s>
+<t xmlns="http://www.example.org/b" b:ti="si on chantait">This paragraph should have a green background.</t>
+</div>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s, *|t{ display : block ; margin-bottom : 1em }
+*|p.red, *|q, *|t { background-color : lime ! important }
+div.stub *|*:not([*|title$=&quot;tait&quot;]) { background-color : red }</pre>
+   <pre class="rules">
+&lt;div class=&quot;stub&quot;&gt;
+&lt;p title=&quot;si on chantait&quot;&gt;This paragraph should be unstyled.&lt;/p&gt;
+&lt;p title=&quot;si tu chantais&quot; class=&quot;red&quot;&gt;This paragraph should have a green background.&lt;/p&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; a:title=&quot;si nous chantions&quot;&gt;This paragraph should have a green background.&lt;/q&gt;
+&lt;r xmlns=&quot;http://www.example.org/a&quot; a:title=&quot;si on chantait&quot;&gt;This paragraph should be unstyled.&lt;/r&gt;
+&lt;s xmlns=&quot;http://www.example.org/b&quot; b:title=&quot;si on chantait&quot;&gt;This paragraph should be unstyled.&lt;/s&gt;
+&lt;t xmlns=&quot;http://www.example.org/b&quot; b:ti=&quot;si on chantait&quot;&gt;This paragraph should have a green background.&lt;/t&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

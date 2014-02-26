@@ -1,0 +1,18 @@
+<test>
+	<title>NEGATED universal selector with declared namespace</title>
+	<style type="text/css">@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+div.stub > *|* { color : red ; display : block ;
+                 margin-bottom : 1em }
+div.stub > *|*:not(|*) { color : green }
+</style>
+	<div class="testText">
+<div class="stub">
+<address color="green" display="block" margin-bottom="1.000000em">This address should be in green characters.</address>
+<s xmlns="http://www.example.org/b" color="green" display="block" margin-bottom="1.000000em">This paragraph should be in green characters.</s>
+<u xmlns="http://www.example.org/a" color="green" display="block" margin-bottom="1.000000em">This paragraph should be in green characters.</u>
+</div>
+
+</div>
+</test>

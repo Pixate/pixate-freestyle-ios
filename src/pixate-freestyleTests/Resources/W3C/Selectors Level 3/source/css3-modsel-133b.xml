@@ -1,0 +1,79 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED Attribute dash-separated value selector with universal namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p.foo, *|q, *|s { background-color : lime ! important }
+div.stub html|*:not([*|lang|="en"]),
+  div.stub *|*:not(html|*):not([a|foo|="un-d"]) { background-color : red }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-133.xml" title="NEGATED Attribute dash-separated value selector with universal namespace"/>
+  <link rel="next" href="css3-modsel-134.xml" title="NEGATED Substring matching attribute selector on beginning with universal namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-133.xml" title="NEGATED Attribute dash-separated value selector with universal namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-134.xml" title="NEGATED Substring matching attribute selector on beginning with universal namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">204 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED Attribute dash-separated value selector with universal namespace (ID #133b)</td>
+    <td class="a">2001-11-13</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText" xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b">
+<div class="stub">
+<p lang="en-us">This paragraph should be unstyled.</p>
+<p lang="fr" class="foo">This paragraph should have a green background.</p>
+<q xmlns="http://www.example.org/a" a:foo="un-deux-trois">This paragraph should have a green background.</q>
+<q xmlns="http://www.example.org/a" a:foo="un-second-deuxieme-trois">This paragraph should have a green background.</q>
+<r xmlns="http://www.example.org/a" a:foo="un-d-trois">This paragraph should be unstyled.</r>
+<s xmlns="http://www.example.org/b" b:foo="un-d-trois">This paragraph should have a green background.</s>
+</div>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p.foo, *|q, *|s { background-color : lime ! important }
+div.stub html|*:not([*|lang|=&quot;en&quot;]),
+  div.stub *|*:not(html|*):not([a|foo|=&quot;un-d&quot;]) { background-color : red }
+</pre>
+   <pre class="rules">
+&lt;div class=&quot;stub&quot;&gt;
+&lt;p lang=&quot;en-us&quot;&gt;This paragraph should be unstyled.&lt;/p&gt;
+&lt;p lang=&quot;fr&quot; class=&quot;foo&quot;&gt;This paragraph should have a green background.&lt;/p&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; a:foo=&quot;un-deux-trois&quot;&gt;This paragraph should have a green background.&lt;/q&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; a:foo=&quot;un-second-deuxieme-trois&quot;&gt;This paragraph should have a green background.&lt;/q&gt;
+&lt;r xmlns=&quot;http://www.example.org/a&quot; a:foo=&quot;un-d-trois&quot;&gt;This paragraph should be unstyled.&lt;/r&gt;
+&lt;s xmlns=&quot;http://www.example.org/b&quot; b:foo=&quot;un-d-trois&quot;&gt;This paragraph should have a green background.&lt;/s&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,24 @@
+<test>
+	<title>Namespaced attribute selectors</title>
+	<style type="text/css">
+ tests, tests * { display: block; color: red; }
+ testA[*|attribute] { color: green; }
+ testB[*|attribute="pass"] { color: green; }
+ testC[*|attribute~="pass"] { color: green; }
+ testD[*|attribute^="pass"] { color: green; }
+ testE[*|attribute*="pass"] { color: green; }
+ testF[*|attribute$="pass"] { color: green; }
+ testG[*|attribute|="pass"] { color: green; }
+</style>
+	<div class="testText">
+  <tests xmlns:test="http://css.example.net/" xmlns="http://css.example.net/" display="block" color="red">
+   <testA test:attribute="pass" color="green" display="block">This should be green.</testA>
+   <testB test:attribute="pass" color="green" display="block">This should be green.</testB>
+   <testC test:attribute="pass" color="green" display="block">This should be green.</testC>
+   <testD test:attribute="pass" color="green" display="block">This should be green.</testD>
+   <testE test:attribute="pass" color="green" display="block">This should be green.</testE>
+   <testF test:attribute="pass" color="green" display="block">This should be green.</testF>
+   <testG test:attribute="pass" color="green" display="block">This should be green.</testG>
+  </tests>
+</div>
+</test>

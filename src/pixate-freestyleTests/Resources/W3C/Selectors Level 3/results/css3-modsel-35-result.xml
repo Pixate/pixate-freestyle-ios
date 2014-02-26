@@ -1,0 +1,14 @@
+<test>
+	<title>:last-of-type pseudo-class</title>
+	<style type="text/css">.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:last-of-type { background-color : lime }
+</style>
+	<div class="testText">
+<div>
+<address margin-bottom="1.000000em" margin-left="1.000000em">A first address with normal background</address>
+<address margin-bottom="1.000000em" margin-left="1.000000em">A second address with normal background</address>
+<address class="red" background-color="lime" margin-bottom="1.000000em" margin-left="1.000000em">A third address that should have a green background</address>
+This div contains 3 addresses above this sentence.</div>
+</div>
+</test>

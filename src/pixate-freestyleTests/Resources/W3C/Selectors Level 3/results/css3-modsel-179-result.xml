@@ -1,0 +1,11 @@
+<test>
+	<title>::first-line on inlines</title>
+	<style type="text/css">
+  p { color: green; }
+  span:first-line { background: red; color: yellow; font-size: 4em; }
+  span::first-line { background: red; color: yellow; font-size: 4em; }
+</style>
+	<div class="testText">
+   <p color="green"><span background="red" color="yellow" font-size="4.000000em">This line should be green.</span></p>
+</div>
+</test>

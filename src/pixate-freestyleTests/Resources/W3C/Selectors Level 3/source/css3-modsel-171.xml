@@ -1,0 +1,61 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Classes: XHTML global class attribute</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ p { color: green; }
+ .fail { color: red; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-170d.xml" title="Long chains of selectors"/>
+  <link rel="next" href="css3-modsel-172a.xml" title="Namespaced attribute selectors"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-170d.xml" title="Long chains of selectors">&lt;==</a>
+     Test #
+     <a href="css3-modsel-172a.xml" title="Namespaced attribute selectors">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">266 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Classes: XHTML global class attribute (ID #171)</td>
+    <td class="a">2002-09-20</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+   <p xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <span xhtml:class="fail">This should be green.</span>
+   </p>
+</div>
+   <pre class="rules">
+ p { color: green; }
+ .fail { color: red; }
+</pre>
+   <pre class="rules">
+   &lt;p xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;span xhtml:class=&quot;fail&quot;&gt;This should be green.&lt;/span&gt;
+   &lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,11 @@
+<test>
+	<title>:after with ::after</title>
+	<style type="text/css">
+  span::after { background-color: red; content: 'FAILED'; }
+  span:after { background-color: lime; content: 'PASSED'; }
+</style>
+	<div class="testText">
+   <p>This test has <span background-color="red" content="FAILED"/>.</p>
+   <p>(If the previous line just reads "This test has ." then this test has failed.)</p>  
+</div>
+</test>

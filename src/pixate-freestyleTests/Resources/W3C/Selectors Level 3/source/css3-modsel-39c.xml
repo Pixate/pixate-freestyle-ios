@@ -1,0 +1,97 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>::first-letter pseudo-element with ::before pseudo-element</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p::first-letter { color: lime; font-size: xx-large; }
+ p::before { color: red; content: 'T'; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-39b.xml" title="::first-letter pseudo-element"/>
+  <link rel="next" href="css3-modsel-41.xml" title="::before pseudo-element"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-39b.xml" title="::first-letter pseudo-element">&lt;==</a>
+     Test #
+     <a href="css3-modsel-41.xml" title="::before pseudo-element">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">58 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">::first-letter pseudo-element with ::before pseudo-element (ID #39c)</td>
+    <td class="a">2005-11-09</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+
+<p>his very long paragraph should
+have a big green first letter T. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text.</p>
+
+</div>
+   <pre class="rules">p::first-letter { color: lime; font-size: xx-large; }
+ p::before { color: red; content: &#39;T&#39;; }</pre>
+   <pre class="rules">
+
+&lt;p&gt;his very long paragraph should
+have a big green first letter T. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text. Dummy text. Dummy
+text. Dummy text. Dummy text. Dummy text.&lt;/p&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

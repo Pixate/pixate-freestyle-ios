@@ -1,0 +1,95 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Descendant combinator</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.white { background-color: transparent ! important; }
+.red { background-color: red; }
+div.t1 p { background-color: lime; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-42a.xml" title=":after pseudo-element"/>
+  <link rel="next" href="css3-modsel-43b.xml" title="Descendant combinator"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-42a.xml" title=":after pseudo-element">&lt;==</a>
+     Test #
+     <a href="css3-modsel-43b.xml" title="Descendant combinator">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">63 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Descendant combinator (ID #43)</td>
+    <td class="a">2001-11-05</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <div class="t1">
+  <p class="red">This paragraph should have a green background</p>
+  <table>
+   <tbody>
+    <tr>
+     <td>
+      <p class="red">This paragraph should have a green background</p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <table>
+  <tbody>
+   <tr>
+    <td>
+     <p class="white">This paragraph should be unstyled.</p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+   <pre class="rules">.white { background-color: transparent ! important; }
+.red { background-color: red; }
+div.t1 p { background-color: lime; }</pre>
+   <pre class="rules">
+ &lt;div class=&quot;t1&quot;&gt;
+  &lt;p class=&quot;red&quot;&gt;This paragraph should have a green background&lt;/p&gt;
+  &lt;table&gt;
+   &lt;tbody&gt;
+    &lt;tr&gt;
+     &lt;td&gt;
+      &lt;p class=&quot;red&quot;&gt;This paragraph should have a green background&lt;/p&gt;
+     &lt;/td&gt;
+    &lt;/tr&gt;
+   &lt;/tbody&gt;
+  &lt;/table&gt;
+ &lt;/div&gt;
+ &lt;table&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td&gt;
+     &lt;p class=&quot;white&quot;&gt;This paragraph should be unstyled.&lt;/p&gt;
+    &lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/tbody&gt;
+ &lt;/table&gt;
+</pre>
+  </div>
+ </body>
+</html>

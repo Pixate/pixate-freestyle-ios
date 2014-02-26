@@ -1,0 +1,11 @@
+<test>
+	<title>Child combinatior and IDs</title>
+	<style type="text/css">
+  #fail > div { background: red; }
+  p { background: green; }
+</style>
+	<div class="testText">
+  <div> This should be unstyled. </div>
+  <p background="green"> This should have a green background. </p>
+</div>
+</test>

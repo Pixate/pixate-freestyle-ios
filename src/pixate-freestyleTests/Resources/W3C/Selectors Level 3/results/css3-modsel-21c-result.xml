@@ -1,0 +1,8 @@
+<test>
+	<title>:target pseudo-class</title>
+	<style type="text/css">:root { background-color: green; }
+:target { background-color: red; }</style>
+	<div class="testText">
+ <p>This page should be green.</p>
+</div>
+</test>

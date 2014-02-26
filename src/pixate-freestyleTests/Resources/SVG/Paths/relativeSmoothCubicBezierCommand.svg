@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="250" height="160" viewBox="0 0 250 160">
+
+  <path
+    stroke="darkblue" stroke-width="5"
+    fill="blue"
+    d="M40,30 c20,110 120,-15 120,70 s120,-30 10,-40"/>
+
+  <!-- Implied relative smooth cubic bezier follows relative smooth cubic bezier -->
+</svg>

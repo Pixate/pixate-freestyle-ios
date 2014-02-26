@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="120" height="40" viewBox="0 0 120 40">
+
+  <path
+    stroke="darkblue" stroke-width="10"
+    d="M10,10 h90 h10"/>
+
+  <!-- Implied relative horizontal line follows relative horizontal line -->
+  <path
+    stroke="darkred" stroke-width="10"
+    d="M10,30 h90 10"/>
+
+</svg>

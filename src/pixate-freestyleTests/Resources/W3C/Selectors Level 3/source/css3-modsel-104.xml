@@ -1,0 +1,69 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute existence selector with universal namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p, *|r, *|s { background-color : red }
+*|*[*|title] { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-103b.xml" title="Substring matching attribute value selector on middle with declared namespace"/>
+  <link rel="next" href="css3-modsel-104b.xml" title="Attribute existence selector with universal namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-103b.xml" title="Substring matching attribute value selector on middle with declared namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-104b.xml" title="Attribute existence selector with universal namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">150 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute existence selector with universal namespace (ID #104)</td>
+    <td class="a">2001-11-13</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText" xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b">
+<p title="si on chantait">This paragraph should have a green background</p>
+<q xmlns="http://www.example.org/a" a:foo="si on chantait">This paragraph should be unstyled.</q>
+<r xmlns="http://www.example.org/a" a:title="si on chantait">This paragraph should have a green background</r>
+<s xmlns="http://www.example.org/b" b:title="si on chantait">This paragraph should have a green background</s>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p, *|r, *|s { background-color : red }
+*|*[*|title] { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;p title=&quot;si on chantait&quot;&gt;This paragraph should have a green background&lt;/p&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; a:foo=&quot;si on chantait&quot;&gt;This paragraph should be unstyled.&lt;/q&gt;
+&lt;r xmlns=&quot;http://www.example.org/a&quot; a:title=&quot;si on chantait&quot;&gt;This paragraph should have a green background&lt;/r&gt;
+&lt;s xmlns=&quot;http://www.example.org/b&quot; b:title=&quot;si on chantait&quot;&gt;This paragraph should have a green background&lt;/s&gt;
+</pre>
+  </div>
+ </body>
+</html>

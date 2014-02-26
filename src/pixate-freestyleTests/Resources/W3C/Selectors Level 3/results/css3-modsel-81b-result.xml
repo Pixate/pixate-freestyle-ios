@@ -1,0 +1,13 @@
+<test>
+	<title>NEGATED :only-child pseudo-class</title>
+	<style type="text/css">.green { background-color : lime ! important }
+p:not(:only-child) { background-color : lime }
+div.testText > div > p { margin-left : 1em }
+</style>
+	<div class="testText">
+ <p class="green" background-color="lime">This paragraph should have a green background.</p>
+ <div>This div contains only one paragraph.
+  <p margin-left="1.000000em">This paragraph should be unstyled.</p>
+ </div>
+</div>
+</test>

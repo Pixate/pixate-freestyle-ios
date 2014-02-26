@@ -1,0 +1,16 @@
+<test>
+	<title>More than one class selector</title>
+	<style type="text/css">
+p { background: red; color: yellow; }
+p.t1.t2 { background: green; color: white; }
+div { background: green; color: white; }
+div.t1 { background: red; color: yellow; }
+address { background: red; color: yellow; }
+address.t5.t5 { background: green; color: white; }
+</style>
+	<div class="testText">
+  <p class="t1 t2" background="green" color="white">This line should be green.</p>
+  <div class="t3" background="green" color="white">This line should be green.</div>
+  <address class="t4 t5 t6" background="green" color="white">This line should be green.</address>
+</div>
+</test>

@@ -1,0 +1,65 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:enabled pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[button { background-color : red }
+input { background-color : red }
+button:enabled { background-color : lime }
+input:enabled { background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-22.xml" title=":lang() pseudo-class"/>
+  <link rel="next" href="css3-modsel-24.xml" title=":disabled pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-22.xml" title=":lang() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-24.xml" title=":disabled pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">36 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:enabled pseudo-class (ID #23)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>
+ <button>A button (enabled) with green background</button>
+ <br></br>
+ <input type="text" size="36" value="a text area (enabled) with green background"></input>
+</p>
+</div>
+   <pre class="rules">button { background-color : red }
+input { background-color : red }
+button:enabled { background-color : lime }
+input:enabled { background-color : lime }</pre>
+   <pre class="rules">
+&lt;p&gt;
+ &lt;button&gt;A button (enabled) with green background&lt;/button&gt;
+ &lt;br&gt;&lt;/br&gt;
+ &lt;input type=&quot;text&quot; size=&quot;36&quot; value=&quot;a text area (enabled) with green background&quot;&gt;&lt;/input&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

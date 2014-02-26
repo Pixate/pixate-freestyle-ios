@@ -1,0 +1,15 @@
+<test>
+	<title>Direct adjacent combinator</title>
+	<style type="text/css">.green { background-color: lime; }
+.white { background-color: transparent ! important; }
+div.stub > p + p { background-color: red; }</style>
+	<div class="testText">
+ <div class="stub">
+  <p class="green" background-color="lime">This paragraph should have a green background.</p>
+  <p class="white" background-color="transparent">But this one should be unstyled.</p>
+  <p class="white" background-color="transparent">And this one should also be unstyled.</p>
+  <address class="green" background-color="lime">This address is only here to fill some space between two paragraphs and should have a green background.</address>
+  <p class="green" background-color="lime">This paragraph should have a green background too.</p>
+ </div>
+</div>
+</test>

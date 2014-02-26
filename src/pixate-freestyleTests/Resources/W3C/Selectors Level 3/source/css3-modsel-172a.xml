@@ -1,0 +1,85 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Namespaced attribute selectors</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ tests, tests * { display: block; color: green; }
+ testA[|attribute] { color: red; }
+ testB[|attribute="fail"] { color: red; }
+ testC[|attribute~="fail"] { color: red; }
+ testD[|attribute^="fail"] { color: red; }
+ testE[|attribute*="fail"] { color: red; }
+ testF[|attribute$="fail"] { color: red; }
+ testG[|attribute|="fail"] { color: red; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-171.xml" title="Classes: XHTML global class attribute"/>
+  <link rel="next" href="css3-modsel-172b.xml" title="Namespaced attribute selectors"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-171.xml" title="Classes: XHTML global class attribute">&lt;==</a>
+     Test #
+     <a href="css3-modsel-172b.xml" title="Namespaced attribute selectors">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">267 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Namespaced attribute selectors (ID #172a)</td>
+    <td class="a">2002-09-20</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+  <tests xmlns="http://css.example.net/" xmlns:test="http://css.example.net/">
+   <testA test:attribute="fail">This should be green.</testA>
+   <testB test:attribute="fail">This should be green.</testB>
+   <testC test:attribute="fail">This should be green.</testC>
+   <testD test:attribute="fail">This should be green.</testD>
+   <testE test:attribute="fail">This should be green.</testE>
+   <testF test:attribute="fail">This should be green.</testF>
+   <testG test:attribute="fail">This should be green.</testG>
+  </tests>
+</div>
+   <pre class="rules">
+ tests, tests * { display: block; color: green; }
+ testA[|attribute] { color: red; }
+ testB[|attribute=&quot;fail&quot;] { color: red; }
+ testC[|attribute~=&quot;fail&quot;] { color: red; }
+ testD[|attribute^=&quot;fail&quot;] { color: red; }
+ testE[|attribute*=&quot;fail&quot;] { color: red; }
+ testF[|attribute$=&quot;fail&quot;] { color: red; }
+ testG[|attribute|=&quot;fail&quot;] { color: red; }
+</pre>
+   <pre class="rules">
+  &lt;tests xmlns=&quot;http://css.example.net/&quot; xmlns:test=&quot;http://css.example.net/&quot;&gt;
+   &lt;testA test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testA&gt;
+   &lt;testB test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testB&gt;
+   &lt;testC test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testC&gt;
+   &lt;testD test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testD&gt;
+   &lt;testE test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testE&gt;
+   &lt;testF test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testF&gt;
+   &lt;testG test:attribute=&quot;fail&quot;&gt;This should be green.&lt;/testG&gt;
+  &lt;/tests&gt;
+</pre>
+  </div>
+ </body>
+</html>

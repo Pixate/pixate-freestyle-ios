@@ -1,0 +1,62 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED :hover pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[div.stub * { color: lime; text-decoration: none; }
+div.stub > * > *:not(:hover) { color: black }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-62.xml" title="NEGATED :visited pseudo-class"/>
+  <link rel="next" href="css3-modsel-64.xml" title="NEGATED :active pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-62.xml" title="NEGATED :visited pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-64.xml" title="NEGATED :active pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">90 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :hover pseudo-class (ID #63)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <div class="stub">
+  <p> <span>The color of this text should be green when the pointing device hovers over it.</span> </p>
+  <p> <a href="http://dummy.example.org/dummy">The color of this text should be green when the pointing device hovers over it.</a> </p>
+ </div>
+</div>
+   <pre class="rules">div.stub * { color: lime; text-decoration: none; }
+div.stub &gt; * &gt; *:not(:hover) { color: black }
+</pre>
+   <pre class="rules">
+ &lt;div class=&quot;stub&quot;&gt;
+  &lt;p&gt; &lt;span&gt;The color of this text should be green when the pointing device hovers over it.&lt;/span&gt; &lt;/p&gt;
+  &lt;p&gt; &lt;a href=&quot;http://dummy.example.org/dummy&quot;&gt;The color of this text should be green when the pointing device hovers over it.&lt;/a&gt; &lt;/p&gt;
+ &lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

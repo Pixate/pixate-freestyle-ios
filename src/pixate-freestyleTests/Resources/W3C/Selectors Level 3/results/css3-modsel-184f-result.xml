@@ -1,0 +1,11 @@
+<test>
+	<title>NEGATED contains attribute selector with empty value</title>
+	<style type="text/css">
+p { color: red; }
+p:not([class*=""]) { color: lime; }
+</style>
+	<div class="testText">
+<p class="" color="lime">This text should be green.</p>
+<p color="lime">This text should be green.</p>
+</div>
+</test>

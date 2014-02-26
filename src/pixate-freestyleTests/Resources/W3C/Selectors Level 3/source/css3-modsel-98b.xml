@@ -1,0 +1,67 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute value selector with declared namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|q { background-color : lime ! important }
+*[a|title="foo"] {background-color : red }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-98.xml" title="Attribute value selector with declared namespace"/>
+  <link rel="next" href="css3-modsel-99.xml" title="Attribute space-separated value selector with declared namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-98.xml" title="Attribute value selector with declared namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-99.xml" title="Attribute space-separated value selector with declared namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">139 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute value selector with declared namespace (ID #98b)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText" xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b">
+ <p title="foo">This paragraph should be unstyled.</p>
+ <q xmlns="http://www.example.org/a" a:title="foo">This paragraph should have a green background</q>
+ <s xmlns="http://www.example.org/a" a:title="foobar">This paragraph should be unstyled.</s>
+ <r xmlns="http://www.example.org/b" b:title="foo">This paragraph should be unstyled.</r>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|q { background-color : lime ! important }
+*[a|title=&quot;foo&quot;] {background-color : red }
+</pre>
+   <pre class="rules">
+ &lt;p title=&quot;foo&quot;&gt;This paragraph should be unstyled.&lt;/p&gt;
+ &lt;q xmlns=&quot;http://www.example.org/a&quot; a:title=&quot;foo&quot;&gt;This paragraph should have a green background&lt;/q&gt;
+ &lt;s xmlns=&quot;http://www.example.org/a&quot; a:title=&quot;foobar&quot;&gt;This paragraph should be unstyled.&lt;/s&gt;
+ &lt;r xmlns=&quot;http://www.example.org/b&quot; b:title=&quot;foo&quot;&gt;This paragraph should be unstyled.&lt;/r&gt;
+</pre>
+  </div>
+ </body>
+</html>

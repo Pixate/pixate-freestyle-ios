@@ -1,0 +1,17 @@
+<test>
+	<title>NEGATED :lang() pseudo-class</title>
+	<style type="text/css">div.stub * { background-color : red  }
+div.stub *:not(:lang(fr)) { background-color : green }</style>
+	<div class="testText">
+<div lang="en" class="stub">
+<p background-color="green">This paragraph should have a green background because the
+   enclosing div is in english.</p>
+<p lang="en" background-color="green">This paragraph should have a green background because
+   it is in english.</p>
+<div lang="fr" background-color="red">
+  <p lang="en" background-color="green">This paragraph should have a green background
+     because it is in english.</p>
+</div>
+</div>
+</div>
+</test>

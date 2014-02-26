@@ -1,0 +1,10 @@
+<test>
+	<title>NEGATED :enabled:disabled pseudo-classes</title>
+	<style type="text/css">div :not(:enabled):not(:disabled) { background: lime; }
+p { background : red;}</style>
+	<div class="testText">
+ <div>
+  <p background="lime">This paragraph should have a green background.</p>
+ </div>
+</div>
+</test>

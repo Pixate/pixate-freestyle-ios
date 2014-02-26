@@ -1,0 +1,15 @@
+<test>
+	<title>Nondeterministic matching of descendant and child combinators</title>
+	<style type="text/css">p { color: red; }
+blockquote > div p { color: green; }
+</style>
+	<div class="testText">
+<blockquote>
+<div>
+<div>
+<p color="green">This text should be green.</p>
+</div>
+</div>
+</blockquote>
+</div>
+</test>

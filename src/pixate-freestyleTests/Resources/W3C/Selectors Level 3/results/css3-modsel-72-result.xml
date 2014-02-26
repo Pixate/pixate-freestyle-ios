@@ -1,0 +1,11 @@
+<test>
+	<title>NEGATED :root pseudo-class</title>
+	<style type="text/css">p:not(:root) { background-color: lime; }
+div * { background-color: red; }
+</style>
+	<div class="testText">
+ <div background-color="red">
+  <p background-color="lime">This paragraph should have a green background and there should be no red anywhere.</p>
+ </div>
+</div>
+</test>

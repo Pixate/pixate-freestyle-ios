@@ -1,0 +1,9 @@
+<test>
+	<title>Attribute existence selector</title>
+	<style type="text/css">p { background-color : red }
+p[title] { background-color : lime }</style>
+	<div class="testText">
+<p title="title" background-color="lime">This paragraph should have a green background because its TITLE
+      attribute is set.</p>
+</div>
+</test>

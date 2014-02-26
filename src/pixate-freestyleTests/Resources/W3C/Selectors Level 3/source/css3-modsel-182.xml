@@ -1,0 +1,65 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Namespaces and \: in selectors</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+p { color: green; }
+foo\:bar { background: red; color: yellow; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-181.xml" title="Case sensitivity"/>
+  <link rel="next" href="css3-modsel-183.xml" title="Syntax and parsing of class selectors"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-181.xml" title="Case sensitivity">&lt;==</a>
+     Test #
+     <a href="css3-modsel-183.xml" title="Syntax and parsing of class selectors">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">284 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Namespaces and \: in selectors (ID #182)</td>
+    <td class="a">2004-03-02</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p>
+<foo:bar xmlns:foo="http://www.example.org/">
+This text should be green.
+</foo:bar>
+</p>
+</div>
+   <pre class="rules">
+p { color: green; }
+foo\:bar { background: red; color: yellow; }
+</pre>
+   <pre class="rules">
+&lt;p&gt;
+&lt;foo:bar xmlns:foo=&quot;http://www.example.org/&quot;&gt;
+This text should be green.
+&lt;/foo:bar&gt;
+&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

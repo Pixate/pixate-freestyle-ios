@@ -1,0 +1,15 @@
+<test>
+	<title>NEGATED class selector</title>
+	<style type="text/css">div.stub > * { color : red }
+div.stub *:not(.foo) { color : lime }
+</style>
+	<div class="testText">
+<div class="stub">
+<p color="lime">This paragraph should be in green characters.</p>
+<p class="bar foofoo tut" color="lime">This paragraph should be in green characters.</p>
+<p class="bar foo tut" color="red">
+     <span class="tut foo2" color="lime">This paragraph should be in green characters.</span>
+</p>
+</div>
+</div>
+</test>

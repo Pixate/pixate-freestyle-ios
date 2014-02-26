@@ -1,0 +1,91 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED :nth-of-type() pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.red { background-color : red }
+p:not(:nth-of-type(3)) { background-color : lime }
+dl > *:not(:nth-of-type(3n+1)) { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-74b.xml" title="NEGATED :nth-last-child() pseudo-class"/>
+  <link rel="next" href="css3-modsel-75b.xml" title="NEGATED :nth-of-type() pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-74b.xml" title="NEGATED :nth-last-child() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-75b.xml" title="NEGATED :nth-of-type() pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">105 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED :nth-of-type() pseudo-class (ID #75)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p class="red">This paragraph should have green background</p>
+<address>And this address should be unstyled.</address>
+<p class="red">This paragraph should also have green background!</p>
+<p>But this one should be unstyled again.</p>
+<dl>
+  <dt>First definition term</dt>
+    <dd>First definition</dd>
+  <dt class="red">Second definition term that should have green background</dt>
+    <dd class="red">Second definition that should have green background</dd>
+  <dt class="red">Third definition term that should have green background</dt>
+    <dd class="red">Third definition that should have green background</dd>
+  <dt>Fourth definition term</dt>
+    <dd>Fourth definition</dd>
+  <dt class="red">Fifth definition term that should have green background</dt>
+    <dd class="red">Fifth definition that should have green background</dd>
+  <dt class="red">Sixth definition term that should have green background</dt>
+    <dd class="red">Sixth definition that should have green background</dd>
+</dl>
+</div>
+   <pre class="rules">.red { background-color : red }
+p:not(:nth-of-type(3)) { background-color : lime }
+dl &gt; *:not(:nth-of-type(3n+1)) { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;p class=&quot;red&quot;&gt;This paragraph should have green background&lt;/p&gt;
+&lt;address&gt;And this address should be unstyled.&lt;/address&gt;
+&lt;p class=&quot;red&quot;&gt;This paragraph should also have green background!&lt;/p&gt;
+&lt;p&gt;But this one should be unstyled again.&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt&gt;First definition term&lt;/dt&gt;
+    &lt;dd&gt;First definition&lt;/dd&gt;
+  &lt;dt class=&quot;red&quot;&gt;Second definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;Second definition that should have green background&lt;/dd&gt;
+  &lt;dt class=&quot;red&quot;&gt;Third definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;Third definition that should have green background&lt;/dd&gt;
+  &lt;dt&gt;Fourth definition term&lt;/dt&gt;
+    &lt;dd&gt;Fourth definition&lt;/dd&gt;
+  &lt;dt class=&quot;red&quot;&gt;Fifth definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;Fifth definition that should have green background&lt;/dd&gt;
+  &lt;dt class=&quot;red&quot;&gt;Sixth definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;Sixth definition that should have green background&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+  </div>
+ </body>
+</html>

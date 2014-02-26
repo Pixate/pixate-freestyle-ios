@@ -1,0 +1,61 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Syntax and parsing of unknown pseudo-classes</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+  p { background: lime; }
+  p:subject { background: red; } /* this is not valid CSS, and if UAs
+  implemented the experimental :subject pseudo-class they should have
+  used the :-vnd-ident syntax. */
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-159.xml" title="Syntax and parsing of new pseudo-elements"/>
+  <link rel="next" href="css3-modsel-161.xml" title="Syntax and parsing of unknown pseudo-classes and pseudo-elements"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-159.xml" title="Syntax and parsing of new pseudo-elements">&lt;==</a>
+     Test #
+     <a href="css3-modsel-161.xml" title="Syntax and parsing of unknown pseudo-classes and pseudo-elements">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">251 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Syntax and parsing of unknown pseudo-classes (ID #160)</td>
+    <td class="a">2001-11-20</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+ <p>This line should have a green background.</p>
+</div>
+   <pre class="rules">
+  p { background: lime; }
+  p:subject { background: red; } /* this is not valid CSS, and if UAs
+  implemented the experimental :subject pseudo-class they should have
+  used the :-vnd-ident syntax. */
+</pre>
+   <pre class="rules">
+ &lt;p&gt;This line should have a green background.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

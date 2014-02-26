@@ -1,0 +1,9 @@
+<test>
+	<title>Substring matching attribute selector (beginning)</title>
+	<style type="text/css">p { background-color : red }
+p[title^="foo"] { background-color : lime }</style>
+	<div class="testText">
+<p title="foobar" background-color="lime">This paragraph should have a green background<br/>
+because its title attribute begins with "foo"</p>
+</div>
+</test>

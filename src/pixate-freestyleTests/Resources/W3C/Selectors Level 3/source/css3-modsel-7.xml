@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute multivalue selector</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p { background-color : red }
+p[class~="b"] { background-color : lime }
+address { background-color : red }
+address[title~="foo"] { background-color : lime }
+span[class~="b"] { background-color : red }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-6.xml" title="Attribute value selector"/>
+  <link rel="next" href="css3-modsel-7b.xml" title="Attribute multivalue selector"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-6.xml" title="Attribute value selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-7b.xml" title="Attribute multivalue selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">8 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute multivalue selector (ID #7)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p class="a b c">This paragraph should have green background because CLASS
+  contains &quot;b&quot;</p>
+<address title="tot foo bar">
+<span class="a c">This address should also</span>
+  <span class="a bb c">have green background because the selector in the last
+    rule does not apply to the inner SPANs.</span>
+</address>
+</div>
+   <pre class="rules">p { background-color : red }
+p[class~=&quot;b&quot;] { background-color : lime }
+address { background-color : red }
+address[title~=&quot;foo&quot;] { background-color : lime }
+span[class~=&quot;b&quot;] { background-color : red }</pre>
+   <pre class="rules">
+&lt;p class=&quot;a b c&quot;&gt;This paragraph should have green background because CLASS
+  contains &amp;quot;b&amp;quot;&lt;/p&gt;
+&lt;address title=&quot;tot foo bar&quot;&gt;
+&lt;span class=&quot;a c&quot;&gt;This address should also&lt;/span&gt;
+  &lt;span class=&quot;a bb c&quot;&gt;have green background because the selector in the last
+    rule does not apply to the inner SPANs.&lt;/span&gt;
+&lt;/address&gt;
+</pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,7 @@
+<test>
+	<title>Type element selectors</title>
+	<style type="text/css">address { background-color: lime }</style>
+	<div class="testText">
+<address background-color="lime">This address element should have a green background.</address>
+</div>
+</test>

@@ -1,0 +1,28 @@
+<test>
+	<title>:nth-of-type() pseudo-class with hidden elements</title>
+	<style type="text/css">
+  line { display: block; }
+  [type~=odd] { background: lime ! important; }
+  line:nth-of-type(odd) { background: red; }
+  [hidden] { display: none; }
+</style>
+	<div class="testText">
+ <test xmlns="http://www.example.org/">
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+  <line type="even" display="block">This line should be unstyled.</line>
+  <line hidden="hidden" type="odd" display="none" background="lime">This line should be green.</line>
+  <line type="even" display="block">This line should be unstyled.</line>
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+  <line type="even" display="block">This line should be unstyled.</line>
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+  <line hidden="hidden" type="even" display="none">This line should be unstyled.</line>
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+  <line type="even" display="block">This line should be unstyled.</line>
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+  <line hidden="hidden" type="even" display="none">This line should be unstyled.</line>
+  <line hidden="hidden" type="odd" display="none" background="lime">This line should be green.</line>
+  <line type="even" display="block">This line should be unstyled.</line>
+  <line type="odd" background="lime" display="block">This line should be green.</line>
+ </test> 
+</div>
+</test>

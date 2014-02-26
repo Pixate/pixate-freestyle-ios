@@ -1,0 +1,14 @@
+<test>
+	<title>NEGATED Attribute selectors with multiple attributes</title>
+	<style type="text/css">
+ tests, tests * { display: block; color: green }
+ testA:not([*|attribute="pass"]) { color: red; }
+ testB:not([*|attribute="pass"]) { color: red; }
+</style>
+	<div class="testText">
+  <tests xmlns:test="http://css.example.net/" xmlns="http://css.example.net/" display="block" color="green">
+   <testA attribute="pass" test:attribute="fail" color="red" display="block">This should be green.</testA>
+   <testB attribute="fail" test:attribute="pass" color="red" display="block">This should be green.</testB>
+  </tests>
+</div>
+</test>

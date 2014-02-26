@@ -1,0 +1,19 @@
+<test>
+	<title>:lang() pseudo-class</title>
+	<style type="text/css">ul > li { background-color : red }
+li:lang(en-GB) { background-color : lime }</style>
+	<div class="testText">
+<ul>
+  <li lang="en-GB" background-color="red">This list item should be green because its language is
+        British English</li>
+  <li lang="en-GB-wa" background-color="red">This list item should be green because its language
+        is British English (Wales)</li>
+</ul>
+<ol>
+  <li lang="en-US">This list item should NOT be green because its language
+       is US English</li>
+  <li lang="fr">This list item should NOT be green because its language is
+       French</li>
+</ol>
+</div>
+</test>

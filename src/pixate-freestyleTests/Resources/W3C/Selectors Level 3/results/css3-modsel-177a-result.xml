@@ -1,0 +1,9 @@
+<test>
+	<title>Parsing : vs ::</title>
+	<style type="text/css">
+ p:selection { color: yellow; background: red; }
+</style>
+	<div class="testText">
+  <p>When you select this text, it shouldn't go red.</p>
+</div>
+</test>

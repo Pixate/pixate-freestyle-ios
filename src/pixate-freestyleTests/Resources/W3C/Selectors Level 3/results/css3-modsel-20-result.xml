@@ -1,0 +1,9 @@
+<test>
+	<title>:focus pseudo-class</title>
+	<style type="text/css">a:focus { background-color : lime }</style>
+	<div class="testText">
+<p>The background color of <a href="#foo">anchors</a>
+  in this page should turn <a href="#foo">to green</a> when they have the
+  <a href="#foo">focus</a>.</p>
+</div>
+</test>

@@ -1,0 +1,12 @@
+<test>
+	<title>NEGATED :active pseudo-class</title>
+	<style type="text/css">div.stub * { color : lime }
+div.stub > * > *:not(:active) { color : black }
+</style>
+	<div class="testText">
+ <div class="stub">
+  <p color="lime"> <a href="http://dummy.example.org/dummy" color="black">This text should turn green while it is active.</a> </p>
+  <p color="lime"> <button color="black">This text should turn green while it is active.</button> </p>
+ </div>
+</div>
+</test>

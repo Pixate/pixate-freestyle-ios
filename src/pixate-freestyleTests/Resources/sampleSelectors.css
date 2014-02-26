@@ -1,0 +1,59 @@
+/* elements */
+abc { background-color: red; }
+def { background-color: green; }
+ghi { background-color: blue; }
+jkl { background-color: cyan; }
+mno { background-color: magenta; }
+pqr { background-color: yellow; }
+stu { background-color: black; }
+vwx { background-color: white; }
+yyy { background-color: orange; }
+zzz { background-color: purple; }
+
+/* ids */
+#abc { border: black solid 1px; }
+#def { border: black solid 2px; }
+#ghi { border: black solid 3px; }
+#jkl { border: black solid 4px; }
+#mno { border: black solid 5px; }
+#pqr { border: black solid 6px; }
+#stu { border: black solid 7px; }
+#vwx { border: black solid 8px; }
+#yyy { border: black solid 9px; }
+#zzz { border: black solid 10px; }
+
+/* classes */
+.abc { color: red; }
+.def { color: green; }
+.ghi { color: blue; }
+.jkl { color: cyan; }
+.mno { color: magenta; }
+.pqr { color: yellow; }
+.stu { color: black; }
+.vwx { color: white; }
+.yyy { color: orange; }
+.zzz { color: purple; }
+
+/* uncategorizeable selectors */
+[attr] {};
+[attr^="abc"] {}
+[attr$="abc"] {}
+[attr*="abc"] {}
+[attr="abc"] {}
+[attr~="abc"] {}
+[attr|="abc"] {}
+
+:selected {}
+:not(...) {}
+:root {}
+:first-child {}
+:last-child {}
+:first-of-type {}
+:last-of-type {}
+:only {}
+:only-of-type {}
+:empty {}
+:nth-child() {}
+:nth-last-child() {}
+:nth-of-type {}
+:nth-last-of-type() {}

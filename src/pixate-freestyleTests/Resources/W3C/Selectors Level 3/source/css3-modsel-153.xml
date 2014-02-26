@@ -1,0 +1,63 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:empty pseudo-class and CDATA</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+ address { background: red; margin: 0; height: 1em; display: block; }
+ address:empty { background: lime; }
+ .text { margin: -1em 0 0 0; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-152.xml" title=":empty pseudo-class and elements"/>
+  <link rel="next" href="css3-modsel-154.xml" title="Syntax and parsing"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-152.xml" title=":empty pseudo-class and elements">&lt;==</a>
+     Test #
+     <a href="css3-modsel-154.xml" title="Syntax and parsing">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">238 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:empty pseudo-class and CDATA (ID #153)</td>
+    <td class="a">2004-04-24</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <address xmlns="http://tests.example.org/xml-only/"><![CDATA[]]></address>
+ <div class="text">This line should have a green background.</div>
+ <p>(Note: This test is based on unpublished errata.)</p>
+</div>
+   <pre class="rules">
+ address { background: red; margin: 0; height: 1em; display: block; }
+ address:empty { background: lime; }
+ .text { margin: -1em 0 0 0; }
+</pre>
+   <pre class="rules">
+ &lt;address xmlns=&quot;http://tests.example.org/xml-only/&quot;&gt;&lt;![CDATA[]]&gt;&lt;/address&gt;
+ &lt;div class=&quot;text&quot;&gt;This line should have a green background.&lt;/div&gt;
+ &lt;p&gt;(Note: This test is based on unpublished errata.)&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

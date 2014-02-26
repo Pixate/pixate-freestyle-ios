@@ -1,0 +1,14 @@
+<test>
+	<title>NEGATED :first-of-type pseudo-class</title>
+	<style type="text/css">.red { background-color : red }
+address { margin-bottom : 1em ; margin-left : 1em }
+address:not(:first-of-type) { background-color : lime }
+</style>
+	<div class="testText">
+<div>This div contains 3 addresses :
+<address margin-bottom="1.000000em" margin-left="1.000000em">A first address with normal background</address>
+<address class="red" background-color="lime" margin-bottom="1.000000em" margin-left="1.000000em">A second address that should have a green background</address>
+<address class="red" background-color="lime" margin-bottom="1.000000em" margin-left="1.000000em">A third address that should have a green background</address>
+</div>
+</div>
+</test>

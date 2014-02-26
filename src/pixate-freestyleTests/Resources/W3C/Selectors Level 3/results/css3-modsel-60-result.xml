@@ -1,0 +1,15 @@
+<test>
+	<title>NEGATED ID selector</title>
+	<style type="text/css">div.stub > * { color : red }
+div.stub *:not(#foo) { color : lime }
+</style>
+	<div class="testText">
+<div class="stub">
+<p color="lime">This paragraph should be in green characters.</p>
+<p id="foo2" color="lime">This paragraph should be in green characters.</p>
+<p id="foo" color="red">
+     <span color="lime">This paragraph should be in green characters.</span>
+</p>
+</div>
+</div>
+</test>

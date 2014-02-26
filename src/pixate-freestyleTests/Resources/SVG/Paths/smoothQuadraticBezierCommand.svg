@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="200" height="190" viewBox="0 0 200 190">
+
+  <path
+    stroke="darkblue" stroke-width="5"
+    fill="blue"
+    d="M40,70 Q50,150 90,90 T135,130"/>
+
+  <!-- Implied smooth quadratic bezier follows smooth quadratic bezier -->
+</svg>

@@ -1,0 +1,24 @@
+
+#createPostSheet > #createPostFormHolder
+{
+	background-color: #f4f1eb;
+}
+
+#createPostFormHolder > #createPostTextView
+{
+	background-color: #fffdfd;
+	font-family: "Avenir Next";
+	font-weight: medium;
+	font-size: 12px;
+	border-color: #d2d2d2;
+	border-width: 1px;
+	border-radius: 2px;
+	background-inset: 0px 0px 0px 0px;
+}
+
+#createPostFormHolder > #createPostSubmitButton
+{
+	background-color: #526270;
+	border-color: #4f5a64;
+	border-width: 1px;
+}

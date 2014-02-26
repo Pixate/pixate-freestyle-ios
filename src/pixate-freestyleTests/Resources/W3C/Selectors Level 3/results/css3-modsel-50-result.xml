@@ -1,0 +1,14 @@
+<test>
+	<title>NEGATED attribute existence selector</title>
+	<style type="text/css">@namespace a url(http://www.example.org/a);
+a|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test]) { color : lime }</style>
+	<div class="testText">
+<div class="stub">
+<q xmlns="http://www.example.org/a" test="1" color="red" display="block" margin-bottom="1.000000em">
+  <r color="lime" display="block" margin-bottom="1.000000em">This text should be in green characters</r>
+</q>
+<s xmlns="http://www.example.org/a" color="lime" display="block" margin-bottom="1.000000em">This text should be in green characters</s>
+</div>
+</div>
+</test>

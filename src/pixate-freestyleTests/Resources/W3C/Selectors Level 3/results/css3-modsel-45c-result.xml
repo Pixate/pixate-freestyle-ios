@@ -1,0 +1,11 @@
+<test>
+	<title>Direct adjacent combinator and classes</title>
+	<style type="text/css">
+  .fail + div { background: red; }
+  .control { background: lime; }
+</style>
+	<div class="testText">
+  <div> This should be unstyled. </div>
+  <div class="control" background="lime"> This should have a green background. </div>
+</div>
+</test>

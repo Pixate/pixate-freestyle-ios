@@ -1,0 +1,55 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Type element selector without declared namespace</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace test url(http://www.example.org/b);
+*|testA { background-color : red }
+|testA {background-color : lime }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-92.xml" title="Type element selector with universal namespace"/>
+  <link rel="next" href="css3-modsel-94.xml" title="Universal selector with declared namespace"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-92.xml" title="Type element selector with universal namespace">&lt;==</a>
+     Test #
+     <a href="css3-modsel-94.xml" title="Universal selector with declared namespace">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">130 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Type element selector without declared namespace (ID #93)</td>
+    <td class="a">2001-11-13</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<testA xmlns="">This paragraph has no declared namespace and should have a green background.</testA>
+</div>
+   <pre class="rules">@namespace test url(http://www.example.org/b);
+*|testA { background-color : red }
+|testA {background-color : lime }</pre>
+   <pre class="rules">
+&lt;testA xmlns=&quot;&quot;&gt;This paragraph has no declared namespace and should have a green background.&lt;/testA&gt;
+</pre>
+  </div>
+ </body>
+</html>

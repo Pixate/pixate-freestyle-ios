@@ -1,0 +1,10 @@
+<test>
+	<title>Syntax and parsing</title>
+	<style type="text/css">
+  p { background: lime; }
+  p, { background: red; }
+</style>
+	<div class="testText">
+ <p background="lime">This line should have a green background.</p>
+</div>
+</test>

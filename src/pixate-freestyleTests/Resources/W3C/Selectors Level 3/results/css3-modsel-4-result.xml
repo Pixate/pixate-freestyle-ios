@@ -1,0 +1,8 @@
+<test>
+	<title>Omitted universal selector</title>
+	<style type="text/css">#foo { background-color : lime }
+p { background-color : red }</style>
+	<div class="testText">
+<p id="foo" background-color="lime">This paragraph should have a green background</p>
+</div>
+</test>

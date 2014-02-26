@@ -1,0 +1,146 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:hover pseudo-class</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[p:hover { background-color : lime }
+a:hover { background-color : lime }
+
+tr:hover { background-color : green }
+td:hover { background-color : lime }
+
+table { border-spacing: 5px; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-17.xml" title=":visited pseudo-class"/>
+  <link rel="next" href="css3-modsel-18a.xml" title=":hover pseudo-class on links"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-17.xml" title=":visited pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-18a.xml" title=":hover pseudo-class on links">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">25 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:hover pseudo-class (ID #18)</td>
+    <td class="a">2005-10-20</td>
+    <td class="a">1.2</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p>The background color of this paragraph should turn to green when
+   the mouse pointer hovers either its text (<strong>here</strong>) or its whitespace background, <strong>here</strong>:</p>
+<address>The background color of <a href="#foo">this anchor (<strong>here</strong>)</a> should turn to green when the pointing device hovers over it.</address>
+<table>
+ <tbody>
+  <tr>
+   <td>The cells in</td>
+   <td>this table</td>
+   <td>should go</td>
+  </tr>
+  <tr>
+   <td>green when</td>
+   <td>you hover</td>
+   <td>the pointing</td>
+  </tr>
+  <tr>
+   <td>device over</td>
+   <td>them (<strong>here</strong>).</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>The rows in</td>
+   <td>this table</td>
+   <td>should go</td>
+  </tr>
+  <tr>
+   <td>dark green</td>
+   <td>when the</td>
+   <td>pointing device</td>
+  </tr>
+  <tr>
+   <td>is over the</td>
+   <td>cells <strong>there</strong>:</td>
+   <td></td> <!-- remove this cell to make an evil test; row should still go green, but cell should not -->
+  </tr>
+  <tr>
+   <td>And <strong>here</strong>:</td>
+   <td></td>
+   <td>(blank cells).</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+   <pre class="rules">p:hover { background-color : lime }
+a:hover { background-color : lime }
+
+tr:hover { background-color : green }
+td:hover { background-color : lime }
+
+table { border-spacing: 5px; }</pre>
+   <pre class="rules">
+&lt;p&gt;The background color of this paragraph should turn to green when
+   the mouse pointer hovers either its text (&lt;strong&gt;here&lt;/strong&gt;) or its whitespace background, &lt;strong&gt;here&lt;/strong&gt;:&lt;/p&gt;
+&lt;address&gt;The background color of &lt;a href=&quot;#foo&quot;&gt;this anchor (&lt;strong&gt;here&lt;/strong&gt;)&lt;/a&gt; should turn to green when the pointing device hovers over it.&lt;/address&gt;
+&lt;table&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td&gt;The cells in&lt;/td&gt;
+   &lt;td&gt;this table&lt;/td&gt;
+   &lt;td&gt;should go&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;green when&lt;/td&gt;
+   &lt;td&gt;you hover&lt;/td&gt;
+   &lt;td&gt;the pointing&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;device over&lt;/td&gt;
+   &lt;td&gt;them (&lt;strong&gt;here&lt;/strong&gt;).&lt;/td&gt;
+   &lt;td&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;The rows in&lt;/td&gt;
+   &lt;td&gt;this table&lt;/td&gt;
+   &lt;td&gt;should go&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;dark green&lt;/td&gt;
+   &lt;td&gt;when the&lt;/td&gt;
+   &lt;td&gt;pointing device&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;is over the&lt;/td&gt;
+   &lt;td&gt;cells &lt;strong&gt;there&lt;/strong&gt;:&lt;/td&gt;
+   &lt;td&gt;&lt;/td&gt; &lt;!-- remove this cell to make an evil test; row should still go green, but cell should not --&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;And &lt;strong&gt;here&lt;/strong&gt;:&lt;/td&gt;
+   &lt;td&gt;&lt;/td&gt;
+   &lt;td&gt;(blank cells).&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+  </div>
+ </body>
+</html>

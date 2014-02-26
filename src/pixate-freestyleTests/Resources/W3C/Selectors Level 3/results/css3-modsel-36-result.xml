@@ -1,0 +1,13 @@
+<test>
+	<title>:only-child pseudo-class</title>
+	<style type="text/css">.red { background-color : red }
+p:only-child { background-color : lime }
+div.testText > div > p { margin-left : 1em }
+</style>
+	<div class="testText">
+<p>This paragraph should have normal background</p>
+<div>This div contains only one paragraph
+    <p class="red" margin-left="1.000000em" background-color="lime">This paragraph should have green background</p>
+</div>
+</div>
+</test>

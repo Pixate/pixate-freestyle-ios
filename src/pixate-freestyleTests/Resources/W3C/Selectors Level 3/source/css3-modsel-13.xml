@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Class selectors</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[li { background-color : red }
+.t1 { background-color : lime }
+li.t2 { background-color : lime }
+.t3 { background-color : red }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-11.xml" title="Substring matching attribute selector (contains)"/>
+  <link rel="next" href="css3-modsel-14.xml" title="More than one class selector"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-11.xml" title="Substring matching attribute selector (contains)">&lt;==</a>
+     Test #
+     <a href="css3-modsel-14.xml" title="More than one class selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">14 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Class selectors (ID #13)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<ul>
+  <li class="t1">This list item should have green background because its class is &quot;t1&quot;</li>
+  <li class="t2">This list item should have green background because its class is &quot;t2&quot;</li>
+  <li class="t2">
+<span class="t33">This list item should have green background because 
+        the inner SPAN does not match SPAN.t3</span>
+</li>
+</ul>
+</div>
+   <pre class="rules">li { background-color : red }
+.t1 { background-color : lime }
+li.t2 { background-color : lime }
+.t3 { background-color : red }</pre>
+   <pre class="rules">
+&lt;ul&gt;
+  &lt;li class=&quot;t1&quot;&gt;This list item should have green background because its class is &amp;quot;t1&amp;quot;&lt;/li&gt;
+  &lt;li class=&quot;t2&quot;&gt;This list item should have green background because its class is &amp;quot;t2&amp;quot;&lt;/li&gt;
+  &lt;li class=&quot;t2&quot;&gt;
+&lt;span class=&quot;t33&quot;&gt;This list item should have green background because 
+        the inner SPAN does not match SPAN.t3&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+  </div>
+ </body>
+</html>

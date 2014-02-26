@@ -1,0 +1,11 @@
+<test>
+	<title>NEGATED :focus pseudo-class</title>
+	<style type="text/css">a:not(:focus) { background-color: transparent; }
+a { background-color: lime; }
+</style>
+	<div class="testText">
+<p>The background color of all <a href="#foo" background-color="transparent">anchors</a>
+  should become <a href="#foo" background-color="transparent"> green</a> when they have the
+  <a href="#foo" background-color="transparent">focus</a>.</p>
+</div>
+</test>

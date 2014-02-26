@@ -1,0 +1,7 @@
+<test>
+	<title>:active pseudo-class on controls</title>
+	<style type="text/css">button:active { background: green; color: white; }</style>
+	<div class="testText">
+<p><button>Activating (e.g. holding the mouse button down on) this button should make it go green.</button></p>
+</div>
+</test>

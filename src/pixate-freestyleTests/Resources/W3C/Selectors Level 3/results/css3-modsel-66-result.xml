@@ -1,0 +1,18 @@
+<test>
+	<title>NEGATED :target pseudo-class</title>
+	<style type="text/css">p { background-color: navy; color: white; }
+p:not(:target) { background-color: white; color: black; }</style>
+	<div class="testText">
+<p id="first" background-color="white" color="black">This paragraph should be unstyled.
+       The background of the following paragraph should become blue when
+       you follow <a href="#second">this link</a>.</p>
+<p id="second" background-color="white" color="black">This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you select
+       <a href="#third">this link</a>, it should return to being unstyled and the 
+       background of the paragraph below should become blue.</p>
+<p id="third" background-color="white" color="black">This paragraph should initially be unstyled.
+       It should become blue when you select the link above. When you follow
+       <a href="#missing">this link</a>, the three paragraphs
+       should all return to being unstyled.</p>
+</div>
+</test>

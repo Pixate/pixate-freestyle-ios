@@ -1,0 +1,9 @@
+<test>
+	<title>Substring matching attribute selector (end)</title>
+	<style type="text/css">p { background-color : red }
+p[title$="bar"] { background-color : lime }</style>
+	<div class="testText">
+<p title="foobar" background-color="lime">This paragraph should have a green background because
+its title attribute ends with "bar"</p>
+</div>
+</test>

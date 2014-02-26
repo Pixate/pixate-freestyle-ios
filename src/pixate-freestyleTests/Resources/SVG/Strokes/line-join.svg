@@ -1,0 +1,22 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg    xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" width="220px" height="185px"
+        viewBox="0 0 220 185" xml:space="preserve">
+
+<path
+    stroke="#806040" stroke-width="20" stroke-linejoin="miter" stroke-miterlimit="10"
+    fill="none"
+    d="M10,10 105,95 200,10"/>
+
+<path
+    stroke="#806040" stroke-width="20" stroke-linejoin="round"
+    fill="none"
+    d="M10,50 105,135 200,50"/>
+
+<path
+    stroke="#806040" stroke-width="20" stroke-linejoin="bevel"
+    fill="none"
+    d="M10,90 105,175 200,90"/>       
+
+</svg>

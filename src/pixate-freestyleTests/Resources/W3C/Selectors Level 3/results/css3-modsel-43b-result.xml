@@ -1,0 +1,29 @@
+<test>
+	<title>Descendant combinator</title>
+	<style type="text/css">.white { background-color: transparent ! important; }
+.green { background-color: lime; }
+div.t1 p { background-color: red; }</style>
+	<div class="testText">
+ <div class="t1">
+  <p class="white" background-color="transparent">This paragraph should be unstyled</p>
+  <table>
+   <tbody>
+    <tr>
+     <td>
+      <p class="white" background-color="transparent">This paragraph should be unstyled</p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <table>
+  <tbody>
+   <tr>
+    <td>
+     <p class="green" background-color="lime">This paragraph should have a green background</p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+</test>

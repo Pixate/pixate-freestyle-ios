@@ -1,0 +1,94 @@
+<test>
+	<title>NEGATED :nth-child() pseudo-class</title>
+	<style type="text/css">.red { background-color : red }
+ul > li:not(:nth-child(odd)) { background-color : lime }
+ol > li:not(:nth-child(even)) { background-color : lime }
+table.t1 tr:not(:nth-child(-n+4)) { background-color : lime }
+table.t2 td:not(:nth-child(3n+1)) { background-color : lime }
+table.t1 td, table.t2 td { border : thin black solid }</style>
+	<div class="testText">
+<ul>
+  <li>First list item</li>
+  <li class="red" background-color="lime">This second list item should have a green background</li>
+  <li>Third list</li>
+  <li class="red" background-color="lime">This fourth list item should have a green background</li>
+  <li>Fifth list item</li>
+  <li class="red" background-color="lime">This sixth list item should have a green background</li>
+</ul>
+<ol>
+  <li class="red" background-color="lime">This first list item should have a green background</li>
+  <li>Second list item</li>
+  <li class="red" background-color="lime">This third list item should have a green background</li>
+  <li>Fourth list item</li>
+  <li class="red" background-color="lime">This fifth list item should have a green background</li>
+  <li>Sixth list item</li>
+</ol>
+<div>
+<table border="1" class="t1">
+  <tr>
+<td border="thin black solid">1.1</td>
+<td border="thin black solid">1.2</td>
+     <td border="thin black solid">1.3</td>
+</tr>
+  <tr>
+<td border="thin black solid">2.1</td>
+<td border="thin black solid">2.2</td>
+     <td border="thin black solid">2.3</td>
+</tr>
+  <tr>
+<td border="thin black solid">3.1</td>
+<td border="thin black solid">3.2</td>
+     <td border="thin black solid">3.3</td>
+</tr>
+  <tr>
+<td border="thin black solid">4.1</td>
+<td border="thin black solid">4.2</td>
+      <td border="thin black solid">4.3</td>
+</tr>
+  <tr class="red" background-color="lime">
+<td border="thin black solid">Green row : 5.1</td>
+<td border="thin black solid">5.2</td>
+<td border="thin black solid">5.3</td>
+</tr>
+  <tr class="red" background-color="lime">
+<td border="thin black solid">Green row : 6.1</td>
+<td border="thin black solid">6.2</td>
+<td border="thin black solid">6.3</td>
+</tr>
+</table>
+<p/>
+<table border="1" class="t2">
+  <tr>
+<td border="thin black solid">1.1</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">1.4</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">1.7</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+</tr>
+  <tr>
+<td border="thin black solid">2.1</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">2.4</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">2.7</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+</tr>
+  <tr>
+<td border="thin black solid">3.1</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">3.4</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+      <td border="thin black solid">3.7</td>
+<td class="red" background-color="lime" border="thin black solid">green cell</td>
+</tr>
+</table>
+</div>
+</div>
+</test>

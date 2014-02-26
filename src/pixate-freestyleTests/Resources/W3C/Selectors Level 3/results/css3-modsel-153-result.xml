@@ -1,0 +1,13 @@
+<test>
+	<title>:empty pseudo-class and CDATA</title>
+	<style type="text/css">
+ address { background: red; margin: 0; height: 1em; display: block; }
+ address:empty { background: lime; }
+ .text { margin: -1em 0 0 0; }
+</style>
+	<div class="testText">
+ <address xmlns="http://tests.example.org/xml-only/" background="lime" margin="0" height="1.000000em" display="block"/>
+ <div class="text" margin="-1.000000em 0 0 0">This line should have a green background.</div>
+ <p>(Note: This test is based on unpublished errata.)</p>
+</div>
+</test>

@@ -1,0 +1,83 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED attribute dash-separated value selector</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+div.stub p { color : red }
+div.stub > a|*, div.stub > b|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test|="foo-bar"]) { color : lime }
+div.stub *|p:not([lang|="en-us"]) { color : lime }
+div.stub b|*[test|="foo2-bar"] { color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-52.xml" title="NEGATED attribute space-separated value selector"/>
+  <link rel="next" href="css3-modsel-54.xml" title="NEGATED substring matching attribute selector on beginning"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-52.xml" title="NEGATED attribute space-separated value selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-54.xml" title="NEGATED substring matching attribute selector on beginning">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">80 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED attribute dash-separated value selector (ID #53)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<div class="stub">
+<q xmlns="http://www.example.org/a" test="foo-bar">
+  <r test="foo-bartut">This text should be</r>
+  <r>in green characters</r>
+</q>
+<s xmlns="http://www.example.org/a" test="bar tut">This text should be in green characters</s>
+<t xmlns="http://www.example.org/a">This text should be in green characters</t>
+<p class="en-uk">This text should be in green characters</p>
+<u xmlns="http://www.example.org/b" test="foo2-bar-lol">This text should be in green characters</u>
+</div>
+</div>
+   <pre class="rules">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+div.stub p { color : red }
+div.stub &gt; a|*, div.stub &gt; b|* { color : red ; display : block ; margin-bottom : 1em }
+div.stub *|*:not([test|=&quot;foo-bar&quot;]) { color : lime }
+div.stub *|p:not([lang|=&quot;en-us&quot;]) { color : lime }
+div.stub b|*[test|=&quot;foo2-bar&quot;] { color : lime }
+</pre>
+   <pre class="rules">
+&lt;div class=&quot;stub&quot;&gt;
+&lt;q xmlns=&quot;http://www.example.org/a&quot; test=&quot;foo-bar&quot;&gt;
+  &lt;r test=&quot;foo-bartut&quot;&gt;This text should be&lt;/r&gt;
+  &lt;r&gt;in green characters&lt;/r&gt;
+&lt;/q&gt;
+&lt;s xmlns=&quot;http://www.example.org/a&quot; test=&quot;bar tut&quot;&gt;This text should be in green characters&lt;/s&gt;
+&lt;t xmlns=&quot;http://www.example.org/a&quot;&gt;This text should be in green characters&lt;/t&gt;
+&lt;p class=&quot;en-uk&quot;&gt;This text should be in green characters&lt;/p&gt;
+&lt;u xmlns=&quot;http://www.example.org/b&quot; test=&quot;foo2-bar-lol&quot;&gt;This text should be in green characters&lt;/u&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

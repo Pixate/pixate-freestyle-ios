@@ -1,0 +1,19 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg    xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" width="220px" height="220px"
+        viewBox="0 0 220 220" xml:space="preserve">
+
+<rect
+    stroke="#806040" stroke-width="5" stroke-type="inner"
+    fill="#406080"
+    x="5" y="5" width="100" height="100"/>
+    
+<rect
+    stroke="#806040" stroke-width="5"  stroke-type="center"
+    fill="#406080"
+    x="115" y="5" width="100" height="100"/>
+
+<!-- TODO: outer stroke type -->
+
+</svg>

@@ -1,0 +1,13 @@
+<test>
+	<title>:hover pseudo-class</title>
+	<style type="text/css">div:hover > p:first-child { background-color : lime }</style>
+	<div class="testText">
+ <div>
+  <p>The background color of this paragraph should turn to green when the mouse pointer hovers over any of the following:<br/><strong>This text.</strong></p>
+  <p>This text.</p>
+  <table><tr><td><table><tr><td><dl><dt>This text.</dt><dd>This text.</dd></dl></td></tr></table></td></tr><tr><td>This text.</td></tr></table>
+  <p><sub>This text.</sub></p>
+  <p>...and anything else between the top of the first paragraph and the bottom of this paragraph.</p>
+ </div>
+</div>
+</test>

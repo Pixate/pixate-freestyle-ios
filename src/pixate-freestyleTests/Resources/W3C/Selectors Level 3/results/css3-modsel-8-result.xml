@@ -1,0 +1,16 @@
+<test>
+	<title>Attribute value selectors (hyphen-separated attributes)</title>
+	<style type="text/css">p { background-color : red }
+p[lang|="en"] { background-color : lime }
+address { background-color : red }
+address[lang="fi"] { background-color : lime }
+span[lang|="fr"] { background-color : red }</style>
+	<div class="testText">
+<p lang="en-gb" background-color="lime">This paragraph should have green background because its language is "en-gb"</p>
+<address lang="fi" background-color="lime">
+<span lang="en-us">This address should also</span>
+  <span lang="en-fr">have green background because the language of the inner SPANs
+     is not French.</span>
+</address>
+</div>
+</test>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="420" height="175" viewBox="0 0 420 175">
+
+  <path
+    stroke="darkblue" stroke-width="10"
+    fill="blue"
+    d="M10,10 q100,100 200,0 q100,100 200,0"/>
+
+  <!-- Implied relative quadratic bezier follows relative quadratic bezier -->
+  <path
+    stroke="darkred" stroke-width="10"
+    fill="red"
+    d="M10,110 q100,100 200,0 100,100 200,0"/>
+
+</svg>

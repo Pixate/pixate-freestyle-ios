@@ -1,0 +1,34 @@
+<test>
+	<title>:nth-last-of-type() pseudo-class with collapsed elements</title>
+	<style type="text/css">
+  line { display: block; }
+  [type~=match] { background: lime ! important; }
+  line:nth-last-of-type(3n-1) { background: red; }
+  [hidden] { visibility: collapse; }
+</style>
+	<div class="testText">
+ <test xmlns="http://www.example.org/">
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line hidden="hidden" type="match" visibility="collapse" background="lime" display="block">This line should be green.</line>
+  <line hidden="hidden" type="" visibility="collapse" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line hidden="hidden" type="" visibility="collapse" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+ </test> 
+</div>
+</test>

@@ -1,0 +1,71 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED type element selector</title>
+  <meta name="author" content="Daniel Glazman, Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[div.stub span, div.stub address, div.stub *|q, div.stub *|r { background-color: red; }
+address, *|q, *|r { display: block; margin: 1em; }
+div.stub *:not(p) { background-color: lime; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-46b.xml" title="Indirect adjacent combinator"/>
+  <link rel="next" href="css3-modsel-48.xml" title="NEGATED universal selector"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-46b.xml" title="Indirect adjacent combinator">&lt;==</a>
+     Test #
+     <a href="css3-modsel-48.xml" title="NEGATED universal selector">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">74 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED type element selector (ID #47)</td>
+    <td class="a">2001-11-12</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support namespaces for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+ <div class="stub">
+  <p>
+   <span>The text in this paragraph should have a green background</span>
+  </p>
+  <address>This address should have a green background</address>
+  <q xmlns="http://www.example.org/a">This element in another namespace should have a green background.</q>
+  <r xmlns="">This element without a namespace should have a green background.</r>
+  <p>This paragraph should be unstyled.</p>
+ </div>
+</div>
+   <pre class="rules">div.stub span, div.stub address, div.stub *|q, div.stub *|r { background-color: red; }
+address, *|q, *|r { display: block; margin: 1em; }
+div.stub *:not(p) { background-color: lime; }</pre>
+   <pre class="rules">
+ &lt;div class=&quot;stub&quot;&gt;
+  &lt;p&gt;
+   &lt;span&gt;The text in this paragraph should have a green background&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;address&gt;This address should have a green background&lt;/address&gt;
+  &lt;q xmlns=&quot;http://www.example.org/a&quot;&gt;This element in another namespace should have a green background.&lt;/q&gt;
+  &lt;r xmlns=&quot;&quot;&gt;This element without a namespace should have a green background.&lt;/r&gt;
+  &lt;p&gt;This paragraph should be unstyled.&lt;/p&gt;
+ &lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

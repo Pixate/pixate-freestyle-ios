@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="180" height="220" viewBox="0 0 180 220">
+
+  <path
+    stroke="darkblue" stroke-width="5"
+    fill="blue"
+    d="M60,10 a50,50 0 1 1 0,100 a50,50 0 1 0 0,100"/>
+
+  <!-- Implied relative arc follows relative arc -->
+  <path
+    stroke="darkred" stroke-width="5"
+    fill="red"
+    d="M120,10 a50,50 0 1 1 0,100 50,50 0 1 0 0,100"/>
+
+</svg>

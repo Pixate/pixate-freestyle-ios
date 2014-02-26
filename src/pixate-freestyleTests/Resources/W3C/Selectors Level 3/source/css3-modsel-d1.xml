@@ -1,0 +1,96 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED Dynamic handling of :empty</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+   #test { background: red; display: block; padding: 1em; }
+   #test:not(:empty) { background: lime; }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-184f.xml" title="NEGATED contains attribute selector with empty value"/>
+  <link rel="next" href="css3-modsel-d1b.xml" title="Dynamic handling of :empty"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-184f.xml" title="NEGATED contains attribute selector with empty value">&lt;==</a>
+     Test #
+     <a href="css3-modsel-d1b.xml" title="Dynamic handling of :empty">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">292 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED Dynamic handling of :empty (ID #d1)</td>
+    <td class="a">2004-03-03</td>
+    <td class="a">1.1</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: The UA must support ECMA-262 and DOM Level 2 Core for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+
+ <div>
+
+  <script type="text/javascript">
+   <![CDATA[
+
+    function test() {
+      document.getElementById('test').appendChild(document.createTextNode('This line should be green.'));
+    }
+
+    window.setTimeout("test()", 100);
+   ]]>
+  </script>
+
+  <p> The following bar should be green. </p>
+
+  <div id="test"></div>
+
+ </div>
+
+</div>
+   <pre class="rules">
+   #test { background: red; display: block; padding: 1em; }
+   #test:not(:empty) { background: lime; }
+</pre>
+   <pre class="rules">
+
+ &lt;div&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+   &lt;![CDATA[
+
+    function test() {
+      document.getElementById(&#39;test&#39;).appendChild(document.createTextNode(&#39;This line should be green.&#39;));
+    }
+
+    window.setTimeout(&quot;test()&quot;, 100);
+   ]]&gt;
+  &lt;/script&gt;
+
+  &lt;p&gt; The following bar should be green. &lt;/p&gt;
+
+  &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+
+ &lt;/div&gt;
+
+</pre>
+  </div>
+ </body>
+</html>

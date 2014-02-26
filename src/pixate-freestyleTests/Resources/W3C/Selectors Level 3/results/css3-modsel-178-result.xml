@@ -1,0 +1,13 @@
+<test>
+	<title>Parsing: :not and pseudo-elements</title>
+	<style type="text/css">
+ div { color: green; }
+ p:not(:first-line) { color: yellow; background: red; }
+ p:not(:after) { color: yellow; background: red; content: ' THIS TEST HAS FAILED! '; }
+</style>
+	<div class="testText">
+ <div color="green">
+  <p color="yellow" background="red" content=" THIS TEST HAS FAILED! ">This line should be green.</p>
+ </div>
+</div>
+</test>

@@ -1,0 +1,91 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:nth-of-type() pseudo-class</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[.red { background-color : red }
+p:nth-of-type(3) { background-color : lime }
+dl > :nth-of-type(3n+1) { background-color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-29b.xml" title=":nth-last-child() pseudo-class"/>
+  <link rel="next" href="css3-modsel-31.xml" title=":nth-last-of-type() pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-29b.xml" title=":nth-last-child() pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-31.xml" title=":nth-last-of-type() pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">46 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:nth-of-type() pseudo-class (ID #30)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<p>This paragraph is here only to fill space in the DOM</p>
+<address>And this address too..</address>
+<p>So does this paragraph !</p>
+<p class="red">But this one should have green background</p>
+<dl>
+  <dt class="red">First definition term that should have green background</dt>
+    <dd class="red">First definition that should have green background</dd>
+  <dt>Second definition term</dt>
+    <dd>Second definition</dd>
+  <dt>Third definition term</dt>
+    <dd>Third definition</dd>
+  <dt class="red">Fourth definition term that should have green background</dt>
+    <dd class="red">Fourth definition that should have green background</dd>
+  <dt>Fifth definition term</dt>
+    <dd>Fifth definition</dd>
+  <dt>Sixth definition term</dt>
+    <dd>Sixth definition</dd>
+</dl>
+</div>
+   <pre class="rules">.red { background-color : red }
+p:nth-of-type(3) { background-color : lime }
+dl &gt; :nth-of-type(3n+1) { background-color : lime }
+</pre>
+   <pre class="rules">
+&lt;p&gt;This paragraph is here only to fill space in the DOM&lt;/p&gt;
+&lt;address&gt;And this address too..&lt;/address&gt;
+&lt;p&gt;So does this paragraph !&lt;/p&gt;
+&lt;p class=&quot;red&quot;&gt;But this one should have green background&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dt class=&quot;red&quot;&gt;First definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;First definition that should have green background&lt;/dd&gt;
+  &lt;dt&gt;Second definition term&lt;/dt&gt;
+    &lt;dd&gt;Second definition&lt;/dd&gt;
+  &lt;dt&gt;Third definition term&lt;/dt&gt;
+    &lt;dd&gt;Third definition&lt;/dd&gt;
+  &lt;dt class=&quot;red&quot;&gt;Fourth definition term that should have green background&lt;/dt&gt;
+    &lt;dd class=&quot;red&quot;&gt;Fourth definition that should have green background&lt;/dd&gt;
+  &lt;dt&gt;Fifth definition term&lt;/dt&gt;
+    &lt;dd&gt;Fifth definition&lt;/dd&gt;
+  &lt;dt&gt;Sixth definition term&lt;/dt&gt;
+    &lt;dd&gt;Sixth definition&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+  </div>
+ </body>
+</html>

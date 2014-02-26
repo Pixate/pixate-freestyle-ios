@@ -1,0 +1,34 @@
+<test>
+	<title>:nth-child() pseudo-class with hidden elements</title>
+	<style type="text/css">
+  line { display: block; }
+  [type~=match] { background: lime ! important; }
+  line:nth-child(3n-1) { background: red; }
+  [hidden] { display: none; }
+</style>
+	<div class="testText">
+ <test xmlns="http://www.example.org/">
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line hidden="hidden" type="" display="none">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line hidden="hidden" type="" display="none">This line should be unstyled.</line>
+  <line hidden="hidden" type="match" display="none" background="lime">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+  <line type="match" background="lime" display="block">This line should be green.</line>
+  <line type="" display="block">This line should be unstyled.</line>
+ </test> 
+</div>
+</test>

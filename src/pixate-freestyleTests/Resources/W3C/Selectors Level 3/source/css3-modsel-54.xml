@@ -1,0 +1,67 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>NEGATED substring matching attribute selector on beginning</title>
+  <meta name="author" content="Daniel Glazman"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[div.stub > * { color : red }
+div.stub *:not([title^="si on"]) { color : lime }
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-53.xml" title="NEGATED attribute dash-separated value selector"/>
+  <link rel="next" href="css3-modsel-55.xml" title="NEGATED substring matching attribute selector on end"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-53.xml" title="NEGATED attribute dash-separated value selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-55.xml" title="NEGATED substring matching attribute selector on end">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">81 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">NEGATED substring matching attribute selector on beginning (ID #54)</td>
+    <td class="a">2001-07-11</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+<div class="stub">
+<p>This paragraph should be in green characters.</p>
+<p title="on chante?">This paragraph should be in green characters.</p>
+<p title="si on chantait">
+     <span title="si il chantait">This paragraph should be in green characters.</span>
+</p>
+</div>
+</div>
+   <pre class="rules">div.stub &gt; * { color : red }
+div.stub *:not([title^=&quot;si on&quot;]) { color : lime }
+</pre>
+   <pre class="rules">
+&lt;div class=&quot;stub&quot;&gt;
+&lt;p&gt;This paragraph should be in green characters.&lt;/p&gt;
+&lt;p title=&quot;on chante?&quot;&gt;This paragraph should be in green characters.&lt;/p&gt;
+&lt;p title=&quot;si on chantait&quot;&gt;
+     &lt;span title=&quot;si il chantait&quot;&gt;This paragraph should be in green characters.&lt;/span&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+ </body>
+</html>

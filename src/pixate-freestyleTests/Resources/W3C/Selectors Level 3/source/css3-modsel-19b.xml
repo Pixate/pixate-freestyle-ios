@@ -1,0 +1,52 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>:active pseudo-class on controls</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[button:active { background: green; color: white; }]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-19.xml" title=":active pseudo-class"/>
+  <link rel="next" href="css3-modsel-20.xml" title=":focus pseudo-class"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-19.xml" title=":active pseudo-class">&lt;==</a>
+     Test #
+     <a href="css3-modsel-20.xml" title=":focus pseudo-class">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">30 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">:active pseudo-class on controls (ID #19b)</td>
+    <td class="a">2004-02-29</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <p class="WARNING">NOTE: User interaction is required for this test.</p>
+  <div class="testSource">
+   <div class="testText">
+<p><button>Activating (e.g. holding the mouse button down on) this button should make it go green.</button></p>
+</div>
+   <pre class="rules">button:active { background: green; color: white; }</pre>
+   <pre class="rules">
+&lt;p&gt;&lt;button&gt;Activating (e.g. holding the mouse button down on) this button should make it go green.&lt;/button&gt;&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>

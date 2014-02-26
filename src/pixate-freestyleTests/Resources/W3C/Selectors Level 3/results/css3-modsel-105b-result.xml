@@ -1,0 +1,17 @@
+<test>
+	<title>Attribute value selector with universal namespace</title>
+	<style type="text/css">@namespace a url(http://www.example.org/a);
+@namespace b url(http://www.example.org/b);
+@namespace html url(http://www.w3.org/1999/xhtml);
+*|p, *|q, *|r, *|s { display : block ; margin-bottom : 1em }
+*|p, *|r, *|s { background-color : lime ! important }
+*|*[*|title="si on chantait"] { background-color : red }
+</style>
+	<div xmlns:a="http://www.example.org/a" xmlns:b="http://www.example.org/b" class="testText">
+<p title="si on chantait" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</p>
+<q xmlns="http://www.example.org/a" a:foo="si on chantait" display="block" margin-bottom="1.000000em">This paragraph should be unstyled.</q>
+<q xmlns="http://www.example.org/a" a:title="si nous chantions" display="block" margin-bottom="1.000000em">This paragraph should be unstyled.</q>
+<r xmlns="http://www.example.org/a" a:title="si on chantait" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</r>
+<s xmlns="http://www.example.org/b" b:title="si on chantait" background-color="lime" display="block" margin-bottom="1.000000em">This paragraph should have a green background.</s>
+</div>
+</test>

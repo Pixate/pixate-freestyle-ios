@@ -1,0 +1,65 @@
+<?xml-stylesheet href="../../../style/xhtml-full.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Attribute multivalue selector</title>
+  <meta name="author" content="Ian Hickson"/>
+  <link rel="stylesheet" type="text/css" href="../../../style/xhtml-full.css"/> <!-- yes this means compliant UAs get to import this twice -->
+  <style type="text/css"><![CDATA[
+p { background: lime; }
+[title~="hello world"] { background: red; }
+/* Section 6.3.1: Represents the att attribute whose value is a
+space-separated list of words, one of which is exactly "val". If this
+selector is used, the words in the value must not contain spaces
+(since they are separated by spaces). */
+]]></style>
+  <link rel="first" href="css3-modsel-1.xml" title="Groups of selectors"/>
+  <link rel="prev" href="css3-modsel-7.xml" title="Attribute multivalue selector"/>
+  <link rel="next" href="css3-modsel-8.xml" title="Attribute value selectors (hyphen-separated attributes)"/>
+  <link rel="last" href="css3-modsel-d4.xml" title="Dynamic updating of :first-child and :last-child"/>
+  <link rel="up" href="./index.html"/>
+  <link rel="top" href="../../../index.html"/>
+ </head>
+ <body>
+  <table class="testDescription">
+   <tr>
+    <th class="b">CSS 3 Module</th> <!-- XXX hard coded to say CSS 3 -->
+    <th class="c" colspan="2">
+     <a href="css3-modsel-7.xml" title="Attribute multivalue selector">&lt;==</a>
+     Test #
+     <a href="css3-modsel-8.xml" title="Attribute value selectors (hyphen-separated attributes)">==&gt;</a>
+    </th>
+   </tr>
+   <tr>
+    <td class="b">W3C Selectors</td>
+    <td class="c" colspan="2">9 of 296</td>
+   </tr>
+   <tr>
+    <th class="b">Testing</th>
+    <th class="a">Date</th>
+    <th class="a">Revision</th>
+   </tr>
+   <tr>
+    <td class="b">Attribute multivalue selector (ID #7b)</td>
+    <td class="a">2001-01-01</td>
+    <td class="a">1.0</td>
+   </tr>
+  </table>
+  <div class="testSource">
+   <div class="testText">
+  <p title="hello world">This line should have a green background.</p>
+</div>
+   <pre class="rules">
+p { background: lime; }
+[title~=&quot;hello world&quot;] { background: red; }
+/* Section 6.3.1: Represents the att attribute whose value is a
+space-separated list of words, one of which is exactly &quot;val&quot;. If this
+selector is used, the words in the value must not contain spaces
+(since they are separated by spaces). */
+</pre>
+   <pre class="rules">
+  &lt;p title=&quot;hello world&quot;&gt;This line should have a green background.&lt;/p&gt;
+</pre>
+  </div>
+ </body>
+</html>
