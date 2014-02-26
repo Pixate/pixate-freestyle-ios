@@ -100,8 +100,6 @@
 		9C31786218BE936B00F4B79D /* people.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31755E18BE936A00F4B79D /* people.svg */; };
 		9C31786318BE936B00F4B79D /* toucan.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31755F18BE936A00F4B79D /* toucan.svg */; };
 		9C31786418BE936B00F4B79D /* wood.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756018BE936A00F4B79D /* wood.svg */; };
-		9C31786518BE936B00F4B79D /* circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756218BE936A00F4B79D /* circle.svg */; };
-		9C31786618BE936B00F4B79D /* ellipse.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756318BE936A00F4B79D /* ellipse.svg */; };
 		9C31786718BE936B00F4B79D /* line.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756418BE936A00F4B79D /* line.svg */; };
 		9C31786818BE936B00F4B79D /* rect.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756518BE936A00F4B79D /* rect.svg */; };
 		9C31786918BE936B00F4B79D /* line-caps.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756718BE936A00F4B79D /* line-caps.svg */; };
@@ -109,10 +107,8 @@
 		9C31786B18BE936B00F4B79D /* stroke-types.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756918BE936A00F4B79D /* stroke-types.svg */; };
 		9C31786C18BE936B00F4B79D /* text.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756B18BE936A00F4B79D /* text.svg */; };
 		9C31786D18BE936B00F4B79D /* arcCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756D18BE936A00F4B79D /* arcCommand.png */; };
-		9C31786E18BE936B00F4B79D /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756E18BE936A00F4B79D /* circle.png */; };
 		9C31786F18BE936B00F4B79D /* closeCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31756F18BE936A00F4B79D /* closeCommand.png */; };
 		9C31787018BE936B00F4B79D /* cubicBezierCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31757018BE936A00F4B79D /* cubicBezierCommand.png */; };
-		9C31787118BE936B00F4B79D /* ellipse.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31757118BE936A00F4B79D /* ellipse.png */; };
 		9C31787218BE936B00F4B79D /* fa-adjust.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31757218BE936A00F4B79D /* fa-adjust.png */; };
 		9C31787318BE936B00F4B79D /* horizontalLineCommand.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31757318BE936A00F4B79D /* horizontalLineCommand.png */; };
 		9C31787418BE936B00F4B79D /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31757418BE936A00F4B79D /* icon1.png */; };
@@ -1027,6 +1023,10 @@
 		9C4DB9A818AECB2B00AE80B2 /* UIBarItem+PXStyling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB76D18AEA48000AE80B2 /* UIBarItem+PXStyling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C4DB9A918AECB2B00AE80B2 /* UINavigationItem+PXStyling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB76F18AEA48000AE80B2 /* UINavigationItem+PXStyling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C4DB9AA18AECB2B00AE80B2 /* UITabBarItem+PXStyling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB77118AEA48000AE80B2 /* UITabBarItem+PXStyling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C70B8D918BEAD670054FA36 /* circlesvg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C70B8D718BEAD670054FA36 /* circlesvg.png */; };
+		9C70B8DA18BEAD670054FA36 /* ellipsesvg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C70B8D818BEAD670054FA36 /* ellipsesvg.png */; };
+		9C70B8DD18BEAD7A0054FA36 /* circlesvg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C70B8DB18BEAD7A0054FA36 /* circlesvg.svg */; };
+		9C70B8DE18BEAD7A0054FA36 /* ellipsesvg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C70B8DC18BEAD7A0054FA36 /* ellipsesvg.svg */; };
 		9C84A63E18AE9CB600E7CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
 		9C84A64C18AE9CB600E7CDA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64B18AE9CB600E7CDA7 /* XCTest.framework */; };
 		9C84A64D18AE9CB600E7CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
@@ -1148,8 +1148,6 @@
 		9C31755E18BE936A00F4B79D /* people.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = people.svg; sourceTree = "<group>"; };
 		9C31755F18BE936A00F4B79D /* toucan.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = toucan.svg; sourceTree = "<group>"; };
 		9C31756018BE936A00F4B79D /* wood.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = wood.svg; sourceTree = "<group>"; };
-		9C31756218BE936A00F4B79D /* circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circle.svg; sourceTree = "<group>"; };
-		9C31756318BE936A00F4B79D /* ellipse.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipse.svg; sourceTree = "<group>"; };
 		9C31756418BE936A00F4B79D /* line.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = line.svg; sourceTree = "<group>"; };
 		9C31756518BE936A00F4B79D /* rect.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rect.svg; sourceTree = "<group>"; };
 		9C31756718BE936A00F4B79D /* line-caps.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "line-caps.svg"; sourceTree = "<group>"; };
@@ -1157,10 +1155,8 @@
 		9C31756918BE936A00F4B79D /* stroke-types.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "stroke-types.svg"; sourceTree = "<group>"; };
 		9C31756B18BE936A00F4B79D /* text.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.svg; sourceTree = "<group>"; };
 		9C31756D18BE936A00F4B79D /* arcCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arcCommand.png; sourceTree = "<group>"; };
-		9C31756E18BE936A00F4B79D /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		9C31756F18BE936A00F4B79D /* closeCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeCommand.png; sourceTree = "<group>"; };
 		9C31757018BE936A00F4B79D /* cubicBezierCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cubicBezierCommand.png; sourceTree = "<group>"; };
-		9C31757118BE936A00F4B79D /* ellipse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipse.png; sourceTree = "<group>"; };
 		9C31757218BE936A00F4B79D /* fa-adjust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fa-adjust.png"; sourceTree = "<group>"; };
 		9C31757318BE936A00F4B79D /* horizontalLineCommand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontalLineCommand.png; sourceTree = "<group>"; };
 		9C31757418BE936A00F4B79D /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
@@ -2219,6 +2215,10 @@
 		9C4DB88718AEA48000AE80B2 /* PXSourceEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceEmitter.h; sourceTree = "<group>"; };
 		9C4DB88818AEA48000AE80B2 /* PXSourceWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceWriter.h; sourceTree = "<group>"; };
 		9C4DB88918AEA48000AE80B2 /* PXSourceWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceWriter.m; sourceTree = "<group>"; };
+		9C70B8D718BEAD670054FA36 /* circlesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlesvg.png; sourceTree = "<group>"; };
+		9C70B8D818BEAD670054FA36 /* ellipsesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsesvg.png; sourceTree = "<group>"; };
+		9C70B8DB18BEAD7A0054FA36 /* circlesvg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circlesvg.svg; sourceTree = "<group>"; };
+		9C70B8DC18BEAD7A0054FA36 /* ellipsesvg.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ellipsesvg.svg; sourceTree = "<group>"; };
 		9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpixate-freestyle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixate-freestyleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2421,8 +2421,8 @@
 		9C31756118BE936A00F4B79D /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				9C31756218BE936A00F4B79D /* circle.svg */,
-				9C31756318BE936A00F4B79D /* ellipse.svg */,
+				9C70B8DB18BEAD7A0054FA36 /* circlesvg.svg */,
+				9C70B8DC18BEAD7A0054FA36 /* ellipsesvg.svg */,
 				9C31756418BE936A00F4B79D /* line.svg */,
 				9C31756518BE936A00F4B79D /* rect.svg */,
 			);
@@ -2451,10 +2451,10 @@
 			isa = PBXGroup;
 			children = (
 				9C31756D18BE936A00F4B79D /* arcCommand.png */,
-				9C31756E18BE936A00F4B79D /* circle.png */,
+				9C70B8D718BEAD670054FA36 /* circlesvg.png */,
 				9C31756F18BE936A00F4B79D /* closeCommand.png */,
 				9C31757018BE936A00F4B79D /* cubicBezierCommand.png */,
-				9C31757118BE936A00F4B79D /* ellipse.png */,
+				9C70B8D818BEAD670054FA36 /* ellipsesvg.png */,
 				9C31757218BE936A00F4B79D /* fa-adjust.png */,
 				9C31757318BE936A00F4B79D /* horizontalLineCommand.png */,
 				9C31757418BE936A00F4B79D /* icon1.png */,
@@ -4169,12 +4169,10 @@
 				9C3178ED18BE936B00F4B79D /* css3-modsel-143-result.xml in Resources */,
 				9C3178B018BE936B00F4B79D /* css3-modsel-111-result.xml in Resources */,
 				9C3179AA18BE936B00F4B79D /* css3-modsel-90-result.xml in Resources */,
-				9C31786E18BE936B00F4B79D /* circle.png in Resources */,
 				9C31798118BE936B00F4B79D /* css3-modsel-62-result.xml in Resources */,
 				9C317A4A18BE936B00F4B79D /* css3-modsel-171.xml in Resources */,
 				9C31785D18BE936B00F4B79D /* icon2.svg in Resources */,
 				9C317A5D18BE936B00F4B79D /* css3-modsel-182.xml in Resources */,
-				9C31787118BE936B00F4B79D /* ellipse.png in Resources */,
 				9C3179A818BE936B00F4B79D /* css3-modsel-89-result.xml in Resources */,
 				9C31798D18BE936B00F4B79D /* css3-modsel-72b-result.xml in Resources */,
 				9C31793E18BE936B00F4B79D /* css3-modsel-18c-result.xml in Resources */,
@@ -4440,9 +4438,11 @@
 				9C31799E18BE936B00F4B79D /* css3-modsel-81-result.xml in Resources */,
 				9C317AC618BE936B00F4B79D /* css3-modsel-80.xml in Resources */,
 				9C3179A218BE936B00F4B79D /* css3-modsel-83-result.xml in Resources */,
+				9C70B8DE18BEAD7A0054FA36 /* ellipsesvg.svg in Resources */,
 				9C31783218BE936B00F4B79D /* line-join-round.png in Resources */,
 				9C31792018BE936B00F4B79D /* css3-modsel-170d-result.xml in Resources */,
 				9C317A4418BE936B00F4B79D /* css3-modsel-17.xml in Resources */,
+				9C70B8D918BEAD670054FA36 /* circlesvg.png in Resources */,
 				9C317A6518BE936B00F4B79D /* css3-modsel-18a.xml in Resources */,
 				9C3179B718BE936B00F4B79D /* css3-modsel-98b-result.xml in Resources */,
 				9C31796C18BE936B00F4B79D /* css3-modsel-45b-result.xml in Resources */,
@@ -4501,6 +4501,7 @@
 				9C31785318BE936B00F4B79D /* relativeMoveCommand.svg in Resources */,
 				9C31787B18BE936B00F4B79D /* linear-gradient.png in Resources */,
 				9C3178D218BE936B00F4B79D /* css3-modsel-130-result.xml in Resources */,
+				9C70B8DD18BEAD7A0054FA36 /* circlesvg.svg in Resources */,
 				9C31798F18BE936B00F4B79D /* css3-modsel-73b-result.xml in Resources */,
 				9C31791818BE936B00F4B79D /* css3-modsel-168a-result.xml in Resources */,
 				9C31794F18BE936B00F4B79D /* css3-modsel-29-result.xml in Resources */,
@@ -4522,6 +4523,7 @@
 				9C317AD818BE936B00F4B79D /* css3-modsel-94.xml in Resources */,
 				9C31799018BE936B00F4B79D /* css3-modsel-74-result.xml in Resources */,
 				9C3179C418BE936B00F4B79D /* css3-modsel-101.xml in Resources */,
+				9C70B8DA18BEAD670054FA36 /* ellipsesvg.png in Resources */,
 				9C3179F018BE936B00F4B79D /* css3-modsel-125.xml in Resources */,
 				9C317AC318BE936B00F4B79D /* css3-modsel-79.xml in Resources */,
 				9C31782B18BE936B00F4B79D /* inner-stroke.png in Resources */,
@@ -4616,7 +4618,6 @@
 				9C317AAF18BE936B00F4B79D /* css3-modsel-66b.xml in Resources */,
 				9C31789518BE936B00F4B79D /* modules.xml in Resources */,
 				9C3178A818BE936B00F4B79D /* css3-modsel-107b-result.xml in Resources */,
-				9C31786518BE936B00F4B79D /* circle.svg in Resources */,
 				9C31781D18BE936B00F4B79D /* box-model-dotted-left.png in Resources */,
 				9C31798C18BE936B00F4B79D /* css3-modsel-72-result.xml in Resources */,
 				9C317A5318BE936B00F4B79D /* css3-modsel-175c.xml in Resources */,
@@ -4639,7 +4640,6 @@
 				9C31789F18BE936B00F4B79D /* css3-modsel-103-result.xml in Resources */,
 				9C317A3F18BE936B00F4B79D /* css3-modsel-167a.xml in Resources */,
 				9C31783618BE936B00F4B79D /* pie.png in Resources */,
-				9C31786618BE936B00F4B79D /* ellipse.svg in Resources */,
 				9C31792F18BE936B00F4B79D /* css3-modsel-179-result.xml in Resources */,
 				9C3179A018BE936B00F4B79D /* css3-modsel-82-result.xml in Resources */,
 				9C31785518BE936B00F4B79D /* relativeSmoothCubicBezierCommand.svg in Resources */,
@@ -5138,6 +5138,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "pixate-freestyleTests/pixate-freestyleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -5154,6 +5155,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
 				INFOPLIST_FILE = "pixate-freestyleTests/pixate-freestyleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
