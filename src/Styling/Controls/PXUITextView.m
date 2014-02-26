@@ -185,14 +185,14 @@ static const char STYLE_CHILDREN;
 {
     [self px_setText:text];
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 -(void)setAttributedText:(NSAttributedString *)attributedText
 {
     [self px_setAttributedText:attributedText];
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 // Px Wrapped Only

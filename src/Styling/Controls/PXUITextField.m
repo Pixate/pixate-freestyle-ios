@@ -436,28 +436,28 @@ PXSTYLE_VIEW_UPDATER
 {
     callSuper1(SUPER_PREFIX, _cmd, text);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 -(void)setAttributedText:(NSAttributedString *)attributedText
 {
     callSuper1(SUPER_PREFIX, _cmd, attributedText);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 -(void)setPlaceholder:(NSString *)placeholder
 {
     callSuper1(SUPER_PREFIX, _cmd, placeholder);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 -(void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder
 {
     callSuper1(SUPER_PREFIX, _cmd, attributedPlaceholder);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 - (CGRect)textRectForBounds:(CGRect)bounds

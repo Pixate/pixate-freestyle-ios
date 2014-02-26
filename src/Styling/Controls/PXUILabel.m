@@ -271,14 +271,14 @@ NSString *const kDefaultCacheLabelLineBreakMode = @"label.lineBreakMode";
 {
     callSuper1(SUPER_PREFIX, _cmd, text);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 -(void)setAttributedText:(NSAttributedString *)attributedText
 {
     callSuper1(SUPER_PREFIX, _cmd, attributedText);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    [self updateStylesNonRecursively];
 }
 
 // Px Wrapped Only
