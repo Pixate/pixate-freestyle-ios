@@ -27,3 +27,6 @@ node_modules
 #Misc
 .sass-cache
 
+#docs local build path
+docs/build
+
