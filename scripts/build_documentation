@@ -15,6 +15,18 @@
 # limitations under the License.
 #
 
+# ABOUT THIS SCRIPT
+# =================
+#
+# This script builds the documentation shown on: 
+# http://pixate.github.io/pixate-freestyle-ios.
+# Running this script will build the docs locally in /docs/build, where you can
+# test them by running `python -m SimpleHTTPServer`.
+#
+# Adding the --gh-pages flag build the docs into a folder called:
+# pixate-freestyle-ios-gh-pages, in the same folder as the clone of this
+# repo.
+
 . ${PX_FREESTYLE_SCRIPT:-$(dirname $0)}/common.sh
 
 # stop if we encounter an error
@@ -28,6 +40,26 @@ DOCS_METADATA="${DOCS_WORKSPACE}/documentation.json"
 CONTROLS_METADATA="${DOCS_WORKSPACE}/controls.json"
 
 DOCS_TOOLS="${PX_FREESTYLE_SCRIPT}/build_documentation_tools"
+
+# Determine build path and roots.
+if [[ $1 == "--gh-pages" ]]; then
+    echo buliding docs to github pages repo
+    
+    BUILD_PATH="${PX_FREESTYLE_ROOT}/../pixate-freestyle-ios-gh-pages"
+    GRUNT_ROOT_URL="/pixate-freestyle-ios"
+else
+	echo building docs to docs/build
+	
+	BUILD_PATH="${DOCS_ROOT}/build"
+	GRUNT_ROOT_URL="relative"
+fi
+
+# npm installs
+cd "${DOCS_ROOT}/src"
+npm install
+
+cd "${DOCS_TOOLS}"
+npm install
 
 # generate Styling Reference metadata
 mkdir -p "${DOCS_WORKSPACE}"
@@ -46,12 +78,12 @@ echo Building controls.json.
 # build the main documentation set
 echo Building core documentation.
 cd "${DOCS_ROOT}/src/"
-grunt --root-url "/pixate-freestyle-ios" --build-path "../../../pixate-freestyle-ios-gh-pages"
+grunt --root-url $GRUNT_ROOT_URL --build-path $BUILD_PATH
 
 # move back to the starting directory
 cd "${PX_FREESTYLE_SCRIPT}"
 
 # generate the appledocs
 echo Building appledocs.
-./build_appledocs "${PX_FREESTYLE_ROOT}" "${PX_FREESTYLE_ROOT}/../pixate-freestyle-ios-gh-pages"
+./build_appledocs "${PX_FREESTYLE_ROOT}" $BUILD_PATH
 

@@ -27,7 +27,6 @@ DEV_REFERENCE_TMP_DIR="${DOCS_WORKSPACE}/api-reference-tmp-$$"
 PXENGINE_COPIES_DIR="${DOCS_WORKSPACE}/public-headers-$$"
 
 DEV_REFERENCE_DIR="dev-reference"
-DEV_REFERENCE_HTML="${DEV_REFERENCE_DIR}.html"
 DEV_REFERENCE_DOCSET="PixateFreestyle.docset"
 PUBLIC_HEADER_EXCLUDES="CG"
 
@@ -66,9 +65,6 @@ appledoc --keep-intermediate-files \
 rm  -rf "${DEV_REFERENCE_DIR}"
 rm  -rf "${DEV_REFERENCE_DOCSET}"
 mv  "${DEV_REFERENCE_TMP_DIR}/html" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}"
-
-# create top-level HTML page.  Update embedded URLs to point to reference directory
-sed -e "s|href=\"|href=\"${DEV_REFERENCE_DIR}/|g" -e "s|href=\"${DEV_REFERENCE_DIR}/index.html|href=\"${DEV_REFERENCE_HTML}|g" "${DOCS_WORKSPACE}/${DEV_REFERENCE_DIR}/index.html" > "${DOCS_WORKSPACE}/${DEV_REFERENCE_HTML}"
 
 # remove temp directories
 rm -rf "${DEV_REFERENCE_TMP_DIR}"
