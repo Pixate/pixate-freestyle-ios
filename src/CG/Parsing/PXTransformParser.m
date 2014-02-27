@@ -297,6 +297,13 @@ static NSIndexSet *PERCENTAGE_SET;
     return currentLexeme = [lexer nextLexeme];
 }
 
+- (NSString *)lexemeNameFromType:(int)type
+{
+    PXStylesheetLexeme *lexeme = [[PXStylesheetLexeme alloc] initWithType:type text:nil];
+
+    return lexeme.name;
+}
+
 - (CGFloat)angleValue
 {
     CGFloat result = 0.0f;

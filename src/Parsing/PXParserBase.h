@@ -23,8 +23,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXStylesheetLexeme.h"
-#import "PXStylesheetTokenType.h"
+#import "PXLexeme.h"
 
 /**
  *  PXParserBase is an abstract class with a collection of helper functions useful during parsing.
@@ -35,7 +34,7 @@
      *  The current lexeme from the last call to advance. This value may be nil if none of the advance methods have been
      *  called or if there are no more lexemes in the scanner's lexeme stream
      */
-    @protected PXStylesheetLexeme *currentLexeme;
+    @protected id<PXLexeme> currentLexeme;
 }
 
 /**
@@ -48,7 +47,12 @@
  *  Advance to the next lexeme in the lexeme stream. The current lexeme is returned and the currentLexeme is set to that
  *  return value.
  */
-- (PXStylesheetLexeme *)advance;
+- (id<PXLexeme>)advance;
+
+/**
+ *  Return a string name for the given lexeme type
+ */
+- (NSString *)lexemeNameFromType:(int)type;
 
 /**
  *  Add an error message to the list of errors encountered during parsing
@@ -100,7 +104,7 @@
  *
  *  @param type The lexeme type to test against
  */
-- (PXStylesheetLexeme *)assertTypeAndAdvance:(int)type;
+- (id<PXLexeme>)assertTypeAndAdvance:(int)type;
 
 /**
  *  Advance to the next lexeme if the current lexeme matches the specified type.

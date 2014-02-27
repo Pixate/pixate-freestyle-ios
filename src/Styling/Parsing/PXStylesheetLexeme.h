@@ -23,17 +23,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PXLexeme.h"
 
 typedef enum {
     PXLexemeFlagFollowsWhitespace = 1
 } PXLexemeFlagType;
 
-@interface PXStylesheetLexeme : NSObject
-
-@property (readonly, nonatomic) int type;
-@property (readonly, nonatomic, strong) NSString *typeName;
-@property (readonly, nonatomic, strong) id value;
-@property (readonly, nonatomic) NSRange range;
+@interface PXStylesheetLexeme : NSObject <PXLexeme>
 
 + (id)lexemeWithType:(int)type;
 + (id)lexemeWithType:(int)type withRange:(NSRange)range;
@@ -41,10 +37,5 @@ typedef enum {
 + (id)lexemeWithType:(int)type withRange:(NSRange)range withValue:(id)value;
 
 - (id)initWithType:(int)type withRange:(NSRange)range withValue:(id)value;
-
-- (void)clearFlag:(PXLexemeFlagType)type;
-- (void)setFlag:(PXLexemeFlagType)type;
-- (BOOL)flagIsSet:(PXLexemeFlagType)type;
-- (BOOL)followsWhitespace;
 
 @end

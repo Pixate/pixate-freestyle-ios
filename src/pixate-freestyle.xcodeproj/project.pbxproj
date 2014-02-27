@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A59BE3718BF0E7D00EAE751 /* PXStylesheetLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A59BE3518BF0E7D00EAE751 /* PXStylesheetLexeme.h */; };
 		0A59BE3818BF0E7D00EAE751 /* PXStylesheetLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59BE3618BF0E7D00EAE751 /* PXStylesheetLexeme.m */; };
+		0A59BE3A18BF0EFA00EAE751 /* PXLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A59BE3918BF0EFA00EAE751 /* PXLexeme.h */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C1D7B3018AECF0000BFBB6A /* PXStylesheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB7A218AEA48000AE80B2 /* PXStylesheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C1D7B3118AECF3500BFBB6A /* PXStyleable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB7A018AEA48000AE80B2 /* PXStyleable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1060,6 +1061,7 @@
 /* Begin PBXFileReference section */
 		0A59BE3518BF0E7D00EAE751 /* PXStylesheetLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStylesheetLexeme.h; sourceTree = "<group>"; };
 		0A59BE3618BF0E7D00EAE751 /* PXStylesheetLexeme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStylesheetLexeme.m; sourceTree = "<group>"; };
+		0A59BE3918BF0EFA00EAE751 /* PXLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLexeme.h; sourceTree = "<group>"; };
 		9C3174FE18BE936A00F4B79D /* ImageBasedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBasedTests.h; sourceTree = "<group>"; };
 		9C3174FF18BE936A00F4B79D /* ImageBasedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBasedTests.m; sourceTree = "<group>"; };
 		9C31750018BE936A00F4B79D /* PXShapeRenderingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShapeRenderingTests.m; sourceTree = "<group>"; };
@@ -3780,6 +3782,7 @@
 			isa = PBXGroup;
 			children = (
 				9C4DB87918AEA48000AE80B2 /* Matchers */,
+				0A59BE3918BF0EFA00EAE751 /* PXLexeme.h */,
 				9C4DB88518AEA48000AE80B2 /* PXParserBase.h */,
 				9C4DB88618AEA48000AE80B2 /* PXParserBase.m */,
 				9C4DB88718AEA48000AE80B2 /* PXSourceEmitter.h */,
@@ -3970,6 +3973,7 @@
 				9C4DB9A918AECB2B00AE80B2 /* UINavigationItem+PXStyling.h in Headers */,
 				9C4DB99018AECA8E00AE80B2 /* PXLoggingUtils.h in Headers */,
 				9C4DB96118AECA1400AE80B2 /* NSMutableArray+StackAdditions.h in Headers */,
+				0A59BE3A18BF0EFA00EAE751 /* PXLexeme.h in Headers */,
 				9C1D7B3018AECF0000BFBB6A /* PXStylesheet.h in Headers */,
 				9C4DB9A618AECB2B00AE80B2 /* PXVirtualStyleableControl.h in Headers */,
 			);

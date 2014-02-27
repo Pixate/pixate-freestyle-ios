@@ -23,6 +23,7 @@
 //
 
 #import "PXStylesheetParser.h"
+#import "PXStylesheetTokenType.h"
 #import "PXDeclaration.h"
 #import "PXIdSelector.h"
 #import "PXClassSelector.h"
@@ -1672,6 +1673,13 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 - (PXStylesheetLexeme *)advance
 {
     return currentLexeme = [lexer_ nextLexeme];
+}
+
+- (NSString *)lexemeNameFromType:(int)type
+{
+    PXStylesheetLexeme *lexeme = [[PXStylesheetLexeme alloc] initWithType:type text:nil];
+
+    return lexeme.name;
 }
 
 - (void)dealloc

@@ -30,6 +30,11 @@
     NSUInteger flags_;
 }
 
+@synthesize type = _type;
+@synthesize text = _text;
+@synthesize value = _value;
+@synthesize range = _range;
+
 #pragma mark - Static Initializers
 
 + (id)lexemeWithType:(int)type
@@ -54,6 +59,11 @@
 
 #pragma mark - Initializers
 
+- (id)initWithType:(int)type text:(NSString *)text
+{
+    return [self initWithType:type withRange:NSMakeRange(NSNotFound, 0) withValue:text];
+}
+
 - (id)initWithType:(int)aType withRange:(NSRange)aRange withValue:(id)aValue
 {
     if (self = [super init])
@@ -69,7 +79,7 @@
 
 #pragma mark - Getters
 
-- (NSString *)typeName
+- (NSString *)name
 {
     //return [PXSSTokenType typeNameForInt:type];
     return [PXStylesheetTokenType typeNameForInt:_type];
@@ -79,29 +89,24 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@@%lu-%lu:«%@»", self.typeName, (unsigned long) _range.location, (unsigned long) _range.location + _range.length, _value];
+    return [NSString stringWithFormat:@"%@@%lu-%lu:«%@»", self.name, (unsigned long) _range.location, (unsigned long) _range.location + _range.length, _value];
 }
 
 #pragma mark - Flags
 
-- (void)clearFlag:(PXLexemeFlagType)type
+- (void)clearFlag:(int)type
 {
     flags_ &= ~type;
 }
 
-- (void)setFlag:(PXLexemeFlagType)type
+- (void)setFlag:(int)type
 {
     flags_ |= type;
 }
 
-- (BOOL)flagIsSet:(PXLexemeFlagType)type
+- (BOOL)flagIsSet:(int)type
 {
     return ((flags_ & type) == type);
-}
-
-- (BOOL)followsWhitespace
-{
-    return [self flagIsSet:PXLexemeFlagFollowsWhitespace];
 }
 
 @end

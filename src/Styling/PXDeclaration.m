@@ -24,6 +24,7 @@
 
 #import "PXDeclaration.h"
 #import "PXStylesheetLexeme.h"
+#import "PXStylesheetTokenType.h"
 #import "PXValueParser.h"
 #import "PXTransformParser.h"
 #import "PXValue.h"

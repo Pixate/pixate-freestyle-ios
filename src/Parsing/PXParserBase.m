@@ -74,23 +74,29 @@
     errors = nil;
 }
 
-- (PXStylesheetLexeme *)advance
+- (id<PXLexeme>)advance
 {
     // TODO: generalize so descendants don't have to override this method
     return currentLexeme = nil;
 }
 
+- (NSString *)lexemeNameFromType:(int)type
+{
+    // NOTE: sub-classes should override this
+    return [NSString stringWithFormat:@"%d", type];
+}
+
 - (void)errorWithMessage:(NSString *)message
 {
     [NSException raise:@"Unexpected token type"
-                format:@"%@. Found %@ token", message, [PXStylesheetTokenType typeNameForInt: currentLexeme.type]];
+                format:@"%@. Found %@ token", message, currentLexeme.name];
 }
 
 - (void)assertType:(int)type
 {
     if (currentLexeme.type != type)
     {
-        [self errorWithMessage:[NSString stringWithFormat:@"Expected a %@ token", [PXStylesheetTokenType typeNameForInt: type]]];
+        [self errorWithMessage:[NSString stringWithFormat:@"Expected a %@ token", [self lexemeNameFromType:type]]];
     }
 }
 
@@ -101,7 +107,7 @@
         NSMutableArray *tokens = [[NSMutableArray alloc] init];
 
         [set enumerateIndexesUsingBlock:^(NSUInteger type, BOOL *stop) {
-            [tokens addObject:[PXStylesheetTokenType typeNameForInt: type]];
+            [tokens addObject:[self lexemeNameFromType:type]];
         }];
 
         NSString *message = [tokens componentsJoinedByString:@", "];
@@ -110,7 +116,7 @@
     }
 }
 
-- (PXStylesheetLexeme *)assertTypeAndAdvance:(int)type
+- (id<PXLexeme>)assertTypeAndAdvance:(int)type
 {
     [self assertType:type];
 

@@ -24,6 +24,7 @@
 
 #import "PXValueParser.h"
 #import "PXStylesheetLexer.h"
+#import "PXStylesheetTokenType.h"
 #import "PXLinearGradient.h"
 #import "PXRadialGradient.h"
 #import "PXSolidPaint.h"
@@ -1624,6 +1625,13 @@ static NSString *DATA_SCHEME = @"data:";
 - (PXStylesheetLexeme *)advance
 {
     return currentLexeme = (_lexemeIndex < _lexemes.count) ? [_lexemes objectAtIndex:_lexemeIndex++] : nil;
+}
+
+- (NSString *)lexemeNameFromType:(int)type
+{
+    PXStylesheetLexeme *lexeme = [[PXStylesheetLexeme alloc] initWithType:type text:nil];
+
+    return lexeme.name;
 }
 
 #pragma mark - Helper Methods

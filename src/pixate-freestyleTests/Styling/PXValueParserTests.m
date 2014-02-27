@@ -7,6 +7,7 @@
 //
 
 #import "PXValueParser.h"
+#import "PXStylesheetLexeme.h"
 #import "PXSolidPaint.h"
 #import "PXPaintGroup.h"
 #import "UIColor+PXColors.h"
