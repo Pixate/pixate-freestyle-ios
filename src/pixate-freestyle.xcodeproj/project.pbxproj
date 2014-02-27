@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A59BE3718BF0E7D00EAE751 /* PXStylesheetLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A59BE3518BF0E7D00EAE751 /* PXStylesheetLexeme.h */; };
+		0A59BE3818BF0E7D00EAE751 /* PXStylesheetLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A59BE3618BF0E7D00EAE751 /* PXStylesheetLexeme.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C1D7B3018AECF0000BFBB6A /* PXStylesheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB7A218AEA48000AE80B2 /* PXStylesheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C1D7B3118AECF3500BFBB6A /* PXStyleable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB7A018AEA48000AE80B2 /* PXStyleable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -944,7 +946,6 @@
 		9C4DB93E18AEA48000AE80B2 /* PXNumberMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB87E18AEA48000AE80B2 /* PXNumberMatcher.m */; };
 		9C4DB93F18AEA48000AE80B2 /* PXPatternMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB88018AEA48000AE80B2 /* PXPatternMatcher.m */; };
 		9C4DB94018AEA48000AE80B2 /* PXWordMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB88218AEA48000AE80B2 /* PXWordMatcher.m */; };
-		9C4DB94118AEA48000AE80B2 /* PXLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB88418AEA48000AE80B2 /* PXLexeme.m */; };
 		9C4DB94218AEA48000AE80B2 /* PXParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB88618AEA48000AE80B2 /* PXParserBase.m */; };
 		9C4DB94318AEA48000AE80B2 /* PXSourceWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4DB88918AEA48000AE80B2 /* PXSourceWriter.m */; };
 		9C4DB95E18AEC8B700AE80B2 /* PixateFreestyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB6DA18AEA48000AE80B2 /* PixateFreestyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1057,6 +1058,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A59BE3518BF0E7D00EAE751 /* PXStylesheetLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStylesheetLexeme.h; sourceTree = "<group>"; };
+		0A59BE3618BF0E7D00EAE751 /* PXStylesheetLexeme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStylesheetLexeme.m; sourceTree = "<group>"; };
 		9C3174FE18BE936A00F4B79D /* ImageBasedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBasedTests.h; sourceTree = "<group>"; };
 		9C3174FF18BE936A00F4B79D /* ImageBasedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBasedTests.m; sourceTree = "<group>"; };
 		9C31750018BE936A00F4B79D /* PXShapeRenderingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShapeRenderingTests.m; sourceTree = "<group>"; };
@@ -2208,8 +2211,6 @@
 		9C4DB88018AEA48000AE80B2 /* PXPatternMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPatternMatcher.m; sourceTree = "<group>"; };
 		9C4DB88118AEA48000AE80B2 /* PXWordMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXWordMatcher.h; sourceTree = "<group>"; };
 		9C4DB88218AEA48000AE80B2 /* PXWordMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXWordMatcher.m; sourceTree = "<group>"; };
-		9C4DB88318AEA48000AE80B2 /* PXLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLexeme.h; sourceTree = "<group>"; };
-		9C4DB88418AEA48000AE80B2 /* PXLexeme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLexeme.m; sourceTree = "<group>"; };
 		9C4DB88518AEA48000AE80B2 /* PXParserBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXParserBase.h; sourceTree = "<group>"; };
 		9C4DB88618AEA48000AE80B2 /* PXParserBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXParserBase.m; sourceTree = "<group>"; };
 		9C4DB88718AEA48000AE80B2 /* PXSourceEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceEmitter.h; sourceTree = "<group>"; };
@@ -3448,6 +3449,8 @@
 		9C4DB78D18AEA48000AE80B2 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
+				0A59BE3518BF0E7D00EAE751 /* PXStylesheetLexeme.h */,
+				0A59BE3618BF0E7D00EAE751 /* PXStylesheetLexeme.m */,
 				9C4DB78E18AEA48000AE80B2 /* PXStylesheetLexer.h */,
 				9C4DB78F18AEA48000AE80B2 /* PXStylesheetLexer.m */,
 				9C4DB79018AEA48000AE80B2 /* PXStylesheetParser.h */,
@@ -3777,8 +3780,6 @@
 			isa = PBXGroup;
 			children = (
 				9C4DB87918AEA48000AE80B2 /* Matchers */,
-				9C4DB88318AEA48000AE80B2 /* PXLexeme.h */,
-				9C4DB88418AEA48000AE80B2 /* PXLexeme.m */,
 				9C4DB88518AEA48000AE80B2 /* PXParserBase.h */,
 				9C4DB88618AEA48000AE80B2 /* PXParserBase.m */,
 				9C4DB88718AEA48000AE80B2 /* PXSourceEmitter.h */,
@@ -3903,6 +3904,7 @@
 				9C4DB98E18AECA8E00AE80B2 /* PXFileFunctionLogFormatter.h in Headers */,
 				9C4DB9A818AECB2B00AE80B2 /* UIBarItem+PXStyling.h in Headers */,
 				9C4DB9AA18AECB2B00AE80B2 /* UITabBarItem+PXStyling.h in Headers */,
+				0A59BE3718BF0E7D00EAE751 /* PXStylesheetLexeme.h in Headers */,
 				9C4DB98A18AECA7C00AE80B2 /* PXStrokeRenderer.h in Headers */,
 				9C4DB96B18AECA3000AE80B2 /* PXVector.h in Headers */,
 				9C4DB98118AECA7000AE80B2 /* PXRectangle.h in Headers */,
@@ -4915,6 +4917,7 @@
 				9C4DB91418AEA48000AE80B2 /* PXGradient.m in Sources */,
 				9C4DB8B118AEA48000AE80B2 /* PXUINavigationBar.m in Sources */,
 				9C4DB8B918AEA48000AE80B2 /* PXUISegmentedControl.m in Sources */,
+				0A59BE3818BF0E7D00EAE751 /* PXStylesheetLexeme.m in Sources */,
 				9C4DB8D218AEA48000AE80B2 /* PXBorderInfo.m in Sources */,
 				9C4DB92518AEA48000AE80B2 /* PXPath.m in Sources */,
 				9C4DB92D18AEA48000AE80B2 /* PXNonScalingStroke.m in Sources */,
@@ -4934,7 +4937,6 @@
 				9C4DB92C18AEA48000AE80B2 /* PXText.m in Sources */,
 				9C4DB8E118AEA48000AE80B2 /* PXStylesheet.m in Sources */,
 				9C4DB8AF18AEA48000AE80B2 /* PXUILabel.m in Sources */,
-				9C4DB94118AEA48000AE80B2 /* PXLexeme.m in Sources */,
 				9C4DB8E418AEA48000AE80B2 /* PXAttributeSelectorOperator.m in Sources */,
 				9C4DB91618AEA48000AE80B2 /* PXLinearGradient.m in Sources */,
 				9C4DB8A918AEA48000AE80B2 /* PXUIButton.m in Sources */,

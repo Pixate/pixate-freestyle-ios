@@ -55,7 +55,7 @@
 - (PXDimension *)dimensionFromSource:(NSString *)source
 {
     NSArray *lexemes = [self lexemesFromSource:source];
-    PXLexeme *lexeme = [lexemes objectAtIndex:0];
+    PXStylesheetLexeme *lexeme = [lexemes objectAtIndex:0];
     id value = lexeme.value;
 
     XCTAssertTrue([value isKindOfClass:[PXDimension class]], @"Expected lexeme value to a PXDimension");

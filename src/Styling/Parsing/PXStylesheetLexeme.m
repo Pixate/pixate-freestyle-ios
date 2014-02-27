@@ -22,10 +22,10 @@
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 
-@implementation PXLexeme
+@implementation PXStylesheetLexeme
 {
     NSUInteger flags_;
 }
@@ -34,22 +34,22 @@
 
 + (id)lexemeWithType:(int)type
 {
-    return [[PXLexeme alloc] initWithType:type withRange:NSMakeRange(NSNotFound, 0) withValue:nil];
+    return [[PXStylesheetLexeme alloc] initWithType:type withRange:NSMakeRange(NSNotFound, 0) withValue:nil];
 }
 
 + (id)lexemeWithType:(int)type withRange:(NSRange)range
 {
-    return [[PXLexeme alloc] initWithType:type withRange:range withValue:nil];
+    return [[PXStylesheetLexeme alloc] initWithType:type withRange:range withValue:nil];
 }
 
 + (id)lexemeWithType:(int)type withValue:(id)value
 {
-    return [[PXLexeme alloc] initWithType:type withRange:NSMakeRange(NSNotFound, 0) withValue:value];
+    return [[PXStylesheetLexeme alloc] initWithType:type withRange:NSMakeRange(NSNotFound, 0) withValue:value];
 }
 
 + (id)lexemeWithType:(int)type withRange:(NSRange)range withValue:(id)value
 {
-    return [[PXLexeme alloc] initWithType:type withRange:range withValue:value];
+    return [[PXStylesheetLexeme alloc] initWithType:type withRange:range withValue:value];
 }
 
 #pragma mark - Initializers

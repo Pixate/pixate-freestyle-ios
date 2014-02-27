@@ -189,7 +189,7 @@ static NSString *DATA_SCHEME = @"data:";
 
         lexer.source = source;
         [lexer increaseNesting];
-        PXLexeme *lexeme = [lexer nextLexeme];
+        PXStylesheetLexeme *lexeme = [lexer nextLexeme];
 
         while (lexeme)
         {
@@ -1621,7 +1621,7 @@ static NSString *DATA_SCHEME = @"data:";
 
 #pragma mark - Overrides
 
-- (PXLexeme *)advance
+- (PXStylesheetLexeme *)advance
 {
     return currentLexeme = (_lexemeIndex < _lexemes.count) ? [_lexemes objectAtIndex:_lexemeIndex++] : nil;
 }

@@ -23,7 +23,7 @@
 //
 
 #import "PXDeclaration.h"
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 #import "PXValueParser.h"
 #import "PXTransformParser.h"
 #import "PXValue.h"
@@ -108,10 +108,10 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
     if (lexemes.count > 0)
     {
-        PXLexeme *firstLexeme = [lexemes objectAtIndex:0];
+        PXStylesheetLexeme *firstLexeme = [lexemes objectAtIndex:0];
         NSUInteger firstOffset = firstLexeme.range.location;
 
-        [_lexemes enumerateObjectsUsingBlock:^(PXLexeme *lexeme, NSUInteger idx, BOOL *stop) {
+        [_lexemes enumerateObjectsUsingBlock:^(PXStylesheetLexeme *lexeme, NSUInteger idx, BOOL *stop) {
             NSRange lexemeRange = lexeme.range;
             NSRange normalizedRange = NSMakeRange(lexemeRange.location - firstOffset, lexemeRange.length);
 
@@ -280,7 +280,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
     if (_lexemes.count > 0)
     {
-        PXLexeme *lexeme = [_lexemes objectAtIndex:0];
+        PXStylesheetLexeme *lexeme = [_lexemes objectAtIndex:0];
 
         if ([lexeme.value isKindOfClass:[NSString class]])
         {
@@ -328,7 +328,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     {
         if (_lexemes.count > 0)
         {
-            PXLexeme *lexeme = [_lexemes objectAtIndex:0];
+            PXStylesheetLexeme *lexeme = [_lexemes objectAtIndex:0];
 
             if (lexeme.type == PXSS_LENGTH)
             {
@@ -492,7 +492,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     {
         NSMutableArray *parts = [NSMutableArray arrayWithCapacity:_lexemes.count];
 
-        for (PXLexeme *lexeme in _lexemes)
+        for (PXStylesheetLexeme *lexeme in _lexemes)
         {
             if (lexeme.type == PXSS_STRING)
             {
@@ -603,7 +603,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     PXDimension *result = nil;
     if (_lexemes.count > 0)
     {
-        PXLexeme *lexeme = [_lexemes objectAtIndex:0];
+        PXStylesheetLexeme *lexeme = [_lexemes objectAtIndex:0];
         
         if (lexeme.type == PXSS_LENGTH || lexeme.type == PXSS_EMS || lexeme.type == PXSS_PERCENTAGE)
         {

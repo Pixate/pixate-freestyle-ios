@@ -128,7 +128,7 @@ static NSIndexSet *PERCENTAGE_SET;
 
     // advance over keyword
     [self assertTypeInSet:TRANSFORM_KEYWORD_SET];
-    PXLexeme *transformType = currentLexeme;
+    PXStylesheetLexeme *transformType = currentLexeme;
     [self advance];
 
     // advance over '('
@@ -292,7 +292,7 @@ static NSIndexSet *PERCENTAGE_SET;
 
 #pragma mark - Helper Methods
 
-- (PXLexeme *)advance
+- (PXStylesheetLexeme *)advance
 {
     return currentLexeme = [lexer nextLexeme];
 }

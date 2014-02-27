@@ -777,7 +777,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     while ([self isInTypeSet:SELECTOR_SEQUENCE_SET])
     {
-        PXLexeme *operator = nil;
+        PXStylesheetLexeme *operator = nil;
 
         if ([self isInTypeSet:SELECTOR_OPERATOR_SET])
         {
@@ -1004,10 +1004,10 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     while (currentLexeme && ![self isInTypeSet:DECLARATION_DELIMITER_SET])
     {
-        if (currentLexeme.type == PXSS_COLON && ((PXLexeme *)[lexemes lastObject]).type == PXSS_IDENTIFIER)
+        if (currentLexeme.type == PXSS_COLON && ((PXStylesheetLexeme *)[lexemes lastObject]).type == PXSS_IDENTIFIER)
         {
             // assume we've moved into a new declaration, so push last lexeme back into the lexeme stream
-            PXLexeme *propertyName = [lexemes pop];
+            PXStylesheetLexeme *propertyName = [lexemes pop];
 
             // this pushes the colon back to the lexer and makes the property name the current lexeme
             [self pushLexeme:propertyName];
@@ -1030,8 +1030,8 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     if (lexemes.count > 0)
     {
-        PXLexeme *firstLexeme = [lexemes objectAtIndex:0];
-        PXLexeme *lastLexeme = [lexemes lastObject];
+        PXStylesheetLexeme *firstLexeme = [lexemes objectAtIndex:0];
+        PXStylesheetLexeme *lastLexeme = [lexemes lastObject];
         NSUInteger start = firstLexeme.range.location;
         NSUInteger end = lastLexeme.range.location + lastLexeme.range.length;
         NSUInteger length = end - start;
@@ -1045,7 +1045,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     }
 
     // check for !important
-    PXLexeme *lastLexeme = [lexemes lastObject];
+    PXStylesheetLexeme *lastLexeme = [lexemes lastObject];
 
     if (lastLexeme.type == PXSS_IMPORTANT)
     {
@@ -1669,7 +1669,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 #pragma mark - Overrides
 
-- (PXLexeme *)advance
+- (PXStylesheetLexeme *)advance
 {
     return currentLexeme = [lexer_ nextLexeme];
 }
@@ -1705,7 +1705,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     }
 }
 
-- (void)pushLexeme:(PXLexeme *)lexeme
+- (void)pushLexeme:(PXStylesheetLexeme *)lexeme
 {
     [self->lexer_ pushLexeme:currentLexeme];
 

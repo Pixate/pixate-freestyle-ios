@@ -23,7 +23,7 @@
 //
 
 #import "PXPatternMatcher.h"
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 
 @implementation PXPatternMatcher
 
@@ -62,9 +62,9 @@ static NSRange NO_MATCH;
 
 #pragma mark - Methods
 
-- (PXLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
+- (PXStylesheetLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
 {
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
 
     NSRange range = [pattern rangeOfFirstMatchInString:aString options:0 range:aRange];
 
@@ -73,7 +73,7 @@ static NSRange NO_MATCH;
         NSString *text = [aString substringWithRange:range];
         id value = [self getValueFromString:text];
 
-        result = [PXLexeme lexemeWithType:self.type withRange:range withValue:value];
+        result = [PXStylesheetLexeme lexemeWithType:self.type withRange:range withValue:value];
     }
 
     return result;

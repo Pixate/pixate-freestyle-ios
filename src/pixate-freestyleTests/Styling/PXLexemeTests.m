@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 
 @interface PXLexemeTests : XCTestCase
 
@@ -17,14 +17,14 @@
 
 - (void)testInitialFlags
 {
-    PXLexeme *lexeme = [PXLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
+    PXStylesheetLexeme *lexeme = [PXStylesheetLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
 
     XCTAssertFalse([lexeme flagIsSet:PXLexemeFlagFollowsWhitespace], @"flag should not be set");
 }
 
 - (void)testSetFlags
 {
-    PXLexeme *lexeme = [PXLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
+    PXStylesheetLexeme *lexeme = [PXStylesheetLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
 
     [lexeme setFlag:PXLexemeFlagFollowsWhitespace];
 
@@ -33,7 +33,7 @@
 
 - (void)testClearFlags
 {
-    PXLexeme *lexeme = [PXLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
+    PXStylesheetLexeme *lexeme = [PXStylesheetLexeme lexemeWithType:0 withRange:NSMakeRange(NSNotFound, 0) withValue:@""];
 
     [lexeme setFlag:PXLexemeFlagFollowsWhitespace];
     [lexeme clearFlag:PXLexemeFlagFollowsWhitespace];

@@ -7,7 +7,7 @@
 //
 
 #import "PXDeclaration.h"
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import <XCTest/XCTest.h>
 

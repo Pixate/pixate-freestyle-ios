@@ -53,18 +53,18 @@
 
 #pragma mark - PXSLexemeCreator implementation
 
-- (PXLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
+- (PXStylesheetLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
 {
     NSRange characterRange = NSMakeRange(aRange.location, 1);
     NSString *character = [aString substringWithRange:characterRange];
     NSNumber *type = [typeMap objectForKey:character];
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
 
     if (type)
     {
         NSString *text = [aString substringWithRange:characterRange];
 
-        result = [PXLexeme lexemeWithType:[type intValue] withRange:characterRange withValue:text];
+        result = [PXStylesheetLexeme lexemeWithType:[type intValue] withRange:characterRange withValue:text];
     }
 
     return result;

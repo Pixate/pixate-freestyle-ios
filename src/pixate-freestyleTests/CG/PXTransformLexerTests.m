@@ -34,10 +34,10 @@
     [super tearDown];
 }
 
-- (PXLexeme *)assertLexemeType:(PXTransformTokens)type withSource:(NSString *)source
+- (PXStylesheetLexeme *)assertLexemeType:(PXTransformTokens)type withSource:(NSString *)source
 {
     lexer.source = source;
-    PXLexeme *lexeme = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
 
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
@@ -53,7 +53,7 @@
 
 - (void)assertLexemeType:(PXTransformTokens)tokenType dimensionType:(PXDimensionType)dimensionType withSource:(NSString *)source
 {
-    PXLexeme *lexeme = [self assertLexemeType:tokenType withSource:source];
+    PXStylesheetLexeme *lexeme = [self assertLexemeType:tokenType withSource:source];
     id value = lexeme.value;
 
     XCTAssertNotNil(value, @"Lexeme value should be defined");

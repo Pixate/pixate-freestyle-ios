@@ -28,7 +28,7 @@ typedef enum {
     PXLexemeFlagFollowsWhitespace = 1
 } PXLexemeFlagType;
 
-@interface PXLexeme : NSObject
+@interface PXStylesheetLexeme : NSObject
 
 @property (readonly, nonatomic) int type;
 @property (readonly, nonatomic, strong) NSString *typeName;

@@ -62,10 +62,10 @@
 
 #pragma mark - PXSLexemeCreator implementation
 
-- (PXLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
+- (PXStylesheetLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
 {
-    PXLexeme *match = [super createLexemeWithString:aString withRange:aRange];
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *match = [super createLexemeWithString:aString withRange:aRange];
+    PXStylesheetLexeme *result = nil;
 
     if (wordMap && match)
     {
@@ -74,7 +74,7 @@
 
         if (type)
         {
-            result = [PXLexeme lexemeWithType:[type intValue] withRange:match.range withValue:text];
+            result = [PXStylesheetLexeme lexemeWithType:[type intValue] withRange:match.range withValue:text];
         }
     }
 

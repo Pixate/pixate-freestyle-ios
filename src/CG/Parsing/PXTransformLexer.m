@@ -125,9 +125,9 @@
 
 #pragma mark - Methods
 
-- (PXLexeme *)nextLexeme
+- (PXStylesheetLexeme *)nextLexeme
 {
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
 
     if (source)
     {
@@ -136,11 +136,11 @@
         while (offset < length)
         {
             NSRange range = NSMakeRange(offset, length - offset);
-            PXLexeme *candidate = nil;
+            PXStylesheetLexeme *candidate = nil;
 
             for (id<PXLexemeCreator> creator in tokens)
             {
-                PXLexeme *lexeme = [creator createLexemeWithString:source withRange:range];
+                PXStylesheetLexeme *lexeme = [creator createLexemeWithString:source withRange:range];
 
                 if (lexeme)
                 {

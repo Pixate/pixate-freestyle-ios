@@ -74,7 +74,7 @@
     errors = nil;
 }
 
-- (PXLexeme *)advance
+- (PXStylesheetLexeme *)advance
 {
     // TODO: generalize so descendants don't have to override this method
     return currentLexeme = nil;
@@ -110,7 +110,7 @@
     }
 }
 
-- (PXLexeme *)assertTypeAndAdvance:(int)type
+- (PXStylesheetLexeme *)assertTypeAndAdvance:(int)type
 {
     [self assertType:type];
 

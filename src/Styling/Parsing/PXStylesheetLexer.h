@@ -23,7 +23,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 
 /**
  *  The PXStylesheetLexerDelegate protocol defines a set of events that will fire during the lifetime of a
@@ -68,7 +68,7 @@
  *  Return the next lexeme in the source string from where the last lex ended. This will return nil once the source
  *  string has been completed consumed.
  */
-- (PXLexeme *)nextLexeme;
+- (PXStylesheetLexeme *)nextLexeme;
 
 /**
  *  Push the specified lexeme onto internal stack. Lexemes will first be removed from this stack when calling
@@ -77,7 +77,7 @@
  *
  *  @param lexeme The lexeme to push on to the stack
  */
-- (void)pushLexeme:(PXLexeme *)lexeme;
+- (void)pushLexeme:(PXStylesheetLexeme *)lexeme;
 
 /**
  *  This lexer returns different lexemes for the same source depending on if the lexer is inside or outside of a

@@ -91,9 +91,9 @@ static NSRange NO_MATCH;
 
 #pragma mark - PXSLexemeCreator implementation
 
-- (PXLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
+- (PXStylesheetLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
 {
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
     NSArray *matches = [self->pattern matchesInString:aString options:0 range:aRange];
 
     if (matches.count == 1)
@@ -123,12 +123,12 @@ static NSRange NO_MATCH;
 
             PXDimension *dimensionValue = [PXDimension dimensionWithNumber:floatValue withDimension:dimension];
 
-            result = [PXLexeme lexemeWithType:type withRange:matchResult.range withValue:dimensionValue];
+            result = [PXStylesheetLexeme lexemeWithType:type withRange:matchResult.range withValue:dimensionValue];
 
         }
         else
         {
-            result = [PXLexeme lexemeWithType:self.type withRange:numberRange withValue:[NSNumber numberWithFloat:floatValue]];
+            result = [PXStylesheetLexeme lexemeWithType:self.type withRange:numberRange withValue:[NSNumber numberWithFloat:floatValue]];
         }
     }
 

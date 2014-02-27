@@ -23,7 +23,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 
 /**
@@ -35,7 +35,7 @@
      *  The current lexeme from the last call to advance. This value may be nil if none of the advance methods have been
      *  called or if there are no more lexemes in the scanner's lexeme stream
      */
-    @protected PXLexeme *currentLexeme;
+    @protected PXStylesheetLexeme *currentLexeme;
 }
 
 /**
@@ -48,7 +48,7 @@
  *  Advance to the next lexeme in the lexeme stream. The current lexeme is returned and the currentLexeme is set to that
  *  return value.
  */
-- (PXLexeme *)advance;
+- (PXStylesheetLexeme *)advance;
 
 /**
  *  Add an error message to the list of errors encountered during parsing
@@ -100,7 +100,7 @@
  *
  *  @param type The lexeme type to test against
  */
-- (PXLexeme *)assertTypeAndAdvance:(int)type;
+- (PXStylesheetLexeme *)assertTypeAndAdvance:(int)type;
 
 /**
  *  Advance to the next lexeme if the current lexeme matches the specified type.

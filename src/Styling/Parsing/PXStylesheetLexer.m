@@ -240,7 +240,7 @@
 
 #pragma mark - Methods
 
-- (void)pushLexeme:(PXLexeme *)lexeme
+- (void)pushLexeme:(PXStylesheetLexeme *)lexeme
 {
     if (lexeme)
     {
@@ -309,9 +309,9 @@
     blockDepth_--;
 }
 
-- (PXLexeme *)nextLexeme
+- (PXStylesheetLexeme *)nextLexeme
 {
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
 
     if (lexemeStack_.count > 0)
     {
@@ -326,11 +326,11 @@
         while (offset_ < length)
         {
             NSRange range = NSMakeRange(offset_, length - offset_);
-            PXLexeme *candidate = nil;
+            PXStylesheetLexeme *candidate = nil;
 
             for (id<PXLexemeCreator> creator in tokens_)
             {
-                PXLexeme *lexeme = [creator createLexemeWithString:_source withRange:range];
+                PXStylesheetLexeme *lexeme = [creator createLexemeWithString:_source withRange:range];
 
                 if (lexeme)
                 {
@@ -363,7 +363,7 @@
         if (!result && offset_ < length)
         {
             NSRange range = NSMakeRange(offset_, 1);
-            result = [PXLexeme lexemeWithType:PXSS_ERROR withRange:range withValue:[_source substringWithRange:range]];
+            result = [PXStylesheetLexeme lexemeWithType:PXSS_ERROR withRange:range withValue:[_source substringWithRange:range]];
 
             if (followsWhitespace)
             {
@@ -381,7 +381,7 @@
         if (blockDepth_ == 0 && result.type == PXSS_HEX_COLOR)
         {
             // fix-up colors to be ids outside of declaration blocks
-            result = [PXLexeme lexemeWithType:PXSS_ID withRange:result.range withValue:result.value];
+            result = [PXStylesheetLexeme lexemeWithType:PXSS_ID withRange:result.range withValue:result.value];
 
             if (followsWhitespace)
             {
@@ -410,7 +410,7 @@
                     // simply drop slash, for now
                     stringValue = [stringValue stringByReplacingOccurrencesOfString:@"\\" withString:@""];
 
-                    result = [PXLexeme lexemeWithType:result.type withRange:result.range withValue:stringValue];
+                    result = [PXStylesheetLexeme lexemeWithType:result.type withRange:result.range withValue:stringValue];
 
                     if (followsWhitespace)
                     {

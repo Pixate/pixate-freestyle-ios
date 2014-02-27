@@ -23,7 +23,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXLexeme.h"
+#import "PXStylesheetLexeme.h"
 
 /**
  *  The PXTransformLexer is reponsible for converting a string into a stream of tokens needed to parse SVG transform
@@ -46,6 +46,6 @@
 /**
  *  Return the next lexeme in the stream. This returns nil when no more tokens can be matched.
  */
-- (PXLexeme *)nextLexeme;
+- (PXStylesheetLexeme *)nextLexeme;
 
 @end

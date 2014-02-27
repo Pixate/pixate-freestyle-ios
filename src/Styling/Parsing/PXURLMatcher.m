@@ -36,9 +36,9 @@
     return self;
 }
 
-- (PXLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
+- (PXStylesheetLexeme *)createLexemeWithString:(NSString *)aString withRange:(NSRange)aRange
 {
-    PXLexeme *result = nil;
+    PXStylesheetLexeme *result = nil;
     NSTextCheckingResult *match = [self->pattern firstMatchInString:aString options:0 range:aRange];
 
     if (match)
@@ -49,7 +49,7 @@
 
             if (stringRange.location != NSNotFound)
             {
-                result = [PXLexeme lexemeWithType:self.type withRange:match.range withValue:[aString substringWithRange:stringRange]];
+                result = [PXStylesheetLexeme lexemeWithType:self.type withRange:match.range withValue:[aString substringWithRange:stringRange]];
                 break;
             }
         }

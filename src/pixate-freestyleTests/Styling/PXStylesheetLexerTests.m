@@ -35,15 +35,15 @@
     [super tearDown];
 }
 
-- (PXLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source
+- (PXStylesheetLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source
 {
     return [self assertLexemeType:type withSource:source length:source.length];
 }
 
-- (PXLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source length:(NSInteger)length;
+- (PXStylesheetLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source length:(NSInteger)length;
 {
     lexer.source = source;
-    PXLexeme *lexeme = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
 
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
@@ -59,7 +59,7 @@
 
 - (void)assertLexemeType:(PXStylesheetTokens)tokenType dimensionType:(PXDimensionType)dimensionType withSource:(NSString *)source
 {
-    PXLexeme *lexeme = [self assertLexemeType:tokenType withSource:source];
+    PXStylesheetLexeme *lexeme = [self assertLexemeType:tokenType withSource:source];
     id value = lexeme.value;
 
     XCTAssertNotNil(value, @"Lexeme value should be defined");
@@ -269,7 +269,7 @@
 {
     NSString *source = @"{#abc";
     lexer.source = source;
-    PXLexeme *lexeme = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
 
     lexeme = [lexer nextLexeme];
     XCTAssertNotNil(lexeme, @"Expected lexeme");
@@ -287,7 +287,7 @@
 {
     NSString *source = @"{#aabbcc";
     lexer.source = source;
-    PXLexeme *lexeme = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
 
     lexeme = [lexer nextLexeme];
     XCTAssertNotNil(lexeme, @"Expected lexeme");
@@ -544,8 +544,8 @@
 - (void)testWhitespaceFlag
 {
     lexer.source = @"a b";
-    PXLexeme *a = [lexer nextLexeme];
-    PXLexeme *b = [lexer nextLexeme];
+    PXStylesheetLexeme *a = [lexer nextLexeme];
+    PXStylesheetLexeme *b = [lexer nextLexeme];
 
     XCTAssertNotNil(a, @"a should not be nil");
     XCTAssertNotNil(b, @"b should not be nil");
@@ -615,12 +615,12 @@
     NSString *source2 = @"green";
 
     lexer.source = source1;
-    PXLexeme *lexeme1 = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme1 = [lexer nextLexeme];
 
     [lexer pushSource:source2];
-    PXLexeme *lexeme2 = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme2 = [lexer nextLexeme];
 
-    PXLexeme *lexeme3 = [lexer nextLexeme];
+    PXStylesheetLexeme *lexeme3 = [lexer nextLexeme];
 
     XCTAssertTrue(lexeme1.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme1);
     XCTAssertTrue([@"red" isEqualToString:lexeme1.value], @"Expected 'red': %@", lexeme1.value);
