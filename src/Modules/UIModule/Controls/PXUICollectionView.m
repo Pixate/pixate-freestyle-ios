@@ -42,7 +42,7 @@
 #import "PXGenericStyler.h"
 
 #import "PXProxy.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "PXUICollectionViewDelegate.h"
 
 static const char PX_DELEGATE; // the new delegate (and datasource)

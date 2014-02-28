@@ -54,7 +54,7 @@
 #import "PXAttributedTextStyler.h"
 
 
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "PXUILabel.h"
 
 static NSDictionary *PSEUDOCLASS_MAP;

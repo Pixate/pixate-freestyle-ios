@@ -28,7 +28,7 @@
 #import "UIView+PXStyling-Private.h"
 #import "PXStylingMacros.h"
 #import "PXVirtualStyleableControl.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "PXUtils.h"
 #import "PXImageUtils.h"
 

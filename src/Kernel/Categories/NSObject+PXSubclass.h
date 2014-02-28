@@ -23,7 +23,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Swizzle)
+@interface NSObject (PXSubclass)
 
 + (void)subclassInstance:(id)object;
 

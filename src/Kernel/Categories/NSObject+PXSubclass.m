@@ -22,7 +22,7 @@
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "NSObject+PXClass.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -30,9 +30,9 @@
 
 static BOOL respondsToSelectorIMP(id self, SEL _cmd, SEL selector);
 
-void PXForceLoadNSObjectSwizzle() {}
+void PXForceLoadNSObjectPXSubclass() {}
 
-@implementation NSObject (Swizzle)
+@implementation NSObject (PXSubclass)
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED <= __IPHONE_5_1
 #define IMPL_BLOCK_CAST	(__bridge void *)
