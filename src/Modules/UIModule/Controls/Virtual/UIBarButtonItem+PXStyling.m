@@ -60,6 +60,9 @@ void PXForceLoadUIBarButtonItemPXStyling() {}
 
 @implementation UIBarButtonItem (PXStyling)
 
+@dynamic isVirtualControl;
+@dynamic pxStyleParent;
+
 + (void)load
 {
     BUTTONS_PSEUDOCLASS_MAP = @{
@@ -259,7 +262,7 @@ void PXForceLoadUIBarButtonItemPXStyling() {}
     {
         NSDictionary *attributes = [context propertyValueForName:[NSString stringWithFormat:@"textAttributes-%@", context.activeStateName]];
         NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:attributes];
-        [currentTextAttributes setObject:context.font forKey:UITextAttributeFont];
+        [currentTextAttributes setObject:context.font forKey:NSFontAttributeName];
         [context setPropertyValue:currentTextAttributes forName:[NSString stringWithFormat:@"textAttributes-%@", context.activeStateName]];
         
         [(target == nil ? styleable : target) setTitleTextAttributes:currentTextAttributes
@@ -277,7 +280,7 @@ void PXForceLoadUIBarButtonItemPXStyling() {}
         UIColor *color = (UIColor *)[context propertyValueForName:@"color"];
         if(color)
         {
-            [currentTextAttributes setObject:color forKey:UITextAttributeTextColor];
+            [currentTextAttributes setObject:color forKey:NSForegroundColorAttributeName];
             [context setPropertyValue:currentTextAttributes forName:[NSString stringWithFormat:@"textAttributes-%@", context.activeStateName]];
             [(target == nil ? styleable : target) setTitleTextAttributes:currentTextAttributes
                                      forState:[context stateFromStateNameMap:BUTTONS_PSEUDOCLASS_MAP]];

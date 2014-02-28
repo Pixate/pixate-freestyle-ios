@@ -24,7 +24,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PXUIPickerViewDelegate : NSObject  <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface PXUIPickerViewDelegate : NSObject //<UIPickerViewDelegate, UIPickerViewDataSource>
 
 
 @end

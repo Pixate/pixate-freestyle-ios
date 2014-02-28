@@ -198,8 +198,13 @@ static NSDictionary *PSEUDOCLASS_MAP;
                      [context setPropertyValue:currentTextAttributes forName:@"text-attributes"];
                  }
                  
-                 [currentTextAttributes setObject:shadow.color forKey:UITextAttributeTextShadowColor];
-                 [currentTextAttributes setObject:[NSValue valueWithCGSize:CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset)] forKey:UITextAttributeTextShadowOffset];
+                 NSShadow *nsShadow = [[NSShadow alloc] init];
+                 
+                 nsShadow.shadowColor = shadow.color;
+                 nsShadow.shadowOffset = CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset);
+                 nsShadow.shadowBlurRadius = shadow.blurDistance;
+                 
+                 [currentTextAttributes setObject:nsShadow forKey:NSShadowAttributeName];
              }],
              
              [[PXFontStyler alloc] initWithCompletionBlock:^(PXUITextField *view, PXFontStyler *styler, PXStylerContext *context) {
@@ -213,7 +218,7 @@ static NSDictionary *PSEUDOCLASS_MAP;
                  }
                  
                  [currentTextAttributes setObject:context.font
-                                           forKey:UITextAttributeFont];
+                                           forKey:NSFontAttributeName];
                  
              }],
              
@@ -232,7 +237,7 @@ static NSDictionary *PSEUDOCLASS_MAP;
                  if(color)
                  {
                      [currentTextAttributes setObject:color
-                                               forKey:UITextAttributeTextColor];
+                                               forKey:NSForegroundColorAttributeName];
                  }
              }],
              

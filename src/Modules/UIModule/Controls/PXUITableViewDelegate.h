@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PXUITableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
+@interface PXUITableViewDelegate : NSObject //<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
