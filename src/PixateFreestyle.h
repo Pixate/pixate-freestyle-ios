@@ -22,7 +22,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#include <AvailabilityMacros.h>
 
 #import "PXStylesheet.h"
 #import "PixateFreestyleConfiguration.h"
@@ -135,7 +134,7 @@
 /**
  *  Calls updateStylesForAllViews. Please call updateStylesForAllViews directly.
  */
-+ (void)applyStylesheets DEPRECATED_MSG_ATTRIBUTE("Use updateStylesForAllViews");
++ (void)applyStylesheets __deprecated_msg("Use updateStylesForAllViews");
 
 /**
  * Update styles for all windows and all if their subviews.
