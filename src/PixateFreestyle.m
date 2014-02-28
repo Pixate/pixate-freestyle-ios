@@ -15,8 +15,7 @@
  */
 
 //
-//  Pixate.m
-//  Pixate
+//  PixateFreestyle.m
 //
 //  Created by Paul Colton on 12/11/12.
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.

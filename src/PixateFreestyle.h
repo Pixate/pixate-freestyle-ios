@@ -15,14 +15,14 @@
  */
 
 //
-//  Pixate.h
-//  Pixate
+//  PixateFreestyle.h
 //
 //  Created by Paul Colton on 12/11/12.
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#include <AvailabilityMacros.h>
 
 #import "PXStylesheet.h"
 #import "PixateFreestyleConfiguration.h"
@@ -134,9 +134,8 @@
 
 /**
  *  Calls updateStylesForAllViews. Please call updateStylesForAllViews directly.
- *  @deprecated
  */
-+ (void)applyStylesheets;
++ (void)applyStylesheets DEPRECATED_MSG_ATTRIBUTE("Use updateStylesForAllViews");
 
 /**
  * Update styles for all windows and all if their subviews.
