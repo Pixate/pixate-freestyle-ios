@@ -27,5 +27,6 @@
 @protocol PXMediaExpression <NSObject>
 
 - (BOOL)matches;
+- (void)clearCache;
 
 @end

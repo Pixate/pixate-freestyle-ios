@@ -112,6 +112,13 @@ static int ddLogLevel = LOG_LEVEL_WARN;
     return [self styleSheetFromSource:source withOrigin:origin filename:aFilePath];
 }
 
++ (void)clearCache
+{
+    [[self currentApplicationStylesheet] clearCache];
+    [[self currentUserStylesheet] clearCache];
+    [[self currentViewStylesheet] clearCache];
+}
+
 #pragma mark - Initializers
 
 - (id)init
@@ -129,6 +136,12 @@ static int ddLogLevel = LOG_LEVEL_WARN;
     }
 
     return self;
+}
+
+- (void)clearCache
+{
+    for (PXMediaGroup *group in mediaGroups_)
+        [group clearCache];
 }
 
 #pragma mark - Getters

@@ -65,4 +65,6 @@ typedef enum
  */
 @property (nonatomic, assign) BOOL monitorChanges;
 
++ (void)clearCache;
+
 @end

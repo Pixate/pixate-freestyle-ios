@@ -31,6 +31,9 @@
 
 
 @implementation PXNamedMediaExpression
+{
+    NSNumber* _matches;
+}
 
 #pragma mark - Static Methods
 
@@ -199,13 +202,20 @@
 
 #pragma mark - Methods
 
+- (void)clearCache
+{
+    _matches = nil;
+}
+
 - (BOOL)matches
 {
-    // NOTE: the parser guarantees that _name is lower case
-    NSDictionary *handlers = [PXNamedMediaExpression nameHandlers];
-    PXNamedMediaExpressionHandler handler = [handlers objectForKey:_name];
-
-    return (handler) ? handler(self) : NO;
+    if (!_matches) {
+        // NOTE: the parser guarantees that _name is lower case
+        NSDictionary *handlers = [PXNamedMediaExpression nameHandlers];
+        PXNamedMediaExpressionHandler handler = [handlers objectForKey:_name];
+        _matches = [NSNumber numberWithBool:(handler) ? handler(self) : NO];
+    }
+    return _matches.boolValue;
 }
 
 - (CGFloat)floatValue
