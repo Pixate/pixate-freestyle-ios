@@ -278,6 +278,7 @@
     */
 
     [PXCacheManager clearStyleCache];
+    [PXStylesheet clearCache];
     [[UIApplication sharedApplication].keyWindow updateStyles];
 }
 

@@ -221,6 +221,12 @@
     }
 }
 
+- (void)clearCache
+{
+    if (_query)
+        [_query clearCache];
+}
+
 - (BOOL)matches
 {
     // assume nil means "true" to cover non-media-query groups

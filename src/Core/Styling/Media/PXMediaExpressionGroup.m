@@ -49,6 +49,12 @@
     return (_expressions) ? [NSArray arrayWithArray:_expressions] : nil;
 }
 
+- (void)clearCache
+{
+    for (id<PXMediaExpression> expression in _expressions)
+        [expression clearCache];
+}
+
 - (BOOL)matches
 {
     BOOL result = YES;
