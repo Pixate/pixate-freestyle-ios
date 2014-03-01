@@ -442,7 +442,7 @@
 
             default:
             {
-                NSString *message = [NSString stringWithFormat:@"Unrecognized or missing path command at offset: %d", scanner.scanLocation];
+                NSString *message = [NSString stringWithFormat:@"Unrecognized or missing path command at offset: %lu", (unsigned long)scanner.scanLocation];
 
                 // report error
                 [PixateFreestyle.configuration sendParseMessage:message];

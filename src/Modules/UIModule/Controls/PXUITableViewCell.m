@@ -456,7 +456,7 @@ static const char DETAIL_TEXT_LABEL_BACKGROUND_SET;
     contentView.pxStyleChildren = self.contentView.subviews;
 
     // Add any subviews and return the child list
-    return [styleChildren arrayByAddingObjectsFromArray:self.subviews];
+    return styleChildren;//return [styleChildren arrayByAddingObjectsFromArray:self.subviews];
 }
 
 #pragma mark - Pseudo-class State
