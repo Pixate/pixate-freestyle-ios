@@ -40,6 +40,9 @@ void PXForceLoadUITabBarItemPXStyling() {}
 
 @implementation UITabBarItem (PXStyling)
 
+@dynamic isVirtualControl;
+@dynamic pxStyleParent;
+
 static NSDictionary *PSEUDOCLASS_MAP;
 
 + (void)load
@@ -125,16 +128,14 @@ static NSDictionary *PSEUDOCLASS_MAP;
     {
         if (context.usesImage)
         {
-            [self setFinishedSelectedImage:context.backgroundImage
-               withFinishedUnselectedImage:self.finishedUnselectedImage];
+            self.selectedImage = context.backgroundImage;
         }
     }
     else if([context.activeStateName isEqualToString:@"unselected"])
     {
         if (context.usesImage)
         {
-            [self setFinishedSelectedImage:self.finishedSelectedImage
-               withFinishedUnselectedImage:context.backgroundImage];
+            self.image = context.backgroundImage;
         }
     }
 }

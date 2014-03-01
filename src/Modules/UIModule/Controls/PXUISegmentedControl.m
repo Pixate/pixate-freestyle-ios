@@ -125,8 +125,13 @@ static char const STYLE_CHILDREN;
                 PXShadow *shadow = context.textShadow;
                 NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:[view titleTextAttributesForState:[context stateFromStateNameMap:PSEUDOCLASS_MAP]]];
 
-                [currentTextAttributes setObject:shadow.color forKey:UITextAttributeTextShadowColor];
-                [currentTextAttributes setObject:[NSValue valueWithCGSize:CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset)] forKey:UITextAttributeTextShadowOffset];
+                NSShadow *nsShadow = [[NSShadow alloc] init];
+                
+                nsShadow.shadowColor = shadow.color;
+                nsShadow.shadowOffset = CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset);
+                nsShadow.shadowBlurRadius = shadow.blurDistance;
+                
+                [currentTextAttributes setObject:nsShadow forKey:NSShadowAttributeName];
 
                 [view px_setTitleTextAttributes:currentTextAttributes forState:[context stateFromStateNameMap:PSEUDOCLASS_MAP]];
             }],
@@ -136,7 +141,7 @@ static char const STYLE_CHILDREN;
                 NSMutableDictionary *currentTextAttributes = [NSMutableDictionary
                                                               dictionaryWithDictionary:[view titleTextAttributesForState:[context stateFromStateNameMap:PSEUDOCLASS_MAP]]];
 
-                [currentTextAttributes setObject:context.font forKey:UITextAttributeFont];
+                [currentTextAttributes setObject:context.font forKey:NSFontAttributeName];
 
                 [view px_setTitleTextAttributes:currentTextAttributes
                                        forState:[context stateFromStateNameMap:PSEUDOCLASS_MAP]];
@@ -150,7 +155,7 @@ static char const STYLE_CHILDREN;
 
                 if(color)
                 {
-                    [currentTextAttributes setObject:color forKey:UITextAttributeTextColor];
+                    [currentTextAttributes setObject:color forKey:NSForegroundColorAttributeName];
 
                     [view px_setTitleTextAttributes:currentTextAttributes
                                            forState:[context stateFromStateNameMap:PSEUDOCLASS_MAP]];

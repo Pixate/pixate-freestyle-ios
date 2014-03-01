@@ -25,7 +25,7 @@
 #import "PixateFreestyle.h"
 #import <objc/runtime.h>
 #import "UIView+PXStyling.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "PXLoggingUtils.h"
 #import "PXStyleUtils.h"
 #import "PixateFreestyle-Private.h"

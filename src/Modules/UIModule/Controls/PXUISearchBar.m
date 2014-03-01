@@ -67,8 +67,13 @@
                 PXShadow *shadow = context.textShadow;
                 NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:[view scopeBarButtonTitleTextAttributesForState:UIControlStateNormal]];
 
-                [currentTextAttributes setObject:shadow.color forKey:UITextAttributeTextShadowColor];
-                [currentTextAttributes setObject:[NSValue valueWithCGSize:CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset)] forKey:UITextAttributeTextShadowOffset];
+                NSShadow *nsShadow = [[NSShadow alloc] init];
+                
+                nsShadow.shadowColor = shadow.color;
+                nsShadow.shadowOffset = CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset);
+                nsShadow.shadowBlurRadius = shadow.blurDistance;
+                
+                [currentTextAttributes setObject:nsShadow forKey:NSShadowAttributeName];
 
                 [view px_setScopeBarButtonTitleTextAttributes:currentTextAttributes forState:UIControlStateNormal];
             }],

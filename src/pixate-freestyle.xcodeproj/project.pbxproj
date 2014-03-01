@@ -1062,8 +1062,8 @@
 		9C98677718C049DF00C71922 /* objc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C98677518C049DF00C71922 /* objc.c */; };
 		9C98677818C049DF00C71922 /* objc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98677618C049DF00C71922 /* objc.h */; };
 		9C98677A18C04A5100C71922 /* NSObject+PXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98677918C04A5100C71922 /* NSObject+PXClass.h */; };
-		9C98677D18C04A9800C71922 /* NSObject+Swizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98677B18C04A9800C71922 /* NSObject+Swizzle.h */; };
-		9C98677E18C04A9800C71922 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98677C18C04A9800C71922 /* NSObject+Swizzle.m */; };
+		9C98677D18C04A9800C71922 /* NSObject+PXSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98677B18C04A9800C71922 /* NSObject+PXSubclass.h */; };
+		9C98677E18C04A9800C71922 /* NSObject+PXSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98677C18C04A9800C71922 /* NSObject+PXSubclass.m */; };
 		9C9867E818C04BA000C71922 /* PXAnimationPropertyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98678118C04BA000C71922 /* PXAnimationPropertyHandler.h */; };
 		9C9867E918C04BA000C71922 /* PXAnimationPropertyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98678218C04BA000C71922 /* PXAnimationPropertyHandler.m */; };
 		9C9867EA18C04BA000C71922 /* PXKeyframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98678318C04BA000C71922 /* PXKeyframe.h */; };
@@ -2257,8 +2257,8 @@
 		9C98677518C049DF00C71922 /* objc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = objc.c; sourceTree = "<group>"; };
 		9C98677618C049DF00C71922 /* objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objc.h; sourceTree = "<group>"; };
 		9C98677918C04A5100C71922 /* NSObject+PXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PXClass.h"; sourceTree = "<group>"; };
-		9C98677B18C04A9800C71922 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
-		9C98677C18C04A9800C71922 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		9C98677B18C04A9800C71922 /* NSObject+PXSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PXSubclass.h"; sourceTree = "<group>"; };
+		9C98677C18C04A9800C71922 /* NSObject+PXSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PXSubclass.m"; sourceTree = "<group>"; };
 		9C98678118C04BA000C71922 /* PXAnimationPropertyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAnimationPropertyHandler.h; sourceTree = "<group>"; };
 		9C98678218C04BA000C71922 /* PXAnimationPropertyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAnimationPropertyHandler.m; sourceTree = "<group>"; };
 		9C98678318C04BA000C71922 /* PXKeyframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXKeyframe.h; sourceTree = "<group>"; };
@@ -3913,8 +3913,8 @@
 		9C9865E318C0499000C71922 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				9C98677B18C04A9800C71922 /* NSObject+Swizzle.h */,
-				9C98677C18C04A9800C71922 /* NSObject+Swizzle.m */,
+				9C98677B18C04A9800C71922 /* NSObject+PXSubclass.h */,
+				9C98677C18C04A9800C71922 /* NSObject+PXSubclass.m */,
 				9C98677918C04A5100C71922 /* NSObject+PXClass.h */,
 			);
 			path = Categories;
@@ -4114,7 +4114,7 @@
 				9C9866F318C0499000C71922 /* PXAnimationInfo.h in Headers */,
 				9C98674218C0499000C71922 /* PXFillStyler.h in Headers */,
 				9C98663918C0499000C71922 /* PXStrokeRenderer.h in Headers */,
-				9C98677D18C04A9800C71922 /* NSObject+Swizzle.h in Headers */,
+				9C98677D18C04A9800C71922 /* NSObject+PXSubclass.h in Headers */,
 				9C9865EA18C0499000C71922 /* PXForceLoadPixateCategories.h in Headers */,
 				9C98665118C0499000C71922 /* PXNotificationManager.h in Headers */,
 				9C98676D18C0499000C71922 /* PXRuntimeUtils.h in Headers */,
@@ -5268,7 +5268,7 @@
 				9C98660B18C0499000C71922 /* PXTransformLexer.m in Sources */,
 				9C9865E718C0499000C71922 /* NSMutableArray+StackAdditions.m in Sources */,
 				9C98680118C04BA000C71922 /* PXUICollectionView.m in Sources */,
-				9C98677E18C04A9800C71922 /* NSObject+Swizzle.m in Sources */,
+				9C98677E18C04A9800C71922 /* NSObject+PXSubclass.m in Sources */,
 				9C98668B18C0499000C71922 /* PXChildCombinator.m in Sources */,
 				9C98662318C0499000C71922 /* PXPath.m in Sources */,
 				9C98667A18C0499000C71922 /* NSDictionary+PXCSSEncoding.m in Sources */,
@@ -5428,6 +5428,7 @@
 				DSTROOT = /tmp/pixate_freestyle.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "pixate-freestyle";
@@ -5442,6 +5443,7 @@
 				DSTROOT = /tmp/pixate_freestyle.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "pixate-freestyle";
@@ -5463,6 +5465,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "pixate-freestyleTests/pixate-freestyleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5480,6 +5483,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "pixate-freestyleTests/pixate-freestyleTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

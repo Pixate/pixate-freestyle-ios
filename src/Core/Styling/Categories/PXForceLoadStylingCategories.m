@@ -26,7 +26,7 @@
 #import "UIView+PXStyling.h"
 #import "UIView+PXStyling-Private.h"
 #import "NSObject+PXStyling.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "NSObject+PXClass.h"
 #import "NSArray+Reverse.h"
 #import "NSMutableDictionary+PXObject.h"
@@ -37,7 +37,7 @@ extern void PXForceLoadNSArrayReverse();
 extern void PXForceLoadNSDictionaryPXCSSEncoding();
 extern void PXForceLoadNSDictionaryPXObject();
 extern void PXForceLoadNSMutableDictionaryPXObject();
-extern void PXForceLoadNSObjectSwizzle();
+extern void PXForceLoadNSObjectPXSubclass();
 extern void PXForceLoadUIViewPXStyling();
 
 @implementation PXForceLoadStylingCategories
@@ -48,7 +48,7 @@ extern void PXForceLoadUIViewPXStyling();
     PXForceLoadNSDictionaryPXCSSEncoding();
     PXForceLoadNSDictionaryPXObject();
     PXForceLoadNSMutableDictionaryPXObject();
-    PXForceLoadNSObjectSwizzle();
+    PXForceLoadNSObjectPXSubclass();
     PXForceLoadUIViewPXStyling();
 }
 

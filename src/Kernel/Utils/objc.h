@@ -16,7 +16,6 @@
 
 //
 //  objc.h
-//  PXStyleKit
 //
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //

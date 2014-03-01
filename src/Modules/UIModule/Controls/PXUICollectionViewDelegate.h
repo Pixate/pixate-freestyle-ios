@@ -29,6 +29,6 @@
     @property (nonatomic) CGSize size;
 @end
 
-@interface PXUICollectionViewDelegate : NSObject <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface PXUICollectionViewDelegate : NSObject //<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
     @property (nonatomic, strong) CGSizeWithFlag *itemSize;
 @end

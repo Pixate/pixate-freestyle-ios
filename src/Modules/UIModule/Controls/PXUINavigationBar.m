@@ -28,7 +28,7 @@
 #import "UIView+PXStyling-Private.h"
 #import "PXStylingMacros.h"
 #import "PXVirtualStyleableControl.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+PXSubclass.h"
 #import "PXUtils.h"
 #import "PXImageUtils.h"
 
@@ -181,8 +181,13 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                PXShadow *shadow = context.textShadow;
                NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:weakSelf.titleTextAttributes];
                
-               [currentTextAttributes setObject:shadow.color forKey:UITextAttributeTextShadowColor];
-               [currentTextAttributes setObject:[NSValue valueWithCGSize:CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset)] forKey:UITextAttributeTextShadowOffset];
+                NSShadow *nsShadow = [[NSShadow alloc] init];
+                
+                nsShadow.shadowColor = shadow.color;
+                nsShadow.shadowOffset = CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset);
+                nsShadow.shadowBlurRadius = shadow.blurDistance;
+                
+                [currentTextAttributes setObject:nsShadow forKey:NSShadowAttributeName];
                
                [weakSelf px_setTitleTextAttributes:currentTextAttributes];
             }],
@@ -191,7 +196,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:weakSelf.titleTextAttributes];
                
                [currentTextAttributes setObject:context.font
-                                         forKey:UITextAttributeFont];
+                                         forKey:NSFontAttributeName];
                
                [weakSelf px_setTitleTextAttributes:currentTextAttributes];
                 
@@ -210,7 +215,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                 if(color)
                 {
                    [currentTextAttributes setObject:color
-                                             forKey:UITextAttributeTextColor];
+                                             forKey:NSForegroundColorAttributeName];
                    
                    [weakSelf px_setTitleTextAttributes:currentTextAttributes];
                 }
@@ -350,7 +355,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                     if(color)
                     {
                         [currentTextAttributes setObject:color
-                                                  forKey:UITextAttributeTextColor];
+                                                  forKey:NSForegroundColorAttributeName];
                         
                         [view px_setTitleTextAttributes:currentTextAttributes];
                     }
@@ -369,8 +374,13 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                 PXShadow *shadow = context.textShadow;
                 NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:view.titleTextAttributes];
                 
-                [currentTextAttributes setObject:shadow.color forKey:UITextAttributeTextShadowColor];
-                [currentTextAttributes setObject:[NSValue valueWithCGSize:CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset)] forKey:UITextAttributeTextShadowOffset];
+                NSShadow *nsShadow = [[NSShadow alloc] init];
+                
+                nsShadow.shadowColor = shadow.color;
+                nsShadow.shadowOffset = CGSizeMake(shadow.horizontalOffset, shadow.verticalOffset);
+                nsShadow.shadowBlurRadius = shadow.blurDistance;
+                
+                [currentTextAttributes setObject:nsShadow forKey:NSShadowAttributeName];
                 
                 [view px_setTitleTextAttributes:currentTextAttributes];
             }],
@@ -380,7 +390,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
                 NSMutableDictionary *currentTextAttributes = [NSMutableDictionary dictionaryWithDictionary:view.titleTextAttributes];
                 
                 [currentTextAttributes setObject:context.font
-                                          forKey:UITextAttributeFont];
+                                          forKey:NSFontAttributeName];
                 
                 [view px_setTitleTextAttributes:currentTextAttributes];
                 
