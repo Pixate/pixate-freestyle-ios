@@ -34,6 +34,8 @@
     NSMutableDictionary *properties_;
 }
 
+@synthesize styleChangeable;
+
 #ifdef PX_LOGGING
 static int ddLogLevel = LOG_LEVEL_WARN;
 

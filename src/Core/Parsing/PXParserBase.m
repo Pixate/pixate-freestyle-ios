@@ -107,7 +107,7 @@
         NSMutableArray *tokens = [[NSMutableArray alloc] init];
 
         [set enumerateIndexesUsingBlock:^(NSUInteger type, BOOL *stop) {
-            [tokens addObject:[self lexemeNameFromType:type]];
+            [tokens addObject:[self lexemeNameFromType:(int)type]];
         }];
 
         NSString *message = [tokens componentsJoinedByString:@", "];

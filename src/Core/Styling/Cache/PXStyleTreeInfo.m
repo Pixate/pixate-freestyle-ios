@@ -75,6 +75,8 @@
         if (child != nil)
         {
             PXStyleInfo *styleInfo = [childStyleInfo_ objectForKey:indexPath];
+            if (styleInfo.changeable)
+                styleInfo = [PXStyleInfo styleInfoForStyleable:child];
 
             [styleInfo applyToStyleable:child];
         }
