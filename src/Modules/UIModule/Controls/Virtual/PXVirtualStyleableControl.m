@@ -34,6 +34,7 @@
 
 @synthesize styleId;
 @synthesize styleClass;
+@synthesize styleChangeable;
 @synthesize styleCSS;
 @synthesize styleMode = _styleMode;
 @synthesize pxStyleElementName = _name;

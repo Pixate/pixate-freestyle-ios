@@ -30,6 +30,7 @@
 @property (nonatomic, readonly) NSString *styleKey;
 @property (nonatomic, readonly) NSArray *states;
 @property (nonatomic) BOOL forceInvalidation;
+@property (nonatomic) BOOL changeable;
 
 + (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable;
 + (void)setStyleInfo:(PXStyleInfo *)styleInfo withRuleSets:(NSArray *)ruleSets styleable:(id<PXStyleable>)styleable stateName:(NSString *)stateName;

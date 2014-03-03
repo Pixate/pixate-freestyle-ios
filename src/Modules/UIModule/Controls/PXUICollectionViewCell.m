@@ -105,7 +105,7 @@ static const char STYLE_CHILDREN;
     
     contentView.pxStyleChildren = self.contentView.subviews;
 
-    return [styleChildren arrayByAddingObjectsFromArray:self.subviews];
+    return styleChildren;//return [styleChildren arrayByAddingObjectsFromArray:self.subviews];
 }
 
 #pragma mark - Pseudo-class State

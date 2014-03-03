@@ -40,6 +40,7 @@
 
 static const char STYLE_CLASS_KEY;
 static const char STYLE_ID_KEY;
+static const char STYLE_CHANGEABLE_KEY;
 static const char STYLE_CSS_KEY;
 static const char STYLE_MODE_KEY;
 static const char KVC_DICTIONARY;
@@ -316,6 +317,11 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     return id;
 }
 
+- (BOOL)styleChangeable
+{
+    return [objc_getAssociatedObject(self, &STYLE_CHANGEABLE_KEY) boolValue];
+}
+
 - (id)pxStyleParent
 {
     return self.superview;
@@ -381,6 +387,11 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 	}
 
 //    [[PXStyleController sharedInstance] setViewNeedsStyle:self];
+}
+
+- (void)setStyleChangeable:(BOOL)changeable
+{
+    objc_setAssociatedObject(self, &STYLE_CHANGEABLE_KEY, [NSNumber numberWithBool:changeable], OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (void)setStyleCSS:(NSString *)css

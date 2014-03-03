@@ -42,6 +42,7 @@
 + (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable
 {
     PXStyleInfo *result = [[PXStyleInfo alloc] initWithStyleKey:styleable.styleKey];
+    result.changeable = styleable.styleChangeable;
 
     // find all rule sets that apply to this styleable
     NSMutableArray *ruleSets = [PXStyleUtils matchingRuleSetsForStyleable:styleable];
@@ -148,7 +149,7 @@
         if (styler)
         {
             [activeDeclarations addObject:declaration];
-            [activeStylers addObject:styler];
+            [activeStylers addObject:NSStringFromClass(styler.class)];
         }
         else if (stylers == nil)
         {
@@ -271,7 +272,7 @@
             // process declarations in styler order
             for (id<PXStyler> currentStyler in stylers)
             {
-                if ([activeStylers containsObject:currentStyler])
+                if ([activeStylers containsObject:NSStringFromClass(currentStyler.class)])
                 {
                     // process the declarations, in order
                     for (PXDeclaration *declaration in activeDeclarations)

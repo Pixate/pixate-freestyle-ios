@@ -45,6 +45,7 @@
 
 static const char STYLE_CLASS_KEY;
 static const char STYLE_ID_KEY;
+static const char STYLE_CHANGEABLE_KEY;
 static const char STYLE_CSS_KEY;
 static const char STYLE_PARENT_KEY;
 static const char STYLE_BOUNDS_KEY;
@@ -66,6 +67,11 @@ void PXForceLoadUINavigationItemPXStyling() {}
 - (NSString *)styleId
 {
     return objc_getAssociatedObject(self, &STYLE_ID_KEY);
+}
+
+- (BOOL)styleChangeable
+{
+    return [objc_getAssociatedObject(self, &STYLE_CHANGEABLE_KEY) boolValue];
 }
 
 - (NSString *)styleCSS
@@ -148,6 +154,11 @@ void PXForceLoadUINavigationItemPXStyling() {}
     objc_setAssociatedObject(self, &STYLE_ID_KEY, anId, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     [self updateStylesNonRecursively];
+}
+
+- (void)setStyleChangeable:(BOOL)changeable
+{
+    objc_setAssociatedObject(self, &STYLE_CHANGEABLE_KEY, [NSNumber numberWithBool:changeable], OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (void)setStyleCSS:(NSString *)aCSS
