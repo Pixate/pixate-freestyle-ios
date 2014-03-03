@@ -1166,6 +1166,13 @@
 		9C98684B18C04BA000C71922 /* UITabBarItem+PXStyling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9867E718C04BA000C71922 /* UITabBarItem+PXStyling.m */; };
 		9C98684E18C04C4700C71922 /* PixateFreestyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98684C18C04C4700C71922 /* PixateFreestyle.h */; };
 		9C98684F18C04C4700C71922 /* PixateFreestyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98684D18C04C4700C71922 /* PixateFreestyle.m */; };
+		9CAE288318C4343B005B06B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
+		9CAE289018C4343B005B06B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64B18AE9CB600E7CDA7 /* XCTest.framework */; };
+		9CAE289118C4343B005B06B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
+		9CAE289218C4343B005B06B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64E18AE9CB600E7CDA7 /* UIKit.framework */; };
+		9CAE289518C4343B005B06B5 /* libpixate-freestyle-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */; };
+		9CAE289B18C4343B005B06B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE289918C4343B005B06B5 /* InfoPlist.strings */; };
+		9CAE289D18C4343B005B06B5 /* pixate_freestyle_macTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1176,10 +1183,26 @@
 			remoteGlobalIDString = 9C84A63918AE9CB600E7CDA7;
 			remoteInfo = "pixate-freestyle";
 		};
+		9CAE289318C4343B005B06B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C84A63218AE9CB600E7CDA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CAE288118C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-mac";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9C84A63818AE9CB600E7CDA7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAE288018C4343B005B06B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -1949,7 +1972,7 @@
 		9C31780818BE936B00F4B79D /* StyleableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleableView.h; sourceTree = "<group>"; };
 		9C31780918BE936B00F4B79D /* StyleableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleableView.m; sourceTree = "<group>"; };
 		9C31780A18BE936B00F4B79D /* W3CSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W3CSelectorTests.m; sourceTree = "<group>"; };
-		9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-Prefix.pch"; sourceTree = "<group>"; };
+		9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		9C4DB80218AEA48000AE80B2 /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = SOURCE_ROOT; };
 		9C70B8D718BEAD670054FA36 /* circlesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlesvg.png; sourceTree = "<group>"; };
 		9C70B8D818BEAD670054FA36 /* ellipsesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsesvg.png; sourceTree = "<group>"; };
@@ -2361,6 +2384,12 @@
 		9C9867E718C04BA000C71922 /* UITabBarItem+PXStyling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+PXStyling.m"; sourceTree = "<group>"; };
 		9C98684C18C04C4700C71922 /* PixateFreestyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixateFreestyle.h; sourceTree = SOURCE_ROOT; };
 		9C98684D18C04C4700C71922 /* PixateFreestyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixateFreestyle.m; sourceTree = SOURCE_ROOT; };
+		9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpixate-freestyle-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CAE288618C4343B005B06B5 /* pixate-freestyle-mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-mac-Prefix.pch"; sourceTree = "<group>"; };
+		9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixate-freestyle-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CAE289818C4343B005B06B5 /* pixate-freestyle-macTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixate-freestyle-macTests-Info.plist"; sourceTree = "<group>"; };
+		9CAE289A18C4343B005B06B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pixate_freestyle_macTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2380,6 +2409,25 @@
 				9C84A64C18AE9CB600E7CDA7 /* XCTest.framework in Frameworks */,
 				9C84A64F18AE9CB600E7CDA7 /* UIKit.framework in Frameworks */,
 				9C84A64D18AE9CB600E7CDA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAE287F18C4343B005B06B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAE288318C4343B005B06B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAE288C18C4343B005B06B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAE289518C4343B005B06B5 /* libpixate-freestyle-mac.a in Frameworks */,
+				9CAE289018C4343B005B06B5 /* XCTest.framework in Frameworks */,
+				9CAE289218C4343B005B06B5 /* UIKit.framework in Frameworks */,
+				9CAE289118C4343B005B06B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3309,8 +3357,9 @@
 			isa = PBXGroup;
 			children = (
 				9C84A63F18AE9CB600E7CDA7 /* PixateFreestyle */,
-				9C84A8D118AE9F2B00E7CDA7 /* Other Sources */,
 				9C84A65318AE9CB600E7CDA7 /* PixateFreestyleTests */,
+				9CAE288418C4343B005B06B5 /* PixateFreestyleMac */,
+				9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */,
 				9C84A63C18AE9CB600E7CDA7 /* Frameworks */,
 				9C84A63B18AE9CB600E7CDA7 /* Products */,
 			);
@@ -3321,6 +3370,8 @@
 			children = (
 				9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */,
 				9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */,
+				9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */,
+				9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3341,6 +3392,7 @@
 				9C9865E218C0499000C71922 /* Kernel */,
 				9C98643318C0498F00C71922 /* Core */,
 				9C9865E518C0499000C71922 /* Modules */,
+				9CAE28A418C4369C005B06B5 /* Supporting Files */,
 				9C98684C18C04C4700C71922 /* PixateFreestyle.h */,
 				9C98684D18C04C4700C71922 /* PixateFreestyle.m */,
 				9C4DB80218AEA48000AE80B2 /* Version.h */,
@@ -3368,14 +3420,6 @@
 				9C84A65618AE9CB600E7CDA7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C84A8D118AE9F2B00E7CDA7 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		9C98643318C0498F00C71922 /* Core */ = {
@@ -4076,6 +4120,50 @@
 			path = Virtual;
 			sourceTree = "<group>";
 		};
+		9CAE288418C4343B005B06B5 /* PixateFreestyleMac */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE288518C4343B005B06B5 /* Supporting Files */,
+			);
+			name = PixateFreestyleMac;
+			path = "pixate-freestyle-mac";
+			sourceTree = "<group>";
+		};
+		9CAE288518C4343B005B06B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE288618C4343B005B06B5 /* pixate-freestyle-mac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */,
+				9CAE289718C4343B005B06B5 /* Supporting Files */,
+			);
+			name = PixateFreestyleMacTests;
+			path = "pixate-freestyle-macTests";
+			sourceTree = "<group>";
+		};
+		9CAE289718C4343B005B06B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CAE289818C4343B005B06B5 /* pixate-freestyle-macTests-Info.plist */,
+				9CAE289918C4343B005B06B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CAE28A418C4369C005B06B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -4338,6 +4426,41 @@
 			productReference = 9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAE28A218C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-mac" */;
+			buildPhases = (
+				9CAE287E18C4343B005B06B5 /* Sources */,
+				9CAE287F18C4343B005B06B5 /* Frameworks */,
+				9CAE288018C4343B005B06B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pixate-freestyle-mac";
+			productName = "pixate-freestyle-mac";
+			productReference = 9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9CAE288E18C4343B005B06B5 /* pixate-freestyle-macTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAE28A318C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-macTests" */;
+			buildPhases = (
+				9CAE288B18C4343B005B06B5 /* Sources */,
+				9CAE288C18C4343B005B06B5 /* Frameworks */,
+				9CAE288D18C4343B005B06B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CAE289418C4343B005B06B5 /* PBXTargetDependency */,
+			);
+			name = "pixate-freestyle-macTests";
+			productName = "pixate-freestyle-macTests";
+			productReference = 9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -4361,6 +4484,8 @@
 			targets = (
 				9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */,
 				9C84A64918AE9CB600E7CDA7 /* pixate-freestyleTests */,
+				9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */,
+				9CAE288E18C4343B005B06B5 /* pixate-freestyle-macTests */,
 			);
 		};
 /* End PBXProject section */
@@ -5103,6 +5228,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CAE288D18C4343B005B06B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAE289B18C4343B005B06B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -5331,6 +5464,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CAE287E18C4343B005B06B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAE288B18C4343B005B06B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAE289D18C4343B005B06B5 /* pixate_freestyle_macTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -5339,6 +5487,11 @@
 			target = 9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */;
 			targetProxy = 9C84A65018AE9CB600E7CDA7 /* PBXContainerItemProxy */;
 		};
+		9CAE289418C4343B005B06B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */;
+			targetProxy = 9CAE289318C4343B005B06B5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -5346,6 +5499,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C84A65718AE9CB600E7CDA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9CAE289918C4343B005B06B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CAE289A18C4343B005B06B5 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -5429,6 +5590,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "pixate-freestyle";
@@ -5444,6 +5606,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "pixate-freestyle";
@@ -5491,6 +5654,82 @@
 			};
 			name = Release;
 		};
+		9CAE289E18C4343B005B06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/pixate_freestyle_mac.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9CAE289F18C4343B005B06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/pixate_freestyle_mac.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9CAE28A018C4343B005B06B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "pixate-freestyle-macTests/pixate-freestyle-macTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9CAE28A118C4343B005B06B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "pixate-freestyle-macTests/pixate-freestyle-macTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -5520,6 +5759,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9CAE28A218C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAE289E18C4343B005B06B5 /* Debug */,
+				9CAE289F18C4343B005B06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9CAE28A318C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-macTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAE28A018C4343B005B06B5 /* Debug */,
+				9CAE28A118C4343B005B06B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
