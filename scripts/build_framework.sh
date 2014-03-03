@@ -92,10 +92,10 @@ function xcode_build_target() {
     || die "XCode build failed for platform: ${1}."
 }
 
-xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "i386" "5.0" "i386"
+xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "i386" "6.1" "i386"
 xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "x86_64" "7.0" "x86_64"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7" "5.0" "Arm"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7s" "5.0" "Arm7S"
+xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7" "6.1" "Arm"
+xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7s" "6.1" "Arm7S"
 xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "arm64" "7.0" "Arm64"
 
 # -----------------------------------------------------------------------------
