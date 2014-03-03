@@ -215,7 +215,25 @@ static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
                 {
                     [view px_setSeparatorStyle: UITableViewCellSeparatorStyleSingleLineEtched];
                 }
-            }
+            },
+             @"content-offset" : ^(PXDeclaration *declaration, PXStylerContext *context) {
+                PXUITableView *view = (PXUITableView *)context.styleable;
+                CGSize point = declaration.sizeValue;
+                
+                [view px_setContentOffset: CGPointMake(point.width, point.height)];
+            },
+             @"content-size" : ^(PXDeclaration *declaration, PXStylerContext *context) {
+                PXUITableView *view = (PXUITableView *)context.styleable;
+                CGSize size = declaration.sizeValue;
+                
+                [view px_setContentSize: size];
+            },
+             @"content-inset" : ^(PXDeclaration *declaration, PXStylerContext *context) {
+                PXUITableView *view = (PXUITableView *)context.styleable;
+                UIEdgeInsets insets = declaration.insetsValue;
+                
+                [view px_setContentInset: insets];
+            },
             }],
 
             PXAnimationStyler.sharedInstance,
@@ -272,5 +290,9 @@ PX_WRAP_1(setBackgroundColor, color);
 PX_WRAP_1(setBackgroundView, view);
 PX_WRAP_1(setSeparatorColor, color);
 PX_WRAP_1v(setSeparatorStyle, UITableViewCellSeparatorStyle, style);
+
+PX_WRAP_1s(setContentSize,   CGSize,       size);
+PX_WRAP_1s(setContentOffset, CGPoint,      size);
+PX_WRAP_1s(setContentInset,  UIEdgeInsets, insets);
 
 @end

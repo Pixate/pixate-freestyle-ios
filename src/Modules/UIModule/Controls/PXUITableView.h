@@ -46,6 +46,9 @@
  *  - separator-style: none | single-line | etched-line
  *  - selection-mode: single | multiple
  *  - selection-mode-during-editing: single | multiple
+ *  - content-size: <size>
+ *  - content-offset: <size>
+ *  - content-inset: <insets>
  *  - PXAnimationStyler
  *
  */
