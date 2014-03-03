@@ -77,6 +77,10 @@
 // Keep for now until we decide whether we should be doing text transforms this way instead.
 //
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[((PXProxy *)tableView.dataSource) baseObject] tableView:tableView numberOfRowsInSection:section];
+}
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 //{
