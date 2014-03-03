@@ -1972,7 +1972,7 @@
 		9C31780818BE936B00F4B79D /* StyleableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleableView.h; sourceTree = "<group>"; };
 		9C31780918BE936B00F4B79D /* StyleableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleableView.m; sourceTree = "<group>"; };
 		9C31780A18BE936B00F4B79D /* W3CSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W3CSelectorTests.m; sourceTree = "<group>"; };
-		9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-Prefix.pch"; sourceTree = "<group>"; };
+		9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		9C4DB80218AEA48000AE80B2 /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = SOURCE_ROOT; };
 		9C70B8D718BEAD670054FA36 /* circlesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circlesvg.png; sourceTree = "<group>"; };
 		9C70B8D818BEAD670054FA36 /* ellipsesvg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsesvg.png; sourceTree = "<group>"; };
@@ -3357,10 +3357,9 @@
 			isa = PBXGroup;
 			children = (
 				9C84A63F18AE9CB600E7CDA7 /* PixateFreestyle */,
-				9C84A8D118AE9F2B00E7CDA7 /* Other Sources */,
 				9C84A65318AE9CB600E7CDA7 /* PixateFreestyleTests */,
-				9CAE288418C4343B005B06B5 /* pixate-freestyle-mac */,
-				9CAE289618C4343B005B06B5 /* pixate-freestyle-macTests */,
+				9CAE288418C4343B005B06B5 /* PixateFreestyleMac */,
+				9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */,
 				9C84A63C18AE9CB600E7CDA7 /* Frameworks */,
 				9C84A63B18AE9CB600E7CDA7 /* Products */,
 			);
@@ -3393,6 +3392,7 @@
 				9C9865E218C0499000C71922 /* Kernel */,
 				9C98643318C0498F00C71922 /* Core */,
 				9C9865E518C0499000C71922 /* Modules */,
+				9CAE28A418C4369C005B06B5 /* Supporting Files */,
 				9C98684C18C04C4700C71922 /* PixateFreestyle.h */,
 				9C98684D18C04C4700C71922 /* PixateFreestyle.m */,
 				9C4DB80218AEA48000AE80B2 /* Version.h */,
@@ -3420,14 +3420,6 @@
 				9C84A65618AE9CB600E7CDA7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C84A8D118AE9F2B00E7CDA7 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		9C98643318C0498F00C71922 /* Core */ = {
@@ -4128,11 +4120,12 @@
 			path = Virtual;
 			sourceTree = "<group>";
 		};
-		9CAE288418C4343B005B06B5 /* pixate-freestyle-mac */ = {
+		9CAE288418C4343B005B06B5 /* PixateFreestyleMac */ = {
 			isa = PBXGroup;
 			children = (
 				9CAE288518C4343B005B06B5 /* Supporting Files */,
 			);
+			name = PixateFreestyleMac;
 			path = "pixate-freestyle-mac";
 			sourceTree = "<group>";
 		};
@@ -4144,12 +4137,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9CAE289618C4343B005B06B5 /* pixate-freestyle-macTests */ = {
+		9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */ = {
 			isa = PBXGroup;
 			children = (
 				9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */,
 				9CAE289718C4343B005B06B5 /* Supporting Files */,
 			);
+			name = PixateFreestyleMacTests;
 			path = "pixate-freestyle-macTests";
 			sourceTree = "<group>";
 		};
@@ -4158,6 +4152,14 @@
 			children = (
 				9CAE289818C4343B005B06B5 /* pixate-freestyle-macTests-Info.plist */,
 				9CAE289918C4343B005B06B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CAE28A418C4369C005B06B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C4DB6D918AEA45D00AE80B2 /* pixate-freestyle-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
