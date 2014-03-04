@@ -100,6 +100,10 @@ For now, let’s make a simple app that styles a single button. Follow [this sho
 
 You can build the style of your app piece-by-piece using the method above. For even faster development, use a pre-built [Freestyle theme](http://pixate.github.io/pixate-freestyle-ios/themes). Themes have pre-built CSS and Sass that can be quickly customized to style an entire app. Learn more [here](http://pixate.github.io/pixate-freestyle-ios/themes).
 
+## Mailing List & Twitter
+
+Keep up with notifications and announcements by joining Pixate's [mailing list](http://pixatesurvey.herokuapp.com) and [follow us](http://twitter.com/Pixate) on Twitter.
+
 ## Docs
 
 You can find the latest Pixate Freestyle documentation [here](http://pixate.github.io/pixate-freestyle-ios).
