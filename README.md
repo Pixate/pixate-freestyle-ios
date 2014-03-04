@@ -42,6 +42,14 @@ If you use [CocoaPods](http://cocoapods.org), install the Freestyle cocoapod by 
 pod 'PixateFreestyle'
 ```
 
+### RubyMotion, Xamarin, and Titanium
+
+Modules are also available (with source code) for using Pixate Freestyle on iOS with:
+
+* [RubyMotion](https://github.com/Pixate/RubyMotion-PixateFreestyle)
+* [Xamarin](https://github.com/Pixate/Xamarin-PixateFreestyle)
+* [Titanium](https://github.com/Pixate/Titanium-PixateFreestyle)
+
 ### Migrating from Pixate Framework
 
 If you are migrating from the Pixate Framework, you’ll only need to make a few changes, namely updating your imports to use ‘PixateFreestyle’ and updating your initialization method in your main.m.
