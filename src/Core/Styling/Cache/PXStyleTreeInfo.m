@@ -33,6 +33,7 @@
     NSMutableDictionary *childStyleInfo_;           // keyed by NSIndexPath
 //    NSMutableDictionary *pseudoElementStyleInfo_;   // keyed by NSIndexPath
     NSUInteger descendantCount_;
+    BOOL cached_;
 }
 
 #pragma mark - Initializers
@@ -42,7 +43,9 @@
     if (self = [super init])
     {
         styleKey_ = styleable.styleKey;
-        styleableStyleInfo_ = [PXStyleInfo styleInfoForStyleable:styleable];
+        NSNumber* checkPseudoClassFunction = [NSNumber numberWithBool:NO];
+        styleableStyleInfo_ = [PXStyleInfo styleInfoForStyleable:styleable checkPseudoClassFunction:&checkPseudoClassFunction];
+        cached_ = !checkPseudoClassFunction.boolValue;
         styleableStyleInfo_.forceInvalidation = YES;
         childStyleInfo_ = [NSMutableDictionary dictionary];
 
