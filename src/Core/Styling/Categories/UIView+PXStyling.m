@@ -203,12 +203,10 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     // License check
     //
     
-    static BOOL validLicenseFound;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken,
                   ^{
                       NSInteger month, day, year;
-                      validLicenseFound = NO;
 
                       // Get main info dictionary that keeps plist properties
                       NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
