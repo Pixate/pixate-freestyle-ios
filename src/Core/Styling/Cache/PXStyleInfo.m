@@ -30,6 +30,7 @@
 #import "PXTypeSelector.h"
 #import "PXStyler.h"
 #import "NSObject+PXStyling.h"
+#import "PXPseudoClassFunction.h"
 
 @implementation PXStyleInfo
 {
@@ -40,6 +41,11 @@
 #pragma mark - Static Methods
 
 + (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable
+{
+    return [self styleInfoForStyleable:styleable checkPseudoClassFunction:nil];
+}
+
++ (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable checkPseudoClassFunction:(NSNumber**)checkPseudoClassFunction
 {
     PXStyleInfo *result = [[PXStyleInfo alloc] initWithStyleKey:styleable.styleKey];
     result.changeable = styleable.styleChangeable;
@@ -86,6 +92,17 @@
             if (selector.pseudoElement.length > 0)
             {
                 [toRemove addObject:ruleSet];
+            }
+
+            if (checkPseudoClassFunction) {
+                if (!(*checkPseudoClassFunction).boolValue) {
+                    for (id<PXSelector> attribute in selector.attributeExpressions) {
+                        if ([attribute isKindOfClass:PXPseudoClassFunction.class]) {
+                            *checkPseudoClassFunction = [NSNumber numberWithBool:YES];
+                            break;
+                        }
+                    }
+                }
             }
         }
 

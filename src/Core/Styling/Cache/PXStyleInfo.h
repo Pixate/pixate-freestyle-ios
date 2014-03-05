@@ -33,6 +33,7 @@
 @property (nonatomic) BOOL changeable;
 
 + (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable;
++ (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable checkPseudoClassFunction:(NSNumber**)checkPseudoClassFunction;
 + (void)setStyleInfo:(PXStyleInfo *)styleInfo withRuleSets:(NSArray *)ruleSets styleable:(id<PXStyleable>)styleable stateName:(NSString *)stateName;
 
 - (id)initWithStyleKey:(NSString *)styleKey;

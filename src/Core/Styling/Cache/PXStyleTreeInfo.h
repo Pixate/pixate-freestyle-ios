@@ -28,6 +28,7 @@
 @interface PXStyleTreeInfo : NSObject
 
 @property (nonatomic, readonly) NSString *styleKey;
+@property (nonatomic, readonly) BOOL cached;
 
 - (id)initWithStyleable:(id<PXStyleable>)styleable;
 
