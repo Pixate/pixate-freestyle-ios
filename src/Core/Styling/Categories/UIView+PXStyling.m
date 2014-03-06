@@ -37,6 +37,7 @@
 #import "NSMutableArray+QueueAdditions.h"
 #import "NSObject+PXClass.h"
 #import "NSObject+PXStyling.h"
+#import "PXStylingMacros.h"
 
 static const char STYLE_CLASS_KEY;
 static const char STYLE_CLASSES_KEY;
@@ -444,12 +445,12 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
 - (void)updateStyles
 {
-    [PXStyleUtils updateStylesForStyleable:self andDescendants:YES];
+    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, YES);
 }
 
 - (void)updateStylesNonRecursively
 {
-    [PXStyleUtils updateStylesForStyleable:self andDescendants:NO];
+    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, NO);
 }
 
 - (void)updateStylesAsync

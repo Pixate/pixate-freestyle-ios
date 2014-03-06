@@ -52,20 +52,22 @@
 #define PXSTYLE_LAYOUTSUBVIEWS_IMP(VIEW, RECURSE) \
     if (VIEW.styleMode == PXStylingNormal) \
     { \
-        for (id<PXStyleable> child in VIEW.pxStyleChildren) \
+        if((BOOL)RECURSE) \
         { \
-            if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal) \
+            for (id<PXStyleable> child in VIEW.pxStyleChildren) \
             { \
-                [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending) { \
-                    if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal) \
-                    { \
-                        [PXStyleUtils updateStyleForStyleable:styleable]; \
-                    } \
-                }]; \
-                [PXStyleUtils updateStyleForStyleable:child]; \
+                if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal) \
+                { \
+                    [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending) { \
+                        if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal) \
+                        { \
+                            [PXStyleUtils updateStyleForStyleable:styleable]; \
+                        } \
+                    }]; \
+                    [PXStyleUtils updateStyleForStyleable:child]; \
+                } \
             } \
         } \
-        \
         [PXStyleUtils updateStylesForStyleable:VIEW andDescendants:((BOOL)RECURSE)]; \
     }
 
