@@ -39,6 +39,7 @@
 #import "NSObject+PXStyling.h"
 
 static const char STYLE_CLASS_KEY;
+static const char STYLE_CLASSES_KEY;
 static const char STYLE_ID_KEY;
 static const char STYLE_CHANGEABLE_KEY;
 static const char STYLE_CSS_KEY;
@@ -309,6 +310,11 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     return objc_getAssociatedObject(self, &STYLE_CLASS_KEY);
 }
 
+- (NSArray *)styleClasses
+{
+    return objc_getAssociatedObject(self, &STYLE_CLASSES_KEY);
+}
+
 - (NSString *)styleId
 {
     NSString *id = objc_getAssociatedObject(self, &STYLE_ID_KEY);
@@ -361,6 +367,13 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
     objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
 
+    //Precalculate classes array for performance gain
+    NSArray *classes = [aClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
+        return [class1 compare:class2];
+    }];
+    objc_setAssociatedObject(self, &STYLE_CLASSES_KEY, classes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
 	if ([aClass length])
     {
         self.styleMode = PXStylingNormal;
