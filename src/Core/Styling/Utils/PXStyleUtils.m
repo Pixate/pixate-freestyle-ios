@@ -241,10 +241,7 @@ static const char viewDelegate;
     if (styleable.styleId) [parts addObject:[NSString stringWithFormat:@"#%@", styleable.styleId]];
 
     // add classes
-    NSArray *classes = [styleable.styleClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
-        return [class1 compare:class2];
-    }];
+    NSArray *classes = styleable.styleClasses;
 
     for (NSString *className in classes)
     {
@@ -517,7 +514,7 @@ static const char viewDelegate;
     BOOL preventStyling = [styleable respondsToSelector:@selector(preventStyling)] && [styleable preventStyling];
     
     // We prevent nested styling of a styleable by checking to see if it is currently being styled
-    if (![viewsBeingStyled containsObject:styleable] && !preventStyling)
+    if (![viewsBeingStyled containsObject:styleable] && !preventStyling && styleable.styleMode != PXStylingNone)
     {
         // catch all exceptions to make sure we remove the current styleable from viewsBeingStyled
         @try

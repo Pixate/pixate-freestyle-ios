@@ -260,7 +260,9 @@ NSString *const kDefaultCacheLabelLineBreakMode = @"label.lineBreakMode";
 
 - (BOOL)preventStyling
 {
-    return [[self pxStyleParent] isKindOfClass:[UIButton class]];
+    return [[self pxStyleParent] isKindOfClass:[UIButton class]]
+        || [[[[self pxStyleParent] class] description] isEqualToString:@"UINavigationItemButtonView"]
+        ;
 }
 
 //
@@ -270,15 +272,23 @@ NSString *const kDefaultCacheLabelLineBreakMode = @"label.lineBreakMode";
 -(void)setText:(NSString *)text
 {
     callSuper1(SUPER_PREFIX, _cmd, text);
-    [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    
+    if([self preventStyling] == NO)
+    {
+        [PXStyleUtils invalidateStyleableAndDescendants:self];
+        [self updateStylesNonRecursively];
+    }
 }
 
 -(void)setAttributedText:(NSAttributedString *)attributedText
 {
     callSuper1(SUPER_PREFIX, _cmd, attributedText);
-    [PXStyleUtils invalidateStyleableAndDescendants:self];
-    [self updateStyles];
+    
+    if([self preventStyling] == NO)
+    {
+        [PXStyleUtils invalidateStyleableAndDescendants:self];
+        [self updateStylesNonRecursively];
+    }
 }
 
 // Px Wrapped Only

@@ -73,15 +73,21 @@
 
 #pragma mark - datasource
 
-//
-// Keep for now until we decide whether we should be doing text transforms this way instead.
-//
-
+/* 
+ * Added to prevent an exception described below on iOS6 when using UIDatePicker
+ *
+ * Uncaught exception 'NSInvalidArgumentException', reason: '*** -[NSProxy
+ * doesNotRecognizeSelector:tableView:numberOfRowsInSection:] called
+ *
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[((PXProxy *)tableView.dataSource) baseObject] tableView:tableView numberOfRowsInSection:section];
 }
 
+//
+// Keep for now until we decide whether we should be doing text transforms this way instead.
+//
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 //{
 //    NSString *title = [[((PXProxy *) tableView.dataSource) baseObject] tableView:tableView

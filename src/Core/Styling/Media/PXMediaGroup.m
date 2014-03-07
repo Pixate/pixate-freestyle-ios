@@ -61,7 +61,7 @@
     // gather keys
     NSString *elementName = styleable.pxStyleElementName;
     NSString *styleId = styleable.styleId;
-    NSString *styleClass = styleable.styleClass;
+    NSArray *styleClasses = styleable.styleClasses;
 
     // find relevant ruleSets by element name
     if (elementName.length > 0)
@@ -90,10 +90,8 @@
     }
 
     // find relevant ruleSets by class
-    if (styleClass.length > 0)
+    if (styleClasses.count > 0)
     {
-        NSArray *styleClasses = [styleClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-
         for (NSString *aClass in styleClasses)
         {
             for (PXRuleSet *ruleSet in [ruleSetsByClass_ objectForKey:aClass])

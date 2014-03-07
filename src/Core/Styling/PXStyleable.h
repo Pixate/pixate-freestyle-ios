@@ -56,6 +56,11 @@ typedef enum
 @property (nonatomic, copy) NSString *styleClass;
 
 /**
+*  Return an array of the styleClass separated by whitespace for faster performance
+*/
+@property (nonatomic, readonly) NSArray *styleClasses;
+
+/**
  *  For support in cache, programing change style or class style
  */
 @property (nonatomic) BOOL styleChangeable;

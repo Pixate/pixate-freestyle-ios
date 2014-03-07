@@ -28,14 +28,15 @@
 @implementation PXVirtualStyleableControl
 {
     PXViewStyleUpdaterBlock _block;
+    NSString *_styleClass;
+    NSArray *_styleClasses;
 }
 
 // synthesize properties coming from PXStyleable protocol
 
 @synthesize styleId;
-@synthesize styleClass;
-@synthesize styleChangeable;
 @synthesize styleCSS;
+@synthesize styleChangeable;
 @synthesize styleMode = _styleMode;
 @synthesize pxStyleElementName = _name;
 @synthesize pxStyleParent = _parent;
@@ -110,6 +111,27 @@
     // Cannot cache this since virtual-styleable-controls wraps different types. We would get only one
     // cache but it would apply to all types, which is incorrect
     return [PXStyleUtils viewStylerPropertyMapForStyleable:self];
+}
+
+#pragma mark - Properties
+
+-(void)setStyleClass:(NSString *)styleClass {
+    _styleClass = styleClass;
+    
+    //Precalculate classes array for performance gain
+    NSArray *classes = [styleClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
+        return [class1 compare:class2];
+    }];
+    _styleClasses = classes;
+}
+
+- (NSString *)styleClass {
+    return _styleClass;
+}
+
+- (NSArray *)styleClasses {
+    return _styleClasses;
 }
 
 #pragma mark - Overrides

@@ -44,6 +44,7 @@
 #import "PXTextShadowStyler.h"
 
 static const char STYLE_CLASS_KEY;
+static const char STYLE_CLASSES_KEY;
 static const char STYLE_ID_KEY;
 static const char STYLE_CHANGEABLE_KEY;
 static const char STYLE_CSS_KEY;
@@ -62,6 +63,11 @@ void PXForceLoadUINavigationItemPXStyling() {}
 - (NSString *)styleClass
 {
     return objc_getAssociatedObject(self, &STYLE_CLASS_KEY);
+}
+
+- (NSArray *)styleClasses
+{
+    return objc_getAssociatedObject(self, &STYLE_CLASSES_KEY);
 }
 
 - (NSString *)styleId
@@ -139,6 +145,13 @@ void PXForceLoadUINavigationItemPXStyling() {}
     aClass = [aClass stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
     objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
+ 
+    //Precalculate classes array for performance gain
+    NSArray *classes = [aClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
+        return [class1 compare:class2];
+    }];
+    objc_setAssociatedObject(self, &STYLE_CLASSES_KEY, classes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self updateStylesNonRecursively];
 }
@@ -200,12 +213,12 @@ void PXForceLoadUINavigationItemPXStyling() {}
 
 - (void)updateStyles
 {
-    [PXStyleUtils updateStylesForStyleable:self andDescendants:YES];
+    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, YES);
 }
 
 - (void)updateStylesNonRecursively
 {
-    [PXStyleUtils updateStylesForStyleable:self andDescendants:NO];
+    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, NO);
 }
 
 - (void)updateStylesAsync
