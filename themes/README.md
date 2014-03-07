@@ -82,7 +82,7 @@ You can simply grab the compiled CSS file from a theme and add it to your projec
 * Click on the `Build Phases` tab.
 * From the top menu under `Editor`, select `Add Build Phase`, then `Add Run Script Build Phase`.
 
-* If you're using RVM:
+* If you're using RVM,
 * In the new Run Script field enter: 
 
 ```
@@ -90,7 +90,7 @@ source /Users/${USER}/.rvm/environments/default
 ${GEM_HOME}/bin/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css
 ```
 
-* If you're using rbenv:
+* If you're using rbenv,
 * In the new Run Script field enter: 
 
 ```
