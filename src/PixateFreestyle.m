@@ -278,7 +278,11 @@
 
     [PXCacheManager clearStyleCache];
     [PXStylesheet clearCache];
-    [[UIApplication sharedApplication].keyWindow updateStyles];
+
+    UIWindow* keyWindow = [UIApplication sharedApplication].keyWindow;
+    if (keyWindow.styleMode != PXStylingNormal)
+        keyWindow.styleMode = PXStylingNormal;
+    [keyWindow updateStyles];
 }
 
 @end
