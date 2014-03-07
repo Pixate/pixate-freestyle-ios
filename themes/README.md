@@ -88,7 +88,7 @@ source /Users/${USER}/.rvm/environments/default
 ${GEM_HOME}/bin/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css
 ```
 
-* If you're using rbenv, you should enter this code instead: 
+* If you're using rbenv, you should enter this instead: 
 
 ```
 /Users/${USER}/.rbenv/shims/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css
