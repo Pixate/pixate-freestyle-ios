@@ -80,7 +80,8 @@ You can simply grab the compiled CSS file from a theme and add it to your projec
 * Add all of the files in Freestyle/scss to your project in Xcode.
 * In XCode, click on your project in the Project Navigator.  
 * Click on the `Build Phases` tab.
-* From the top menu under `Editor`, select `Add Build Phase`, then `Add Build Script Run Phase`.
+* From the top menu under `Editor`, select `Add Build Phase`, then `Add Run Script Build Phase`.
+* In the new Run Script field enter:
 * If you're using RVM In the new Run Script field enter: 
 
 ```
