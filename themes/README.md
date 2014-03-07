@@ -81,15 +81,17 @@ You can simply grab the compiled CSS file from a theme and add it to your projec
 * In XCode, click on your project in the Project Navigator.  
 * Click on the `Build Phases` tab.
 * From the top menu under `Editor`, select `Add Build Phase`, then `Add Run Script Build Phase`.
-* In the new Run Script field enter:
-* If you're using RVM In the new Run Script field enter: 
+
+* If you're using RVM:
+* In the new Run Script field enter: 
 
 ```
 source /Users/${USER}/.rvm/environments/default
 ${GEM_HOME}/bin/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css
 ```
 
-* If you're using rbenv In the new Run Script field enter: 
+* If you're using rbenv:
+* In the new Run Script field enter: 
 
 ```
 /Users/${USER}/.rbenv/shims/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css
