@@ -61,6 +61,11 @@ typedef enum
 @property (nonatomic, readonly) NSArray *styleClasses;
 
 /**
+ *  For support in cache, programing change style or class style
+ */
+@property (nonatomic) BOOL styleChangeable;
+
+/**
  * The styling mode of the styleable as defined by the PXStylingMode enumeration.
  */
 @property (nonatomic) PXStylingMode styleMode;

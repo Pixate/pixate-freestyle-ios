@@ -48,7 +48,8 @@
 + (PXStyleInfo *)styleInfoForStyleable:(id<PXStyleable>)styleable checkPseudoClassFunction:(NSNumber**)checkPseudoClassFunction
 {
     PXStyleInfo *result = [[PXStyleInfo alloc] initWithStyleKey:styleable.styleKey];
-
+    result.changeable = styleable.styleChangeable;
+    
     // find all rule sets that apply to this styleable
     NSMutableArray *ruleSets = [PXStyleUtils matchingRuleSetsForStyleable:styleable];
 
