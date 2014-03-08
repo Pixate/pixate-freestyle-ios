@@ -4,4 +4,10 @@
    <FileRef
       location = "group:UIButtonTest/UIButtonTest.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:UILabelTest/UILabelTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UITableViewTest/UITableViewTest.xcodeproj">
+   </FileRef>
 </Workspace>
