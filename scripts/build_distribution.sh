@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright 2014-present Pixate, Inc.
-# 
+#
 # This version based on the original verson by:
 #
 # Copyright 2010-present Facebook.
@@ -9,9 +9,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #    http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -40,6 +40,7 @@ PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK_SUBDIR=Documents/PixateFreestyle
 PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK=$PX_FREESTYLE_BUILD_PACKAGE/$PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK_SUBDIR
 PX_FREESTYLE_BUILD_PACKAGE_SAMPLES=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Samples
 PX_FREESTYLE_BUILD_PACKAGE_THEMES=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Themes
+PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Documentation
 PX_FREESTYLE_BUILD_PACKAGE_DOCS=$PX_FREESTYLE_BUILD_PACKAGE/Library/Developer/Shared/Documentation/DocSets/$PX_FREESTYLE_DOCSET_NAME
 
 
@@ -64,6 +65,7 @@ mkdir $PX_FREESTYLE_BUILD_PACKAGE \
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_SAMPLES
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_THEMES
+mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS
 #mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCS
 
 \cp -R $PX_FREESTYLE_FRAMEWORK $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK \
@@ -78,6 +80,8 @@ mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_THEMES
   || die "Could not copy README"
 \cp $PX_FREESTYLE_ROOT/LICENSE $PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle \
   || die "Could not copy LICENSE"
+\cp $PX_FREESTYLE_SCRIPT/build_documentation_links/* $PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS \
+  || die "Could not copy doc links"
 
 # -----------------------------------------------------------------------------
 # Fixup projects to point to the SDK framework
