@@ -1,0 +1,17 @@
+#label1 {
+    color: orange;
+}
+
+#label2:highlighted attributed-text {
+    color: blue;
+}
+
+#label3 {
+    color: red;
+}
+
+#label4 attributed-text {
+    color: green;
+    text-decoration: line-through;
+}
+

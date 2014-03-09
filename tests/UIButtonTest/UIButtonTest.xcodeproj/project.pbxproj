@@ -153,7 +153,6 @@
 				9C09F2A818CBD96C005D8332 /* ViewController.m */,
 				9C09F2AA18CBD96C005D8332 /* Images.xcassets */,
 				9C09F29918CBD96C005D8332 /* Supporting Files */,
-				9C09F2D718CBD9F6005D8332 /* default.css */,
 			);
 			path = UIButtonTest;
 			sourceTree = "<group>";
@@ -161,6 +160,7 @@
 		9C09F29918CBD96C005D8332 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C09F2D718CBD9F6005D8332 /* default.css */,
 				9C09F29A18CBD96C005D8332 /* UIButtonTest-Info.plist */,
 				9C09F29B18CBD96C005D8332 /* InfoPlist.strings */,
 				9C09F29E18CBD96C005D8332 /* main.m */,

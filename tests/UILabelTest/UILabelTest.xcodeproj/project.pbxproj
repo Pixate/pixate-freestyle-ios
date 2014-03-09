@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2CD64F18CCFEF100D6C578 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C2CD64E18CCFEF100D6C578 /* default.css */; };
+		9C2CD65F18CCFF0E00D6C578 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2CD65818CCFF0900D6C578 /* libpixate-freestyle.a */; };
 		9C4E0CBD18CBDCE8009C5360 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E0CBC18CBDCE8009C5360 /* Foundation.framework */; };
 		9C4E0CBF18CBDCE8009C5360 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E0CBE18CBDCE8009C5360 /* CoreGraphics.framework */; };
 		9C4E0CC118CBDCE8009C5360 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E0CC018CBDCE8009C5360 /* UIKit.framework */; };
@@ -24,6 +26,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9C2CD65718CCFF0900D6C578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A63A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyle";
+		};
+		9C2CD65918CCFF0900D6C578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A64A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyleTests";
+		};
+		9C2CD65B18CCFF0900D6C578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288218C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-mac";
+		};
+		9C2CD65D18CCFF0900D6C578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288F18C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-macTests";
+		};
 		9C4E0CDF18CBDCE8009C5360 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C4E0CB118CBDCE8009C5360 /* Project object */;
@@ -34,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C2CD64E18CCFEF100D6C578 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
 		9C4E0CB918CBDCE8009C5360 /* UILabelTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILabelTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4E0CBC18CBDCE8009C5360 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C4E0CBE18CBDCE8009C5360 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2CD65F18CCFF0E00D6C578 /* libpixate-freestyle.a in Frameworks */,
 				9C4E0CBF18CBDCE8009C5360 /* CoreGraphics.framework in Frameworks */,
 				9C4E0CC118CBDCE8009C5360 /* UIKit.framework in Frameworks */,
 				9C4E0CBD18CBDCE8009C5360 /* Foundation.framework in Frameworks */,
@@ -79,6 +112,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C2CD65118CCFF0900D6C578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C2CD65818CCFF0900D6C578 /* libpixate-freestyle.a */,
+				9C2CD65A18CCFF0900D6C578 /* pixate-freestyleTests.xctest */,
+				9C2CD65C18CCFF0900D6C578 /* libpixate-freestyle-mac.a */,
+				9C2CD65E18CCFF0900D6C578 /* pixate-freestyle-macTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9C4E0CB018CBDCE8009C5360 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +145,7 @@
 		9C4E0CBB18CBDCE8009C5360 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */,
 				9C4E0CBC18CBDCE8009C5360 /* Foundation.framework */,
 				9C4E0CBE18CBDCE8009C5360 /* CoreGraphics.framework */,
 				9C4E0CC018CBDCE8009C5360 /* UIKit.framework */,
@@ -126,6 +171,7 @@
 		9C4E0CC318CBDCE8009C5360 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C2CD64E18CCFEF100D6C578 /* default.css */,
 				9C4E0CC418CBDCE8009C5360 /* UILabelTest-Info.plist */,
 				9C4E0CC518CBDCE8009C5360 /* InfoPlist.strings */,
 				9C4E0CC818CBDCE8009C5360 /* main.m */,
@@ -215,6 +261,12 @@
 			mainGroup = 9C4E0CB018CBDCE8009C5360;
 			productRefGroup = 9C4E0CBA18CBDCE8009C5360 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9C2CD65118CCFF0900D6C578 /* Products */;
+					ProjectRef = 9C2CD65018CCFF0900D6C578 /* pixate-freestyle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9C4E0CB818CBDCE8009C5360 /* UILabelTest */,
@@ -222,6 +274,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9C2CD65818CCFF0900D6C578 /* libpixate-freestyle.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle.a";
+			remoteRef = 9C2CD65718CCFF0900D6C578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C2CD65A18CCFF0900D6C578 /* pixate-freestyleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyleTests.xctest";
+			remoteRef = 9C2CD65918CCFF0900D6C578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C2CD65C18CCFF0900D6C578 /* libpixate-freestyle-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle-mac.a";
+			remoteRef = 9C2CD65B18CCFF0900D6C578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C2CD65E18CCFF0900D6C578 /* pixate-freestyle-macTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyle-macTests.xctest";
+			remoteRef = 9C2CD65D18CCFF0900D6C578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9C4E0CB718CBDCE8009C5360 /* Resources */ = {
@@ -231,6 +314,7 @@
 				9C4E0CD518CBDCE8009C5360 /* Images.xcassets in Resources */,
 				9C4E0CC718CBDCE8009C5360 /* InfoPlist.strings in Resources */,
 				9C4E0CD018CBDCE8009C5360 /* Main.storyboard in Resources */,
+				9C2CD64F18CCFEF100D6C578 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +464,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UILabelTest/UILabelTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../src/**",
+				);
 				INFOPLIST_FILE = "UILabelTest/UILabelTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -393,6 +482,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UILabelTest/UILabelTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../src/**",
+				);
 				INFOPLIST_FILE = "UILabelTest/UILabelTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -460,6 +554,7 @@
 				9C4E0CED18CBDCE8009C5360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C4E0CEE18CBDCE8009C5360 /* Build configuration list for PBXNativeTarget "UILabelTestTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +563,7 @@
 				9C4E0CF018CBDCE8009C5360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

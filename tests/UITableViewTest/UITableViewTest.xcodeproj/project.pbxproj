@@ -169,7 +169,6 @@
 				9C1A186C18CCE1010025ECDC /* ViewController2.m */,
 				9CD0868F18CBDC6F00F33634 /* Images.xcassets */,
 				9CD0867E18CBDC6F00F33634 /* Supporting Files */,
-				9C1A186518CBDF740025ECDC /* default.css */,
 			);
 			path = UITableViewTest;
 			sourceTree = "<group>";
@@ -177,6 +176,7 @@
 		9CD0867E18CBDC6F00F33634 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C1A186518CBDF740025ECDC /* default.css */,
 				9CD0867F18CBDC6F00F33634 /* UITableViewTest-Info.plist */,
 				9CD0868018CBDC6F00F33634 /* InfoPlist.strings */,
 				9CD0868318CBDC6F00F33634 /* main.m */,
