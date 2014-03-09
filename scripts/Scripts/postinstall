@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Open the directory we just installed
+open $2/Documents/PixateFreestyle
+
+# Delete this script
+rm -rf $2/Documents/PixateFreestyle/Scripts
+
+# Exit this script
+exit 0

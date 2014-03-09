@@ -41,6 +41,8 @@ PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK=$PX_FREESTYLE_BUILD_PACKAGE/$PX_FREESTYLE_B
 PX_FREESTYLE_BUILD_PACKAGE_SAMPLES=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Samples
 PX_FREESTYLE_BUILD_PACKAGE_THEMES=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Themes
 PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Documentation
+PX_FREESTYLE_BUILD_PACKAGE_SCRIPTS=$PX_FREESTYLE_BUILD_PACKAGE/Documents/PixateFreestyle/Scripts
+
 PX_FREESTYLE_BUILD_PACKAGE_DOCS=$PX_FREESTYLE_BUILD_PACKAGE/Library/Developer/Shared/Documentation/DocSets/$PX_FREESTYLE_DOCSET_NAME
 
 
@@ -66,6 +68,7 @@ mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_SAMPLES
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_THEMES
 mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS
+mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_SCRIPTS
 #mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCS
 
 \cp -R $PX_FREESTYLE_FRAMEWORK $PX_FREESTYLE_BUILD_PACKAGE_FRAMEWORK \
@@ -82,6 +85,8 @@ mkdir -p $PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS
   || die "Could not copy LICENSE"
 \cp $PX_FREESTYLE_SCRIPT/build_documentation_links/* $PX_FREESTYLE_BUILD_PACKAGE_DOCLINKS \
   || die "Could not copy doc links"
+\cp $PX_FREESTYLE_SCRIPT/Scripts/* $PX_FREESTYLE_BUILD_PACKAGE_SCRIPTS \
+  || die "Could not copy scripts"
 
 # -----------------------------------------------------------------------------
 # Fixup projects to point to the SDK framework
@@ -98,6 +103,7 @@ progress_message "Building .pkg from package directory."
 # First use pkgbuild to create component package
 \rm -rf $COMPONENT_PX_FREESTYLE_PKG
 $PACKAGEBUILD --root "$PX_FREESTYLE_BUILD/package" \
+            --scripts "$PX_FREESTYLE_SCRIPT/Scripts" \
  		 --identifier "com.pixate.pixate-freestyle.pkg" \
  		 --version $PX_FREESTYLE_NORMALIZED_PGK_VERSION   \
  		 $COMPONENT_PX_FREESTYLE_PKG || die "Failed to pkgbuild component package"
