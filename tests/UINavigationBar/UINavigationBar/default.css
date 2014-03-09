@@ -1,0 +1,23 @@
+
+/*
+ * In the case when using the standard built-in Back 'button',
+ * this is how you would style it.
+ */
+
+navigation-bar {
+    font-family         : "American Typewriter";
+    font-weight         : bold;
+    font-size           : 12px;
+}
+
+navigation-bar button-appearance {
+    font-family         : "Times New Roman";
+    font-weight         : bold;
+    font-size           : 14px;
+}
+
+navigation-bar back-indicator {
+    background-image: url(arrow.svg);
+    background-size: 18;
+}
+
