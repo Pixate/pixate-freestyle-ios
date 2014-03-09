@@ -21,8 +21,6 @@
     [super viewDidLoad];
 
     _data = @[ @"Paul", @"John", @"Joe", @"Bob" ];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -37,7 +35,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     // Configure the cell.
     cell.textLabel.text = [_data objectAtIndex:indexPath.row];

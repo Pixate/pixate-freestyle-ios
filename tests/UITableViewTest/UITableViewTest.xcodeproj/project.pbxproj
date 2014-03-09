@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C1A186618CBDF740025ECDC /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A186518CBDF740025ECDC /* default.css */; };
+		9C1A186D18CCE1010025ECDC /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A186C18CCE1010025ECDC /* ViewController2.m */; };
 		9C4E0D0018CBDD03009C5360 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4E0CF918CBDCFF009C5360 /* libpixate-freestyle.a */; };
 		9CD0867818CBDC6F00F33634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD0867718CBDC6F00F33634 /* Foundation.framework */; };
 		9CD0867A18CBDC6F00F33634 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD0867918CBDC6F00F33634 /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		9C1A186518CBDF740025ECDC /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
+		9C1A186B18CCE1010025ECDC /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		9C1A186C18CCE1010025ECDC /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		9C4E0CF118CBDCFE009C5360 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
 		9CD0867418CBDC6F00F33634 /* UITableViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITableViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD0867718CBDC6F00F33634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +165,8 @@
 				9CD0868918CBDC6F00F33634 /* Main.storyboard */,
 				9CD0868C18CBDC6F00F33634 /* ViewController.h */,
 				9CD0868D18CBDC6F00F33634 /* ViewController.m */,
+				9C1A186B18CCE1010025ECDC /* ViewController2.h */,
+				9C1A186C18CCE1010025ECDC /* ViewController2.m */,
 				9CD0868F18CBDC6F00F33634 /* Images.xcassets */,
 				9CD0867E18CBDC6F00F33634 /* Supporting Files */,
 				9C1A186518CBDF740025ECDC /* default.css */,
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD0868E18CBDC6F00F33634 /* ViewController.m in Sources */,
+				9C1A186D18CCE1010025ECDC /* ViewController2.m in Sources */,
 				9CD0868818CBDC6F00F33634 /* AppDelegate.m in Sources */,
 				9CD0868418CBDC6F00F33634 /* main.m in Sources */,
 			);
