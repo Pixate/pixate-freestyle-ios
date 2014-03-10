@@ -71,6 +71,9 @@
                      },
                      @"text-decoration" : ^(PXDeclaration *declaration, PXStylerContext *context) {
                          context.textDecoration = [declaration.stringValue lowercaseString];
+                     },
+                     @"text-shadow" : ^(PXDeclaration *declaration, PXStylerContext *context) {
+                         context.textShadow = declaration.shadowValue;
                      }
                      
                      };
