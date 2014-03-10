@@ -24,6 +24,7 @@
 		9C2CD6B818CD008E00D6C578 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2CD6B118CD008800D6C578 /* libpixate-freestyle.a */; };
 		9C2CD6BA18CD00B100D6C578 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C2CD6B918CD00B100D6C578 /* default.css */; };
 		9C2CD6BD18CD016B00D6C578 /* arrow.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2CD6BC18CD016B00D6C578 /* arrow.svg */; };
+		9CBA643818CE67FC0006AE3D /* CustomButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA643718CE67FC0006AE3D /* CustomButtonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		9C2CD6A918CD008800D6C578 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
 		9C2CD6B918CD00B100D6C578 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		9C2CD6BC18CD016B00D6C578 /* arrow.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = arrow.svg; sourceTree = "<group>"; };
+		9CBA643618CE67FC0006AE3D /* CustomButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButtonViewController.h; sourceTree = "<group>"; };
+		9CBA643718CE67FC0006AE3D /* CustomButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButtonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				9C2CD68618CD007500D6C578 /* Main.storyboard */,
 				9C2CD68918CD007500D6C578 /* ViewController.h */,
 				9C2CD68A18CD007500D6C578 /* ViewController.m */,
+				9CBA643618CE67FC0006AE3D /* CustomButtonViewController.h */,
+				9CBA643718CE67FC0006AE3D /* CustomButtonViewController.m */,
 				9C2CD68C18CD007500D6C578 /* Images.xcassets */,
 				9C2CD6BB18CD015D00D6C578 /* SVG Assets */,
 				9C2CD67B18CD007500D6C578 /* Supporting Files */,
@@ -346,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C2CD68B18CD007500D6C578 /* ViewController.m in Sources */,
+				9CBA643818CE67FC0006AE3D /* CustomButtonViewController.m in Sources */,
 				9C2CD68518CD007500D6C578 /* AppDelegate.m in Sources */,
 				9C2CD68118CD007500D6C578 /* main.m in Sources */,
 			);
