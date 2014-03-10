@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Calc7Demo/Calc7Demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:HelloWorld/HelloWorld.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PixateFreestyleShowcase/PixateFreestyleShowcase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Playground/Playground.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PXShapeDemo/PXShapeDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TableViewDemo/TableViewDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TextFieldsDemo/TextFieldsDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VectorDemo/VectorDemo.xcodeproj">
+   </FileRef>
+</Workspace>
