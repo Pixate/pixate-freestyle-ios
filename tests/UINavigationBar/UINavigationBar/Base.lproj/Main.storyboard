@@ -17,19 +17,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OY-9W-aq0">
-                                <rect key="frame" x="102" y="141" width="116" height="30"/>
+                                <rect key="frame" x="83" y="131" width="165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push new View...">
+                                <state key="normal" title="Standard Nav Buttons...">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="LGd-lf-ilJ" kind="push" id="0pM-en-h0d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlO-qu-e3O">
+                                <rect key="frame" x="87" y="184" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom Nav Buttons...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JDi-TH-8cx" kind="push" id="DYP-Sm-gIh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Main" id="QPw-Tf-PYn"/>
+                    <navigationItem key="navigationItem" title="Main" id="QPw-Tf-PYn">
+                        <barButtonItem key="backBarButtonItem" title="MyText" id="5HS-3h-e7P"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,11 +60,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Second" id="kJf-ko-Fyc"/>
+                    <navigationItem key="navigationItem" title="Standard" id="kJf-ko-Fyc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2M4-Ur-KNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="42"/>
+            <point key="canvasLocation" x="1154" y="42"/>
+        </scene>
+        <!--View Controller - Custom-->
+        <scene sceneID="82c-er-S1s">
+            <objects>
+                <viewController id="JDi-TH-8cx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SwB-XL-sxE"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHQ-Ko-Tto"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bUw-90-dQA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom" id="099-jW-QSp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUk-9o-uxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4gn-et-5Sa">

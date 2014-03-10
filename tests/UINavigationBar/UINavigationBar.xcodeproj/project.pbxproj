@@ -154,6 +154,7 @@
 				9C2CD68918CD007500D6C578 /* ViewController.h */,
 				9C2CD68A18CD007500D6C578 /* ViewController.m */,
 				9C2CD68C18CD007500D6C578 /* Images.xcassets */,
+				9C2CD6BB18CD015D00D6C578 /* SVG Assets */,
 				9C2CD67B18CD007500D6C578 /* Supporting Files */,
 			);
 			path = UINavigationBar;
@@ -163,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				9C2CD6B918CD00B100D6C578 /* default.css */,
-				9C2CD6BB18CD015D00D6C578 /* Images */,
 				9C2CD67C18CD007500D6C578 /* UINavigationBar-Info.plist */,
 				9C2CD67D18CD007500D6C578 /* InfoPlist.strings */,
 				9C2CD68018CD007500D6C578 /* main.m */,
@@ -201,12 +201,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C2CD6BB18CD015D00D6C578 /* Images */ = {
+		9C2CD6BB18CD015D00D6C578 /* SVG Assets */ = {
 			isa = PBXGroup;
 			children = (
 				9C2CD6BC18CD016B00D6C578 /* arrow.svg */,
 			);
-			name = Images;
+			name = "SVG Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +253,7 @@
 		9C2CD66918CD007500D6C578 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Pixate, Inc.";
 				TargetAttributes = {
 					9C2CD69118CD007500D6C578 = {
@@ -401,7 +401,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -440,7 +439,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -508,7 +506,6 @@
 		9C2CD6A718CD007600D6C578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UINavigationBar.app/UINavigationBar";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -531,7 +528,6 @@
 		9C2CD6A818CD007600D6C578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UINavigationBar.app/UINavigationBar";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -566,6 +562,7 @@
 				9C2CD6A518CD007600D6C578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C2CD6A618CD007600D6C578 /* Build configuration list for PBXNativeTarget "UINavigationBarTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +571,7 @@
 				9C2CD6A818CD007600D6C578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

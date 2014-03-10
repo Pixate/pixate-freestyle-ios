@@ -10,10 +10,19 @@ navigation-bar {
     font-size           : 12px;
 }
 
+/* This will apply to ALL back buttons. */
+/*
 navigation-bar button-appearance {
     font-family         : "Times New Roman";
     font-weight         : bold;
     font-size           : 14px;
+    color: red;
+}
+*/
+
+/* This will only work if you specified custom text which automatically creates a BackBarButton */
+navigation-bar back-bar-button {
+    color: blue;
 }
 
 navigation-bar back-indicator {
