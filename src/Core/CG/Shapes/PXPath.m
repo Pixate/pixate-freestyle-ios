@@ -47,9 +47,9 @@
     NSCharacterSet *commandSet = [NSCharacterSet characterSetWithCharactersInString:@"MmLlCcHhVvQqAaSsTtZz"];
     NSString *command;
     unichar lastCommand = '\0';
-    CGFloat firstX, firstY;
-    CGFloat lastX, lastY;
-    CGFloat lastHandleX, lastHandleY;
+    CGFloat firstX = 0.0, firstY = 0.0;
+    CGFloat lastX = 0.0, lastY = 0.0;
+    CGFloat lastHandleX = 0.0, lastHandleY = 0.0;
     CGFloat x1, y1, x2, y2, x3, y3;
 
     while ([scanner isAtEnd] == NO)
