@@ -21,8 +21,9 @@
 		0A2760E71884871800AB0650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2760C91884871800AB0650 /* UIKit.framework */; };
 		0A2760EF1884871800AB0650 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A2760ED1884871800AB0650 /* InfoPlist.strings */; };
 		0A2760F11884871800AB0650 /* ListFontsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2760F01884871800AB0650 /* ListFontsTests.m */; };
-		0A2760FB18848DDE00AB0650 /* Pixate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2760FA18848DDE00AB0650 /* Pixate.framework */; };
 		0A2760FE18848E7500AB0650 /* PXFontEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2760FD18848E7500AB0650 /* PXFontEntry.m */; };
+		9C47CB2B18CFA7B900AFA591 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C47CB2418CFA7B500AFA591 /* libpixate-freestyle.a */; };
+		9C47CB2D18CFA91100AFA591 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C47CB2C18CFA91100AFA591 /* default.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0A2760C11884871800AB0650;
 			remoteInfo = ListFonts;
+		};
+		9C47CB2318CFA7B500AFA591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A63A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyle";
+		};
+		9C47CB2518CFA7B500AFA591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A64A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyleTests";
+		};
+		9C47CB2718CFA7B500AFA591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288218C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-mac";
+		};
+		9C47CB2918CFA7B500AFA591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288F18C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-macTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,9 +84,10 @@
 		0A2760EC1884871800AB0650 /* ListFontsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListFontsTests-Info.plist"; sourceTree = "<group>"; };
 		0A2760EE1884871800AB0650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A2760F01884871800AB0650 /* ListFontsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListFontsTests.m; sourceTree = "<group>"; };
-		0A2760FA18848DDE00AB0650 /* Pixate.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = Pixate.framework; path = "../../../pixate-ios-framework/Pixate/build/Debug-iphoneos/Pixate.framework"; sourceTree = "<group>"; };
 		0A2760FC18848E7500AB0650 /* PXFontEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFontEntry.h; sourceTree = "<group>"; };
 		0A2760FD18848E7500AB0650 /* PXFontEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFontEntry.m; sourceTree = "<group>"; };
+		9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
+		9C47CB2C18CFA91100AFA591 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2760FB18848DDE00AB0650 /* Pixate.framework in Frameworks */,
+				9C47CB2B18CFA7B900AFA591 /* libpixate-freestyle.a in Frameworks */,
 				0A2760C81884871800AB0650 /* CoreGraphics.framework in Frameworks */,
 				0A2760CA1884871800AB0650 /* UIKit.framework in Frameworks */,
 				0A2760C61884871800AB0650 /* Foundation.framework in Frameworks */,
@@ -107,7 +137,7 @@
 		0A2760C41884871800AB0650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A2760FA18848DDE00AB0650 /* Pixate.framework */,
+				9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */,
 				0A2760C51884871800AB0650 /* Foundation.framework */,
 				0A2760C71884871800AB0650 /* CoreGraphics.framework */,
 				0A2760C91884871800AB0650 /* UIKit.framework */,
@@ -135,6 +165,7 @@
 		0A2760CC1884871800AB0650 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C47CB2C18CFA91100AFA591 /* default.css */,
 				0A2760CD1884871800AB0650 /* ListFonts-Info.plist */,
 				0A2760CE1884871800AB0650 /* InfoPlist.strings */,
 				0A2760D11884871800AB0650 /* main.m */,
@@ -159,6 +190,17 @@
 				0A2760ED1884871800AB0650 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C47CB1D18CFA7B500AFA591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C47CB2418CFA7B500AFA591 /* libpixate-freestyle.a */,
+				9C47CB2618CFA7B500AFA591 /* pixate-freestyleTests.xctest */,
+				9C47CB2818CFA7B500AFA591 /* libpixate-freestyle-mac.a */,
+				9C47CB2A18CFA7B500AFA591 /* pixate-freestyle-macTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +266,12 @@
 			mainGroup = 0A2760B91884871800AB0650;
 			productRefGroup = 0A2760C31884871800AB0650 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9C47CB1D18CFA7B500AFA591 /* Products */;
+					ProjectRef = 9C47CB1C18CFA7B500AFA591 /* pixate-freestyle.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0A2760C11884871800AB0650 /* ListFonts */,
@@ -231,6 +279,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9C47CB2418CFA7B500AFA591 /* libpixate-freestyle.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle.a";
+			remoteRef = 9C47CB2318CFA7B500AFA591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C47CB2618CFA7B500AFA591 /* pixate-freestyleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyleTests.xctest";
+			remoteRef = 9C47CB2518CFA7B500AFA591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C47CB2818CFA7B500AFA591 /* libpixate-freestyle-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle-mac.a";
+			remoteRef = 9C47CB2718CFA7B500AFA591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C47CB2A18CFA7B500AFA591 /* pixate-freestyle-macTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyle-macTests.xctest";
+			remoteRef = 9C47CB2918CFA7B500AFA591 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A2760C01884871800AB0650 /* Resources */ = {
@@ -240,6 +319,7 @@
 				0A2760DE1884871800AB0650 /* Images.xcassets in Resources */,
 				0A2760D01884871800AB0650 /* InfoPlist.strings in Resources */,
 				0A2760D91884871800AB0650 /* Main.storyboard in Resources */,
+				9C47CB2D18CFA91100AFA591 /* default.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +470,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListFonts/ListFonts-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../src/**",
+				);
 				INFOPLIST_FILE = "ListFonts/ListFonts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -403,6 +488,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListFonts/ListFonts-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../src/**",
+				);
 				INFOPLIST_FILE = "ListFonts/ListFonts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -470,6 +560,7 @@
 				0A2760F61884871800AB0650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A2760F71884871800AB0650 /* Build configuration list for PBXNativeTarget "ListFontsTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +569,7 @@
 				0A2760F91884871800AB0650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

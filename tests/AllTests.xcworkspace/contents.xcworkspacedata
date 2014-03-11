@@ -13,4 +13,7 @@
    <FileRef
       location = "group:UITableViewTest/UITableViewTest.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ListFonts/ListFonts.xcodeproj">
+   </FileRef>
 </Workspace>
