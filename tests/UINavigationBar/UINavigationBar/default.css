@@ -6,6 +6,13 @@ navigation-bar {
     font-size           : 14;
 }
 
+/* This creates a larger background that goes under the top status bar */
+navigation-bar {
+    background-image: linear-gradient(darkblue, rgba(200,200,255,0));
+    background-size: 320 64;
+    shadow: none;
+}
+
 /* Because the text itself is managed by the navigation-item (not nav bar),
  * this is where you change or transform the text itself.
  */

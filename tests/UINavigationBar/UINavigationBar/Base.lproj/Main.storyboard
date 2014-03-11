@@ -36,6 +36,11 @@
                                     <segue destination="JDi-TH-8cx" kind="push" identifier="custom" id="DYP-Sm-gIh"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94A-5j-Zbn">
+                                <rect key="frame" x="27" y="0.0" width="34" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.014016139909999999" blue="0.006187248934" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -142,6 +147,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6s-Eb-Q5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="187" y="42"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vaf-z0-Zg0">
+            <objects>
+                <viewController id="h10-cj-xId" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R5p-BX-B9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="1rW-8a-Jd7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gj7-ml-XEO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2K-Ud-uuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
