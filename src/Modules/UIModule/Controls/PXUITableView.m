@@ -47,9 +47,6 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
 
 @implementation PXUITableView
-{
-    BOOL checkedDelegates;
-}
 
 + (void)load
 {
@@ -277,9 +274,9 @@ static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
 
 - (void)layoutSubviews
 {
-    if (!checkedDelegates) {
+    if (!objc_getAssociatedObject(self, &PX_DELEGATE))
+    {
         [self pxCheckDelegates];
-        checkedDelegates = YES;
     }
     
     callSuper0(SUPER_PREFIX, _cmd);

@@ -1,0 +1,48 @@
+
+/* Style default navigation text styling, but not content (i.e. 'text') */
+navigation-bar {
+    font-family         : "American Typewriter";
+    font-weight         : bold;
+    font-size           : 14;
+}
+
+/* Because the text itself is managed by the navigation-item (not nav bar),
+ * this is where you change or transform the text itself.
+ */
+navigation-bar navigation-item {
+    text-transform: uppercase;
+}
+
+/* Custom back indicator for the built-in back 'button' */
+navigation-bar back-indicator {
+    background-image: url(arrow.svg);
+    background-size: 18;
+}
+
+/* This will apply to ALL default back 'buttons' */
+navigation-bar button-appearance {
+    color: green;
+}
+
+/* This will only work if you specified custom text which automatically creates a UIBarButtonItem */
+navigation-bar back-bar-button {
+    color: red;
+}
+
+/* Here we style a totally custom button that was added to our of our views */
+.cancelButton {
+    border-radius: 3pt;
+    background-color: red;
+    border-color: black;
+    border-style: solid;
+    border-width: 1;
+}
+
+.cancelButton attributed-text {
+    text-shadow: 2 2 2 black;
+    letter-spacing: 3;
+    color: white;
+    font-size: 13;
+    font-weight: 200;
+}
+

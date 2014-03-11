@@ -524,7 +524,7 @@ static NSString *DEFAULT_FONT = @"Helvetica";
     {
         font = self.font;
     }
-    
+
     NSNumber *kern = [PXStylerContext kernPointsFrom:self.letterSpacing usingFont:font];
     id color = [self propertyValueForName:@"color"] ? (UIColor *)[self propertyValueForName:@"color"] : defaultColor;
     
@@ -534,6 +534,17 @@ static NSString *DEFAULT_FONT = @"Helvetica";
                                        kern, NSKernAttributeName,
                                        nil];
     
+    if(self.textShadow)
+    {
+        PXShadow *pxShadow = self.textShadow;
+        NSShadow *shadow = [[NSShadow alloc] init];
+        shadow.shadowColor = pxShadow.color;
+        shadow.shadowOffset = CGSizeMake(pxShadow.horizontalOffset, pxShadow.verticalOffset);
+        shadow.shadowBlurRadius = pxShadow.blurDistance;
+        
+        [attributes setObject:shadow forKey:NSShadowAttributeName];
+    }
+
     [PXStylerContext addDecoration:self.textDecoration toAttributes:attributes];
     
     NSString *text = self.text ? self.text : defaultText;

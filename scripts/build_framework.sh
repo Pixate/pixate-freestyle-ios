@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Copyright 2014-present Pixate, Inc.
-# 
+#
 # This version based on the original verson by:
 #
 # Copyright 2010-present Facebook.
@@ -9,9 +9,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-# 
+#
 #    http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -24,7 +24,7 @@
 
 . ${PX_FREESTYLE_SCRIPT:-$(dirname $0)}/common.sh
 
-# process options, valid arguments -c [Debug|Release] -n 
+# process options, valid arguments -c [Debug|Release] -n
 BUILDCONFIGURATION=Debug
 NOEXTRAS=1
 while getopts ":ntc:" OPTNAME
@@ -68,7 +68,7 @@ PX_FREESTYLE_UNIVERSAL_BINARY=$PX_FREESTYLE_BUILD/${BUILDCONFIGURATION}-universa
 progress_message Building Framework.
 
 # -----------------------------------------------------------------------------
-# Compile binaries 
+# Compile binaries
 #
 test -d $PX_FREESTYLE_BUILD \
   || mkdir -p $PX_FREESTYLE_BUILD \
@@ -92,11 +92,11 @@ function xcode_build_target() {
     || die "XCode build failed for platform: ${1}."
 }
 
-xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "i386" "6.1" "i386"
-xcode_build_target "iphonesimulator7.0" "${BUILDCONFIGURATION}" "x86_64" "7.0" "x86_64"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7" "6.1" "Arm"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "armv7s" "6.1" "Arm7S"
-xcode_build_target "iphoneos7.0" "${BUILDCONFIGURATION}" "arm64" "7.0" "Arm64"
+xcode_build_target "iphonesimulator7.1" "${BUILDCONFIGURATION}" "i386" "6.1" "i386"
+xcode_build_target "iphonesimulator7.1" "${BUILDCONFIGURATION}" "x86_64" "7.0" "x86_64"
+xcode_build_target "iphoneos7.1" "${BUILDCONFIGURATION}" "armv7" "6.1" "Arm"
+xcode_build_target "iphoneos7.1" "${BUILDCONFIGURATION}" "armv7s" "6.1" "Arm7S"
+xcode_build_target "iphoneos7.1" "${BUILDCONFIGURATION}" "arm64" "7.0" "Arm64"
 
 # -----------------------------------------------------------------------------
 # Merge lib files for different platforms into universal binary
@@ -150,7 +150,7 @@ cd $PX_FREESTYLE_FRAMEWORK/Versions
 ln -s ./A ./Current
 
 # -----------------------------------------------------------------------------
-# Run unit tests 
+# Run unit tests
 #
 
 if [ ${NOEXTRAS:-0} -eq  1 ];then
@@ -165,5 +165,5 @@ fi
 # Done
 #
 
-progress_message "Framework version info:" `perl -ne 'print "$1 " if (m/PIXATE_FREESTYLE_VERSION (.+)$/);' $PX_FREESTYLE_SRC/Version.h` 
+progress_message "Framework version info:" `perl -ne 'print "$1 " if (m/PIXATE_FREESTYLE_VERSION (.+)$/);' $PX_FREESTYLE_SRC/Version.h`
 common_success
