@@ -216,6 +216,6 @@ PX_WRAP_1(setBackgroundColor, color);
 PX_WRAP_1(setTintColor, color);
 
 // Styling
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

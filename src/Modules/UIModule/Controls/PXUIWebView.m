@@ -69,6 +69,6 @@
     return map;
 }
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

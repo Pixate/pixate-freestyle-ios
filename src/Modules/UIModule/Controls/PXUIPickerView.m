@@ -171,9 +171,7 @@
     
     callSuper0(SUPER_PREFIX, _cmd);
     
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, 1);
+    [self updateStyles];
 }
-
-
 
 @end

@@ -367,7 +367,7 @@ PX_WRAP_2v(setTitleColor,      color, forState, UIControlState, state);
 PX_WRAP_2v(setTitleShadowColor, color, forState, UIControlState, state);
 
 // Styling overrides
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 /* HOLD
 -(void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event

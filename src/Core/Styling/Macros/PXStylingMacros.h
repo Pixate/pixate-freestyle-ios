@@ -25,8 +25,8 @@
 #ifndef Pixate_PXStylingMacros_h
 #define Pixate_PXStylingMacros_h
 
-// Import common stuff
 #import "PXMacrosCommon.h"
+#import "UIView+PXStyling.h"
 
 // Third-party support macros
 #import "PXTitaniumMacros.h"
@@ -38,38 +38,20 @@
 #define PX_RECURSIVE 1
 #define PX_NONRECURSIVE 0
 
-#define PXSTYLE_VIEW_UPDATER PXSTYLE_LAYOUTSUBVIEWS(PX_NONRECURSIVE)
-#define PXSTYLE_VIEW_UPDATER_RECURSIVE PXSTYLE_LAYOUTSUBVIEWS(PX_RECURSIVE)
+#define PX_LAYOUT_SUBVIEWS_OVERRIDE             PX_LAYOUT_SUBVIEWS_IMP(PX_NONRECURSIVE)
+#define PX_LAYOUT_SUBVIEWS_OVERRIDE_RECURSIVE   PX_LAYOUT_SUBVIEWS_IMP(PX_RECURSIVE)
 
-#define PXSTYLE_LAYOUTSUBVIEWS(RECURSE) \
+#define PX_LAYOUT_SUBVIEWS_IMP(RECURSE) \
 - (void)layoutSubviews	\
 {	\
     callSuper0(SUPER_PREFIX, _cmd);	\
     \
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, RECURSE); \
+    if(RECURSE) { \
+        [self updateStyles]; \
+    } else { \
+        [self updateStylesNonRecursively]; \
+    } \
 }
-
-#define PXSTYLE_LAYOUTSUBVIEWS_IMP(VIEW, RECURSE) \
-    if (VIEW.styleMode == PXStylingNormal) \
-    { \
-        if((BOOL)RECURSE) \
-        { \
-            for (id<PXStyleable> child in VIEW.pxStyleChildren) \
-            { \
-                if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal) \
-                { \
-                    [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending) { \
-                        if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal) \
-                        { \
-                            [PXStyleUtils updateStyleForStyleable:styleable]; \
-                        } \
-                    }]; \
-                    [PXStyleUtils updateStyleForStyleable:child]; \
-                } \
-            } \
-        } \
-        [PXStyleUtils updateStylesForStyleable:VIEW andDescendants:((BOOL)RECURSE)]; \
-    }
 
 #endif // Pixate_PXStylingMacros_h
 

@@ -187,6 +187,6 @@ PX_WRAP_1(setShadowImage, image);
 PX_WRAP_1(setSelectionIndicatorImage, image);
 
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

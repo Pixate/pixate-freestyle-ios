@@ -213,12 +213,12 @@ void PXForceLoadUINavigationItemPXStyling() {}
 
 - (void)updateStyles
 {
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, YES);
+    [UIView updateStyles:self recursively:YES];
 }
 
 - (void)updateStylesNonRecursively
 {
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, NO);
+    [UIView updateStyles:self recursively:NO];
 }
 
 - (void)updateStylesAsync

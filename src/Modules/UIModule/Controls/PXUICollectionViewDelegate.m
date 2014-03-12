@@ -91,7 +91,7 @@
 
     [PXStyleUtils setItemIndex:indexPath forObject:cell];
     
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(cell, PX_RECURSIVE);
+    [UIView updateStyles:cell recursively:YES];
 
     [PXStyleUtils setItemIndex:nil forObject:cell];
     

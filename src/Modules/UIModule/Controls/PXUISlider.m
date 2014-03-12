@@ -224,6 +224,6 @@ PX_WRAP_2v(setMaximumTrackImage, image, forState, UIControlState, state);
 PX_WRAP_2v(setMinimumTrackImage, image, forState, UIControlState, state);
 PX_WRAP_2v(setThumbImage, image, forState, UIControlState, state);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

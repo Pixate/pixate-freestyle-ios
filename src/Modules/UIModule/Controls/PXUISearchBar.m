@@ -165,6 +165,6 @@ PX_WRAP_1b(setTranslucent, flag);
 PX_WRAP_1v(setBarStyle, UIBarStyle, style);
 PX_WRAP_2v(setScopeBarButtonTitleTextAttributes, attrs, forState, UIControlState, state);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

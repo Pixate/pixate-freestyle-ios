@@ -167,6 +167,6 @@ static NSDictionary *PSEUDOCLASS_MAP;
 PX_WRAP_1(setImage, image);
 PX_WRAP_1(setHighlightedImage, image);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

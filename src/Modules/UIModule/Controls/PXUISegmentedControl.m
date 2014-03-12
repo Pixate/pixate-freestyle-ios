@@ -213,6 +213,6 @@ PX_WRAP_3v(setBackgroundImage, image, forState, UIControlState, state, barMetric
 PX_WRAP_4v(setDividerImage, image, forLeftSegmentState, UIControlState, lstate, rightSegmentState, UIControlState, rstate,barMetrics, UIBarMetrics, metrics);
 
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end
