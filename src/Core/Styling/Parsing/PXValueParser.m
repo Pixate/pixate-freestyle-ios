@@ -62,6 +62,7 @@ static NSString *DOCUMENTS_SCHEME = @"documents://";
 static NSString *BUNDLE_SCHEME = @"bundle://";
 static NSString *TMP_SCHEME = @"tmp://";
 static NSString *DATA_SCHEME = @"data:";
+static NSString *ASSET_SCHEME = @"asset://";
 
 + (void)initialize
 {
@@ -1103,6 +1104,13 @@ static NSString *DATA_SCHEME = @"data:";
                 NSString *extension = [[path pathExtension] lowercaseString];
 
                 addWith2xVersions([[NSBundle mainBundle] pathForResource:pathMinusExtension ofType:extension]);
+            }
+            else if ([path hasPrefix:ASSET_SCHEME])
+            {
+                path = [path substringFromIndex:ASSET_SCHEME.length];
+                NSString *pathMinusExtension = [path stringByDeletingPathExtension];
+                
+                result = [NSURL fileURLWithPath:pathMinusExtension];
             }
             else if ([path hasPrefix:TMP_SCHEME])
             {

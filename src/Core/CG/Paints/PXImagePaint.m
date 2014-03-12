@@ -96,15 +96,19 @@
 
                 // grab image
                 image = [[UIImage alloc] initWithData:data scale:scale];
-
-                // resize, if necessary
-                if (image && !CGSizeEqualToSize(image.size, size))
-                {
-                    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
-                    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
-                    image = UIGraphicsGetImageFromCurrentImageContext();
-                    UIGraphicsEndImageContext();
-                }
+            }
+            else // Assuming it's an asset name at this point
+            {
+                image = [UIImage imageNamed:_imageURL.relativePath];
+            }
+            
+            // resize, if necessary
+            if (image && !CGSizeEqualToSize(image.size, size))
+            {
+                UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+                [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+                image = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
             }
         }
     }
