@@ -208,6 +208,11 @@ NSString *const kDefaultCacheViewLayerMasksToBounds = @"view.layer.masksToBounds
     }
 }
 
+- (BOOL)preventStyling
+{
+    return [[self superview] isKindOfClass:[UITextView class]];
+}
+
 // Px Wrapped Only
 PX_PXWRAP_PROP(CALayer, layer);
 
