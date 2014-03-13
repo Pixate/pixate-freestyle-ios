@@ -323,7 +323,7 @@ static const char STYLE_CHILDREN;
             result.height -= 16;
         }
     }
-    
+
     return result;
 }
 

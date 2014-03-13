@@ -21,7 +21,7 @@
 #button2 {
     color: white;
     background-color: linear-gradient(white, blue);
-s}
+}
 
 /* Use an image from the assets catalog (Images.xcassets) */
 #button3 {
@@ -30,7 +30,7 @@ s}
 
 /* Use an SVG image from the main app resources */
 #button4 {
+    color: white;
     background-image: url(blue_background.svg);
-    background-size: 100 35;
 }
 

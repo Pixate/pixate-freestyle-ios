@@ -23,6 +23,7 @@
 		9C09F2BE18CBD96C005D8332 /* UIButtonTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C09F2BD18CBD96C005D8332 /* UIButtonTestTests.m */; };
 		9C09F2D618CBD98F005D8332 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C09F2CF18CBD98C005D8332 /* libpixate-freestyle.a */; };
 		9C09F2D818CBD9F6005D8332 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C09F2D718CBD9F6005D8332 /* default.css */; };
+		9C1AF04618D21EEC0009F027 /* yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1AF04518D21EEC0009F027 /* yellow@2x.png */; };
 		9C1D171618D2165300E53290 /* blue_background.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C1D171518D2165300E53290 /* blue_background.svg */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		9C09F2BD18CBD96C005D8332 /* UIButtonTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestTests.m; sourceTree = "<group>"; };
 		9C09F2C718CBD98B005D8332 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
 		9C09F2D718CBD9F6005D8332 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		9C1AF04518D21EEC0009F027 /* yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow@2x.png"; sourceTree = "<group>"; };
 		9C1D171518D2165300E53290 /* blue_background.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = blue_background.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 		9C09F29818CBD96C005D8332 /* UIButtonTest */ = {
 			isa = PBXGroup;
 			children = (
+				9C1AF04518D21EEC0009F027 /* yellow@2x.png */,
 				9C09F2A118CBD96C005D8332 /* AppDelegate.h */,
 				9C09F2A218CBD96C005D8332 /* AppDelegate.m */,
 				9C09F2A418CBD96C005D8332 /* Main.storyboard */,
@@ -324,6 +327,7 @@
 			files = (
 				9C09F2AB18CBD96C005D8332 /* Images.xcassets in Resources */,
 				9C09F29D18CBD96C005D8332 /* InfoPlist.strings in Resources */,
+				9C1AF04618D21EEC0009F027 /* yellow@2x.png in Resources */,
 				9C09F2A618CBD96C005D8332 /* Main.storyboard in Resources */,
 				9C09F2D818CBD9F6005D8332 /* default.css in Resources */,
 				9C1D171618D2165300E53290 /* blue_background.svg in Resources */,
