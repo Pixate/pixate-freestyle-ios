@@ -304,7 +304,7 @@ PX_WRAP_1s(setShadowOffset, CGSize, offset);
 PX_WRAP_1v(setTextAlignment, NSTextAlignment, alignment);
 PX_WRAP_1v(setLineBreakMode, NSLineBreakMode, mode);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end
 

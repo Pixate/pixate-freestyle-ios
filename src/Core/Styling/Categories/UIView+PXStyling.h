@@ -32,4 +32,6 @@
 @property (nonatomic, copy) NSString *styleCSS;
 @property (nonatomic) PXStylingMode styleMode UI_APPEARANCE_SELECTOR;
 
++ (void)updateStyles:(id<PXStyleable>)styleable recursively:(bool)recurse;
+
 @end

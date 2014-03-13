@@ -214,6 +214,6 @@ PX_WRAP_2v(setBackgroundImage, image, forState, UIControlState, state);
 PX_WRAP_3v(setDividerImage, image, forLeftSegmentState, UIControlState, lstate, rightSegmentState, UIControlState, rstate);
 
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

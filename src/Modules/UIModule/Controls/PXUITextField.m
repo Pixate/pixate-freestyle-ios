@@ -435,7 +435,7 @@ PX_WRAP_1v(setBorderStyle, UITextBorderStyle, style);
 // Overrides
 //
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 -(void)setText:(NSString *)text
 {

@@ -36,6 +36,11 @@
                                     <segue destination="JDi-TH-8cx" kind="push" identifier="custom" id="DYP-Sm-gIh"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94A-5j-Zbn">
+                                <rect key="frame" x="27" y="0.0" width="34" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.014016139909999999" blue="0.006187248934" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

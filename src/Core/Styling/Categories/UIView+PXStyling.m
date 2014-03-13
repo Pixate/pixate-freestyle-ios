@@ -441,16 +441,45 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     return stringValue;
 }
 
+#pragma mark - Static Styling Method
+
++ (void)updateStyles:(id<PXStyleable>)styleable recursively:(bool)recurse
+{
+    if (styleable.styleMode == PXStylingNormal)
+    {
+        if(recurse)
+        {
+            for (id<PXStyleable> child in styleable.pxStyleChildren)
+            {
+                if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal)
+                {
+                    [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending)
+                    {
+                        if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal)
+                        {
+                            [PXStyleUtils updateStyleForStyleable:styleable];
+                        }
+                    }];
+                    
+                    [PXStyleUtils updateStyleForStyleable:child];
+                }
+            }
+        }
+        
+        [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
+    }
+}
+
 #pragma mark - Methods
 
 - (void)updateStyles
 {
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, YES);
+    [UIView updateStyles:self recursively:YES];
 }
 
 - (void)updateStylesNonRecursively
 {
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(self, NO);
+    [UIView updateStyles:self recursively:NO];
 }
 
 - (void)updateStylesAsync

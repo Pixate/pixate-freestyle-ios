@@ -210,7 +210,4 @@ PX_WRAP_1s(setContentSize,   CGSize,       size);
 PX_WRAP_1s(setContentOffset, CGPoint,      size);
 PX_WRAP_1s(setContentInset,  UIEdgeInsets, insets);
 
-// Styling
-PXSTYLE_VIEW_UPDATER
-
 @end

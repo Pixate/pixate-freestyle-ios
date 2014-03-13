@@ -82,6 +82,6 @@
 PX_PXWRAP_PROP(CALayer, layer);
 
 // Styling overrides
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

@@ -43,7 +43,7 @@
         view.styleMode = PXStylingNormal;
     }
     
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(view, PX_RECURSIVE);
+    [view updateStyles];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section
@@ -54,7 +54,7 @@
         view.styleMode = PXStylingNormal;
     }
     
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(view, PX_RECURSIVE);
+    [view updateStyles];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,7 +66,7 @@
     
     [PXStyleUtils setItemIndex:indexPath forObject:cell];
     
-    PXSTYLE_LAYOUTSUBVIEWS_IMP(cell, PX_RECURSIVE);
+    [cell updateStyles];
     
     [PXStyleUtils setItemIndex:nil forObject:cell];
 }

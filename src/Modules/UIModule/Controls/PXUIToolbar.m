@@ -217,7 +217,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
     
 }
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 PX_WRAP_1(setTintColor, color);
 PX_WRAP_1(setBarTintColor, color);

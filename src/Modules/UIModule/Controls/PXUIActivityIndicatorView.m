@@ -127,6 +127,6 @@ PX_WRAP_1(setColor, color);
 PX_WRAP_1(setBackgroundColor, color);
 PX_WRAP_1v(setActivityIndicatorViewStyle, UIActivityIndicatorViewStyle, style);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

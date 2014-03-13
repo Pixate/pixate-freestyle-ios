@@ -122,6 +122,6 @@ PX_WRAP_1(setBackgroundColor, color);
 PX_WRAP_1(setPageIndicatorTintColor, color);
 PX_WRAP_1(setCurrentPageIndicatorTintColor, color);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

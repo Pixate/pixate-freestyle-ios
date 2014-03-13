@@ -507,7 +507,7 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
 }
 
 // Overrides
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 // This will allow for the dynamically added content to style, like the UINavigationItems
 -(void)addSubview:(UIView *)view

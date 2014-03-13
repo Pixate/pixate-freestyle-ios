@@ -126,6 +126,6 @@ PX_WRAP_1s(setContentOffset, CGPoint,      size);
 PX_WRAP_1s(setContentInset,  UIEdgeInsets, insets);
 
 // Styling
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

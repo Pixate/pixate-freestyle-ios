@@ -141,6 +141,6 @@ PX_WRAP_1(setProgressImage, image);
 PX_WRAP_1(setTrackTintColor, color);
 PX_WRAP_1(setTrackImage, image);
 
-PXSTYLE_VIEW_UPDATER
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end

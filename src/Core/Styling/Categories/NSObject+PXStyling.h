@@ -29,7 +29,11 @@
 
 @interface NSObject (PXStyling)
 
+/*
+ * Returns an array of stylers. Note that if this method does not exist, then styling is aborted for this object.
+ */
 - (NSArray *)viewStylers;
+
 - (NSDictionary *)viewStylersByProperty;
 
 - (void)updateStyleWithRuleSet:(PXRuleSet *)ruleSet context:(PXStylerContext *)context;
