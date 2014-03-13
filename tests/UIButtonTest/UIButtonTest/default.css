@@ -2,7 +2,35 @@
  * Default.css
  */
 
+/* Rounded button class */
+.roundButtons {
+    border-radius: 10;
+}
 
-.myButton {
+/* Shadows for a button */
+.shadow {
+    box-shadow: 2 2 2 gray;
+}
+
+/* Set just a background color */
+#button1 {
     background-color: lightgreen;
 }
+
+/* Use a linear gradient image */
+#button2 {
+    color: white;
+    background-color: linear-gradient(white, blue);
+s}
+
+/* Use an image from the assets catalog (Images.xcassets) */
+#button3 {
+    background-image: url(asset://yellow_background);
+}
+
+/* Use an SVG image from the main app resources */
+#button4 {
+    background-image: url(blue_background.svg);
+    background-size: 100 35;
+}
+

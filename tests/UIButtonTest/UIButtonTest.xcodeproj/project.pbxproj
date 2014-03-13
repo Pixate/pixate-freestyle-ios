@@ -23,6 +23,7 @@
 		9C09F2BE18CBD96C005D8332 /* UIButtonTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C09F2BD18CBD96C005D8332 /* UIButtonTestTests.m */; };
 		9C09F2D618CBD98F005D8332 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C09F2CF18CBD98C005D8332 /* libpixate-freestyle.a */; };
 		9C09F2D818CBD9F6005D8332 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C09F2D718CBD9F6005D8332 /* default.css */; };
+		9C1D171618D2165300E53290 /* blue_background.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9C1D171518D2165300E53290 /* blue_background.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		9C09F2BD18CBD96C005D8332 /* UIButtonTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonTestTests.m; sourceTree = "<group>"; };
 		9C09F2C718CBD98B005D8332 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
 		9C09F2D718CBD9F6005D8332 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		9C1D171518D2165300E53290 /* blue_background.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = blue_background.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				9C09F2A718CBD96C005D8332 /* ViewController.h */,
 				9C09F2A818CBD96C005D8332 /* ViewController.m */,
 				9C09F2AA18CBD96C005D8332 /* Images.xcassets */,
+				9C1D170E18D2152F00E53290 /* SVG Assets */,
 				9C09F29918CBD96C005D8332 /* Supporting Files */,
 			);
 			path = UIButtonTest;
@@ -196,6 +199,14 @@
 				9C09F2D518CBD98C005D8332 /* pixate-freestyle-macTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9C1D170E18D2152F00E53290 /* SVG Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9C1D171518D2165300E53290 /* blue_background.svg */,
+			);
+			name = "SVG Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 				9C09F29D18CBD96C005D8332 /* InfoPlist.strings in Resources */,
 				9C09F2A618CBD96C005D8332 /* Main.storyboard in Resources */,
 				9C09F2D818CBD9F6005D8332 /* default.css in Resources */,
+				9C1D171618D2165300E53290 /* blue_background.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

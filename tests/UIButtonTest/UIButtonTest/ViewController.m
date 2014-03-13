@@ -18,9 +18,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    [self.button setTitle:@"Testing" forState:UIControlStateNormal];
-    
 }
 
 - (void)didReceiveMemoryWarning
