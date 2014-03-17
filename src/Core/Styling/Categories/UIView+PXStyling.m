@@ -202,9 +202,8 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 - (void)setStyleMode:(PXStylingMode) mode
 {
     //
-    // License check
+    // Print version info on first run (and check for Titanium mode)
     //
-    
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken,
                   ^{
@@ -240,8 +239,6 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     //
     // Perform styling operations
     //
-    
-    // Style the control
     if (mode == PXStylingNormal)
     {
         // Grabbing Pixate's subclass of this instance
