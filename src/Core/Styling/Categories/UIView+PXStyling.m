@@ -223,9 +223,10 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
                       getMonthDayYear([PixateFreestyle sharedInstance].buildDate, &month, &day, &year);
 
                       // Print build info
-                      NSLog(@"Pixate Freestyle v%@ (API %d) - Build %ld/%02ld/%02ld",
+                      NSLog(@"Pixate Freestyle v%@ (API %d) %@- Build %ld/%02ld/%02ld",
                             [PixateFreestyle sharedInstance].version,
                             [PixateFreestyle sharedInstance].apiVersion,
+                            [PixateFreestyle sharedInstance].titaniumMode ? @"Titanium " : @"",
                             (long) year, (long) month, (long) day);
 
 
