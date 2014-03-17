@@ -83,6 +83,12 @@
     return NO;
 }
 
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol {
+    if ([self.overridingObject conformsToProtocol:aProtocol]) return YES;
+    if ([self.baseObject conformsToProtocol:aProtocol]) return YES;
+    return NO;
+}
+
 #pragma mark - hash and equality
 
 /// make sure we look like the original object
