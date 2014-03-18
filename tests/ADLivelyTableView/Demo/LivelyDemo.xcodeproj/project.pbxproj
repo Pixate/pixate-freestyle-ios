@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A10499F1546F8CA004FDCB5 /* ADLivelyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A10499E1546F8CA004FDCB5 /* ADLivelyTableView.m */; };
+		7A1EB6F41546E373006E92AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1EB6F31546E373006E92AC /* UIKit.framework */; };
+		7A1EB6F61546E373006E92AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1EB6F51546E373006E92AC /* Foundation.framework */; };
+		7A1EB6F81546E373006E92AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1EB6F71546E373006E92AC /* CoreGraphics.framework */; };
+		7A1EB71A1546E726006E92AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1EB7191546E726006E92AC /* QuartzCore.framework */; };
+		7AE416851546F6C800E86FF7 /* LDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE416821546F6C800E86FF7 /* LDAppDelegate.m */; };
+		7AE416861546F6C800E86FF7 /* LDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE416841546F6C800E86FF7 /* LDMasterViewController.m */; };
+		7AE4168B1546F6E200E86FF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE416891546F6E200E86FF7 /* main.m */; };
+		7AE4168D1546F6EB00E86FF7 /* LDMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE4168C1546F6EB00E86FF7 /* LDMasterViewController.xib */; };
+		9C7BCC1618D8AF6100E3F527 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7BCC0F18D8AF5A00E3F527 /* libpixate-freestyle.a */; };
+		9C7BCC1818D8AFB700E3F527 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7BCC1718D8AFB700E3F527 /* CoreText.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C7BCC0E18D8AF5A00E3F527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A63A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyle";
+		};
+		9C7BCC1018D8AF5A00E3F527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C84A64A18AE9CB600E7CDA7;
+			remoteInfo = "pixate-freestyleTests";
+		};
+		9C7BCC1218D8AF5A00E3F527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288218C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-mac";
+		};
+		9C7BCC1418D8AF5A00E3F527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CAE288F18C4343B005B06B5;
+			remoteInfo = "pixate-freestyle-macTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7A10499D1546F8CA004FDCB5 /* ADLivelyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADLivelyTableView.h; path = ../ADLivelyTableView.h; sourceTree = "<group>"; };
+		7A10499E1546F8CA004FDCB5 /* ADLivelyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADLivelyTableView.m; path = ../ADLivelyTableView.m; sourceTree = "<group>"; };
+		7A1EB6EF1546E373006E92AC /* LivelyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivelyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1EB6F31546E373006E92AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7A1EB6F51546E373006E92AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7A1EB6F71546E373006E92AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7A1EB7191546E726006E92AC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7AE416811546F6C800E86FF7 /* LDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDAppDelegate.h; path = Classes/LDAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		7AE416821546F6C800E86FF7 /* LDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDAppDelegate.m; path = Classes/LDAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		7AE416831546F6C800E86FF7 /* LDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDMasterViewController.h; path = Classes/LDMasterViewController.h; sourceTree = SOURCE_ROOT; };
+		7AE416841546F6C800E86FF7 /* LDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDMasterViewController.m; path = Classes/LDMasterViewController.m; sourceTree = SOURCE_ROOT; };
+		7AE416871546F6E200E86FF7 /* LivelyDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LivelyDemo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7AE416881546F6E200E86FF7 /* LivelyDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LivelyDemo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		7AE416891546F6E200E86FF7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		7AE4168C1546F6EB00E86FF7 /* LDMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LDMasterViewController.xib; path = Resources/LDMasterViewController.xib; sourceTree = SOURCE_ROOT; };
+		9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
+		9C7BCC1718D8AFB700E3F527 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A1EB6EC1546E373006E92AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7BCC1818D8AFB700E3F527 /* CoreText.framework in Frameworks */,
+				9C7BCC1618D8AF6100E3F527 /* libpixate-freestyle.a in Frameworks */,
+				7A1EB71A1546E726006E92AC /* QuartzCore.framework in Frameworks */,
+				7A1EB6F41546E373006E92AC /* UIKit.framework in Frameworks */,
+				7A1EB6F61546E373006E92AC /* Foundation.framework in Frameworks */,
+				7A1EB6F81546E373006E92AC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A1049A01546F8D6004FDCB5 /* ADLivelyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7A10499D1546F8CA004FDCB5 /* ADLivelyTableView.h */,
+				7A10499E1546F8CA004FDCB5 /* ADLivelyTableView.m */,
+			);
+			name = ADLivelyTableView;
+			sourceTree = "<group>";
+		};
+		7A1EB6E41546E373006E92AC = {
+			isa = PBXGroup;
+			children = (
+				7A1049A01546F8D6004FDCB5 /* ADLivelyTableView */,
+				7A1EB6F91546E373006E92AC /* LivelyDemo */,
+				7A1EB6F21546E373006E92AC /* Frameworks */,
+				7A1EB6F01546E373006E92AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A1EB6F01546E373006E92AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A1EB6EF1546E373006E92AC /* LivelyDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A1EB6F21546E373006E92AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C7BCC1718D8AFB700E3F527 /* CoreText.framework */,
+				9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */,
+				7A1EB7191546E726006E92AC /* QuartzCore.framework */,
+				7A1EB6F31546E373006E92AC /* UIKit.framework */,
+				7A1EB6F51546E373006E92AC /* Foundation.framework */,
+				7A1EB6F71546E373006E92AC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A1EB6F91546E373006E92AC /* LivelyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7AE416811546F6C800E86FF7 /* LDAppDelegate.h */,
+				7AE416821546F6C800E86FF7 /* LDAppDelegate.m */,
+				7AE416831546F6C800E86FF7 /* LDMasterViewController.h */,
+				7AE416841546F6C800E86FF7 /* LDMasterViewController.m */,
+				7AE4168C1546F6EB00E86FF7 /* LDMasterViewController.xib */,
+				7A1EB6FA1546E373006E92AC /* Supporting Files */,
+			);
+			path = LivelyDemo;
+			sourceTree = "<group>";
+		};
+		7A1EB6FA1546E373006E92AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AE416871546F6E200E86FF7 /* LivelyDemo-Info.plist */,
+				7AE416881546F6E200E86FF7 /* LivelyDemo-Prefix.pch */,
+				7AE416891546F6E200E86FF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C7BCC0818D8AF5A00E3F527 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C7BCC0F18D8AF5A00E3F527 /* libpixate-freestyle.a */,
+				9C7BCC1118D8AF5A00E3F527 /* pixate-freestyleTests.xctest */,
+				9C7BCC1318D8AF5A00E3F527 /* libpixate-freestyle-mac.a */,
+				9C7BCC1518D8AF5A00E3F527 /* pixate-freestyle-macTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A1EB6EE1546E373006E92AC /* LivelyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A1EB7131546E373006E92AC /* Build configuration list for PBXNativeTarget "LivelyDemo" */;
+			buildPhases = (
+				7A1EB6EB1546E373006E92AC /* Sources */,
+				7A1EB6EC1546E373006E92AC /* Frameworks */,
+				7A1EB6ED1546E373006E92AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivelyDemo;
+			productName = LivelyDemo;
+			productReference = 7A1EB6EF1546E373006E92AC /* LivelyDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A1EB6E61546E373006E92AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LD;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 7A1EB6E91546E373006E92AC /* Build configuration list for PBXProject "LivelyDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7A1EB6E41546E373006E92AC;
+			productRefGroup = 7A1EB6F01546E373006E92AC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9C7BCC0818D8AF5A00E3F527 /* Products */;
+					ProjectRef = 9C7BCC0718D8AF5A00E3F527 /* pixate-freestyle.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7A1EB6EE1546E373006E92AC /* LivelyDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9C7BCC0F18D8AF5A00E3F527 /* libpixate-freestyle.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle.a";
+			remoteRef = 9C7BCC0E18D8AF5A00E3F527 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C7BCC1118D8AF5A00E3F527 /* pixate-freestyleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyleTests.xctest";
+			remoteRef = 9C7BCC1018D8AF5A00E3F527 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C7BCC1318D8AF5A00E3F527 /* libpixate-freestyle-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpixate-freestyle-mac.a";
+			remoteRef = 9C7BCC1218D8AF5A00E3F527 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C7BCC1518D8AF5A00E3F527 /* pixate-freestyle-macTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "pixate-freestyle-macTests.xctest";
+			remoteRef = 9C7BCC1418D8AF5A00E3F527 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A1EB6ED1546E373006E92AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AE4168D1546F6EB00E86FF7 /* LDMasterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A1EB6EB1546E373006E92AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AE416851546F6C800E86FF7 /* LDAppDelegate.m in Sources */,
+				7AE416861546F6C800E86FF7 /* LDMasterViewController.m in Sources */,
+				7AE4168B1546F6E200E86FF7 /* main.m in Sources */,
+				7A10499F1546F8CA004FDCB5 /* ADLivelyTableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7A1EB7111546E373006E92AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A1EB7121546E373006E92AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Whiteroom SARL";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBF17599-2F8D-4D99-9DFE-0C565117A436";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A1EB7141546E373006E92AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LivelyDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../../src/**",
+				);
+				INFOPLIST_FILE = "LivelyDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7A1EB7151546E373006E92AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LivelyDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../../../src/**",
+				);
+				INFOPLIST_FILE = "LivelyDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A1EB6E91546E373006E92AC /* Build configuration list for PBXProject "LivelyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A1EB7111546E373006E92AC /* Debug */,
+				7A1EB7121546E373006E92AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A1EB7131546E373006E92AC /* Build configuration list for PBXNativeTarget "LivelyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A1EB7141546E373006E92AC /* Debug */,
+				7A1EB7151546E373006E92AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A1EB6E61546E373006E92AC /* Project object */;
+}
