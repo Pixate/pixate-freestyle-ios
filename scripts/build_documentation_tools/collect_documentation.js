@@ -269,9 +269,9 @@ else {
 }
 
 // setup the relevant paths
-var stylingDirectory = path.join(frameworkDirectory, 'Styling');
-var controlsDirectory = path.join(stylingDirectory, 'Controls');
+var stylingDirectory = path.join(frameworkDirectory, 'Core/Styling');
 var stylersDirectory = path.join(stylingDirectory, 'Stylers');
+var controlsDirectory = path.join(frameworkDirectory, 'Modules/UIModule/Controls');
 
 // setup sets for controls and stylers that we'd like to ignore
 var ignoredControls = {
