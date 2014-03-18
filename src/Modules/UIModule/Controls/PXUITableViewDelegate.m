@@ -85,6 +85,19 @@
     return [[((PXProxy *)tableView.dataSource) baseObject] tableView:tableView numberOfRowsInSection:section];
 }
 
+/*
+ * Added to prevent an exception described below on iOS7
+ *
+ * Uncaught exception 'NSInvalidArgumentException', reason: '*** -[NSProxy
+ * doesNotRecognizeSelector:tableView:numberOfSectionsInTableView:] called
+ *
+ */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[((PXProxy *)tableView.dataSource) baseObject] numberOfSectionsInTableView:tableView];
+}
+
+
 //
 // Keep for now until we decide whether we should be doing text transforms this way instead.
 //
