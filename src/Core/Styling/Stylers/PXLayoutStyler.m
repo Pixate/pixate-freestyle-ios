@@ -25,12 +25,6 @@
 #import "PXLayoutStyler.h"
 #import "PixateFreestyle.h"
 
-#define IS_TITANIUM_CLASS(X) \
-    PixateFreestyle.titaniumMode && \
-    [X isKindOfClass:[UIView class]] && \
-    ([[[X class] description] hasPrefix:@"TiUIView"] || \
-    [[[((UIView *)X).superview class] description] hasPrefix:@"TiUI"])
-
 @implementation PXLayoutStyler
 
 #pragma mark - Static Methods
@@ -82,12 +76,30 @@
     return handlers;
 }
 
+- (BOOL)isTitaniumClass:(UIView *)view
+{
+    UIView *parent = view;
+    
+    while(parent != nil)
+    {
+        if([[[parent class] description] hasPrefix:@"TiUI"])
+        {
+            return true;
+        }
+        
+        parent = parent.superview;
+    }
+    
+    return false;
+}
 
 - (void)applyStylesWithContext:(PXStylerContext *)context
 {
     id<PXStyleable> styleable = context.styleable;
 
-    if(IS_TITANIUM_CLASS(styleable))
+    //NSLog(@"IS_TITANIUM_CLASS: %@ %@", [styleable description], [self isTitaniumClass:(UIView *)styleable]? @"YES" : @"NO");
+    
+    if(PixateFreestyle.titaniumMode && [styleable isKindOfClass:[UIView class]] && [self isTitaniumClass:(UIView *)styleable])
     {
         id view = styleable;
         
@@ -138,6 +150,8 @@
         // TODO: move this out of here
         styleable.frame = frameRect;
         //styleable.bounds = boundsRect;
+
+        //NSLog(@"BOUNDS SET ON: %@ (%f,%f,%f,%f)", [styleable description], styleable.frame.origin.x, styleable.frame.origin.y, styleable.frame.size.width, styleable.frame.size.height);
 
         // TODO: does this depend on being right after frame is set?
         if(CGAffineTransformIsIdentity(context.transform) == NO && [styleable isKindOfClass:[UIView class]])

@@ -9,7 +9,7 @@ navigation-bar {
 /* This creates a larger background that goes under the top status bar */
 navigation-bar {
     background-image: linear-gradient(darkblue, rgba(200,200,255,0));
-    background-size: 320 64;
+    background-size: 1 64; /* Use 44 to not go under the status bar */
     shadow: none;
 }
 

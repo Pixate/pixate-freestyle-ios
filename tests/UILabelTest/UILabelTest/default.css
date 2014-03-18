@@ -6,8 +6,11 @@
     color: blue;
 }
 
-#label3 {
+#label3 attributed-text {
     color: red;
+    letter-spacing: 4;
+    text-transform: uppercase;
+    text-decoration: letterpress;
 }
 
 #label4 attributed-text {
