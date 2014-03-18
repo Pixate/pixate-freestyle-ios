@@ -1162,6 +1162,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   },
@@ -2129,6 +2132,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   },
@@ -6453,6 +6459,15 @@
       },
       "separator-style": {
         "syntax": "none | single-line | etched-line"
+      },
+      "content-offset": {
+        "syntax": "<size>"
+      },
+      "content-size": {
+        "syntax": "<size>"
+      },
+      "content-inset": {
+        "syntax": "<insets>"
       }
     }
   },
@@ -6869,6 +6884,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   },
@@ -7338,6 +7356,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   },
@@ -7582,6 +7603,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   },
@@ -8467,6 +8491,9 @@
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
       },
+      "text-shadow": {
+        "syntax": ""
+      },
       "-ios-tint-color": {
         "syntax": "<paint>"
       }
@@ -8899,6 +8926,9 @@
       },
       "text-decoration": {
         "syntax": "underline | line-through | letterpress"
+      },
+      "text-shadow": {
+        "syntax": ""
       }
     }
   }
