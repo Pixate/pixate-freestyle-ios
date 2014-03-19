@@ -24,6 +24,7 @@
 
 #import "PXImagePaint.h"
 #import "PXShapeView.h"
+#import "MAFuture.h"
 
 @implementation PXImagePaint
 
@@ -75,11 +76,19 @@
         }
         else
         {
-            // TODO: Use selector with error param?
-            NSData *data = [NSData dataWithContentsOfURL:_imageURL];
-
-            if (data)
+            if([[_imageURL scheme] isEqualToString:@"asset"])
             {
+                image = [UIImage imageNamed:_imageURL.host];
+            }
+            else
+            {
+                // Use a background 'future' to load the data
+                NSData *data = MABackgroundFuture(^{
+                    NSData *result = [NSData dataWithContentsOfURL:_imageURL];
+                    // Shouldn't return nil from a future
+                    return result ? result : [[NSData alloc] init];
+                });
+
                 CGFloat scale;
 
                 if ([@"data" isEqualToString:_imageURL.scheme])
@@ -96,10 +105,12 @@
 
                 // grab image
                 image = [[UIImage alloc] initWithData:data scale:scale];
-            }
-            else // Assuming it's an asset name at this point
-            {
-                image = [UIImage imageNamed:_imageURL.relativePath];
+                
+                // log error
+                if(image == nil)
+                {
+                    NSLog(@"Nil image for URL %@", _imageURL);
+                }
             }
             
             // resize, if necessary
