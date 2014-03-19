@@ -25,8 +25,6 @@
 		9C23048A18DA126300969D18 /* MAProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047A18DA126300969D18 /* MAProxy.h */; };
 		9C23048B18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; };
 		9C23048C18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; };
-		9C23048D18DA126300969D18 /* tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047C18DA126300969D18 /* tester.m */; };
-		9C23048E18DA126300969D18 /* tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047C18DA126300969D18 /* tester.m */; };
 		9C23049618DA27CE00969D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
 		9C2304A118DA280100969D18 /* tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047C18DA126300969D18 /* tester.m */; };
 		9C2304A218DA285200969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; };
@@ -5537,7 +5535,6 @@
 				9C98662C18C0499000C71922 /* PXShape.m in Sources */,
 				9C98675418C0499000C71922 /* PXStylerBase.m in Sources */,
 				9C9867F118C04BA000C71922 /* PXForceLoadControls.m in Sources */,
-				9C23048D18DA126300969D18 /* tester.m in Sources */,
 				9C98673518C0499000C71922 /* PXAnimationStyler.m in Sources */,
 				9C98660018C0499000C71922 /* PXLinearGradient.m in Sources */,
 				9C98667C18C0499000C71922 /* NSDictionary+PXObject.m in Sources */,
@@ -5582,7 +5579,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C23048E18DA126300969D18 /* tester.m in Sources */,
 				9C23048918DA126300969D18 /* MAMethodSignatureCache.m in Sources */,
 				9C23048518DA126300969D18 /* MAFuture.m in Sources */,
 				9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */,
@@ -5893,6 +5889,7 @@
 				9C2304A018DA27CE00969D18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C84A63518AE9CB600E7CDA7 /* Build configuration list for PBXProject "pixate-freestyle" */ = {
 			isa = XCConfigurationList;
