@@ -7,7 +7,7 @@
 #import "MACompoundFuture.h"
 
 
-#define ENABLE_LOGGING 1
+#define ENABLE_LOGGING 0
 
 #if ENABLE_LOGGING
 #define LOG(...) NSLog(__VA_ARGS__)
