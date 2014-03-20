@@ -445,22 +445,19 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 {
     if (styleable.styleMode == PXStylingNormal)
     {
-        if(recurse)
+        for (id<PXStyleable> child in styleable.pxStyleChildren)
         {
-            for (id<PXStyleable> child in styleable.pxStyleChildren)
+            if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal)
             {
-                if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal)
+                [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending)
                 {
-                    [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending)
+                    if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal)
                     {
-                        if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal)
-                        {
-                            [PXStyleUtils updateStyleForStyleable:styleable];
-                        }
-                    }];
-                    
-                    [PXStyleUtils updateStyleForStyleable:child];
-                }
+                        [PXStyleUtils updateStyleForStyleable:styleable];
+                    }
+                }];
+                
+                [PXStyleUtils updateStyleForStyleable:child];
             }
         }
         
