@@ -445,23 +445,30 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 {
     if (styleable.styleMode == PXStylingNormal)
     {
-        for (id<PXStyleable> child in styleable.pxStyleChildren)
+        if(recurse)
         {
-            if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal)
-            {
-                [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending)
-                {
-                    if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal)
-                    {
-                        [PXStyleUtils updateStyleForStyleable:styleable];
-                    }
-                }];
-                
-                [PXStyleUtils updateStyleForStyleable:child];
-            }
+            [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
         }
-        
-        [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
+        else
+        {
+            for (id<PXStyleable> child in styleable.pxStyleChildren)
+            {
+                if ([child conformsToProtocol:@protocol(PXVirtualControl)] && child.styleMode == PXStylingNormal)
+                {
+                    [PXStyleUtils enumerateStyleableDescendants:child usingBlock:^(id<PXStyleable> styleable, BOOL *stop, BOOL *stopDescending)
+                    {
+                        if ([styleable conformsToProtocol:@protocol(PXVirtualControl)] && styleable.styleMode == PXStylingNormal)
+                        {
+                            [PXStyleUtils updateStyleForStyleable:styleable];
+                        }
+                    }];
+                    
+                    [PXStyleUtils updateStyleForStyleable:child];
+                }
+            }
+            
+            [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
+        }
     }
 }
 
