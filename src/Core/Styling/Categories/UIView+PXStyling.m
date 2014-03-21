@@ -236,6 +236,8 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     //
     objc_setAssociatedObject(self, &STYLE_MODE_KEY, [NSNumber numberWithInt:mode], OBJC_ASSOCIATION_COPY_NONATOMIC);
     
+    //NSLog(@"Found: %@ (%p)", [self class], self);
+
     //
     // Perform styling operations
     //
@@ -244,7 +246,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         // Grabbing Pixate's subclass of this instance
         Class c = SubclassForViewWithClass(self, nil);
 
-        //NSLog(@"%@ : %@ -> %@", [self class], [[self class] superclass], c);
+        //NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
 
         // We are subclassing 'self' with the Pixate class 'c' we found above
         [c subclassInstance:self];
@@ -445,11 +447,8 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 {
     if (styleable.styleMode == PXStylingNormal)
     {
-        if(recurse)
-        {
-            [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
-        }
-        else
+        // If not recursive, style virtual children only (not subviews)
+        if(recurse == NO)
         {
             for (id<PXStyleable> child in styleable.pxStyleChildren)
             {
@@ -466,9 +465,10 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
                     [PXStyleUtils updateStyleForStyleable:child];
                 }
             }
-            
-            [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
         }
+        
+        // Style the styleable and optionally ALL the children (including virtual children)
+        [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
     }
 }
 
