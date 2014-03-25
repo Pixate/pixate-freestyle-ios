@@ -9,6 +9,29 @@
 /* Begin PBXBuildFile section */
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
+		9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; };
+		9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; };
+		9C23048018DA126300969D18 /* MACompoundFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047318DA126300969D18 /* MACompoundFuture.h */; };
+		9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047418DA126300969D18 /* MACompoundFuture.m */; };
+		9C23048218DA126300969D18 /* MACompoundFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047418DA126300969D18 /* MACompoundFuture.m */; };
+		9C23048318DA126300969D18 /* MAFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047518DA126300969D18 /* MAFuture.h */; };
+		9C23048418DA126300969D18 /* MAFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047618DA126300969D18 /* MAFuture.m */; };
+		9C23048518DA126300969D18 /* MAFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047618DA126300969D18 /* MAFuture.m */; };
+		9C23048618DA126300969D18 /* MAFutureInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047718DA126300969D18 /* MAFutureInternal.h */; };
+		9C23048718DA126300969D18 /* MAMethodSignatureCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047818DA126300969D18 /* MAMethodSignatureCache.h */; };
+		9C23048818DA126300969D18 /* MAMethodSignatureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047918DA126300969D18 /* MAMethodSignatureCache.m */; };
+		9C23048918DA126300969D18 /* MAMethodSignatureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047918DA126300969D18 /* MAMethodSignatureCache.m */; };
+		9C23048A18DA126300969D18 /* MAProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047A18DA126300969D18 /* MAProxy.h */; };
+		9C23048B18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; };
+		9C23048C18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; };
+		9C23049618DA27CE00969D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
+		9C2304A118DA280100969D18 /* tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047C18DA126300969D18 /* tester.m */; };
+		9C2304A218DA285200969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; };
+		9C2304A318DA285200969D18 /* MACompoundFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047418DA126300969D18 /* MACompoundFuture.m */; };
+		9C2304A418DA285200969D18 /* MAFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047618DA126300969D18 /* MAFuture.m */; };
+		9C2304A518DA285200969D18 /* MAMethodSignatureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047918DA126300969D18 /* MAMethodSignatureCache.m */; };
+		9C2304A618DA285200969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; };
 		9C31780B18BE936B00F4B79D /* ImageBasedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3174FF18BE936A00F4B79D /* ImageBasedTests.m */; };
 		9C31780C18BE936B00F4B79D /* PXShapeRenderingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31750018BE936A00F4B79D /* PXShapeRenderingTests.m */; };
 		9C31780D18BE936B00F4B79D /* PXSVGRenderingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31750118BE936A00F4B79D /* PXSVGRenderingTests.m */; };
@@ -1215,6 +1238,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
+		9C23047218DA126300969D18 /* MABaseFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseFuture.m; sourceTree = "<group>"; };
+		9C23047318DA126300969D18 /* MACompoundFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACompoundFuture.h; sourceTree = "<group>"; };
+		9C23047418DA126300969D18 /* MACompoundFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACompoundFuture.m; sourceTree = "<group>"; };
+		9C23047518DA126300969D18 /* MAFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFuture.h; sourceTree = "<group>"; };
+		9C23047618DA126300969D18 /* MAFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFuture.m; sourceTree = "<group>"; };
+		9C23047718DA126300969D18 /* MAFutureInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFutureInternal.h; sourceTree = "<group>"; };
+		9C23047818DA126300969D18 /* MAMethodSignatureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMethodSignatureCache.h; sourceTree = "<group>"; };
+		9C23047918DA126300969D18 /* MAMethodSignatureCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMethodSignatureCache.m; sourceTree = "<group>"; };
+		9C23047A18DA126300969D18 /* MAProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAProxy.h; sourceTree = "<group>"; };
+		9C23047B18DA126300969D18 /* MAProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAProxy.m; sourceTree = "<group>"; };
+		9C23047C18DA126300969D18 /* tester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tester.m; sourceTree = "<group>"; };
+		9C23049518DA27CE00969D18 /* MAFutureTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MAFutureTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3174FE18BE936A00F4B79D /* ImageBasedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBasedTests.h; sourceTree = "<group>"; };
 		9C3174FF18BE936A00F4B79D /* ImageBasedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBasedTests.m; sourceTree = "<group>"; };
 		9C31750018BE936A00F4B79D /* PXShapeRenderingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShapeRenderingTests.m; sourceTree = "<group>"; };
@@ -2394,6 +2431,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C23049218DA27CE00969D18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C23049618DA27CE00969D18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C84A63718AE9CB600E7CDA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -2435,6 +2480,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C23046F18DA126300969D18 /* MAFuture */ = {
+			isa = PBXGroup;
+			children = (
+				9C23047018DA126300969D18 /* LICENSE */,
+				9C23047118DA126300969D18 /* MABaseFuture.h */,
+				9C23047218DA126300969D18 /* MABaseFuture.m */,
+				9C23047318DA126300969D18 /* MACompoundFuture.h */,
+				9C23047418DA126300969D18 /* MACompoundFuture.m */,
+				9C23047518DA126300969D18 /* MAFuture.h */,
+				9C23047618DA126300969D18 /* MAFuture.m */,
+				9C23047718DA126300969D18 /* MAFutureInternal.h */,
+				9C23047818DA126300969D18 /* MAMethodSignatureCache.h */,
+				9C23047918DA126300969D18 /* MAMethodSignatureCache.m */,
+				9C23047A18DA126300969D18 /* MAProxy.h */,
+				9C23047B18DA126300969D18 /* MAProxy.m */,
+				9C23047C18DA126300969D18 /* tester.m */,
+			);
+			name = MAFuture;
+			path = "Third-Party/MAFuture";
+			sourceTree = "<group>";
+		};
 		9C3174FD18BE936A00F4B79D /* CG */ = {
 			isa = PBXGroup;
 			children = (
@@ -3373,6 +3439,7 @@
 				9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */,
 				9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */,
 				9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */,
+				9C23049518DA27CE00969D18 /* MAFutureTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3949,6 +4016,7 @@
 		9C9865E218C0499000C71922 /* Kernel */ = {
 			isa = PBXGroup;
 			children = (
+				9C23046F18DA126300969D18 /* MAFuture */,
 				9C9865E318C0499000C71922 /* Categories */,
 				9C9865E418C0499000C71922 /* Utils */,
 			);
@@ -4210,14 +4278,17 @@
 				9C98660618C0499000C71922 /* PXSolidPaint.h in Headers */,
 				9C98670B18C0499000C71922 /* PXStylesheetTokenType.h in Headers */,
 				9C98670318C0499000C71922 /* PXNamedMediaExpression.h in Headers */,
+				9C23048318DA126300969D18 /* MAFuture.h in Headers */,
 				9C98681E18C04BA000C71922 /* PXUISegmentedControl.h in Headers */,
 				9C9867FA18C04BA000C71922 /* PXUIActionSheet.h in Headers */,
 				9C98667518C0499000C71922 /* PXStyleTreeInfo.h in Headers */,
 				9C98674818C0499000C71922 /* PXInsetStyler.h in Headers */,
+				9C23048A18DA126300969D18 /* MAProxy.h in Headers */,
 				9C98683218C04BA000C71922 /* PXUITextField.h in Headers */,
 				9C98680018C04BA000C71922 /* PXUICollectionView.h in Headers */,
 				9C98676B18C0499000C71922 /* PXProxy.h in Headers */,
 				9C98660218C0499000C71922 /* PXPaintGroup.h in Headers */,
+				9C23048718DA126300969D18 /* MAMethodSignatureCache.h in Headers */,
 				9C98664018C0499000C71922 /* PXFileFunctionLogFormatter.h in Headers */,
 				9C9867FE18C04BA000C71922 /* PXUIButton.h in Headers */,
 				9C98662418C0499000C71922 /* PXPie.h in Headers */,
@@ -4231,12 +4302,14 @@
 				9C98667118C0499000C71922 /* PXCacheManager.h in Headers */,
 				9C98680A18C04BA000C71922 /* PXUILabel.h in Headers */,
 				9C9865EE18C0499000C71922 /* PXForceLoadCGCategories.h in Headers */,
+				9C23048618DA126300969D18 /* MAFutureInternal.h in Headers */,
 				9C98660418C0499000C71922 /* PXRadialGradient.h in Headers */,
 				9C98670918C0499000C71922 /* PXStylesheetParser.h in Headers */,
 				9C98665518C0499000C71922 /* PXCharacterMatcher.h in Headers */,
 				9C98682C18C04BA000C71922 /* PXUITableViewCellContentView.h in Headers */,
 				9C98666218C0499000C71922 /* PXSourceWriter.h in Headers */,
 				9C98661518C0499000C71922 /* PXShadowPaint.h in Headers */,
+				9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */,
 				9C98662F18C0499000C71922 /* PXShapeGroup.h in Headers */,
 				9C98666418C0499000C71922 /* PixateFreestyle-Private.h in Headers */,
 				9C98665318C0499000C71922 /* PXWeakWrapper.h in Headers */,
@@ -4305,6 +4378,7 @@
 				9C98683418C04BA000C71922 /* PXUITextView.h in Headers */,
 				9C98681C18C04BA000C71922 /* PXUISearchBar.h in Headers */,
 				9C98675918C0499000C71922 /* PXTextShadowStyler.h in Headers */,
+				9C23048018DA126300969D18 /* MACompoundFuture.h in Headers */,
 				9C98676318C0499000C71922 /* PXFileUtils.h in Headers */,
 				9C98672518C0499000C71922 /* PXIdSelector.h in Headers */,
 				9C98664718C0499000C71922 /* DDASLLogger.h in Headers */,
@@ -4392,6 +4466,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9C23049418DA27CE00969D18 /* MAFutureTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C23049E18DA27CE00969D18 /* Build configuration list for PBXNativeTarget "MAFutureTest" */;
+			buildPhases = (
+				9C23049118DA27CE00969D18 /* Sources */,
+				9C23049218DA27CE00969D18 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAFutureTest;
+			productName = MAFutureTest;
+			productReference = 9C23049518DA27CE00969D18 /* MAFutureTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C84A65D18AE9CB600E7CDA7 /* Build configuration list for PBXNativeTarget "pixate-freestyle" */;
@@ -4488,6 +4578,7 @@
 				9C84A64918AE9CB600E7CDA7 /* pixate-freestyleTests */,
 				9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */,
 				9CAE288E18C4343B005B06B5 /* pixate-freestyle-macTests */,
+				9C23049418DA27CE00969D18 /* MAFutureTest */,
 			);
 		};
 /* End PBXProject section */
@@ -5241,6 +5332,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C23049118DA27CE00969D18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2304A218DA285200969D18 /* MABaseFuture.m in Sources */,
+				9C2304A318DA285200969D18 /* MACompoundFuture.m in Sources */,
+				9C2304A418DA285200969D18 /* MAFuture.m in Sources */,
+				9C2304A518DA285200969D18 /* MAMethodSignatureCache.m in Sources */,
+				9C2304A618DA285200969D18 /* MAProxy.m in Sources */,
+				9C2304A118DA280100969D18 /* tester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9C84A63618AE9CB600E7CDA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -5248,6 +5352,7 @@
 				9C98680B18C04BA000C71922 /* PXUILabel.m in Sources */,
 				9C98683118C04BA000C71922 /* PXUITableViewHeaderFooterView.m in Sources */,
 				9C98683518C04BA000C71922 /* PXUITextView.m in Sources */,
+				9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */,
 				9C9867F718C04BA000C71922 /* PXMKMapView.m in Sources */,
 				9C98672E18C0499000C71922 /* PXPseudoClassSelector.m in Sources */,
 				9C98681118C04BA000C71922 /* PXUIPageControl.m in Sources */,
@@ -5255,6 +5360,7 @@
 				9C98666018C0499000C71922 /* PXParserBase.m in Sources */,
 				9C98663B18C0499000C71922 /* PXStrokeStroke.m in Sources */,
 				9C98672C18C0499000C71922 /* PXPseudoClassPredicate.m in Sources */,
+				9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */,
 				9C98670818C0499000C71922 /* PXStylesheetLexer.m in Sources */,
 				9C98673118C0499000C71922 /* PXTypeSelector.m in Sources */,
 				9C98681F18C04BA000C71922 /* PXUISegmentedControl.m in Sources */,
@@ -5345,6 +5451,7 @@
 				9C98674B18C0499000C71922 /* PXLayoutStyler.m in Sources */,
 				9C98668718C0499000C71922 /* UIView+PXStyling.m in Sources */,
 				9C98671818C0499000C71922 /* PXSpecificity.m in Sources */,
+				9C23048418DA126300969D18 /* MAFuture.m in Sources */,
 				9C9867FD18C04BA000C71922 /* PXUIActivityIndicatorView.m in Sources */,
 				9C98675818C0499000C71922 /* PXTextContentStyler.m in Sources */,
 				9C98661918C0499000C71922 /* PXArrowRectangle.m in Sources */,
@@ -5369,6 +5476,7 @@
 				9C98673B18C0499000C71922 /* PXBarShadowStyler.m in Sources */,
 				9C9867F918C04BA000C71922 /* PXMPVolumeView.m in Sources */,
 				9C98660918C0499000C71922 /* PXSVGLoader.m in Sources */,
+				9C23048B18DA126300969D18 /* MAProxy.m in Sources */,
 				9C98670018C0499000C71922 /* PXMediaExpressionGroup.m in Sources */,
 				9C9866F618C0499000C71922 /* PXBorderInfo.m in Sources */,
 				9C98670418C0499000C71922 /* PXNamedMediaExpression.m in Sources */,
@@ -5410,6 +5518,7 @@
 				9C9866F818C0499000C71922 /* PXFontInfo.m in Sources */,
 				9C98673718C0499000C71922 /* PXAttributedTextStyler.m in Sources */,
 				9C9865ED18C0499000C71922 /* NSMutableArray+QueueAdditions.m in Sources */,
+				9C23048818DA126300969D18 /* MAMethodSignatureCache.m in Sources */,
 				9C9867EB18C04BA000C71922 /* PXKeyframe.m in Sources */,
 				9C98676818C0499000C71922 /* PXGestalt.m in Sources */,
 				9C98683718C04BA000C71922 /* PXUIToolbar.m in Sources */,
@@ -5470,6 +5579,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C23048918DA126300969D18 /* MAMethodSignatureCache.m in Sources */,
+				9C23048518DA126300969D18 /* MAFuture.m in Sources */,
+				9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */,
+				9C23048C18DA126300969D18 /* MAProxy.m in Sources */,
+				9C23048218DA126300969D18 /* MACompoundFuture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5516,11 +5630,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9C23049F18DA27CE00969D18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C2304A018DA27CE00969D18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		9C84A65B18AE9CB600E7CDA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -5558,7 +5702,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -5589,7 +5732,6 @@
 		9C84A65E18AE9CB600E7CDA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/pixate_freestyle.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
@@ -5605,7 +5747,6 @@
 		9C84A65F18AE9CB600E7CDA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/pixate_freestyle.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-Prefix.pch";
@@ -5661,7 +5802,6 @@
 		9CAE289E18C4343B005B06B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/pixate_freestyle_mac.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
@@ -5680,7 +5820,6 @@
 		9CAE289F18C4343B005B06B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/pixate_freestyle_mac.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
@@ -5695,7 +5834,7 @@
 		9CAE28A018C4343B005B06B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -5718,7 +5857,7 @@
 		9CAE28A118C4343B005B06B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -5737,6 +5876,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C23049E18DA27CE00969D18 /* Build configuration list for PBXNativeTarget "MAFutureTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C23049F18DA27CE00969D18 /* Debug */,
+				9C2304A018DA27CE00969D18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9C84A63518AE9CB600E7CDA7 /* Build configuration list for PBXProject "pixate-freestyle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

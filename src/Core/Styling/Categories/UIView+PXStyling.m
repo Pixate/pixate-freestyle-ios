@@ -236,6 +236,8 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     //
     objc_setAssociatedObject(self, &STYLE_MODE_KEY, [NSNumber numberWithInt:mode], OBJC_ASSOCIATION_COPY_NONATOMIC);
     
+    //NSLog(@"Found: %@ (%p)", [self class], self);
+
     //
     // Perform styling operations
     //
@@ -244,34 +246,37 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         // Grabbing Pixate's subclass of this instance
         Class c = SubclassForViewWithClass(self, nil);
 
-        //NSLog(@"%@ : %@ -> %@", [self class], [[self class] superclass], c);
+        // NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
 
-        // We are subclassing 'self' with the Pixate class 'c' we found above
-        [c subclassInstance:self];
-
-        // Register for notification center events
-        static char Notification;
-        if (objc_getAssociatedObject(self, &Notification) == nil)
+        if(c)
         {
-            objc_setAssociatedObject(self, &Notification, @(YES), OBJC_ASSOCIATION_COPY_NONATOMIC);
+            // We are subclassing 'self' with the Pixate class 'c' we found above
+            [c subclassInstance:self];
 
-            if ([self respondsToSelector:@selector(registerNotifications)])
+            // Register for notification center events
+            static char Notification;
+            if (objc_getAssociatedObject(self, &Notification) == nil)
             {
-                [self performSelector:@selector(registerNotifications)];
+                objc_setAssociatedObject(self, &Notification, @(YES), OBJC_ASSOCIATION_COPY_NONATOMIC);
+
+                if ([self respondsToSelector:@selector(registerNotifications)])
+                {
+                    [self performSelector:@selector(registerNotifications)];
+                }
             }
-        }
 
-        // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
-        BOOL shouldStyle = !(
-                           [self isKindOfClass:[UITableViewCell class]]
-                        || [self isKindOfClass:[UICollectionViewCell class]]
-                        );
+            // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
+            BOOL shouldStyle = !(
+                               [self isKindOfClass:[UITableViewCell class]]
+                            || [self isKindOfClass:[UICollectionViewCell class]]
+                            );
 
-        //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
+            //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
 
-        if (shouldStyle)
-        {
-            [self updateStyles];
+            if (shouldStyle)
+            {
+                [self updateStyles];
+            }
         }
     }
 }
@@ -445,7 +450,8 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 {
     if (styleable.styleMode == PXStylingNormal)
     {
-        if(recurse)
+        // If not recursive, style virtual children only (not subviews)
+        if(recurse == NO)
         {
             for (id<PXStyleable> child in styleable.pxStyleChildren)
             {
@@ -464,6 +470,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
             }
         }
         
+        // Style the styleable and optionally ALL the children (including virtual children)
         [PXStyleUtils updateStylesForStyleable:styleable andDescendants:recurse];
     }
 }

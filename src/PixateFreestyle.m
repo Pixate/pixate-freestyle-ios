@@ -198,7 +198,21 @@
 {
     [[UIApplication sharedApplication].windows enumerateObjectsUsingBlock:^(UIWindow *window, NSUInteger index, BOOL *stop)
     {
-         [window updateStylesAsync];
+        if([self titaniumMode])
+        {
+            [[window subviews] enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
+                // Style the first Ti* named view we find, the rest should be recursive from that one
+                if([[[view class] description] hasPrefix:@"Ti"])
+                {
+                    [view updateStylesAsync];
+                    *stop = YES;
+                }
+            }];
+        }
+        else
+        {
+            [window updateStylesAsync];
+        }
     }];
 }
 

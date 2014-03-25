@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:UISliderTest/UISliderTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ADLivelyTableView/Demo/LivelyDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:UIButtonTest/UIButtonTest.xcodeproj">
    </FileRef>
    <FileRef

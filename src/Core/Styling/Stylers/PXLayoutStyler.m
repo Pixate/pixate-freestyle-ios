@@ -93,6 +93,24 @@
     return false;
 }
 
+- (id)getTitaniumClass:(UIView *)view
+{
+    UIView *parent = view;
+    
+    while(parent != nil)
+    {
+        if([[[parent class] description] hasPrefix:@"TiUI"])
+        {
+            return parent;
+        }
+        
+        parent = parent.superview;
+    }
+    
+    return nil;
+}
+
+
 - (void)applyStylesWithContext:(PXStylerContext *)context
 {
     id<PXStyleable> styleable = context.styleable;
@@ -105,13 +123,15 @@
         
         //NSLog(@"VIEW: %@", styleable);
 
-        // Get the superview only if it's not already a TiUIView (which _is_ a UIView)
-        if(![[[view class] description] hasPrefix:@"TiUIView"])
-        {
-            view = ((UIView *)styleable).superview;
-            //NSLog(@"SUPERVIEW: %@", view);
-        }
+        view = [self getTitaniumClass:view];
         
+        // Get the superview only if it's not already a TiUIView (which _is_ a UIView)
+//        if(![[[view class] description] hasPrefix:@"TiUIView"])
+//        {
+//            view = ((UIView *)styleable).superview;
+//            //NSLog(@"SUPERVIEW: %@", view);
+//        }
+//        
         if ([view respondsToSelector:NSSelectorFromString(@"px_setLayoutInfo:transform:")])
         {
             CGRect frame = CGRectMake(context.left, context.top, context.width, context.height);

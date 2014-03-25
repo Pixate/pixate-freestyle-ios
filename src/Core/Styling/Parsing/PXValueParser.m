@@ -58,6 +58,8 @@ static NSDictionary *ANIMATION_FILL_MODE_MAP;
 static NSDictionary *ANIMATION_TIMING_FUNCTION_MAP;
 
 static NSString *FILE_SCHEME = @"file://";
+static NSString *HTTP_SCHEME = @"http://";
+static NSString *HTTPS_SCHEME = @"https://";
 static NSString *DOCUMENTS_SCHEME = @"documents://";
 static NSString *BUNDLE_SCHEME = @"bundle://";
 static NSString *TMP_SCHEME = @"tmp://";
@@ -1093,6 +1095,10 @@ static NSString *ASSET_SCHEME = @"asset://";
             {
                 addWith2xVersions([path substringFromIndex:FILE_SCHEME.length]);
             }
+            else if ([path hasPrefix:HTTP_SCHEME] || [path hasPrefix:HTTPS_SCHEME])
+            {
+                result = [NSURL URLWithString:path];
+            }
             else if ([path hasPrefix:DOCUMENTS_SCHEME])
             {
                 addWith2xVersions([NSString stringWithFormat:@"%@/%@", [PXValueParser documentsFilePath], [path substringFromIndex:DOCUMENTS_SCHEME.length]]);
@@ -1110,7 +1116,7 @@ static NSString *ASSET_SCHEME = @"asset://";
                 path = [path substringFromIndex:ASSET_SCHEME.length];
                 NSString *pathMinusExtension = [path stringByDeletingPathExtension];
                 
-                result = [NSURL fileURLWithPath:pathMinusExtension];
+                result = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", ASSET_SCHEME, pathMinusExtension]];
             }
             else if ([path hasPrefix:TMP_SCHEME])
             {

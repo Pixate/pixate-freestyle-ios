@@ -274,7 +274,8 @@
               }
             ]
           }
-        }
+        },
+        "text-shadow": null
       }
     },
     "PXBarMetricsAdjustmentStyler": {
@@ -2241,6 +2242,24 @@
                 "identifier": "etched-line"
               }
             ]
+          }
+        },
+        "content-offset": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-size": {
+          "source": "<size>",
+          "ast": {
+            "type": "size"
+          }
+        },
+        "content-inset": {
+          "source": "<insets>",
+          "ast": {
+            "type": "insets"
           }
         }
       },
