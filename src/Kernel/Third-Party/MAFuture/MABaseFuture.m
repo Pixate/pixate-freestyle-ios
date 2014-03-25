@@ -11,6 +11,14 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_value release];
+    [_lock release];
+    
+    [super dealloc];
+}
+
 - (void)setFutureValue: (id)value
 {
     [_lock lock];
@@ -32,6 +40,8 @@
 
 - (void)setFutureValueUnlocked: (id)value
 {
+    [value retain];
+    [_value release];
     _value = value;
     _resolved = YES;
     [_lock broadcast];

@@ -99,7 +99,7 @@
             if(type[0] == '^' && type[1] == '@')
             {
                 // get the existing pointer-to-object
-                void **parameterValue;
+                id *parameterValue;
                 [invocation getArgument: &parameterValue atIndex: i];
                 
                 // if it's NULL, then we don't need to do anything
@@ -109,7 +109,7 @@
                     
                     // allocate space to receive the final computed value
                     NSMutableData *newParameterSpace = [NSMutableData dataWithLength: sizeof(id)];
-                    void **newParameterValue = [newParameterSpace mutableBytes];
+                    id *newParameterValue = [newParameterSpace mutableBytes];
                     
                     // set the parameter to point to the new space
                     [invocation setArgument: &newParameterValue atIndex: i];
@@ -127,6 +127,7 @@
                             [parameterDatas self];
                             return (id)nil;
                         }];
+                        [invocationFuture autorelease];
                     }
                     [parameterDatas addObject: newParameterSpace];
                     
@@ -136,11 +137,14 @@
                         // capture the NSMutableData to ensure that it stays live
                         // interior pointer problem
                         [newParameterSpace self];
-                        return (__bridge id) *newParameterValue;
+                        return *newParameterValue;
                     }];
                     
                     // and now "return" it
-                    *parameterValue = (__bridge void *)(parameterFuture);
+                    *parameterValue = parameterFuture;
+                    
+                    // memory management
+                    [parameterFuture autorelease];
                 }
             }
         }
@@ -157,6 +161,7 @@
         }];
         LOG(@"forwardInvocation: %p creating new compound future %p", invocation, returnFuture);
         [invocation setReturnValue: &returnFuture];
+        [returnFuture release];
     }
 }
 
@@ -171,7 +176,7 @@ id MACompoundBackgroundFuture(id (^block)(void))
         return [blockFuture resolveFuture];
     }];
     
-    return compoundFuture;
+    return [compoundFuture autorelease];
 }
 
 #undef MACompoundLazyFuture
@@ -179,5 +184,5 @@ id MACompoundLazyFuture(id (^block)(void))
 {
     _MACompoundFuture *compoundFuture = [[_MACompoundFuture alloc] initWithBlock: block];
     
-    return compoundFuture;
+    return [compoundFuture autorelease];
 }
