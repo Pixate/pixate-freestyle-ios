@@ -11,15 +11,19 @@
     // runtime requires an implementation
 }
 
-//+ (id)alloc
-//{
-//    return NSAllocateObject(self, 0, NULL);
-//}
-//
-//- (void)dealloc
-//{
-//    NSDeallocateObject(self);
-//}
++ (id)alloc
+{
+    return NSAllocateObject(self, 0, NULL);
+}
+
+// [super dealloc] not needed here because this class is manageing its own memory
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-missing-super-calls"
+- (void)dealloc
+{
+    NSDeallocateObject(self);
+}
+#pragma clang diagnostic popk
 
 - (void)finalize
 {
