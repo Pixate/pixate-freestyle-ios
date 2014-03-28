@@ -250,7 +250,7 @@ static NSDictionary *dimensionMap;
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%f%@", number, dimension];
+    return [NSString stringWithFormat:@"%lg%@", number, dimension];
 }
 
 @end

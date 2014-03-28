@@ -11,6 +11,10 @@
 #import "PXDimension.h"
 #import <XCTest/XCTest.h>
 
+void css_lexer_set_source(NSString *source);
+void css_lexer_delete_buffer();
+PXStylesheetLexeme *css_lexer_get_lexeme();
+
 @interface PXStylesheetLexerTests : XCTestCase
 
 @end
@@ -42,8 +46,11 @@
 
 - (PXStylesheetLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source length:(NSInteger)length;
 {
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+//    lexer.source = source;
+//    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
 
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
@@ -388,7 +395,7 @@
 
 - (void)testUserDefinedDimension
 {
-    [self assertLexemeType:PXSS_DIMENSION dimensionType:kDimensionTypeUserDefined withSource:@"10units"];
+    [self assertLexemeType:PXSS_DIMENSION withSource:@"10units"];
 }
 
 - (void)testKeyframes

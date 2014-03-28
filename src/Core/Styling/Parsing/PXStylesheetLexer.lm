@@ -2,6 +2,7 @@
 %option nodefault
 %option yylineno
 %option prefix="css"
+%option case-insensitive
 
 %{
 
@@ -9,22 +10,28 @@
 #import "PXStylesheetTokenType.h"
 #import "PXDimension.h"
 
+#define YY_USER_ACTION css_offset += yyleng;
+
 void createDimension(int, char*);
 void createURL();
 
+NSMutableArray *lexemeStack;
+NSMutableArray *sourceStack;
+NSMutableArray *offsetStack;
 PXDimension *dimension;
+uint css_offset;
 
 %}
 
-h			[0-9a-fA-Z]
+h			[0-9a-fA-F]
 nonascii	[\200-\377]
 unicode		\\{h}{1,6}
 escape		{unicode}|\\[ =~.\200-\377]
 nmstart		[a-zA-Z]|{nonascii}|{escape}
 nmchar		[-a-zA-Z0-9_]|{nonascii}|{escape}
 nmchar2		[a-zA-Z0-9]|{nonascii}|{escape}
-string1		\'([^\n\r\f\']|\\{nl}|{escape})*\'
-string2		\"([^\n\r\f\"]|\\{nl}|{escape})*\"
+string1		\'([^\n\r\f\']|\\{nl}|\\\'|{escape})*\'
+string2		\"([^\n\r\f\"]|\\{nl}|\\\"|{escape})*\"
 
 ident		-?{nmstart}{nmchar}*
 dim         -?{nmstart}{nmchar2}*
@@ -150,12 +157,12 @@ n			[-+]?[0-9]*n
 void createDimension(int tokenType, char *units)
 {
     NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
-    NSString *dimension = [NSString stringWithCString:units encoding:NSUTF8StringEncoding];
-    NSRange range = NSMakeRange(text.length - dimension.length, dimension.length);
-    NSString *number = [text substringWithRange:range];
-    double doubleValue = [number doubleValue];
+    NSString *unitString = [NSString stringWithCString:units encoding:NSUTF8StringEncoding];
+    NSRange range = NSMakeRange(0, text.length - unitString.length);
+    NSString *numberString = [text substringWithRange:range];
+    double doubleValue = [numberString doubleValue];
 
-    dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:dimension];
+    dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:unitString];
 }
 
 void createURL()
@@ -163,7 +170,7 @@ void createURL()
     // TODO:
 }
 
-void css_lexer_set_source(NSString *source, BOOL forEma)
+void css_lexer_set_source(NSString *source)
 {
     const char *cSource = [source cStringUsingEncoding:NSUTF8StringEncoding];
 
@@ -177,10 +184,45 @@ void css_lexer_delete_buffer()
     yy_delete_buffer(YY_CURRENT_BUFFER);
 }
 
-PXStylesheetLexeme *expr_lexer_get_lexeme()
+PXStylesheetLexeme *css_lexer_get_lexeme()
 {
     int tok = yylex();
     NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+    NSRange range = NSMakeRange(yyleng - text.length, text.length);
+    PXStylesheetLexeme *result;
 
-    return [[PXStylesheetLexeme alloc] initWithType:tok text:text];
+    if (dimension != nil)
+    {
+        result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:dimension];
+        dimension = nil;
+    }
+    else
+    {
+        result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:text];
+    }
+
+    return result;
+}
+
+void css_push_lexeme(PXStylesheetLexeme *lexeme)
+{
+    if (lexemeStack == nil)
+    {
+        lexemeStack = [NSMutableArray alloc] init];
+    }
+
+    [lexemeStack addObject:lexeme];
+}
+
+void css_push_source(NSString *source)
+{
+    if (sourceStack == nil)
+    {
+        sourceStack = [NSMutableArray alloc] init];
+        offsetStack = [NSMutableArray alloc] init];
+    }
+
+    // push current source
+    // push current offset
+    // set new source and zero offset
 }
