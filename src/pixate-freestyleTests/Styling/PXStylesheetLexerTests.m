@@ -11,6 +11,10 @@
 #import "PXDimension.h"
 #import <XCTest/XCTest.h>
 
+void css_lexer_set_source(NSString *source);
+void css_lexer_delete_buffer();
+PXStylesheetLexeme *css_lexer_get_lexeme();
+
 @interface PXStylesheetLexerTests : XCTestCase
 
 @end
@@ -42,8 +46,11 @@
 
 - (PXStylesheetLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source length:(NSInteger)length;
 {
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+//    lexer.source = source;
+//    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
 
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
@@ -52,7 +59,7 @@
 
     XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int)type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 0, @"Lexeme does not start at offset zero");
-    XCTAssertTrue(lexeme.range.length == length, @"Expected %d characters but found %d: %@", length, lexeme.range.length, lexeme);
+    XCTAssertTrue(lexeme.range.length == length, @"Expected %ld characters but found %lu: %@", (long)length, (unsigned long)lexeme.range.length, lexeme);
 
     return lexeme;
 }
@@ -278,9 +285,9 @@
     NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
     NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
 
-    XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", type, expectedType, lexeme.type, actualType);
+    XCTAssertTrue(lexeme.type == type, @"Expected %ld(%@) but found %d(%@)", type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
-    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %d characters but found %d", source.length - 1, lexeme.range.length);
+    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
 }
 
 - (void)test6DigitHexColor
@@ -298,7 +305,7 @@
 
     XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int) type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
-    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %d characters but found %d", source.length - 1, lexeme.range.length);
+    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
 }
 
 - (void)testEm
@@ -388,7 +395,7 @@
 
 - (void)testUserDefinedDimension
 {
-    [self assertLexemeType:PXSS_DIMENSION dimensionType:kDimensionTypeUserDefined withSource:@"10units"];
+    [self assertLexemeType:PXSS_DIMENSION withSource:@"10units"];
 }
 
 - (void)testKeyframes

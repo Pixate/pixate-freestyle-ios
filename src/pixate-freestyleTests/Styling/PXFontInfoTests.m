@@ -26,7 +26,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byStretch:[PXFontEntry indexFromStretchName:@"normal"]];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by stretch");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(normal, item, @"Expected to find normal stretch font");
 }
@@ -41,7 +41,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byStretch:[PXFontEntry indexFromStretchName:@"normal"]];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by stretch");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(condensed, item, @"Expected to find normal stretch font");
 }
@@ -57,7 +57,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byWeight:[PXFontEntry indexFromWeightName:@"normal"]];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by weight");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(normal, item, @"Expected %@ but found %@", normal, item);
 }
@@ -72,7 +72,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byWeight:[PXFontEntry indexFromWeightName:@"normal"]];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by weight");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(bold, item, @"Expected %d but found %@", (int) normal, item);
 }
@@ -88,7 +88,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byStyle:@"normal"];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by style");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(normal, item, @"Expected %@ but found %@", normal, item);
 }
@@ -103,7 +103,7 @@
     NSArray *result = [PXFontEntry filterEntries:entries byStyle:@"normal"];
 
     XCTAssertNotNil(result, @"Expected an array back when filtering by style");
-    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %d", result.count);
+    XCTAssertTrue(result.count == 1, @"Expected only a single font info but found %lu", (unsigned long)result.count);
     PXFontEntry *item = [result objectAtIndex:0];
     XCTAssertEqualObjects(italic, item, @"Expected %d but found %@", (int) normal, item);
 }

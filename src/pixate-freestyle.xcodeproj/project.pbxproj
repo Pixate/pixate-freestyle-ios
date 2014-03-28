@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */; };
+		0A9EDC2618E614C200C91E97 /* PXStylesheetLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EDC2518E614C200C91E97 /* PXStylesheetLexer.lm */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C19EE0D18E5F6A0000F66D4 /* libpixate-expression-machine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C10E89E18E5ECC1001299AC /* libpixate-expression-machine.a */; };
@@ -1260,7 +1260,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer2.lm; sourceTree = "<group>"; };
+		0A9EDC2518E614C200C91E97 /* PXStylesheetLexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer.lm; sourceTree = "<group>"; };
 		9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-expression-machine.xcodeproj"; path = "../submodules/pixate-expression-machine/src/pixate-expression-machine.xcodeproj"; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
@@ -3955,8 +3955,8 @@
 				9C98656E18C0499000C71922 /* PXStylesheetLexeme.h */,
 				9C98656F18C0499000C71922 /* PXStylesheetLexeme.m */,
 				9C98657018C0499000C71922 /* PXStylesheetLexer.h */,
+				0A9EDC2518E614C200C91E97 /* PXStylesheetLexer.lm */,
 				9C98657118C0499000C71922 /* PXStylesheetLexer.m */,
-				0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */,
 				9C98657218C0499000C71922 /* PXStylesheetParser.h */,
 				9C98657318C0499000C71922 /* PXStylesheetParser.m */,
 				9C98657418C0499000C71922 /* PXStylesheetTokenType.h */,
@@ -5468,7 +5468,6 @@
 				9C98674118C0499000C71922 /* PXColorStyler.m in Sources */,
 				9C98661E18C0499000C71922 /* PXEllipse.m in Sources */,
 				9C98672418C0499000C71922 /* PXClassSelector.m in Sources */,
-				0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */,
 				9C98684918C04BA000C71922 /* UINavigationItem+PXStyling.m in Sources */,
 				9C98674F18C0499000C71922 /* PXPaintStyler.m in Sources */,
 				9C98676418C0499000C71922 /* PXFileUtils.m in Sources */,
@@ -5564,6 +5563,7 @@
 				9C98664118C0499000C71922 /* PXFileFunctionLogFormatter.m in Sources */,
 				9C98661C18C0499000C71922 /* PXCircle.m in Sources */,
 				9C98684218C04BA000C71922 /* PXVirtualStyleableControl.m in Sources */,
+				0A9EDC2618E614C200C91E97 /* PXStylesheetLexer.lm in Sources */,
 				9C98683918C04BA000C71922 /* PXUIView.m in Sources */,
 				9C9867F518C04BA000C71922 /* PXMKAnnotationView.m in Sources */,
 				9C98680318C04BA000C71922 /* PXUICollectionViewCell.m in Sources */,
