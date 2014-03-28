@@ -23,7 +23,7 @@
 //
 
 #import "PXValueParser.h"
-#import "PXStylesheetLexer.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import "PXLinearGradient.h"
 #import "PXRadialGradient.h"
@@ -33,11 +33,14 @@
 #import "UIColor+PXColors.h"
 #import "PXShadow.h"
 #import "PXShadowGroup.h"
-#import "PXStylesheetLexer.h"
 #import "PixateFreestyle.h"
 #import "PXAnimationInfo.h"
 #import "PXValue.h"
 #import "PXImagePaint.h"
+
+void css_lexer_set_source(NSString *source);
+PXStylesheetLexeme *css_lexer_get_lexeme();
+void css_lexer_delete_buffer();
 
 @implementation PXValueParser
 {
@@ -185,22 +188,18 @@ static NSString *ASSET_SCHEME = @"asset://";
 
     if (source.length > 0)
     {
-        static PXStylesheetLexer *lexer;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            lexer = [[PXStylesheetLexer alloc] init];
-        });
-
-        lexer.source = source;
-        [lexer increaseNesting];
-        PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+        css_lexer_set_source(source);
+//        [lexer increaseNesting];
+        PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
         while (lexeme)
         {
             [lexemes addObject:lexeme];
 
-            lexeme = [lexer nextLexeme];
+            lexeme = css_lexer_get_lexeme();
         }
+
+        css_lexer_delete_buffer();
     }
 
     return [NSArray arrayWithArray:lexemes];

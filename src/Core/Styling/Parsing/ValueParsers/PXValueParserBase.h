@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Pixate, Inc. All rights reserved.
 //
 
-#import "PXValueParser.h"
+#import "PXValueParserProtocol.h"
 
-@interface PXValueParserBase : NSObject <PXValueParser>
+@interface PXValueParserBase : NSObject <PXValueParserProtocol>
 
 @property (nonatomic, strong, readonly) PXValueLexer *lexer;
 

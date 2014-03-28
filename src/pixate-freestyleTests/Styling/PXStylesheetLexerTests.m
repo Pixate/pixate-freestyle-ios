@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
-#import "PXStylesheetLexer.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import "PXDimension.h"
 #import <XCTest/XCTest.h>
@@ -20,22 +20,14 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
 @end
 
 @implementation PXStylesheetLexerTests
-{
-    PXStylesheetLexer *lexer;
-}
 
 - (void)setUp
 {
     [super setUp];
-
-    lexer = [[PXStylesheetLexer alloc] init];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    lexer = nil;
-
     [super tearDown];
 }
 
@@ -275,10 +267,11 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
 - (void)test3DigitHexColor
 {
     NSString *source = @"{#abc";
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
-    lexeme = [lexer nextLexeme];
+    lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
     PXStylesheetTokens type = PXSS_HEX_COLOR;

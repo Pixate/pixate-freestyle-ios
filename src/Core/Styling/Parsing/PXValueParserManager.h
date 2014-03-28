@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXValueParser.h"
+#import "PXValueParserProtocol.h"
 #import "PXLexeme.h"
 #import "PXValueLexer.h"
 
@@ -22,10 +22,10 @@ extern NSString * const kPXValueParserSeconds;
 + (id)parseLexemes:(NSArray *)lexemes withParser:(NSString *)name;
 + (id)parseListWithLexemes:(NSArray *)lexemes elementParser:(NSString *)name;
 
-- (void)addValueParser:(Class<PXValueParser>)parser forName:(NSString*)name;
+- (void)addValueParser:(Class<PXValueParserProtocol>)parser forName:(NSString*)name;
 - (void)addValueParsersFromDictionary:(NSDictionary *)parsersByName;
 
-- (id<PXValueParser>)parserForName:(NSString *)name withLexemes:(NSArray *)lexemes;
-- (id<PXValueParser>)parserForName:(NSString *)name withLexer:(PXValueLexer *)lexer;
+- (id<PXValueParserProtocol>)parserForName:(NSString *)name withLexemes:(NSArray *)lexemes;
+- (id<PXValueParserProtocol>)parserForName:(NSString *)name withLexer:(PXValueLexer *)lexer;
 
 @end

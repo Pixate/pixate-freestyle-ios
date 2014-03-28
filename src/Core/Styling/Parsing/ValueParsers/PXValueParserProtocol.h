@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PXParserBase.h"
+#import "PXParser.h"
 #import "PXLexeme.h"
 #import "PXValueLexer.h"
 
-@protocol PXValueParser <PXParser>
+@protocol PXValueParserProtocol <PXParser>
 
 @property (nonatomic, strong, readonly) id<PXLexeme>  currentLexeme;
 

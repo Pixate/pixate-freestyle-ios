@@ -43,7 +43,7 @@
 - (BOOL)canParse
 {
     PXValueParserManager *manager = [PXValueParserManager sharedInstance];
-    id<PXValueParser> elementParser = [manager parserForName:_elementParserName withLexer:self.lexer];
+    id<PXValueParserProtocol> elementParser = [manager parserForName:_elementParserName withLexer:self.lexer];
 
     return [elementParser canParse];
 }
@@ -52,7 +52,7 @@
 {
     // setup parsers
     PXValueParserManager *manager = [PXValueParserManager sharedInstance];
-    id<PXValueParser> elementParser = [manager parserForName:_elementParserName withLexer:self.lexer];
+    id<PXValueParserProtocol> elementParser = [manager parserForName:_elementParserName withLexer:self.lexer];
 
     // init return value
     NSMutableArray *items = [[NSMutableArray alloc] init];
