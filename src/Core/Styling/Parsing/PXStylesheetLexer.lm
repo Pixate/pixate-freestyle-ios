@@ -189,7 +189,7 @@ PXStylesheetLexeme *css_lexer_get_lexeme()
 {
     int tok = yylex();
     NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
-    NSRange range = NSMakeRange(yyleng - text.length, text.length);
+    NSRange range = NSMakeRange(css_offset - text.length, text.length);
     PXStylesheetLexeme *result;
 
     if (dimension != nil)
