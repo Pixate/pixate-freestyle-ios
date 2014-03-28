@@ -9,6 +9,7 @@
 #import "PXValueParserManager.h"
 
 #import "PXNameValueParser.h"
+#import "PXNumberValueParser.h"
 #import "PXSecondsValueParser.h"
 #import "PXListValueParser.h"
 #import <objc/runtime.h>
@@ -39,7 +40,7 @@ static NSMutableDictionary *PARSERS_BY_NAME;
 + (id)parseLexemes:(NSArray *)lexemes withParser:(NSString *)name
 {
     PXValueParserManager *manager = [self sharedInstance];
-    id<PXValueParser> parser = [manager parserForName:name withLexemes:lexemes];
+    id<PXValueParserProtocol> parser = [manager parserForName:name withLexemes:lexemes];
 
     return [parser parse];
 }
@@ -57,10 +58,11 @@ static NSMutableDictionary *PARSERS_BY_NAME;
 {
     // Setup value parsers provided by the core
     [self addValueParser:[PXNameValueParser class] forName:kPXValueParserName];
+    [self addValueParser:[PXNumberValueParser class] forName:kPXValueParserNumber];
     [self addValueParser:[PXSecondsValueParser class] forName:kPXValueParserSeconds];
 }
 
-- (void)addValueParser:(Class<PXValueParser>)parser forName:(NSString*)name
+- (void)addValueParser:(Class<PXValueParserProtocol>)parser forName:(NSString*)name
 {
     if (name.length > 0 && parser)
     {
@@ -81,7 +83,7 @@ static NSMutableDictionary *PARSERS_BY_NAME;
             {
                 Class parserClass = (Class) value;
 
-                if ([parserClass conformsToProtocol:@protocol(PXValueParser)])
+                if ([parserClass conformsToProtocol:@protocol(PXValueParserProtocol)])
                 {
                     [self addValueParser:parserClass forName:name];
                 }
@@ -102,14 +104,14 @@ static NSMutableDictionary *PARSERS_BY_NAME;
     }
 }
 
-- (id<PXValueParser>)parserForName:(NSString *)name withLexemes:(NSArray *)lexemes
+- (id<PXValueParserProtocol>)parserForName:(NSString *)name withLexemes:(NSArray *)lexemes
 {
     Class parserClass = [PARSERS_BY_NAME objectForKey:name];
 
     return [[parserClass alloc] initWithLexemes:lexemes];
 }
 
-- (id<PXValueParser>)parserForName:(NSString *)name withLexer:(PXValueLexer *)lexer
+- (id<PXValueParserProtocol>)parserForName:(NSString *)name withLexer:(PXValueLexer *)lexer
 {
     Class parserClass = [PARSERS_BY_NAME objectForKey:name];
 

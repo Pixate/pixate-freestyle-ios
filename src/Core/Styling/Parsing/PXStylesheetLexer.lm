@@ -57,6 +57,7 @@ n			[-+]?[0-9]*n
 "*="					{ return PXSS_CONTAINS; }
 
 {string}				{ return PXSS_STRING; }
+"%{"([^\}]|\}[^%])*"}%" { return PXSS_EXPRESSION; }
 
 "and"					{ return PXSS_AND; }
 "linear-gradient("		{ return PXSS_LINEAR_GRADIENT; }

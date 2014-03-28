@@ -124,6 +124,8 @@
         case PXSS_DIMENSION:                        return @"DIMENSION";
         case PXSS_PERCENTAGE:                       return @"PERCENTAGE";
 
+        case PXSS_EXPRESSION:                       return @"EXPRESSION";
+
         default:                        return @"<unknown>";
     }
 }

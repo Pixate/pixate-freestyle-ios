@@ -121,7 +121,9 @@ typedef enum _PXStylesheetTokens : NSInteger
     PXSS_TIME,
     PXSS_FREQUENCY,
     PXSS_DIMENSION,
-    PXSS_PERCENTAGE
+    PXSS_PERCENTAGE,
+
+    PXSS_EXPRESSION
 
 } PXStylesheetTokens;
 

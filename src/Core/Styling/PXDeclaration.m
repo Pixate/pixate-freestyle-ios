@@ -30,6 +30,9 @@
 #import "PXValue.h"
 #import "PXStylerContext.h"
 
+#import "PXNumberValueParser.h"
+#import "PXScriptManager.h"
+
 #define IsNotCachedType(T) ![cache_ isKindOfClass:[PXValue class]] || ((PXValue *)cache_).type != PXValueType_##T
 
 @implementation PXDeclaration
@@ -295,14 +298,25 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
 - (CGFloat)floatValue
 {
-    if (IsNotCachedType(CGFloat))
-    {
-        CGFloat result = [self.parser parseFloat:_lexemes];
+    NSMutableArray *lexemes = [[NSMutableArray alloc] init];
 
-        cache_ = [[PXValue alloc] initWithBytes:&result type:PXValueType_CGFloat];
-    }
+    [_lexemes enumerateObjectsUsingBlock:^(id<PXLexeme> lexeme, NSUInteger idx, BOOL *stop) {
+        if (lexeme.type == PXSS_EXPRESSION)
+        {
+            NSString *text = (NSString *)lexeme.value;
+            NSRange range = NSMakeRange(2, text.length - 4);
+            NSString *source = [text substringWithRange:range];
+            id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
+            NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
 
-    return ((PXValue *) cache_).CGFloatValue;
+            [lexemes addObjectsFromArray:newLexemes];
+        }
+    }];
+
+    PXNumberValueParser *parser = [[PXNumberValueParser alloc] initWithLexemes:_lexemes];
+    NSNumber *result = [parser parse];
+
+    return [result floatValue];
 }
 
 - (NSArray *)floatListValue
