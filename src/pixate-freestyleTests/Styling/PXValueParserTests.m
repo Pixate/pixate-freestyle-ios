@@ -250,7 +250,7 @@
 
     PXLinearGradient *linearGradient = paint;
     NSArray *offsets = linearGradient.offsets;
-    XCTAssertTrue(0 == [offsets count], @"Expected 0 offsets, but found %d", [offsets count]);
+    XCTAssertTrue(0 == [offsets count], @"Expected 0 offsets, but found %lu", (unsigned long)[offsets count]);
 }
 
 - (void)testLinearGradientWithAngle
@@ -274,7 +274,7 @@
 
     PXLinearGradient *linearGradient = paint;
     NSArray *offsets = linearGradient.offsets;
-    XCTAssertTrue(2 == [offsets count], @"Expected 2 offsets, but found %d", [offsets count]);
+    XCTAssertTrue(2 == [offsets count], @"Expected 2 offsets, but found %lu", (unsigned long)[offsets count]);
     CGFloat offset1 = ((NSNumber *)[offsets objectAtIndex:0]).floatValue;
     CGFloat offset2 = ((NSNumber *)[offsets objectAtIndex:1]).floatValue;
     XCTAssertEqual(offset1, 0.25f, @"Expected 0.25f");

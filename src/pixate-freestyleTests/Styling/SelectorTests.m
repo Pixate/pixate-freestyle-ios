@@ -394,7 +394,7 @@
         }
     }
 
-    XCTAssertEqual(expectedMatches.count, actualMatches.count, @"Expected %d matches but found %d", expectedMatches.count, actualMatches.count);
+    XCTAssertEqual(expectedMatches.count, actualMatches.count, @"Expected %lu matches but found %lu", (unsigned long)expectedMatches.count, (unsigned long)actualMatches.count);
 
     if (expectedMatches.count == actualMatches.count)
     {

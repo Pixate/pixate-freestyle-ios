@@ -149,19 +149,19 @@
     
     PXStylesheetParser* parser = [[PXStylesheetParser alloc] init];
     PXStylesheet* stylesheet   = [parser parse:emptySource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [stylesheet.ruleSets count] == 0 , @"ruleSets count %d", [stylesheet.ruleSets count] );
+    XCTAssertTrue( [stylesheet.ruleSets count] == 0 , @"ruleSets count %lu", (unsigned long)[stylesheet.ruleSets count] );
     
     NSString *validSource = @"@media (max-device-os-version: '10') { #myButton { background-color: pink; } }";
     PXStylesheet* validStylesheet   = [parser parse:validSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [validStylesheet.ruleSets count] );
+    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[validStylesheet.ruleSets count] );
     
     NSString *validSource2 = @"@media (min-device-os-version: '1') and (max-device-os-version: '10') { #myButton { background-color: pink; } }";
     PXStylesheet* validStylesheet2 = [parser parse:validSource2 withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [validStylesheet2.ruleSets count] > 0 , @"ruleSets count %d", [validStylesheet2.ruleSets count] );
+    XCTAssertTrue( [validStylesheet2.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[validStylesheet2.ruleSets count] );
     
     NSString *maxCurrentSource = [NSString stringWithFormat:@"@media (max-device-os-version: '%@') { #myButton { background-color: pink; } }", [[UIDevice currentDevice] systemVersion] ];
     PXStylesheet* maxCurrentStylesheet = [parser parse:maxCurrentSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [maxCurrentStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [maxCurrentStylesheet.ruleSets count] );
+    XCTAssertTrue( [maxCurrentStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[maxCurrentStylesheet.ruleSets count] );
 }
 
 
@@ -173,12 +173,12 @@
     
     PXStylesheetParser* parser = [[PXStylesheetParser alloc] init];
     PXStylesheet* validStylesheet = [parser parse:validSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [validStylesheet.ruleSets count] );
+    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[validStylesheet.ruleSets count] );
     
     NSString *emptySource = @"@media (device-os-version: '1') { #myButton { background-color: pink; } }";
     
     PXStylesheet* emptyStylesheet   = [parser parse:emptySource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [emptyStylesheet.ruleSets count] == 0 , @"ruleSets count %d", [emptyStylesheet.ruleSets count] );
+    XCTAssertTrue( [emptyStylesheet.ruleSets count] == 0 , @"ruleSets count %lu", (unsigned long)[emptyStylesheet.ruleSets count] );
 }
 
 - (void) testOSMediaQuery_NumberVersion
@@ -192,12 +192,12 @@
     
     PXStylesheetParser* parser = [[PXStylesheetParser alloc] init];
     PXStylesheet* validStylesheet = [parser parse:validSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [validStylesheet.ruleSets count] );
+    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[validStylesheet.ruleSets count] );
     
     NSString *emptySource = @"@media (device-os-version: 1) { #myButton { background-color: pink; } }";
     
     PXStylesheet* emptyStylesheet   = [parser parse:emptySource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [emptyStylesheet.ruleSets count] == 0 , @"ruleSets count %d", [emptyStylesheet.ruleSets count] );
+    XCTAssertTrue( [emptyStylesheet.ruleSets count] == 0 , @"ruleSets count %lu", (unsigned long)[emptyStylesheet.ruleSets count] );
 }
 
 
@@ -258,31 +258,31 @@
     
     PXStylesheetParser* parser = [[PXStylesheetParser alloc] init];
     PXStylesheet* validStylesheet = [parser parse:validSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [validStylesheet.ruleSets count] );
+    XCTAssertTrue( [validStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[validStylesheet.ruleSets count] );
 
     
     NSString *minSourceTrue = [NSString stringWithFormat:@"@media (min-device-aspect-ratio: 1/10)  { #myButton { background-color: pink; } }" ];
     PXStylesheet* minStylesheetTrue = [parser parse:minSourceTrue withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [minStylesheetTrue.ruleSets count] > 0 , @"ruleSets count %d", [minStylesheetTrue.ruleSets count] );
+    XCTAssertTrue( [minStylesheetTrue.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[minStylesheetTrue.ruleSets count] );
     
     NSString *maxSourceFalse = [NSString stringWithFormat:@"@media (max-device-aspect-ratio: 1/10)  { #myButton { background-color: pink; } }" ];
     PXStylesheet* maxStylesheetFalse = [parser parse:maxSourceFalse withOrigin:PXStylesheetOriginApplication];
-    XCTAssertFalse( [maxStylesheetFalse.ruleSets count] > 0 , @"ruleSets count %d", [maxStylesheetFalse.ruleSets count] );
+    XCTAssertFalse( [maxStylesheetFalse.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[maxStylesheetFalse.ruleSets count] );
     
     
     NSString *minSourceFalse = [NSString stringWithFormat:@"@media (min-device-aspect-ratio: 1/1)  { #myButton { background-color: pink; } }" ];
     PXStylesheet* minStylesheetFalse = [parser parse:minSourceFalse withOrigin:PXStylesheetOriginApplication];
-    XCTAssertFalse( [minStylesheetFalse.ruleSets count] > 0 , @"ruleSets count %d", [maxStylesheetFalse.ruleSets count] );
+    XCTAssertFalse( [minStylesheetFalse.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[maxStylesheetFalse.ruleSets count] );
     
     
     NSString *maxSourceTrue = [NSString stringWithFormat:@"@media (max-device-aspect-ratio: 1/1)  { #myButton { background-color: pink; } }" ];
     PXStylesheet* maxStylesheetTrue = [parser parse:maxSourceTrue withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [maxStylesheetTrue.ruleSets count] > 0 , @"ruleSets count %d", [maxStylesheetTrue.ruleSets count] );
+    XCTAssertTrue( [maxStylesheetTrue.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[maxStylesheetTrue.ruleSets count] );
 
     
     NSString *maxMinSource = [NSString stringWithFormat:@"@media (min-device-aspect-ratio: 1/10) and (max-device-aspect-ratio: 1/1) { #myButton { background-color: pink; } }" ];
     PXStylesheet* maxMinStylesheet = [parser parse:maxMinSource withOrigin:PXStylesheetOriginApplication];
-    XCTAssertTrue( [maxMinStylesheet.ruleSets count] > 0 , @"ruleSets count %d", [maxMinStylesheet.ruleSets count] );
+    XCTAssertTrue( [maxMinStylesheet.ruleSets count] > 0 , @"ruleSets count %lu", (unsigned long)[maxMinStylesheet.ruleSets count] );
 }
 
 

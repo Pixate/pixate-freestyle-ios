@@ -27,6 +27,8 @@
 @synthesize name = name_;
 @synthesize parent = parent_;
 @synthesize styleMode;
+@synthesize styleClasses;
+@synthesize styleChangeable;
 
 #pragma mark - Initializers
 

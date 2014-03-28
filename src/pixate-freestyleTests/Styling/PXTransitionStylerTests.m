@@ -23,7 +23,7 @@
     [styler processDeclaration:declaration withContext:context];
 
     NSArray *infos = context.transitionInfos;
-    XCTAssertTrue(infos.count == 1, @"Expected one animation, but found %d", infos.count);
+    XCTAssertTrue(infos.count == 1, @"Expected one animation, but found %lu", (unsigned long)infos.count);
 
     PXAnimationInfo *info = [infos objectAtIndex:0];
     XCTAssertTrue([@"myProperty" isEqualToString:info.animationName], @"Expected 'myAnimation' as animation name, but found '%@'", info.animationName);
@@ -38,7 +38,7 @@
     [styler processDeclaration:declaration withContext:context];
 
     NSArray *infos = context.transitionInfos;
-    XCTAssertTrue(infos.count == 1, @"Expected one animation, but found %d", infos.count);
+    XCTAssertTrue(infos.count == 1, @"Expected one animation, but found %lu", (unsigned long)infos.count);
 
     PXAnimationInfo *info = [infos objectAtIndex:0];
     XCTAssertTrue([@"myProperty" isEqualToString:info.animationName], @"Expected 'myAnimation' as animation name, but found '%@'", info.animationName);

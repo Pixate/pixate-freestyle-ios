@@ -462,7 +462,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthOfType
@@ -472,7 +472,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthChildWithoutSpaces
@@ -482,7 +482,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthChildWithoutSpaces2
@@ -492,7 +492,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthChildWithSpaces
@@ -502,7 +502,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthLastChild
@@ -512,7 +512,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testNthLastOfType
@@ -522,7 +522,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testImportant
@@ -556,7 +556,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 - (void)testImportWithURL
@@ -566,7 +566,7 @@
     /*PXStylesheet *stylesheet =*/ [parser parse:source withOrigin:PXStylesheetOriginApplication];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Found %d unexpected parse error(s): %@", errors.count, [errors componentsJoinedByString:@"\n"]);
+    XCTAssertTrue(errors.count == 0, @"Found %lu unexpected parse error(s): %@", (unsigned long)errors.count, [errors componentsJoinedByString:@"\n"]);
 }
 
 #pragma mark - Keyframes Tests
@@ -581,7 +581,7 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 0, @"Expected no keyframe blocks but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 0, @"Expected no keyframe blocks but found %lu", (unsigned long)blocks.count);
 }
 
 - (void)testKeyframesWithTo
@@ -594,11 +594,11 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %lu", (unsigned long)blocks.count);
 
     PXKeyframeBlock *block = [blocks objectAtIndex:0];
     XCTAssertTrue(block.offset == 1.0f, @"Expected offset to be 1.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 }
 
 - (void)testKeyframesWithFrom
@@ -611,11 +611,11 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %lu", (unsigned long)blocks.count);
 
     PXKeyframeBlock *block = [blocks objectAtIndex:0];
     XCTAssertTrue(block.offset == 0.0f, @"Expected offset to be 0.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 }
 
 - (void)testKeyframesWithPercentage
@@ -628,11 +628,11 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 1, @"Expected 1 keyframe block but found %lu", (unsigned long)blocks.count);
 
     PXKeyframeBlock *block = [blocks objectAtIndex:0];
     XCTAssertTrue(block.offset == 0.5f, @"Expected offset to be 0.5, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 }
 
 - (void)testKeyframesWithMultipleBlocks
@@ -645,19 +645,19 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 3, @"Expected 3 keyframe blocks but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 3, @"Expected 3 keyframe blocks but found %lu", (unsigned long)blocks.count);
 
     PXKeyframeBlock *block = [blocks objectAtIndex:0];
     XCTAssertTrue(block.offset == 0.0f, @"Expected offset to be 0.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 
     block = [blocks objectAtIndex:1];
     XCTAssertTrue(block.offset == 0.5f, @"Expected offset to be 0.5, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 
     block = [blocks objectAtIndex:2];
     XCTAssertTrue(block.offset == 1.0f, @"Expected offset to be 1.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 }
 
 - (void)testKeyframesWithMultipleOffsets
@@ -670,15 +670,15 @@
     XCTAssertNotNil(keyframe, @"Expected a 'test' keyframe to be defined in the stylesheet");
 
     NSArray *blocks = keyframe.blocks;
-    XCTAssertTrue(blocks.count == 2, @"Expected 2 keyframe blocks but found %d", blocks.count);
+    XCTAssertTrue(blocks.count == 2, @"Expected 2 keyframe blocks but found %lu", (unsigned long)blocks.count);
 
     PXKeyframeBlock *block = [blocks objectAtIndex:0];
     XCTAssertTrue(block.offset == 0.0f, @"Expected offset to be 0.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 
     block = [blocks objectAtIndex:1];
     XCTAssertTrue(block.offset == 1.0f, @"Expected offset to be 1.0, but found %f", block.offset);
-    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %d", block.declarations.count);
+    XCTAssertTrue(block.declarations.count == 1, @"Expected 1 declaration but found %lu", (unsigned long)block.declarations.count);
 }
 
 #pragma mark - @media Tests
@@ -760,7 +760,7 @@
     XCTAssertTrue(errors.count == 0, @"Unexpected parse error");
 
     NSArray *mediaGroups = stylesheet.mediaGroups;
-    XCTAssertTrue(mediaGroups.count == 1, @"Expected 1 media group, found %d", mediaGroups.count);
+    XCTAssertTrue(mediaGroups.count == 1, @"Expected 1 media group, found %lu", (unsigned long)mediaGroups.count);
 }
 
 - (void)testMediaWithRatio
@@ -794,7 +794,7 @@
     PXStylesheet *stylesheet = [parser parseInlineCSS:source];
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Unexpected parse error: %d", errors.count);
+    XCTAssertTrue(errors.count == 0, @"Unexpected parse error: %lu", (unsigned long)errors.count);
 
     NSArray *ruleSets = stylesheet.ruleSets;
     XCTAssertTrue(ruleSets.count == 1, @"Expected one rule set");
@@ -833,7 +833,7 @@
     // NOTE: If we get this far, we didn't crash :)
 
     NSArray *errors = parser.errors;
-    XCTAssertTrue(errors.count == 0, @"Unexpected parse error: %d", errors.count);
+    XCTAssertTrue(errors.count == 0, @"Unexpected parse error: %lu", (unsigned long)errors.count);
 
     NSArray *ruleSets = stylesheet.ruleSets;
     XCTAssertTrue(ruleSets.count == 1, @"Expected one rule set");

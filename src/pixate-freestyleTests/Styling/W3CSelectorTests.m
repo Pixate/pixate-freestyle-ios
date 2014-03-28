@@ -137,7 +137,7 @@ static NSString *tempFile;
     }
     else
     {
-        XCTFail(@"Encountered %d parse errors, but expected %d: %@", stylesheet.errors.count, errorCount, [stylesheet.errors componentsJoinedByString:@"\n"]);
+        XCTFail(@"Encountered %lu parse errors, but expected %lu: %@", (unsigned long)stylesheet.errors.count, (unsigned long)errorCount, [stylesheet.errors componentsJoinedByString:@"\n"]);
     }
 }
 
