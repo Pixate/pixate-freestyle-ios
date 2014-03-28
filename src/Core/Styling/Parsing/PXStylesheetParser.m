@@ -264,7 +264,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     @try
     {
-        while (currentLexeme)
+        while (currentLexeme && currentLexeme.type != PXSS_EOF)
         {
             switch (currentLexeme.type)
             {
