@@ -1,3 +1,0 @@
-[submodule "src/Core/Expressions"]
-	path = src/Core/Expressions
-	url = git@github.com:Pixate/pixate-expression-machine.git
