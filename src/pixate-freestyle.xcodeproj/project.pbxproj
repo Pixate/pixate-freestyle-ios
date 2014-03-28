@@ -10,6 +10,7 @@
 		0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C19EE0D18E5F6A0000F66D4 /* libpixate-expression-machine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C10E89E18E5ECC1001299AC /* libpixate-expression-machine.a */; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
 		9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -2456,6 +2457,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C19EE0D18E5F6A0000F66D4 /* libpixate-expression-machine.a in Frameworks */,
 				9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */,
 				9C84A64C18AE9CB600E7CDA7 /* XCTest.framework in Frameworks */,
 				9C84A64F18AE9CB600E7CDA7 /* UIKit.framework in Frameworks */,
