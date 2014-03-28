@@ -204,25 +204,25 @@ PXStylesheetLexeme *css_lexer_get_lexeme()
     return result;
 }
 
-void css_push_lexeme(PXStylesheetLexeme *lexeme)
-{
-    if (lexemeStack == nil)
-    {
-        lexemeStack = [NSMutableArray alloc] init];
-    }
-
-    [lexemeStack addObject:lexeme];
-}
-
-void css_push_source(NSString *source)
-{
-    if (sourceStack == nil)
-    {
-        sourceStack = [NSMutableArray alloc] init];
-        offsetStack = [NSMutableArray alloc] init];
-    }
-
-    // push current source
-    // push current offset
-    // set new source and zero offset
-}
+//void css_push_lexeme(PXStylesheetLexeme *lexeme)
+//{
+//    if (lexemeStack == nil)
+//    {
+//        lexemeStack = [[NSMutableArray alloc] init];
+//    }
+//
+//    [lexemeStack addObject:lexeme];
+//}
+//
+//void css_push_source(NSString *source)
+//{
+//    if (sourceStack == nil)
+//    {
+//        sourceStack = [[NSMutableArray alloc] init];
+//        offsetStack = [[NSMutableArray alloc] init];
+//    }
+//
+//    // push current source
+//    // push current offset
+//    // set new source and zero offset
+//}
