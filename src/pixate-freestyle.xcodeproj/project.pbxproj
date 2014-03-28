@@ -2733,6 +2733,9 @@
 				0A4D205218E5C2AA00200629 /* Common */,
 				0A4D205A18E5C2AA00200629 /* Instructions */,
 				0A4D206A18E5C2AA00200629 /* Parsing */,
+				0A4D208618E5C2AA00200629 /* Resources */,
+				0A4D208A18E5C2AA00200629 /* Scopes */,
+				0A4D209418E5C2AA00200629 /* Values */,
 				0A4D207F18E5C2AA00200629 /* pixate-expression-machine-Prefix.pch */,
 				0A4D208018E5C2AA00200629 /* PXExpressionEnvironment.h */,
 				0A4D208118E5C2AA00200629 /* PXExpressionEnvironment.m */,
@@ -2740,9 +2743,6 @@
 				0A4D208318E5C2AA00200629 /* PXExpressionUnit.m */,
 				0A4D208418E5C2AA00200629 /* PXScriptManager.h */,
 				0A4D208518E5C2AA00200629 /* PXScriptManager.m */,
-				0A4D208618E5C2AA00200629 /* Resources */,
-				0A4D208A18E5C2AA00200629 /* Scopes */,
-				0A4D209418E5C2AA00200629 /* Values */,
 			);
 			name = ExpressionMachine;
 			path = "pixate-expression-machine/src/ExpressionMachine";
