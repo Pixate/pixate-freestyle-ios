@@ -20,6 +20,7 @@ NSMutableArray *sourceStack;
 NSMutableArray *offsetStack;
 PXDimension *dimension;
 uint css_offset;
+BOOL followsWhitespace;
 
 %}
 
@@ -46,9 +47,9 @@ n			[-+]?[0-9]*n
 
 %%
 
-{w}+					{ /* ignore */ }
+{w}+					{ followsWhitespace = YES; /* ignore */ }
 
-{comment}				{ /* ignore */ }
+{comment}				{ followsWhitespace = YES; /* ignore */ }
 
 "~="					{ return PXSS_LIST_CONTAINS; }
 "|="					{ return PXSS_EQUALS_WITH_HYPHEN; }
@@ -217,7 +218,14 @@ PXStylesheetLexeme *css_lexer_get_lexeme()
         {
             result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:text];
         }
+
+        if (followsWhitespace)
+        {
+            [result setFlag:PXLexemeFlagFollowsWhitespace];
+        }
     }
+
+    followsWhitespace = NO;
 
     return result;
 }
