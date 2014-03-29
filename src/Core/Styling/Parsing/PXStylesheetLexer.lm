@@ -70,7 +70,7 @@ n			[-+]?[0-9]*n
 "rgba("					{ return PXSS_RGBA; }
 "url("[^)]*")"			{ createURL(); return PXSS_URL; }
 
-"#"{name}				{ return PXSS_ID; }
+"#"{name}				{ return PXSS_HASH; }
 "."{ident}				{ return PXSS_CLASS; }
 
 "@import"				{ return PXSS_IMPORT; }

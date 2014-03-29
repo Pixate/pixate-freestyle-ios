@@ -110,7 +110,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     if (!SELECTOR_EXPRESSION_SET)
     {
         NSMutableIndexSet *set = [NSMutableIndexSet indexSet];
-        [set addIndex:PXSS_ID];
+        [set addIndex:PXSS_HASH];
         [set addIndex:PXSS_CLASS];
         [set addIndex:PXSS_LBRACKET];
         [set addIndex:PXSS_COLON];
@@ -1158,7 +1158,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     {
         switch (currentLexeme.type)
         {
-            case PXSS_ID:
+            case PXSS_HASH:
             {
                 NSString *name = [(NSString *) currentLexeme.value substringFromIndex:1];
                 [expressions addObject:[[PXIdSelector alloc] initWithIdValue:name]];
@@ -1562,7 +1562,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     switch (currentLexeme.type)
     {
-        case PXSS_ID:
+        case PXSS_HASH:
         {
             NSString *name = [(NSString *) currentLexeme.value substringFromIndex:1];
             result = [[PXIdSelector alloc] initWithIdValue:name];

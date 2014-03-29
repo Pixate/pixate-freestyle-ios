@@ -36,7 +36,7 @@ typedef enum _PXStylesheetTokens : NSInteger
 
     PXSS_NUMBER,
     PXSS_CLASS,
-    PXSS_ID,
+    PXSS_HASH,
     PXSS_IDENTIFIER,
 
     PXSS_LCURLY,
@@ -73,7 +73,6 @@ typedef enum _PXStylesheetTokens : NSInteger
     PXSS_HSBA,
     PXSS_RGB,
     PXSS_RGBA,
-    PXSS_HEX_COLOR,
     PXSS_URL,
     PXSS_NAMESPACE,
 

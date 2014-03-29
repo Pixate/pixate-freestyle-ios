@@ -91,12 +91,12 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
 
 - (void)testId
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#id"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#id"];
 }
 
 - (void)testIdWithEscapeSequence
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#one\\ two"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#one\\ two"];
 }
 
 - (void)testIdentifier
@@ -274,7 +274,7 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
     css_lexer_delete_buffer();
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
-    PXStylesheetTokens type = PXSS_HEX_COLOR;
+    PXStylesheetTokens type = PXSS_HASH;
     NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
     NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
 
@@ -283,23 +283,24 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
     XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
 }
 
-//- (void)test6DigitHexColor
-//{
-//    NSString *source = @"{#aabbcc";
-//    lexer.source = source;
-//    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
-//
-//    lexeme = [lexer nextLexeme];
-//    XCTAssertNotNil(lexeme, @"Expected lexeme");
-//
-//    PXStylesheetTokens type = PXSS_HEX_COLOR;
-//    NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
-//    NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
-//
-//    XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int) type, expectedType, lexeme.type, actualType);
-//    XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
-//    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
-//}
+- (void)test6DigitHexColor
+{
+    NSString *source = @"{#aabbcc";
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
+
+    lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
+    XCTAssertNotNil(lexeme, @"Expected lexeme");
+
+    PXStylesheetTokens type = PXSS_HASH;
+    NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
+    NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
+
+    XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int) type, expectedType, lexeme.type, actualType);
+    XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
+    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
+}
 
 - (void)testEm
 {
@@ -403,17 +404,17 @@ PXStylesheetLexeme *css_lexer_get_lexeme();
 
 - (void)testIdLooksLikeHexColor
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#abc"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#abc"];
 }
 
 - (void)testIdLooksLikeHexColor2
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#back"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#back"];
 }
 
 - (void)testIdLooksLikeHexColor3
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#background"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#background"];
 }
 
 - (void)testURLWithString
