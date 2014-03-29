@@ -266,6 +266,8 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     {
         while (currentLexeme && currentLexeme.type != PXSS_EOF)
         {
+            id<PXLexeme> startingLexeme = currentLexeme;
+
             switch (currentLexeme.type)
             {
                 case PXSS_IMPORT:
@@ -292,6 +294,11 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
                     // TODO: check for valid tokens to error out sooner?
                     [self parseRuleSet];
                     break;
+            }
+
+            if (currentLexeme == startingLexeme)
+            {
+                [self errorWithMessage:@"The stylesheet parser has stalled at %@. Exiting to prevent an infinite loop"];
             }
         }
     }
