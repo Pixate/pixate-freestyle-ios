@@ -192,7 +192,7 @@ static NSString *ASSET_SCHEME = @"asset://";
 //        [lexer increaseNesting];
         PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
-        while (lexeme)
+        while (lexeme && lexeme.type != PXSS_EOF)
         {
             [lexemes addObject:lexeme];
 
