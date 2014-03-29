@@ -311,9 +311,13 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
             [lexemes addObjectsFromArray:newLexemes];
         }
+        else
+        {
+            [lexemes addObject:lexeme];
+        }
     }];
 
-    PXNumberValueParser *parser = [[PXNumberValueParser alloc] initWithLexemes:_lexemes];
+    PXNumberValueParser *parser = [[PXNumberValueParser alloc] initWithLexemes:lexemes];
     NSNumber *result = [parser parse];
 
     return [result floatValue];
