@@ -176,6 +176,7 @@ void css_lexer_set_source(NSString *source)
     const char *cSource = [source cStringUsingEncoding:NSUTF8StringEncoding];
 
     yy_scan_string(cSource);
+    css_offset = 0;
 
     if (false) { yyunput(0, NULL); } // make compiler happy
 }
