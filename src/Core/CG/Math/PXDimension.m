@@ -161,7 +161,7 @@ static NSDictionary *dimensionMap;
             break;
 
         case kDimensionTypeGradians:
-            result = self->number * 0.9f;
+            result = self->number * 0.9;
             break;
 
         case kDimensionTypeRadians:

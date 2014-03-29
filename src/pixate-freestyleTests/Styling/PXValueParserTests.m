@@ -108,7 +108,7 @@
 
     PXDimension *degrees = dimension.degrees;
 
-    XCTAssertEqual(degrees.number, 180.0f * 0.9f, @"Angles do not match");
+    XCTAssertEqual(degrees.number, 180.0 * 0.9, @"Angles do not match");
 }
 
 - (void)testRadian
@@ -141,7 +141,7 @@
 
 - (void)testRGBColorNumbers
 {
-    [self assertColor:[UIColor colorWithRed:128.0f/255.0f green:255.0f/255.0f blue:0.0f alpha:1.0f]
+    [self assertColor:[UIColor colorWithRed:128.0/255.0 green:255.0/255.0 blue:0.0 alpha:1.0]
            fromSource:@"rgb(128,255,0)"];
 }
 
@@ -153,7 +153,7 @@
 
 - (void)testRGBAColorNumbers
 {
-    [self assertColor:[UIColor colorWithRed:128.0f/255.0f green:255.0f/255.0f blue:0.0f alpha:1.0f]
+    [self assertColor:[UIColor colorWithRed:128.0/255.0 green:255.0/255.0 blue:0.0 alpha:1.0]
            fromSource:@"rgba(128,255,0,1.0)"];
 }
 
@@ -653,7 +653,7 @@
 - (void)testInsetWithLengths
 {
     NSString *source = @"0pt 1.2pt 0.1pt 5pt"; // T R B L
-    UIEdgeInsets expected = UIEdgeInsetsMake(0.0f, 5.0f, 0.1f, 1.2f);
+    UIEdgeInsets expected = UIEdgeInsetsMake(0.0, 5.0, 0.1, 1.2);
     UIEdgeInsets insets = [self insetsFromSource:source];
 
     XCTAssertTrue(UIEdgeInsetsEqualToEdgeInsets(insets, expected), @"Insets do not match");
