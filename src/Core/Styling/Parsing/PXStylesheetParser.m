@@ -1024,7 +1024,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     // collect values
     NSMutableArray *lexemes = [NSMutableArray array];
 
-    while (currentLexeme && currentLexeme != PXSS_EOF && ![self isInTypeSet:DECLARATION_DELIMITER_SET])
+    while (currentLexeme && currentLexeme.type != PXSS_EOF && ![self isInTypeSet:DECLARATION_DELIMITER_SET])
     {
         if (currentLexeme.type == PXSS_COLON && ((PXStylesheetLexeme *)[lexemes lastObject]).type == PXSS_IDENTIFIER)
         {

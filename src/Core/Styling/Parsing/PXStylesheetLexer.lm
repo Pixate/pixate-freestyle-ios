@@ -44,6 +44,7 @@ nl			\r|\n|\r\n|\f
 comment		"/*"([^\*]|\*[^/])*"*/"
 
 n			[-+]?[0-9]*n
+url         url\(\s*(\"([^\"\r\n]*)\"|(data:[^,\r\n\)]+,[a-zA-Z0-9+/ \t\r\n]+\={0,2})|([!#$%&*-~]*))\s*\)
 
 %%
 
@@ -69,7 +70,7 @@ n			[-+]?[0-9]*n
 "hsla("					{ return PXSS_HSLA; }
 "rgb("					{ return PXSS_RGB; }
 "rgba("					{ return PXSS_RGBA; }
-"url("[^)]*")"			{ createURL(); return PXSS_URL; }
+{url}                   { return PXSS_URL; }
 
 "#"{name}				{ return PXSS_HASH; }
 "."{ident}				{ return PXSS_CLASS; }
@@ -167,11 +168,6 @@ void createDimension(int tokenType, char *units)
     dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:unitString];
 }
 
-void createURL()
-{
-    // TODO:
-}
-
 void css_lexer_set_source(NSString *source)
 {
     const char *cSource = [source cStringUsingEncoding:NSUTF8StringEncoding];
@@ -201,6 +197,13 @@ PXStylesheetLexeme *css_lexer_get_lexeme()
         int tok = yylex();
         NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
         NSRange range = NSMakeRange(css_offset - text.length, text.length);
+
+        if (tok == PXSS_URL)
+        {
+            NSRange contentRange = NSMakeRange(4, text.length - 5);
+            text = [text substringWithRange:contentRange];
+            text = [text stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" '\""]];
+        }
 
         if (dimension != nil)
         {
