@@ -791,7 +791,6 @@
 		9C317AF618BE936B00F4B79D /* PXStylesheetParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780318BE936B00F4B79D /* PXStylesheetParserTests.m */; };
 		9C317AF718BE936B00F4B79D /* PXTransitionStylerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780418BE936B00F4B79D /* PXTransitionStylerTests.m */; };
 		9C317AF818BE936B00F4B79D /* PXValueParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780518BE936B00F4B79D /* PXValueParserTests.m */; };
-		9C317AF918BE936B00F4B79D /* SelectorPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780618BE936B00F4B79D /* SelectorPerformanceTests.m */; };
 		9C317AFA18BE936B00F4B79D /* SelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780718BE936B00F4B79D /* SelectorTests.m */; };
 		9C317AFB18BE936B00F4B79D /* StyleableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780918BE936B00F4B79D /* StyleableView.m */; };
 		9C317AFC18BE936B00F4B79D /* W3CSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31780A18BE936B00F4B79D /* W3CSelectorTests.m */; };
@@ -2053,7 +2052,6 @@
 		9C31780318BE936B00F4B79D /* PXStylesheetParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStylesheetParserTests.m; sourceTree = "<group>"; };
 		9C31780418BE936B00F4B79D /* PXTransitionStylerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTransitionStylerTests.m; sourceTree = "<group>"; };
 		9C31780518BE936B00F4B79D /* PXValueParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXValueParserTests.m; sourceTree = "<group>"; };
-		9C31780618BE936B00F4B79D /* SelectorPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorPerformanceTests.m; sourceTree = "<group>"; };
 		9C31780718BE936B00F4B79D /* SelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorTests.m; sourceTree = "<group>"; };
 		9C31780818BE936B00F4B79D /* StyleableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleableView.h; sourceTree = "<group>"; };
 		9C31780918BE936B00F4B79D /* StyleableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleableView.m; sourceTree = "<group>"; };
@@ -3458,7 +3456,6 @@
 				9C31780318BE936B00F4B79D /* PXStylesheetParserTests.m */,
 				9C31780418BE936B00F4B79D /* PXTransitionStylerTests.m */,
 				9C31780518BE936B00F4B79D /* PXValueParserTests.m */,
-				9C31780618BE936B00F4B79D /* SelectorPerformanceTests.m */,
 				9C31780718BE936B00F4B79D /* SelectorTests.m */,
 				9C31780818BE936B00F4B79D /* StyleableView.h */,
 				9C31780918BE936B00F4B79D /* StyleableView.m */,
@@ -5681,7 +5678,6 @@
 				9C317AFC18BE936B00F4B79D /* W3CSelectorTests.m in Sources */,
 				9C31780C18BE936B00F4B79D /* PXShapeRenderingTests.m in Sources */,
 				9C317AFA18BE936B00F4B79D /* SelectorTests.m in Sources */,
-				9C317AF918BE936B00F4B79D /* SelectorPerformanceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
