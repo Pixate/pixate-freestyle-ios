@@ -50,6 +50,7 @@
 void css_lexer_set_source(NSString *source);
 PXStylesheetLexeme *css_lexer_get_lexeme();
 void css_lexer_delete_buffer();
+void css_push_lexeme(PXStylesheetLexeme *lexeme);
 
 @implementation PXStylesheetParser
 {
@@ -329,7 +330,6 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     // setup lexer and prime it
     source_ = css;
     css_lexer_set_source((css != nil) ? css : @"");
-//    [lexer_ increaseNesting];
     [self advance];
 
     @try
@@ -418,6 +418,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     [self assertTypeInSet:IMPORT_SET];
 
     NSLog(@"@import temporarily disabled");
+    [self advance];
     [self advanceIfIsType:PXSS_SEMICOLON];
 
 //    NSString *path = nil;
@@ -890,7 +891,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     NSMutableArray *declarations = [NSMutableArray array];
 
     // parse properties
-    while (currentLexeme && currentLexeme.type != PXSS_RCURLY)
+    while (currentLexeme && currentLexeme.type != PXSS_RCURLY && currentLexeme.type != PXSS_EOF)
     {
         @try
         {
@@ -1028,10 +1029,10 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
         if (currentLexeme.type == PXSS_COLON && ((PXStylesheetLexeme *)[lexemes lastObject]).type == PXSS_IDENTIFIER)
         {
             // assume we've moved into a new declaration, so push last lexeme back into the lexeme stream
-            //PXStylesheetLexeme *propertyName = [lexemes pop];
+            PXStylesheetLexeme *propertyName = [lexemes pop];
 
             // this pushes the colon back to the lexer and makes the property name the current lexeme
-            //[self pushLexeme:propertyName];
+            [self pushLexeme:propertyName];
 
             // signal end of this declaration
             break;
@@ -1674,20 +1675,6 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     return result;
 }
 
-#pragma mark - PXStylesheetLexerDelegate Implementation
-
-- (void)lexerDidPopSource
-{
-    if (activeImports_.count > 0)
-    {
-        [activeImports_ pop];
-    }
-    else
-    {
-        DDLogError(@"Tried to pop an empty activeImports array");
-    }
-}
-
 #pragma mark - Overrides
 
 - (PXStylesheetLexeme *)advance
@@ -1726,7 +1713,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 - (void)advanceToType:(NSInteger)type
 {
-    while (currentLexeme && currentLexeme.type != type)
+    while (currentLexeme && currentLexeme.type != type && currentLexeme.type != PXSS_EOF)
     {
         [self advance];
     }
@@ -1739,9 +1726,14 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 - (void)addError:(NSString *)error
 {
-    NSString *offset = (currentLexeme.type != PXSS_EOF) ? [NSString stringWithFormat:@"%lu", (unsigned long) currentLexeme.range.location] : @"EOF";
+    NSString *offset = (currentLexeme == nil || currentLexeme.type != PXSS_EOF) ? [NSString stringWithFormat:@"%lu", (unsigned long) currentLexeme.range.location] : @"EOF";
 
     [self addError:error filename:[self currentFilename] offset:offset];
+}
+
+- (void)pushLexeme:(id<PXLexeme>)lexeme
+{
+    css_push_lexeme(lexeme);
 }
 
 @end
