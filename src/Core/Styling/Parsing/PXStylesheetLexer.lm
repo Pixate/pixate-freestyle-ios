@@ -188,41 +188,50 @@ void css_lexer_delete_buffer()
 
 PXStylesheetLexeme *css_lexer_get_lexeme()
 {
-    int tok = yylex();
-    NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
-    NSRange range = NSMakeRange(css_offset - text.length, text.length);
     PXStylesheetLexeme *result;
 
-    if (dimension != nil)
+    if (lexemeStack.count > 0)
     {
-        result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:dimension];
-        dimension = nil;
-    }
-    else if (tok == PXSS_NUMBER)
-    {
-        double doubleValue = [text doubleValue];
-        NSNumber *value = [NSNumber numberWithDouble:doubleValue];
-
-        result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:value];
+        result = [lexemeStack lastObject];
+        [lexemeStack removeLastObject];
     }
     else
     {
-        result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:text];
+        int tok = yylex();
+        NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+        NSRange range = NSMakeRange(css_offset - text.length, text.length);
+
+        if (dimension != nil)
+        {
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:dimension];
+            dimension = nil;
+        }
+        else if (tok == PXSS_NUMBER)
+        {
+            double doubleValue = [text doubleValue];
+            NSNumber *value = [NSNumber numberWithDouble:doubleValue];
+
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:value];
+        }
+        else
+        {
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:text];
+        }
     }
 
     return result;
 }
 
-//void css_push_lexeme(PXStylesheetLexeme *lexeme)
-//{
-//    if (lexemeStack == nil)
-//    {
-//        lexemeStack = [[NSMutableArray alloc] init];
-//    }
-//
-//    [lexemeStack addObject:lexeme];
-//}
-//
+void css_push_lexeme(PXStylesheetLexeme *lexeme)
+{
+    if (lexemeStack == nil)
+    {
+        lexemeStack = [[NSMutableArray alloc] init];
+    }
+
+    [lexemeStack addObject:lexeme];
+}
+
 //void css_push_source(NSString *source)
 //{
 //    if (sourceStack == nil)
