@@ -24,10 +24,28 @@
 
 @implementation PXColorValueParser
 
+static NSIndexSet *COLOR_SET;
+
++ (void)initialize
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSMutableIndexSet *set = [[NSMutableIndexSet alloc] init];
+        [set addIndex:PXSS_RGB];
+        [set addIndex:PXSS_RGBA];
+        [set addIndex:PXSS_HSB];
+        [set addIndex:PXSS_HSBA];
+        [set addIndex:PXSS_HSL];
+        [set addIndex:PXSS_HSLA];
+        [set addIndex:PXSS_HASH];
+        [set addIndex:PXSS_IDENTIFIER];
+        COLOR_SET = [set copy];
+    });
+}
+
 - (BOOL)canParse
 {
-    // TODO:
-    return YES;
+    return [self isInTypeSet:COLOR_SET];
 }
 
 - (id)parse

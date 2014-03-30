@@ -3523,6 +3523,8 @@
 				9C2B539A18E748670016CF7F /* PXAnimationPlayStateValueParser.m */,
 				9C2B539B18E748670016CF7F /* PXAnimationTimingFunctionValueParser.h */,
 				9C2B539C18E748670016CF7F /* PXAnimationTimingFunctionValueParser.m */,
+				9C2B53AF18E755B80016CF7F /* PXColorValueParser.h */,
+				9C2B53B018E755B80016CF7F /* PXColorValueParser.m */,
 				9C475AF818E60EB300283A43 /* PXListValueParser.h */,
 				9C475AF918E60EB300283A43 /* PXListValueParser.m */,
 				9C475AFA18E60EB300283A43 /* PXNameValueParser.h */,
@@ -3538,8 +3540,6 @@
 				9C475B0218E60EB300283A43 /* PXValueParserBase.h */,
 				9C475B0318E60EB300283A43 /* PXValueParserBase.m */,
 				0A9EDC3B18E628C800C91E97 /* PXValueParserProtocol.h */,
-				9C2B53AF18E755B80016CF7F /* PXColorValueParser.h */,
-				9C2B53B018E755B80016CF7F /* PXColorValueParser.m */,
 			);
 			path = ValueParsers;
 			sourceTree = "<group>";
