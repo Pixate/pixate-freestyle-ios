@@ -314,39 +314,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
 - (CGFloat)floatValue
 {
-    NSArray *lexemes;
-
-    if (hasExpression_)
-    {
-        NSMutableArray *buffer = [[NSMutableArray alloc] init];
-
-        [_lexemes enumerateObjectsUsingBlock:^(id<PXLexeme> lexeme, NSUInteger idx, BOOL *stop) {
-            if (lexeme.type == PXSS_EXPRESSION)
-            {
-                NSString *text = (NSString *)lexeme.value;
-                NSRange range = NSMakeRange(2, text.length - 4);
-                NSString *source = [text substringWithRange:range];
-                id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
-                NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
-
-                [buffer addObjectsFromArray:newLexemes];
-            }
-            else
-            {
-                [buffer addObject:lexeme];
-            }
-        }];
-
-        lexemes = buffer;
-    }
-    else
-    {
-        lexemes = _lexemes;
-    }
-
-    PXValueParserManager *manager = [PXValueParserManager sharedInstance];
-    id<PXValueParserProtocol> numberParser = [manager parserForName:kPXValueParserNumber withLexemes:lexemes];
-    NSNumber *result = [numberParser parse];
+    NSNumber *result = [PXValueParserManager parseLexemes:[self expandExpressionLexemes] withParser:kPXValueParserNumber];
 
     return [result floatValue];
 }
@@ -682,6 +650,37 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     PARSER.filename = filename_;
 
     return PARSER;
+}
+
+- (NSArray *)expandExpressionLexemes
+{
+    if (hasExpression_)
+    {
+        NSMutableArray *buffer = [[NSMutableArray alloc] init];
+
+        [_lexemes enumerateObjectsUsingBlock:^(id<PXLexeme> lexeme, NSUInteger idx, BOOL *stop) {
+            if (lexeme.type == PXSS_EXPRESSION)
+            {
+                NSString *text = (NSString *)lexeme.value;
+                NSRange range = NSMakeRange(2, text.length - 4);
+                NSString *source = [text substringWithRange:range];
+                id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
+                NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
+
+                [buffer addObjectsFromArray:newLexemes];
+            }
+            else
+            {
+                [buffer addObject:lexeme];
+            }
+        }];
+
+        return [buffer copy];
+    }
+    else
+    {
+        return _lexemes;
+    }
 }
 
 #pragma mark - Overrides
