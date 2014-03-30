@@ -43,6 +43,7 @@
     NSUInteger hash_;
     NSString *source_;
     NSString *filename_;
+    BOOL hasExpression_;
 }
 
 static PXValueParser *PARSER;
@@ -117,11 +118,18 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
         PXStylesheetLexeme *firstLexeme = [lexemes objectAtIndex:0];
         NSUInteger firstOffset = firstLexeme.range.location;
 
+        hasExpression_ = NO;
+
         [_lexemes enumerateObjectsUsingBlock:^(PXStylesheetLexeme *lexeme, NSUInteger idx, BOOL *stop) {
             NSRange lexemeRange = lexeme.range;
             NSRange normalizedRange = NSMakeRange(lexemeRange.location - firstOffset, lexemeRange.length);
 
             hash_ = hash_ * 31 + [source substringWithRange:normalizedRange].hash;
+
+            if (lexeme.type == PXSS_EXPRESSION)
+            {
+                hasExpression_ = YES;
+            }
         }];
     }
 }
@@ -308,24 +316,35 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
 - (CGFloat)floatValue
 {
-    NSMutableArray *lexemes = [[NSMutableArray alloc] init];
+    NSArray *lexemes;
 
-    [_lexemes enumerateObjectsUsingBlock:^(id<PXLexeme> lexeme, NSUInteger idx, BOOL *stop) {
-        if (lexeme.type == PXSS_EXPRESSION)
-        {
-            NSString *text = (NSString *)lexeme.value;
-            NSRange range = NSMakeRange(2, text.length - 4);
-            NSString *source = [text substringWithRange:range];
-            id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
-            NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
+    if (hasExpression_)
+    {
+        NSMutableArray *buffer = [[NSMutableArray alloc] init];
 
-            [lexemes addObjectsFromArray:newLexemes];
-        }
-        else
-        {
-            [lexemes addObject:lexeme];
-        }
-    }];
+        [_lexemes enumerateObjectsUsingBlock:^(id<PXLexeme> lexeme, NSUInteger idx, BOOL *stop) {
+            if (lexeme.type == PXSS_EXPRESSION)
+            {
+                NSString *text = (NSString *)lexeme.value;
+                NSRange range = NSMakeRange(2, text.length - 4);
+                NSString *source = [text substringWithRange:range];
+                id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
+                NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
+
+                [buffer addObjectsFromArray:newLexemes];
+            }
+            else
+            {
+                [buffer addObject:lexeme];
+            }
+        }];
+
+        lexemes = buffer;
+    }
+    else
+    {
+        lexemes = _lexemes;
+    }
 
     PXValueParserManager *manager = [PXValueParserManager sharedInstance];
     id<PXValueParserProtocol> numberParser = [manager parserForName:kPXValueParserNumber withLexemes:lexemes];
