@@ -289,7 +289,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     return (cache_ != [NSNull null]) ? cache_ : nil;
     */
 
-    UIColor *result = [PXValueParserManager parseLexemes:_lexemes withParser:kPXValueParserColor];
+    UIColor *result = [PXValueParserManager parseLexemes:[self expandedExpressionLexemes] withParser:kPXValueParserColor];
     
     return result;
 }
@@ -314,7 +314,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
 - (CGFloat)floatValue
 {
-    NSNumber *result = [PXValueParserManager parseLexemes:[self expandExpressionLexemes] withParser:kPXValueParserNumber];
+    NSNumber *result = [PXValueParserManager parseLexemes:[self expandedExpressionLexemes] withParser:kPXValueParserNumber];
 
     return [result floatValue];
 }
@@ -652,7 +652,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     return PARSER;
 }
 
-- (NSArray *)expandExpressionLexemes
+- (NSArray *)expandedExpressionLexemes
 {
     if (hasExpression_)
     {
