@@ -29,6 +29,7 @@
 #import "PXOffsets.h"
 #import "PixateFreestyleConfiguration.h"
 #import "PXBorderInfo.h"
+#import "PXScope.h"
 
 /**
  *  PXDeclaration represents a single property/value pair in a CSS rule set. A declaration consists of a property name
@@ -41,6 +42,8 @@
 @property (nonatomic, strong) NSString *name;
 @property (readonly, nonatomic, strong) NSArray *lexemes;
 @property (nonatomic) BOOL important;
+
++ (PXScope *)declarationScope;
 
 /**
  *  Initializes a newly allocated PXDeclaration using the specified property name

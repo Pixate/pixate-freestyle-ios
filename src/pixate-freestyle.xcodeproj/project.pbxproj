@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A49596A18E8C4EA00A55818 /* PXStyleableValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A49596818E8C4EA00A55818 /* PXStyleableValue.h */; };
+		0A49596B18E8C4EA00A55818 /* PXStyleableValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A49596918E8C4EA00A55818 /* PXStyleableValue.m */; };
 		0A9EDC2618E614C200C91E97 /* PXStylesheetLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EDC2518E614C200C91E97 /* PXStylesheetLexer.lm */; };
 		0A9EDC3C18E628C800C91E97 /* PXValueParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9EDC3B18E628C800C91E97 /* PXValueParserProtocol.h */; };
 		0A9EDC4618E6294600C91E97 /* PXCharacterMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9EDC3D18E6294600C91E97 /* PXCharacterMatcher.h */; };
@@ -1287,6 +1289,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A49596818E8C4EA00A55818 /* PXStyleableValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStyleableValue.h; sourceTree = "<group>"; };
+		0A49596918E8C4EA00A55818 /* PXStyleableValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStyleableValue.m; sourceTree = "<group>"; };
 		0A9EDC2518E614C200C91E97 /* PXStylesheetLexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer.lm; sourceTree = "<group>"; };
 		0A9EDC3B18E628C800C91E97 /* PXValueParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXValueParserProtocol.h; sourceTree = "<group>"; };
 		0A9EDC3D18E6294600C91E97 /* PXCharacterMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCharacterMatcher.h; sourceTree = "<group>"; };
@@ -3861,6 +3865,10 @@
 				9C98656118C0499000C71922 /* Macros */,
 				9C98656518C0499000C71922 /* Media */,
 				9C98656D18C0499000C71922 /* Parsing */,
+				9C98658818C0499000C71922 /* Selectors */,
+				9C98659C18C0499000C71922 /* Shapes */,
+				9C98659F18C0499000C71922 /* Stylers */,
+				9C9865CB18C0499000C71922 /* Utils */,
 				9C98657A18C0499000C71922 /* PXDeclaration.h */,
 				9C98657B18C0499000C71922 /* PXDeclaration.m */,
 				9C98657C18C0499000C71922 /* PXDeclarationContainer.h */,
@@ -3875,10 +3883,8 @@
 				9C98658518C0499000C71922 /* PXStylesheet.m */,
 				9C98658618C0499000C71922 /* PXValue.h */,
 				9C98658718C0499000C71922 /* PXValue.m */,
-				9C98658818C0499000C71922 /* Selectors */,
-				9C98659C18C0499000C71922 /* Shapes */,
-				9C98659F18C0499000C71922 /* Stylers */,
-				9C9865CB18C0499000C71922 /* Utils */,
+				0A49596818E8C4EA00A55818 /* PXStyleableValue.h */,
+				0A49596918E8C4EA00A55818 /* PXStyleableValue.m */,
 			);
 			path = Styling;
 			sourceTree = "<group>";
@@ -4367,6 +4373,7 @@
 				9C98681218C04BA000C71922 /* PXUIPickerView.h in Headers */,
 				9C98674618C0499000C71922 /* PXGenericStyler.h in Headers */,
 				9C98681418C04BA000C71922 /* PXUIPickerViewDelegate.h in Headers */,
+				0A49596A18E8C4EA00A55818 /* PXStyleableValue.h in Headers */,
 				9C475B1D18E6183200283A43 /* PXValueParser.h in Headers */,
 				9C9867F618C04BA000C71922 /* PXMKMapView.h in Headers */,
 				9C98682A18C04BA000C71922 /* PXUITableViewCell.h in Headers */,
@@ -5667,6 +5674,7 @@
 				9C98682318C04BA000C71922 /* PXUIStepper.m in Sources */,
 				9C98676E18C0499000C71922 /* PXRuntimeUtils.m in Sources */,
 				9C98660B18C0499000C71922 /* PXTransformLexer.m in Sources */,
+				0A49596B18E8C4EA00A55818 /* PXStyleableValue.m in Sources */,
 				9C9865E718C0499000C71922 /* NSMutableArray+StackAdditions.m in Sources */,
 				9C98680118C04BA000C71922 /* PXUICollectionView.m in Sources */,
 				9C98677E18C04A9800C71922 /* NSObject+PXSubclass.m in Sources */,

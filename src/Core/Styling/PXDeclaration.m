@@ -34,6 +34,7 @@
 #import "PXScriptManager.h"
 
 #import "PXValueParserManager.h"
+#import "PXObjectValue.h"
 
 #define IsNotCachedType(T) ![cache_ isKindOfClass:[PXValue class]] || ((PXValue *)cache_).type != PXValueType_##T
 
@@ -76,6 +77,34 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     {
         PARSER = [[PXValueParser alloc] init];
     }
+}
+
+#pragma mark - Static methods
+
++ (PXScope *)declarationScope
+{
+    static PXScope *scope;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        scope = [[PXScope alloc] init];
+
+        // TODO: this needs to be a dynamic object that takes orientation into account
+        CGRect bounds = [[UIScreen mainScreen] bounds];
+        PXObjectValue *screen = [[PXObjectValue alloc] init];
+        [screen setDoubleValue:bounds.origin.x forPropertyName:@"x"];
+        [screen setDoubleValue:bounds.origin.y forPropertyName:@"y"];
+        [screen setDoubleValue:bounds.size.width forPropertyName:@"width"];
+        [screen setDoubleValue:bounds.size.height forPropertyName:@"height"];
+        [screen setDoubleValue:bounds.origin.y forPropertyName:@"top"];
+        [screen setDoubleValue:CGRectGetMaxX(bounds) forPropertyName:@"right"];
+        [screen setDoubleValue:CGRectGetMaxY(bounds) forPropertyName:@"bottom"];
+        [screen setDoubleValue:bounds.origin.x forPropertyName:@"left"];
+
+        [scope setValue:screen forSymbolName:@"screen"];
+    });
+
+    return scope;
 }
 
 #pragma mark - Initializers
@@ -289,9 +318,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     return (cache_ != [NSNull null]) ? cache_ : nil;
     */
 
-    UIColor *result = [PXValueParserManager parseLexemes:[self expandedExpressionLexemes] withParser:kPXValueParserColor];
-    
-    return result;
+    return [PXValueParserManager parseLexemes:[self expandedExpressionLexemes] withParser:kPXValueParserColor];
 }
 
 - (NSString *)firstWord
@@ -664,7 +691,9 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
                 NSString *text = (NSString *)lexeme.value;
                 NSRange range = NSMakeRange(2, text.length - 4);
                 NSString *source = [text substringWithRange:range];
-                id<PXExpressionValue> result = [[PXScriptManager sharedInstance] evaluate:source withScopes:nil];
+                id<PXExpressionValue> result = [[PXScriptManager sharedInstance]
+                                                evaluate:source
+                                                withScopes:@[ [PXDeclaration declarationScope] ]];
                 NSArray *newLexemes = [PXValueParser lexemesForSource:result.stringValue];
 
                 [buffer addObjectsFromArray:newLexemes];

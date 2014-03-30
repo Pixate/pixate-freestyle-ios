@@ -38,6 +38,7 @@
 #import "NSObject+PXClass.h"
 #import "NSObject+PXStyling.h"
 #import "PXStylingMacros.h"
+#import "PXStyleableValue.h"
 
 static const char STYLE_CLASS_KEY;
 static const char STYLE_CLASSES_KEY;
@@ -388,18 +389,32 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
 - (void)setStyleId:(NSString *)anId
 {
-    // make sure we have a string - needed to filter bad input from IB
-    anId = [anId description];
+    NSString *currentId = self.styleId;
 
-    // trim leading and trailing whitespace
-    anId = [anId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-
-    objc_setAssociatedObject(self, &STYLE_ID_KEY, anId, OBJC_ASSOCIATION_COPY_NONATOMIC);
-
-    if ([anId length])
+    if ([currentId isEqualToString:anId] == NO)
     {
-        self.styleMode = PXStylingNormal;
-	}
+        // remove old value from global scope
+        if (currentId.length > 0)
+        {
+            [[PXDeclaration declarationScope] removeSymbolName:anId];
+        }
+
+        // make sure we have a string and trim whitespace - needed to filter bad input from IB
+        anId = [anId description];
+        anId = [anId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+        // save the value
+        objc_setAssociatedObject(self, &STYLE_ID_KEY, anId, OBJC_ASSOCIATION_COPY_NONATOMIC);
+
+        if (anId.length > 0)
+        {
+            self.styleMode = PXStylingNormal;
+
+            // place new value in global scope
+            PXStyleableValue *value = [[PXStyleableValue alloc] initWithObject:self];
+            [[PXDeclaration declarationScope] setValue:value forSymbolName:anId];
+        }
+    }
 
 //    [[PXStyleController sharedInstance] setViewNeedsStyle:self];
 }
