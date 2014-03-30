@@ -16,6 +16,16 @@ extern NSString * const kPXValueParserName;
 extern NSString * const kPXValueParserNumber;
 extern NSString * const kPXValueParserSeconds;
 
+extern NSString * const kPXValueParserColor;
+
+
+extern NSString * const kPXValueParserAnimationInfo;
+extern NSString * const kPXValueParserAnimationTimingFunction;
+extern NSString * const kPXValueParserAnimationDirection;
+extern NSString * const kPXValueParserAnimationFillMode;
+extern NSString * const kPXValueParserAnimationPlayState;
+extern NSString * const kPXValueParserTransitionInfo;
+
 @interface PXValueParserManager : NSObject
 
 + (PXValueParserManager *)sharedInstance;

@@ -8,16 +8,35 @@
 
 #import "PXValueParserManager.h"
 
+#import <objc/runtime.h>
+
 #import "PXNameValueParser.h"
 #import "PXNumberValueParser.h"
 #import "PXSecondsValueParser.h"
 #import "PXListValueParser.h"
-#import <objc/runtime.h>
+
+#import "PXAnimationInfoValueParser.h"
+#import "PXAnimationTimingFunctionValueParser.h"
+#import "PXAnimationDirectionValueParser.h"
+#import "PXAnimationFillModeValueParser.h"
+#import "PXAnimationPlayStateValueParser.h"
+#import "PXTransitionInfoValueParser.h"
+
+#import "PXColorValueParser.h"
 
 // Value Parser Names
 NSString * const kPXValueParserName = @"PXValueParserName";
 NSString * const kPXValueParserNumber = @"PXValueParserNumber";
 NSString * const kPXValueParserSeconds = @"PXValueParserSeconds";
+
+NSString * const kPXValueParserColor = @"PXValueParserColor";
+
+NSString * const kPXValueParserAnimationInfo = @"PXValueParserAnimationInfo";
+NSString * const kPXValueParserAnimationTimingFunction = @"PXValueParserAnimationTimingFunction";
+NSString * const kPXValueParserAnimationDirection = @"PXValueParserAnimationDirection";
+NSString * const kPXValueParserAnimationFillMode = @"PXValueParserAnimationFillMode";
+NSString * const kPXValueParserAnimationPlayState = @"PXValueParserAnimationPlayState";
+NSString * const kPXValueParserTransitionInfo = @"PXValueParserTransitionInfo";
 
 static NSMutableDictionary *PARSERS_BY_NAME;
 
@@ -56,10 +75,23 @@ static NSMutableDictionary *PARSERS_BY_NAME;
 
 - (void)setupDefaultParsers
 {
-    // Setup value parsers provided by the core
+    // Setup core value parsers
     [self addValueParser:[PXNameValueParser class] forName:kPXValueParserName];
     [self addValueParser:[PXNumberValueParser class] forName:kPXValueParserNumber];
     [self addValueParser:[PXSecondsValueParser class] forName:kPXValueParserSeconds];
+    
+    [self addValueParser:[PXSecondsValueParser class] forName:kPXValueParserSeconds];
+
+    // Setup animation value parsers
+    [self addValueParsersFromDictionary: @{
+                                          kPXValueParserAnimationInfo:            [PXAnimationInfoValueParser class],
+                                          kPXValueParserAnimationTimingFunction:  [PXAnimationTimingFunctionValueParser class],
+                                          kPXValueParserAnimationDirection:       [PXAnimationDirectionValueParser class],
+                                          kPXValueParserAnimationFillMode:        [PXAnimationFillModeValueParser class],
+                                          kPXValueParserAnimationPlayState:       [PXAnimationPlayStateValueParser class],
+                                          kPXValueParserTransitionInfo:           [PXTransitionInfoValueParser class]
+                                          }];
+
 }
 
 - (void)addValueParser:(Class<PXValueParserProtocol>)parser forName:(NSString*)name

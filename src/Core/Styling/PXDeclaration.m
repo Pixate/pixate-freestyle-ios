@@ -33,6 +33,8 @@
 #import "PXNumberValueParser.h"
 #import "PXScriptManager.h"
 
+#import "PXValueParserManager.h"
+
 #define IsNotCachedType(T) ![cache_ isKindOfClass:[PXValue class]] || ((PXValue *)cache_).type != PXValueType_##T
 
 @implementation PXDeclaration
@@ -265,6 +267,7 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
 - (UIColor *)colorValue
 {
+    /* TODO: Cache
     if (cache_ != [NSNull null] && ![cache_ isKindOfClass:[UIColor class]])
     {
         cache_ = [self.parser parseColor:_lexemes];
@@ -276,6 +279,13 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
     }
 
     return (cache_ != [NSNull null]) ? cache_ : nil;
+    */
+    
+    PXValueParserManager *manager = [PXValueParserManager sharedInstance];
+    id<PXValueParserProtocol> colorParser = [manager parserForName:kPXValueParserColor withLexemes:_lexemes];
+    UIColor *result = [colorParser parse];
+    
+    return result;
 }
 
 - (NSString *)firstWord
@@ -317,8 +327,9 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
         }
     }];
 
-    PXNumberValueParser *parser = [[PXNumberValueParser alloc] initWithLexemes:lexemes];
-    NSNumber *result = [parser parse];
+    PXValueParserManager *manager = [PXValueParserManager sharedInstance];
+    id<PXValueParserProtocol> numberParser = [manager parserForName:kPXValueParserNumber withLexemes:lexemes];
+    NSNumber *result = [numberParser parse];
 
     return [result floatValue];
 }
