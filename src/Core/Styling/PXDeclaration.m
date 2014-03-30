@@ -288,10 +288,8 @@ static NSDictionary *ESCAPE_SEQUENCE_MAP;
 
     return (cache_ != [NSNull null]) ? cache_ : nil;
     */
-    
-    PXValueParserManager *manager = [PXValueParserManager sharedInstance];
-    id<PXValueParserProtocol> colorParser = [manager parserForName:kPXValueParserColor withLexemes:_lexemes];
-    UIColor *result = [colorParser parse];
+
+    UIColor *result = [PXValueParserManager parseLexemes:_lexemes withParser:kPXValueParserColor];
     
     return result;
 }
