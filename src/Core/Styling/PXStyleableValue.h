@@ -14,6 +14,10 @@
 @property (nonatomic, readonly) double y;
 @property (nonatomic, readonly) double width;
 @property (nonatomic, readonly) double height;
+@property (nonatomic, readonly) double top;
+@property (nonatomic, readonly) double right;
+@property (nonatomic, readonly) double bottom;
+@property (nonatomic, readonly) double left;
 @end
 
 @interface PXStyleableValue : PXObjectValueWrapper <PXStyleableExports>

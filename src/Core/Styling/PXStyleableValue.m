@@ -10,7 +10,7 @@
 #import "PXStyleable.h"
 
 @interface PXStyleableValue ()
-@property (nonatomic, strong) id<PXStyleable> styleable;
+@property (nonatomic, weak) id<PXStyleable> styleable;
 @end
 @implementation PXStyleableValue
 
@@ -45,6 +45,26 @@
 - (double)height
 {
     return _styleable.frame.size.height;
+}
+
+- (double)top
+{
+    return _styleable.frame.origin.y;
+}
+
+- (double)right
+{
+    return CGRectGetMaxX(_styleable.frame);
+}
+
+- (double)bottom
+{
+    return CGRectGetMaxY(_styleable.frame);
+}
+
+- (double)left
+{
+    return _styleable.frame.origin.x;
 }
 
 @end
