@@ -34,19 +34,25 @@
     // duration
     if ([secondsParser canParse])
     {
-        info.animationDuration = [[secondsParser parse] floatValue];
+        NSNumber *seconds = [secondsParser parse];
+
+        info.animationDuration = [seconds floatValue];
     }
 
     // timing function
     if ([timingFunctionParser canParse])
     {
-        info.animationTimingFunction = [[timingFunctionParser parse] integerValue];
+        NSNumber *timing = [timingFunctionParser parse];
+
+        info.animationTimingFunction = (int) [timing integerValue];
     }
 
     // delay
     if ([secondsParser canParse])
     {
-        info.animationDelay = [[secondsParser parse] floatValue];
+        NSNumber *seconds = [secondsParser parse];
+
+        info.animationDelay = [seconds floatValue];
     }
 
     return info;

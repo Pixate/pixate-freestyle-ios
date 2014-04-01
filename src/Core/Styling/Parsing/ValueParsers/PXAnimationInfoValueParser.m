@@ -59,19 +59,25 @@
     // duration
     if ([secondsParser canParse])
     {
-        info.animationDuration = [[secondsParser parse] floatValue];
+        NSNumber *seconds = [secondsParser parse];
+
+        info.animationDuration = [seconds floatValue];
     }
 
     // timing function
     if ([timingFunctionParser canParse])
     {
-        info.animationTimingFunction = [[timingFunctionParser parse] integerValue];
+        NSNumber *timing = [timingFunctionParser parse];
+
+        info.animationTimingFunction = (int) [timing integerValue];
     }
 
     // delay
     if ([secondsParser canParse])
     {
-        info.animationDelay = [[secondsParser parse] floatValue];
+        NSNumber *seconds = [secondsParser parse];
+
+        info.animationDelay = [seconds floatValue];
     }
 
     // iteration count
@@ -87,19 +93,25 @@
     // animation direction
     if ([directionParser canParse])
     {
-        info.animationDirection = [[directionParser parse] integerValue];
+        NSNumber *direction = [directionParser parse];
+
+        info.animationDirection = (int) [direction integerValue];
     }
 
     // fill mode
     if ([fillModeParser canParse])
     {
-        info.animationFillMode = [[fillModeParser parse] integerValue];
+        NSNumber *fill = [fillModeParser parse];
+
+        info.animationFillMode = (int) [fill integerValue];
     }
 
     // play state
     if ([playStateParser canParse])
     {
-        info.animationPlayState = [[playStateParser parse] integerValue];
+        NSNumber *playState = [playStateParser parse];
+
+        info.animationPlayState = (int) [playState integerValue];
     }
     
     return info;
