@@ -1,0 +1,33 @@
+collection-view {
+    background-color: blue;
+    cell-size: 75;
+}
+/*
+ collection-view-cell {
+ border-color: gray;
+ border-style: solid;
+ border-width: 2;
+ }
+ */
+
+/*
+ collection-view-cell:nth-child(3n-1) {
+ background-color: gray;
+ }
+ */
+
+pixate-config {
+    image-cache-count: 400;
+}
+
+collection-view-cell {
+    background-color: red;
+}
+
+collection-view-cell:nth-child(odd) {
+    border: 1px solid #ff0000;
+}
+
+collection-view-cell:nth-child(even) {
+    border: 1px solid #0000ff;
+}

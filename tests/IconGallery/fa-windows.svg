@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg" version="1.1"
+    width="100" height="100" viewBox="0 0 1664 1792">
+
+<path transform="translate(0,1536) scale(1,-1)"
+    fill="black"
+    d="M682 530v-651l-682 94v557h682zM682 1273v-659h-682v565zM1664 530v-786l-907 125v661h907zM1664 1408v-794h-907v669z"/>
+
+</svg>
