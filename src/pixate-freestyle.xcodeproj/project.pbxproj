@@ -21,9 +21,136 @@
 		0A9EDC4D18E6294600C91E97 /* PXWordMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9EDC4418E6294600C91E97 /* PXWordMatcher.h */; };
 		0A9EDC4E18E6294600C91E97 /* PXWordMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EDC4518E6294600C91E97 /* PXWordMatcher.m */; };
 		0A9EDC5418E630F300C91E97 /* PXValueParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C475B1618E60F8600283A43 /* PXValueParserManager.m */; };
+		0AEF542918EB2216000A8FB8 /* PXDoubleProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF539818EB2215000A8FB8 /* PXDoubleProperty.h */; };
+		0AEF542A18EB2216000A8FB8 /* PXDoubleProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF539918EB2215000A8FB8 /* PXDoubleProperty.m */; };
+		0AEF542B18EB2216000A8FB8 /* PXExpressionExports.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF539A18EB2215000A8FB8 /* PXExpressionExports.h */; };
+		0AEF542C18EB2216000A8FB8 /* PXObjectValueWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF539B18EB2215000A8FB8 /* PXObjectValueWrapper.h */; };
+		0AEF542D18EB2216000A8FB8 /* PXObjectValueWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF539C18EB2215000A8FB8 /* PXObjectValueWrapper.m */; };
+		0AEF542E18EB2216000A8FB8 /* PXArrayForEachMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF539F18EB2215000A8FB8 /* PXArrayForEachMethod.h */; };
+		0AEF542F18EB2216000A8FB8 /* PXArrayForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53A018EB2215000A8FB8 /* PXArrayForEachMethod.m */; };
+		0AEF543018EB2216000A8FB8 /* PXArrayLengthMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53A118EB2215000A8FB8 /* PXArrayLengthMethod.h */; };
+		0AEF543118EB2216000A8FB8 /* PXArrayLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53A218EB2215000A8FB8 /* PXArrayLengthMethod.m */; };
+		0AEF543218EB2216000A8FB8 /* PXArrayMapMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53A318EB2215000A8FB8 /* PXArrayMapMethod.h */; };
+		0AEF543318EB2216000A8FB8 /* PXArrayMapMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53A418EB2215000A8FB8 /* PXArrayMapMethod.m */; };
+		0AEF543418EB2216000A8FB8 /* PXArrayPopMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53A518EB2215000A8FB8 /* PXArrayPopMethod.h */; };
+		0AEF543518EB2216000A8FB8 /* PXArrayPopMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53A618EB2215000A8FB8 /* PXArrayPopMethod.m */; };
+		0AEF543618EB2216000A8FB8 /* PXArrayPushMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53A718EB2215000A8FB8 /* PXArrayPushMethod.h */; };
+		0AEF543718EB2216000A8FB8 /* PXArrayPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53A818EB2215000A8FB8 /* PXArrayPushMethod.m */; };
+		0AEF543818EB2216000A8FB8 /* PXArrayReduceMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53A918EB2215000A8FB8 /* PXArrayReduceMethod.h */; };
+		0AEF543918EB2216000A8FB8 /* PXArrayReduceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53AA18EB2215000A8FB8 /* PXArrayReduceMethod.m */; };
+		0AEF543A18EB2216000A8FB8 /* PXArrayReverseMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53AB18EB2215000A8FB8 /* PXArrayReverseMethod.h */; };
+		0AEF543B18EB2216000A8FB8 /* PXArrayReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53AC18EB2215000A8FB8 /* PXArrayReverseMethod.m */; };
+		0AEF543C18EB2216000A8FB8 /* PXArrayShiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53AD18EB2215000A8FB8 /* PXArrayShiftMethod.h */; };
+		0AEF543D18EB2216000A8FB8 /* PXArrayShiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53AE18EB2215000A8FB8 /* PXArrayShiftMethod.m */; };
+		0AEF543E18EB2216000A8FB8 /* PXArrayUnshiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53AF18EB2215000A8FB8 /* PXArrayUnshiftMethod.h */; };
+		0AEF543F18EB2216000A8FB8 /* PXArrayUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53B018EB2215000A8FB8 /* PXArrayUnshiftMethod.m */; };
+		0AEF544018EB2216000A8FB8 /* PXByteCodeFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53B218EB2215000A8FB8 /* PXByteCodeFunction.h */; };
+		0AEF544118EB2216000A8FB8 /* PXByteCodeFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53B318EB2215000A8FB8 /* PXByteCodeFunction.m */; };
+		0AEF544218EB2216000A8FB8 /* PXParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53B418EB2215000A8FB8 /* PXParameter.h */; };
+		0AEF544318EB2216000A8FB8 /* PXParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53B518EB2215000A8FB8 /* PXParameter.m */; };
+		0AEF544418EB2216000A8FB8 /* PXLogFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53B718EB2215000A8FB8 /* PXLogFunction.h */; };
+		0AEF544518EB2216000A8FB8 /* PXLogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53B818EB2215000A8FB8 /* PXLogFunction.m */; };
+		0AEF544618EB2216000A8FB8 /* PXShowTopFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53B918EB2215000A8FB8 /* PXShowTopFunction.h */; };
+		0AEF544718EB2216000A8FB8 /* PXShowTopFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53BA18EB2215000A8FB8 /* PXShowTopFunction.m */; };
+		0AEF544818EB2216000A8FB8 /* PXCosFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53BC18EB2215000A8FB8 /* PXCosFunction.h */; };
+		0AEF544918EB2216000A8FB8 /* PXCosFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53BD18EB2215000A8FB8 /* PXCosFunction.m */; };
+		0AEF544A18EB2216000A8FB8 /* PXPowerFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53BE18EB2215000A8FB8 /* PXPowerFunction.h */; };
+		0AEF544B18EB2216000A8FB8 /* PXPowerFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53BF18EB2215000A8FB8 /* PXPowerFunction.m */; };
+		0AEF544C18EB2216000A8FB8 /* PXSinFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53C018EB2215000A8FB8 /* PXSinFunction.h */; };
+		0AEF544D18EB2216000A8FB8 /* PXSinFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53C118EB2215000A8FB8 /* PXSinFunction.m */; };
+		0AEF544E18EB2216000A8FB8 /* PXSquareRootFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53C218EB2215000A8FB8 /* PXSquareRootFunction.h */; };
+		0AEF544F18EB2216000A8FB8 /* PXSquareRootFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53C318EB2215000A8FB8 /* PXSquareRootFunction.m */; };
+		0AEF545018EB2216000A8FB8 /* PXObjectForEachMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53C518EB2215000A8FB8 /* PXObjectForEachMethod.h */; };
+		0AEF545118EB2216000A8FB8 /* PXObjectForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53C618EB2215000A8FB8 /* PXObjectForEachMethod.m */; };
+		0AEF545218EB2216000A8FB8 /* PXObjectLengthMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53C718EB2215000A8FB8 /* PXObjectLengthMethod.h */; };
+		0AEF545318EB2216000A8FB8 /* PXObjectLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53C818EB2215000A8FB8 /* PXObjectLengthMethod.m */; };
+		0AEF545418EB2216000A8FB8 /* PXObjectReverseMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53C918EB2215000A8FB8 /* PXObjectReverseMethod.h */; };
+		0AEF545518EB2216000A8FB8 /* PXObjectReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53CA18EB2215000A8FB8 /* PXObjectReverseMethod.m */; };
+		0AEF545618EB2216000A8FB8 /* PXLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53CD18EB2215000A8FB8 /* PXLexeme.h */; };
+		0AEF545718EB2216000A8FB8 /* PXParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53CE18EB2215000A8FB8 /* PXParser.h */; };
+		0AEF545818EB2216000A8FB8 /* PXParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53CF18EB2215000A8FB8 /* PXParserBase.h */; };
+		0AEF545918EB2216000A8FB8 /* PXParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53D018EB2215000A8FB8 /* PXParserBase.m */; };
+		0AEF545A18EB2216000A8FB8 /* PXSourceEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53D118EB2215000A8FB8 /* PXSourceEmitter.h */; };
+		0AEF545B18EB2216000A8FB8 /* PXSourceWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53D218EB2215000A8FB8 /* PXSourceWriter.h */; };
+		0AEF545C18EB2216000A8FB8 /* PXSourceWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53D318EB2215000A8FB8 /* PXSourceWriter.m */; };
+		0AEF545D18EB2216000A8FB8 /* PXByteCodeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53D518EB2215000A8FB8 /* PXByteCodeBuilder.h */; };
+		0AEF545E18EB2216000A8FB8 /* PXByteCodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53D618EB2215000A8FB8 /* PXByteCodeBuilder.m */; };
+		0AEF545F18EB2216000A8FB8 /* PXExpressionByteCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53D718EB2215000A8FB8 /* PXExpressionByteCode.h */; };
+		0AEF546018EB2216000A8FB8 /* PXExpressionByteCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53D818EB2215000A8FB8 /* PXExpressionByteCode.m */; };
+		0AEF546118EB2216000A8FB8 /* PXExpressionInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53D918EB2215000A8FB8 /* PXExpressionInstruction.h */; };
+		0AEF546218EB2216000A8FB8 /* PXExpressionInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53DA18EB2215000A8FB8 /* PXExpressionInstruction.m */; };
+		0AEF546318EB2216000A8FB8 /* PXExpressionInstructionType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53DB18EB2215000A8FB8 /* PXExpressionInstructionType.h */; };
+		0AEF546418EB2216000A8FB8 /* PXInstructionCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53DC18EB2215000A8FB8 /* PXInstructionCounter.h */; };
+		0AEF546518EB2216000A8FB8 /* PXInstructionCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53DD18EB2215000A8FB8 /* PXInstructionCounter.m */; };
+		0AEF546618EB2216000A8FB8 /* PXInstructionDisassembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53DE18EB2215000A8FB8 /* PXInstructionDisassembler.h */; };
+		0AEF546718EB2216000A8FB8 /* PXInstructionDisassembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53DF18EB2215000A8FB8 /* PXInstructionDisassembler.m */; };
+		0AEF546818EB2216000A8FB8 /* PXInstructionProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53E018EB2215000A8FB8 /* PXInstructionProcessor.h */; };
+		0AEF546918EB2216000A8FB8 /* PXInstructionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53E118EB2215000A8FB8 /* PXInstructionProcessor.m */; };
+		0AEF546A18EB2216000A8FB8 /* PXPushValueInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53E218EB2215000A8FB8 /* PXPushValueInstruction.h */; };
+		0AEF546B18EB2216000A8FB8 /* PXPushValueInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53E318EB2215000A8FB8 /* PXPushValueInstruction.m */; };
+		0AEF546C18EB2216000A8FB8 /* PXBlockNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53E618EB2215000A8FB8 /* PXBlockNode.h */; };
+		0AEF546D18EB2216000A8FB8 /* PXBlockNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53E718EB2215000A8FB8 /* PXBlockNode.m */; };
+		0AEF546E18EB2216000A8FB8 /* PXExpressionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53E818EB2215000A8FB8 /* PXExpressionNode.h */; };
+		0AEF546F18EB2216000A8FB8 /* PXGenericNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53E918EB2215000A8FB8 /* PXGenericNode.h */; };
+		0AEF547018EB2216000A8FB8 /* PXGenericNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53EA18EB2215000A8FB8 /* PXGenericNode.m */; };
+		0AEF547118EB2216000A8FB8 /* PXExpressionAssembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53EB18EB2215000A8FB8 /* PXExpressionAssembler.h */; };
+		0AEF547218EB2216000A8FB8 /* PXExpressionAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53EC18EB2215000A8FB8 /* PXExpressionAssembler.m */; };
+		0AEF547318EB2216000A8FB8 /* PXExpressionLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53ED18EB2215000A8FB8 /* PXExpressionLexeme.h */; };
+		0AEF547418EB2216000A8FB8 /* PXExpressionLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53EE18EB2215000A8FB8 /* PXExpressionLexeme.m */; };
+		0AEF547518EB2216000A8FB8 /* PXExpressionLexemeType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53EF18EB2215000A8FB8 /* PXExpressionLexemeType.h */; };
+		0AEF547618EB2216000A8FB8 /* PXExpressionLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53F018EB2215000A8FB8 /* PXExpressionLexer.lm */; };
+		0AEF547718EB2216000A8FB8 /* PXExpressionNodeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53F118EB2215000A8FB8 /* PXExpressionNodeBuilder.h */; };
+		0AEF547818EB2216000A8FB8 /* PXExpressionNodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53F218EB2215000A8FB8 /* PXExpressionNodeBuilder.m */; };
+		0AEF547918EB2216000A8FB8 /* PXExpressionNodeCompiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53F318EB2215000A8FB8 /* PXExpressionNodeCompiler.h */; };
+		0AEF547A18EB2216000A8FB8 /* PXExpressionNodeCompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53F418EB2215000A8FB8 /* PXExpressionNodeCompiler.m */; };
+		0AEF547B18EB2216000A8FB8 /* PXExpressionNodeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53F518EB2215000A8FB8 /* PXExpressionNodeUtils.h */; };
+		0AEF547C18EB2216000A8FB8 /* PXExpressionNodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53F618EB2215000A8FB8 /* PXExpressionNodeUtils.m */; };
+		0AEF547D18EB2216000A8FB8 /* PXExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53F718EB2215000A8FB8 /* PXExpressionParser.h */; };
+		0AEF547E18EB2216000A8FB8 /* PXExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53F818EB2215000A8FB8 /* PXExpressionParser.m */; };
+		0AEF547F18EB2216000A8FB8 /* pixate-expression-machine-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53F918EB2215000A8FB8 /* pixate-expression-machine-Prefix.pch */; };
+		0AEF548018EB2216000A8FB8 /* PXExpressionEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53FA18EB2215000A8FB8 /* PXExpressionEnvironment.h */; };
+		0AEF548118EB2216000A8FB8 /* PXExpressionEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53FB18EB2215000A8FB8 /* PXExpressionEnvironment.m */; };
+		0AEF548218EB2216000A8FB8 /* PXExpressionUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53FC18EB2215000A8FB8 /* PXExpressionUnit.h */; };
+		0AEF548318EB2216000A8FB8 /* PXExpressionUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53FD18EB2215000A8FB8 /* PXExpressionUnit.m */; };
+		0AEF548418EB2216000A8FB8 /* PXScriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF53FE18EB2215000A8FB8 /* PXScriptManager.h */; };
+		0AEF548518EB2216000A8FB8 /* PXScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF53FF18EB2215000A8FB8 /* PXScriptManager.m */; };
+		0AEF548618EB2216000A8FB8 /* PXBuiltInScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540518EB2215000A8FB8 /* PXBuiltInScope.h */; };
+		0AEF548718EB2216000A8FB8 /* PXBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF540618EB2215000A8FB8 /* PXBuiltInScope.m */; };
+		0AEF548818EB2216000A8FB8 /* PXBuiltInSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540718EB2215000A8FB8 /* PXBuiltInSource.h */; };
+		0AEF548918EB2216000A8FB8 /* PXBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF540818EB2215000A8FB8 /* PXBuiltInSource.m */; };
+		0AEF548A18EB2216000A8FB8 /* PXExpressionScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540918EB2215000A8FB8 /* PXExpressionScope.h */; };
+		0AEF548B18EB2216000A8FB8 /* PXScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540A18EB2215000A8FB8 /* PXScope.h */; };
+		0AEF548C18EB2216000A8FB8 /* PXScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF540B18EB2215000A8FB8 /* PXScope.m */; };
+		0AEF548D18EB2216000A8FB8 /* PXScopeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540C18EB2215000A8FB8 /* PXScopeBase.h */; };
+		0AEF548E18EB2216000A8FB8 /* PXScopeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF540D18EB2215000A8FB8 /* PXScopeBase.m */; };
+		0AEF548F18EB2216000A8FB8 /* PXArrayValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF540F18EB2215000A8FB8 /* PXArrayValue.h */; };
+		0AEF549018EB2216000A8FB8 /* PXArrayValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541018EB2215000A8FB8 /* PXArrayValue.m */; };
+		0AEF549118EB2216000A8FB8 /* PXBlockValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541118EB2215000A8FB8 /* PXBlockValue.h */; };
+		0AEF549218EB2216000A8FB8 /* PXBlockValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541218EB2215000A8FB8 /* PXBlockValue.m */; };
+		0AEF549318EB2216000A8FB8 /* PXBooleanValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541318EB2215000A8FB8 /* PXBooleanValue.h */; };
+		0AEF549418EB2216000A8FB8 /* PXBooleanValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541418EB2215000A8FB8 /* PXBooleanValue.m */; };
+		0AEF549518EB2216000A8FB8 /* PXDoubleValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541518EB2215000A8FB8 /* PXDoubleValue.h */; };
+		0AEF549618EB2216000A8FB8 /* PXDoubleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541618EB2215000A8FB8 /* PXDoubleValue.m */; };
+		0AEF549718EB2216000A8FB8 /* PXExpressionArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541718EB2215000A8FB8 /* PXExpressionArray.h */; };
+		0AEF549818EB2216000A8FB8 /* PXExpressionFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541818EB2215000A8FB8 /* PXExpressionFunction.h */; };
+		0AEF549918EB2216000A8FB8 /* PXExpressionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541918EB2215000A8FB8 /* PXExpressionObject.h */; };
+		0AEF549A18EB2216000A8FB8 /* PXExpressionValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541A18EB2215000A8FB8 /* PXExpressionValue.h */; };
+		0AEF549B18EB2216000A8FB8 /* PXExpressionValueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541B18EB2215000A8FB8 /* PXExpressionValueBase.h */; };
+		0AEF549C18EB2216000A8FB8 /* PXExpressionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541C18EB2215000A8FB8 /* PXExpressionValueBase.m */; };
+		0AEF549D18EB2216000A8FB8 /* PXFunctionValueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541D18EB2215000A8FB8 /* PXFunctionValueBase.h */; };
+		0AEF549E18EB2216000A8FB8 /* PXFunctionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF541E18EB2215000A8FB8 /* PXFunctionValueBase.m */; };
+		0AEF549F18EB2216000A8FB8 /* PXMarkValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF541F18EB2215000A8FB8 /* PXMarkValue.h */; };
+		0AEF54A018EB2216000A8FB8 /* PXMarkValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF542018EB2215000A8FB8 /* PXMarkValue.m */; };
+		0AEF54A118EB2216000A8FB8 /* PXNullValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF542118EB2215000A8FB8 /* PXNullValue.h */; };
+		0AEF54A218EB2216000A8FB8 /* PXNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF542218EB2215000A8FB8 /* PXNullValue.m */; };
+		0AEF54A318EB2216000A8FB8 /* PXObjectValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF542318EB2215000A8FB8 /* PXObjectValue.h */; };
+		0AEF54A418EB2216000A8FB8 /* PXObjectValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF542418EB2216000A8FB8 /* PXObjectValue.m */; };
+		0AEF54A518EB2216000A8FB8 /* PXStringValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF542518EB2216000A8FB8 /* PXStringValue.h */; };
+		0AEF54A618EB2216000A8FB8 /* PXStringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF542618EB2216000A8FB8 /* PXStringValue.m */; };
+		0AEF54A718EB2216000A8FB8 /* PXUndefinedValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEF542718EB2216000A8FB8 /* PXUndefinedValue.h */; };
+		0AEF54A818EB2216000A8FB8 /* PXUndefinedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF542818EB2216000A8FB8 /* PXUndefinedValue.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C19EE0D18E5F6A0000F66D4 /* libpixate-expression-machine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C10E89E18E5ECC1001299AC /* libpixate-expression-machine.a */; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
 		9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -1223,34 +1350,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A9EDC3618E6226500C91E97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9C475B9D18E620C100283A43;
-			remoteInfo = "pixate-expression-machine-mac";
-		};
-		0A9EDC3818E6226500C91E97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9C475BA918E620C100283A43;
-			remoteInfo = "pixate-expression-machine-macTests";
-		};
-		9C10E89D18E5ECC1001299AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CF979D918E4EED900B442DE;
-			remoteInfo = "pixate-expression-machine";
-		};
-		9C10E89F18E5ECC1001299AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CF979E918E4EED900B442DE;
-			remoteInfo = "pixate-expression-machineTests";
-		};
 		9C84A65018AE9CB600E7CDA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C84A63218AE9CB600E7CDA7 /* Project object */;
@@ -1302,7 +1401,137 @@
 		0A9EDC4318E6294600C91E97 /* PXPatternMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPatternMatcher.m; sourceTree = "<group>"; };
 		0A9EDC4418E6294600C91E97 /* PXWordMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXWordMatcher.h; sourceTree = "<group>"; };
 		0A9EDC4518E6294600C91E97 /* PXWordMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXWordMatcher.m; sourceTree = "<group>"; };
-		9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-expression-machine.xcodeproj"; path = "../submodules/pixate-expression-machine/src/pixate-expression-machine.xcodeproj"; sourceTree = "<group>"; };
+		0AEF539818EB2215000A8FB8 /* PXDoubleProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDoubleProperty.h; sourceTree = "<group>"; };
+		0AEF539918EB2215000A8FB8 /* PXDoubleProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDoubleProperty.m; sourceTree = "<group>"; };
+		0AEF539A18EB2215000A8FB8 /* PXExpressionExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionExports.h; sourceTree = "<group>"; };
+		0AEF539B18EB2215000A8FB8 /* PXObjectValueWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectValueWrapper.h; sourceTree = "<group>"; };
+		0AEF539C18EB2215000A8FB8 /* PXObjectValueWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectValueWrapper.m; sourceTree = "<group>"; };
+		0AEF539F18EB2215000A8FB8 /* PXArrayForEachMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayForEachMethod.h; sourceTree = "<group>"; };
+		0AEF53A018EB2215000A8FB8 /* PXArrayForEachMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayForEachMethod.m; sourceTree = "<group>"; };
+		0AEF53A118EB2215000A8FB8 /* PXArrayLengthMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayLengthMethod.h; sourceTree = "<group>"; };
+		0AEF53A218EB2215000A8FB8 /* PXArrayLengthMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayLengthMethod.m; sourceTree = "<group>"; };
+		0AEF53A318EB2215000A8FB8 /* PXArrayMapMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayMapMethod.h; sourceTree = "<group>"; };
+		0AEF53A418EB2215000A8FB8 /* PXArrayMapMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayMapMethod.m; sourceTree = "<group>"; };
+		0AEF53A518EB2215000A8FB8 /* PXArrayPopMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayPopMethod.h; sourceTree = "<group>"; };
+		0AEF53A618EB2215000A8FB8 /* PXArrayPopMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayPopMethod.m; sourceTree = "<group>"; };
+		0AEF53A718EB2215000A8FB8 /* PXArrayPushMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayPushMethod.h; sourceTree = "<group>"; };
+		0AEF53A818EB2215000A8FB8 /* PXArrayPushMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayPushMethod.m; sourceTree = "<group>"; };
+		0AEF53A918EB2215000A8FB8 /* PXArrayReduceMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayReduceMethod.h; sourceTree = "<group>"; };
+		0AEF53AA18EB2215000A8FB8 /* PXArrayReduceMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayReduceMethod.m; sourceTree = "<group>"; };
+		0AEF53AB18EB2215000A8FB8 /* PXArrayReverseMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayReverseMethod.h; sourceTree = "<group>"; };
+		0AEF53AC18EB2215000A8FB8 /* PXArrayReverseMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayReverseMethod.m; sourceTree = "<group>"; };
+		0AEF53AD18EB2215000A8FB8 /* PXArrayShiftMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayShiftMethod.h; sourceTree = "<group>"; };
+		0AEF53AE18EB2215000A8FB8 /* PXArrayShiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayShiftMethod.m; sourceTree = "<group>"; };
+		0AEF53AF18EB2215000A8FB8 /* PXArrayUnshiftMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayUnshiftMethod.h; sourceTree = "<group>"; };
+		0AEF53B018EB2215000A8FB8 /* PXArrayUnshiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayUnshiftMethod.m; sourceTree = "<group>"; };
+		0AEF53B218EB2215000A8FB8 /* PXByteCodeFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeFunction.h; sourceTree = "<group>"; };
+		0AEF53B318EB2215000A8FB8 /* PXByteCodeFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeFunction.m; sourceTree = "<group>"; };
+		0AEF53B418EB2215000A8FB8 /* PXParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXParameter.h; sourceTree = "<group>"; };
+		0AEF53B518EB2215000A8FB8 /* PXParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXParameter.m; sourceTree = "<group>"; };
+		0AEF53B718EB2215000A8FB8 /* PXLogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLogFunction.h; sourceTree = "<group>"; };
+		0AEF53B818EB2215000A8FB8 /* PXLogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLogFunction.m; sourceTree = "<group>"; };
+		0AEF53B918EB2215000A8FB8 /* PXShowTopFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXShowTopFunction.h; sourceTree = "<group>"; };
+		0AEF53BA18EB2215000A8FB8 /* PXShowTopFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXShowTopFunction.m; sourceTree = "<group>"; };
+		0AEF53BC18EB2215000A8FB8 /* PXCosFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCosFunction.h; sourceTree = "<group>"; };
+		0AEF53BD18EB2215000A8FB8 /* PXCosFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCosFunction.m; sourceTree = "<group>"; };
+		0AEF53BE18EB2215000A8FB8 /* PXPowerFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPowerFunction.h; sourceTree = "<group>"; };
+		0AEF53BF18EB2215000A8FB8 /* PXPowerFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPowerFunction.m; sourceTree = "<group>"; };
+		0AEF53C018EB2215000A8FB8 /* PXSinFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSinFunction.h; sourceTree = "<group>"; };
+		0AEF53C118EB2215000A8FB8 /* PXSinFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSinFunction.m; sourceTree = "<group>"; };
+		0AEF53C218EB2215000A8FB8 /* PXSquareRootFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSquareRootFunction.h; sourceTree = "<group>"; };
+		0AEF53C318EB2215000A8FB8 /* PXSquareRootFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSquareRootFunction.m; sourceTree = "<group>"; };
+		0AEF53C518EB2215000A8FB8 /* PXObjectForEachMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectForEachMethod.h; sourceTree = "<group>"; };
+		0AEF53C618EB2215000A8FB8 /* PXObjectForEachMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectForEachMethod.m; sourceTree = "<group>"; };
+		0AEF53C718EB2215000A8FB8 /* PXObjectLengthMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectLengthMethod.h; sourceTree = "<group>"; };
+		0AEF53C818EB2215000A8FB8 /* PXObjectLengthMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectLengthMethod.m; sourceTree = "<group>"; };
+		0AEF53C918EB2215000A8FB8 /* PXObjectReverseMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectReverseMethod.h; sourceTree = "<group>"; };
+		0AEF53CA18EB2215000A8FB8 /* PXObjectReverseMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectReverseMethod.m; sourceTree = "<group>"; };
+		0AEF53CD18EB2215000A8FB8 /* PXLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLexeme.h; sourceTree = "<group>"; };
+		0AEF53CE18EB2215000A8FB8 /* PXParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXParser.h; sourceTree = "<group>"; };
+		0AEF53CF18EB2215000A8FB8 /* PXParserBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXParserBase.h; sourceTree = "<group>"; };
+		0AEF53D018EB2215000A8FB8 /* PXParserBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXParserBase.m; sourceTree = "<group>"; };
+		0AEF53D118EB2215000A8FB8 /* PXSourceEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceEmitter.h; sourceTree = "<group>"; };
+		0AEF53D218EB2215000A8FB8 /* PXSourceWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXSourceWriter.h; sourceTree = "<group>"; };
+		0AEF53D318EB2215000A8FB8 /* PXSourceWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXSourceWriter.m; sourceTree = "<group>"; };
+		0AEF53D518EB2215000A8FB8 /* PXByteCodeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeBuilder.h; sourceTree = "<group>"; };
+		0AEF53D618EB2215000A8FB8 /* PXByteCodeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeBuilder.m; sourceTree = "<group>"; };
+		0AEF53D718EB2215000A8FB8 /* PXExpressionByteCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionByteCode.h; sourceTree = "<group>"; };
+		0AEF53D818EB2215000A8FB8 /* PXExpressionByteCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionByteCode.m; sourceTree = "<group>"; };
+		0AEF53D918EB2215000A8FB8 /* PXExpressionInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionInstruction.h; sourceTree = "<group>"; };
+		0AEF53DA18EB2215000A8FB8 /* PXExpressionInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionInstruction.m; sourceTree = "<group>"; };
+		0AEF53DB18EB2215000A8FB8 /* PXExpressionInstructionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionInstructionType.h; sourceTree = "<group>"; };
+		0AEF53DC18EB2215000A8FB8 /* PXInstructionCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXInstructionCounter.h; sourceTree = "<group>"; };
+		0AEF53DD18EB2215000A8FB8 /* PXInstructionCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInstructionCounter.m; sourceTree = "<group>"; };
+		0AEF53DE18EB2215000A8FB8 /* PXInstructionDisassembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXInstructionDisassembler.h; sourceTree = "<group>"; };
+		0AEF53DF18EB2215000A8FB8 /* PXInstructionDisassembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInstructionDisassembler.m; sourceTree = "<group>"; };
+		0AEF53E018EB2215000A8FB8 /* PXInstructionProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXInstructionProcessor.h; sourceTree = "<group>"; };
+		0AEF53E118EB2215000A8FB8 /* PXInstructionProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInstructionProcessor.m; sourceTree = "<group>"; };
+		0AEF53E218EB2215000A8FB8 /* PXPushValueInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPushValueInstruction.h; sourceTree = "<group>"; };
+		0AEF53E318EB2215000A8FB8 /* PXPushValueInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPushValueInstruction.m; sourceTree = "<group>"; };
+		0AEF53E618EB2215000A8FB8 /* PXBlockNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBlockNode.h; sourceTree = "<group>"; };
+		0AEF53E718EB2215000A8FB8 /* PXBlockNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBlockNode.m; sourceTree = "<group>"; };
+		0AEF53E818EB2215000A8FB8 /* PXExpressionNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionNode.h; sourceTree = "<group>"; };
+		0AEF53E918EB2215000A8FB8 /* PXGenericNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXGenericNode.h; sourceTree = "<group>"; };
+		0AEF53EA18EB2215000A8FB8 /* PXGenericNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXGenericNode.m; sourceTree = "<group>"; };
+		0AEF53EB18EB2215000A8FB8 /* PXExpressionAssembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionAssembler.h; sourceTree = "<group>"; };
+		0AEF53EC18EB2215000A8FB8 /* PXExpressionAssembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionAssembler.m; sourceTree = "<group>"; };
+		0AEF53ED18EB2215000A8FB8 /* PXExpressionLexeme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionLexeme.h; sourceTree = "<group>"; };
+		0AEF53EE18EB2215000A8FB8 /* PXExpressionLexeme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionLexeme.m; sourceTree = "<group>"; };
+		0AEF53EF18EB2215000A8FB8 /* PXExpressionLexemeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionLexemeType.h; sourceTree = "<group>"; };
+		0AEF53F018EB2215000A8FB8 /* PXExpressionLexer.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXExpressionLexer.lm; sourceTree = "<group>"; };
+		0AEF53F118EB2215000A8FB8 /* PXExpressionNodeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionNodeBuilder.h; sourceTree = "<group>"; };
+		0AEF53F218EB2215000A8FB8 /* PXExpressionNodeBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionNodeBuilder.m; sourceTree = "<group>"; };
+		0AEF53F318EB2215000A8FB8 /* PXExpressionNodeCompiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionNodeCompiler.h; sourceTree = "<group>"; };
+		0AEF53F418EB2215000A8FB8 /* PXExpressionNodeCompiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionNodeCompiler.m; sourceTree = "<group>"; };
+		0AEF53F518EB2215000A8FB8 /* PXExpressionNodeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionNodeUtils.h; sourceTree = "<group>"; };
+		0AEF53F618EB2215000A8FB8 /* PXExpressionNodeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionNodeUtils.m; sourceTree = "<group>"; };
+		0AEF53F718EB2215000A8FB8 /* PXExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionParser.h; sourceTree = "<group>"; };
+		0AEF53F818EB2215000A8FB8 /* PXExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionParser.m; sourceTree = "<group>"; };
+		0AEF53F918EB2215000A8FB8 /* pixate-expression-machine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixate-expression-machine-Prefix.pch"; sourceTree = "<group>"; };
+		0AEF53FA18EB2215000A8FB8 /* PXExpressionEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionEnvironment.h; sourceTree = "<group>"; };
+		0AEF53FB18EB2215000A8FB8 /* PXExpressionEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionEnvironment.m; sourceTree = "<group>"; };
+		0AEF53FC18EB2215000A8FB8 /* PXExpressionUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionUnit.h; sourceTree = "<group>"; };
+		0AEF53FD18EB2215000A8FB8 /* PXExpressionUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionUnit.m; sourceTree = "<group>"; };
+		0AEF53FE18EB2215000A8FB8 /* PXScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXScriptManager.h; sourceTree = "<group>"; };
+		0AEF53FF18EB2215000A8FB8 /* PXScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXScriptManager.m; sourceTree = "<group>"; };
+		0AEF540118EB2215000A8FB8 /* built-ins.em */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.em"; sourceTree = "<group>"; };
+		0AEF540218EB2215000A8FB8 /* built-ins.ema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.ema"; sourceTree = "<group>"; };
+		0AEF540318EB2215000A8FB8 /* embedResources.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = embedResources.pl; sourceTree = "<group>"; };
+		0AEF540518EB2215000A8FB8 /* PXBuiltInScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBuiltInScope.h; sourceTree = "<group>"; };
+		0AEF540618EB2215000A8FB8 /* PXBuiltInScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBuiltInScope.m; sourceTree = "<group>"; };
+		0AEF540718EB2215000A8FB8 /* PXBuiltInSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBuiltInSource.h; sourceTree = "<group>"; };
+		0AEF540818EB2215000A8FB8 /* PXBuiltInSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBuiltInSource.m; sourceTree = "<group>"; };
+		0AEF540918EB2215000A8FB8 /* PXExpressionScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionScope.h; sourceTree = "<group>"; };
+		0AEF540A18EB2215000A8FB8 /* PXScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXScope.h; sourceTree = "<group>"; };
+		0AEF540B18EB2215000A8FB8 /* PXScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXScope.m; sourceTree = "<group>"; };
+		0AEF540C18EB2215000A8FB8 /* PXScopeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXScopeBase.h; sourceTree = "<group>"; };
+		0AEF540D18EB2215000A8FB8 /* PXScopeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXScopeBase.m; sourceTree = "<group>"; };
+		0AEF540F18EB2215000A8FB8 /* PXArrayValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayValue.h; sourceTree = "<group>"; };
+		0AEF541018EB2215000A8FB8 /* PXArrayValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayValue.m; sourceTree = "<group>"; };
+		0AEF541118EB2215000A8FB8 /* PXBlockValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBlockValue.h; sourceTree = "<group>"; };
+		0AEF541218EB2215000A8FB8 /* PXBlockValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBlockValue.m; sourceTree = "<group>"; };
+		0AEF541318EB2215000A8FB8 /* PXBooleanValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXBooleanValue.h; sourceTree = "<group>"; };
+		0AEF541418EB2215000A8FB8 /* PXBooleanValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXBooleanValue.m; sourceTree = "<group>"; };
+		0AEF541518EB2215000A8FB8 /* PXDoubleValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDoubleValue.h; sourceTree = "<group>"; };
+		0AEF541618EB2215000A8FB8 /* PXDoubleValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDoubleValue.m; sourceTree = "<group>"; };
+		0AEF541718EB2215000A8FB8 /* PXExpressionArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionArray.h; sourceTree = "<group>"; };
+		0AEF541818EB2215000A8FB8 /* PXExpressionFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionFunction.h; sourceTree = "<group>"; };
+		0AEF541918EB2215000A8FB8 /* PXExpressionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionObject.h; sourceTree = "<group>"; };
+		0AEF541A18EB2215000A8FB8 /* PXExpressionValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionValue.h; sourceTree = "<group>"; };
+		0AEF541B18EB2215000A8FB8 /* PXExpressionValueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionValueBase.h; sourceTree = "<group>"; };
+		0AEF541C18EB2215000A8FB8 /* PXExpressionValueBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionValueBase.m; sourceTree = "<group>"; };
+		0AEF541D18EB2215000A8FB8 /* PXFunctionValueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFunctionValueBase.h; sourceTree = "<group>"; };
+		0AEF541E18EB2215000A8FB8 /* PXFunctionValueBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFunctionValueBase.m; sourceTree = "<group>"; };
+		0AEF541F18EB2215000A8FB8 /* PXMarkValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMarkValue.h; sourceTree = "<group>"; };
+		0AEF542018EB2215000A8FB8 /* PXMarkValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMarkValue.m; sourceTree = "<group>"; };
+		0AEF542118EB2215000A8FB8 /* PXNullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNullValue.h; sourceTree = "<group>"; };
+		0AEF542218EB2215000A8FB8 /* PXNullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNullValue.m; sourceTree = "<group>"; };
+		0AEF542318EB2215000A8FB8 /* PXObjectValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectValue.h; sourceTree = "<group>"; };
+		0AEF542418EB2216000A8FB8 /* PXObjectValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectValue.m; sourceTree = "<group>"; };
+		0AEF542518EB2216000A8FB8 /* PXStringValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStringValue.h; sourceTree = "<group>"; };
+		0AEF542618EB2216000A8FB8 /* PXStringValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStringValue.m; sourceTree = "<group>"; };
+		0AEF542718EB2216000A8FB8 /* PXUndefinedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXUndefinedValue.h; sourceTree = "<group>"; };
+		0AEF542818EB2216000A8FB8 /* PXUndefinedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXUndefinedValue.m; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
 		9C23047218DA126300969D18 /* MABaseFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseFuture.m; sourceTree = "<group>"; };
@@ -2526,7 +2755,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C19EE0D18E5F6A0000F66D4 /* libpixate-expression-machine.a in Frameworks */,
 				9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */,
 				9C84A64C18AE9CB600E7CDA7 /* XCTest.framework in Frameworks */,
 				9C84A64F18AE9CB600E7CDA7 /* UIKit.framework in Frameworks */,
@@ -2556,23 +2784,271 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AEF539618EB2215000A8FB8 /* ExpressionMachine */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF539718EB2215000A8FB8 /* Bridge */,
+				0AEF539D18EB2215000A8FB8 /* BuiltIns */,
+				0AEF53CB18EB2215000A8FB8 /* Common */,
+				0AEF53D418EB2215000A8FB8 /* Instructions */,
+				0AEF53E418EB2215000A8FB8 /* Parsing */,
+				0AEF53F918EB2215000A8FB8 /* pixate-expression-machine-Prefix.pch */,
+				0AEF53FA18EB2215000A8FB8 /* PXExpressionEnvironment.h */,
+				0AEF53FB18EB2215000A8FB8 /* PXExpressionEnvironment.m */,
+				0AEF53FC18EB2215000A8FB8 /* PXExpressionUnit.h */,
+				0AEF53FD18EB2215000A8FB8 /* PXExpressionUnit.m */,
+				0AEF53FE18EB2215000A8FB8 /* PXScriptManager.h */,
+				0AEF53FF18EB2215000A8FB8 /* PXScriptManager.m */,
+				0AEF540018EB2215000A8FB8 /* Resources */,
+				0AEF540418EB2215000A8FB8 /* Scopes */,
+				0AEF540E18EB2215000A8FB8 /* Values */,
+			);
+			name = ExpressionMachine;
+			path = "../submodules/pixate-expression-machine/src/ExpressionMachine";
+			sourceTree = "<group>";
+		};
+		0AEF539718EB2215000A8FB8 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF539818EB2215000A8FB8 /* PXDoubleProperty.h */,
+				0AEF539918EB2215000A8FB8 /* PXDoubleProperty.m */,
+				0AEF539A18EB2215000A8FB8 /* PXExpressionExports.h */,
+				0AEF539B18EB2215000A8FB8 /* PXObjectValueWrapper.h */,
+				0AEF539C18EB2215000A8FB8 /* PXObjectValueWrapper.m */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		0AEF539D18EB2215000A8FB8 /* BuiltIns */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF539E18EB2215000A8FB8 /* Arrays */,
+				0AEF53B118EB2215000A8FB8 /* ByteCode */,
+				0AEF53B618EB2215000A8FB8 /* Logging */,
+				0AEF53BB18EB2215000A8FB8 /* Math */,
+				0AEF53C418EB2215000A8FB8 /* Objects */,
+			);
+			path = BuiltIns;
+			sourceTree = "<group>";
+		};
+		0AEF539E18EB2215000A8FB8 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF539F18EB2215000A8FB8 /* PXArrayForEachMethod.h */,
+				0AEF53A018EB2215000A8FB8 /* PXArrayForEachMethod.m */,
+				0AEF53A118EB2215000A8FB8 /* PXArrayLengthMethod.h */,
+				0AEF53A218EB2215000A8FB8 /* PXArrayLengthMethod.m */,
+				0AEF53A318EB2215000A8FB8 /* PXArrayMapMethod.h */,
+				0AEF53A418EB2215000A8FB8 /* PXArrayMapMethod.m */,
+				0AEF53A518EB2215000A8FB8 /* PXArrayPopMethod.h */,
+				0AEF53A618EB2215000A8FB8 /* PXArrayPopMethod.m */,
+				0AEF53A718EB2215000A8FB8 /* PXArrayPushMethod.h */,
+				0AEF53A818EB2215000A8FB8 /* PXArrayPushMethod.m */,
+				0AEF53A918EB2215000A8FB8 /* PXArrayReduceMethod.h */,
+				0AEF53AA18EB2215000A8FB8 /* PXArrayReduceMethod.m */,
+				0AEF53AB18EB2215000A8FB8 /* PXArrayReverseMethod.h */,
+				0AEF53AC18EB2215000A8FB8 /* PXArrayReverseMethod.m */,
+				0AEF53AD18EB2215000A8FB8 /* PXArrayShiftMethod.h */,
+				0AEF53AE18EB2215000A8FB8 /* PXArrayShiftMethod.m */,
+				0AEF53AF18EB2215000A8FB8 /* PXArrayUnshiftMethod.h */,
+				0AEF53B018EB2215000A8FB8 /* PXArrayUnshiftMethod.m */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		0AEF53B118EB2215000A8FB8 /* ByteCode */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53B218EB2215000A8FB8 /* PXByteCodeFunction.h */,
+				0AEF53B318EB2215000A8FB8 /* PXByteCodeFunction.m */,
+				0AEF53B418EB2215000A8FB8 /* PXParameter.h */,
+				0AEF53B518EB2215000A8FB8 /* PXParameter.m */,
+			);
+			path = ByteCode;
+			sourceTree = "<group>";
+		};
+		0AEF53B618EB2215000A8FB8 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53B718EB2215000A8FB8 /* PXLogFunction.h */,
+				0AEF53B818EB2215000A8FB8 /* PXLogFunction.m */,
+				0AEF53B918EB2215000A8FB8 /* PXShowTopFunction.h */,
+				0AEF53BA18EB2215000A8FB8 /* PXShowTopFunction.m */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		0AEF53BB18EB2215000A8FB8 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53BC18EB2215000A8FB8 /* PXCosFunction.h */,
+				0AEF53BD18EB2215000A8FB8 /* PXCosFunction.m */,
+				0AEF53BE18EB2215000A8FB8 /* PXPowerFunction.h */,
+				0AEF53BF18EB2215000A8FB8 /* PXPowerFunction.m */,
+				0AEF53C018EB2215000A8FB8 /* PXSinFunction.h */,
+				0AEF53C118EB2215000A8FB8 /* PXSinFunction.m */,
+				0AEF53C218EB2215000A8FB8 /* PXSquareRootFunction.h */,
+				0AEF53C318EB2215000A8FB8 /* PXSquareRootFunction.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		0AEF53C418EB2215000A8FB8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53C518EB2215000A8FB8 /* PXObjectForEachMethod.h */,
+				0AEF53C618EB2215000A8FB8 /* PXObjectForEachMethod.m */,
+				0AEF53C718EB2215000A8FB8 /* PXObjectLengthMethod.h */,
+				0AEF53C818EB2215000A8FB8 /* PXObjectLengthMethod.m */,
+				0AEF53C918EB2215000A8FB8 /* PXObjectReverseMethod.h */,
+				0AEF53CA18EB2215000A8FB8 /* PXObjectReverseMethod.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		0AEF53CB18EB2215000A8FB8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53CC18EB2215000A8FB8 /* Parsing */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0AEF53CC18EB2215000A8FB8 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53CD18EB2215000A8FB8 /* PXLexeme.h */,
+				0AEF53CE18EB2215000A8FB8 /* PXParser.h */,
+				0AEF53CF18EB2215000A8FB8 /* PXParserBase.h */,
+				0AEF53D018EB2215000A8FB8 /* PXParserBase.m */,
+				0AEF53D118EB2215000A8FB8 /* PXSourceEmitter.h */,
+				0AEF53D218EB2215000A8FB8 /* PXSourceWriter.h */,
+				0AEF53D318EB2215000A8FB8 /* PXSourceWriter.m */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		0AEF53D418EB2215000A8FB8 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53D518EB2215000A8FB8 /* PXByteCodeBuilder.h */,
+				0AEF53D618EB2215000A8FB8 /* PXByteCodeBuilder.m */,
+				0AEF53D718EB2215000A8FB8 /* PXExpressionByteCode.h */,
+				0AEF53D818EB2215000A8FB8 /* PXExpressionByteCode.m */,
+				0AEF53D918EB2215000A8FB8 /* PXExpressionInstruction.h */,
+				0AEF53DA18EB2215000A8FB8 /* PXExpressionInstruction.m */,
+				0AEF53DB18EB2215000A8FB8 /* PXExpressionInstructionType.h */,
+				0AEF53DC18EB2215000A8FB8 /* PXInstructionCounter.h */,
+				0AEF53DD18EB2215000A8FB8 /* PXInstructionCounter.m */,
+				0AEF53DE18EB2215000A8FB8 /* PXInstructionDisassembler.h */,
+				0AEF53DF18EB2215000A8FB8 /* PXInstructionDisassembler.m */,
+				0AEF53E018EB2215000A8FB8 /* PXInstructionProcessor.h */,
+				0AEF53E118EB2215000A8FB8 /* PXInstructionProcessor.m */,
+				0AEF53E218EB2215000A8FB8 /* PXPushValueInstruction.h */,
+				0AEF53E318EB2215000A8FB8 /* PXPushValueInstruction.m */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		0AEF53E418EB2215000A8FB8 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53E518EB2215000A8FB8 /* Model */,
+				0AEF53EB18EB2215000A8FB8 /* PXExpressionAssembler.h */,
+				0AEF53EC18EB2215000A8FB8 /* PXExpressionAssembler.m */,
+				0AEF53ED18EB2215000A8FB8 /* PXExpressionLexeme.h */,
+				0AEF53EE18EB2215000A8FB8 /* PXExpressionLexeme.m */,
+				0AEF53EF18EB2215000A8FB8 /* PXExpressionLexemeType.h */,
+				0AEF53F018EB2215000A8FB8 /* PXExpressionLexer.lm */,
+				0AEF53F118EB2215000A8FB8 /* PXExpressionNodeBuilder.h */,
+				0AEF53F218EB2215000A8FB8 /* PXExpressionNodeBuilder.m */,
+				0AEF53F318EB2215000A8FB8 /* PXExpressionNodeCompiler.h */,
+				0AEF53F418EB2215000A8FB8 /* PXExpressionNodeCompiler.m */,
+				0AEF53F518EB2215000A8FB8 /* PXExpressionNodeUtils.h */,
+				0AEF53F618EB2215000A8FB8 /* PXExpressionNodeUtils.m */,
+				0AEF53F718EB2215000A8FB8 /* PXExpressionParser.h */,
+				0AEF53F818EB2215000A8FB8 /* PXExpressionParser.m */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		0AEF53E518EB2215000A8FB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF53E618EB2215000A8FB8 /* PXBlockNode.h */,
+				0AEF53E718EB2215000A8FB8 /* PXBlockNode.m */,
+				0AEF53E818EB2215000A8FB8 /* PXExpressionNode.h */,
+				0AEF53E918EB2215000A8FB8 /* PXGenericNode.h */,
+				0AEF53EA18EB2215000A8FB8 /* PXGenericNode.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AEF540018EB2215000A8FB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF540118EB2215000A8FB8 /* built-ins.em */,
+				0AEF540218EB2215000A8FB8 /* built-ins.ema */,
+				0AEF540318EB2215000A8FB8 /* embedResources.pl */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0AEF540418EB2215000A8FB8 /* Scopes */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF540518EB2215000A8FB8 /* PXBuiltInScope.h */,
+				0AEF540618EB2215000A8FB8 /* PXBuiltInScope.m */,
+				0AEF540718EB2215000A8FB8 /* PXBuiltInSource.h */,
+				0AEF540818EB2215000A8FB8 /* PXBuiltInSource.m */,
+				0AEF540918EB2215000A8FB8 /* PXExpressionScope.h */,
+				0AEF540A18EB2215000A8FB8 /* PXScope.h */,
+				0AEF540B18EB2215000A8FB8 /* PXScope.m */,
+				0AEF540C18EB2215000A8FB8 /* PXScopeBase.h */,
+				0AEF540D18EB2215000A8FB8 /* PXScopeBase.m */,
+			);
+			path = Scopes;
+			sourceTree = "<group>";
+		};
+		0AEF540E18EB2215000A8FB8 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				0AEF540F18EB2215000A8FB8 /* PXArrayValue.h */,
+				0AEF541018EB2215000A8FB8 /* PXArrayValue.m */,
+				0AEF541118EB2215000A8FB8 /* PXBlockValue.h */,
+				0AEF541218EB2215000A8FB8 /* PXBlockValue.m */,
+				0AEF541318EB2215000A8FB8 /* PXBooleanValue.h */,
+				0AEF541418EB2215000A8FB8 /* PXBooleanValue.m */,
+				0AEF541518EB2215000A8FB8 /* PXDoubleValue.h */,
+				0AEF541618EB2215000A8FB8 /* PXDoubleValue.m */,
+				0AEF541718EB2215000A8FB8 /* PXExpressionArray.h */,
+				0AEF541818EB2215000A8FB8 /* PXExpressionFunction.h */,
+				0AEF541918EB2215000A8FB8 /* PXExpressionObject.h */,
+				0AEF541A18EB2215000A8FB8 /* PXExpressionValue.h */,
+				0AEF541B18EB2215000A8FB8 /* PXExpressionValueBase.h */,
+				0AEF541C18EB2215000A8FB8 /* PXExpressionValueBase.m */,
+				0AEF541D18EB2215000A8FB8 /* PXFunctionValueBase.h */,
+				0AEF541E18EB2215000A8FB8 /* PXFunctionValueBase.m */,
+				0AEF541F18EB2215000A8FB8 /* PXMarkValue.h */,
+				0AEF542018EB2215000A8FB8 /* PXMarkValue.m */,
+				0AEF542118EB2215000A8FB8 /* PXNullValue.h */,
+				0AEF542218EB2215000A8FB8 /* PXNullValue.m */,
+				0AEF542318EB2215000A8FB8 /* PXObjectValue.h */,
+				0AEF542418EB2216000A8FB8 /* PXObjectValue.m */,
+				0AEF542518EB2216000A8FB8 /* PXStringValue.h */,
+				0AEF542618EB2216000A8FB8 /* PXStringValue.m */,
+				0AEF542718EB2216000A8FB8 /* PXUndefinedValue.h */,
+				0AEF542818EB2216000A8FB8 /* PXUndefinedValue.m */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
 		9C10E89718E5ECA7001299AC /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */,
+				0AEF539618EB2215000A8FB8 /* ExpressionMachine */,
 			);
 			name = Submodules;
-			sourceTree = "<group>";
-		};
-		9C10E89918E5ECC1001299AC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9C10E89E18E5ECC1001299AC /* libpixate-expression-machine.a */,
-				9C10E8A018E5ECC1001299AC /* pixate-expression-machineTests.xctest */,
-				0A9EDC3718E6226500C91E97 /* libpixate-expression-machine-mac.a */,
-				0A9EDC3918E6226500C91E97 /* pixate-expression-machine-macTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9C23046F18DA126300969D18 /* MAFuture */ = {
@@ -4353,10 +4829,14 @@
 			files = (
 				9C98676918C0499000C71922 /* PXImageUtils.h in Headers */,
 				9C98673C18C0499000C71922 /* PXBorderStyler.h in Headers */,
+				0AEF544A18EB2216000A8FB8 /* PXPowerFunction.h in Headers */,
 				9C9866F518C0499000C71922 /* PXBorderInfo.h in Headers */,
 				9C98684818C04BA000C71922 /* UINavigationItem+PXStyling.h in Headers */,
 				9C98667918C0499000C71922 /* NSDictionary+PXCSSEncoding.h in Headers */,
+				0AEF543418EB2216000A8FB8 /* PXArrayPopMethod.h in Headers */,
 				9C9865FB18C0499000C71922 /* PXGradient.h in Headers */,
+				0AEF543E18EB2216000A8FB8 /* PXArrayUnshiftMethod.h in Headers */,
+				0AEF548D18EB2216000A8FB8 /* PXScopeBase.h in Headers */,
 				9C98676718C0499000C71922 /* PXGestalt.h in Headers */,
 				9C98673018C0499000C71922 /* PXTypeSelector.h in Headers */,
 				0A9EDC4818E6294600C91E97 /* PXLexemeCreator.h in Headers */,
@@ -4364,18 +4844,25 @@
 				9C9866FB18C0499000C71922 /* PXMacrosCommon.h in Headers */,
 				9C9865F418C0499000C71922 /* PXEllipticalArc.h in Headers */,
 				9C98662A18C0499000C71922 /* PXRenderable.h in Headers */,
+				0AEF544818EB2216000A8FB8 /* PXCosFunction.h in Headers */,
+				0AEF547B18EB2216000A8FB8 /* PXExpressionNodeUtils.h in Headers */,
 				9C98664918C0499000C71922 /* DDFileLogger.h in Headers */,
 				9C98674A18C0499000C71922 /* PXLayoutStyler.h in Headers */,
 				9C98667D18C0499000C71922 /* NSMutableDictionary+PXObject.h in Headers */,
+				0AEF545418EB2216000A8FB8 /* PXObjectReverseMethod.h in Headers */,
 				9C98661D18C0499000C71922 /* PXEllipse.h in Headers */,
 				9C9865F718C0499000C71922 /* PXOffsets.h in Headers */,
+				0AEF547318EB2216000A8FB8 /* PXExpressionLexeme.h in Headers */,
+				0AEF548618EB2216000A8FB8 /* PXBuiltInScope.h in Headers */,
 				9C98660818C0499000C71922 /* PXSVGLoader.h in Headers */,
 				9C98681218C04BA000C71922 /* PXUIPickerView.h in Headers */,
 				9C98674618C0499000C71922 /* PXGenericStyler.h in Headers */,
+				0AEF546818EB2216000A8FB8 /* PXInstructionProcessor.h in Headers */,
 				9C98681418C04BA000C71922 /* PXUIPickerViewDelegate.h in Headers */,
 				0A49596A18E8C4EA00A55818 /* PXStyleableValue.h in Headers */,
 				9C475B1D18E6183200283A43 /* PXValueParser.h in Headers */,
 				9C9867F618C04BA000C71922 /* PXMKMapView.h in Headers */,
+				0AEF545D18EB2216000A8FB8 /* PXByteCodeBuilder.h in Headers */,
 				9C98682A18C04BA000C71922 /* PXUITableViewCell.h in Headers */,
 				9C98682618C04BA000C71922 /* PXUITabBar.h in Headers */,
 				9C98677818C049DF00C71922 /* objc.h in Headers */,
@@ -4386,30 +4873,41 @@
 				9C9865EA18C0499000C71922 /* PXForceLoadPixateCategories.h in Headers */,
 				9C98665118C0499000C71922 /* PXNotificationManager.h in Headers */,
 				9C98676D18C0499000C71922 /* PXRuntimeUtils.h in Headers */,
+				0AEF545618EB2216000A8FB8 /* PXLexeme.h in Headers */,
 				9C9865FD18C0499000C71922 /* PXImagePaint.h in Headers */,
 				9C98660618C0499000C71922 /* PXSolidPaint.h in Headers */,
 				9C98670B18C0499000C71922 /* PXStylesheetTokenType.h in Headers */,
 				9C98670318C0499000C71922 /* PXNamedMediaExpression.h in Headers */,
 				9C23048318DA126300969D18 /* MAFuture.h in Headers */,
+				0AEF545B18EB2216000A8FB8 /* PXSourceWriter.h in Headers */,
 				9C98681E18C04BA000C71922 /* PXUISegmentedControl.h in Headers */,
 				9C9867FA18C04BA000C71922 /* PXUIActionSheet.h in Headers */,
 				9C98667518C0499000C71922 /* PXStyleTreeInfo.h in Headers */,
 				9C98674818C0499000C71922 /* PXInsetStyler.h in Headers */,
+				0AEF546F18EB2216000A8FB8 /* PXGenericNode.h in Headers */,
+				0AEF548B18EB2216000A8FB8 /* PXScope.h in Headers */,
 				9C23048A18DA126300969D18 /* MAProxy.h in Headers */,
 				9C475B0818E60EB300283A43 /* PXNumberValueParser.h in Headers */,
+				0AEF545818EB2216000A8FB8 /* PXParserBase.h in Headers */,
 				9C98683218C04BA000C71922 /* PXUITextField.h in Headers */,
 				9C98680018C04BA000C71922 /* PXUICollectionView.h in Headers */,
 				9C98676B18C0499000C71922 /* PXProxy.h in Headers */,
+				0AEF542C18EB2216000A8FB8 /* PXObjectValueWrapper.h in Headers */,
 				9C98660218C0499000C71922 /* PXPaintGroup.h in Headers */,
 				9C23048718DA126300969D18 /* MAMethodSignatureCache.h in Headers */,
 				9C98664018C0499000C71922 /* PXFileFunctionLogFormatter.h in Headers */,
 				9C475B0618E60EB300283A43 /* PXNameValueParser.h in Headers */,
 				9C9867FE18C04BA000C71922 /* PXUIButton.h in Headers */,
+				0AEF544E18EB2216000A8FB8 /* PXSquareRootFunction.h in Headers */,
 				9C98662418C0499000C71922 /* PXPie.h in Headers */,
 				9C98673218C0499000C71922 /* PXBoxModel.h in Headers */,
+				0AEF549118EB2216000A8FB8 /* PXBlockValue.h in Headers */,
 				9C98668A18C0499000C71922 /* PXChildCombinator.h in Headers */,
+				0AEF547918EB2216000A8FB8 /* PXExpressionNodeCompiler.h in Headers */,
 				9C98683818C04BA000C71922 /* PXUIView.h in Headers */,
+				0AEF546118EB2216000A8FB8 /* PXExpressionInstruction.h in Headers */,
 				9C98661818C0499000C71922 /* PXArrowRectangle.h in Headers */,
+				0AEF54A118EB2216000A8FB8 /* PXNullValue.h in Headers */,
 				9C98682818C04BA000C71922 /* PXUITableView.h in Headers */,
 				9C9867F418C04BA000C71922 /* PXMKAnnotationView.h in Headers */,
 				9C9865F218C0499000C71922 /* PXDimension.h in Headers */,
@@ -4420,20 +4918,26 @@
 				9C23048618DA126300969D18 /* MAFutureInternal.h in Headers */,
 				9C98660418C0499000C71922 /* PXRadialGradient.h in Headers */,
 				9C98670918C0499000C71922 /* PXStylesheetParser.h in Headers */,
+				0AEF544018EB2216000A8FB8 /* PXByteCodeFunction.h in Headers */,
+				0AEF548F18EB2216000A8FB8 /* PXArrayValue.h in Headers */,
 				9C2B53A718E748670016CF7F /* PXAnimationTimingFunctionValueParser.h in Headers */,
 				9C98682C18C04BA000C71922 /* PXUITableViewCellContentView.h in Headers */,
 				0A9EDC4918E6294600C91E97 /* PXNumberMatcher.h in Headers */,
 				9C98661518C0499000C71922 /* PXShadowPaint.h in Headers */,
+				0AEF546A18EB2216000A8FB8 /* PXPushValueInstruction.h in Headers */,
 				9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */,
 				9C98662F18C0499000C71922 /* PXShapeGroup.h in Headers */,
 				9C98666418C0499000C71922 /* PixateFreestyle-Private.h in Headers */,
 				9C98665318C0499000C71922 /* PXWeakWrapper.h in Headers */,
 				9C98683A18C04BA000C71922 /* PXUIWebView.h in Headers */,
 				9C98661F18C0499000C71922 /* PXLine.h in Headers */,
+				0AEF545718EB2216000A8FB8 /* PXParser.h in Headers */,
+				0AEF542918EB2216000A8FB8 /* PXDoubleProperty.h in Headers */,
 				9C98675318C0499000C71922 /* PXStylerBase.h in Headers */,
 				9C98672F18C0499000C71922 /* PXSelector.h in Headers */,
 				9C98680818C04BA000C71922 /* PXUIImageView.h in Headers */,
 				9C98680C18C04BA000C71922 /* PXUILayoutContainerView.h in Headers */,
+				0AEF543818EB2216000A8FB8 /* PXArrayReduceMethod.h in Headers */,
 				9C2B53A318E748670016CF7F /* PXAnimationInfoValueParser.h in Headers */,
 				9C9867F018C04BA000C71922 /* PXForceLoadControls.h in Headers */,
 				9C98667B18C0499000C71922 /* NSDictionary+PXObject.h in Headers */,
@@ -4441,42 +4945,56 @@
 				9C98683C18C04BA000C71922 /* PXUIWindow.h in Headers */,
 				9C98676118C0499000C71922 /* PXClassUtils.h in Headers */,
 				9C98661618C0499000C71922 /* PXArc.h in Headers */,
+				0AEF542E18EB2216000A8FB8 /* PXArrayForEachMethod.h in Headers */,
 				9C98661B18C0499000C71922 /* PXCircle.h in Headers */,
 				9C98681018C04BA000C71922 /* PXUIPageControl.h in Headers */,
+				0AEF548A18EB2216000A8FB8 /* PXExpressionScope.h in Headers */,
 				9C98662218C0499000C71922 /* PXPath.h in Headers */,
 				9C98663C18C0499000C71922 /* PXShapeView.h in Headers */,
+				0AEF543C18EB2216000A8FB8 /* PXArrayShiftMethod.h in Headers */,
 				9C9865F018C0499000C71922 /* UIColor+PXColors.h in Headers */,
+				0AEF545218EB2216000A8FB8 /* PXObjectLengthMethod.h in Headers */,
+				0AEF546C18EB2216000A8FB8 /* PXBlockNode.h in Headers */,
 				9C98682E18C04BA000C71922 /* PXUITableViewDelegate.h in Headers */,
 				9C9867EC18C04BA000C71922 /* PXKeyframeAnimation.h in Headers */,
 				9C9867FC18C04BA000C71922 /* PXUIActivityIndicatorView.h in Headers */,
+				0AEF54A718EB2216000A8FB8 /* PXUndefinedValue.h in Headers */,
 				9C9865E618C0499000C71922 /* NSMutableArray+StackAdditions.h in Headers */,
+				0AEF543218EB2216000A8FB8 /* PXArrayMapMethod.h in Headers */,
 				9C98670118C0499000C71922 /* PXMediaGroup.h in Headers */,
 				9C98660E18C0499000C71922 /* PXTransformTokenType.h in Headers */,
 				9C98662D18C0499000C71922 /* PXShapeDocument.h in Headers */,
 				9C98684E18C04C4700C71922 /* PixateFreestyle.h in Headers */,
 				9C98660118C0499000C71922 /* PXPaint.h in Headers */,
+				0AEF547718EB2216000A8FB8 /* PXExpressionNodeBuilder.h in Headers */,
 				9C98675D18C0499000C71922 /* PXTransitionStyler.h in Headers */,
 				9C2B53A918E748670016CF7F /* PXTransitionInfoValueParser.h in Headers */,
 				9C9866FF18C0499000C71922 /* PXMediaExpressionGroup.h in Headers */,
 				9C98672118C0499000C71922 /* PXAttributeSelectorOperator.h in Headers */,
 				9C2B53A118E748670016CF7F /* PXAnimationFillModeValueParser.h in Headers */,
 				9C98664318C0499000C71922 /* PXLoggingUtils.h in Headers */,
+				0AEF549718EB2216000A8FB8 /* PXExpressionArray.h in Headers */,
 				9C98662B18C0499000C71922 /* PXShape.h in Headers */,
 				9C9866EF18C0499000C71922 /* PXFontEntry.h in Headers */,
 				9C98674C18C0499000C71922 /* PXOpacityStyler.h in Headers */,
 				9C98664D18C0499000C71922 /* DDTTYLogger.h in Headers */,
 				9C98677A18C04A5100C71922 /* NSObject+PXClass.h in Headers */,
 				9C98673618C0499000C71922 /* PXAttributedTextStyler.h in Headers */,
+				0AEF548818EB2216000A8FB8 /* PXBuiltInSource.h in Headers */,
 				9C98680218C04BA000C71922 /* PXUICollectionViewCell.h in Headers */,
 				9C98662818C0499000C71922 /* PXRectangle.h in Headers */,
 				9C98674418C0499000C71922 /* PXFontStyler.h in Headers */,
+				0AEF543018EB2216000A8FB8 /* PXArrayLengthMethod.h in Headers */,
 				9C9865EC18C0499000C71922 /* NSMutableArray+QueueAdditions.h in Headers */,
 				9C98672B18C0499000C71922 /* PXPseudoClassPredicate.h in Headers */,
 				9C98668D18C0499000C71922 /* PXCombinatorBase.h in Headers */,
+				0AEF548418EB2216000A8FB8 /* PXScriptManager.h in Headers */,
 				9C98681618C04BA000C71922 /* PXUIProgressView.h in Headers */,
 				9C98668F18C0499000C71922 /* PXDescendantCombinator.h in Headers */,
+				0AEF549518EB2216000A8FB8 /* PXDoubleValue.h in Headers */,
 				9C98664518C0499000C71922 /* DDAbstractDatabaseLogger.h in Headers */,
 				9C98671B18C0499000C71922 /* PXStylesheet.h in Headers */,
+				0AEF547118EB2216000A8FB8 /* PXExpressionAssembler.h in Headers */,
 				9C98680418C04BA000C71922 /* PXUICollectionViewDelegate.h in Headers */,
 				9C98664F18C0499000C71922 /* PXNotificationInfo.h in Headers */,
 				9C98676F18C0499000C71922 /* PXStyleUtils.h in Headers */,
@@ -4485,9 +5003,13 @@
 				9C9867F218C04BA000C71922 /* PXMKAnnotationContainerView.h in Headers */,
 				9C98668018C0499000C71922 /* NSObject+PXStyling.h in Headers */,
 				9C98666718C0499000C71922 /* PixateFreestyleConfiguration.h in Headers */,
+				0AEF546E18EB2216000A8FB8 /* PXExpressionNode.h in Headers */,
 				9C2B53B118E755B80016CF7F /* PXColorValueParser.h in Headers */,
+				0AEF544618EB2216000A8FB8 /* PXShowTopFunction.h in Headers */,
 				9C9867F818C04BA000C71922 /* PXMPVolumeView.h in Headers */,
 				9C98683018C04BA000C71922 /* PXUITableViewHeaderFooterView.h in Headers */,
+				0AEF543A18EB2216000A8FB8 /* PXArrayReverseMethod.h in Headers */,
+				0AEF545A18EB2216000A8FB8 /* PXSourceEmitter.h in Headers */,
 				9C98674018C0499000C71922 /* PXColorStyler.h in Headers */,
 				9C98683418C04BA000C71922 /* PXUITextView.h in Headers */,
 				9C98681C18C04BA000C71922 /* PXUISearchBar.h in Headers */,
@@ -4498,12 +5020,15 @@
 				9C98672518C0499000C71922 /* PXIdSelector.h in Headers */,
 				9C98664718C0499000C71922 /* DDASLLogger.h in Headers */,
 				9C9865F618C0499000C71922 /* PXMath.h in Headers */,
+				0AEF549A18EB2216000A8FB8 /* PXExpressionValue.h in Headers */,
 				9C98668518C0499000C71922 /* UIView+PXStyling-Private.h in Headers */,
 				9C98673E18C0499000C71922 /* PXBoxShadowStyler.h in Headers */,
 				9C98661018C0499000C71922 /* PXGraphics.h in Headers */,
+				0AEF549D18EB2216000A8FB8 /* PXFunctionValueBase.h in Headers */,
 				9C98681A18C04BA000C71922 /* PXUIScrollView.h in Headers */,
 				9C98660C18C0499000C71922 /* PXTransformParser.h in Headers */,
 				9C98671D18C0499000C71922 /* PXValue.h in Headers */,
+				0AEF547518EB2216000A8FB8 /* PXExpressionLexemeType.h in Headers */,
 				9C98671918C0499000C71922 /* PXStyleable.h in Headers */,
 				9C98660A18C0499000C71922 /* PXTransformLexer.h in Headers */,
 				9C98671F18C0499000C71922 /* PXAttributeSelector.h in Headers */,
@@ -4514,24 +5039,32 @@
 				9C98662118C0499000C71922 /* PXPaintable.h in Headers */,
 				9C98675218C0499000C71922 /* PXStyler.h in Headers */,
 				9C98676518C0499000C71922 /* PXFileWatcher.h in Headers */,
+				0AEF544C18EB2216000A8FB8 /* PXSinFunction.h in Headers */,
+				0AEF549918EB2216000A8FB8 /* PXExpressionObject.h in Headers */,
 				9C475B0A18E60EB300283A43 /* PXSecondsValueParser.h in Headers */,
+				0AEF545018EB2216000A8FB8 /* PXObjectForEachMethod.h in Headers */,
 				9C98684118C04BA000C71922 /* PXVirtualStyleableControl.h in Headers */,
 				9C98671118C0499000C71922 /* PXDeclaration.h in Headers */,
 				9C98671A18C0499000C71922 /* PXStylesheet-Private.h in Headers */,
 				9C98673818C0499000C71922 /* PXBarMetricsAdjustmentStyler.h in Headers */,
 				9C98684318C04BA000C71922 /* UIBarButtonItem+PXStyling-Private.h in Headers */,
+				0AEF54A518EB2216000A8FB8 /* PXStringValue.h in Headers */,
+				0AEF543618EB2216000A8FB8 /* PXArrayPushMethod.h in Headers */,
 				9C98668C18C0499000C71922 /* PXCombinator.h in Headers */,
 				9C2B53A518E748670016CF7F /* PXAnimationPlayStateValueParser.h in Headers */,
 				9C98684618C04BA000C71922 /* UIBarItem+PXStyling.h in Headers */,
 				9C98671318C0499000C71922 /* PXDeclarationContainer.h in Headers */,
 				9C98683618C04BA000C71922 /* PXUIToolbar.h in Headers */,
 				9C98671718C0499000C71922 /* PXSpecificity.h in Headers */,
+				0AEF548218EB2216000A8FB8 /* PXExpressionUnit.h in Headers */,
 				9C9866F118C0499000C71922 /* PXFontRegistry.h in Headers */,
 				9C98672D18C0499000C71922 /* PXPseudoClassSelector.h in Headers */,
 				9C98675018C0499000C71922 /* PXShapeStyler.h in Headers */,
 				9C98673A18C0499000C71922 /* PXBarShadowStyler.h in Headers */,
 				9C98662618C0499000C71922 /* PXPolygon.h in Headers */,
 				9C98668318C0499000C71922 /* PXForceLoadStylingCategories.h in Headers */,
+				0AEF545F18EB2216000A8FB8 /* PXExpressionByteCode.h in Headers */,
+				0AEF546618EB2216000A8FB8 /* PXInstructionDisassembler.h in Headers */,
 				9C98677318C0499000C71922 /* PXViewUtils.h in Headers */,
 				9C98680E18C04BA000C71922 /* PXUINavigationBar.h in Headers */,
 				0A9EDC4D18E6294600C91E97 /* PXWordMatcher.h in Headers */,
@@ -4542,39 +5075,52 @@
 				9C98682218C04BA000C71922 /* PXUIStepper.h in Headers */,
 				9C98663118C0499000C71922 /* PXText.h in Headers */,
 				9C98682018C04BA000C71922 /* PXUISlider.h in Headers */,
+				0AEF544418EB2216000A8FB8 /* PXLogFunction.h in Headers */,
+				0AEF547F18EB2216000A8FB8 /* pixate-expression-machine-Prefix.pch in Headers */,
 				9C98684A18C04BA000C71922 /* UITabBarItem+PXStyling.h in Headers */,
+				0AEF544218EB2216000A8FB8 /* PXParameter.h in Headers */,
 				9C9867EE18C04BA000C71922 /* PXKeyframeBlock.h in Headers */,
+				0AEF547D18EB2216000A8FB8 /* PXExpressionParser.h in Headers */,
 				9C98675B18C0499000C71922 /* PXTransformStyler.h in Headers */,
 				9C98670D18C0499000C71922 /* PXURLMatcher.h in Headers */,
 				9C9866FC18C0499000C71922 /* PXStylingMacros.h in Headers */,
 				9C98661A18C0499000C71922 /* PXBoundable.h in Headers */,
 				9C98668818C0499000C71922 /* PXAdjacentSiblingCombinator.h in Headers */,
 				0A9EDC4B18E6294600C91E97 /* PXPatternMatcher.h in Headers */,
+				0AEF542B18EB2216000A8FB8 /* PXExpressionExports.h in Headers */,
 				9C98670518C0499000C71922 /* PXStylesheetLexeme.h in Headers */,
 				9C98669118C0499000C71922 /* PXSiblingCombinator.h in Headers */,
+				0AEF548018EB2216000A8FB8 /* PXExpressionEnvironment.h in Headers */,
 				9C9865FF18C0499000C71922 /* PXLinearGradient.h in Headers */,
 				9C98664218C0499000C71922 /* PXLog.h in Headers */,
+				0AEF546418EB2216000A8FB8 /* PXInstructionCounter.h in Headers */,
 				9C475B0C18E60EB300283A43 /* PXValueLexer.h in Headers */,
 				9C98668618C0499000C71922 /* UIView+PXStyling.h in Headers */,
 				9C98667318C0499000C71922 /* PXStyleInfo.h in Headers */,
 				9C9865E818C0499000C71922 /* NSScanner+PXFloat.h in Headers */,
 				9C98663A18C0499000C71922 /* PXStrokeStroke.h in Headers */,
 				9C98675718C0499000C71922 /* PXTextContentStyler.h in Headers */,
+				0AEF549818EB2216000A8FB8 /* PXExpressionFunction.h in Headers */,
 				9C98672718C0499000C71922 /* PXNotPseudoClass.h in Headers */,
+				0AEF54A318EB2216000A8FB8 /* PXObjectValue.h in Headers */,
 				9C98675518C0499000C71922 /* PXStylerContext.h in Headers */,
+				0AEF549318EB2216000A8FB8 /* PXBooleanValue.h in Headers */,
 				9C98661318C0499000C71922 /* PXShadowGroup.h in Headers */,
 				9C98673418C0499000C71922 /* PXAnimationStyler.h in Headers */,
 				9C9867EA18C04BA000C71922 /* PXKeyframe.h in Headers */,
 				9C98684018C04BA000C71922 /* PXVirtualControl.h in Headers */,
 				9C9866FE18C0499000C71922 /* PXMediaExpression.h in Headers */,
 				9C98674E18C0499000C71922 /* PXPaintStyler.h in Headers */,
+				0AEF549B18EB2216000A8FB8 /* PXExpressionValueBase.h in Headers */,
 				9C98684418C04BA000C71922 /* UIBarButtonItem+PXStyling.h in Headers */,
 				9C9867E818C04BA000C71922 /* PXAnimationPropertyHandler.h in Headers */,
+				0AEF549F18EB2216000A8FB8 /* PXMarkValue.h in Headers */,
 				9C9866F918C0499000C71922 /* PXTransitionRuleSetInfo.h in Headers */,
 				9C98672318C0499000C71922 /* PXClassSelector.h in Headers */,
 				9C98661118C0499000C71922 /* PXShadow.h in Headers */,
 				9C9865F918C0499000C71922 /* PXVector.h in Headers */,
 				9C98677118C0499000C71922 /* PXUtils.h in Headers */,
+				0AEF546318EB2216000A8FB8 /* PXExpressionInstructionType.h in Headers */,
 				9C98681818C04BA000C71922 /* PXUIRefreshControl.h in Headers */,
 				9C98664B18C0499000C71922 /* DDLog.h in Headers */,
 				9C475B0E18E60EB300283A43 /* PXValueParserBase.h in Headers */,
@@ -4693,12 +5239,6 @@
 			mainGroup = 9C84A63118AE9CB600E7CDA7;
 			productRefGroup = 9C84A63B18AE9CB600E7CDA7 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9C10E89918E5ECC1001299AC /* Products */;
-					ProjectRef = 9C10E89818E5ECC1001299AC /* pixate-expression-machine.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */,
@@ -4709,37 +5249,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		0A9EDC3718E6226500C91E97 /* libpixate-expression-machine-mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpixate-expression-machine-mac.a";
-			remoteRef = 0A9EDC3618E6226500C91E97 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0A9EDC3918E6226500C91E97 /* pixate-expression-machine-macTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "pixate-expression-machine-macTests.xctest";
-			remoteRef = 0A9EDC3818E6226500C91E97 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C10E89E18E5ECC1001299AC /* libpixate-expression-machine.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpixate-expression-machine.a";
-			remoteRef = 9C10E89D18E5ECC1001299AC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C10E8A018E5ECC1001299AC /* pixate-expression-machineTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "pixate-expression-machineTests.xctest";
-			remoteRef = 9C10E89F18E5ECC1001299AC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9C84A64818AE9CB600E7CDA7 /* Resources */ = {
@@ -5509,10 +6018,13 @@
 			files = (
 				9C98680B18C04BA000C71922 /* PXUILabel.m in Sources */,
 				9C475B0718E60EB300283A43 /* PXNameValueParser.m in Sources */,
+				0AEF549C18EB2216000A8FB8 /* PXExpressionValueBase.m in Sources */,
 				9C98683118C04BA000C71922 /* PXUITableViewHeaderFooterView.m in Sources */,
+				0AEF546218EB2216000A8FB8 /* PXExpressionInstruction.m in Sources */,
 				9C98683518C04BA000C71922 /* PXUITextView.m in Sources */,
 				9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */,
 				9C9867F718C04BA000C71922 /* PXMKMapView.m in Sources */,
+				0AEF542F18EB2216000A8FB8 /* PXArrayForEachMethod.m in Sources */,
 				9C98672E18C0499000C71922 /* PXPseudoClassSelector.m in Sources */,
 				9C98681118C04BA000C71922 /* PXUIPageControl.m in Sources */,
 				9C98660F18C0499000C71922 /* PXTransformTokenType.m in Sources */,
@@ -5520,13 +6032,18 @@
 				9C98672C18C0499000C71922 /* PXPseudoClassPredicate.m in Sources */,
 				9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */,
 				9C98673118C0499000C71922 /* PXTypeSelector.m in Sources */,
+				0AEF549E18EB2216000A8FB8 /* PXFunctionValueBase.m in Sources */,
 				9C98681F18C04BA000C71922 /* PXUISegmentedControl.m in Sources */,
 				9C98672A18C0499000C71922 /* PXPseudoClassFunction.m in Sources */,
 				9C98667E18C0499000C71922 /* NSMutableDictionary+PXObject.m in Sources */,
+				0AEF54A618EB2216000A8FB8 /* PXStringValue.m in Sources */,
 				9C475B0918E60EB300283A43 /* PXNumberValueParser.m in Sources */,
 				9C98670C18C0499000C71922 /* PXStylesheetTokenType.m in Sources */,
 				9C98681B18C04BA000C71922 /* PXUIScrollView.m in Sources */,
+				0AEF546B18EB2216000A8FB8 /* PXPushValueInstruction.m in Sources */,
 				9C2B53A018E748670016CF7F /* PXAnimationDirectionValueParser.m in Sources */,
+				0AEF547818EB2216000A8FB8 /* PXExpressionNodeBuilder.m in Sources */,
+				0AEF547C18EB2216000A8FB8 /* PXExpressionNodeUtils.m in Sources */,
 				9C2B53A818E748670016CF7F /* PXAnimationTimingFunctionValueParser.m in Sources */,
 				9C9865EB18C0499000C71922 /* PXForceLoadPixateCategories.m in Sources */,
 				9C98674118C0499000C71922 /* PXColorStyler.m in Sources */,
@@ -5543,10 +6060,12 @@
 				9C98682118C04BA000C71922 /* PXUISlider.m in Sources */,
 				9C98668418C0499000C71922 /* PXForceLoadStylingCategories.m in Sources */,
 				9C98684718C04BA000C71922 /* UIBarItem+PXStyling.m in Sources */,
+				0AEF544718EB2216000A8FB8 /* PXShowTopFunction.m in Sources */,
 				9C98661218C0499000C71922 /* PXShadow.m in Sources */,
 				9C98682D18C04BA000C71922 /* PXUITableViewCellContentView.m in Sources */,
 				9C98663218C0499000C71922 /* PXText.m in Sources */,
 				9C98665018C0499000C71922 /* PXNotificationInfo.m in Sources */,
+				0AEF546718EB2216000A8FB8 /* PXInstructionDisassembler.m in Sources */,
 				9C98684F18C04C4700C71922 /* PixateFreestyle.m in Sources */,
 				9C98680918C04BA000C71922 /* PXUIImageView.m in Sources */,
 				9C98661418C0499000C71922 /* PXShadowGroup.m in Sources */,
@@ -5555,17 +6074,24 @@
 				9C98670218C0499000C71922 /* PXMediaGroup.m in Sources */,
 				9C98681D18C04BA000C71922 /* PXUISearchBar.m in Sources */,
 				9C98680D18C04BA000C71922 /* PXUILayoutContainerView.m in Sources */,
+				0AEF543B18EB2216000A8FB8 /* PXArrayReverseMethod.m in Sources */,
+				0AEF543F18EB2216000A8FB8 /* PXArrayUnshiftMethod.m in Sources */,
+				0AEF545518EB2216000A8FB8 /* PXObjectReverseMethod.m in Sources */,
 				9C98675C18C0499000C71922 /* PXTransformStyler.m in Sources */,
 				9C98677418C0499000C71922 /* PXViewUtils.m in Sources */,
+				0AEF548E18EB2216000A8FB8 /* PXScopeBase.m in Sources */,
 				9C98671618C0499000C71922 /* PXRuleSet.m in Sources */,
 				9C98681518C04BA000C71922 /* PXUIPickerViewDelegate.m in Sources */,
 				9C9867FB18C04BA000C71922 /* PXUIActionSheet.m in Sources */,
 				9C98673318C0499000C71922 /* PXBoxModel.m in Sources */,
+				0AEF549218EB2216000A8FB8 /* PXBlockValue.m in Sources */,
 				9C98661718C0499000C71922 /* PXArc.m in Sources */,
 				9C98683318C04BA000C71922 /* PXUITextField.m in Sources */,
 				9C98681718C04BA000C71922 /* PXUIProgressView.m in Sources */,
 				9C98665218C0499000C71922 /* PXNotificationManager.m in Sources */,
 				9C98660D18C0499000C71922 /* PXTransformParser.m in Sources */,
+				0AEF54A218EB2216000A8FB8 /* PXNullValue.m in Sources */,
+				0AEF544B18EB2216000A8FB8 /* PXPowerFunction.m in Sources */,
 				9C98674918C0499000C71922 /* PXInsetStyler.m in Sources */,
 				9C98666818C0499000C71922 /* PixateFreestyleConfiguration.m in Sources */,
 				9C9865EF18C0499000C71922 /* PXForceLoadCGCategories.m in Sources */,
@@ -5588,6 +6114,7 @@
 				9C98664818C0499000C71922 /* DDASLLogger.m in Sources */,
 				9C98664618C0499000C71922 /* DDAbstractDatabaseLogger.m in Sources */,
 				9C98676A18C0499000C71922 /* PXImageUtils.m in Sources */,
+				0AEF543718EB2216000A8FB8 /* PXArrayPushMethod.m in Sources */,
 				9C98663818C0499000C71922 /* PXStrokeGroup.m in Sources */,
 				9C9865FC18C0499000C71922 /* PXGradient.m in Sources */,
 				9C98675E18C0499000C71922 /* PXTransitionStyler.m in Sources */,
@@ -5599,23 +6126,31 @@
 				9C98674518C0499000C71922 /* PXFontStyler.m in Sources */,
 				9C98663018C0499000C71922 /* PXShapeGroup.m in Sources */,
 				9C98680518C04BA000C71922 /* PXUICollectionViewDelegate.m in Sources */,
+				0AEF543D18EB2216000A8FB8 /* PXArrayShiftMethod.m in Sources */,
+				0AEF54A418EB2216000A8FB8 /* PXObjectValue.m in Sources */,
 				9C9867EF18C04BA000C71922 /* PXKeyframeBlock.m in Sources */,
+				0AEF54A018EB2216000A8FB8 /* PXMarkValue.m in Sources */,
 				9C98673918C0499000C71922 /* PXBarMetricsAdjustmentStyler.m in Sources */,
 				9C98673F18C0499000C71922 /* PXBoxShadowStyler.m in Sources */,
 				9C98662518C0499000C71922 /* PXPie.m in Sources */,
 				9C9866F418C0499000C71922 /* PXAnimationInfo.m in Sources */,
+				0AEF548518EB2216000A8FB8 /* PXScriptManager.m in Sources */,
 				9C98662718C0499000C71922 /* PXPolygon.m in Sources */,
 				9C98667418C0499000C71922 /* PXStyleInfo.m in Sources */,
 				9C98660518C0499000C71922 /* PXRadialGradient.m in Sources */,
+				0AEF545918EB2216000A8FB8 /* PXParserBase.m in Sources */,
 				9C98671218C0499000C71922 /* PXDeclaration.m in Sources */,
 				9C98667218C0499000C71922 /* PXCacheManager.m in Sources */,
 				9C98674B18C0499000C71922 /* PXLayoutStyler.m in Sources */,
 				9C475B0D18E60EB300283A43 /* PXValueLexer.m in Sources */,
 				9C98668718C0499000C71922 /* UIView+PXStyling.m in Sources */,
+				0AEF543118EB2216000A8FB8 /* PXArrayLengthMethod.m in Sources */,
 				9C2B53A218E748670016CF7F /* PXAnimationFillModeValueParser.m in Sources */,
 				9C98671818C0499000C71922 /* PXSpecificity.m in Sources */,
 				9C23048418DA126300969D18 /* MAFuture.m in Sources */,
 				9C9867FD18C04BA000C71922 /* PXUIActivityIndicatorView.m in Sources */,
+				0AEF546918EB2216000A8FB8 /* PXInstructionProcessor.m in Sources */,
+				0AEF547A18EB2216000A8FB8 /* PXExpressionNodeCompiler.m in Sources */,
 				9C98675818C0499000C71922 /* PXTextContentStyler.m in Sources */,
 				9C98661918C0499000C71922 /* PXArrowRectangle.m in Sources */,
 				9C98676618C0499000C71922 /* PXFileWatcher.m in Sources */,
@@ -5625,22 +6160,32 @@
 				9C98668918C0499000C71922 /* PXAdjacentSiblingCombinator.m in Sources */,
 				0A9EDC4E18E6294600C91E97 /* PXWordMatcher.m in Sources */,
 				9C98670A18C0499000C71922 /* PXStylesheetParser.m in Sources */,
+				0AEF544518EB2216000A8FB8 /* PXLogFunction.m in Sources */,
+				0AEF544118EB2216000A8FB8 /* PXByteCodeFunction.m in Sources */,
 				9C98672018C0499000C71922 /* PXAttributeSelector.m in Sources */,
 				9C98664118C0499000C71922 /* PXFileFunctionLogFormatter.m in Sources */,
 				9C98661C18C0499000C71922 /* PXCircle.m in Sources */,
 				9C98684218C04BA000C71922 /* PXVirtualStyleableControl.m in Sources */,
 				0A9EDC2618E614C200C91E97 /* PXStylesheetLexer.lm in Sources */,
 				9C98683918C04BA000C71922 /* PXUIView.m in Sources */,
+				0AEF547418EB2216000A8FB8 /* PXExpressionLexeme.m in Sources */,
 				9C9867F518C04BA000C71922 /* PXMKAnnotationView.m in Sources */,
+				0AEF548318EB2216000A8FB8 /* PXExpressionUnit.m in Sources */,
 				9C98680318C04BA000C71922 /* PXUICollectionViewCell.m in Sources */,
 				9C98671418C0499000C71922 /* PXDeclarationContainer.m in Sources */,
 				9C98676C18C0499000C71922 /* PXProxy.m in Sources */,
+				0AEF545118EB2216000A8FB8 /* PXObjectForEachMethod.m in Sources */,
 				9C98680F18C04BA000C71922 /* PXUINavigationBar.m in Sources */,
+				0AEF547618EB2216000A8FB8 /* PXExpressionLexer.lm in Sources */,
 				9C98671C18C0499000C71922 /* PXStylesheet.m in Sources */,
 				9C98673B18C0499000C71922 /* PXBarShadowStyler.m in Sources */,
 				9C9867F918C04BA000C71922 /* PXMPVolumeView.m in Sources */,
 				9C98660918C0499000C71922 /* PXSVGLoader.m in Sources */,
+				0AEF543918EB2216000A8FB8 /* PXArrayReduceMethod.m in Sources */,
+				0AEF549418EB2216000A8FB8 /* PXBooleanValue.m in Sources */,
 				9C23048B18DA126300969D18 /* MAProxy.m in Sources */,
+				0AEF544318EB2216000A8FB8 /* PXParameter.m in Sources */,
+				0AEF548C18EB2216000A8FB8 /* PXScope.m in Sources */,
 				9C98670018C0499000C71922 /* PXMediaExpressionGroup.m in Sources */,
 				9C9866F618C0499000C71922 /* PXBorderInfo.m in Sources */,
 				9C98670418C0499000C71922 /* PXNamedMediaExpression.m in Sources */,
@@ -5649,26 +6194,38 @@
 				9C98684B18C04BA000C71922 /* UITabBarItem+PXStyling.m in Sources */,
 				9C475B0518E60EB300283A43 /* PXListValueParser.m in Sources */,
 				9C98664418C0499000C71922 /* PXLoggingUtils.m in Sources */,
+				0AEF543518EB2216000A8FB8 /* PXArrayPopMethod.m in Sources */,
+				0AEF548918EB2216000A8FB8 /* PXBuiltInSource.m in Sources */,
 				9C98660718C0499000C71922 /* PXSolidPaint.m in Sources */,
 				9C98667818C0499000C71922 /* NSArray+Reverse.m in Sources */,
+				0AEF548118EB2216000A8FB8 /* PXExpressionEnvironment.m in Sources */,
 				9C98664E18C0499000C71922 /* DDTTYLogger.m in Sources */,
+				0AEF545C18EB2216000A8FB8 /* PXSourceWriter.m in Sources */,
 				9C98663418C0499000C71922 /* PXNonScalingStroke.m in Sources */,
 				9C9865F518C0499000C71922 /* PXEllipticalArc.m in Sources */,
 				9C475B0F18E60EB300283A43 /* PXValueParserBase.m in Sources */,
 				9C98681318C04BA000C71922 /* PXUIPickerView.m in Sources */,
+				0AEF544D18EB2216000A8FB8 /* PXSinFunction.m in Sources */,
 				9C9865FE18C0499000C71922 /* PXImagePaint.m in Sources */,
 				9C98662018C0499000C71922 /* PXLine.m in Sources */,
+				0AEF544F18EB2216000A8FB8 /* PXSquareRootFunction.m in Sources */,
 				9C98677718C049DF00C71922 /* objc.c in Sources */,
+				0AEF54A818EB2216000A8FB8 /* PXUndefinedValue.m in Sources */,
+				0AEF543318EB2216000A8FB8 /* PXArrayMapMethod.m in Sources */,
 				9C98682B18C04BA000C71922 /* PXUITableViewCell.m in Sources */,
 				0A9EDC4A18E6294600C91E97 /* PXNumberMatcher.m in Sources */,
 				9C98683F18C04BA000C71922 /* PXForceLoadVirtualCategories.m in Sources */,
 				9C9867F318C04BA000C71922 /* PXMKAnnotationContainerView.m in Sources */,
+				0AEF545E18EB2216000A8FB8 /* PXByteCodeBuilder.m in Sources */,
+				0AEF545318EB2216000A8FB8 /* PXObjectLengthMethod.m in Sources */,
 				9C9865F818C0499000C71922 /* PXOffsets.m in Sources */,
 				9C98682F18C04BA000C71922 /* PXUITableViewDelegate.m in Sources */,
 				9C98684518C04BA000C71922 /* UIBarButtonItem+PXStyling.m in Sources */,
 				9C2B53AA18E748670016CF7F /* PXTransitionInfoValueParser.m in Sources */,
 				9C98682918C04BA000C71922 /* PXUITableView.m in Sources */,
 				9C9867FF18C04BA000C71922 /* PXUIButton.m in Sources */,
+				0AEF548718EB2216000A8FB8 /* PXBuiltInScope.m in Sources */,
+				0AEF542D18EB2216000A8FB8 /* PXObjectValueWrapper.m in Sources */,
 				9C98672818C0499000C71922 /* PXNotPseudoClass.m in Sources */,
 				9C98676218C0499000C71922 /* PXClassUtils.m in Sources */,
 				9C98682318C04BA000C71922 /* PXUIStepper.m in Sources */,
@@ -5678,11 +6235,14 @@
 				9C9865E718C0499000C71922 /* NSMutableArray+StackAdditions.m in Sources */,
 				9C98680118C04BA000C71922 /* PXUICollectionView.m in Sources */,
 				9C98677E18C04A9800C71922 /* NSObject+PXSubclass.m in Sources */,
+				0AEF547218EB2216000A8FB8 /* PXExpressionAssembler.m in Sources */,
 				9C98668B18C0499000C71922 /* PXChildCombinator.m in Sources */,
 				9C98662318C0499000C71922 /* PXPath.m in Sources */,
 				9C98667A18C0499000C71922 /* NSDictionary+PXCSSEncoding.m in Sources */,
+				0AEF546D18EB2216000A8FB8 /* PXBlockNode.m in Sources */,
 				9C9866F818C0499000C71922 /* PXFontInfo.m in Sources */,
 				9C98673718C0499000C71922 /* PXAttributedTextStyler.m in Sources */,
+				0AEF549018EB2216000A8FB8 /* PXArrayValue.m in Sources */,
 				9C9865ED18C0499000C71922 /* NSMutableArray+QueueAdditions.m in Sources */,
 				0A9EDC4718E6294600C91E97 /* PXCharacterMatcher.m in Sources */,
 				9C2B53A618E748670016CF7F /* PXAnimationPlayStateValueParser.m in Sources */,
@@ -5694,19 +6254,26 @@
 				9C2B53B218E755B80016CF7F /* PXColorValueParser.m in Sources */,
 				9C98675A18C0499000C71922 /* PXTextShadowStyler.m in Sources */,
 				9C98670E18C0499000C71922 /* PXURLMatcher.m in Sources */,
+				0AEF542A18EB2216000A8FB8 /* PXDoubleProperty.m in Sources */,
 				9C98674318C0499000C71922 /* PXFillStyler.m in Sources */,
 				9C98669018C0499000C71922 /* PXDescendantCombinator.m in Sources */,
 				9C9866FA18C0499000C71922 /* PXTransitionRuleSetInfo.m in Sources */,
 				9C98668E18C0499000C71922 /* PXCombinatorBase.m in Sources */,
 				9C98681918C04BA000C71922 /* PXUIRefreshControl.m in Sources */,
 				9C98673D18C0499000C71922 /* PXBorderStyler.m in Sources */,
+				0AEF547E18EB2216000A8FB8 /* PXExpressionParser.m in Sources */,
+				0AEF547018EB2216000A8FB8 /* PXGenericNode.m in Sources */,
 				9C98663618C0499000C71922 /* PXStroke.m in Sources */,
 				9C475B1C18E6182E00283A43 /* PXValueParser.m in Sources */,
 				9C2B53A418E748670016CF7F /* PXAnimationInfoValueParser.m in Sources */,
 				9C98662C18C0499000C71922 /* PXShape.m in Sources */,
 				9C98675418C0499000C71922 /* PXStylerBase.m in Sources */,
+				0AEF549618EB2216000A8FB8 /* PXDoubleValue.m in Sources */,
+				0AEF546018EB2216000A8FB8 /* PXExpressionByteCode.m in Sources */,
+				0AEF544918EB2216000A8FB8 /* PXCosFunction.m in Sources */,
 				9C9867F118C04BA000C71922 /* PXForceLoadControls.m in Sources */,
 				9C98673518C0499000C71922 /* PXAnimationStyler.m in Sources */,
+				0AEF546518EB2216000A8FB8 /* PXInstructionCounter.m in Sources */,
 				9C98660018C0499000C71922 /* PXLinearGradient.m in Sources */,
 				9C98667C18C0499000C71922 /* NSDictionary+PXObject.m in Sources */,
 				9C98662918C0499000C71922 /* PXRectangle.m in Sources */,
