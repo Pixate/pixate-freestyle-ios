@@ -85,6 +85,11 @@
     return [[((PXProxy *)tableView.dataSource) baseObject] tableView:tableView numberOfRowsInSection:section];
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [[((PXProxy *)tableView.dataSource) baseObject] tableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
 //
 // Keep for now until we decide whether we should be doing text transforms this way instead.
 //
