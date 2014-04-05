@@ -1,7 +1,8 @@
 
 table-view-cell:selected{ 
-background-color: #4078BB; 
+    background-color: #4078BB;
 }
 
-
-
+table-view-cell {
+    background-color: yellow;
+}
