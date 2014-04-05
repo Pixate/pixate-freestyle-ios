@@ -246,7 +246,7 @@
     // abort application of style info if the styleable's style key does not match the info's style key
     if ([self.styleKey isEqualToString:styleable.styleKey] == NO)
     {
-        NSLog(@"StyleKey mismatch (%@ != %@). Aborted applyStyleInfo for %@", self.styleKey, self.styleKey, [PXStyleUtils descriptionForStyleable:styleable]);
+        NSLog(@"StyleKey mismatch ('%@' != '%@'). Aborted applyStyleInfo for %@", self.styleKey, styleable.styleKey,  [PXStyleUtils descriptionForStyleable:styleable]);
         return;
     }
 
