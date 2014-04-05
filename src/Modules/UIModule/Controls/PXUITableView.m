@@ -41,48 +41,32 @@
 
 #import "PXProxy.h"
 #import "PXUITableViewDelegate.h"
+#import "NSObject+PXSwizzle.h"
 
 static const char PX_DELEGATE; // the new delegate (and datasource)
 static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 //static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
 
-@implementation PXUITableView
+@implementation UITableView (PXFreestyle)
 
 + (void)load
 {
-    [UIView registerDynamicSubclass:self withElementName:@"table-view"];
+    [self swizzleMethod:@selector(setDelegate:) withMethod:@selector(px_setDelegate:)];
 }
 
-#pragma mark - Delegate and DataSource proxy methods
-
-//
-// Overrides for delegate and datasource
-//
-
--(void)setDelegate:(id<UITableViewDelegate>)delegate
+-(void)px_setDelegate:(id<UITableViewDelegate>)delegate
 {
-    id delegateProxy = [self pxDelegateProxy];
-    [delegateProxy setBaseObject:delegate];
-    callSuper1(SUPER_PREFIX, @selector(setDelegate:), delegateProxy);
-}
-
-/* Don't use right now
--(void)setDataSource:(id<UITableViewDataSource>)dataSource
-{
-    if(dataSource)
+    if(delegate)
     {
-        NSLog(@"%@\n%@", dataSource, [NSThread callStackSymbols]);
+        id delegateProxy = [self pxDelegateProxy];
+        [delegateProxy setBaseObject:delegate];
+        [self px_setDelegate:delegateProxy];
     }
-    
-    id datasourceProxy = [self pxDatasourceProxy];
-    [datasourceProxy setBaseObject:dataSource];
-    callSuper1(SUPER_PREFIX, @selector(setDataSource:), datasourceProxy);
+    else
+    {
+        [self px_setDelegate:delegate];
+    }
 }
-*/
-
-//
-// Internal methods for proxys
-//
 
 - (id)pxDelegate
 {
@@ -110,44 +94,44 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
     return proxy;
 }
 
+/* Don't use right now
+ -(void)setDataSource:(id<UITableViewDataSource>)dataSource
+ {
+ if(dataSource)
+ {
+ NSLog(@"%@\n%@", dataSource, [NSThread callStackSymbols]);
+ }
+ 
+ id datasourceProxy = [self pxDatasourceProxy];
+ [datasourceProxy setBaseObject:dataSource];
+ callSuper1(SUPER_PREFIX, @selector(setDataSource:), datasourceProxy);
+ }
+ */
+
+
 /*
-- (id)pxDatasourceProxy
-{
-    id proxy = objc_getAssociatedObject(self, &PX_DATASOURCE_PROXY);
-    
-    if(proxy == nil)
-    {
-        proxy = [[PXProxy alloc] initWithBaseOject:nil overridingObject:[self pxDelegate]];
-        objc_setAssociatedObject(self, &PX_DATASOURCE_PROXY, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    
-    return proxy;
-}
-*/
+ - (id)pxDatasourceProxy
+ {
+ id proxy = objc_getAssociatedObject(self, &PX_DATASOURCE_PROXY);
+ 
+ if(proxy == nil)
+ {
+ proxy = [[PXProxy alloc] initWithBaseOject:nil overridingObject:[self pxDelegate]];
+ objc_setAssociatedObject(self, &PX_DATASOURCE_PROXY, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+ }
+ 
+ return proxy;
+ }
+ */
 
--(void)pxCheckDelegates
-{
-    // If the delegates are not our proxy yet, let's set it
-    if(self.delegate != nil)
-    {
-        
-        if(self.delegate != [self pxDelegateProxy])
-        {
-            NSLog(@"Setting delegate to %@", self.delegate);
-            
-            [self setDelegate:self.delegate];
-        }
-            
-            
-    }
+@end
 
-    /*
-    if(self.dataSource != [self pxDatasourceProxy])
-    {
-        NSLog(@"Setting datasource to %@", self.dataSource);
-        [self setDataSource:self.dataSource];
-    }
-     */
+
+@implementation PXUITableView
+
++ (void)load
+{
+    [UIView registerDynamicSubclass:self withElementName:@"table-view"];
 }
 
 #pragma mark - Styler stuff
@@ -292,15 +276,9 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 
 #pragma mark - Overrides
 
-- (void)layoutSubviews
-{
-    if (!objc_getAssociatedObject(self, &PX_DELEGATE))
-    {
-        [self pxCheckDelegates];
-    }
-    
-    callSuper0(SUPER_PREFIX, _cmd);
-}
+// None
+
+#pragma mark - Wrappers
 
 //
 // Wrappers

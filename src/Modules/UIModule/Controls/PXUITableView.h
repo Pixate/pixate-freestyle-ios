@@ -55,3 +55,7 @@
 @interface PXUITableView : UITableView
 
 @end
+
+@interface UITableView (PXFreestyle)
+
+@end

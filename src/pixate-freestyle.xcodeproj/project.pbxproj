@@ -816,6 +816,9 @@
 		9C84A64D18AE9CB600E7CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
 		9C84A64F18AE9CB600E7CDA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64E18AE9CB600E7CDA7 /* UIKit.framework */; };
 		9C84A65818AE9CB600E7CDA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C84A65618AE9CB600E7CDA7 /* InfoPlist.strings */; };
+		9C9620A618F02F0200219C5C /* NSObject+PXSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9620A418F02F0200219C5C /* NSObject+PXSwizzle.h */; };
+		9C9620A718F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */; };
+		9C9620A818F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */; };
 		9C9865E618C0499000C71922 /* NSMutableArray+StackAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98643518C0498F00C71922 /* NSMutableArray+StackAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C9865E718C0499000C71922 /* NSMutableArray+StackAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98643618C0498F00C71922 /* NSMutableArray+StackAdditions.m */; };
 		9C9865E818C0499000C71922 /* NSScanner+PXFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98643718C0498F00C71922 /* NSScanner+PXFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2243,6 +2246,8 @@
 		9C84A64E18AE9CB600E7CDA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C84A65518AE9CB600E7CDA7 /* pixate-freestyleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixate-freestyleTests-Info.plist"; sourceTree = "<group>"; };
 		9C84A65718AE9CB600E7CDA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C9620A418F02F0200219C5C /* NSObject+PXSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PXSwizzle.h"; sourceTree = "<group>"; };
+		9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PXSwizzle.m"; sourceTree = "<group>"; };
 		9C98643518C0498F00C71922 /* NSMutableArray+StackAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+StackAdditions.h"; sourceTree = "<group>"; };
 		9C98643618C0498F00C71922 /* NSMutableArray+StackAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackAdditions.m"; sourceTree = "<group>"; };
 		9C98643718C0498F00C71922 /* NSScanner+PXFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+PXFloat.h"; sourceTree = "<group>"; };
@@ -4387,6 +4392,8 @@
 				9C98677B18C04A9800C71922 /* NSObject+PXSubclass.h */,
 				9C98677C18C04A9800C71922 /* NSObject+PXSubclass.m */,
 				9C98677918C04A5100C71922 /* NSObject+PXClass.h */,
+				9C9620A418F02F0200219C5C /* NSObject+PXSwizzle.h */,
+				9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -5057,6 +5064,7 @@
 				9CAAFA6318EB10A2000C0233 /* PXObjectReverseMethod.h in Headers */,
 				9C98661018C0499000C71922 /* PXGraphics.h in Headers */,
 				9C98681A18C04BA000C71922 /* PXUIScrollView.h in Headers */,
+				9C9620A618F02F0200219C5C /* NSObject+PXSwizzle.h in Headers */,
 				9C98660C18C0499000C71922 /* PXTransformParser.h in Headers */,
 				9C98671D18C0499000C71922 /* PXValue.h in Headers */,
 				9C98671918C0499000C71922 /* PXStyleable.h in Headers */,
@@ -6291,6 +6299,7 @@
 				9C98681918C04BA000C71922 /* PXUIRefreshControl.m in Sources */,
 				9C98673D18C0499000C71922 /* PXBorderStyler.m in Sources */,
 				9C98663618C0499000C71922 /* PXStroke.m in Sources */,
+				9C9620A718F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */,
 				9C98662C18C0499000C71922 /* PXShape.m in Sources */,
 				0A09BF4C18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */,
 				9CAAFA6418EB10A2000C0233 /* PXObjectReverseMethod.m in Sources */,
@@ -6386,6 +6395,7 @@
 				0A09BF2618ED9F1B004780F8 /* PXStringLengthMethod.m in Sources */,
 				9CAAFAD218EB10A2000C0233 /* PXNullValue.m in Sources */,
 				9CAAFA5318EB10A2000C0233 /* PXCosFunction.m in Sources */,
+				9C9620A818F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */,
 				9CAAFAB318EB10A2000C0233 /* PXScope.m in Sources */,
 				0A09BF4718EF2285004780F8 /* PXObjectConcatenateMethod.m in Sources */,
 				9CAAFA9C18EB10A2000C0233 /* PXExpressionNodeUtils.m in Sources */,
