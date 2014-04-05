@@ -49,3 +49,7 @@
 @interface PXUICollectionView : UICollectionView
 
 @end
+
+@interface UICollectionView (PXFreestyle)
+
+@end
