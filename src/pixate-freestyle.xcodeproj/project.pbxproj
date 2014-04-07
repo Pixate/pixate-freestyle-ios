@@ -31,6 +31,9 @@
 		0A09BF4B18EF2285004780F8 /* PXObjectUnshiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF4318EF2285004780F8 /* PXObjectUnshiftMethod.h */; };
 		0A09BF4C18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */; };
 		0A09BF4D18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */; };
+		0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */; };
+		0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
+		0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
 		0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1460,6 +1463,8 @@
 		0A09BF4218EF2285004780F8 /* PXObjectPushMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectPushMethod.m; sourceTree = "<group>"; };
 		0A09BF4318EF2285004780F8 /* PXObjectUnshiftMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectUnshiftMethod.h; sourceTree = "<group>"; };
 		0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectUnshiftMethod.m; sourceTree = "<group>"; };
+		0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeOptimizer.h; sourceTree = "<group>"; };
+		0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeOptimizer.m; sourceTree = "<group>"; };
 		0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer2.lm; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
@@ -4714,6 +4719,8 @@
 			children = (
 				9CAAF9CF18EB10A2000C0233 /* PXByteCodeBuilder.h */,
 				9CAAF9D018EB10A2000C0233 /* PXByteCodeBuilder.m */,
+				0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */,
+				0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */,
 				9CAAF9D118EB10A2000C0233 /* PXExpressionByteCode.h */,
 				9CAAF9D218EB10A2000C0233 /* PXExpressionByteCode.m */,
 				9CAAF9D318EB10A2000C0233 /* PXExpressionInstruction.h */,
@@ -5122,6 +5129,7 @@
 				9C98670D18C0499000C71922 /* PXURLMatcher.h in Headers */,
 				9C9866FC18C0499000C71922 /* PXStylingMacros.h in Headers */,
 				9C98661A18C0499000C71922 /* PXBoundable.h in Headers */,
+				0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */,
 				9CAAFA6018EB10A2000C0233 /* PXObjectLengthMethod.h in Headers */,
 				9C98668818C0499000C71922 /* PXAdjacentSiblingCombinator.h in Headers */,
 				9C98670518C0499000C71922 /* PXStylesheetLexeme.h in Headers */,
@@ -6259,6 +6267,7 @@
 				9C98677718C049DF00C71922 /* objc.c in Sources */,
 				9C98682B18C04BA000C71922 /* PXUITableViewCell.m in Sources */,
 				9C98683F18C04BA000C71922 /* PXForceLoadVirtualCategories.m in Sources */,
+				0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */,
 				9C9867F318C04BA000C71922 /* PXMKAnnotationContainerView.m in Sources */,
 				9C9865F818C0499000C71922 /* PXOffsets.m in Sources */,
 				9C98682F18C04BA000C71922 /* PXUITableViewDelegate.m in Sources */,
@@ -6400,6 +6409,7 @@
 				0A09BF4718EF2285004780F8 /* PXObjectConcatenateMethod.m in Sources */,
 				9CAAFA9C18EB10A2000C0233 /* PXExpressionNodeUtils.m in Sources */,
 				0A09BE7718EC9463004780F8 /* PXObjectValuesMethod.m in Sources */,
+				0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */,
 				9CAAFA6518EB10A2000C0233 /* PXObjectReverseMethod.m in Sources */,
 				9CAAFAAC18EB10A2000C0233 /* PXBuiltInScope.m in Sources */,
 				9CAAFA8318EB10A2000C0233 /* PXPushValueInstruction.m in Sources */,
