@@ -79,8 +79,7 @@ static NSMutableDictionary *PARSERS_BY_NAME;
     [self addValueParser:[PXNameValueParser class] forName:kPXValueParserName];
     [self addValueParser:[PXNumberValueParser class] forName:kPXValueParserNumber];
     [self addValueParser:[PXSecondsValueParser class] forName:kPXValueParserSeconds];
-    
-    [self addValueParser:[PXSecondsValueParser class] forName:kPXValueParserSeconds];
+    [self addValueParser:[PXColorValueParser class] forName:kPXValueParserColor];
 
     // Setup animation value parsers
     [self addValueParsersFromDictionary: @{
