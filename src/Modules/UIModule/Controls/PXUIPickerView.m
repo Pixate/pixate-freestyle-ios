@@ -143,35 +143,6 @@
     return map;
 }
 
-- (void)layoutSubviews
-{
-    /*
-    // If the delegate is not our proxy yet, let's set it
-    if(self.delegate != [self pxDelegateProxy])
-    {
-        [self setDelegate:self.delegate];
-    }
-    
-    // If the dataSource is nil, we'll use the delegate instead.
-    // iOS seems to do this automatically (use the delegate as a
-    // datasource), so we'll do it here, too.
-    if(self.dataSource != [self pxDatasourceProxy])
-    {
-        if(self.dataSource)
-        {
-            [self setDataSource:self.dataSource];
-        }
-        else
-        {
-            PXProxy *proxy = (PXProxy *) self.delegate;
-            [self setDataSource:(id<UIPickerViewDataSource>) [proxy baseObject]];
-        }
-    }
-    */
-    
-    callSuper0(SUPER_PREFIX, _cmd);
-    
-    [self updateStyles];
-}
+PX_LAYOUT_SUBVIEWS_OVERRIDE
 
 @end
