@@ -177,7 +177,7 @@ void css_lexer_delete_buffer()
     yy_delete_buffer(YY_CURRENT_BUFFER);
 }
 
-PXStylesheetLexeme *expr_lexer_get_lexeme()
+PXStylesheetLexeme *css_lexer_get_lexeme()
 {
     int tok = yylex();
     NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
