@@ -216,12 +216,13 @@ static const char STYLE_CHILDREN;
 // Overrides
 //
 
+PX_LAYOUT_SUBVIEWS_OVERRIDE
+
 - (void)prepareForReuse
 {
     callSuper0(SUPER_PREFIX, _cmd);
     [PXStyleUtils invalidateStyleableAndDescendants:self];
 }
-
 
 //
 // Wrappers

@@ -1,0 +1,3 @@
+[submodule "submodules/pixate-expression-machine"]
+	path = submodules/pixate-expression-machine
+	url = https://github.com/Pixate/pixate-expression-machine.git

@@ -67,7 +67,7 @@
 - (NSMethodSignature *)_searchAllClassesForSignature: (SEL)sel
 {
     int count = objc_getClassList(NULL, 0);
-    Class *classes = (Class *)malloc(sizeof(*classes) * count);
+    Class *classes = malloc(sizeof(*classes) * count);
     objc_getClassList(classes, count);
     
     NSMethodSignature *sig = nil;
@@ -116,7 +116,7 @@
             if(!sig)
                 sig = (id)[NSNull null];
 #ifdef __IPHONE_4_0
-            CFDictionarySetValue(_cache, sel, (__bridge const void *)(sig));
+            CFDictionarySetValue(_cache, sel, sig);
 #else
             [_cache setObject: sig forKey: (id)sel];
 #endif //__IPHONE_4_0

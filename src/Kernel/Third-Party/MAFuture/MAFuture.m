@@ -1,6 +1,5 @@
 #import <dispatch/dispatch.h>
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 
 #import "MABaseFuture.h"
 #import "MAFuture.h"
@@ -24,7 +23,7 @@
 #if ENABLE_LOGGING
     id resolvedFuture = [self resolveFuture];
     if (resolvedFuture == nil) {
-        LOG(@"WARNING: [%@ resolveFuture] has returned nil. You must avoid to return nil objects from the block", [self class]);
+        LOG(@"WARNING: [%@ resolveFuture] has returned nil. You must avoid to return nil objects from the block", NSStringFromClass(isa));
     }
     return resolvedFuture;
 #else
@@ -86,12 +85,19 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [_block release];
+    [super dealloc];
+}
+
 - (id)resolveFuture
 {
     [_lock lock];
     if(![self futureHasResolved])
     {
         [self setFutureValueUnlocked: _block()];
+        [_block release];
         _block = nil;
     }
     [_lock unlock];
@@ -103,13 +109,13 @@
 #undef MABackgroundFuture
 id MABackgroundFuture(id (^block)(void))
 {
-    return [[_MABackgroundBlockFuture alloc] initWithBlock: block];
+    return [[[_MABackgroundBlockFuture alloc] initWithBlock: block] autorelease];
 }
 
 #undef MALazyFuture
 id MALazyFuture(id (^block)(void))
 {
-    return [[_MALazyBlockFuture alloc] initWithBlock: block];
+    return [[[_MALazyBlockFuture alloc] initWithBlock: block] autorelease];
 }
 
 #pragma mark -
@@ -153,7 +159,7 @@ id MALazyFuture(id (^block)(void))
 
 
 - (id)futureValue {
-    return [super futureValue];
+    return [[[super futureValue] retain] autorelease];
 }
 
 
@@ -174,6 +180,7 @@ id MALazyFuture(id (^block)(void))
 
 - (void)dealloc {
     [self setIsObservingUnlocked:NO];
+    [super dealloc];
 }
 
 
@@ -202,7 +209,7 @@ id MALazyFuture(id (^block)(void))
 - (void)processMemoryWarningUnlocked {
     // TODO: must be checked when resolvation algorithm is changed.
     _resolved = NO;
-    _value = nil;
+    [_value release], _value = nil;
 }
 
 
@@ -217,7 +224,7 @@ id MALazyFuture(id (^block)(void))
     // TODO: must be checked when resolvation algorithm is changed.
     [self setIsObservingUnlocked:NO];
     _resolved = NO;
-    _value = nil;
+    [_value release], _value = nil;
 }
 
 @end
@@ -229,7 +236,7 @@ id IKMemoryAwareFutureCreate(id (^block)(void)) {
 
 #undef IKMemoryAwareFuture
 id IKMemoryAwareFuture(id (^block)(void)) {
-    return IKMemoryAwareFutureCreate(block);
+    return [IKMemoryAwareFutureCreate(block) autorelease];
 }
 
 void IKMemoryAwareFutureBeginContentAccess(id future) {
@@ -251,8 +258,8 @@ void IKInvalidateMemoryAwareFuture(id future) {
 NSString* IKMemoryAwareFuturesDirectory() {
     static NSString* FuturesDirectory = nil;
     if (FuturesDirectory == nil) {
-        FuturesDirectory = [NSTemporaryDirectory() stringByAppendingPathComponent:@"futures"];
-    };
+        FuturesDirectory = [[NSTemporaryDirectory() stringByAppendingPathComponent:@"futures"] retain];
+    }
     return FuturesDirectory;
 }
 
@@ -294,6 +301,7 @@ NSString* IKMemoryAwareFuturePath(id future) {
 #else
     [[NSFileManager defaultManager] removeItemAtPath:IKMemoryAwareFuturePath(self) error:NULL];
 #endif
+    [super dealloc];
 }
 
 
@@ -336,7 +344,7 @@ NSString* IKMemoryAwareFuturePath(id future) {
 
 
 - (BOOL)unarchiveValueUnlocked {
-    id value = [NSKeyedUnarchiver unarchiveObjectWithFile:IKMemoryAwareFuturePath(self)];
+    id value = [[NSKeyedUnarchiver unarchiveObjectWithFile:IKMemoryAwareFuturePath(self)] retain];
     if (value != nil) {
         [self setFutureValueUnlocked:value];
     }
@@ -364,7 +372,7 @@ id IKAutoArchivingMemoryAwareFutureCreate(id (^block)(void)) {
 
 #undef IKAutoArchivingMemoryAwareFuture
 id IKAutoArchivingMemoryAwareFuture(id (^block)(void)) {
-    return IKAutoArchivingMemoryAwareFutureCreate(block);
+    return [IKAutoArchivingMemoryAwareFutureCreate(block) autorelease];
 }
 
 #endif // __IPHONE_4_0

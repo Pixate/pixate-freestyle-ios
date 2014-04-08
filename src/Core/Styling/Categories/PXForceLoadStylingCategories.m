@@ -38,6 +38,7 @@ extern void PXForceLoadNSDictionaryPXCSSEncoding();
 extern void PXForceLoadNSDictionaryPXObject();
 extern void PXForceLoadNSMutableDictionaryPXObject();
 extern void PXForceLoadNSObjectPXSubclass();
+extern void PXForceLoadNSObjectPXSwizzle();
 extern void PXForceLoadUIViewPXStyling();
 
 @implementation PXForceLoadStylingCategories
@@ -49,6 +50,7 @@ extern void PXForceLoadUIViewPXStyling();
     PXForceLoadNSDictionaryPXObject();
     PXForceLoadNSMutableDictionaryPXObject();
     PXForceLoadNSObjectPXSubclass();
+    PXForceLoadNSObjectPXSwizzle();
     PXForceLoadUIViewPXStyling();
 }
 

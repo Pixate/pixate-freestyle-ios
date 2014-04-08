@@ -64,6 +64,11 @@
 
 #pragma mark - UICollectionViewDataSource
 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [[((PXProxy *)collectionView.dataSource) baseObject] collectionView:collectionView numberOfItemsInSection:section];
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -83,6 +88,12 @@
     
     UICollectionViewCell *cell = [baseObject collectionView:collectionView cellForItemAtIndexPath:indexPath];
 
+    // See if we got a cell
+    if(!cell)
+    {
+        return nil;
+    }
+    
     // Check to see if it's been subclassed yet
     if([UIView subclassIfNeeded:[PXUICollectionViewCell class] object:cell] == YES)
     {

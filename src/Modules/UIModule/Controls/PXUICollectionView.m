@@ -44,39 +44,50 @@
 #import "PXProxy.h"
 #import "NSObject+PXSubclass.h"
 #import "PXUICollectionViewDelegate.h"
+#import "NSObject+PXSwizzle.h"
 
 static const char PX_DELEGATE; // the new delegate (and datasource)
 static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
 
-@implementation PXUICollectionView
-
-#pragma mark - Static load
+@implementation UICollectionView (PXFreestyle)
 
 + (void)load
 {
-    [UIView registerDynamicSubclass:self withElementName:@"collection-view"];
+    [self swizzleMethod:@selector(setDelegate:) withMethod:@selector(px_setDelegate:)];
+    [self swizzleMethod:@selector(setDataSource:) withMethod:@selector(px_setDataSource:)];
+
+}
+
+-(void)px_setDelegate:(id<UICollectionViewDelegate>)delegate
+{
+    if(delegate)
+    {
+        id delegateProxy = [self pxDelegateProxy];
+        [delegateProxy setBaseObject:delegate];
+        [self px_setDelegate:delegateProxy];
+    }
+    else
+    {
+        [self px_setDelegate:delegate];
+    }
+}
+
+-(void)px_setDataSource:(id<UICollectionViewDataSource>)dataSource
+{
+    if(dataSource)
+    {
+        id datasourceProxy = [self pxDatasourceProxy];
+        [datasourceProxy setBaseObject:dataSource];
+        [self px_setDataSource:datasourceProxy];
+    }
+    else
+    {
+        [self px_setDataSource:dataSource];
+    }
 }
 
 #pragma mark - Delegate and DataSource proxy methods
-
-//
-// Overrides for delegate and datasource
-//
-
--(void)setDelegate:(id<UICollectionViewDelegate>)delegate
-{
-    id delegateProxy = [self pxDelegateProxy];
-    [delegateProxy setBaseObject:delegate];
-    callSuper1(SUPER_PREFIX, @selector(setDelegate:), delegateProxy);
-}
-
--(void)setDataSource:(id<UICollectionViewDataSource>)dataSource
-{
-    id datasourceProxy = [self pxDatasourceProxy];
-    [datasourceProxy setBaseObject:dataSource];
-    callSuper1(SUPER_PREFIX, @selector(setDataSource:), datasourceProxy);
-}
 
 //
 // Internal methods for proxys
@@ -121,18 +132,19 @@ static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
     return proxy;
 }
 
--(void)pxCheckDelegates
+@end
+
+//
+// PXUICollectionView
+//
+
+@implementation PXUICollectionView
+
+#pragma mark - Static load
+
++ (void)load
 {
-    // If the delegates are not our proxy yet, let's set it
-    if(self.delegate != [self pxDelegateProxy])
-    {
-        [self setDelegate:self.delegate];
-    }
-    
-    if(self.dataSource != [self pxDatasourceProxy])
-    {
-        [self setDataSource:self.dataSource];
-    }
+    [UIView registerDynamicSubclass:self withElementName:@"collection-view"];
 }
 
 #pragma mark - Stylers
@@ -228,15 +240,7 @@ static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
 
 #pragma mark - Overrides
 
-- (void)layoutSubviews
-{
-    if (!objc_getAssociatedObject(self, &PX_DELEGATE))
-    {
-        [self pxCheckDelegates];
-    }
-    
-    callSuper0(SUPER_PREFIX, _cmd);
-}
+// None
 
 #pragma mark - Wrappers
 

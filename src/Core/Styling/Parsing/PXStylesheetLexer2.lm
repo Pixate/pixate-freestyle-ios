@@ -1,0 +1,186 @@
+%option noyywrap
+%option nodefault
+%option yylineno
+%option prefix="css"
+
+%{
+
+#import "PXStylesheetLexeme.h"
+#import "PXStylesheetTokenType.h"
+#import "PXDimension.h"
+
+void createDimension(int, char*);
+void createURL();
+
+PXDimension *dimension;
+
+%}
+
+h			[0-9a-fA-Z]
+nonascii	[\200-\377]
+unicode		\\{h}{1,6}
+escape		{unicode}|\\[ =~.\200-\377]
+nmstart		[a-zA-Z]|{nonascii}|{escape}
+nmchar		[-a-zA-Z0-9_]|{nonascii}|{escape}
+nmchar2		[a-zA-Z0-9]|{nonascii}|{escape}
+string1		\'([^\n\r\f\']|\\{nl}|{escape})*\'
+string2		\"([^\n\r\f\"]|\\{nl}|{escape})*\"
+
+ident		-?{nmstart}{nmchar}*
+dim         -?{nmstart}{nmchar2}*
+name		{nmchar}+
+num			[-+]?([0-9]+|[0-9]*\.[0-9]+)
+string		{string1}|{string2}
+w			[ \t\r\n\f]
+nl			\r|\n|\r\n|\f
+comment		"/*"([^\*]|\*[^/])*"*/"
+
+n			[-+]?[0-9]*n
+
+%%
+
+{w}+					{ /* ignore */ }
+
+{comment}				{ /* ignore */ }
+
+"~="					{ return PXSS_LIST_CONTAINS; }
+"|="					{ return PXSS_EQUALS_WITH_HYPHEN; }
+"^="					{ return PXSS_STARTS_WITH; }
+"$="					{ return PXSS_ENDS_WITH; }
+"*="					{ return PXSS_CONTAINS; }
+
+{string}				{ return PXSS_STRING; }
+
+"and"					{ return PXSS_AND; }
+"linear-gradient("		{ return PXSS_LINEAR_GRADIENT; }
+"radial-gradient("		{ return PXSS_RADIAL_GRADIENT; }
+"hsb("					{ return PXSS_HSB; }
+"hsba("					{ return PXSS_HSBA; }
+"hsl("					{ return PXSS_HSL; }
+"hsla("					{ return PXSS_HSLA; }
+"rgb("					{ return PXSS_RGB; }
+"rgba("					{ return PXSS_RGBA; }
+"url("[^)]*")"			{ createURL(); return PXSS_URL; }
+
+"#"{name}				{ return PXSS_ID; }
+"."{ident}				{ return PXSS_CLASS; }
+
+"@import"				{ return PXSS_IMPORT; }
+"@media"				{ return PXSS_MEDIA; }
+"@font-face"			{ return PXSS_FONT_FACE; }
+"@namespace"			{ return PXSS_NAMESPACE; }
+"@keyframes"			{ return PXSS_KEYFRAMES; }
+
+"!"({w}+|{comment})*"important" { return PXSS_IMPORTANT; }
+
+{num}"em"				{ createDimension(PXSS_EMS, "em"); return PXSS_EMS; }
+{num}"ex"				{ createDimension(PXSS_EXS, "ex"); return PXSS_EXS; }
+{num}"px"				{ createDimension(PXSS_LENGTH, "px"); return PXSS_LENGTH; }
+{num}"cm"				{ createDimension(PXSS_LENGTH, "cm"); return PXSS_LENGTH; }
+{num}"mm"				{ createDimension(PXSS_LENGTH, "mm"); return PXSS_LENGTH; }
+{num}"in"				{ createDimension(PXSS_LENGTH, "in"); return PXSS_LENGTH; }
+{num}"pt"				{ createDimension(PXSS_LENGTH, "pt"); return PXSS_LENGTH; }
+{num}"pc"				{ createDimension(PXSS_LENGTH, "pc"); return PXSS_LENGTH; }
+{num}"dpx"				{ createDimension(PXSS_LENGTH, "dpx"); return PXSS_LENGTH; }
+{num}"deg"				{ createDimension(PXSS_ANGLE, "deg"); return PXSS_ANGLE; }
+{num}"rad"				{ createDimension(PXSS_ANGLE, "rad"); return PXSS_ANGLE; }
+{num}"grad"				{ createDimension(PXSS_ANGLE, "grad"); return PXSS_ANGLE; }
+{num}"ms"				{ createDimension(PXSS_TIME, "ms"); return PXSS_TIME; }
+{num}"s"				{ createDimension(PXSS_TIME, "s"); return PXSS_TIME; }
+{num}"hz"				{ createDimension(PXSS_FREQUENCY, "Hz"); return PXSS_FREQUENCY; }
+{num}"khz"				{ createDimension(PXSS_FREQUENCY, "kHz"); return PXSS_FREQUENCY; }
+{n}						{ return PXSS_NTH; }
+{num}{dim}				{ return PXSS_DIMENSION; }
+{num}%					{ createDimension(PXSS_PERCENTAGE, "%"); return PXSS_PERCENTAGE; }
+{num}					{ return PXSS_NUMBER; }
+
+":not("					{ return PXSS_NOT_PSEUDO_CLASS; }
+":link"					{ return PXSS_LINK_PSEUDO_CLASS; }
+":visited"				{ return PXSS_VISITED_PSEUDO_CLASS; }
+":hover"				{ return PXSS_HOVER_PSEUDO_CLASS; }
+":active"				{ return PXSS_ACTIVE_PSEUDO_CLASS; }
+":focus"				{ return PXSS_FOCUS_PSEUDO_CLASS; }
+":target"				{ return PXSS_TARGET_PSEUDO_CLASS; }
+":lang("				{ return PXSS_LANG_PSEUDO_CLASS; }
+":enabled"				{ return PXSS_ENABLED_PSEUDO_CLASS; }
+":checked"				{ return PXSS_CHECKED_PSEUDO_CLASS; }
+":indeterminate"		{ return PXSS_INDETERMINATE_PSEUDO_CLASS; }
+":root"					{ return PXSS_ROOT_PSEUDO_CLASS; }
+":nth-child("			{ return PXSS_NTH_CHILD_PSEUDO_CLASS; }
+":nth-last-child("		{ return PXSS_NTH_LAST_CHILD_PSEUDO_CLASS; }
+":nth-of-type("			{ return PXSS_NTH_OF_TYPE_PSEUDO_CLASS; }
+":nth-last-of-type("	{ return PXSS_NTH_LAST_OF_TYPE_PSEUDO_CLASS; }
+":first-child"			{ return PXSS_FIRST_CHILD_PSEUDO_CLASS; }
+":last-child"			{ return PXSS_LAST_CHILD_PSEUDO_CLASS; }
+":first-of-type"		{ return PXSS_FIRST_OF_TYPE_PSEUDO_CLASS; }
+":last-of-type"			{ return PXSS_LAST_OF_TYPE_PSEUDO_CLASS; }
+":only-child"			{ return PXSS_ONLY_CHILD_PSEUDO_CLASS; }
+":only-of-type"			{ return PXSS_ONLY_OF_TYPE_PSEUDO_CLASS; }
+":empty"				{ return PXSS_EMPTY_PSEUDO_CLASS; }
+
+":first-line"			{ return PXSS_FIRST_LINE_PSEUDO_ELEMENT; }
+":first-letter"			{ return PXSS_FIRST_LETTER_PSEUDO_ELEMENT; }
+":before"				{ return PXSS_BEFORE_PSEUDO_ELEMENT; }
+":after"				{ return PXSS_AFTER_PSEUDO_ELEMENT; }
+
+"{"						{ return PXSS_LCURLY; }
+"}"						{ return PXSS_RCURLY; }
+"("						{ return PXSS_LPAREN; }
+")"						{ return PXSS_RPAREN; }
+"["						{ return PXSS_LBRACKET; }
+"]"						{ return PXSS_RBRACKET; }
+";"						{ return PXSS_SEMICOLON; }
+">"						{ return PXSS_GREATER_THAN; }
+"+"						{ return PXSS_PLUS; }
+"~"						{ return PXSS_TILDE; }
+"*"						{ return PXSS_STAR; }
+"="						{ return PXSS_EQUAL; }
+"::"					{ return PXSS_DOUBLE_COLON; }
+":"						{ return PXSS_COLON; }
+","						{ return PXSS_COMMA; }
+"|"						{ return PXSS_PIPE; }
+"/"						{ return PXSS_SLASH; }
+
+{ident}					{ return PXSS_IDENTIFIER; }
+
+.						{ return PXSS_ERROR; }
+
+%%
+
+void createDimension(int tokenType, char *units)
+{
+    NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+    NSString *dimension = [NSString stringWithCString:units encoding:NSUTF8StringEncoding];
+    NSRange range = NSMakeRange(text.length - dimension.length, dimension.length);
+    NSString *number = [text substringWithRange:range];
+    double doubleValue = [number doubleValue];
+
+    dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:dimension];
+}
+
+void createURL()
+{
+    // TODO:
+}
+
+void css_lexer_set_source(NSString *source, BOOL forEma)
+{
+    const char *cSource = [source cStringUsingEncoding:NSUTF8StringEncoding];
+
+    yy_scan_string(cSource);
+
+    if (false) { yyunput(0, NULL); } // make compiler happy
+}
+
+void css_lexer_delete_buffer()
+{
+    yy_delete_buffer(YY_CURRENT_BUFFER);
+}
+
+PXStylesheetLexeme *expr_lexer_get_lexeme()
+{
+    int tok = yylex();
+    NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+
+    return [[PXStylesheetLexeme alloc] initWithType:tok text:text];
+}
