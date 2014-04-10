@@ -34,7 +34,6 @@
 		0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */; };
 		0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
 		0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
-		0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
@@ -6095,7 +6094,6 @@
 				9C98661E18C0499000C71922 /* PXEllipse.m in Sources */,
 				9CAAFA4618EB10A2000C0233 /* PXByteCodeFunction.m in Sources */,
 				9C98672418C0499000C71922 /* PXClassSelector.m in Sources */,
-				0A8091F218E5F430003CD355 /* PXStylesheetLexer2.lm in Sources */,
 				9C98684918C04BA000C71922 /* UINavigationItem+PXStyling.m in Sources */,
 				9C98674F18C0499000C71922 /* PXPaintStyler.m in Sources */,
 				9C98676418C0499000C71922 /* PXFileUtils.m in Sources */,
