@@ -27,13 +27,12 @@
         [results appendString:@"FAMILY ** "];
         [results appendString:familyName];
         [results appendString:@" **\n"];
+        NSLog(@"%@", familyName);
         [[UIFont fontNamesForFamilyName:familyName] enumerateObjectsUsingBlock:^(NSString *fontName, NSUInteger idx, BOOL *stop) {
-//            NSLog(@"  %@", fontName);
             PXFontEntry *entry = [[PXFontEntry alloc] initWithFontFamily:familyName fontName:fontName];
             [results appendString:entry.description];
             [results appendString:@"\n\n"];
-
-//            NSLog(@"%@", entry);
+            NSLog(@"  %@ = %@", fontName, entry);
         }];
     }];
     
