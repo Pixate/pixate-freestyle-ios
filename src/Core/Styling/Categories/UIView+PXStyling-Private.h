@@ -36,6 +36,8 @@
 
 + (BOOL)subclassIfNeeded:(Class)superClass object:(NSObject *)object;
 
++ (BOOL)pxHasAncestor:(Class)acenstorClass forView:(UIView *)view;
+
 //- (void)applyStyleMode:(PXStylingMode)mode;
 - (BOOL)isSubclassable;
 

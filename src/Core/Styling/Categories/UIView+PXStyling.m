@@ -231,6 +231,17 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
                   });
 
+
+    //
+    // Check 'do not subclass' list
+    //
+    if(mode != PXStylingNone &&
+       [UIView pxHasAncestor:[UIDatePicker class] forView:self])
+    {
+        //NSLog(@"Found child of UIDatePicker %@", [[self class] description]);
+        mode = PXStylingNone;
+    }
+
     //
     // Set the styling mode value on the object
     //
@@ -246,10 +257,10 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         // Grabbing Pixate's subclass of this instance
         Class c = SubclassForViewWithClass(self, nil);
 
-        // NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
-
         if(c)
         {
+            //NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
+            
             // We are subclassing 'self' with the Pixate class 'c' we found above
             [c subclassInstance:self];
 
@@ -279,6 +290,29 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
             }
         }
     }
+}
+
++ (BOOL)pxHasAncestor:(Class)acenstorClass forView:(UIView *)view
+{
+    // Test to see if 'view' is an acesntorClass already
+    if([view class] == acenstorClass)
+    {
+        return YES;
+    }
+    
+    // Walk up the hiearchy now
+    UIView *parent = view.superview;
+    
+    while(parent != nil)
+    {
+        if([parent class] == acenstorClass)
+        {
+            return YES;
+        }
+        parent = parent.superview;
+    }
+    
+    return NO;
 }
 
 #pragma mark - Styling properties on UIView
