@@ -24,18 +24,6 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const kDefaultCacheViewTransform;
-extern NSString *const kDefaultCacheViewFrame;
-extern NSString *const kDefaultCacheViewBounds;
-extern NSString *const kDefaultCacheViewAlpha;
-extern NSString *const kDefaultCacheViewBackgroundColor;
-
-extern NSString *const kDefaultCacheViewLayerShadowColor;
-extern NSString *const kDefaultCacheViewLayerShadowOpacity;
-extern NSString *const kDefaultCacheViewLayerShadowOffset;
-extern NSString *const kDefaultCacheViewLayerShadowRadius;
-extern NSString *const kDefaultCacheViewLayerMasksToBounds;
-
 /**
  *
  *  UIView supports the following element name:
