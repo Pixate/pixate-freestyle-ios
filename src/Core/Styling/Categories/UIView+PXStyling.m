@@ -39,6 +39,7 @@
 #import "NSObject+PXStyling.h"
 #import "PXStylingMacros.h"
 
+static const char STYLE_ELEMENT_NAME_KEY;
 static const char STYLE_CLASS_KEY;
 static const char STYLE_CLASSES_KEY;
 static const char STYLE_ID_KEY;
@@ -58,32 +59,39 @@ void PXForceLoadUIViewPXStyling() {}
 @dynamic bounds;
 @dynamic frame;
 
-static NSMutableDictionary *ELEMENT_NAMES;
 static NSMutableArray *DYNAMIC_SUBCLASSES;
 
 #pragma mark - Static Methods
 
++ (void)setElementName:(NSString *)elementName forClass:(Class)class
+{
+    if (elementName && class)
+    {
+        objc_setAssociatedObject(class, &STYLE_ELEMENT_NAME_KEY, elementName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+
 + (void)addElementName:(NSString *)elementName forClassName:(NSString *)className
 {
-    if (ELEMENT_NAMES == nil)
-    {
-        ELEMENT_NAMES = [[NSMutableDictionary alloc] init];
-    }
-
     if (elementName && className)
     {
-        [ELEMENT_NAMES setObject:elementName forKey:className];
+        [self setElementName:elementName forClass:NSClassFromString(className)];
     }
+}
+
++ (NSString *)elementNameForClass:(Class)class
+{
+    return objc_getAssociatedObject(class, &STYLE_ELEMENT_NAME_KEY);
 }
 
 + (NSString *)elementNameForClassName:(NSString *)className
 {
-    return [ELEMENT_NAMES objectForKey:className];
+    return [self elementNameForClass:NSClassFromString(className)];
 }
 
 + (void)removeElementNameForClassName:(NSString *)className
 {
-    [ELEMENT_NAMES removeObjectForKey:className];
+    [self addElementName:nil forClassName:className];
 }
 
 + (void)addStylingSubclass:(NSString *)className
@@ -320,23 +328,23 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 - (NSString *)pxStyleElementName
 {
     Class class = self.class;
-    NSString *name = [ELEMENT_NAMES objectForKey:class.description];
+    NSString *name = [UIView elementNameForClass:class];
 
     if (!name)
     {
         while (class && !name)
         {
-            class = class.superclass;
+            class = class_getSuperclass(class);
 
             if (class)
             {
-                name = [ELEMENT_NAMES objectForKey:class.description];
+                [UIView elementNameForClass:class];
             }
         }
 
         if (name)
         {
-            [ELEMENT_NAMES setObject:name forKey:self.class.description];
+            [UIView setElementName:name forClass:self.class];
         }
     }
 
