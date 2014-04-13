@@ -25,7 +25,7 @@
 
 @interface UIView (PXStylingPrivate)
 
-+ (void)addElementName:(NSString *)elementName forClassName:(NSString *)className;
++ (void)setElementName:(NSString *)elementName forClass:(Class)class;
 + (NSString *)elementNameForClassName:(NSString *)className;
 + (void)removeElementNameForClassName:(NSString *)className;
 + (void)addStylingSubclass:(NSString *)className;

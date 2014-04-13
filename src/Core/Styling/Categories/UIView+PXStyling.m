@@ -71,14 +71,6 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     }
 }
 
-+ (void)addElementName:(NSString *)elementName forClassName:(NSString *)className
-{
-    if (elementName && className)
-    {
-        [self setElementName:elementName forClass:NSClassFromString(className)];
-    }
-}
-
 + (NSString *)elementNameForClass:(Class)class
 {
     return objc_getAssociatedObject(class, &STYLE_ELEMENT_NAME_KEY);
@@ -87,11 +79,6 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 + (NSString *)elementNameForClassName:(NSString *)className
 {
     return [self elementNameForClass:NSClassFromString(className)];
-}
-
-+ (void)removeElementNameForClassName:(NSString *)className
-{
-    [self addElementName:nil forClassName:className];
 }
 
 + (void)addStylingSubclass:(NSString *)className
@@ -131,11 +118,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
             NSString *className = [NSString stringWithCString:class_getName(subclass)
                                                      encoding:NSUTF8StringEncoding];
 
-            NSString *superClassName = [NSString stringWithCString:class_getName(superClass)
-                                                          encoding:NSUTF8StringEncoding];
-
-
-            [self addElementName:elementName forClassName:superClassName];
+            [self setElementName:elementName forClass:superClass];
             [self addStylingSubclass:className];
         }
     }
@@ -148,11 +131,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         NSString *className = [NSString stringWithCString:class_getName(subclass)
                                                  encoding:NSUTF8StringEncoding];
 
-        NSString *superClassName = [NSString stringWithCString:class_getName(class_getSuperclass(subclass))
-                                                      encoding:NSUTF8StringEncoding];
-
-
-        [self addElementName:elementName forClassName:superClassName];
+        [self setElementName:elementName forClass:class_getSuperclass(subclass)];
         [self addStylingSubclass:className];
     }
 }
