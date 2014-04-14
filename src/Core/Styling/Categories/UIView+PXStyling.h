@@ -25,6 +25,10 @@
 #import <UIKit/UIKit.h>
 #import "PXStyleable.h"
 
+// Timing macros
+#define TICK   NSDate *startTime = [NSDate date]
+#define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow])
+
 @interface UIView (PXStyling) <PXStyleable>
 
 @property (nonatomic, copy) NSString *styleId;

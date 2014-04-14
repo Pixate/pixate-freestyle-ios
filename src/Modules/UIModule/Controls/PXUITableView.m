@@ -43,6 +43,9 @@
 #import "PXUITableViewDelegate.h"
 #import "NSObject+PXSwizzle.h"
 
+// Optimization cached value
+static Class uiPickerTableViewClass;
+
 static const char PX_DELEGATE; // the new delegate (and datasource)
 static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 //static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
@@ -52,12 +55,20 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 + (void)load
 {
     [self swizzleMethod:@selector(setDelegate:) withMethod:@selector(px_setDelegate:)];
+    
+    // Cache this value
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        uiPickerTableViewClass = NSClassFromString(@"UIPickerTableView");
+    });
 }
 
 -(void)px_setDelegate:(id<UITableViewDelegate>)delegate
 {
     // Do not delegate tables embedded in a UIPickerTableView
-    if(delegate && [[[self class] description] isEqualToString:@"UIPickerTableView"] == NO)
+    if(delegate
+       && ([self class] == uiPickerTableViewClass) == NO
+       )
     {
         id delegateProxy = [self pxDelegateProxy];
         [delegateProxy setBaseObject:delegate];
@@ -277,8 +288,8 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 
 - (BOOL)preventStyling
 {
-    BOOL style = [[[self class] description] isEqualToString:@"UIPickerTableView"];
-    return style;
+    // We won't style this kind of table
+    return ([self class] == uiPickerTableViewClass);
 }
 
 #pragma mark - Overrides

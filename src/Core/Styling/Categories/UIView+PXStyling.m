@@ -222,8 +222,9 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     //
     // Check 'do not subclass' list
     //
-    if(mode != PXStylingNone &&
-       [UIView pxHasAncestor:[UIDatePicker class] forView:self])
+    if(mode != PXStylingNone
+       && [UIView pxHasAncestor:[UIDatePicker class] forView:self]
+       )
     {
         //NSLog(@"Found child of UIDatePicker %@", [[self class] description]);
         mode = PXStylingNone;
