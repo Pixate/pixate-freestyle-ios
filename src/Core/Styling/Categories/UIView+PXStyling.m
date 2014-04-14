@@ -317,7 +317,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
             if (class)
             {
-                [UIView elementNameForClass:class];
+                name = [UIView elementNameForClass:class];
             }
         }
 
