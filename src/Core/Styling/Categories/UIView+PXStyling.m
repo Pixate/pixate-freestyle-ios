@@ -263,19 +263,19 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
                     [self performSelector:@selector(registerNotifications)];
                 }
             }
+        }
+        
+        // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
+        BOOL shouldStyle = !(
+                           [self isKindOfClass:[UITableViewCell class]]
+                        || [self isKindOfClass:[UICollectionViewCell class]]
+                        );
 
-            // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
-            BOOL shouldStyle = !(
-                               [self isKindOfClass:[UITableViewCell class]]
-                            || [self isKindOfClass:[UICollectionViewCell class]]
-                            );
+        //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
 
-            //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
-
-            if (shouldStyle)
-            {
-                [self updateStyles];
-            }
+        if (shouldStyle)
+        {
+            [self updateStyles];
         }
     }
 }
