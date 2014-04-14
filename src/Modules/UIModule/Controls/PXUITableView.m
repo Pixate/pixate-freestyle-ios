@@ -56,7 +56,8 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 
 -(void)px_setDelegate:(id<UITableViewDelegate>)delegate
 {
-    if(delegate)
+    // Do not delegate tables embedded in a UIPickerTableView
+    if(delegate && [[[self class] description] isEqualToString:@"UIPickerTableView"] == NO)
     {
         id delegateProxy = [self pxDelegateProxy];
         [delegateProxy setBaseObject:delegate];
@@ -272,6 +273,12 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
         //[self px_setBackgroundColor: [UIColor colorWithPatternImage:context.backgroundImage]];
         [self px_setBackgroundView: [[UIImageView alloc] initWithImage:context.backgroundImage]];
     }
+}
+
+- (BOOL)preventStyling
+{
+    BOOL style = [[[self class] description] isEqualToString:@"UIPickerTableView"];
+    return style;
 }
 
 #pragma mark - Overrides

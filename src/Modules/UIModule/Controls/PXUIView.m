@@ -45,81 +45,12 @@
 
 static const char STYLE_CHILDREN;
 
-NSString *const kDefaultCacheViewTransform = @"view.transform";
-NSString *const kDefaultCacheViewFrame = @"view.frame";
-NSString *const kDefaultCacheViewBounds = @"view.bounds";
-NSString *const kDefaultCacheViewAlpha = @"view.alpha";
-NSString *const kDefaultCacheViewBackgroundColor = @"view.backgroundColor";
-
-NSString *const kDefaultCacheViewLayerShadowColor = @"view.layer.shadowColor";
-NSString *const kDefaultCacheViewLayerShadowOpacity = @"view.layer.shadowOpacity";
-NSString *const kDefaultCacheViewLayerShadowOffset = @"view.layer.shadowOffset";
-NSString *const kDefaultCacheViewLayerShadowRadius = @"view.layer.shadowRadius";
-NSString *const kDefaultCacheViewLayerMasksToBounds = @"view.layer.masksToBounds";
-
 @implementation PXUIView
 
 + (void)load
 {
     [UIView registerDynamicSubclass:self withElementName:@"view"];
 }
-
-/*
-- (NSArray *)supportedPseudoElements
-{
-    static NSArray *PSEUDO_ELEMENTS;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        PSEUDO_ELEMENTS = @[ @"before", @"after" ];
-    });
-
-    return PSEUDO_ELEMENTS;
-}
-
-- (id<PXStyleable>)styleableForPseudoElement:(NSString *)pseudoElement
-{
-    static UIView *before = nil;
-    static UIView *after = nil;
-    id<PXStyleable> result = nil;
-
-    if ([@"before" isEqualToString:pseudoElement])
-    {
-        if (before == nil)
-        {
-            // NOTE: what size should this be?
-            before = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
-
-            // Make the view styleable
-            [before performSelector:@selector(setPxStyled:) withObject:@(YES)];
-
-            // Add the new view in the appropriate slot
-            [self.superview insertSubview:before atIndex:0];
-            //[self.superview insertSubview:before belowSubview:self];
-        }
-
-        result = before;
-    }
-    else if ([@"after" isEqualToString:pseudoElement])
-    {
-        if (after == nil)
-        {
-            // NOTE: what size should this be?
-            after = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
-
-            // Make the view styleable
-            [after performSelector:@selector(setPxStyled:) withObject:@(YES)];
-
-            // Add the new view in the appropriate slot
-            [self.superview addSubview:after];
-            //[self.superview insertSubview:before aboveSubview:self];
-        }
-
-        result = after;
-    }
-
-    return result;
-}
-*/
 
 - (NSArray *)pxStyleChildren
 {
