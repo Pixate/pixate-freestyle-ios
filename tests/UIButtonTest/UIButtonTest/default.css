@@ -34,3 +34,12 @@
     background-image: url(blue_background.svg);
 }
 
+#filter-button.selected #check-icon {
+    border: 1px solid black;
+    background-image : linear-gradient(red,blue);
+}
+
+#filter-button.normal #check-icon {
+    border: 1px solid black;
+    background-image :transparent;
+}

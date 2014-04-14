@@ -7,23 +7,29 @@
 //
 
 #import "ViewController.h"
+#import "PixateFreestyle.h"
 
 @interface ViewController ()
-
+{
+    UIImageView *icon;
+}
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    icon = [[UIImageView alloc] initWithFrame:CGRectMake(5, 10, 10, 15)];
+    icon.styleId = @"check-icon";
+    [self.filterButton addSubview:icon];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)filter:(UIButton *)button selected:(BOOL)selected
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    button.selected = !button.selected;
+    button.styleClass = button.selected ? @"selected" : @"normal";
 }
 
 @end
