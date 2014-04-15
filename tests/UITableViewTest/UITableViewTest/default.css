@@ -1,4 +1,8 @@
 
+pixate-config {
+    cache-styles: all;
+}
+
 table-view-cell:selected{ 
     background-color: #4078BB;
 }
