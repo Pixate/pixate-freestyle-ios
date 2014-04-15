@@ -71,6 +71,8 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
        )
     {
         id delegateProxy = [self pxDelegateProxy];
+        if ([delegateProxy baseObject])
+            [self px_setDelegate:nil];
         [delegateProxy setBaseObject:delegate];
         [self px_setDelegate:delegateProxy];
     }

@@ -539,7 +539,8 @@ static const char viewDelegate;
                     cache = [[PXStyleTreeInfo alloc] initWithStyleable:styleable];
 
                     // save for later
-                    [PXCacheManager setStyleTreeInfo:cache forKey:styleKey];
+                    if (cache.cached)
+                        [PXCacheManager setStyleTreeInfo:cache forKey:styleKey];
                 }
 
                 // apply style info to the styleable and its descendants
