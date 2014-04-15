@@ -34,6 +34,15 @@
 		0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */; };
 		0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
 		0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
+		0A745CA718FD9AC20019EC6B /* PXArrayEveryMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA118FD9AC20019EC6B /* PXArrayEveryMethod.h */; };
+		0A745CA818FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */; };
+		0A745CA918FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */; };
+		0A745CAA18FD9AC20019EC6B /* PXArrayFilterMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA318FD9AC20019EC6B /* PXArrayFilterMethod.h */; };
+		0A745CAB18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
+		0A745CAC18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
+		0A745CAD18FD9AC20019EC6B /* PXArraySomeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */; };
+		0A745CAE18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
+		0A745CAF18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
@@ -1464,6 +1473,12 @@
 		0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectUnshiftMethod.m; sourceTree = "<group>"; };
 		0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeOptimizer.h; sourceTree = "<group>"; };
 		0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeOptimizer.m; sourceTree = "<group>"; };
+		0A745CA118FD9AC20019EC6B /* PXArrayEveryMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayEveryMethod.h; sourceTree = "<group>"; };
+		0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayEveryMethod.m; sourceTree = "<group>"; };
+		0A745CA318FD9AC20019EC6B /* PXArrayFilterMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayFilterMethod.h; sourceTree = "<group>"; };
+		0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayFilterMethod.m; sourceTree = "<group>"; };
+		0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArraySomeMethod.h; sourceTree = "<group>"; };
+		0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArraySomeMethod.m; sourceTree = "<group>"; };
 		0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer2.lm; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
@@ -4608,6 +4623,10 @@
 		9CAAF99918EB10A2000C0233 /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
+				0A745CA118FD9AC20019EC6B /* PXArrayEveryMethod.h */,
+				0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */,
+				0A745CA318FD9AC20019EC6B /* PXArrayFilterMethod.h */,
+				0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */,
 				9CAAF99A18EB10A2000C0233 /* PXArrayForEachMethod.h */,
 				9CAAF99B18EB10A2000C0233 /* PXArrayForEachMethod.m */,
 				0A09BE6918EC9442004780F8 /* PXArrayJoinMethod.h */,
@@ -4626,6 +4645,8 @@
 				9CAAF9A718EB10A2000C0233 /* PXArrayReverseMethod.m */,
 				9CAAF9A818EB10A2000C0233 /* PXArrayShiftMethod.h */,
 				9CAAF9A918EB10A2000C0233 /* PXArrayShiftMethod.m */,
+				0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */,
+				0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */,
 				9CAAF9AA18EB10A2000C0233 /* PXArrayUnshiftMethod.h */,
 				9CAAF9AB18EB10A2000C0233 /* PXArrayUnshiftMethod.m */,
 			);
@@ -4954,6 +4975,7 @@
 				9C98661818C0499000C71922 /* PXArrowRectangle.h in Headers */,
 				9C98682818C04BA000C71922 /* PXUITableView.h in Headers */,
 				9C9867F418C04BA000C71922 /* PXMKAnnotationView.h in Headers */,
+				0A745CAD18FD9AC20019EC6B /* PXArraySomeMethod.h in Headers */,
 				9C9865F218C0499000C71922 /* PXDimension.h in Headers */,
 				9C98667118C0499000C71922 /* PXCacheManager.h in Headers */,
 				9C98680A18C04BA000C71922 /* PXUILabel.h in Headers */,
@@ -5154,12 +5176,14 @@
 				9C98661318C0499000C71922 /* PXShadowGroup.h in Headers */,
 				9C98673418C0499000C71922 /* PXAnimationStyler.h in Headers */,
 				9C9867EA18C04BA000C71922 /* PXKeyframe.h in Headers */,
+				0A745CAA18FD9AC20019EC6B /* PXArrayFilterMethod.h in Headers */,
 				9C98684018C04BA000C71922 /* PXVirtualControl.h in Headers */,
 				9CAAFA3318EB10A2000C0233 /* PXArrayPopMethod.h in Headers */,
 				9C9866FE18C0499000C71922 /* PXMediaExpression.h in Headers */,
 				9C98674E18C0499000C71922 /* PXPaintStyler.h in Headers */,
 				9C98684418C04BA000C71922 /* UIBarButtonItem+PXStyling.h in Headers */,
 				9CAAFA5118EB10A2000C0233 /* PXCosFunction.h in Headers */,
+				0A745CA718FD9AC20019EC6B /* PXArrayEveryMethod.h in Headers */,
 				9C9867E818C04BA000C71922 /* PXAnimationPropertyHandler.h in Headers */,
 				9C9866F918C0499000C71922 /* PXTransitionRuleSetInfo.h in Headers */,
 				9C98672318C0499000C71922 /* PXClassSelector.h in Headers */,
@@ -6080,6 +6104,7 @@
 				9C98663B18C0499000C71922 /* PXStrokeStroke.m in Sources */,
 				9C98672C18C0499000C71922 /* PXPseudoClassPredicate.m in Sources */,
 				9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */,
+				0A745CAB18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */,
 				9C98670818C0499000C71922 /* PXStylesheetLexer.m in Sources */,
 				9C98673118C0499000C71922 /* PXTypeSelector.m in Sources */,
 				9CAAFAD118EB10A2000C0233 /* PXNullValue.m in Sources */,
@@ -6120,6 +6145,7 @@
 				9CAAFA2B18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */,
 				9C9866F018C0499000C71922 /* PXFontEntry.m in Sources */,
 				9C98670218C0499000C71922 /* PXMediaGroup.m in Sources */,
+				0A745CA818FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */,
 				9C98681D18C04BA000C71922 /* PXUISearchBar.m in Sources */,
 				9C98680D18C04BA000C71922 /* PXUILayoutContainerView.m in Sources */,
 				9C98675C18C0499000C71922 /* PXTransformStyler.m in Sources */,
@@ -6216,6 +6242,7 @@
 				9C98670A18C0499000C71922 /* PXStylesheetParser.m in Sources */,
 				9C98672018C0499000C71922 /* PXAttributeSelector.m in Sources */,
 				9C98664118C0499000C71922 /* PXFileFunctionLogFormatter.m in Sources */,
+				0A745CAE18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */,
 				9C98661C18C0499000C71922 /* PXCircle.m in Sources */,
 				9C98684218C04BA000C71922 /* PXVirtualStyleableControl.m in Sources */,
 				9CAAFAAE18EB10A2000C0233 /* PXBuiltInSource.m in Sources */,
@@ -6372,6 +6399,7 @@
 				9CAAFA7D18EB10A2000C0233 /* PXInstructionDisassembler.m in Sources */,
 				9CAAFA3B18EB10A2000C0233 /* PXArrayReduceMethod.m in Sources */,
 				9CAAFA5018EB10A2000C0233 /* PXShowTopFunction.m in Sources */,
+				0A745CA918FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */,
 				9CAAFA5618EB10A2000C0233 /* PXPowerFunction.m in Sources */,
 				9CAAFA2C18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */,
 				9CAAFA4A18EB10A2000C0233 /* PXParameter.m in Sources */,
@@ -6394,6 +6422,7 @@
 				9CAAFA6D18EB10A2000C0233 /* PXSourceWriter.m in Sources */,
 				9CAAFA9318EB10A2000C0233 /* PXExpressionLexer.lm in Sources */,
 				9CAAFAC218EB10A2000C0233 /* PXDoubleValue.m in Sources */,
+				0A745CAC18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */,
 				9CAAFA8018EB10A2000C0233 /* PXInstructionProcessor.m in Sources */,
 				0A09BF4D18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */,
 				9C23048C18DA126300969D18 /* MAProxy.m in Sources */,
@@ -6428,6 +6457,7 @@
 				9CAAFA2918EB10A2000C0233 /* PXObjectValueWrapper.m in Sources */,
 				9CAAFA3218EB10A2000C0233 /* PXArrayMapMethod.m in Sources */,
 				9CAAFA7318EB10A2000C0233 /* PXExpressionByteCode.m in Sources */,
+				0A745CAF18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */,
 				9CAAFA9618EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */,
 				9CAAFA8618EB10A2000C0233 /* PXBlockNode.m in Sources */,
 				9CAAFAC918EB10A2000C0233 /* PXExpressionValueBase.m in Sources */,
