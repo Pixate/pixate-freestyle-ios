@@ -2,6 +2,7 @@
 %option nodefault
 %option yylineno
 %option prefix="css"
+%option case-insensitive
 
 %{
 
@@ -9,22 +10,29 @@
 #import "PXStylesheetTokenType.h"
 #import "PXDimension.h"
 
+#define YY_USER_ACTION css_offset += yyleng;
+
 void createDimension(int, char*);
 void createURL();
 
+NSMutableArray *lexemeStack;
+NSMutableArray *sourceStack;
+NSMutableArray *offsetStack;
 PXDimension *dimension;
+uint css_offset;
+BOOL followsWhitespace;
 
 %}
 
-h			[0-9a-fA-Z]
+h			[0-9a-fA-F]
 nonascii	[\200-\377]
 unicode		\\{h}{1,6}
 escape		{unicode}|\\[ =~.\200-\377]
 nmstart		[a-zA-Z]|{nonascii}|{escape}
 nmchar		[-a-zA-Z0-9_]|{nonascii}|{escape}
 nmchar2		[a-zA-Z0-9]|{nonascii}|{escape}
-string1		\'([^\n\r\f\']|\\{nl}|{escape})*\'
-string2		\"([^\n\r\f\"]|\\{nl}|{escape})*\"
+string1		\'([^\n\r\f\']|\\{nl}|\\\'|{escape})*\'
+string2		\"([^\n\r\f\"]|\\{nl}|\\\"|{escape})*\"
 
 ident		-?{nmstart}{nmchar}*
 dim         -?{nmstart}{nmchar2}*
@@ -36,12 +44,13 @@ nl			\r|\n|\r\n|\f
 comment		"/*"([^\*]|\*[^/])*"*/"
 
 n			[-+]?[0-9]*n
+url         url\(\s*(\"([^\"\r\n]*)\"|(data:[^,\r\n\)]+,[a-zA-Z0-9+/ \t\r\n]+\={0,2})|([!#$%&*-~]*))\s*\)
 
 %%
 
-{w}+					{ /* ignore */ }
+{w}+					{ followsWhitespace = YES; /* ignore */ }
 
-{comment}				{ /* ignore */ }
+{comment}				{ followsWhitespace = YES; /* ignore */ }
 
 "~="					{ return PXSS_LIST_CONTAINS; }
 "|="					{ return PXSS_EQUALS_WITH_HYPHEN; }
@@ -50,6 +59,7 @@ n			[-+]?[0-9]*n
 "*="					{ return PXSS_CONTAINS; }
 
 {string}				{ return PXSS_STRING; }
+"%{"([^\}]|\}[^%])*"}%" { return PXSS_EXPRESSION; }
 
 "and"					{ return PXSS_AND; }
 "linear-gradient("		{ return PXSS_LINEAR_GRADIENT; }
@@ -60,9 +70,9 @@ n			[-+]?[0-9]*n
 "hsla("					{ return PXSS_HSLA; }
 "rgb("					{ return PXSS_RGB; }
 "rgba("					{ return PXSS_RGBA; }
-"url("[^)]*")"			{ createURL(); return PXSS_URL; }
+{url}                   { return PXSS_URL; }
 
-"#"{name}				{ return PXSS_ID; }
+"#"{name}				{ return PXSS_HASH; }
 "."{ident}				{ return PXSS_CLASS; }
 
 "@import"				{ return PXSS_IMPORT; }
@@ -150,24 +160,20 @@ n			[-+]?[0-9]*n
 void createDimension(int tokenType, char *units)
 {
     NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
-    NSString *dimension = [NSString stringWithCString:units encoding:NSUTF8StringEncoding];
-    NSRange range = NSMakeRange(text.length - dimension.length, dimension.length);
-    NSString *number = [text substringWithRange:range];
-    double doubleValue = [number doubleValue];
+    NSString *unitString = [NSString stringWithCString:units encoding:NSUTF8StringEncoding];
+    NSRange range = NSMakeRange(0, text.length - unitString.length);
+    NSString *numberString = [text substringWithRange:range];
+    double doubleValue = [numberString doubleValue];
 
-    dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:dimension];
+    dimension = [PXDimension dimensionWithNumber:doubleValue withDimension:unitString];
 }
 
-void createURL()
-{
-    // TODO:
-}
-
-void css_lexer_set_source(NSString *source, BOOL forEma)
+void css_lexer_set_source(NSString *source)
 {
     const char *cSource = [source cStringUsingEncoding:NSUTF8StringEncoding];
 
     yy_scan_string(cSource);
+    css_offset = 0;
 
     if (false) { yyunput(0, NULL); } // make compiler happy
 }
@@ -179,8 +185,73 @@ void css_lexer_delete_buffer()
 
 PXStylesheetLexeme *css_lexer_get_lexeme()
 {
-    int tok = yylex();
-    NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+    PXStylesheetLexeme *result;
 
-    return [[PXStylesheetLexeme alloc] initWithType:tok text:text];
+    if (lexemeStack.count > 0)
+    {
+        result = [lexemeStack lastObject];
+        [lexemeStack removeLastObject];
+    }
+    else
+    {
+        int tok = yylex();
+        NSString *text = [NSString stringWithCString:yytext encoding:NSUTF8StringEncoding];
+        NSRange range = NSMakeRange(css_offset - text.length, text.length);
+
+        if (tok == PXSS_URL)
+        {
+            NSRange contentRange = NSMakeRange(4, text.length - 5);
+            text = [text substringWithRange:contentRange];
+            text = [text stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" '\""]];
+        }
+
+        if (dimension != nil)
+        {
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:dimension];
+            dimension = nil;
+        }
+        else if (tok == PXSS_NUMBER)
+        {
+            double doubleValue = [text doubleValue];
+            NSNumber *value = [NSNumber numberWithDouble:doubleValue];
+
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:value];
+        }
+        else
+        {
+            result = [[PXStylesheetLexeme alloc] initWithType:tok withRange:range withValue:text];
+        }
+
+        if (followsWhitespace)
+        {
+            [result setFlag:PXLexemeFlagFollowsWhitespace];
+        }
+    }
+
+    followsWhitespace = NO;
+
+    return result;
 }
+
+void css_push_lexeme(PXStylesheetLexeme *lexeme)
+{
+    if (lexemeStack == nil)
+    {
+        lexemeStack = [[NSMutableArray alloc] init];
+    }
+
+    [lexemeStack addObject:lexeme];
+}
+
+//void css_push_source(NSString *source)
+//{
+//    if (sourceStack == nil)
+//    {
+//        sourceStack = [[NSMutableArray alloc] init];
+//        offsetStack = [[NSMutableArray alloc] init];
+//    }
+//
+//    // push current source
+//    // push current offset
+//    // set new source and zero offset
+//}

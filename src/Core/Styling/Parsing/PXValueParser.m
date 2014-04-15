@@ -23,7 +23,7 @@
 //
 
 #import "PXValueParser.h"
-#import "PXStylesheetLexer.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import "PXLinearGradient.h"
 #import "PXRadialGradient.h"
@@ -33,11 +33,14 @@
 #import "UIColor+PXColors.h"
 #import "PXShadow.h"
 #import "PXShadowGroup.h"
-#import "PXStylesheetLexer.h"
 #import "PixateFreestyle.h"
 #import "PXAnimationInfo.h"
 #import "PXValue.h"
 #import "PXImagePaint.h"
+
+void css_lexer_set_source(NSString *source);
+PXStylesheetLexeme *css_lexer_get_lexeme();
+void css_lexer_delete_buffer();
 
 @implementation PXValueParser
 {
@@ -77,7 +80,7 @@ static NSString *ASSET_SCHEME = @"asset://";
         [set addIndex:PXSS_HSBA];
         [set addIndex:PXSS_HSL];
         [set addIndex:PXSS_HSLA];
-        [set addIndex:PXSS_HEX_COLOR];
+        [set addIndex:PXSS_HASH];
         [set addIndex:PXSS_IDENTIFIER];
         COLOR_SET = [[NSIndexSet alloc] initWithIndexSet:set];
     }
@@ -185,22 +188,18 @@ static NSString *ASSET_SCHEME = @"asset://";
 
     if (source.length > 0)
     {
-        static PXStylesheetLexer *lexer;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            lexer = [[PXStylesheetLexer alloc] init];
-        });
+        css_lexer_set_source(source);
+//        [lexer increaseNesting];
+        PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
-        lexer.source = source;
-        [lexer increaseNesting];
-        PXStylesheetLexeme *lexeme = [lexer nextLexeme];
-
-        while (lexeme)
+        while (lexeme && lexeme.type != PXSS_EOF)
         {
             [lexemes addObject:lexeme];
 
-            lexeme = [lexer nextLexeme];
+            lexeme = css_lexer_get_lexeme();
         }
+
+        css_lexer_delete_buffer();
     }
 
     return [NSArray arrayWithArray:lexemes];
@@ -1551,7 +1550,7 @@ static NSString *ASSET_SCHEME = @"asset://";
 
             [self advance];
 
-            if ([self isType:PXSS_HEX_COLOR])
+            if ([self isType:PXSS_HASH])
             {
                 UIColor *c = [UIColor colorWithHexString:currentLexeme.value];
 
@@ -1617,7 +1616,7 @@ static NSString *ASSET_SCHEME = @"asset://";
             [self assertTypeAndAdvance:PXSS_RPAREN];
             break;
 
-        case PXSS_HEX_COLOR:
+        case PXSS_HASH:
             result = [UIColor colorWithHexString:currentLexeme.value];
             [self advance];
             break;

@@ -46,7 +46,7 @@
 
     XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 0, @"Lexeme does not start at offset zero");
-    XCTAssertTrue(lexeme.range.length == source.length, @"Expected %d characters but found %d", source.length, lexeme.range.length);
+    XCTAssertTrue(lexeme.range.length == source.length, @"Expected %lu characters but found %lu", (unsigned long)source.length, (unsigned long)lexeme.range.length);
 
     return lexeme;
 }

@@ -37,7 +37,7 @@
 
         case PXSS_NUMBER:                           return @"NUMBER";
         case PXSS_CLASS:                            return @"CLASS";
-        case PXSS_ID:                               return @"ID";
+        case PXSS_HASH:                             return @"HASH";
         case PXSS_IDENTIFIER:                       return @"IDENTIFIER";
 
         case PXSS_LCURLY:                           return @"LCURLY";
@@ -74,7 +74,6 @@
         case PXSS_HSBA:                             return @"HSBA";
         case PXSS_RGB:                              return @"RGB";
         case PXSS_RGBA:                             return @"RGBA";
-        case PXSS_HEX_COLOR:                        return @"HEX_COLOR";
         case PXSS_URL:                              return @"URL";
         case PXSS_NAMESPACE:                        return @"NAMESPACE";
 
@@ -123,6 +122,8 @@
         case PXSS_FREQUENCY:                        return @"FREQUENCY";
         case PXSS_DIMENSION:                        return @"DIMENSION";
         case PXSS_PERCENTAGE:                       return @"PERCENTAGE";
+
+        case PXSS_EXPRESSION:                       return @"EXPRESSION";
 
         default:                        return @"<unknown>";
     }

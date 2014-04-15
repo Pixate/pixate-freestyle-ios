@@ -6,32 +6,28 @@
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
-#import "PXStylesheetLexer.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import "PXDimension.h"
 #import <XCTest/XCTest.h>
+
+void css_lexer_set_source(NSString *source);
+void css_lexer_delete_buffer();
+PXStylesheetLexeme *css_lexer_get_lexeme();
 
 @interface PXStylesheetLexerTests : XCTestCase
 
 @end
 
 @implementation PXStylesheetLexerTests
-{
-    PXStylesheetLexer *lexer;
-}
 
 - (void)setUp
 {
     [super setUp];
-
-    lexer = [[PXStylesheetLexer alloc] init];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    lexer = nil;
-
     [super tearDown];
 }
 
@@ -42,8 +38,11 @@
 
 - (PXStylesheetLexeme *)assertLexemeType:(PXStylesheetTokens)type withSource:(NSString *)source length:(NSInteger)length;
 {
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+//    lexer.source = source;
+//    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
 
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
@@ -52,7 +51,7 @@
 
     XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int)type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 0, @"Lexeme does not start at offset zero");
-    XCTAssertTrue(lexeme.range.length == length, @"Expected %d characters but found %d: %@", length, lexeme.range.length, lexeme);
+    XCTAssertTrue(lexeme.range.length == length, @"Expected %ld characters but found %lu: %@", (long)length, (unsigned long)lexeme.range.length, lexeme);
 
     return lexeme;
 }
@@ -92,12 +91,12 @@
 
 - (void)testId
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#id"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#id"];
 }
 
 - (void)testIdWithEscapeSequence
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#one\\ two"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#one\\ two"];
 }
 
 - (void)testIdentifier
@@ -268,37 +267,39 @@
 - (void)test3DigitHexColor
 {
     NSString *source = @"{#abc";
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
-    lexeme = [lexer nextLexeme];
+    lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
-    PXStylesheetTokens type = PXSS_HEX_COLOR;
+    PXStylesheetTokens type = PXSS_HASH;
     NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
     NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
 
-    XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", type, expectedType, lexeme.type, actualType);
+    XCTAssertTrue(lexeme.type == type, @"Expected %ld(%@) but found %d(%@)", type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
-    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %d characters but found %d", source.length - 1, lexeme.range.length);
+    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
 }
 
 - (void)test6DigitHexColor
 {
     NSString *source = @"{#aabbcc";
-    lexer.source = source;
-    PXStylesheetLexeme *lexeme = [lexer nextLexeme];
+    css_lexer_set_source(source);
+    PXStylesheetLexeme *lexeme = css_lexer_get_lexeme();
 
-    lexeme = [lexer nextLexeme];
+    lexeme = css_lexer_get_lexeme();
+    css_lexer_delete_buffer();
     XCTAssertNotNil(lexeme, @"Expected lexeme");
 
-    PXStylesheetTokens type = PXSS_HEX_COLOR;
+    PXStylesheetTokens type = PXSS_HASH;
     NSString *expectedType = [PXStylesheetTokenType typeNameForInt:type];
     NSString *actualType = [PXStylesheetTokenType typeNameForInt:lexeme.type];
 
     XCTAssertTrue(lexeme.type == type, @"Expected %d(%@) but found %d(%@)", (int) type, expectedType, lexeme.type, actualType);
     XCTAssertTrue(lexeme.range.location == 1, @"Lexeme does not start at offset one");
-    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %d characters but found %d", source.length - 1, lexeme.range.length);
+    XCTAssertTrue(lexeme.range.length == source.length - 1, @"Expected %lu characters but found %lu", source.length - 1, (unsigned long)lexeme.range.length);
 }
 
 - (void)testEm
@@ -388,7 +389,7 @@
 
 - (void)testUserDefinedDimension
 {
-    [self assertLexemeType:PXSS_DIMENSION dimensionType:kDimensionTypeUserDefined withSource:@"10units"];
+    [self assertLexemeType:PXSS_DIMENSION withSource:@"10units"];
 }
 
 - (void)testKeyframes
@@ -403,17 +404,17 @@
 
 - (void)testIdLooksLikeHexColor
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#abc"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#abc"];
 }
 
 - (void)testIdLooksLikeHexColor2
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#back"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#back"];
 }
 
 - (void)testIdLooksLikeHexColor3
 {
-    [self assertLexemeType:PXSS_ID withSource:@"#background"];
+    [self assertLexemeType:PXSS_HASH withSource:@"#background"];
 }
 
 - (void)testURLWithString
@@ -541,18 +542,18 @@
     [self assertLexemeType:PXSS_EMPTY_PSEUDO_CLASS withSource:@":empty"];
 }
 
-- (void)testWhitespaceFlag
-{
-    lexer.source = @"a b";
-    PXStylesheetLexeme *a = [lexer nextLexeme];
-    PXStylesheetLexeme *b = [lexer nextLexeme];
-
-    XCTAssertNotNil(a, @"a should not be nil");
-    XCTAssertNotNil(b, @"b should not be nil");
-
-    XCTAssertFalse([a flagIsSet:PXLexemeFlagFollowsWhitespace], @"a does not follow whitespace");
-    XCTAssertTrue([b flagIsSet:PXLexemeFlagFollowsWhitespace], @"b should follow whitespace");
-}
+//- (void)testWhitespaceFlag
+//{
+//    lexer.source = @"a b";
+//    PXStylesheetLexeme *a = [lexer nextLexeme];
+//    PXStylesheetLexeme *b = [lexer nextLexeme];
+//
+//    XCTAssertNotNil(a, @"a should not be nil");
+//    XCTAssertNotNil(b, @"b should not be nil");
+//
+//    XCTAssertFalse([a flagIsSet:PXLexemeFlagFollowsWhitespace], @"a does not follow whitespace");
+//    XCTAssertTrue([b flagIsSet:PXLexemeFlagFollowsWhitespace], @"b should follow whitespace");
+//}
 
 - (void)testNthNOnly
 {
@@ -609,27 +610,32 @@
     [self assertLexemeType:PXSS_AND withSource:@"and"];
 }
 
-- (void)testPushSource
+- (void)testExpression
 {
-    NSString *source1 = @"red blue";
-    NSString *source2 = @"green";
-
-    lexer.source = source1;
-    PXStylesheetLexeme *lexeme1 = [lexer nextLexeme];
-
-    [lexer pushSource:source2];
-    PXStylesheetLexeme *lexeme2 = [lexer nextLexeme];
-
-    PXStylesheetLexeme *lexeme3 = [lexer nextLexeme];
-
-    XCTAssertTrue(lexeme1.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme1);
-    XCTAssertTrue([@"red" isEqualToString:lexeme1.value], @"Expected 'red': %@", lexeme1.value);
-
-    XCTAssertTrue(lexeme2.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme2);
-    XCTAssertTrue([@"green" isEqualToString:lexeme2.value], @"Expected 'green': %@", lexeme2.value);
-
-    XCTAssertTrue(lexeme3.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme3);
-    XCTAssertTrue([@"blue" isEqualToString:lexeme3.value], @"Expected 'blue': %@", lexeme3.value);
+    [self assertLexemeType:PXSS_EXPRESSION withSource:@"%{4 + 5}%"];
 }
+
+//- (void)testPushSource
+//{
+//    NSString *source1 = @"red blue";
+//    NSString *source2 = @"green";
+//
+//    lexer.source = source1;
+//    PXStylesheetLexeme *lexeme1 = [lexer nextLexeme];
+//
+//    [lexer pushSource:source2];
+//    PXStylesheetLexeme *lexeme2 = [lexer nextLexeme];
+//
+//    PXStylesheetLexeme *lexeme3 = [lexer nextLexeme];
+//
+//    XCTAssertTrue(lexeme1.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme1);
+//    XCTAssertTrue([@"red" isEqualToString:lexeme1.value], @"Expected 'red': %@", lexeme1.value);
+//
+//    XCTAssertTrue(lexeme2.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme2);
+//    XCTAssertTrue([@"green" isEqualToString:lexeme2.value], @"Expected 'green': %@", lexeme2.value);
+//
+//    XCTAssertTrue(lexeme3.type == PXSS_IDENTIFIER, @"Expected IDENTIFIER: %@", lexeme3);
+//    XCTAssertTrue([@"blue" isEqualToString:lexeme3.value], @"Expected 'blue': %@", lexeme3.value);
+//}
 
 @end

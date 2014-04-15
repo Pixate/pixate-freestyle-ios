@@ -161,7 +161,7 @@ static NSDictionary *dimensionMap;
             break;
 
         case kDimensionTypeGradians:
-            result = self->number * 0.9f;
+            result = self->number * 0.9;
             break;
 
         case kDimensionTypeRadians:
@@ -250,7 +250,7 @@ static NSDictionary *dimensionMap;
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%f%@", number, dimension];
+    return [NSString stringWithFormat:@"%lg%@", number, dimension];
 }
 
 @end

@@ -23,6 +23,7 @@
 //
 
 #import "PXStylesheetParser.h"
+#import "PXStylesheetLexeme.h"
 #import "PXStylesheetTokenType.h"
 #import "PXDeclaration.h"
 #import "PXIdSelector.h"
@@ -46,12 +47,17 @@
 #import "PXKeyframeBlock.h"
 #import "PXFontRegistry.h"
 
+void css_lexer_set_source(NSString *source);
+PXStylesheetLexeme *css_lexer_get_lexeme();
+void css_lexer_delete_buffer();
+void css_push_lexeme(PXStylesheetLexeme *lexeme);
+
 @implementation PXStylesheetParser
 {
-    PXStylesheetLexer *lexer_;
     PXStylesheet *currentStyleSheet_;
     PXTypeSelector *currentSelector_;
     NSMutableArray *activeImports_;
+    NSString *source_;
 }
 
 #ifdef PX_LOGGING
@@ -105,7 +111,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     if (!SELECTOR_EXPRESSION_SET)
     {
         NSMutableIndexSet *set = [NSMutableIndexSet indexSet];
-        [set addIndex:PXSS_ID];
+        [set addIndex:PXSS_HASH];
         [set addIndex:PXSS_CLASS];
         [set addIndex:PXSS_LBRACKET];
         [set addIndex:PXSS_COLON];
@@ -226,19 +232,6 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     }
 }
 
-#pragma mark - Initializers
-
-- (id)init
-{
-    if (self = [super init])
-    {
-        lexer_ = [[PXStylesheetLexer alloc] init];
-        lexer_.delegate = self;
-    }
-
-    return self;
-}
-
 #pragma mark - Methods
 
 // level 0
@@ -266,13 +259,16 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     currentStyleSheet_ = [[PXStylesheet alloc] initWithOrigin:origin];
 
     // setup lexer and prime it
-    lexer_.source = source;
+    source_ = source;
+    css_lexer_set_source((source != nil) ? source : @"");
     [self advance];
 
     @try
     {
-        while (currentLexeme)
+        while (currentLexeme && currentLexeme.type != PXSS_EOF)
         {
+            id<PXLexeme> startingLexeme = currentLexeme;
+
             switch (currentLexeme.type)
             {
                 case PXSS_IMPORT:
@@ -300,11 +296,21 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
                     [self parseRuleSet];
                     break;
             }
+
+            if (currentLexeme == startingLexeme)
+            {
+                [self errorWithMessage:@"The stylesheet parser has stalled at %@. Exiting to prevent an infinite loop"];
+            }
         }
     }
     @catch (NSException *e)
     {
         [self addError:e.description];
+    }
+    @finally
+    {
+        source_ = nil;
+        css_lexer_delete_buffer();
     }
 
     // clear out any import refs
@@ -322,8 +328,8 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     self->currentStyleSheet_ = [[PXStylesheet alloc] initWithOrigin:PXStylesheetOriginInline];
 
     // setup lexer and prime it
-    lexer_.source = css;
-    [lexer_ increaseNesting];
+    source_ = css;
+    css_lexer_set_source((css != nil) ? css : @"");
     [self advance];
 
     @try
@@ -347,6 +353,11 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     {
         [self addError:e.description];
     }
+    @finally
+    {
+        source_ = nil;
+        css_lexer_delete_buffer();
+    }
 
     return self->currentStyleSheet_;
 }
@@ -359,7 +370,8 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     [self clearErrors];
 
     // setup lexer and prime it
-    lexer_.source = source;
+    source_ = source;
+    css_lexer_set_source((source != nil) ? source : @"");
     [self advance];
 
     @try
@@ -368,6 +380,11 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     }
     @catch (NSException *e) {
         [self addError:e.description];
+    }
+    @finally
+    {
+        source_ = nil;
+        css_lexer_delete_buffer();
     }
 
     return result;
@@ -400,66 +417,70 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     [self assertTypeAndAdvance:PXSS_IMPORT];
     [self assertTypeInSet:IMPORT_SET];
 
-    NSString *path = nil;
+    NSLog(@"@import temporarily disabled");
+    [self advance];
+    [self advanceIfIsType:PXSS_SEMICOLON];
 
-    switch (currentLexeme.type)
-    {
-        case PXSS_STRING:
-        {
-            NSString *string = currentLexeme.value;
-
-            if (string.length > 2)
-            {
-                path = [string substringWithRange:NSMakeRange(1, string.length - 2)];
-            }
-
-            break;
-        }
-
-        case PXSS_URL:
-            path = currentLexeme.value;
-            break;
-    }
-
-    if (path)
-    {
-        // advance over @import argument
-        [self advance];
-
-        // calculate resource name and file extension
-        NSString *pathMinusExtension = [path stringByDeletingPathExtension];
-        NSString *extension = [[path pathExtension] lowercaseString];
-        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:pathMinusExtension ofType:extension];
-
-        if (![activeImports_ containsObject:bundlePath])
-        {
-            // we need to go ahead and process the trailing semicolon so we have the corrent lexeme in case we push it
-            // below
-            [self advance];
-
-            [self addImportName:bundlePath];
-
-            NSString *source = [PXFileUtils sourceFromResource:pathMinusExtension ofType:extension];
-
-            if (source.length > 0)
-            {
-                [lexer_ pushLexeme:currentLexeme];
-                [lexer_ pushSource:source];
-                [self advance];
-            }
-        }
-        else
-        {
-            NSString *message
-                = [NSString stringWithFormat:@"@import cycle detected trying to import '%@':\n%@ ->\n%@", path, [activeImports_ componentsJoinedByString:@" ->\n"], bundlePath];
-
-            [self addError:message];
-
-            // NOTE: we do this here so we'll still have the current file on the active imports stack. This handles the
-            // case of a file ending with an @import statement, causing advance to pop it from the active imports stack
-            [self advance];
-        }
-    }
+//    NSString *path = nil;
+//
+//    switch (currentLexeme.type)
+//    {
+//        case PXSS_STRING:
+//        {
+//            NSString *string = currentLexeme.value;
+//
+//            if (string.length > 2)
+//            {
+//                path = [string substringWithRange:NSMakeRange(1, string.length - 2)];
+//            }
+//
+//            break;
+//        }
+//
+//        case PXSS_URL:
+//            path = currentLexeme.value;
+//            break;
+//    }
+//
+//    if (path)
+//    {
+//        // advance over @import argument
+//        [self advance];
+//
+//        // calculate resource name and file extension
+//        NSString *pathMinusExtension = [path stringByDeletingPathExtension];
+//        NSString *extension = [[path pathExtension] lowercaseString];
+//        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:pathMinusExtension ofType:extension];
+//
+//        if (![activeImports_ containsObject:bundlePath])
+//        {
+//            // we need to go ahead and process the trailing semicolon so we have the corrent lexeme in case we push it
+//            // below
+//            [self advance];
+//
+//            [self addImportName:bundlePath];
+//
+//            NSString *source = [PXFileUtils sourceFromResource:pathMinusExtension ofType:extension];
+//
+//            if (source.length > 0)
+//            {
+//                [lexer_ pushLexeme:currentLexeme];
+//                [lexer_ pushSource:source];
+//                [self advance];
+//            }
+//        }
+//        else
+//        {
+//            NSString *message
+//                = [NSString stringWithFormat:@"@import cycle detected trying to import '%@':\n%@ ->\n%@", path, [activeImports_ componentsJoinedByString:@" ->\n"], bundlePath];
+//
+//            [self addError:message];
+//
+//            // NOTE: we do this here so we'll still have the current file on the active imports stack. This handles the
+//            // case of a file ending with an @import statement, causing advance to pop it from the active imports stack
+//            [self advance];
+//        }
+//    }
 }
 
 - (void)parseMedia
@@ -870,7 +891,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     NSMutableArray *declarations = [NSMutableArray array];
 
     // parse properties
-    while (currentLexeme && currentLexeme.type != PXSS_RCURLY)
+    while (currentLexeme && currentLexeme.type != PXSS_RCURLY && currentLexeme.type != PXSS_EOF)
     {
         @try
         {
@@ -1003,7 +1024,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     // collect values
     NSMutableArray *lexemes = [NSMutableArray array];
 
-    while (currentLexeme && ![self isInTypeSet:DECLARATION_DELIMITER_SET])
+    while (currentLexeme && currentLexeme.type != PXSS_EOF && ![self isInTypeSet:DECLARATION_DELIMITER_SET])
     {
         if (currentLexeme.type == PXSS_COLON && ((PXStylesheetLexeme *)[lexemes lastObject]).type == PXSS_IDENTIFIER)
         {
@@ -1038,7 +1059,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
         NSUInteger length = end - start;
         NSRange sourceRange = NSMakeRange(start, length);
 
-        source = [lexer_.source substringWithRange:sourceRange];
+        source = [source_ substringWithRange:sourceRange];
     }
     else
     {
@@ -1138,7 +1159,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     {
         switch (currentLexeme.type)
         {
-            case PXSS_ID:
+            case PXSS_HASH:
             {
                 NSString *name = [(NSString *) currentLexeme.value substringFromIndex:1];
                 [expressions addObject:[[PXIdSelector alloc] initWithIdValue:name]];
@@ -1323,7 +1344,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
         }
         else if ([self isType:PXSS_NUMBER])
         {
-            NSString *numberString = [lexer_.source substringWithRange:currentLexeme.range];
+            NSString *numberString = [source_ substringWithRange:currentLexeme.range];
 
             if ([numberString hasPrefix:@"-"] || [numberString hasPrefix:@"+"])
             {
@@ -1542,7 +1563,7 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
     switch (currentLexeme.type)
     {
-        case PXSS_ID:
+        case PXSS_HASH:
         {
             NSString *name = [(NSString *) currentLexeme.value substringFromIndex:1];
             result = [[PXIdSelector alloc] initWithIdValue:name];
@@ -1654,25 +1675,11 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
     return result;
 }
 
-#pragma mark - PXStylesheetLexerDelegate Implementation
-
-- (void)lexerDidPopSource
-{
-    if (activeImports_.count > 0)
-    {
-        [activeImports_ pop];
-    }
-    else
-    {
-        DDLogError(@"Tried to pop an empty activeImports array");
-    }
-}
-
 #pragma mark - Overrides
 
 - (PXStylesheetLexeme *)advance
 {
-    return currentLexeme = [lexer_ nextLexeme];
+    return currentLexeme = css_lexer_get_lexeme();
 }
 
 - (NSString *)lexemeNameFromType:(int)type
@@ -1684,7 +1691,6 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 - (void)dealloc
 {
-    lexer_ = nil;
     currentStyleSheet_ = nil;
     currentSelector_ = nil;
     activeImports_ = nil;
@@ -1707,17 +1713,10 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 - (void)advanceToType:(NSInteger)type
 {
-    while (currentLexeme && currentLexeme.type != type)
+    while (currentLexeme && currentLexeme.type != type && currentLexeme.type != PXSS_EOF)
     {
         [self advance];
     }
-}
-
-- (void)pushLexeme:(PXStylesheetLexeme *)lexeme
-{
-    [self->lexer_ pushLexeme:currentLexeme];
-
-    currentLexeme = lexeme;
 }
 
 - (NSString *)currentFilename
@@ -1727,9 +1726,15 @@ static NSIndexSet *ARCHAIC_PSEUDO_ELEMENTS_SET;
 
 - (void)addError:(NSString *)error
 {
-    NSString *offset = (currentLexeme.type != PXSS_EOF) ? [NSString stringWithFormat:@"%lu", (unsigned long) currentLexeme.range.location] : @"EOF";
+    NSString *offset = (currentLexeme == nil || currentLexeme.type != PXSS_EOF) ? [NSString stringWithFormat:@"%lu", (unsigned long) currentLexeme.range.location] : @"EOF";
 
     [self addError:error filename:[self currentFilename] offset:offset];
+}
+
+- (void)pushLexeme:(id<PXLexeme>)lexeme
+{
+    css_push_lexeme(currentLexeme);
+    currentLexeme = lexeme;
 }
 
 @end
