@@ -89,6 +89,12 @@
     return NO;
 }
 
+- (BOOL)isKindOfClass:(Class)aClass {
+    if ([self.overridingObject isKindOfClass:aClass]) return YES;
+    if ([self.baseObject isKindOfClass:aClass]) return YES;
+    return NO;
+}
+
 #pragma mark - hash and equality
 
 /// make sure we look like the original object

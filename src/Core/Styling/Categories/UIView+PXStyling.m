@@ -39,6 +39,7 @@
 #import "NSObject+PXStyling.h"
 #import "PXStylingMacros.h"
 
+static const char STYLE_ELEMENT_NAME_KEY;
 static const char STYLE_CLASS_KEY;
 static const char STYLE_CLASSES_KEY;
 static const char STYLE_ID_KEY;
@@ -58,32 +59,26 @@ void PXForceLoadUIViewPXStyling() {}
 @dynamic bounds;
 @dynamic frame;
 
-static NSMutableDictionary *ELEMENT_NAMES;
 static NSMutableArray *DYNAMIC_SUBCLASSES;
 
 #pragma mark - Static Methods
 
-+ (void)addElementName:(NSString *)elementName forClassName:(NSString *)className
++ (void)setElementName:(NSString *)elementName forClass:(Class)class
 {
-    if (ELEMENT_NAMES == nil)
+    if (elementName && class)
     {
-        ELEMENT_NAMES = [[NSMutableDictionary alloc] init];
+        objc_setAssociatedObject(class, &STYLE_ELEMENT_NAME_KEY, elementName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+}
 
-    if (elementName && className)
-    {
-        [ELEMENT_NAMES setObject:elementName forKey:className];
-    }
++ (NSString *)elementNameForClass:(Class)class
+{
+    return objc_getAssociatedObject(class, &STYLE_ELEMENT_NAME_KEY);
 }
 
 + (NSString *)elementNameForClassName:(NSString *)className
 {
-    return [ELEMENT_NAMES objectForKey:className];
-}
-
-+ (void)removeElementNameForClassName:(NSString *)className
-{
-    [ELEMENT_NAMES removeObjectForKey:className];
+    return [self elementNameForClass:NSClassFromString(className)];
 }
 
 + (void)addStylingSubclass:(NSString *)className
@@ -123,11 +118,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
             NSString *className = [NSString stringWithCString:class_getName(subclass)
                                                      encoding:NSUTF8StringEncoding];
 
-            NSString *superClassName = [NSString stringWithCString:class_getName(superClass)
-                                                          encoding:NSUTF8StringEncoding];
-
-
-            [self addElementName:elementName forClassName:superClassName];
+            [self setElementName:elementName forClass:superClass];
             [self addStylingSubclass:className];
         }
     }
@@ -140,11 +131,7 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         NSString *className = [NSString stringWithCString:class_getName(subclass)
                                                  encoding:NSUTF8StringEncoding];
 
-        NSString *superClassName = [NSString stringWithCString:class_getName(class_getSuperclass(subclass))
-                                                      encoding:NSUTF8StringEncoding];
-
-
-        [self addElementName:elementName forClassName:superClassName];
+        [self setElementName:elementName forClass:class_getSuperclass(subclass)];
         [self addStylingSubclass:className];
     }
 }
@@ -231,6 +218,18 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
                   });
 
+
+    //
+    // Check 'do not subclass' list
+    //
+    if(mode != PXStylingNone
+       && [UIView pxHasAncestor:[UIDatePicker class] forView:self]
+       )
+    {
+        //NSLog(@"Found child of UIDatePicker %@", [[self class] description]);
+        mode = PXStylingNone;
+    }
+
     //
     // Set the styling mode value on the object
     //
@@ -246,10 +245,10 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
         // Grabbing Pixate's subclass of this instance
         Class c = SubclassForViewWithClass(self, nil);
 
-        // NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
-
         if(c)
         {
+            //NSLog(@"%@ (%p): %@ -> %@", [self class], self, [[self class] superclass], c);
+            
             // We are subclassing 'self' with the Pixate class 'c' we found above
             [c subclassInstance:self];
 
@@ -264,21 +263,44 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
                     [self performSelector:@selector(registerNotifications)];
                 }
             }
+        }
+        
+        // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
+        BOOL shouldStyle = !(
+                           [self isKindOfClass:[UITableViewCell class]]
+                        || [self isKindOfClass:[UICollectionViewCell class]]
+                        );
 
-            // List of classes that should not receive styling now (they should style in layoutSubviews or equiv)
-            BOOL shouldStyle = !(
-                               [self isKindOfClass:[UITableViewCell class]]
-                            || [self isKindOfClass:[UICollectionViewCell class]]
-                            );
+        //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
 
-            //NSLog(@"found %@ - Styling: %@", [self class], shouldStyle ? @"YES" : @"NO");
-
-            if (shouldStyle)
-            {
-                [self updateStyles];
-            }
+        if (shouldStyle)
+        {
+            [self updateStyles];
         }
     }
+}
+
++ (BOOL)pxHasAncestor:(Class)acenstorClass forView:(UIView *)view
+{
+    // Test to see if 'view' is an acesntorClass already
+    if([view class] == acenstorClass)
+    {
+        return YES;
+    }
+    
+    // Walk up the hiearchy now
+    UIView *parent = view.superview;
+    
+    while(parent != nil)
+    {
+        if([parent class] == acenstorClass)
+        {
+            return YES;
+        }
+        parent = parent.superview;
+    }
+    
+    return NO;
 }
 
 #pragma mark - Styling properties on UIView
@@ -286,23 +308,23 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 - (NSString *)pxStyleElementName
 {
     Class class = self.class;
-    NSString *name = [ELEMENT_NAMES objectForKey:class.description];
+    NSString *name = [UIView elementNameForClass:class];
 
     if (!name)
     {
         while (class && !name)
         {
-            class = class.superclass;
+            class = class_getSuperclass(class);
 
             if (class)
             {
-                name = [ELEMENT_NAMES objectForKey:class.description];
+                name = [UIView elementNameForClass:class];
             }
         }
 
         if (name)
         {
-            [ELEMENT_NAMES setObject:name forKey:self.class.description];
+            [UIView setElementName:name forClass:self.class];
         }
     }
 

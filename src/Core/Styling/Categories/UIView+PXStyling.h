@@ -22,6 +22,29 @@
 //  Copyright (c) 2012 Pixate, Inc. All rights reserved.
 //
 
+//
+// Timing macros
+//
+
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+
+#define TICK  \
+    uint64_t startTick = mach_absolute_time(); \
+    mach_timebase_info_data_t timebaseInfo; \
+    mach_timebase_info(&timebaseInfo);
+
+
+#define TOCK  \
+    uint64_t endTick = mach_absolute_time(); \
+    uint64_t tickDiff = endTick - startTick; \
+    double diffMillis = (double) (tickDiff * timebaseInfo.numer) / (double) (timebaseInfo.denom * 1e6); \
+    NSLog(@"Time: %f ms", diffMillis);
+
+//
+// Interface
+//
+
 #import <UIKit/UIKit.h>
 #import "PXStyleable.h"
 

@@ -261,7 +261,7 @@ NSString *const kDefaultCacheLabelLineBreakMode = @"label.lineBreakMode";
 - (BOOL)preventStyling
 {
     return [[self pxStyleParent] isKindOfClass:[UIButton class]]
-        || [[[[self pxStyleParent] class] description] isEqualToString:@"UINavigationItemButtonView"]
+        || ([[self pxStyleParent] class] == NSClassFromString(@"UINavigationItemButtonView"))
         ;
 }
 

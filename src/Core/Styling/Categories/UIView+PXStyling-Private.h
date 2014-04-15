@@ -25,7 +25,7 @@
 
 @interface UIView (PXStylingPrivate)
 
-+ (void)addElementName:(NSString *)elementName forClassName:(NSString *)className;
++ (void)setElementName:(NSString *)elementName forClass:(Class)class;
 + (NSString *)elementNameForClassName:(NSString *)className;
 + (void)removeElementNameForClassName:(NSString *)className;
 + (void)addStylingSubclass:(NSString *)className;
@@ -35,6 +35,8 @@
 + (void)registerDynamicSubclass:(Class)subclass forClass:(Class)superClass withElementName:(NSString *)elementName;
 
 + (BOOL)subclassIfNeeded:(Class)superClass object:(NSObject *)object;
+
++ (BOOL)pxHasAncestor:(Class)acenstorClass forView:(UIView *)view;
 
 //- (void)applyStyleMode:(PXStylingMode)mode;
 - (BOOL)isSubclassable;
