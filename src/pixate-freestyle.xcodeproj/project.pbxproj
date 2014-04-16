@@ -9,73 +9,44 @@
 /* Begin PBXBuildFile section */
 		0A09BE6B18EC9442004780F8 /* PXArrayJoinMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BE6918EC9442004780F8 /* PXArrayJoinMethod.h */; };
 		0A09BE6C18EC9442004780F8 /* PXArrayJoinMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE6A18EC9442004780F8 /* PXArrayJoinMethod.m */; };
-		0A09BE6D18EC9449004780F8 /* PXArrayJoinMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE6A18EC9442004780F8 /* PXArrayJoinMethod.m */; };
 		0A09BE7218EC9463004780F8 /* PXObjectKeysMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BE6E18EC9463004780F8 /* PXObjectKeysMethod.h */; };
 		0A09BE7318EC9463004780F8 /* PXObjectKeysMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE6F18EC9463004780F8 /* PXObjectKeysMethod.m */; };
-		0A09BE7418EC9463004780F8 /* PXObjectKeysMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE6F18EC9463004780F8 /* PXObjectKeysMethod.m */; };
 		0A09BE7518EC9463004780F8 /* PXObjectValuesMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BE7018EC9463004780F8 /* PXObjectValuesMethod.h */; };
 		0A09BE7618EC9463004780F8 /* PXObjectValuesMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE7118EC9463004780F8 /* PXObjectValuesMethod.m */; };
-		0A09BE7718EC9463004780F8 /* PXObjectValuesMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE7118EC9463004780F8 /* PXObjectValuesMethod.m */; };
 		0A09BF2418ED9F1B004780F8 /* PXStringLengthMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF2018ED9F1B004780F8 /* PXStringLengthMethod.h */; };
 		0A09BF2518ED9F1B004780F8 /* PXStringLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF2118ED9F1B004780F8 /* PXStringLengthMethod.m */; };
-		0A09BF2618ED9F1B004780F8 /* PXStringLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF2118ED9F1B004780F8 /* PXStringLengthMethod.m */; };
 		0A09BF2718ED9F1B004780F8 /* PXStringSubstringMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF2218ED9F1B004780F8 /* PXStringSubstringMethod.h */; };
 		0A09BF2818ED9F1B004780F8 /* PXStringSubstringMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF2318ED9F1B004780F8 /* PXStringSubstringMethod.m */; };
-		0A09BF2918ED9F1B004780F8 /* PXStringSubstringMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF2318ED9F1B004780F8 /* PXStringSubstringMethod.m */; };
 		0A09BF4518EF2285004780F8 /* PXObjectConcatenateMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF3F18EF2285004780F8 /* PXObjectConcatenateMethod.h */; };
 		0A09BF4618EF2285004780F8 /* PXObjectConcatenateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4018EF2285004780F8 /* PXObjectConcatenateMethod.m */; };
-		0A09BF4718EF2285004780F8 /* PXObjectConcatenateMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4018EF2285004780F8 /* PXObjectConcatenateMethod.m */; };
 		0A09BF4818EF2285004780F8 /* PXObjectPushMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF4118EF2285004780F8 /* PXObjectPushMethod.h */; };
 		0A09BF4918EF2285004780F8 /* PXObjectPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4218EF2285004780F8 /* PXObjectPushMethod.m */; };
-		0A09BF4A18EF2285004780F8 /* PXObjectPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4218EF2285004780F8 /* PXObjectPushMethod.m */; };
 		0A09BF4B18EF2285004780F8 /* PXObjectUnshiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF4318EF2285004780F8 /* PXObjectUnshiftMethod.h */; };
 		0A09BF4C18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */; };
-		0A09BF4D18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */; };
 		0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */; };
 		0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
-		0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
+		0A55F91D18FF230A00C8CB4B /* PXStringProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A55F91B18FF230A00C8CB4B /* PXStringProperty.h */; };
+		0A55F91E18FF230A00C8CB4B /* PXStringProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A55F91C18FF230A00C8CB4B /* PXStringProperty.m */; };
+		0A55F92818FF2B0D00C8CB4B /* PXExpressionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A55F92718FF2B0D00C8CB4B /* PXExpressionProperty.h */; };
 		0A745CA718FD9AC20019EC6B /* PXArrayEveryMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA118FD9AC20019EC6B /* PXArrayEveryMethod.h */; };
 		0A745CA818FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */; };
-		0A745CA918FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */; };
 		0A745CAA18FD9AC20019EC6B /* PXArrayFilterMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA318FD9AC20019EC6B /* PXArrayFilterMethod.h */; };
 		0A745CAB18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
-		0A745CAC18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
 		0A745CAD18FD9AC20019EC6B /* PXArraySomeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */; };
 		0A745CAE18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
-		0A745CAF18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
-		0A745CB618FDACD30019EC6B /* PXStylesheetLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CB518FDACD30019EC6B /* PXStylesheetLexer.lm */; };
-		0A745CB718FDACD30019EC6B /* PXStylesheetLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CB518FDACD30019EC6B /* PXStylesheetLexer.lm */; };
-		0A745CC118FDACFA0019EC6B /* PXCharacterMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CB818FDACFA0019EC6B /* PXCharacterMatcher.h */; };
-		0A745CC218FDACFA0019EC6B /* PXCharacterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CB918FDACFA0019EC6B /* PXCharacterMatcher.m */; };
-		0A745CC318FDACFA0019EC6B /* PXCharacterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CB918FDACFA0019EC6B /* PXCharacterMatcher.m */; };
-		0A745CC418FDACFA0019EC6B /* PXLexemeCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CBA18FDACFA0019EC6B /* PXLexemeCreator.h */; };
-		0A745CC518FDACFA0019EC6B /* PXNumberMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CBB18FDACFA0019EC6B /* PXNumberMatcher.h */; };
-		0A745CC618FDACFA0019EC6B /* PXNumberMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CBC18FDACFA0019EC6B /* PXNumberMatcher.m */; };
-		0A745CC718FDACFA0019EC6B /* PXNumberMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CBC18FDACFA0019EC6B /* PXNumberMatcher.m */; };
-		0A745CC818FDACFA0019EC6B /* PXPatternMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CBD18FDACFA0019EC6B /* PXPatternMatcher.h */; };
-		0A745CC918FDACFA0019EC6B /* PXPatternMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CBE18FDACFA0019EC6B /* PXPatternMatcher.m */; };
-		0A745CCA18FDACFA0019EC6B /* PXPatternMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CBE18FDACFA0019EC6B /* PXPatternMatcher.m */; };
-		0A745CCB18FDACFA0019EC6B /* PXWordMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CBF18FDACFA0019EC6B /* PXWordMatcher.h */; };
-		0A745CCC18FDACFA0019EC6B /* PXWordMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CC018FDACFA0019EC6B /* PXWordMatcher.m */; };
-		0A745CCD18FDACFA0019EC6B /* PXWordMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CC018FDACFA0019EC6B /* PXWordMatcher.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
 		9C23047E18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23048018DA126300969D18 /* MACompoundFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047318DA126300969D18 /* MACompoundFuture.h */; };
 		9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047418DA126300969D18 /* MACompoundFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C23048218DA126300969D18 /* MACompoundFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047418DA126300969D18 /* MACompoundFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23048318DA126300969D18 /* MAFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047518DA126300969D18 /* MAFuture.h */; };
 		9C23048418DA126300969D18 /* MAFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047618DA126300969D18 /* MAFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C23048518DA126300969D18 /* MAFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047618DA126300969D18 /* MAFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23048618DA126300969D18 /* MAFutureInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047718DA126300969D18 /* MAFutureInternal.h */; };
 		9C23048718DA126300969D18 /* MAMethodSignatureCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047818DA126300969D18 /* MAMethodSignatureCache.h */; };
 		9C23048818DA126300969D18 /* MAMethodSignatureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047918DA126300969D18 /* MAMethodSignatureCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C23048918DA126300969D18 /* MAMethodSignatureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047918DA126300969D18 /* MAMethodSignatureCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23048A18DA126300969D18 /* MAProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047A18DA126300969D18 /* MAProxy.h */; };
 		9C23048B18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C23048C18DA126300969D18 /* MAProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047B18DA126300969D18 /* MAProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23049618DA27CE00969D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
 		9C2304A118DA280100969D18 /* tester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047C18DA126300969D18 /* tester.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C2304A218DA285200969D18 /* MABaseFuture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23047218DA126300969D18 /* MABaseFuture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -844,7 +815,6 @@
 		9C84A65818AE9CB600E7CDA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C84A65618AE9CB600E7CDA7 /* InfoPlist.strings */; };
 		9C9620A618F02F0200219C5C /* NSObject+PXSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9620A418F02F0200219C5C /* NSObject+PXSwizzle.h */; };
 		9C9620A718F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */; };
-		9C9620A818F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9620A518F02F0200219C5C /* NSObject+PXSwizzle.m */; };
 		9C9865E618C0499000C71922 /* NSMutableArray+StackAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98643518C0498F00C71922 /* NSMutableArray+StackAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C9865E718C0499000C71922 /* NSMutableArray+StackAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98643618C0498F00C71922 /* NSMutableArray+StackAdditions.m */; };
 		9C9865E818C0499000C71922 /* NSScanner+PXFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C98643718C0498F00C71922 /* NSScanner+PXFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1229,195 +1199,130 @@
 		9C98684F18C04C4700C71922 /* PixateFreestyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98684D18C04C4700C71922 /* PixateFreestyle.m */; };
 		9CAAFA2318EB10A2000C0233 /* PXDoubleProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99318EB10A2000C0233 /* PXDoubleProperty.h */; };
 		9CAAFA2418EB10A2000C0233 /* PXDoubleProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99418EB10A2000C0233 /* PXDoubleProperty.m */; };
-		9CAAFA2518EB10A2000C0233 /* PXDoubleProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99418EB10A2000C0233 /* PXDoubleProperty.m */; };
 		9CAAFA2618EB10A2000C0233 /* PXExpressionExports.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99518EB10A2000C0233 /* PXExpressionExports.h */; };
 		9CAAFA2718EB10A2000C0233 /* PXObjectValueWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99618EB10A2000C0233 /* PXObjectValueWrapper.h */; };
 		9CAAFA2818EB10A2000C0233 /* PXObjectValueWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99718EB10A2000C0233 /* PXObjectValueWrapper.m */; };
-		9CAAFA2918EB10A2000C0233 /* PXObjectValueWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99718EB10A2000C0233 /* PXObjectValueWrapper.m */; };
 		9CAAFA2A18EB10A2000C0233 /* PXArrayForEachMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99A18EB10A2000C0233 /* PXArrayForEachMethod.h */; };
 		9CAAFA2B18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99B18EB10A2000C0233 /* PXArrayForEachMethod.m */; };
-		9CAAFA2C18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99B18EB10A2000C0233 /* PXArrayForEachMethod.m */; };
 		9CAAFA2D18EB10A2000C0233 /* PXArrayLengthMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99C18EB10A2000C0233 /* PXArrayLengthMethod.h */; };
 		9CAAFA2E18EB10A2000C0233 /* PXArrayLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99D18EB10A2000C0233 /* PXArrayLengthMethod.m */; };
-		9CAAFA2F18EB10A2000C0233 /* PXArrayLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99D18EB10A2000C0233 /* PXArrayLengthMethod.m */; };
 		9CAAFA3018EB10A2000C0233 /* PXArrayMapMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF99E18EB10A2000C0233 /* PXArrayMapMethod.h */; };
 		9CAAFA3118EB10A2000C0233 /* PXArrayMapMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99F18EB10A2000C0233 /* PXArrayMapMethod.m */; };
-		9CAAFA3218EB10A2000C0233 /* PXArrayMapMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF99F18EB10A2000C0233 /* PXArrayMapMethod.m */; };
 		9CAAFA3318EB10A2000C0233 /* PXArrayPopMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9A018EB10A2000C0233 /* PXArrayPopMethod.h */; };
 		9CAAFA3418EB10A2000C0233 /* PXArrayPopMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A118EB10A2000C0233 /* PXArrayPopMethod.m */; };
-		9CAAFA3518EB10A2000C0233 /* PXArrayPopMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A118EB10A2000C0233 /* PXArrayPopMethod.m */; };
 		9CAAFA3618EB10A2000C0233 /* PXArrayPushMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9A218EB10A2000C0233 /* PXArrayPushMethod.h */; };
 		9CAAFA3718EB10A2000C0233 /* PXArrayPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A318EB10A2000C0233 /* PXArrayPushMethod.m */; };
-		9CAAFA3818EB10A2000C0233 /* PXArrayPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A318EB10A2000C0233 /* PXArrayPushMethod.m */; };
 		9CAAFA3918EB10A2000C0233 /* PXArrayReduceMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9A418EB10A2000C0233 /* PXArrayReduceMethod.h */; };
 		9CAAFA3A18EB10A2000C0233 /* PXArrayReduceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A518EB10A2000C0233 /* PXArrayReduceMethod.m */; };
-		9CAAFA3B18EB10A2000C0233 /* PXArrayReduceMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A518EB10A2000C0233 /* PXArrayReduceMethod.m */; };
 		9CAAFA3C18EB10A2000C0233 /* PXArrayReverseMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9A618EB10A2000C0233 /* PXArrayReverseMethod.h */; };
 		9CAAFA3D18EB10A2000C0233 /* PXArrayReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A718EB10A2000C0233 /* PXArrayReverseMethod.m */; };
-		9CAAFA3E18EB10A2000C0233 /* PXArrayReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A718EB10A2000C0233 /* PXArrayReverseMethod.m */; };
 		9CAAFA3F18EB10A2000C0233 /* PXArrayShiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9A818EB10A2000C0233 /* PXArrayShiftMethod.h */; };
 		9CAAFA4018EB10A2000C0233 /* PXArrayShiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A918EB10A2000C0233 /* PXArrayShiftMethod.m */; };
-		9CAAFA4118EB10A2000C0233 /* PXArrayShiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9A918EB10A2000C0233 /* PXArrayShiftMethod.m */; };
 		9CAAFA4218EB10A2000C0233 /* PXArrayUnshiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9AA18EB10A2000C0233 /* PXArrayUnshiftMethod.h */; };
 		9CAAFA4318EB10A2000C0233 /* PXArrayUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9AB18EB10A2000C0233 /* PXArrayUnshiftMethod.m */; };
-		9CAAFA4418EB10A2000C0233 /* PXArrayUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9AB18EB10A2000C0233 /* PXArrayUnshiftMethod.m */; };
 		9CAAFA4518EB10A2000C0233 /* PXByteCodeFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9AD18EB10A2000C0233 /* PXByteCodeFunction.h */; };
 		9CAAFA4618EB10A2000C0233 /* PXByteCodeFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9AE18EB10A2000C0233 /* PXByteCodeFunction.m */; };
-		9CAAFA4718EB10A2000C0233 /* PXByteCodeFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9AE18EB10A2000C0233 /* PXByteCodeFunction.m */; };
 		9CAAFA4818EB10A2000C0233 /* PXParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9AF18EB10A2000C0233 /* PXParameter.h */; };
 		9CAAFA4918EB10A2000C0233 /* PXParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B018EB10A2000C0233 /* PXParameter.m */; };
-		9CAAFA4A18EB10A2000C0233 /* PXParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B018EB10A2000C0233 /* PXParameter.m */; };
 		9CAAFA4B18EB10A2000C0233 /* PXLogFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9B218EB10A2000C0233 /* PXLogFunction.h */; };
 		9CAAFA4C18EB10A2000C0233 /* PXLogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B318EB10A2000C0233 /* PXLogFunction.m */; };
-		9CAAFA4D18EB10A2000C0233 /* PXLogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B318EB10A2000C0233 /* PXLogFunction.m */; };
 		9CAAFA4E18EB10A2000C0233 /* PXShowTopFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9B418EB10A2000C0233 /* PXShowTopFunction.h */; };
 		9CAAFA4F18EB10A2000C0233 /* PXShowTopFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B518EB10A2000C0233 /* PXShowTopFunction.m */; };
-		9CAAFA5018EB10A2000C0233 /* PXShowTopFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B518EB10A2000C0233 /* PXShowTopFunction.m */; };
 		9CAAFA5118EB10A2000C0233 /* PXCosFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9B718EB10A2000C0233 /* PXCosFunction.h */; };
 		9CAAFA5218EB10A2000C0233 /* PXCosFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B818EB10A2000C0233 /* PXCosFunction.m */; };
-		9CAAFA5318EB10A2000C0233 /* PXCosFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9B818EB10A2000C0233 /* PXCosFunction.m */; };
 		9CAAFA5418EB10A2000C0233 /* PXPowerFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9B918EB10A2000C0233 /* PXPowerFunction.h */; };
 		9CAAFA5518EB10A2000C0233 /* PXPowerFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BA18EB10A2000C0233 /* PXPowerFunction.m */; };
-		9CAAFA5618EB10A2000C0233 /* PXPowerFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BA18EB10A2000C0233 /* PXPowerFunction.m */; };
 		9CAAFA5718EB10A2000C0233 /* PXSinFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9BB18EB10A2000C0233 /* PXSinFunction.h */; };
 		9CAAFA5818EB10A2000C0233 /* PXSinFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BC18EB10A2000C0233 /* PXSinFunction.m */; };
-		9CAAFA5918EB10A2000C0233 /* PXSinFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BC18EB10A2000C0233 /* PXSinFunction.m */; };
 		9CAAFA5A18EB10A2000C0233 /* PXSquareRootFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9BD18EB10A2000C0233 /* PXSquareRootFunction.h */; };
 		9CAAFA5B18EB10A2000C0233 /* PXSquareRootFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BE18EB10A2000C0233 /* PXSquareRootFunction.m */; };
-		9CAAFA5C18EB10A2000C0233 /* PXSquareRootFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9BE18EB10A2000C0233 /* PXSquareRootFunction.m */; };
 		9CAAFA5D18EB10A2000C0233 /* PXObjectForEachMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C018EB10A2000C0233 /* PXObjectForEachMethod.h */; };
 		9CAAFA5E18EB10A2000C0233 /* PXObjectForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C118EB10A2000C0233 /* PXObjectForEachMethod.m */; };
-		9CAAFA5F18EB10A2000C0233 /* PXObjectForEachMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C118EB10A2000C0233 /* PXObjectForEachMethod.m */; };
 		9CAAFA6018EB10A2000C0233 /* PXObjectLengthMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C218EB10A2000C0233 /* PXObjectLengthMethod.h */; };
 		9CAAFA6118EB10A2000C0233 /* PXObjectLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C318EB10A2000C0233 /* PXObjectLengthMethod.m */; };
-		9CAAFA6218EB10A2000C0233 /* PXObjectLengthMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C318EB10A2000C0233 /* PXObjectLengthMethod.m */; };
 		9CAAFA6318EB10A2000C0233 /* PXObjectReverseMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C418EB10A2000C0233 /* PXObjectReverseMethod.h */; };
 		9CAAFA6418EB10A2000C0233 /* PXObjectReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C518EB10A2000C0233 /* PXObjectReverseMethod.m */; };
-		9CAAFA6518EB10A2000C0233 /* PXObjectReverseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9C518EB10A2000C0233 /* PXObjectReverseMethod.m */; };
 		9CAAFA6618EB10A2000C0233 /* PXLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C818EB10A2000C0233 /* PXLexeme.h */; };
 		9CAAFA6718EB10A2000C0233 /* PXParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C918EB10A2000C0233 /* PXParserBase.h */; };
 		9CAAFA6818EB10A2000C0233 /* PXParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CA18EB10A2000C0233 /* PXParserBase.m */; };
-		9CAAFA6918EB10A2000C0233 /* PXParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CA18EB10A2000C0233 /* PXParserBase.m */; };
 		9CAAFA6A18EB10A2000C0233 /* PXSourceEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CB18EB10A2000C0233 /* PXSourceEmitter.h */; };
 		9CAAFA6B18EB10A2000C0233 /* PXSourceWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CC18EB10A2000C0233 /* PXSourceWriter.h */; };
 		9CAAFA6C18EB10A2000C0233 /* PXSourceWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CD18EB10A2000C0233 /* PXSourceWriter.m */; };
-		9CAAFA6D18EB10A2000C0233 /* PXSourceWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CD18EB10A2000C0233 /* PXSourceWriter.m */; };
 		9CAAFA6E18EB10A2000C0233 /* PXByteCodeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CF18EB10A2000C0233 /* PXByteCodeBuilder.h */; };
 		9CAAFA6F18EB10A2000C0233 /* PXByteCodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D018EB10A2000C0233 /* PXByteCodeBuilder.m */; };
-		9CAAFA7018EB10A2000C0233 /* PXByteCodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D018EB10A2000C0233 /* PXByteCodeBuilder.m */; };
 		9CAAFA7118EB10A2000C0233 /* PXExpressionByteCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9D118EB10A2000C0233 /* PXExpressionByteCode.h */; };
 		9CAAFA7218EB10A2000C0233 /* PXExpressionByteCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D218EB10A2000C0233 /* PXExpressionByteCode.m */; };
-		9CAAFA7318EB10A2000C0233 /* PXExpressionByteCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D218EB10A2000C0233 /* PXExpressionByteCode.m */; };
 		9CAAFA7418EB10A2000C0233 /* PXExpressionInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9D318EB10A2000C0233 /* PXExpressionInstruction.h */; };
 		9CAAFA7518EB10A2000C0233 /* PXExpressionInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D418EB10A2000C0233 /* PXExpressionInstruction.m */; };
-		9CAAFA7618EB10A2000C0233 /* PXExpressionInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D418EB10A2000C0233 /* PXExpressionInstruction.m */; };
 		9CAAFA7718EB10A2000C0233 /* PXExpressionInstructionType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9D518EB10A2000C0233 /* PXExpressionInstructionType.h */; };
 		9CAAFA7818EB10A2000C0233 /* PXInstructionCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9D618EB10A2000C0233 /* PXInstructionCounter.h */; };
 		9CAAFA7918EB10A2000C0233 /* PXInstructionCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D718EB10A2000C0233 /* PXInstructionCounter.m */; };
-		9CAAFA7A18EB10A2000C0233 /* PXInstructionCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D718EB10A2000C0233 /* PXInstructionCounter.m */; };
 		9CAAFA7B18EB10A2000C0233 /* PXInstructionDisassembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9D818EB10A2000C0233 /* PXInstructionDisassembler.h */; };
 		9CAAFA7C18EB10A2000C0233 /* PXInstructionDisassembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D918EB10A2000C0233 /* PXInstructionDisassembler.m */; };
-		9CAAFA7D18EB10A2000C0233 /* PXInstructionDisassembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D918EB10A2000C0233 /* PXInstructionDisassembler.m */; };
 		9CAAFA7E18EB10A2000C0233 /* PXInstructionProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9DA18EB10A2000C0233 /* PXInstructionProcessor.h */; };
 		9CAAFA7F18EB10A2000C0233 /* PXInstructionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9DB18EB10A2000C0233 /* PXInstructionProcessor.m */; };
-		9CAAFA8018EB10A2000C0233 /* PXInstructionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9DB18EB10A2000C0233 /* PXInstructionProcessor.m */; };
 		9CAAFA8118EB10A2000C0233 /* PXPushValueInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9DC18EB10A2000C0233 /* PXPushValueInstruction.h */; };
 		9CAAFA8218EB10A2000C0233 /* PXPushValueInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9DD18EB10A2000C0233 /* PXPushValueInstruction.m */; };
-		9CAAFA8318EB10A2000C0233 /* PXPushValueInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9DD18EB10A2000C0233 /* PXPushValueInstruction.m */; };
 		9CAAFA8418EB10A2000C0233 /* PXBlockNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E018EB10A2000C0233 /* PXBlockNode.h */; };
 		9CAAFA8518EB10A2000C0233 /* PXBlockNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E118EB10A2000C0233 /* PXBlockNode.m */; };
-		9CAAFA8618EB10A2000C0233 /* PXBlockNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E118EB10A2000C0233 /* PXBlockNode.m */; };
 		9CAAFA8718EB10A2000C0233 /* PXExpressionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E218EB10A2000C0233 /* PXExpressionNode.h */; };
 		9CAAFA8818EB10A2000C0233 /* PXGenericNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E318EB10A2000C0233 /* PXGenericNode.h */; };
 		9CAAFA8918EB10A2000C0233 /* PXGenericNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E418EB10A2000C0233 /* PXGenericNode.m */; };
-		9CAAFA8A18EB10A2000C0233 /* PXGenericNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E418EB10A2000C0233 /* PXGenericNode.m */; };
 		9CAAFA8B18EB10A2000C0233 /* PXExpressionAssembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E518EB10A2000C0233 /* PXExpressionAssembler.h */; };
 		9CAAFA8C18EB10A2000C0233 /* PXExpressionAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E618EB10A2000C0233 /* PXExpressionAssembler.m */; };
-		9CAAFA8D18EB10A2000C0233 /* PXExpressionAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E618EB10A2000C0233 /* PXExpressionAssembler.m */; };
 		9CAAFA8E18EB10A2000C0233 /* PXExpressionLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E718EB10A2000C0233 /* PXExpressionLexeme.h */; };
 		9CAAFA8F18EB10A2000C0233 /* PXExpressionLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E818EB10A2000C0233 /* PXExpressionLexeme.m */; };
-		9CAAFA9018EB10A2000C0233 /* PXExpressionLexeme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9E818EB10A2000C0233 /* PXExpressionLexeme.m */; };
 		9CAAFA9118EB10A2000C0233 /* PXExpressionLexemeType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9E918EB10A2000C0233 /* PXExpressionLexemeType.h */; };
 		9CAAFA9218EB10A2000C0233 /* PXExpressionLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EA18EB10A2000C0233 /* PXExpressionLexer.lm */; };
-		9CAAFA9318EB10A2000C0233 /* PXExpressionLexer.lm in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EA18EB10A2000C0233 /* PXExpressionLexer.lm */; };
 		9CAAFA9418EB10A2000C0233 /* PXExpressionNodeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9EB18EB10A2000C0233 /* PXExpressionNodeBuilder.h */; };
 		9CAAFA9518EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EC18EB10A2000C0233 /* PXExpressionNodeBuilder.m */; };
-		9CAAFA9618EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EC18EB10A2000C0233 /* PXExpressionNodeBuilder.m */; };
 		9CAAFA9718EB10A2000C0233 /* PXExpressionNodeCompiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9ED18EB10A2000C0233 /* PXExpressionNodeCompiler.h */; };
 		9CAAFA9818EB10A2000C0233 /* PXExpressionNodeCompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EE18EB10A2000C0233 /* PXExpressionNodeCompiler.m */; };
-		9CAAFA9918EB10A2000C0233 /* PXExpressionNodeCompiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9EE18EB10A2000C0233 /* PXExpressionNodeCompiler.m */; };
 		9CAAFA9A18EB10A2000C0233 /* PXExpressionNodeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9EF18EB10A2000C0233 /* PXExpressionNodeUtils.h */; };
 		9CAAFA9B18EB10A2000C0233 /* PXExpressionNodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F018EB10A2000C0233 /* PXExpressionNodeUtils.m */; };
-		9CAAFA9C18EB10A2000C0233 /* PXExpressionNodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F018EB10A2000C0233 /* PXExpressionNodeUtils.m */; };
 		9CAAFA9D18EB10A2000C0233 /* PXExpressionParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9F118EB10A2000C0233 /* PXExpressionParser.h */; };
 		9CAAFA9E18EB10A2000C0233 /* PXExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F218EB10A2000C0233 /* PXExpressionParser.m */; };
-		9CAAFA9F18EB10A2000C0233 /* PXExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F218EB10A2000C0233 /* PXExpressionParser.m */; };
 		9CAAFAA118EB10A2000C0233 /* PXExpressionEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9F418EB10A2000C0233 /* PXExpressionEnvironment.h */; };
 		9CAAFAA218EB10A2000C0233 /* PXExpressionEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F518EB10A2000C0233 /* PXExpressionEnvironment.m */; };
-		9CAAFAA318EB10A2000C0233 /* PXExpressionEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F518EB10A2000C0233 /* PXExpressionEnvironment.m */; };
 		9CAAFAA418EB10A2000C0233 /* PXExpressionUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9F618EB10A2000C0233 /* PXExpressionUnit.h */; };
 		9CAAFAA518EB10A2000C0233 /* PXExpressionUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F718EB10A2000C0233 /* PXExpressionUnit.m */; };
-		9CAAFAA618EB10A2000C0233 /* PXExpressionUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F718EB10A2000C0233 /* PXExpressionUnit.m */; };
 		9CAAFAA718EB10A2000C0233 /* PXScriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9F818EB10A2000C0233 /* PXScriptManager.h */; };
 		9CAAFAA818EB10A2000C0233 /* PXScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F918EB10A2000C0233 /* PXScriptManager.m */; };
-		9CAAFAA918EB10A2000C0233 /* PXScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9F918EB10A2000C0233 /* PXScriptManager.m */; };
 		9CAAFAAA18EB10A2000C0233 /* PXBuiltInScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9FF18EB10A2000C0233 /* PXBuiltInScope.h */; };
 		9CAAFAAB18EB10A2000C0233 /* PXBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0018EB10A2000C0233 /* PXBuiltInScope.m */; };
-		9CAAFAAC18EB10A2000C0233 /* PXBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0018EB10A2000C0233 /* PXBuiltInScope.m */; };
 		9CAAFAAD18EB10A2000C0233 /* PXBuiltInSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0118EB10A2000C0233 /* PXBuiltInSource.h */; };
 		9CAAFAAE18EB10A2000C0233 /* PXBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0218EB10A2000C0233 /* PXBuiltInSource.m */; };
-		9CAAFAAF18EB10A2000C0233 /* PXBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0218EB10A2000C0233 /* PXBuiltInSource.m */; };
 		9CAAFAB018EB10A2000C0233 /* PXExpressionScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0318EB10A2000C0233 /* PXExpressionScope.h */; };
 		9CAAFAB118EB10A2000C0233 /* PXScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0418EB10A2000C0233 /* PXScope.h */; };
 		9CAAFAB218EB10A2000C0233 /* PXScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0518EB10A2000C0233 /* PXScope.m */; };
-		9CAAFAB318EB10A2000C0233 /* PXScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0518EB10A2000C0233 /* PXScope.m */; };
 		9CAAFAB418EB10A2000C0233 /* PXScopeBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0618EB10A2000C0233 /* PXScopeBase.h */; };
 		9CAAFAB518EB10A2000C0233 /* PXScopeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0718EB10A2000C0233 /* PXScopeBase.m */; };
-		9CAAFAB618EB10A2000C0233 /* PXScopeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0718EB10A2000C0233 /* PXScopeBase.m */; };
 		9CAAFAB718EB10A2000C0233 /* PXArrayValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0918EB10A2000C0233 /* PXArrayValue.h */; };
 		9CAAFAB818EB10A2000C0233 /* PXArrayValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0A18EB10A2000C0233 /* PXArrayValue.m */; };
-		9CAAFAB918EB10A2000C0233 /* PXArrayValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0A18EB10A2000C0233 /* PXArrayValue.m */; };
 		9CAAFABA18EB10A2000C0233 /* PXBlockValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0B18EB10A2000C0233 /* PXBlockValue.h */; };
 		9CAAFABB18EB10A2000C0233 /* PXBlockValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0C18EB10A2000C0233 /* PXBlockValue.m */; };
-		9CAAFABC18EB10A2000C0233 /* PXBlockValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0C18EB10A2000C0233 /* PXBlockValue.m */; };
 		9CAAFABD18EB10A2000C0233 /* PXBooleanValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0D18EB10A2000C0233 /* PXBooleanValue.h */; };
 		9CAAFABE18EB10A2000C0233 /* PXBooleanValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0E18EB10A2000C0233 /* PXBooleanValue.m */; };
-		9CAAFABF18EB10A2000C0233 /* PXBooleanValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA0E18EB10A2000C0233 /* PXBooleanValue.m */; };
 		9CAAFAC018EB10A2000C0233 /* PXDoubleValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA0F18EB10A2000C0233 /* PXDoubleValue.h */; };
 		9CAAFAC118EB10A2000C0233 /* PXDoubleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1018EB10A2000C0233 /* PXDoubleValue.m */; };
-		9CAAFAC218EB10A2000C0233 /* PXDoubleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1018EB10A2000C0233 /* PXDoubleValue.m */; };
 		9CAAFAC318EB10A2000C0233 /* PXExpressionArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1118EB10A2000C0233 /* PXExpressionArray.h */; };
 		9CAAFAC418EB10A2000C0233 /* PXExpressionFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1218EB10A2000C0233 /* PXExpressionFunction.h */; };
 		9CAAFAC518EB10A2000C0233 /* PXExpressionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1318EB10A2000C0233 /* PXExpressionObject.h */; };
 		9CAAFAC618EB10A2000C0233 /* PXExpressionValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1418EB10A2000C0233 /* PXExpressionValue.h */; };
 		9CAAFAC718EB10A2000C0233 /* PXExpressionValueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1518EB10A2000C0233 /* PXExpressionValueBase.h */; };
 		9CAAFAC818EB10A2000C0233 /* PXExpressionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1618EB10A2000C0233 /* PXExpressionValueBase.m */; };
-		9CAAFAC918EB10A2000C0233 /* PXExpressionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1618EB10A2000C0233 /* PXExpressionValueBase.m */; };
 		9CAAFACA18EB10A2000C0233 /* PXFunctionValueBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1718EB10A2000C0233 /* PXFunctionValueBase.h */; };
 		9CAAFACB18EB10A2000C0233 /* PXFunctionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1818EB10A2000C0233 /* PXFunctionValueBase.m */; };
-		9CAAFACC18EB10A2000C0233 /* PXFunctionValueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1818EB10A2000C0233 /* PXFunctionValueBase.m */; };
 		9CAAFACD18EB10A2000C0233 /* PXMarkValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1918EB10A2000C0233 /* PXMarkValue.h */; };
 		9CAAFACE18EB10A2000C0233 /* PXMarkValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1A18EB10A2000C0233 /* PXMarkValue.m */; };
-		9CAAFACF18EB10A2000C0233 /* PXMarkValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1A18EB10A2000C0233 /* PXMarkValue.m */; };
 		9CAAFAD018EB10A2000C0233 /* PXNullValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1B18EB10A2000C0233 /* PXNullValue.h */; };
 		9CAAFAD118EB10A2000C0233 /* PXNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1C18EB10A2000C0233 /* PXNullValue.m */; };
-		9CAAFAD218EB10A2000C0233 /* PXNullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1C18EB10A2000C0233 /* PXNullValue.m */; };
 		9CAAFAD318EB10A2000C0233 /* PXObjectValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1D18EB10A2000C0233 /* PXObjectValue.h */; };
 		9CAAFAD418EB10A2000C0233 /* PXObjectValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1E18EB10A2000C0233 /* PXObjectValue.m */; };
-		9CAAFAD518EB10A2000C0233 /* PXObjectValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA1E18EB10A2000C0233 /* PXObjectValue.m */; };
 		9CAAFAD618EB10A2000C0233 /* PXStringValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA1F18EB10A2000C0233 /* PXStringValue.h */; };
 		9CAAFAD718EB10A2000C0233 /* PXStringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA2018EB10A2000C0233 /* PXStringValue.m */; };
-		9CAAFAD818EB10A2000C0233 /* PXStringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA2018EB10A2000C0233 /* PXStringValue.m */; };
 		9CAAFAD918EB10A2000C0233 /* PXUndefinedValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAFA2118EB10A2000C0233 /* PXUndefinedValue.h */; };
 		9CAAFADA18EB10A2000C0233 /* PXUndefinedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA2218EB10A2000C0233 /* PXUndefinedValue.m */; };
-		9CAAFADB18EB10A2000C0233 /* PXUndefinedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAFA2218EB10A2000C0233 /* PXUndefinedValue.m */; };
-		9CAE288318C4343B005B06B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
-		9CAE289018C4343B005B06B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64B18AE9CB600E7CDA7 /* XCTest.framework */; };
-		9CAE289118C4343B005B06B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63D18AE9CB600E7CDA7 /* Foundation.framework */; };
-		9CAE289218C4343B005B06B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A64E18AE9CB600E7CDA7 /* UIKit.framework */; };
-		9CAE289518C4343B005B06B5 /* libpixate-freestyle-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */; };
-		9CAE289B18C4343B005B06B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CAE289918C4343B005B06B5 /* InfoPlist.strings */; };
-		9CAE289D18C4343B005B06B5 /* pixate_freestyle_macTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1428,26 +1333,10 @@
 			remoteGlobalIDString = 9C84A63918AE9CB600E7CDA7;
 			remoteInfo = "pixate-freestyle";
 		};
-		9CAE289318C4343B005B06B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C84A63218AE9CB600E7CDA7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CAE288118C4343B005B06B5;
-			remoteInfo = "pixate-freestyle-mac";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9C84A63818AE9CB600E7CDA7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CAE288018C4343B005B06B5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -1477,6 +1366,9 @@
 		0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectUnshiftMethod.m; sourceTree = "<group>"; };
 		0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeOptimizer.h; sourceTree = "<group>"; };
 		0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeOptimizer.m; sourceTree = "<group>"; };
+		0A55F91B18FF230A00C8CB4B /* PXStringProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStringProperty.h; sourceTree = "<group>"; };
+		0A55F91C18FF230A00C8CB4B /* PXStringProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStringProperty.m; sourceTree = "<group>"; };
+		0A55F92718FF2B0D00C8CB4B /* PXExpressionProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionProperty.h; sourceTree = "<group>"; };
 		0A745CA118FD9AC20019EC6B /* PXArrayEveryMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayEveryMethod.h; sourceTree = "<group>"; };
 		0A745CA218FD9AC20019EC6B /* PXArrayEveryMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayEveryMethod.m; sourceTree = "<group>"; };
 		0A745CA318FD9AC20019EC6B /* PXArrayFilterMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayFilterMethod.h; sourceTree = "<group>"; };
@@ -2791,12 +2683,6 @@
 		9CAAFA2018EB10A2000C0233 /* PXStringValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXStringValue.m; sourceTree = "<group>"; };
 		9CAAFA2118EB10A2000C0233 /* PXUndefinedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXUndefinedValue.h; sourceTree = "<group>"; };
 		9CAAFA2218EB10A2000C0233 /* PXUndefinedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXUndefinedValue.m; sourceTree = "<group>"; };
-		9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpixate-freestyle-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CAE288618C4343B005B06B5 /* pixate-freestyle-mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixate-freestyle-mac-Prefix.pch"; sourceTree = "<group>"; };
-		9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixate-freestyle-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CAE289818C4343B005B06B5 /* pixate-freestyle-macTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixate-freestyle-macTests-Info.plist"; sourceTree = "<group>"; };
-		9CAE289A18C4343B005B06B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pixate_freestyle_macTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2824,25 +2710,6 @@
 				9C84A64C18AE9CB600E7CDA7 /* XCTest.framework in Frameworks */,
 				9C84A64F18AE9CB600E7CDA7 /* UIKit.framework in Frameworks */,
 				9C84A64D18AE9CB600E7CDA7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CAE287F18C4343B005B06B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CAE288318C4343B005B06B5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CAE288C18C4343B005B06B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CAE289518C4343B005B06B5 /* libpixate-freestyle-mac.a in Frameworks */,
-				9CAE289018C4343B005B06B5 /* XCTest.framework in Frameworks */,
-				9CAE289218C4343B005B06B5 /* UIKit.framework in Frameworks */,
-				9CAE289118C4343B005B06B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3813,8 +3680,6 @@
 			children = (
 				9C84A63F18AE9CB600E7CDA7 /* PixateFreestyle */,
 				9C84A65318AE9CB600E7CDA7 /* PixateFreestyleTests */,
-				9CAE288418C4343B005B06B5 /* PixateFreestyleMac */,
-				9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */,
 				9C10E89718E5ECA7001299AC /* Submodules */,
 				9C84A63C18AE9CB600E7CDA7 /* Frameworks */,
 				9C84A63B18AE9CB600E7CDA7 /* Products */,
@@ -3826,8 +3691,6 @@
 			children = (
 				9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */,
 				9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */,
-				9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */,
-				9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */,
 				9C23049518DA27CE00969D18 /* MAFutureTest */,
 			);
 			name = Products;
@@ -4585,8 +4448,11 @@
 				9CAAF99318EB10A2000C0233 /* PXDoubleProperty.h */,
 				9CAAF99418EB10A2000C0233 /* PXDoubleProperty.m */,
 				9CAAF99518EB10A2000C0233 /* PXExpressionExports.h */,
+				0A55F92718FF2B0D00C8CB4B /* PXExpressionProperty.h */,
 				9CAAF99618EB10A2000C0233 /* PXObjectValueWrapper.h */,
 				9CAAF99718EB10A2000C0233 /* PXObjectValueWrapper.m */,
+				0A55F91B18FF230A00C8CB4B /* PXStringProperty.h */,
+				0A55F91C18FF230A00C8CB4B /* PXStringProperty.m */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -4835,42 +4701,6 @@
 			path = Values;
 			sourceTree = "<group>";
 		};
-		9CAE288418C4343B005B06B5 /* PixateFreestyleMac */ = {
-			isa = PBXGroup;
-			children = (
-				9CAE288518C4343B005B06B5 /* Supporting Files */,
-			);
-			name = PixateFreestyleMac;
-			path = "pixate-freestyle-mac";
-			sourceTree = "<group>";
-		};
-		9CAE288518C4343B005B06B5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9CAE288618C4343B005B06B5 /* pixate-freestyle-mac-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9CAE289618C4343B005B06B5 /* PixateFreestyleMacTests */ = {
-			isa = PBXGroup;
-			children = (
-				9CAE289C18C4343B005B06B5 /* pixate_freestyle_macTests.m */,
-				9CAE289718C4343B005B06B5 /* Supporting Files */,
-			);
-			name = PixateFreestyleMacTests;
-			path = "pixate-freestyle-macTests";
-			sourceTree = "<group>";
-		};
-		9CAE289718C4343B005B06B5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9CAE289818C4343B005B06B5 /* pixate-freestyle-macTests-Info.plist */,
-				9CAE289918C4343B005B06B5 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9CAE28A418C4369C005B06B5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -5047,6 +4877,7 @@
 				9C98680418C04BA000C71922 /* PXUICollectionViewDelegate.h in Headers */,
 				9CAAFAD318EB10A2000C0233 /* PXObjectValue.h in Headers */,
 				9C98664F18C0499000C71922 /* PXNotificationInfo.h in Headers */,
+				0A55F92818FF2B0D00C8CB4B /* PXExpressionProperty.h in Headers */,
 				9C98676F18C0499000C71922 /* PXStyleUtils.h in Headers */,
 				9C9866FD18C0499000C71922 /* PXTitaniumMacros.h in Headers */,
 				9C98680618C04BA000C71922 /* PXUIDatePicker.h in Headers */,
@@ -5057,6 +4888,7 @@
 				9C98683018C04BA000C71922 /* PXUITableViewHeaderFooterView.h in Headers */,
 				9C98674018C0499000C71922 /* PXColorStyler.h in Headers */,
 				9C98683418C04BA000C71922 /* PXUITextView.h in Headers */,
+				0A55F91D18FF230A00C8CB4B /* PXStringProperty.h in Headers */,
 				9C98681C18C04BA000C71922 /* PXUISearchBar.h in Headers */,
 				9C98675918C0499000C71922 /* PXTextShadowStyler.h in Headers */,
 				9C23048018DA126300969D18 /* MACompoundFuture.h in Headers */,
@@ -5240,41 +5072,6 @@
 			productReference = 9C84A64A18AE9CB600E7CDA7 /* pixate-freestyleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CAE28A218C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-mac" */;
-			buildPhases = (
-				9CAE287E18C4343B005B06B5 /* Sources */,
-				9CAE287F18C4343B005B06B5 /* Frameworks */,
-				9CAE288018C4343B005B06B5 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "pixate-freestyle-mac";
-			productName = "pixate-freestyle-mac";
-			productReference = 9CAE288218C4343B005B06B5 /* libpixate-freestyle-mac.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		9CAE288E18C4343B005B06B5 /* pixate-freestyle-macTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CAE28A318C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-macTests" */;
-			buildPhases = (
-				9CAE288B18C4343B005B06B5 /* Sources */,
-				9CAE288C18C4343B005B06B5 /* Frameworks */,
-				9CAE288D18C4343B005B06B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9CAE289418C4343B005B06B5 /* PBXTargetDependency */,
-			);
-			name = "pixate-freestyle-macTests";
-			productName = "pixate-freestyle-macTests";
-			productReference = 9CAE288F18C4343B005B06B5 /* pixate-freestyle-macTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -5298,8 +5095,6 @@
 			targets = (
 				9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */,
 				9C84A64918AE9CB600E7CDA7 /* pixate-freestyleTests */,
-				9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */,
-				9CAE288E18C4343B005B06B5 /* pixate-freestyle-macTests */,
 				9C23049418DA27CE00969D18 /* MAFutureTest */,
 			);
 		};
@@ -6043,14 +5838,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CAE288D18C4343B005B06B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CAE289B18C4343B005B06B5 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -6077,6 +5864,7 @@
 				9C98683518C04BA000C71922 /* PXUITextView.m in Sources */,
 				9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */,
 				9CAAFAA518EB10A2000C0233 /* PXExpressionUnit.m in Sources */,
+				0A55F91E18FF230A00C8CB4B /* PXStringProperty.m in Sources */,
 				9CAAFA3418EB10A2000C0233 /* PXArrayPopMethod.m in Sources */,
 				0A09BE6C18EC9442004780F8 /* PXArrayJoinMethod.m in Sources */,
 				9C9867F718C04BA000C71922 /* PXMKMapView.m in Sources */,
@@ -6366,102 +6154,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9CAE287E18C4343B005B06B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C23048918DA126300969D18 /* MAMethodSignatureCache.m in Sources */,
-				9CAAFA6918EB10A2000C0233 /* PXParserBase.m in Sources */,
-				9CAAFAAF18EB10A2000C0233 /* PXBuiltInSource.m in Sources */,
-				0A745CC718FDACFA0019EC6B /* PXNumberMatcher.m in Sources */,
-				9CAAFA7A18EB10A2000C0233 /* PXInstructionCounter.m in Sources */,
-				9CAAFA5F18EB10A2000C0233 /* PXObjectForEachMethod.m in Sources */,
-				9CAAFA9918EB10A2000C0233 /* PXExpressionNodeCompiler.m in Sources */,
-				0A745CC318FDACFA0019EC6B /* PXCharacterMatcher.m in Sources */,
-				0A09BE6D18EC9449004780F8 /* PXArrayJoinMethod.m in Sources */,
-				9CAAFA3518EB10A2000C0233 /* PXArrayPopMethod.m in Sources */,
-				9CAAFA3818EB10A2000C0233 /* PXArrayPushMethod.m in Sources */,
-				9CAAFA7D18EB10A2000C0233 /* PXInstructionDisassembler.m in Sources */,
-				9CAAFA3B18EB10A2000C0233 /* PXArrayReduceMethod.m in Sources */,
-				9CAAFA5018EB10A2000C0233 /* PXShowTopFunction.m in Sources */,
-				0A745CA918FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */,
-				9CAAFA5618EB10A2000C0233 /* PXPowerFunction.m in Sources */,
-				9CAAFA2C18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */,
-				9CAAFA4A18EB10A2000C0233 /* PXParameter.m in Sources */,
-				9CAAFAD518EB10A2000C0233 /* PXObjectValue.m in Sources */,
-				9CAAFA7018EB10A2000C0233 /* PXByteCodeBuilder.m in Sources */,
-				9CAAFACF18EB10A2000C0233 /* PXMarkValue.m in Sources */,
-				0A09BE7418EC9463004780F8 /* PXObjectKeysMethod.m in Sources */,
-				9CAAFA8A18EB10A2000C0233 /* PXGenericNode.m in Sources */,
-				9C23048518DA126300969D18 /* MAFuture.m in Sources */,
-				9CAAFAB618EB10A2000C0233 /* PXScopeBase.m in Sources */,
-				9CAAFA4118EB10A2000C0233 /* PXArrayShiftMethod.m in Sources */,
-				9CAAFA5918EB10A2000C0233 /* PXSinFunction.m in Sources */,
-				9CAAFA7618EB10A2000C0233 /* PXExpressionInstruction.m in Sources */,
-				0A09BF2918ED9F1B004780F8 /* PXStringSubstringMethod.m in Sources */,
-				9C23047F18DA126300969D18 /* MABaseFuture.m in Sources */,
-				9CAAFAD818EB10A2000C0233 /* PXStringValue.m in Sources */,
-				9CAAFA6218EB10A2000C0233 /* PXObjectLengthMethod.m in Sources */,
-				9CAAFA2F18EB10A2000C0233 /* PXArrayLengthMethod.m in Sources */,
-				9CAAFADB18EB10A2000C0233 /* PXUndefinedValue.m in Sources */,
-				9CAAFA6D18EB10A2000C0233 /* PXSourceWriter.m in Sources */,
-				9CAAFA9318EB10A2000C0233 /* PXExpressionLexer.lm in Sources */,
-				9CAAFAC218EB10A2000C0233 /* PXDoubleValue.m in Sources */,
-				0A745CAC18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */,
-				9CAAFA8018EB10A2000C0233 /* PXInstructionProcessor.m in Sources */,
-				0A09BF4D18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */,
-				9C23048C18DA126300969D18 /* MAProxy.m in Sources */,
-				9CAAFA4418EB10A2000C0233 /* PXArrayUnshiftMethod.m in Sources */,
-				9CAAFA8D18EB10A2000C0233 /* PXExpressionAssembler.m in Sources */,
-				0A09BF2618ED9F1B004780F8 /* PXStringLengthMethod.m in Sources */,
-				9CAAFAD218EB10A2000C0233 /* PXNullValue.m in Sources */,
-				9CAAFA5318EB10A2000C0233 /* PXCosFunction.m in Sources */,
-				9C9620A818F02F0200219C5C /* NSObject+PXSwizzle.m in Sources */,
-				9CAAFAB318EB10A2000C0233 /* PXScope.m in Sources */,
-				0A09BF4718EF2285004780F8 /* PXObjectConcatenateMethod.m in Sources */,
-				9CAAFA9C18EB10A2000C0233 /* PXExpressionNodeUtils.m in Sources */,
-				0A09BE7718EC9463004780F8 /* PXObjectValuesMethod.m in Sources */,
-				0A47255418F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */,
-				9CAAFA6518EB10A2000C0233 /* PXObjectReverseMethod.m in Sources */,
-				9CAAFAAC18EB10A2000C0233 /* PXBuiltInScope.m in Sources */,
-				9CAAFA8318EB10A2000C0233 /* PXPushValueInstruction.m in Sources */,
-				9C23048218DA126300969D18 /* MACompoundFuture.m in Sources */,
-				9CAAFA2518EB10A2000C0233 /* PXDoubleProperty.m in Sources */,
-				9CAAFA4718EB10A2000C0233 /* PXByteCodeFunction.m in Sources */,
-				0A745CCD18FDACFA0019EC6B /* PXWordMatcher.m in Sources */,
-				9CAAFAA618EB10A2000C0233 /* PXExpressionUnit.m in Sources */,
-				9CAAFAA918EB10A2000C0233 /* PXScriptManager.m in Sources */,
-				0A09BF4A18EF2285004780F8 /* PXObjectPushMethod.m in Sources */,
-				9CAAFAB918EB10A2000C0233 /* PXArrayValue.m in Sources */,
-				9CAAFA9F18EB10A2000C0233 /* PXExpressionParser.m in Sources */,
-				9CAAFA4D18EB10A2000C0233 /* PXLogFunction.m in Sources */,
-				9CAAFA5C18EB10A2000C0233 /* PXSquareRootFunction.m in Sources */,
-				0A745CB718FDACD30019EC6B /* PXStylesheetLexer.lm in Sources */,
-				9CAAFACC18EB10A2000C0233 /* PXFunctionValueBase.m in Sources */,
-				9CAAFABC18EB10A2000C0233 /* PXBlockValue.m in Sources */,
-				9CAAFA3E18EB10A2000C0233 /* PXArrayReverseMethod.m in Sources */,
-				9CAAFABF18EB10A2000C0233 /* PXBooleanValue.m in Sources */,
-				9CAAFA2918EB10A2000C0233 /* PXObjectValueWrapper.m in Sources */,
-				0A745CCA18FDACFA0019EC6B /* PXPatternMatcher.m in Sources */,
-				9CAAFA3218EB10A2000C0233 /* PXArrayMapMethod.m in Sources */,
-				9CAAFA7318EB10A2000C0233 /* PXExpressionByteCode.m in Sources */,
-				0A745CAF18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */,
-				9CAAFA9618EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */,
-				9CAAFA8618EB10A2000C0233 /* PXBlockNode.m in Sources */,
-				9CAAFAC918EB10A2000C0233 /* PXExpressionValueBase.m in Sources */,
-				9CAAFA9018EB10A2000C0233 /* PXExpressionLexeme.m in Sources */,
-				9CAAFAA318EB10A2000C0233 /* PXExpressionEnvironment.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9CAE288B18C4343B005B06B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CAE289D18C4343B005B06B5 /* pixate_freestyle_macTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -6470,11 +6162,6 @@
 			target = 9C84A63918AE9CB600E7CDA7 /* pixate-freestyle */;
 			targetProxy = 9C84A65018AE9CB600E7CDA7 /* PBXContainerItemProxy */;
 		};
-		9CAE289418C4343B005B06B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CAE288118C4343B005B06B5 /* pixate-freestyle-mac */;
-			targetProxy = 9CAE289318C4343B005B06B5 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -6482,14 +6169,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C84A65718AE9CB600E7CDA7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9CAE289918C4343B005B06B5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CAE289A18C4343B005B06B5 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -6691,91 +6370,6 @@
 			};
 			name = Release;
 		};
-		9CAE289E18C4343B005B06B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/pixate_freestyle_mac.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					YY_NO_INPUT,
-					"DEBUG=1",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../submodules/pixate-expression-machine/**",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9CAE289F18C4343B005B06B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/pixate_freestyle_mac.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = YY_NO_INPUT;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"../submodules/pixate-expression-machine/**",
-				);
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		9CAE28A018C4343B005B06B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "pixate-freestyle-macTests/pixate-freestyle-macTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		9CAE28A118C4343B005B06B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "pixate-freestyle-mac/pixate-freestyle-mac-Prefix.pch";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "pixate-freestyle-macTests/pixate-freestyle-macTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -6811,24 +6405,6 @@
 			buildConfigurations = (
 				9C84A66118AE9CB600E7CDA7 /* Debug */,
 				9C84A66218AE9CB600E7CDA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9CAE28A218C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CAE289E18C4343B005B06B5 /* Debug */,
-				9CAE289F18C4343B005B06B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9CAE28A318C4343C005B06B5 /* Build configuration list for PBXNativeTarget "pixate-freestyle-macTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CAE28A018C4343B005B06B5 /* Debug */,
-				9CAE28A118C4343B005B06B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
