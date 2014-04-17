@@ -34,6 +34,12 @@
 		0A745CAB18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
 		0A745CAD18FD9AC20019EC6B /* PXArraySomeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */; };
 		0A745CAE18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
+		0AE5520919003557001128A6 /* PXFreestyleBuiltInScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */; };
+		0AE5520A19003557001128A6 /* PXFreestyleBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */; };
+		0AE5520D1900376D001128A6 /* PXFreestyleBuiltInSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */; };
+		0AE5520E1900376D001128A6 /* PXFreestyleBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */; };
+		0AE5521819005E2B001128A6 /* PXFreestyleScriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */; };
+		0AE5521919005E2B001128A6 /* PXFreestyleScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
@@ -1387,6 +1393,15 @@
 		0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArraySomeMethod.h; sourceTree = "<group>"; };
 		0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArraySomeMethod.m; sourceTree = "<group>"; };
 		0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer2.lm; sourceTree = "<group>"; };
+		0AE551F21900289A001128A6 /* built-ins.em */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.em"; sourceTree = "<group>"; };
+		0AE551F3190028A6001128A6 /* built-ins.ema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.ema"; sourceTree = "<group>"; };
+		0AE551FA19002D9C001128A6 /* generateStringResource.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = generateStringResource.pl; sourceTree = "<group>"; };
+		0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInScope.h; sourceTree = "<group>"; };
+		0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInScope.m; sourceTree = "<group>"; };
+		0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInSource.h; sourceTree = "<group>"; };
+		0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInSource.m; sourceTree = "<group>"; };
+		0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleScriptManager.h; sourceTree = "<group>"; };
+		0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleScriptManager.m; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
 		9C23047218DA126300969D18 /* MABaseFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseFuture.m; sourceTree = "<group>"; };
@@ -2740,6 +2755,22 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		0AE551F1190027BE001128A6 /* EM */ = {
+			isa = PBXGroup;
+			children = (
+				0AE551F21900289A001128A6 /* built-ins.em */,
+				0AE551F3190028A6001128A6 /* built-ins.ema */,
+				0AE551FA19002D9C001128A6 /* generateStringResource.pl */,
+				0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */,
+				0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */,
+				0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */,
+				0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */,
+				0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */,
+				0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */,
+			);
+			path = EM;
+			sourceTree = "<group>";
+		};
 		9C10E89718E5ECA7001299AC /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -3760,6 +3791,7 @@
 			children = (
 				9C98643418C0498F00C71922 /* Categories */,
 				9C98643B18C0498F00C71922 /* CG */,
+				0AE551F1190027BE001128A6 /* EM */,
 				9C98649618C0498F00C71922 /* Logging */,
 				9C98649E18C0498F00C71922 /* Lumberjack */,
 				9C9864A918C0498F00C71922 /* Notifications */,
@@ -4459,15 +4491,15 @@
 				9CAAF9C618EB10A2000C0233 /* Common */,
 				9CAAF9CE18EB10A2000C0233 /* Instructions */,
 				9CAAF9DE18EB10A2000C0233 /* Parsing */,
+				9CAAF9FA18EB10A2000C0233 /* Resources */,
+				9CAAF9FE18EB10A2000C0233 /* Scopes */,
+				9CAAFA0818EB10A2000C0233 /* Values */,
 				9CAAF9F418EB10A2000C0233 /* PXExpressionEnvironment.h */,
 				9CAAF9F518EB10A2000C0233 /* PXExpressionEnvironment.m */,
 				9CAAF9F618EB10A2000C0233 /* PXExpressionUnit.h */,
 				9CAAF9F718EB10A2000C0233 /* PXExpressionUnit.m */,
 				9CAAF9F818EB10A2000C0233 /* PXScriptManager.h */,
 				9CAAF9F918EB10A2000C0233 /* PXScriptManager.m */,
-				9CAAF9FA18EB10A2000C0233 /* Resources */,
-				9CAAF9FE18EB10A2000C0233 /* Scopes */,
-				9CAAFA0818EB10A2000C0233 /* Values */,
 			);
 			name = ExpressionMachine;
 			path = "../submodules/pixate-expression-machine/src/ExpressionMachine";
@@ -4928,6 +4960,7 @@
 				9C98672518C0499000C71922 /* PXIdSelector.h in Headers */,
 				9CAAFA9118EB10A2000C0233 /* PXExpressionLexemeType.h in Headers */,
 				0A09BF2418ED9F1B004780F8 /* PXStringLengthMethod.h in Headers */,
+				0AE5520919003557001128A6 /* PXFreestyleBuiltInScope.h in Headers */,
 				9C98664718C0499000C71922 /* DDASLLogger.h in Headers */,
 				9C9865F618C0499000C71922 /* PXMath.h in Headers */,
 				9C98668518C0499000C71922 /* UIView+PXStyling-Private.h in Headers */,
@@ -4938,6 +4971,7 @@
 				9CAAFAD018EB10A2000C0233 /* PXNullValue.h in Headers */,
 				9CAAFA6318EB10A2000C0233 /* PXObjectReverseMethod.h in Headers */,
 				9C98661018C0499000C71922 /* PXGraphics.h in Headers */,
+				0AE5520D1900376D001128A6 /* PXFreestyleBuiltInSource.h in Headers */,
 				9C98681A18C04BA000C71922 /* PXUIScrollView.h in Headers */,
 				9C9620A618F02F0200219C5C /* NSObject+PXSwizzle.h in Headers */,
 				9C98660C18C0499000C71922 /* PXTransformParser.h in Headers */,
@@ -4974,6 +5008,7 @@
 				9C9866F118C0499000C71922 /* PXFontRegistry.h in Headers */,
 				9C98672D18C0499000C71922 /* PXPseudoClassSelector.h in Headers */,
 				9C98665A18C0499000C71922 /* PXPatternMatcher.h in Headers */,
+				0AE5521819005E2B001128A6 /* PXFreestyleScriptManager.h in Headers */,
 				9C98675018C0499000C71922 /* PXShapeStyler.h in Headers */,
 				9C98673A18C0499000C71922 /* PXBarShadowStyler.h in Headers */,
 				9CAAFAD918EB10A2000C0233 /* PXUndefinedValue.h in Headers */,
@@ -5076,6 +5111,7 @@
 				9C84A63618AE9CB600E7CDA7 /* Sources */,
 				9C84A63718AE9CB600E7CDA7 /* Frameworks */,
 				9C84A63818AE9CB600E7CDA7 /* CopyFiles */,
+				0AE551F919002AD3001128A6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -5872,6 +5908,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AE551F919002AD3001128A6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${SRCROOT}/Core/EM/\" && ./generateStringResource.pl > PXFreestyleBuiltinSource.m";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C23049118DA27CE00969D18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -5930,6 +5983,7 @@
 				9CAAFA9518EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */,
 				9C98672218C0499000C71922 /* PXAttributeSelectorOperator.m in Sources */,
 				9CAAFAD418EB10A2000C0233 /* PXObjectValue.m in Sources */,
+				0AE5520A19003557001128A6 /* PXFreestyleBuiltInScope.m in Sources */,
 				9C98674718C0499000C71922 /* PXGenericStyler.m in Sources */,
 				9C98663D18C0499000C71922 /* PXShapeView.m in Sources */,
 				9C98682118C04BA000C71922 /* PXUISlider.m in Sources */,
@@ -5948,6 +6002,7 @@
 				9CAAFA2B18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */,
 				9C9866F018C0499000C71922 /* PXFontEntry.m in Sources */,
 				9C98670218C0499000C71922 /* PXMediaGroup.m in Sources */,
+				0AE5520E1900376D001128A6 /* PXFreestyleBuiltInSource.m in Sources */,
 				0A745CA818FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */,
 				9C98681D18C04BA000C71922 /* PXUISearchBar.m in Sources */,
 				9C98680D18C04BA000C71922 /* PXUILayoutContainerView.m in Sources */,
@@ -6088,6 +6143,7 @@
 				0A09BE7618EC9463004780F8 /* PXObjectValuesMethod.m in Sources */,
 				9C98671018C0499000C71922 /* PXValueParser.m in Sources */,
 				9CAAFAD718EB10A2000C0233 /* PXStringValue.m in Sources */,
+				0AE5521919005E2B001128A6 /* PXFreestyleScriptManager.m in Sources */,
 				9C9865F518C0499000C71922 /* PXEllipticalArc.m in Sources */,
 				9C98681318C04BA000C71922 /* PXUIPickerView.m in Sources */,
 				9C9865FE18C0499000C71922 /* PXImagePaint.m in Sources */,
