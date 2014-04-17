@@ -34,12 +34,25 @@
 		0A745CAB18FD9AC20019EC6B /* PXArrayFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA418FD9AC20019EC6B /* PXArrayFilterMethod.m */; };
 		0A745CAD18FD9AC20019EC6B /* PXArraySomeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */; };
 		0A745CAE18FD9AC20019EC6B /* PXArraySomeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */; };
-		0AE5520919003557001128A6 /* PXFreestyleBuiltInScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */; };
-		0AE5520A19003557001128A6 /* PXFreestyleBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */; };
-		0AE5520D1900376D001128A6 /* PXFreestyleBuiltInSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */; };
-		0AE5520E1900376D001128A6 /* PXFreestyleBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */; };
 		0AE5521819005E2B001128A6 /* PXFreestyleScriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */; };
 		0AE5521919005E2B001128A6 /* PXFreestyleScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */; };
+		0AE5523C19006C9E001128A6 /* PXFreestyleBuiltInScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523019006C9E001128A6 /* PXFreestyleBuiltInScope.h */; };
+		0AE5523D19006C9E001128A6 /* PXFreestyleBuiltInScope.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5523119006C9E001128A6 /* PXFreestyleBuiltInScope.m */; };
+		0AE5523E19006C9E001128A6 /* PXFreestyleBuiltInSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523219006C9E001128A6 /* PXFreestyleBuiltInSource.h */; };
+		0AE5523F19006C9E001128A6 /* PXFreestyleBuiltInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5523319006C9E001128A6 /* PXFreestyleBuiltInSource.m */; };
+		0AE5524019006C9E001128A6 /* PXExpressionColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523519006C9E001128A6 /* PXExpressionColor.h */; };
+		0AE5524119006C9E001128A6 /* PXHSBColorValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523619006C9E001128A6 /* PXHSBColorValue.h */; };
+		0AE5524219006C9E001128A6 /* PXHSBColorValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5523719006C9E001128A6 /* PXHSBColorValue.m */; };
+		0AE5524319006C9E001128A6 /* PXHSLColorValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523819006C9E001128A6 /* PXHSLColorValue.h */; };
+		0AE5524419006C9E001128A6 /* PXHSLColorValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5523919006C9E001128A6 /* PXHSLColorValue.m */; };
+		0AE5524519006C9E001128A6 /* PXRGBColorValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5523A19006C9E001128A6 /* PXRGBColorValue.h */; };
+		0AE5524619006C9E001128A6 /* PXRGBColorValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5523B19006C9E001128A6 /* PXRGBColorValue.m */; };
+		0AE5524919006E12001128A6 /* PXExpressionColorBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5524719006E12001128A6 /* PXExpressionColorBase.h */; };
+		0AE5524A19006E12001128A6 /* PXExpressionColorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5524819006E12001128A6 /* PXExpressionColorBase.m */; };
+		0AE5525219007D01001128A6 /* PXColorValueProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5525019007D01001128A6 /* PXColorValueProperty.h */; };
+		0AE5525319007D01001128A6 /* PXColorValueProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5525119007D01001128A6 /* PXColorValueProperty.m */; };
+		0AE5525619007EB9001128A6 /* PXColorProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE5525419007EB9001128A6 /* PXColorProperty.h */; };
+		0AE5525719007EB9001128A6 /* PXColorProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5525519007EB9001128A6 /* PXColorProperty.m */; };
 		9C08810C18BE9ECA0079A71B /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C84A63A18AE9CB600E7CDA7 /* libpixate-freestyle.a */; };
 		9C0B706818C52EEA00D2E7FD /* Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4DB80218AEA48000AE80B2 /* Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C23047118DA126300969D18 /* MABaseFuture.h */; };
@@ -1393,15 +1406,28 @@
 		0A745CA518FD9AC20019EC6B /* PXArraySomeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArraySomeMethod.h; sourceTree = "<group>"; };
 		0A745CA618FD9AC20019EC6B /* PXArraySomeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArraySomeMethod.m; sourceTree = "<group>"; };
 		0A8091F118E5F430003CD355 /* PXStylesheetLexer2.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = PXStylesheetLexer2.lm; sourceTree = "<group>"; };
-		0AE551F21900289A001128A6 /* built-ins.em */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.em"; sourceTree = "<group>"; };
-		0AE551F3190028A6001128A6 /* built-ins.ema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.ema"; sourceTree = "<group>"; };
-		0AE551FA19002D9C001128A6 /* generateStringResource.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = generateStringResource.pl; sourceTree = "<group>"; };
-		0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInScope.h; sourceTree = "<group>"; };
-		0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInScope.m; sourceTree = "<group>"; };
-		0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInSource.h; sourceTree = "<group>"; };
-		0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInSource.m; sourceTree = "<group>"; };
 		0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleScriptManager.h; sourceTree = "<group>"; };
 		0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleScriptManager.m; sourceTree = "<group>"; };
+		0AE5522D19006C9E001128A6 /* built-ins.em */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.em"; sourceTree = "<group>"; };
+		0AE5522E19006C9E001128A6 /* built-ins.ema */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "built-ins.ema"; sourceTree = "<group>"; };
+		0AE5522F19006C9E001128A6 /* generateStringResource.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = generateStringResource.pl; sourceTree = "<group>"; };
+		0AE5523019006C9E001128A6 /* PXFreestyleBuiltInScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInScope.h; sourceTree = "<group>"; };
+		0AE5523119006C9E001128A6 /* PXFreestyleBuiltInScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInScope.m; sourceTree = "<group>"; };
+		0AE5523219006C9E001128A6 /* PXFreestyleBuiltInSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXFreestyleBuiltInSource.h; sourceTree = "<group>"; };
+		0AE5523319006C9E001128A6 /* PXFreestyleBuiltInSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXFreestyleBuiltInSource.m; sourceTree = "<group>"; };
+		0AE5523519006C9E001128A6 /* PXExpressionColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionColor.h; sourceTree = "<group>"; };
+		0AE5523619006C9E001128A6 /* PXHSBColorValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXHSBColorValue.h; sourceTree = "<group>"; };
+		0AE5523719006C9E001128A6 /* PXHSBColorValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXHSBColorValue.m; sourceTree = "<group>"; };
+		0AE5523819006C9E001128A6 /* PXHSLColorValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXHSLColorValue.h; sourceTree = "<group>"; };
+		0AE5523919006C9E001128A6 /* PXHSLColorValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXHSLColorValue.m; sourceTree = "<group>"; };
+		0AE5523A19006C9E001128A6 /* PXRGBColorValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXRGBColorValue.h; sourceTree = "<group>"; };
+		0AE5523B19006C9E001128A6 /* PXRGBColorValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXRGBColorValue.m; sourceTree = "<group>"; };
+		0AE5524719006E12001128A6 /* PXExpressionColorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXExpressionColorBase.h; sourceTree = "<group>"; };
+		0AE5524819006E12001128A6 /* PXExpressionColorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXExpressionColorBase.m; sourceTree = "<group>"; };
+		0AE5525019007D01001128A6 /* PXColorValueProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXColorValueProperty.h; sourceTree = "<group>"; };
+		0AE5525119007D01001128A6 /* PXColorValueProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXColorValueProperty.m; sourceTree = "<group>"; };
+		0AE5525419007EB9001128A6 /* PXColorProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXColorProperty.h; sourceTree = "<group>"; };
+		0AE5525519007EB9001128A6 /* PXColorProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXColorProperty.m; sourceTree = "<group>"; };
 		9C23047018DA126300969D18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9C23047118DA126300969D18 /* MABaseFuture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseFuture.h; sourceTree = "<group>"; };
 		9C23047218DA126300969D18 /* MABaseFuture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseFuture.m; sourceTree = "<group>"; };
@@ -2758,17 +2784,54 @@
 		0AE551F1190027BE001128A6 /* EM */ = {
 			isa = PBXGroup;
 			children = (
-				0AE551F21900289A001128A6 /* built-ins.em */,
-				0AE551F3190028A6001128A6 /* built-ins.ema */,
-				0AE551FA19002D9C001128A6 /* generateStringResource.pl */,
-				0AE5520719003557001128A6 /* PXFreestyleBuiltInScope.h */,
-				0AE5520819003557001128A6 /* PXFreestyleBuiltInScope.m */,
-				0AE5520B1900376D001128A6 /* PXFreestyleBuiltInSource.h */,
-				0AE5520C1900376D001128A6 /* PXFreestyleBuiltInSource.m */,
+				0AE5524B19007870001128A6 /* Bridge */,
+				0AE5522C19006C9E001128A6 /* Scopes */,
+				0AE5523419006C9E001128A6 /* Values */,
 				0AE5521619005E2B001128A6 /* PXFreestyleScriptManager.h */,
 				0AE5521719005E2B001128A6 /* PXFreestyleScriptManager.m */,
 			);
 			path = EM;
+			sourceTree = "<group>";
+		};
+		0AE5522C19006C9E001128A6 /* Scopes */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5522D19006C9E001128A6 /* built-ins.em */,
+				0AE5522E19006C9E001128A6 /* built-ins.ema */,
+				0AE5522F19006C9E001128A6 /* generateStringResource.pl */,
+				0AE5523019006C9E001128A6 /* PXFreestyleBuiltInScope.h */,
+				0AE5523119006C9E001128A6 /* PXFreestyleBuiltInScope.m */,
+				0AE5523219006C9E001128A6 /* PXFreestyleBuiltInSource.h */,
+				0AE5523319006C9E001128A6 /* PXFreestyleBuiltInSource.m */,
+			);
+			path = Scopes;
+			sourceTree = "<group>";
+		};
+		0AE5523419006C9E001128A6 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5523519006C9E001128A6 /* PXExpressionColor.h */,
+				0AE5523619006C9E001128A6 /* PXHSBColorValue.h */,
+				0AE5523719006C9E001128A6 /* PXHSBColorValue.m */,
+				0AE5523819006C9E001128A6 /* PXHSLColorValue.h */,
+				0AE5523919006C9E001128A6 /* PXHSLColorValue.m */,
+				0AE5523A19006C9E001128A6 /* PXRGBColorValue.h */,
+				0AE5523B19006C9E001128A6 /* PXRGBColorValue.m */,
+				0AE5524719006E12001128A6 /* PXExpressionColorBase.h */,
+				0AE5524819006E12001128A6 /* PXExpressionColorBase.m */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		0AE5524B19007870001128A6 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5525019007D01001128A6 /* PXColorValueProperty.h */,
+				0AE5525119007D01001128A6 /* PXColorValueProperty.m */,
+				0AE5525419007EB9001128A6 /* PXColorProperty.h */,
+				0AE5525519007EB9001128A6 /* PXColorProperty.m */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		9C10E89718E5ECA7001299AC /* Submodules */ = {
@@ -4797,9 +4860,11 @@
 				9CAAFA4E18EB10A2000C0233 /* PXShowTopFunction.h in Headers */,
 				9C9865F418C0499000C71922 /* PXEllipticalArc.h in Headers */,
 				9C98662A18C0499000C71922 /* PXRenderable.h in Headers */,
+				0AE5524019006C9E001128A6 /* PXExpressionColor.h in Headers */,
 				9C98664918C0499000C71922 /* DDFileLogger.h in Headers */,
 				9CAAFA2618EB10A2000C0233 /* PXExpressionExports.h in Headers */,
 				9C98670718C0499000C71922 /* PXStylesheetLexer.h in Headers */,
+				0AE5525619007EB9001128A6 /* PXColorProperty.h in Headers */,
 				9C98674A18C0499000C71922 /* PXLayoutStyler.h in Headers */,
 				9C98667D18C0499000C71922 /* NSMutableDictionary+PXObject.h in Headers */,
 				9C98661D18C0499000C71922 /* PXEllipse.h in Headers */,
@@ -4848,6 +4913,7 @@
 				9C98662418C0499000C71922 /* PXPie.h in Headers */,
 				9C98673218C0499000C71922 /* PXBoxModel.h in Headers */,
 				9C98668A18C0499000C71922 /* PXChildCombinator.h in Headers */,
+				0AE5524519006C9E001128A6 /* PXRGBColorValue.h in Headers */,
 				9C98683818C04BA000C71922 /* PXUIView.h in Headers */,
 				9C98661818C0499000C71922 /* PXArrowRectangle.h in Headers */,
 				9C98682818C04BA000C71922 /* PXUITableView.h in Headers */,
@@ -4863,9 +4929,11 @@
 				9C98665518C0499000C71922 /* PXCharacterMatcher.h in Headers */,
 				9C98682C18C04BA000C71922 /* PXUITableViewCellContentView.h in Headers */,
 				9CAAFAA718EB10A2000C0233 /* PXScriptManager.h in Headers */,
+				0AE5525219007D01001128A6 /* PXColorValueProperty.h in Headers */,
 				9CAAFAA118EB10A2000C0233 /* PXExpressionEnvironment.h in Headers */,
 				9C98661518C0499000C71922 /* PXShadowPaint.h in Headers */,
 				9C23047D18DA126300969D18 /* MABaseFuture.h in Headers */,
+				0AE5524119006C9E001128A6 /* PXHSBColorValue.h in Headers */,
 				9C98662F18C0499000C71922 /* PXShapeGroup.h in Headers */,
 				9CAAFABD18EB10A2000C0233 /* PXBooleanValue.h in Headers */,
 				9C98666418C0499000C71922 /* PixateFreestyle-Private.h in Headers */,
@@ -4880,6 +4948,7 @@
 				9CAAFA6B18EB10A2000C0233 /* PXSourceWriter.h in Headers */,
 				9C9867F018C04BA000C71922 /* PXForceLoadControls.h in Headers */,
 				9C98667B18C0499000C71922 /* NSDictionary+PXObject.h in Headers */,
+				0AE5523E19006C9E001128A6 /* PXFreestyleBuiltInSource.h in Headers */,
 				9C98672918C0499000C71922 /* PXPseudoClassFunction.h in Headers */,
 				9CAAFAAA18EB10A2000C0233 /* PXBuiltInScope.h in Headers */,
 				9CAAFA4518EB10A2000C0233 /* PXByteCodeFunction.h in Headers */,
@@ -4955,13 +5024,14 @@
 				0A55F91D18FF230A00C8CB4B /* PXStringProperty.h in Headers */,
 				9C98681C18C04BA000C71922 /* PXUISearchBar.h in Headers */,
 				9C98675918C0499000C71922 /* PXTextShadowStyler.h in Headers */,
+				0AE5524319006C9E001128A6 /* PXHSLColorValue.h in Headers */,
 				9C23048018DA126300969D18 /* MACompoundFuture.h in Headers */,
 				9C98676318C0499000C71922 /* PXFileUtils.h in Headers */,
 				9C98672518C0499000C71922 /* PXIdSelector.h in Headers */,
 				9CAAFA9118EB10A2000C0233 /* PXExpressionLexemeType.h in Headers */,
 				0A09BF2418ED9F1B004780F8 /* PXStringLengthMethod.h in Headers */,
-				0AE5520919003557001128A6 /* PXFreestyleBuiltInScope.h in Headers */,
 				9C98664718C0499000C71922 /* DDASLLogger.h in Headers */,
+				0AE5523C19006C9E001128A6 /* PXFreestyleBuiltInScope.h in Headers */,
 				9C9865F618C0499000C71922 /* PXMath.h in Headers */,
 				9C98668518C0499000C71922 /* UIView+PXStyling-Private.h in Headers */,
 				9C98670F18C0499000C71922 /* PXValueParser.h in Headers */,
@@ -4971,7 +5041,6 @@
 				9CAAFAD018EB10A2000C0233 /* PXNullValue.h in Headers */,
 				9CAAFA6318EB10A2000C0233 /* PXObjectReverseMethod.h in Headers */,
 				9C98661018C0499000C71922 /* PXGraphics.h in Headers */,
-				0AE5520D1900376D001128A6 /* PXFreestyleBuiltInSource.h in Headers */,
 				9C98681A18C04BA000C71922 /* PXUIScrollView.h in Headers */,
 				9C9620A618F02F0200219C5C /* NSObject+PXSwizzle.h in Headers */,
 				9C98660C18C0499000C71922 /* PXTransformParser.h in Headers */,
@@ -5020,6 +5089,7 @@
 				9C98663E18C0499000C71922 /* PXDelegateLogger.h in Headers */,
 				9CAAFA7B18EB10A2000C0233 /* PXInstructionDisassembler.h in Headers */,
 				9C98682418C04BA000C71922 /* PXUISwitch.h in Headers */,
+				0AE5524919006E12001128A6 /* PXExpressionColorBase.h in Headers */,
 				9CAAFACA18EB10A2000C0233 /* PXFunctionValueBase.h in Headers */,
 				9CAAFA2A18EB10A2000C0233 /* PXArrayForEachMethod.h in Headers */,
 				9C98683E18C04BA000C71922 /* PXForceLoadVirtualCategories.h in Headers */,
@@ -5920,7 +5990,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"${SRCROOT}/Core/EM/\" && ./generateStringResource.pl > PXFreestyleBuiltinSource.m";
+			shellScript = "cd \"${SRCROOT}/Core/EM/Scopes\" && ./generateStringResource.pl > PXFreestyleBuiltinSource.m";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -5947,6 +6017,7 @@
 				9CAAFA7F18EB10A2000C0233 /* PXInstructionProcessor.m in Sources */,
 				9C98683118C04BA000C71922 /* PXUITableViewHeaderFooterView.m in Sources */,
 				9C98683518C04BA000C71922 /* PXUITextView.m in Sources */,
+				0AE5525319007D01001128A6 /* PXColorValueProperty.m in Sources */,
 				9C23048118DA126300969D18 /* MACompoundFuture.m in Sources */,
 				9CAAFAA518EB10A2000C0233 /* PXExpressionUnit.m in Sources */,
 				0A55F91E18FF230A00C8CB4B /* PXStringProperty.m in Sources */,
@@ -5975,6 +6046,7 @@
 				9C98661E18C0499000C71922 /* PXEllipse.m in Sources */,
 				9CAAFA4618EB10A2000C0233 /* PXByteCodeFunction.m in Sources */,
 				9C98672418C0499000C71922 /* PXClassSelector.m in Sources */,
+				0AE5523F19006C9E001128A6 /* PXFreestyleBuiltInSource.m in Sources */,
 				9C98684918C04BA000C71922 /* UINavigationItem+PXStyling.m in Sources */,
 				9C98674F18C0499000C71922 /* PXPaintStyler.m in Sources */,
 				9C98676418C0499000C71922 /* PXFileUtils.m in Sources */,
@@ -5983,7 +6055,7 @@
 				9CAAFA9518EB10A2000C0233 /* PXExpressionNodeBuilder.m in Sources */,
 				9C98672218C0499000C71922 /* PXAttributeSelectorOperator.m in Sources */,
 				9CAAFAD418EB10A2000C0233 /* PXObjectValue.m in Sources */,
-				0AE5520A19003557001128A6 /* PXFreestyleBuiltInScope.m in Sources */,
+				0AE5523D19006C9E001128A6 /* PXFreestyleBuiltInScope.m in Sources */,
 				9C98674718C0499000C71922 /* PXGenericStyler.m in Sources */,
 				9C98663D18C0499000C71922 /* PXShapeView.m in Sources */,
 				9C98682118C04BA000C71922 /* PXUISlider.m in Sources */,
@@ -6002,7 +6074,6 @@
 				9CAAFA2B18EB10A2000C0233 /* PXArrayForEachMethod.m in Sources */,
 				9C9866F018C0499000C71922 /* PXFontEntry.m in Sources */,
 				9C98670218C0499000C71922 /* PXMediaGroup.m in Sources */,
-				0AE5520E1900376D001128A6 /* PXFreestyleBuiltInSource.m in Sources */,
 				0A745CA818FD9AC20019EC6B /* PXArrayEveryMethod.m in Sources */,
 				9C98681D18C04BA000C71922 /* PXUISearchBar.m in Sources */,
 				9C98680D18C04BA000C71922 /* PXUILayoutContainerView.m in Sources */,
@@ -6013,6 +6084,7 @@
 				9C9867FB18C04BA000C71922 /* PXUIActionSheet.m in Sources */,
 				9CAAFABB18EB10A2000C0233 /* PXBlockValue.m in Sources */,
 				9C98665918C0499000C71922 /* PXNumberMatcher.m in Sources */,
+				0AE5524619006C9E001128A6 /* PXRGBColorValue.m in Sources */,
 				9C98673318C0499000C71922 /* PXBoxModel.m in Sources */,
 				9C98661718C0499000C71922 /* PXArc.m in Sources */,
 				9C98683318C04BA000C71922 /* PXUITextField.m in Sources */,
@@ -6113,6 +6185,7 @@
 				9C98676C18C0499000C71922 /* PXProxy.m in Sources */,
 				9C98665618C0499000C71922 /* PXCharacterMatcher.m in Sources */,
 				9CAAFA3118EB10A2000C0233 /* PXArrayMapMethod.m in Sources */,
+				0AE5525719007EB9001128A6 /* PXColorProperty.m in Sources */,
 				9CAAFA7518EB10A2000C0233 /* PXExpressionInstruction.m in Sources */,
 				9CAAFAB518EB10A2000C0233 /* PXScopeBase.m in Sources */,
 				9CAAFAA218EB10A2000C0233 /* PXExpressionEnvironment.m in Sources */,
@@ -6138,6 +6211,7 @@
 				9CAAFA3D18EB10A2000C0233 /* PXArrayReverseMethod.m in Sources */,
 				9C98660718C0499000C71922 /* PXSolidPaint.m in Sources */,
 				9C98667818C0499000C71922 /* NSArray+Reverse.m in Sources */,
+				0AE5524419006C9E001128A6 /* PXHSLColorValue.m in Sources */,
 				9C98664E18C0499000C71922 /* DDTTYLogger.m in Sources */,
 				9C98663418C0499000C71922 /* PXNonScalingStroke.m in Sources */,
 				0A09BE7618EC9463004780F8 /* PXObjectValuesMethod.m in Sources */,
@@ -6181,9 +6255,11 @@
 				9C9867EB18C04BA000C71922 /* PXKeyframe.m in Sources */,
 				9C98676818C0499000C71922 /* PXGestalt.m in Sources */,
 				9C98683718C04BA000C71922 /* PXUIToolbar.m in Sources */,
+				0AE5524A19006E12001128A6 /* PXExpressionColorBase.m in Sources */,
 				9CAAFA4018EB10A2000C0233 /* PXArrayShiftMethod.m in Sources */,
 				9C98660318C0499000C71922 /* PXPaintGroup.m in Sources */,
 				9C98675A18C0499000C71922 /* PXTextShadowStyler.m in Sources */,
+				0AE5524219006C9E001128A6 /* PXHSBColorValue.m in Sources */,
 				9C98670E18C0499000C71922 /* PXURLMatcher.m in Sources */,
 				9C98674318C0499000C71922 /* PXFillStyler.m in Sources */,
 				9C98669018C0499000C71922 /* PXDescendantCombinator.m in Sources */,
