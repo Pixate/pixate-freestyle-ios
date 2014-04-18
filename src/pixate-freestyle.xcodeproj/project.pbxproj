@@ -23,6 +23,8 @@
 		0A09BF4918EF2285004780F8 /* PXObjectPushMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4218EF2285004780F8 /* PXObjectPushMethod.m */; };
 		0A09BF4B18EF2285004780F8 /* PXObjectUnshiftMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BF4318EF2285004780F8 /* PXObjectUnshiftMethod.h */; };
 		0A09BF4C18EF2285004780F8 /* PXObjectUnshiftMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */; };
+		0A2A9133190174140039FA5A /* PXObjectValueWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A9132190174140039FA5A /* PXObjectValueWrapperTests.m */; };
+		0A2A9136190174360039FA5A /* PXPropertyTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2A9135190174360039FA5A /* PXPropertyTestClass.m */; };
 		0A47255218F33DCF001035E2 /* PXByteCodeOptimizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */; };
 		0A47255318F33DCF001035E2 /* PXByteCodeOptimizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */; };
 		0A55F91D18FF230A00C8CB4B /* PXStringProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A55F91B18FF230A00C8CB4B /* PXStringProperty.h */; };
@@ -1394,6 +1396,9 @@
 		0A09BF4218EF2285004780F8 /* PXObjectPushMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectPushMethod.m; sourceTree = "<group>"; };
 		0A09BF4318EF2285004780F8 /* PXObjectUnshiftMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectUnshiftMethod.h; sourceTree = "<group>"; };
 		0A09BF4418EF2285004780F8 /* PXObjectUnshiftMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectUnshiftMethod.m; sourceTree = "<group>"; };
+		0A2A9132190174140039FA5A /* PXObjectValueWrapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXObjectValueWrapperTests.m; sourceTree = "<group>"; };
+		0A2A9134190174360039FA5A /* PXPropertyTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPropertyTestClass.h; sourceTree = "<group>"; };
+		0A2A9135190174360039FA5A /* PXPropertyTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPropertyTestClass.m; sourceTree = "<group>"; };
 		0A47255018F33DCF001035E2 /* PXByteCodeOptimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXByteCodeOptimizer.h; sourceTree = "<group>"; };
 		0A47255118F33DCF001035E2 /* PXByteCodeOptimizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXByteCodeOptimizer.m; sourceTree = "<group>"; };
 		0A55F91B18FF230A00C8CB4B /* PXStringProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXStringProperty.h; sourceTree = "<group>"; };
@@ -2781,6 +2786,16 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		0A2A9131190172E40039FA5A /* EM */ = {
+			isa = PBXGroup;
+			children = (
+				0A2A9132190174140039FA5A /* PXObjectValueWrapperTests.m */,
+				0A2A9134190174360039FA5A /* PXPropertyTestClass.h */,
+				0A2A9135190174360039FA5A /* PXPropertyTestClass.m */,
+			);
+			path = EM;
+			sourceTree = "<group>";
+		};
 		0AE551F1190027BE001128A6 /* EM */ = {
 			isa = PBXGroup;
 			children = (
@@ -3832,6 +3847,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3174FD18BE936A00F4B79D /* CG */,
+				0A2A9131190172E40039FA5A /* EM */,
 				9C31750418BE936A00F4B79D /* Resources */,
 				9C3177EE18BE936B00F4B79D /* Styling */,
 				9C84A65418AE9CB600E7CDA7 /* Supporting Files */,
@@ -6290,6 +6306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2A9133190174140039FA5A /* PXObjectValueWrapperTests.m in Sources */,
 				9C317AE918BE936B00F4B79D /* PXDOMAttribute.m in Sources */,
 				9C31780E18BE936B00F4B79D /* PXTransformLexerTests.m in Sources */,
 				9C317AF118BE936B00F4B79D /* PXLexemeTests.m in Sources */,
@@ -6302,6 +6319,7 @@
 				9C317AEC18BE936B00F4B79D /* PXDOMText.m in Sources */,
 				9C317AFB18BE936B00F4B79D /* StyleableView.m in Sources */,
 				9C317AF318BE936B00F4B79D /* PXSpecificityTests.m in Sources */,
+				0A2A9136190174360039FA5A /* PXPropertyTestClass.m in Sources */,
 				9C31780D18BE936B00F4B79D /* PXSVGRenderingTests.m in Sources */,
 				9C317AF218BE936B00F4B79D /* PXMediaExpressionTest.m in Sources */,
 				9C317AEF18BE936B00F4B79D /* PXDeclarationTests.m in Sources */,

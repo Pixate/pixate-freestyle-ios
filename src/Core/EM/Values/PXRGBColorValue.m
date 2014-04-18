@@ -52,6 +52,11 @@
     return [UIColor colorWithRed:_red/255.0 green:_green/255.0 blue:_blue/255.0 alpha:_alpha];
 }
 
+- (PXRGBColorValue *)rgbColorValue
+{
+    return self;
+}
+
 #pragma mark - Overrides
 
 - (NSString *)description

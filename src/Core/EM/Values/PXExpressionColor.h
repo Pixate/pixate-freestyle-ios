@@ -8,10 +8,17 @@
 
 #import "PXExpressionValue.h"
 
+@class PXHSBColorValue;
+@class PXHSLColorValue;
+@class PXRGBColorValue;
+
 @protocol PXExpressionColor <PXExpressionValue>
 
 - (id)initWithColor:(UIColor *)color;
 
 - (UIColor *)colorValue;
+- (PXHSBColorValue *)hsbColorValue;
+- (PXHSLColorValue *)hslColorValue;
+- (PXRGBColorValue *)rgbColorValue;
 
 @end

@@ -54,6 +54,11 @@
     return [UIColor colorWithHue:_hue saturation:_saturation lightness:_lightness alpha:_alpha];
 }
 
+- (PXHSLColorValue *)hslColorValue
+{
+    return self;
+}
+
 #pragma mark - Overrides
 
 - (NSString *)description
