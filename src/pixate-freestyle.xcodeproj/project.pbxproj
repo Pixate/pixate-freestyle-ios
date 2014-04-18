@@ -19,6 +19,7 @@
 		0A09A2621901AF670046FEAF /* PXHSBFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09A2601901AF670046FEAF /* PXHSBFunction.m */; };
 		0A09A2651901AF980046FEAF /* PXHSBAFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09A2631901AF980046FEAF /* PXHSBAFunction.h */; };
 		0A09A2661901AF980046FEAF /* PXHSBAFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09A2641901AF980046FEAF /* PXHSBAFunction.m */; };
+		0A09A2681901DC0A0046FEAF /* PXColorValueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09A2671901DC0A0046FEAF /* PXColorValueTests.m */; };
 		0A09BE6B18EC9442004780F8 /* PXArrayJoinMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BE6918EC9442004780F8 /* PXArrayJoinMethod.h */; };
 		0A09BE6C18EC9442004780F8 /* PXArrayJoinMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A09BE6A18EC9442004780F8 /* PXArrayJoinMethod.m */; };
 		0A09BE7218EC9463004780F8 /* PXObjectKeysMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A09BE6E18EC9463004780F8 /* PXObjectKeysMethod.h */; };
@@ -1404,6 +1405,7 @@
 		0A09A2601901AF670046FEAF /* PXHSBFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXHSBFunction.m; sourceTree = "<group>"; };
 		0A09A2631901AF980046FEAF /* PXHSBAFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXHSBAFunction.h; sourceTree = "<group>"; };
 		0A09A2641901AF980046FEAF /* PXHSBAFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXHSBAFunction.m; sourceTree = "<group>"; };
+		0A09A2671901DC0A0046FEAF /* PXColorValueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXColorValueTests.m; sourceTree = "<group>"; };
 		0A09BE6918EC9442004780F8 /* PXArrayJoinMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXArrayJoinMethod.h; sourceTree = "<group>"; };
 		0A09BE6A18EC9442004780F8 /* PXArrayJoinMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXArrayJoinMethod.m; sourceTree = "<group>"; };
 		0A09BE6E18EC9463004780F8 /* PXObjectKeysMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXObjectKeysMethod.h; sourceTree = "<group>"; };
@@ -2832,6 +2834,7 @@
 		0A2A9131190172E40039FA5A /* EM */ = {
 			isa = PBXGroup;
 			children = (
+				0A09A2671901DC0A0046FEAF /* PXColorValueTests.m */,
 				0A2A9132190174140039FA5A /* PXObjectValueWrapperTests.m */,
 				0A2A9134190174360039FA5A /* PXPropertyTestClass.h */,
 				0A2A9135190174360039FA5A /* PXPropertyTestClass.m */,
@@ -6379,6 +6382,7 @@
 				9C31780D18BE936B00F4B79D /* PXSVGRenderingTests.m in Sources */,
 				9C317AF218BE936B00F4B79D /* PXMediaExpressionTest.m in Sources */,
 				9C317AEF18BE936B00F4B79D /* PXDeclarationTests.m in Sources */,
+				0A09A2681901DC0A0046FEAF /* PXColorValueTests.m in Sources */,
 				9C317AEB18BE936B00F4B79D /* PXDOMParser.m in Sources */,
 				9C317AF518BE936B00F4B79D /* PXStylesheetLexerTests.m in Sources */,
 				9C31780B18BE936B00F4B79D /* ImageBasedTests.m in Sources */,

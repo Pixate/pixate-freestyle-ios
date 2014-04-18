@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Pixate, Inc. All rights reserved.
 //
 
-#import "PXExpressionValue.h"
+#import "PXExpressionObject.h"
 
 @class PXHSBColorValue;
 @class PXHSLColorValue;
 @class PXRGBColorValue;
 
-@protocol PXExpressionColor <PXExpressionValue>
+@protocol PXExpressionColor <PXExpressionObject>
 
 - (id)initWithColor:(UIColor *)color;
 

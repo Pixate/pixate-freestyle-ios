@@ -33,6 +33,12 @@
         _red = red;
         _green = green;
         _blue = blue;
+        _alpha = alpha;
+
+        [self addDoublePropertyForName:@"red"];
+        [self addDoublePropertyForName:@"green"];
+        [self addDoublePropertyForName:@"blue"];
+        [self addDoublePropertyForName:@"alpha"];
     }
 
     return self;

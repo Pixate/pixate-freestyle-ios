@@ -11,4 +11,6 @@
 
 @interface PXExpressionColorBase : PXExpressionValueBase <PXExpressionColor>
 
+- (void)addDoublePropertyForName:(NSString *)name;
+
 @end

@@ -35,6 +35,11 @@
         _saturation = saturation;
         _lightness = lightness;
         _alpha = alpha;
+
+        [self addDoublePropertyForName:@"hue"];
+        [self addDoublePropertyForName:@"saturation"];
+        [self addDoublePropertyForName:@"lightness"];
+        [self addDoublePropertyForName:@"alpha"];
     }
 
     return self;
