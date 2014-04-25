@@ -10,3 +10,16 @@ table-view-cell:selected{
 table-view-cell {
     background-color: yellow;
 }
+
+#t1 table-view-headerfooter-view label {
+    color: blue;
+    font-size: 14;
+    font-family: "Gill Sans";
+}
+
+#t2 table-view-headerfooter-view label {
+    color: red;
+    font-size: 14;
+    font-family: "Gill Sans";
+}
+
