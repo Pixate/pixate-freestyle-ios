@@ -43,3 +43,13 @@
     border: 1px solid black;
     background-image :transparent;
 }
+
+#tf {
+    color: #a4a4a4;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: #a4a4a4;
+    border-style: solid;
+    -ios-border-style: none;
+    border-radius: 5;
+}
