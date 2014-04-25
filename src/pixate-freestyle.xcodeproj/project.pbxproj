@@ -1290,8 +1290,8 @@
 		9CAAFA6618EB10A2000C0233 /* PXLexeme.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C818EB10A2000C0233 /* PXLexeme.h */; };
 		9CAAFA6718EB10A2000C0233 /* PXParserBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9C918EB10A2000C0233 /* PXParserBase.h */; };
 		9CAAFA6818EB10A2000C0233 /* PXParserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CA18EB10A2000C0233 /* PXParserBase.m */; };
-		9CAAFA6A18EB10A2000C0233 /* PXSourceEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CB18EB10A2000C0233 /* PXSourceEmitter.h */; };
-		9CAAFA6B18EB10A2000C0233 /* PXSourceWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CC18EB10A2000C0233 /* PXSourceWriter.h */; };
+		9CAAFA6A18EB10A2000C0233 /* PXSourceEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CB18EB10A2000C0233 /* PXSourceEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CAAFA6B18EB10A2000C0233 /* PXSourceWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CC18EB10A2000C0233 /* PXSourceWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CAAFA6C18EB10A2000C0233 /* PXSourceWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9CD18EB10A2000C0233 /* PXSourceWriter.m */; };
 		9CAAFA6E18EB10A2000C0233 /* PXByteCodeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CAAF9CF18EB10A2000C0233 /* PXByteCodeBuilder.h */; };
 		9CAAFA6F18EB10A2000C0233 /* PXByteCodeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAAF9D018EB10A2000C0233 /* PXByteCodeBuilder.m */; };
