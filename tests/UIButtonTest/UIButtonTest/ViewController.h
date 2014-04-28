@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *button;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *filterButton;
+- (IBAction)filter:(UIButton *)button selected:(BOOL)selected;
+
 
 @end
