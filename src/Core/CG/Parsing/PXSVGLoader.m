@@ -79,13 +79,40 @@ static PXValueParser *VALUE_PARSER;
 
     // create and init NSXMLParser object
     NSXMLParser *nsXmlParser = [[NSXMLParser alloc] initWithData:data];
+    
+    // create and init our delegate
+    Class loader = (loaderClass) ? loaderClass : [PXSVGLoader class];
+    PXSVGLoader *parser = [[loader alloc] init];
+    
+    // save reference to URL for errors
+    parser.URL = URL;
+    
+    // set delegate
+    [nsXmlParser setDelegate:parser];
+    
+    // parsing...
+    BOOL success = [nsXmlParser parse];
+    
+    // test the result
+    if (!success)
+    {
+        //        [parser logErrorMessageWithFormat:@"Error parsing document: %@", URL];
+    }
+    
+    PXShapeDocument *document = parser->document;
+    document.shape = parser->result;
+    
+    return document;
+}
+
++ (PXShapeDocument *) loadFromData:(NSData *)data
+{
+    // create and init NSXMLParser object
+    NSXMLParser *nsXmlParser = [[NSXMLParser alloc] initWithData:data];
 
     // create and init our delegate
     Class loader = (loaderClass) ? loaderClass : [PXSVGLoader class];
     PXSVGLoader *parser = [[loader alloc] init];
-
-    // save reference to URL for errors
-    parser.URL = URL;
 
     // set delegate
     [nsXmlParser setDelegate:parser];
