@@ -49,8 +49,11 @@ static const char STYLE_CHILDREN;
 
 @implementation PXUICollectionViewCell
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUICollectionViewCell.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"collection-view-cell"];
 
     PSEUDOCLASS_MAP = @{

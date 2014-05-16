@@ -34,8 +34,11 @@
 
 @implementation PXUIDatePicker
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUIDatePicker.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"date-picker"];
 }
 

@@ -39,8 +39,11 @@
 
 @implementation PXMKAnnotationView
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXMKAnnotationView.class)
+        return;
+    
     [UIView registerDynamicSubclass:self
                            forClass:[PXMKAnnotationView targetSuperclass]
                     withElementName:@"annotation-view"];

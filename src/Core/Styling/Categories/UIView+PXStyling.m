@@ -149,8 +149,11 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 
 #pragma mark - Dynamic subclassing initializer and property
 
-+ (void)load
++ (void)initialize
 {
+    if (self != UIView.class)
+        return;
+    
     @autoreleasepool
     {
 #ifdef PX_LOGGING

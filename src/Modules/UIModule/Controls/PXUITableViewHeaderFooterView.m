@@ -51,8 +51,11 @@ static NSDictionary *LABEL_PSEUDOCLASS_MAP;
 
 @implementation PXUITableViewHeaderFooterView
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUITableViewHeaderFooterView.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"table-view-headerfooter-view"];
     
     LABEL_PSEUDOCLASS_MAP = @{

@@ -48,8 +48,11 @@ static NSDictionary *PSEUDOCLASS_MAP;
 
 #pragma mark - Static methods
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUISlider.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"slider"];
     
     PSEUDOCLASS_MAP = @{
