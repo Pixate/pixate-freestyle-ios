@@ -46,11 +46,8 @@ static NSDictionary *PSEUDOCLASS_MAP;
 
 @implementation PXUIImageView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIImageView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"image-view"];
 
     PSEUDOCLASS_MAP = @{

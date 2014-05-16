@@ -46,11 +46,8 @@ static char const STYLE_CHILDREN;
 
 @implementation PXUISegmentedControl
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUISegmentedControl.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"segmented-control"];
 
     PSEUDOCLASS_MAP = @{

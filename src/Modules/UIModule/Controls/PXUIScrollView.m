@@ -41,11 +41,8 @@
 
 @implementation PXUIScrollView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIScrollView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"scroll-view"];
 }
 

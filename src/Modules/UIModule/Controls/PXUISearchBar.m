@@ -41,11 +41,8 @@
 
 @implementation PXUISearchBar
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUISearchBar.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"search-bar"];
 }
 

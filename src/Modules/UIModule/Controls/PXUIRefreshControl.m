@@ -35,11 +35,8 @@
 
 @implementation PXUIRefreshControl
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIRefreshControl.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"refresh-control"];
 }
 

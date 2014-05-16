@@ -46,11 +46,8 @@
 
 @implementation PXUITabBar
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUITabBar.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"tab-bar"];
 }
 

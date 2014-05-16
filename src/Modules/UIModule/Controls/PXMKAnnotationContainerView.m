@@ -32,11 +32,8 @@
 @implementation PXMKAnnotationContainerView
 
 /* DISABLED
-+ (void)initialize
++ (void)load
 {
-    if (self == PXMKAnnotationContainerView.class)
-        return;
- 
     [UIView registerDynamicSubclass:self
                            forClass:[PXMKAnnotationContainerView targetSuperclass]
                     withElementName:@"annotation-container-view"];

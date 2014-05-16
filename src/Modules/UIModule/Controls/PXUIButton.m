@@ -69,11 +69,8 @@ static const char STYLE_CHILDREN;
 
 #pragma mark - Static methods
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIButton.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"button"];
 
     PSEUDOCLASS_MAP = @{

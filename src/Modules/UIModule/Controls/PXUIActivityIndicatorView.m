@@ -40,11 +40,8 @@
 
 @implementation PXUIActivityIndicatorView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIActivityIndicatorView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"activity-indicator-view"];
 }
 

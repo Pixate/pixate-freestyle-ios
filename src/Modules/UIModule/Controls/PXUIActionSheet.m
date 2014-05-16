@@ -37,11 +37,8 @@
 
 @implementation PXUIActionSheet
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIActionSheet.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"action-sheet"];
 }
 

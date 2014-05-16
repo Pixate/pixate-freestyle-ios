@@ -63,11 +63,8 @@ void PXForceLoadUIBarButtonItemPXStyling() {}
 @dynamic isVirtualControl;
 @dynamic pxStyleParent;
 
-+ (void)initialize
++ (void)load
 {
-    if (self == UIBarButtonItem.class)
-        return;
-    
     BUTTONS_PSEUDOCLASS_MAP = @{
                                 @"normal"      : @(UIControlStateNormal),
                                 @"highlighted" : @(UIControlStateHighlighted),

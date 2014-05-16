@@ -47,11 +47,8 @@ static char const STYLE_CHILDREN;
 
 @implementation PXUISwitch
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUISwitch.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"switch"];
 }
 

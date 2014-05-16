@@ -65,11 +65,8 @@ NSString *const kDefaultCacheLabelLineBreakMode = @"label.lineBreakMode";
 
 @implementation PXUILabel
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUILabel.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"label"];
 
     PSEUDOCLASS_MAP = @{

@@ -45,11 +45,8 @@ static char const STYLE_CHILDREN;
 
 @implementation PXUIStepper
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIStepper.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"stepper"];
     
     PSEUDOCLASS_MAP = @{

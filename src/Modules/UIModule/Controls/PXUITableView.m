@@ -52,11 +52,8 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 
 @implementation UITableView (PXFreestyle)
 
-+ (void)initialize
++ (void)load
 {
-    if (self == UITableView.class)
-        return;
-    
     [self swizzleMethod:@selector(setDelegate:) withMethod:@selector(px_setDelegate:)];
     
     // Cache this value
@@ -146,11 +143,8 @@ static const char PX_DELEGATE_PROXY; // the proxy for the old delegate
 
 @implementation PXUITableView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUITableView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"table-view"];
 }
 

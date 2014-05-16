@@ -58,11 +58,8 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
 
 #pragma mark - Static methods
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUINavigationBar.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"navigation-bar"];
 
     PSEUDOCLASS_MAP = @{

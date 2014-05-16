@@ -35,11 +35,8 @@
 
 @implementation PXUIWebView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIWebView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"web-view"];
 }
 

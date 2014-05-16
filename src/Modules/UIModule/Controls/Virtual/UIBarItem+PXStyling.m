@@ -48,11 +48,8 @@ void PXForceLoadUIBarItemPXStyling() {}
 @dynamic pxStyleParent;
 @dynamic pxStyleChildren;
 
-+ (void)initialize
++ (void)load
 {
-    if (self == UIBarItem.class)
-        return;
-    
     // Set default styling mode to 'normal' (i.e. stylable)
     [[UIBarItem appearance] setStyleMode:PXStylingNormal];
 }

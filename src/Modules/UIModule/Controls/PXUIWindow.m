@@ -33,11 +33,8 @@
 
 @implementation PXUIWindow
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIWindow.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"window"];
 }
 

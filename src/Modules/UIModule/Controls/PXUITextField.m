@@ -95,11 +95,8 @@ static char PADDING;
 
 static NSDictionary *PSEUDOCLASS_MAP;
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUITextField.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"text-field"];
 
     PSEUDOCLASS_MAP = @{

@@ -39,11 +39,8 @@
 
 @implementation PXMKMapView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXMKMapView.class)
-        return;
-
     [UIView registerDynamicSubclass:self
                            forClass:[PXMKMapView targetSuperclass]
                     withElementName:@"map-view"];

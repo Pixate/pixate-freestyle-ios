@@ -34,11 +34,8 @@
 
 @implementation PXMPVolumeView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXMPVolumeView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self
                            forClass:[PXMPVolumeView targetSuperclass]
                     withElementName:@"volume-view"];

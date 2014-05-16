@@ -42,11 +42,8 @@
 
 @implementation PXUIPickerView
 
-+ (void)initialize
++ (void)load
 {
-    if (self == PXUIPickerView.class)
-        return;
-    
     [UIView registerDynamicSubclass:self withElementName:@"picker-view"];
 }
 

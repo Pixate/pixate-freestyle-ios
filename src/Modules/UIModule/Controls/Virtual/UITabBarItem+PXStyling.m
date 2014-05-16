@@ -45,11 +45,8 @@ void PXForceLoadUITabBarItemPXStyling() {}
 
 static NSDictionary *PSEUDOCLASS_MAP;
 
-+ (void)initialize
++ (void)load
 {
-    if (self == UITabBarItem.class)
-        return;
-    
     PSEUDOCLASS_MAP = @{
         @"normal" : @(UIControlStateNormal),
         @"selected" : @(UIControlStateHighlighted),
