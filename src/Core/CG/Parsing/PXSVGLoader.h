@@ -44,6 +44,13 @@
 + (PXShapeDocument *)loadFromURL:(NSURL *)URL;
 
 /**
+ *  Create a PXScene by loading the SVG file specified by the given NSData
+ *
+ *  @param data The NSData to load
+ */
++ (PXShapeDocument *) loadFromData:(NSData *)data;
+
+/**
  *  The class that will be used to load the SVG file.
  */
 + (Class)loaderClass;

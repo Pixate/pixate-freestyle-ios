@@ -80,6 +80,8 @@ static const char PX_DATASOURCE_PROXY; // the proxy for the old datasource
     if(dataSource)
     {
         id datasourceProxy = [self pxDatasourceProxy];
+        if ([datasourceProxy baseObject])
+            [self px_setDataSource:nil];
         [datasourceProxy setBaseObject:dataSource];
         [self px_setDataSource:datasourceProxy];
     }

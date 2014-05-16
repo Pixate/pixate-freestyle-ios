@@ -4,11 +4,11 @@ All contributors must sign a CLA (contributor license agreement).
 
 To contribute on behalf of yourself, sign the individual CLA here:
 
- http://www.pixate.com/cla-individual.html
+ http://www.freestyle.org/cla-individual.html
 
 To contribute on behalf of your employer, sign the company CLA here:
 
- http://www.pixate.com/cla-company.html
+ http://www.freestyle.org/cla-company.html
 
 All contributions:
 
