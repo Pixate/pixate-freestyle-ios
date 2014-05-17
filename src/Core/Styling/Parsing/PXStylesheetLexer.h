@@ -55,7 +55,7 @@
 /**
  *  A delegate to call when various events occur within the lexer
  */
-@property (nonatomic, strong) id<PXStylesheetLexerDelegate> delegate;
+@property (nonatomic, weak) id<PXStylesheetLexerDelegate> delegate;
 
 /**
  *  Initializer a new instance with the specified source value
