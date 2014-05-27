@@ -1057,8 +1057,8 @@ static NSString *ASSET_SCHEME = @"asset://";
         else
         {
             [self assertType:PXSS_URL];
-            NSString *path = currentLexeme.value;
-            path = [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *unescapedPath = currentLexeme.value;
+            NSString *path = [unescapedPath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             [self advance];
 
             __block NSMutableArray *fullPaths = [[NSMutableArray alloc] init];
@@ -1097,7 +1097,7 @@ static NSString *ASSET_SCHEME = @"asset://";
             }
             else if ([path hasPrefix:HTTP_SCHEME] || [path hasPrefix:HTTPS_SCHEME])
             {
-                result = [NSURL URLWithString:path];
+                result = [NSURL URLWithString:unescapedPath];
             }
             else if ([path hasPrefix:DOCUMENTS_SCHEME])
             {
