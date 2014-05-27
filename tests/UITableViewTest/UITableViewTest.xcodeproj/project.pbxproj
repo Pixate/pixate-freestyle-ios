@@ -41,20 +41,6 @@
 			remoteGlobalIDString = 9C84A64A18AE9CB600E7CDA7;
 			remoteInfo = "pixate-freestyleTests";
 		};
-		9C4E0CFC18CBDCFF009C5360 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C4E0CF118CBDCFE009C5360 /* pixate-freestyle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CAE288218C4343B005B06B5;
-			remoteInfo = "pixate-freestyle-mac";
-		};
-		9C4E0CFE18CBDCFF009C5360 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C4E0CF118CBDCFE009C5360 /* pixate-freestyle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CAE288F18C4343B005B06B5;
-			remoteInfo = "pixate-freestyle-macTests";
-		};
 		9CD0869A18CBDC6F00F33634 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CD0866C18CBDC6F00F33634 /* Project object */;
@@ -62,10 +48,17 @@
 			remoteGlobalIDString = 9CD0867318CBDC6F00F33634;
 			remoteInfo = UITableViewTest;
 		};
+		9CF3800E19350CB000695458 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C4E0CF118CBDCFE009C5360 /* pixate-freestyle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C23049518DA27CE00969D18;
+			remoteInfo = MAFutureTest;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C1A186518CBDF740025ECDC /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; };
+		9C1A186518CBDF740025ECDC /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = default.css; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
 		9C1A186B18CCE1010025ECDC /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		9C1A186C18CCE1010025ECDC /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		9C4E0CF118CBDCFE009C5360 /* pixate-freestyle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "pixate-freestyle.xcodeproj"; path = "../../src/pixate-freestyle.xcodeproj"; sourceTree = "<group>"; };
@@ -120,8 +113,7 @@
 			children = (
 				9C4E0CF918CBDCFF009C5360 /* libpixate-freestyle.a */,
 				9C4E0CFB18CBDCFF009C5360 /* pixate-freestyleTests.xctest */,
-				9C4E0CFD18CBDCFF009C5360 /* libpixate-freestyle-mac.a */,
-				9C4E0CFF18CBDCFF009C5360 /* pixate-freestyle-macTests.xctest */,
+				9CF3800F19350CB000695458 /* MAFutureTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,18 +287,11 @@
 			remoteRef = 9C4E0CFA18CBDCFF009C5360 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9C4E0CFD18CBDCFF009C5360 /* libpixate-freestyle-mac.a */ = {
+		9CF3800F19350CB000695458 /* MAFutureTest */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpixate-freestyle-mac.a";
-			remoteRef = 9C4E0CFC18CBDCFF009C5360 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C4E0CFF18CBDCFF009C5360 /* pixate-freestyle-macTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "pixate-freestyle-macTests.xctest";
-			remoteRef = 9C4E0CFE18CBDCFF009C5360 /* PBXContainerItemProxy */;
+			fileType = "compiled.mach-o.executable";
+			path = MAFutureTest;
+			remoteRef = 9CF3800E19350CB000695458 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

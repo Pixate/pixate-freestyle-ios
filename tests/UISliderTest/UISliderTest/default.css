@@ -9,17 +9,11 @@
 }
 
 .slider min-track {
-    /* Bug in iOS 7, this does not work
-    color:#3385D5;
-     */
     background-image: linear-gradient(#3385D5, #3385D5);
-    background-size: 2;
+    background-size: 4;
 }
 
 .slider max-track {
-    /* Bug in iOS 7, this does not work
-     color:#f7f7f7;
-     */
     background-image: linear-gradient(#f7f7f7, #f7f7f7);
-    background-size: 2;
+    background-size: 4;
 }

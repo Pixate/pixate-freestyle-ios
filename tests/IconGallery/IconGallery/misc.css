@@ -1,6 +1,7 @@
 collection-view {
     cell-size: 75;
 }
+
 /*
 collection-view-cell {
     border-color: gray;
@@ -20,9 +21,9 @@ pixate-config {
 }
 
 collection-view-cell:nth-child(odd) {
-    border: 1px solid #ff0000;
+    border: 2px solid #ff0000;
 }
 
 collection-view-cell:nth-child(even) {
-    border: 1px solid #0000ff;
+    border: 2px solid #0000ff;
 }

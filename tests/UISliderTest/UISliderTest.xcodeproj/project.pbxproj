@@ -22,6 +22,7 @@
 		9C347A0818E0F51F004EF9E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C347A0618E0F51F004EF9E9 /* InfoPlist.strings */; };
 		9C347A0A18E0F51F004EF9E9 /* UISliderTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C347A0918E0F51F004EF9E9 /* UISliderTestTests.m */; };
 		9C347A1618E0F574004EF9E9 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C347A1518E0F574004EF9E9 /* default.css */; };
+		9CCEB638193522D8007B86F8 /* libpixate-freestyle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CAAFAF118EB124B000C0233 /* libpixate-freestyle.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,20 +46,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9C84A64A18AE9CB600E7CDA7;
 			remoteInfo = "pixate-freestyleTests";
-		};
-		9CAAFAF418EB124B000C0233 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CAAFAE818EB124B000C0233 /* pixate-freestyle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CAE288218C4343B005B06B5;
-			remoteInfo = "pixate-freestyle-mac";
-		};
-		9CAAFAF618EB124B000C0233 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CAAFAE818EB124B000C0233 /* pixate-freestyle.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9CAE288F18C4343B005B06B5;
-			remoteInfo = "pixate-freestyle-macTests";
 		};
 		9CAAFAF818EB124B000C0233 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -98,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCEB638193522D8007B86F8 /* libpixate-freestyle.a in Frameworks */,
 				9C3479E118E0F51F004EF9E9 /* CoreGraphics.framework in Frameworks */,
 				9C3479E318E0F51F004EF9E9 /* UIKit.framework in Frameworks */,
 				9C3479DF18E0F51F004EF9E9 /* Foundation.framework in Frameworks */,
@@ -197,8 +185,6 @@
 			children = (
 				9CAAFAF118EB124B000C0233 /* libpixate-freestyle.a */,
 				9CAAFAF318EB124B000C0233 /* pixate-freestyleTests.xctest */,
-				9CAAFAF518EB124B000C0233 /* libpixate-freestyle-mac.a */,
-				9CAAFAF718EB124B000C0233 /* pixate-freestyle-macTests.xctest */,
 				9CAAFAF918EB124B000C0233 /* MAFutureTest */,
 			);
 			name = Products;
@@ -294,20 +280,6 @@
 			fileType = wrapper.cfbundle;
 			path = "pixate-freestyleTests.xctest";
 			remoteRef = 9CAAFAF218EB124B000C0233 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CAAFAF518EB124B000C0233 /* libpixate-freestyle-mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libpixate-freestyle-mac.a";
-			remoteRef = 9CAAFAF418EB124B000C0233 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CAAFAF718EB124B000C0233 /* pixate-freestyle-macTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "pixate-freestyle-macTests.xctest";
-			remoteRef = 9CAAFAF618EB124B000C0233 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9CAAFAF918EB124B000C0233 /* MAFutureTest */ = {

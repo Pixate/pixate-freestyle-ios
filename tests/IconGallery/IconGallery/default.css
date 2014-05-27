@@ -1,33 +1,1109 @@
-collection-view {
-    background-color: blue;
-    cell-size: 75;
+@import "misc.css"
+
+.fa-adjust {
+    background-image: url(fa-adjust.svg);
 }
-/*
- collection-view-cell {
- border-color: gray;
- border-style: solid;
- border-width: 2;
- }
- */
-
-/*
- collection-view-cell:nth-child(3n-1) {
- background-color: gray;
- }
- */
-
-pixate-config {
-    image-cache-count: 400;
+.fa-adn {
+    background-image: url(fa-adn.svg);
 }
-
-collection-view-cell {
-    background-color: red;
+.fa-align-center {
+    background-image: url(fa-align-center.svg);
 }
-
-collection-view-cell:nth-child(odd) {
-    border: 1px solid #ff0000;
+.fa-align-justify {
+    background-image: url(fa-align-justify.svg);
+     }
+.fa-align-left {
+    background-image: url(fa-align-left.svg);
 }
-
-collection-view-cell:nth-child(even) {
-    border: 1px solid #0000ff;
+.fa-align-right {
+    background-image: url(fa-align-right.svg);
+}
+.fa-ambulance {
+    background-image: url(fa-ambulance.svg);
+}
+.fa-anchor {
+    background-image: url(fa-anchor.svg);
+}
+.fa-android {
+    background-image: url(fa-android.svg);
+}
+.fa-angle-double-down {
+    background-image: url(fa-angle-double-down.svg);
+}
+.fa-angle-double-left {
+    background-image: url(fa-angle-double-left.svg);
+}
+.fa-angle-double-right {
+    background-image: url(fa-angle-double-right.svg);
+}
+.fa-angle-double-up {
+    background-image: url(fa-angle-double-up.svg);
+}
+.fa-angle-down {
+    background-image: url(fa-angle-down.svg);
+}
+.fa-angle-left {
+    background-image: url(fa-angle-left.svg);
+}
+.fa-angle-right {
+    background-image: url(fa-angle-right.svg);
+}
+.fa-angle-up {
+    background-image: url(fa-angle-up.svg);
+}
+.fa-apple {
+    background-image: url(fa-apple.svg);
+}
+.fa-archive {
+    background-image: url(fa-archive.svg);
+}
+.fa-arrow-circle-down {
+    background-image: url(fa-arrow-circle-down.svg);
+}
+.fa-arrow-circle-left {
+    background-image: url(fa-arrow-circle-left.svg);
+}
+.fa-arrow-circle-o-down {
+    background-image: url(fa-arrow-circle-o-down.svg);
+}
+.fa-arrow-circle-o-left {
+    background-image: url(fa-arrow-circle-o-left.svg);
+}
+.fa-arrow-circle-o-right {
+    background-image: url(fa-arrow-circle-o-right.svg);
+}
+.fa-arrow-circle-o-up {
+    background-image: url(fa-arrow-circle-o-up.svg);
+}
+.fa-arrow-circle-right {
+    background-image: url(fa-arrow-circle-right.svg);
+}
+.fa-arrow-circle-up {
+    background-image: url(fa-arrow-circle-up.svg);
+}
+.fa-arrow-down {
+    background-image: url(fa-arrow-down.svg);
+}
+.fa-arrow-left {
+    background-image: url(fa-arrow-left.svg);
+}
+.fa-arrow-right {
+    background-image: url(fa-arrow-right.svg);
+}
+.fa-arrow-up {
+    background-image: url(fa-arrow-up.svg);
+}
+.fa-asterisk {
+    background-image: url(fa-asterisk.svg);
+}
+.fa-backward {
+    background-image: url(fa-backward.svg);
+}
+.fa-ban {
+    background-image: url(fa-ban.svg);
+}
+.fa-bar-chart-o {
+    background-image: url(fa-bar-chart-o.svg);
+}
+.fa-barcode {
+    background-image: url(fa-barcode.svg);
+}
+.fa-beer {
+    background-image: url(fa-beer.svg);
+}
+.fa-bell-o {
+    background-image: url(fa-bell-o.svg);
+}
+.fa-bell {
+    background-image: url(fa-bell.svg);
+}
+.fa-bitbucket-square {
+    background-image: url(fa-bitbucket-square.svg);
+}
+.fa-bitbucket {
+    background-image: url(fa-bitbucket.svg);
+}
+.fa-bold {
+    background-image: url(fa-bold.svg);
+}
+.fa-bolt {
+    background-image: url(fa-bolt.svg);
+}
+.fa-book {
+    background-image: url(fa-book.svg);
+}
+.fa-bookmark-o {
+    background-image: url(fa-bookmark-o.svg);
+}
+.fa-bookmark {
+    background-image: url(fa-bookmark.svg);
+}
+.fa-briefcase {
+    background-image: url(fa-briefcase.svg);
+}
+.fa-btc {
+    background-image: url(fa-btc.svg);
+}
+.fa-bug {
+    background-image: url(fa-bug.svg);
+}
+.fa-building {
+    background-image: url(fa-building.svg);
+}
+.fa-bullhorn {
+    background-image: url(fa-bullhorn.svg);
+}
+.fa-bullseye {
+    background-image: url(fa-bullseye.svg);
+}
+.fa-calendar-o {
+    background-image: url(fa-calendar-o.svg);
+}
+.fa-calendar {
+    background-image: url(fa-calendar.svg);
+}
+.fa-camera-retro {
+    background-image: url(fa-camera-retro.svg);
+}
+.fa-camera {
+    background-image: url(fa-camera.svg);
+}
+.fa-caret-down {
+    background-image: url(fa-caret-down.svg);
+}
+.fa-caret-left {
+    background-image: url(fa-caret-left.svg);
+}
+.fa-caret-right {
+    background-image: url(fa-caret-right.svg);
+}
+.fa-caret-square-o-down {
+    background-image: url(fa-caret-square-o-down.svg);
+}
+.fa-caret-square-o-left {
+    background-image: url(fa-caret-square-o-left.svg);
+}
+.fa-caret-square-o-right {
+    background-image: url(fa-caret-square-o-right.svg);
+}
+.fa-caret-square-o-up {
+    background-image: url(fa-caret-square-o-up.svg);
+}
+.fa-caret-up {
+    background-image: url(fa-caret-up.svg);
+}
+.fa-certificate {
+    background-image: url(fa-certificate.svg);
+}
+.fa-chain-broken {
+    background-image: url(fa-chain-broken.svg);
+}
+.fa-check-circle-o {
+    background-image: url(fa-check-circle-o.svg);
+}
+.fa-check-circle {
+    background-image: url(fa-check-circle.svg);
+}
+.fa-check-square-o {
+    background-image: url(fa-check-square-o.svg);
+}
+.fa-check-square {
+    background-image: url(fa-check-square.svg);
+}
+.fa-check {
+    background-image: url(fa-check.svg);
+}
+.fa-chevron-circle-down {
+    background-image: url(fa-chevron-circle-down.svg);
+}
+.fa-chevron-circle-left {
+    background-image: url(fa-chevron-circle-left.svg);
+}
+.fa-chevron-circle-right {
+    background-image: url(fa-chevron-circle-right.svg);
+}
+.fa-chevron-circle-up {
+    background-image: url(fa-chevron-circle-up.svg);
+}
+.fa-chevron-down {
+    background-image: url(fa-chevron-down.svg);
+}
+.fa-chevron-left {
+    background-image: url(fa-chevron-left.svg);
+}
+.fa-chevron-right {
+    background-image: url(fa-chevron-right.svg);
+}
+.fa-chevron-up {
+    background-image: url(fa-chevron-up.svg);
+}
+.fa-circle-o {
+    background-image: url(fa-circle-o.svg);
+}
+.fa-circle {
+    background-image: url(fa-circle.svg);
+}
+.fa-clipboard {
+    background-image: url(fa-clipboard.svg);
+}
+.fa-clock-o {
+    background-image: url(fa-clock-o.svg);
+}
+.fa-cloud-download {
+    background-image: url(fa-cloud-download.svg);
+}
+.fa-cloud-upload {
+    background-image: url(fa-cloud-upload.svg);
+}
+.fa-cloud {
+    background-image: url(fa-cloud.svg);
+}
+.fa-code-fork {
+    background-image: url(fa-code-fork.svg);
+}
+.fa-code {
+    background-image: url(fa-code.svg);
+}
+.fa-coffee {
+    background-image: url(fa-coffee.svg);
+}
+.fa-cog {
+    background-image: url(fa-cog.svg);
+}
+.fa-cogs {
+    background-image: url(fa-cogs.svg);
+}
+.fa-collapse-o {
+    background-image: url(fa-collapse-o.svg);
+}
+.fa-columns {
+    background-image: url(fa-columns.svg);
+}
+.fa-comment-o {
+    background-image: url(fa-comment-o.svg);
+}
+.fa-comment {
+    background-image: url(fa-comment.svg);
+}
+.fa-comments-o {
+    background-image: url(fa-comments-o.svg);
+}
+.fa-comments {
+    background-image: url(fa-comments.svg);
+}
+.fa-compass {
+    background-image: url(fa-compass.svg);
+}
+.fa-credit-card {
+    background-image: url(fa-credit-card.svg);
+}
+.fa-crop {
+    background-image: url(fa-crop.svg);
+}
+.fa-crosshairs {
+    background-image: url(fa-crosshairs.svg);
+}
+.fa-css3 {
+    background-image: url(fa-css3.svg);
+}
+.fa-cutlery {
+    background-image: url(fa-cutlery.svg);
+}
+.fa-desktop {
+    background-image: url(fa-desktop.svg);
+}
+.fa-dot-circle-o {
+    background-image: url(fa-dot-circle-o.svg);
+}
+.fa-download {
+    background-image: url(fa-download.svg);
+}
+.fa-dribbble {
+    background-image: url(fa-dribbble.svg);
+}
+.fa-dropbox {
+    background-image: url(fa-dropbox.svg);
+}
+.fa-eject {
+    background-image: url(fa-eject.svg);
+}
+.fa-ellipsis-horizontal {
+    background-image: url(fa-ellipsis-horizontal.svg);
+}
+.fa-ellipsis-vertical {
+    background-image: url(fa-ellipsis-vertical.svg);
+}
+.fa-envelope-o {
+    background-image: url(fa-envelope-o.svg);
+}
+.fa-envelope {
+    background-image: url(fa-envelope.svg);
+}
+.fa-eraser {
+    background-image: url(fa-eraser.svg);
+}
+.fa-eur {
+    background-image: url(fa-eur.svg);
+}
+.fa-exchange {
+    background-image: url(fa-exchange.svg);
+}
+.fa-exclamation-circle {
+    background-image: url(fa-exclamation-circle.svg);
+}
+.fa-exclamation-triangle {
+    background-image: url(fa-exclamation-triangle.svg);
+}
+.fa-exclamation {
+    background-image: url(fa-exclamation.svg);
+}
+.fa-expand-o {
+    background-image: url(fa-expand-o.svg);
+}
+.fa-external-link-square {
+    background-image: url(fa-external-link-square.svg);
+}
+.fa-external-link {
+    background-image: url(fa-external-link.svg);
+}
+.fa-eye-slash {
+    background-image: url(fa-eye-slash.svg);
+}
+.fa-eye {
+    background-image: url(fa-eye.svg);
+}
+.fa-facebook-square {
+    background-image: url(fa-facebook-square.svg);
+}
+.fa-facebook {
+    background-image: url(fa-facebook.svg);
+}
+.fa-fast-backward {
+    background-image: url(fa-fast-backward.svg);
+}
+.fa-fast-forward {
+    background-image: url(fa-fast-forward.svg);
+}
+.fa-female {
+    background-image: url(fa-female.svg);
+}
+.fa-fighter-jet {
+    background-image: url(fa-fighter-jet.svg);
+}
+.fa-file-o {
+    background-image: url(fa-file-o.svg);
+}
+.fa-file-text-o {
+    background-image: url(fa-file-text-o.svg);
+}
+.fa-file-text {
+    background-image: url(fa-file-text.svg);
+}
+.fa-file {
+    background-image: url(fa-file.svg);
+}
+.fa-files-o {
+    background-image: url(fa-files-o.svg);
+}
+.fa-film {
+    background-image: url(fa-film.svg);
+}
+.fa-filter {
+    background-image: url(fa-filter.svg);
+}
+.fa-fire-extinguisher {
+    background-image: url(fa-fire-extinguisher.svg);
+}
+.fa-fire {
+    background-image: url(fa-fire.svg);
+}
+.fa-flag-checkered {
+    background-image: url(fa-flag-checkered.svg);
+}
+.fa-flag-o {
+    background-image: url(fa-flag-o.svg);
+}
+.fa-flag {
+    background-image: url(fa-flag.svg);
+}
+.fa-flask {
+    background-image: url(fa-flask.svg);
+}
+.fa-flickr {
+    background-image: url(fa-flickr.svg);
+}
+.fa-floppy-o {
+    background-image: url(fa-floppy-o.svg);
+}
+.fa-folder-o {
+    background-image: url(fa-folder-o.svg);
+}
+.fa-folder-open-o {
+    background-image: url(fa-folder-open-o.svg);
+}
+.fa-folder-open {
+    background-image: url(fa-folder-open.svg);
+}
+.fa-folder {
+    background-image: url(fa-folder.svg);
+}
+.fa-font {
+    background-image: url(fa-font.svg);
+}
+.fa-forward {
+    background-image: url(fa-forward.svg);
+}
+.fa-foursquare {
+    background-image: url(fa-foursquare.svg);
+}
+.fa-frown-o {
+    background-image: url(fa-frown-o.svg);
+}
+.fa-fullscreen {
+    background-image: url(fa-fullscreen.svg);
+}
+.fa-gamepad {
+    background-image: url(fa-gamepad.svg);
+}
+.fa-gavel {
+    background-image: url(fa-gavel.svg);
+}
+.fa-gbp {
+    background-image: url(fa-gbp.svg);
+}
+.fa-gift {
+    background-image: url(fa-gift.svg);
+}
+.fa-github-alt {
+    background-image: url(fa-github-alt.svg);
+}
+.fa-github-square {
+    background-image: url(fa-github-square.svg);
+}
+.fa-github {
+    background-image: url(fa-github.svg);
+}
+.fa-gittip {
+    background-image: url(fa-gittip.svg);
+}
+.fa-glass {
+    background-image: url(fa-glass.svg);
+}
+.fa-globe {
+    background-image: url(fa-globe.svg);
+}
+.fa-google-plus-square {
+    background-image: url(fa-google-plus-square.svg);
+}
+.fa-google-plus {
+    background-image: url(fa-google-plus.svg);
+}
+.fa-group {
+    background-image: url(fa-group.svg);
+}
+.fa-h-square {
+    background-image: url(fa-h-square.svg);
+}
+.fa-hand-o-down {
+    background-image: url(fa-hand-o-down.svg);
+}
+.fa-hand-o-left {
+    background-image: url(fa-hand-o-left.svg);
+}
+.fa-hand-o-right {
+    background-image: url(fa-hand-o-right.svg);
+}
+.fa-hand-o-up {
+    background-image: url(fa-hand-o-up.svg);
+}
+.fa-hdd-o {
+    background-image: url(fa-hdd-o.svg);
+}
+.fa-headphones {
+    background-image: url(fa-headphones.svg);
+}
+.fa-heart-o {
+    background-image: url(fa-heart-o.svg);
+}
+.fa-heart {
+    background-image: url(fa-heart.svg);
+}
+.fa-home {
+    background-image: url(fa-home.svg);
+}
+.fa-hospital {
+    background-image: url(fa-hospital.svg);
+}
+.fa-html5 {
+    background-image: url(fa-html5.svg);
+}
+.fa-inbox {
+    background-image: url(fa-inbox.svg);
+}
+.fa-indent {
+    background-image: url(fa-indent.svg);
+}
+.fa-info-circle {
+    background-image: url(fa-info-circle.svg);
+}
+.fa-info {
+    background-image: url(fa-info.svg);
+}
+.fa-inr {
+    background-image: url(fa-inr.svg);
+}
+.fa-instagram {
+    background-image: url(fa-instagram.svg);
+}
+.fa-italic {
+    background-image: url(fa-italic.svg);
+}
+.fa-jpy {
+    background-image: url(fa-jpy.svg);
+}
+.fa-key {
+    background-image: url(fa-key.svg);
+}
+.fa-keyboard-o {
+    background-image: url(fa-keyboard-o.svg);
+}
+.fa-krw {
+    background-image: url(fa-krw.svg);
+}
+.fa-laptop {
+    background-image: url(fa-laptop.svg);
+}
+.fa-leaf {
+    background-image: url(fa-leaf.svg);
+}
+.fa-lemon-o {
+    background-image: url(fa-lemon-o.svg);
+}
+.fa-level-down {
+    background-image: url(fa-level-down.svg);
+}
+.fa-level-up {
+    background-image: url(fa-level-up.svg);
+}
+.fa-lightbulb-o {
+    background-image: url(fa-lightbulb-o.svg);
+}
+.fa-link {
+    background-image: url(fa-link.svg);
+}
+.fa-linkedin-square {
+    background-image: url(fa-linkedin-square.svg);
+}
+.fa-linkedin {
+    background-image: url(fa-linkedin.svg);
+}
+.fa-linux {
+    background-image: url(fa-linux.svg);
+}
+.fa-list-alt {
+    background-image: url(fa-list-alt.svg);
+}
+.fa-list-ol {
+    background-image: url(fa-list-ol.svg);
+}
+.fa-list-ul {
+    background-image: url(fa-list-ul.svg);
+}
+.fa-list {
+    background-image: url(fa-list.svg);
+}
+.fa-location-arrow {
+    background-image: url(fa-location-arrow.svg);
+}
+.fa-lock {
+    background-image: url(fa-lock.svg);
+}
+.fa-long-arrow-down {
+    background-image: url(fa-long-arrow-down.svg);
+}
+.fa-long-arrow-left {
+    background-image: url(fa-long-arrow-left.svg);
+}
+.fa-long-arrow-right {
+    background-image: url(fa-long-arrow-right.svg);
+}
+.fa-long-arrow-up {
+    background-image: url(fa-long-arrow-up.svg);
+}
+.fa-magic {
+    background-image: url(fa-magic.svg);
+}
+.fa-magnet {
+    background-image: url(fa-magnet.svg);
+}
+.fa-mail-reply-all {
+    background-image: url(fa-mail-reply-all.svg);
+}
+.fa-male {
+    background-image: url(fa-male.svg);
+}
+.fa-map-marker {
+    background-image: url(fa-map-marker.svg);
+}
+.fa-maxcdn {
+    background-image: url(fa-maxcdn.svg);
+}
+.fa-medkit {
+    background-image: url(fa-medkit.svg);
+}
+.fa-meh-o {
+    background-image: url(fa-meh-o.svg);
+}
+.fa-microphone-slash {
+    background-image: url(fa-microphone-slash.svg);
+}
+.fa-microphone {
+    background-image: url(fa-microphone.svg);
+}
+.fa-minus-circle {
+    background-image: url(fa-minus-circle.svg);
+}
+.fa-minus-square-o {
+    background-image: url(fa-minus-square-o.svg);
+}
+.fa-minus-square {
+    background-image: url(fa-minus-square.svg);
+}
+.fa-minus {
+    background-image: url(fa-minus.svg);
+}
+.fa-mobile {
+    background-image: url(fa-mobile.svg);
+}
+.fa-money {
+    background-image: url(fa-money.svg);
+}
+.fa-moon-o {
+    background-image: url(fa-moon-o.svg);
+}
+.fa-move {
+    background-image: url(fa-move.svg);
+}
+.fa-music {
+    background-image: url(fa-music.svg);
+}
+.fa-outdent {
+    background-image: url(fa-outdent.svg);
+}
+.fa-pagelines {
+    background-image: url(fa-pagelines.svg);
+}
+.fa-paperclip {
+    background-image: url(fa-paperclip.svg);
+}
+.fa-pause {
+    background-image: url(fa-pause.svg);
+}
+.fa-pencil-square-o {
+    background-image: url(fa-pencil-square-o.svg);
+}
+.fa-pencil-square {
+    background-image: url(fa-pencil-square.svg);
+}
+.fa-pencil {
+    background-image: url(fa-pencil.svg);
+}
+.fa-phone-square {
+    background-image: url(fa-phone-square.svg);
+}
+.fa-phone {
+    background-image: url(fa-phone.svg);
+}
+.fa-picture-o {
+    background-image: url(fa-picture-o.svg);
+}
+.fa-pinterest-square {
+    background-image: url(fa-pinterest-square.svg);
+}
+.fa-pinterest {
+    background-image: url(fa-pinterest.svg);
+}
+.fa-plane {
+    background-image: url(fa-plane.svg);
+}
+.fa-play-circle-o {
+    background-image: url(fa-play-circle-o.svg);
+}
+.fa-play-circle {
+    background-image: url(fa-play-circle.svg);
+}
+.fa-play {
+    background-image: url(fa-play.svg);
+}
+.fa-plus-circle {
+    background-image: url(fa-plus-circle.svg);
+}
+.fa-plus-square {
+    background-image: url(fa-plus-square.svg);
+}
+.fa-plus {
+    background-image: url(fa-plus.svg);
+}
+.fa-power-off {
+    background-image: url(fa-power-off.svg);
+}
+.fa-print {
+    background-image: url(fa-print.svg);
+}
+.fa-puzzle-piece {
+    background-image: url(fa-puzzle-piece.svg);
+}
+.fa-qrcode {
+    background-image: url(fa-qrcode.svg);
+}
+.fa-question-circle {
+    background-image: url(fa-question-circle.svg);
+}
+.fa-question {
+    background-image: url(fa-question.svg);
+}
+.fa-quote-left {
+    background-image: url(fa-quote-left.svg);
+}
+.fa-quote-right {
+    background-image: url(fa-quote-right.svg);
+}
+.fa-random {
+    background-image: url(fa-random.svg);
+}
+.fa-refresh {
+    background-image: url(fa-refresh.svg);
+}
+.fa-renren {
+    background-image: url(fa-renren.svg);
+}
+.fa-reorder {
+    background-image: url(fa-reorder.svg);
+}
+.fa-repeat {
+    background-image: url(fa-repeat.svg);
+}
+.fa-reply {
+    background-image: url(fa-reply.svg);
+}
+.fa-resize-full {
+    background-image: url(fa-resize-full.svg);
+}
+.fa-resize-horizontal {
+    background-image: url(fa-resize-horizontal.svg);
+}
+.fa-resize-small {
+    background-image: url(fa-resize-small.svg);
+}
+.fa-resize-vertical {
+    background-image: url(fa-resize-vertical.svg);
+}
+.fa-retweet {
+    background-image: url(fa-retweet.svg);
+}
+.fa-road {
+    background-image: url(fa-road.svg);
+}
+.fa-rocket {
+    background-image: url(fa-rocket.svg);
+}
+.fa-rss-square {
+    background-image: url(fa-rss-square.svg);
+}
+.fa-rss {
+    background-image: url(fa-rss.svg);
+}
+.fa-rub {
+    background-image: url(fa-rub.svg);
+}
+.fa-scissors {
+    background-image: url(fa-scissors.svg);
+}
+.fa-search-minus {
+    background-image: url(fa-search-minus.svg);
+}
+.fa-search-plus {
+    background-image: url(fa-search-plus.svg);
+}
+.fa-search {
+    background-image: url(fa-search.svg);
+}
+.fa-share-square-o {
+    background-image: url(fa-share-square-o.svg);
+}
+.fa-share-square {
+    background-image: url(fa-share-square.svg);
+}
+.fa-share {
+    background-image: url(fa-share.svg);
+}
+.fa-shield {
+    background-image: url(fa-shield.svg);
+}
+.fa-shopping-cart {
+    background-image: url(fa-shopping-cart.svg);
+}
+.fa-sign-in {
+    background-image: url(fa-sign-in.svg);
+}
+.fa-sign-out {
+    background-image: url(fa-sign-out.svg);
+}
+.fa-signal {
+    background-image: url(fa-signal.svg);
+}
+.fa-sitemap {
+    background-image: url(fa-sitemap.svg);
+}
+.fa-skype {
+    background-image: url(fa-skype.svg);
+}
+.fa-smile-o {
+    background-image: url(fa-smile-o.svg);
+}
+.fa-sort-alpha-asc {
+    background-image: url(fa-sort-alpha-asc.svg);
+}
+.fa-sort-alpha-desc {
+    background-image: url(fa-sort-alpha-desc.svg);
+}
+.fa-sort-amount-asc {
+    background-image: url(fa-sort-amount-asc.svg);
+}
+.fa-sort-amount-desc {
+    background-image: url(fa-sort-amount-desc.svg);
+}
+.fa-sort-asc {
+    background-image: url(fa-sort-asc.svg);
+}
+.fa-sort-desc {
+    background-image: url(fa-sort-desc.svg);
+}
+.fa-sort-numeric-asc {
+    background-image: url(fa-sort-numeric-asc.svg);
+}
+.fa-sort-numeric-desc {
+    background-image: url(fa-sort-numeric-desc.svg);
+}
+.fa-sort {
+    background-image: url(fa-sort.svg);
+}
+.fa-spinner {
+    background-image: url(fa-spinner.svg);
+}
+.fa-square-o {
+    background-image: url(fa-square-o.svg);
+}
+.fa-square {
+    background-image: url(fa-square.svg);
+}
+.fa-stack-exchange {
+    background-image: url(fa-stack-exchange.svg);
+}
+.fa-stack-overflow {
+    background-image: url(fa-stack-overflow.svg);
+}
+.fa-star-half-o {
+    background-image: url(fa-star-half-o.svg);
+}
+.fa-star-half {
+    background-image: url(fa-star-half.svg);
+}
+.fa-star-o {
+    background-image: url(fa-star-o.svg);
+}
+.fa-star {
+    background-image: url(fa-star.svg);
+}
+.fa-step-backward {
+    background-image: url(fa-step-backward.svg);
+}
+.fa-step-forward {
+    background-image: url(fa-step-forward.svg);
+}
+.fa-stethoscope {
+    background-image: url(fa-stethoscope.svg);
+}
+.fa-stop {
+    background-image: url(fa-stop.svg);
+}
+.fa-strikethrough {
+    background-image: url(fa-strikethrough.svg);
+}
+.fa-subscript {
+    background-image: url(fa-subscript.svg);
+}
+.fa-suitcase {
+    background-image: url(fa-suitcase.svg);
+}
+.fa-sun-o {
+    background-image: url(fa-sun-o.svg);
+}
+.fa-superscript {
+    background-image: url(fa-superscript.svg);
+}
+.fa-table {
+    background-image: url(fa-table.svg);
+}
+.fa-tablet {
+    background-image: url(fa-tablet.svg);
+}
+.fa-tachometer {
+    background-image: url(fa-tachometer.svg);
+}
+.fa-tag {
+    background-image: url(fa-tag.svg);
+}
+.fa-tags {
+    background-image: url(fa-tags.svg);
+}
+.fa-tasks {
+    background-image: url(fa-tasks.svg);
+}
+.fa-terminal {
+    background-image: url(fa-terminal.svg);
+}
+.fa-text-height {
+    background-image: url(fa-text-height.svg);
+}
+.fa-text-width {
+    background-image: url(fa-text-width.svg);
+}
+.fa-th-large {
+    background-image: url(fa-th-large.svg);
+}
+.fa-th-list {
+    background-image: url(fa-th-list.svg);
+}
+.fa-th {
+    background-image: url(fa-th.svg);
+}
+.fa-thumb-tack {
+    background-image: url(fa-thumb-tack.svg);
+}
+.fa-thumbs-down {
+    background-image: url(fa-thumbs-down.svg);
+}
+.fa-thumbs-o-down {
+    background-image: url(fa-thumbs-o-down.svg);
+}
+.fa-thumbs-o-up {
+    background-image: url(fa-thumbs-o-up.svg);
+}
+.fa-thumbs-up {
+    background-image: url(fa-thumbs-up.svg);
+}
+.fa-ticket {
+    background-image: url(fa-ticket.svg);
+}
+.fa-times-circle-o {
+    background-image: url(fa-times-circle-o.svg);
+}
+.fa-times-circle {
+    background-image: url(fa-times-circle.svg);
+}
+.fa-times {
+    background-image: url(fa-times.svg);
+}
+.fa-tint {
+    background-image: url(fa-tint.svg);
+}
+.fa-trash-o {
+    background-image: url(fa-trash-o.svg);
+}
+.fa-trello {
+    background-image: url(fa-trello.svg);
+}
+.fa-trophy {
+    background-image: url(fa-trophy.svg);
+}
+.fa-truck {
+    background-image: url(fa-truck.svg);
+}
+.fa-try {
+    background-image: url(fa-try.svg);
+}
+.fa-tumblr-square {
+    background-image: url(fa-tumblr-square.svg);
+}
+.fa-tumblr {
+    background-image: url(fa-tumblr.svg);
+}
+.fa-twitter-square {
+    background-image: url(fa-twitter-square.svg);
+}
+.fa-twitter {
+    background-image: url(fa-twitter.svg);
+}
+.fa-umbrella {
+    background-image: url(fa-umbrella.svg);
+}
+.fa-underline {
+    background-image: url(fa-underline.svg);
+}
+.fa-undo {
+    background-image: url(fa-undo.svg);
+}
+.fa-unlock-o {
+    background-image: url(fa-unlock-o.svg);
+}
+.fa-unlock {
+    background-image: url(fa-unlock.svg);
+}
+.fa-upload {
+    background-image: url(fa-upload.svg);
+}
+.fa-usd {
+    background-image: url(fa-usd.svg);
+}
+.fa-user-md {
+    background-image: url(fa-user-md.svg);
+}
+.fa-user {
+    background-image: url(fa-user.svg);
+}
+.fa-video-camera {
+    background-image: url(fa-video-camera.svg);
+}
+.fa-vimeo-square {
+    background-image: url(fa-vimeo-square.svg);
+}
+.fa-vk {
+    background-image: url(fa-vk.svg);
+}
+.fa-volume-down {
+    background-image: url(fa-volume-down.svg);
+}
+.fa-volume-off {
+    background-image: url(fa-volume-off.svg);
+}
+.fa-volume-up {
+    background-image: url(fa-volume-up.svg);
+}
+.fa-weibo {
+    background-image: url(fa-weibo.svg);
+}
+.fa-wheelchair {
+    background-image: url(fa-wheelchair.svg);
+}
+.fa-windows {
+    background-image: url(fa-windows.svg);
+}
+.fa-wrench {
+    background-image: url(fa-wrench.svg);
+}
+.fa-xing-square {
+    background-image: url(fa-xing-square.svg);
+}
+.fa-xing {
+    background-image: url(fa-xing.svg);
+}
+.fa-youtube-play {
+    background-image: url(fa-youtube-play.svg);
+}
+.fa-youtube-square {
+    background-image: url(fa-youtube-square.svg);
+}
+.fa-youtube {
+    background-image: url(fa-youtube.svg);
 }
