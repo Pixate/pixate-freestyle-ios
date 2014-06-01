@@ -387,17 +387,21 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
 {
     // make sure we have a string - needed to filter bad input from IB
     aClass = [aClass description];
-
-    // trim leading and trailing whitespace
-    aClass = [aClass stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-
-    objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
+	
+	// reduce white spaces and duplicates
+	NSMutableSet *mutSet = [NSMutableSet new];
+	[mutSet addObjectsFromArray:[aClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+	[mutSet removeObject:@""];
 
     //Precalculate classes array for performance gain
-    NSArray *classes = [aClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSArray *classes = [mutSet allObjects];
     classes = [classes sortedArrayUsingComparator:^NSComparisonResult(NSString *class1, NSString *class2) {
         return [class1 compare:class2];
     }];
+	
+	aClass = [classes componentsJoinedByString:@" "];
+	objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
+	
     objc_setAssociatedObject(self, &STYLE_CLASSES_KEY, classes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
 	if ([aClass length])
