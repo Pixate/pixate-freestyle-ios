@@ -400,6 +400,13 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     }];
 	
 	aClass = [classes componentsJoinedByString:@" "];
+	
+	NSString *previousClass = objc_getAssociatedObject(self, &STYLE_CLASS_KEY);
+	if((!aClass && !previousClass) || [aClass isEqualToString:previousClass]){
+		// no change
+		return;
+	}
+	
 	objc_setAssociatedObject(self, &STYLE_CLASS_KEY, aClass, OBJC_ASSOCIATION_COPY_NONATOMIC);
 	
     objc_setAssociatedObject(self, &STYLE_CLASSES_KEY, classes, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
