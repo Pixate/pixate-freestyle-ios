@@ -72,13 +72,12 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([collectionView.dataSource isProxy] == NO)
-    {
-        NSLog(@"PXUICollectionView: dataSource is not a Pixate proxy class.");
-        return nil;
-    }
+    id baseObject = collectionView.dataSource;
     
-    id baseObject = [((PXProxy *) collectionView.dataSource) baseObject];
+    if([baseObject isProxy])
+    {
+        baseObject = [((PXProxy *) collectionView.dataSource) baseObject];
+    }
     
     // Make sure the base object has implemented the call
     if([baseObject respondsToSelector:@selector(collectionView:cellForItemAtIndexPath:)] == NO)
@@ -118,13 +117,12 @@
     // Set a default value in case we find nothing (per apple docs)
     CGSize itemSize = CGSizeMake(50, 50);
 
-    if([collectionView.delegate isProxy] == NO)
+    id baseObject = collectionView.delegate;
+    
+    if([baseObject isProxy])
     {
-        NSLog(@"PXUICollectionView: delegate is not a Pixate proxy class.");
-        return itemSize;
+        baseObject = [((PXProxy *) collectionView.delegate) baseObject];
     }
-
-    id baseObject = [((PXProxy *) collectionView.delegate) baseObject];
 
     // See if the base object implemented this call and if so, get the output
     if([baseObject respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)])
