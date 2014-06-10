@@ -389,13 +389,13 @@ static NSRegularExpression *DIGIT_WEIGHT;
         {
             result = 800;
         }
-        else if ([name rangeOfString:@"bold"].location != NSNotFound)
-        {
-            result = 700;
-        }
         else if ([name rangeOfString:@"semibold"].location != NSNotFound || [name rangeOfString:@"demibold"].location != NSNotFound)
         {
             result = 600;
+        }
+        else if ([name rangeOfString:@"bold"].location != NSNotFound)
+        {
+            result = 700;
         }
         else if ([name rangeOfString:@"medium"].location != NSNotFound)
         {
