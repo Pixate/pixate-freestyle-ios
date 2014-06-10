@@ -42,8 +42,11 @@ static char const STYLE_CHILDREN;
 
 @implementation PXUIProgressView
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUIProgressView.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"progress-view"];
 }
 

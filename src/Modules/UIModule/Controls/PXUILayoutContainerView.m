@@ -32,8 +32,11 @@
 @implementation PXUILayoutContainerView
 
 /* DISABLED
- + (void)load
+ + (void)initialize
 {
+    if (self != PXUILayoutContainerView.class)
+        return;
+ 
     [UIView registerDynamicSubclass:self
                            forClass:[PXUILayoutContainerView targetSuperclass]
                     withElementName:@"layout-container-view"];

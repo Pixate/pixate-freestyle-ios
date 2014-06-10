@@ -32,8 +32,11 @@
 @implementation PXUITableViewCellContentView
 
 /* DISABLED
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUITableViewCellContentView.class)
+        return;
+ 
     [UIView registerDynamicSubclass:self
                      forClass:[PXUITableViewCellContentView targetSuperclass]
                     withElementName:@"table-view-cell-content"];

@@ -42,8 +42,11 @@
 
 @implementation PXUIPageControl
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUIPageControl.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"page-control"];
 }
 

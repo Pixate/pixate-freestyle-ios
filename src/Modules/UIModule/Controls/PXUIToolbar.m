@@ -50,8 +50,11 @@ static NSDictionary *BUTTONS_PSEUDOCLASS_MAP;
 
 @implementation PXUIToolbar
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUIToolbar.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"toolbar"];
     
     BUTTONS_PSEUDOCLASS_MAP = @{

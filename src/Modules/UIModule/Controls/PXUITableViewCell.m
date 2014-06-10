@@ -71,8 +71,11 @@ static const char DETAIL_TEXT_LABEL_BACKGROUND_SET;
 
 @implementation PXUITableViewCell
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUITableViewCell.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"table-view-cell"];
     
     PSEUDOCLASS_MAP = @{

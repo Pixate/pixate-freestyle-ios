@@ -48,8 +48,11 @@ static const char STYLE_CHILDREN;
 
 @implementation PXUITextView
 
-+ (void)load
++ (void)initialize
 {
+    if (self != PXUITextView.class)
+        return;
+    
     [UIView registerDynamicSubclass:self withElementName:@"text-view"];
 }
 
