@@ -7,6 +7,7 @@
 //
 
 #import "ViewController2.h"
+#import "UIView+PXStyling.h"
 
 @interface ViewController2 ()
 
@@ -22,6 +23,7 @@
     [super viewDidLoad];
     
     _data = @[ @"Sally", @"Jane", @"Marry", @"Shannon" ];
+    NSLog(@"Parent style class: %@", self.navigationController.view.styleClass);
 }
 
 #pragma mark - Table view data source

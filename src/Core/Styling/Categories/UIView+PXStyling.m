@@ -584,6 +584,40 @@ static NSMutableArray *DYNAMIC_SUBCLASSES;
     return (value != nil) ? value : [super valueForUndefinedKey:key];
 }
 
+- (void)addStyleClass:(NSString *)styleClass
+{
+    if (self.styleClass){
+        self.styleClass = [NSString stringWithFormat:@"%@ %@", self.styleClass, [styleClass description]];
+    } else {
+        self.styleClass = [styleClass description];
+    }
+}
+
+- (void)removeStyleClass:(NSString *)styleClass
+{
+    styleClass = [styleClass description];
+    NSMutableSet *mutSet = [NSMutableSet new];
+	[mutSet addObjectsFromArray:[styleClass componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+	[mutSet removeObject:@""];
+    NSArray *classesToRemove = [mutSet allObjects];
+	NSArray *currentClasses = objc_getAssociatedObject(self, &STYLE_CLASSES_KEY);
+    mutSet = [[NSMutableSet alloc] initWithArray:currentClasses];
+    for (NSString *classToRemove in classesToRemove){
+        [mutSet removeObject:classToRemove];
+    }
+    NSArray *classes = [mutSet allObjects];
+	self.styleClass = [classes componentsJoinedByString:@" "];
+}
+
+- (void)styleClassed:(NSString *)styleClass enabled:(bool)enabled
+{
+	if(enabled){
+		[self addStyleClass:styleClass];
+	}else{
+		[self removeStyleClass:styleClass];
+	}
+}
+
 @end
 
 #pragma mark - Static Functions

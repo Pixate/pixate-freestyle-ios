@@ -1,25 +1,33 @@
-
-pixate-config {
-    cache-styles: all;
-}
-
 table-view-cell:selected{ 
     background-color: #4078BB;
 }
 
-table-view-cell {
+.main table-view {
+    row-height: 60px;
+}
+
+#t1 table-view-cell {
     background-color: yellow;
+}
+
+.correct table-view-cell {
+    background-color: green;
+}
+
+.error table-view-cell {
+    background-color: red;
+}
+
+table-view-headerfooter-view label {
+    font-size: 14;
+    font-family: "Gill Sans";
 }
 
 #t1 table-view-headerfooter-view label {
     color: blue;
-    font-size: 14;
-    font-family: "Gill Sans";
 }
 
 #t2 table-view-headerfooter-view label {
     color: red;
-    font-size: 14;
-    font-family: "Gill Sans";
 }
 
