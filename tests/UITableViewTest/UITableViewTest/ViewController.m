@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+PXStyling.h"
 
 @interface ViewController ()
 @end
@@ -47,6 +48,12 @@
     cell.textLabel.text = [_data objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.parentViewController.view styleClassed:@"correct" enabled:(indexPath.row == 0)];
+    [self.parentViewController.view styleClassed:@"error" enabled:(indexPath.row != 0)];
 }
 
 @end
