@@ -18,7 +18,7 @@
 
     [color getRed:&red green:&green blue:&blue alpha:&alpha];
 
-    return [self initWithRed:red green:green blue:blue alpha:alpha];
+    return [self initWithRed:red * 255.0 green:green * 255.0 blue:blue * 255.0 alpha:alpha];
 }
 
 - (id)initWithRed:(double)red green:(double)green blue:(double)blue
@@ -67,7 +67,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"rgba(%g,%g,%g,%g)", _red, _green, _blue, _alpha];
+    return [NSString stringWithFormat:@"rgba(%d,%d,%d,%g)", (int)_red, (int)_green, (int)_blue, _alpha];
 }
 
 @end

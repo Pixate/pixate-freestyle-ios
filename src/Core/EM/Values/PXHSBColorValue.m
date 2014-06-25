@@ -19,7 +19,7 @@
 
     [color getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
 
-    return [self initWithHue:hue saturation:saturation brightness:brightness alpha:alpha];
+    return [self initWithHue:hue * 360.0 saturation:saturation brightness:brightness alpha:alpha];
 }
 
 - (id)initWithHue:(double)hue saturation:(double)saturation brightness:(double)brightness
@@ -56,7 +56,7 @@
 
 - (UIColor *)colorValue
 {
-    return [UIColor colorWithHue:_hue saturation:_saturation brightness:_brightness alpha:_alpha];
+    return [UIColor colorWithHue:_hue / 360.0 saturation:_saturation brightness:_brightness alpha:_alpha];
 }
 
 - (PXHSBColorValue *)hsbColorValue

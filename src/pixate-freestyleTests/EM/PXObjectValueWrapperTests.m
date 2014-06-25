@@ -46,7 +46,7 @@
 
     id<PXExpressionValue> result = [wrapper valueForPropertyName:@"color"];
 
-    XCTAssertTrue([@"rgba(1,0,0,0)" isEqualToString:result.description], @"Colors do not match");
+    XCTAssertTrue([@"rgba(255,0,0,1)" isEqualToString:result.description], @"Colors do not match");
 }
 
 - (void)testColorSetterAutoWrapped
@@ -59,7 +59,7 @@
     [wrapper setValue:color forPropertyName:@"color"];
     id<PXExpressionValue> result = [wrapper valueForPropertyName:@"color"];
 
-    XCTAssertTrue([@"rgba(0.75,0.375,0.375,0)" isEqualToString:result.description], @"Colors do not match");
+    XCTAssertTrue([@"rgba(95,191,191,1)" isEqualToString:result.description], @"Colors do not match");
 }
 
 - (void)testColorValueGetterAutoWrapped
