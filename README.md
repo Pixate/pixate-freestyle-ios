@@ -102,7 +102,7 @@ You can build the style of your app piece-by-piece using the method above. For e
 
 ## Mailing List & Twitter
 
-Keep up with notifications and announcements by joining Pixate's [mailing list](http://pixatesurvey.herokuapp.com) and [follow us](http://twitter.com/Pixate) on Twitter.
+Keep up with notifications and announcements by joining Pixate's [mailing list](http://pixatesurvey.herokuapp.com) and [follow us](http://twitter.com/PixateFreestyle) on Twitter.
 
 ## Docs
 
