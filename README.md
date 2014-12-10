@@ -133,7 +133,7 @@ More information on the Apache License can be found here: [http://www.apache.org
 
 ## Support
 
-Pixate offers various levels of free and paid support. Please visit our [support site](http://www.pixate.com/support.html) for more details.
+Pixate offers various levels of free and paid support. Please visit our [support site](http://www.freestyle.org/support.html) for more details.
 
 ## License
 
