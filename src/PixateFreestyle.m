@@ -40,10 +40,6 @@
 #import "PXForceLoadControls.h"
 #import "PXForceLoadCGCategories.h"
 
-#import "PXObjectValueWrapper.h"
-#import "PXColorProperty.h"
-#import "PXColorValueProperty.h"
-
 @implementation PixateFreestyle
 {
     BOOL _refreshStylesWithOrientationChange;
@@ -63,10 +59,6 @@
     
     // Trigger our UI subclasses to load
     [PXForceLoadControls forceLoad];
-
-    NSString *encoding = [NSString stringWithCString:@encode(UIColor) encoding:NSUTF8StringEncoding];
-    [PXObjectValueWrapper addPropertyClass:[PXColorProperty class] forEncoding:encoding];
-    [PXObjectValueWrapper addPropertyClass:[PXColorValueProperty class] forEncoding:@"<PXExpressionColor>"];
 }
 
 + (PixateFreestyle *)sharedInstance
