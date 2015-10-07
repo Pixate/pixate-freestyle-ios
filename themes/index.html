@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="..//css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="..//js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+    <link href="..//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="..//js/html5shiv.js"></script>
+    <script src="..//js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link href="..//stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <![endif]-->
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="navbar-brand"><a href="..//index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span></a></div>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="..//">Getting Started</a></li>
+          <li class="active"><a href="..//themes/index.html">Themes</a></li>
+          <li><a href="..//style-reference/index.html">Style Reference</a></li>
+          <li><a href="..//dev-reference.html">Developer Reference</a></li>
+          <li><a href="https://github.com/pixate/pixate-freestyle-ios">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar">
+            <ul role="navigation" class="nav side-nav">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#using-themes">Using Themes</a></li>
+              <li><a href="#contributing">Contributing Themes</a></li>
+              <li><a href="#compiling">Compiling Sass</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9"><a id="introduction"></a><h1 id="freestyle-themes">Freestyle Themes</h1>
+<p>Pixate Freestyle allows you to style an entire iOS app with CSS, making an app themeable by applying different collections of CSS classes. Changing the theme of an app is as simple as switching out the CSS file used by the Pixate Freestyle framework.</p>
+<p><img src="assets/pixate_blue_typography.png" alt="My image">
+<img src="assets/pixate_blue_form_styles.png" alt="My image"></p>
+<a id="using-themes"></a><h2 id="using-themes">Using themes</h2>
+<p>If you haven&#39;t already, <a href="https://github.com/Pixate/pixate-freestyle-ios">add Pixate Freestyle to your app</a>.</p>
+<p>Themes consist of various classes that work with the Pixate Freestyle framework to style controls and views in your app. All themes have a default.css file which contains all of the styles included with the theme. A theme can also include a set of Sass files that compile into the default.css file. See more below in the  &#39;Compiling Sass&#39; section.</p>
+<h3 id="grab-a-theme">Grab a theme</h3>
+<p>You can browse a directory of existing themes in the <a href="https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes">Pixate Freestyle repo</a>. </p>
+<h3 id="add-the-theme-to-your-app">Add the theme to your app</h3>
+<p>If the theme contains <a href="http://sass-lang.com">Sass</a> files and you want to use them to make customization easier, add the files to your project. You will need to set up the Sass precompiler - see the &#39;Compiling Sass&#39; section below. This option makes it a lot easier to customize the styles, since it&#39;s completely modular. </p>
+<p>Otherwise, add the default.css file from the theme to your project. This contains all of the styles in the theme. </p>
+<p>Once the CSS or SCSS files are added, you can apply the contained classes to any relevant view or control by adding a <code>styleClass</code> runtime attribute in Interface Builder to the view or control, or importing <code>Pixate/Pixate.h</code> in your view controller and setting the <code>styleClass</code> property (e.g. <code>myButton.styleClass = @&quot;button small&quot;;</code>. The Pixate <a href="http://www.pixate.com/docs/framework/ios/latest/getting-started/#using_css">Getting Started</a> guide has more details on setting classes.</p>
+<a id="contributing"></a><h2 id="contributing-themes">Contributing themes</h2>
+<p>New theme contributions are welcome. We are working on a theme guideline and a base theme that everyone can clone and modify, but in the meantime, please use the control and class names included in the <a href="https://github.com/Pixate/pixate-freestyle-ios/tree/master/themes/pixate-blue">pixate-blue theme</a>. Your theme can style any set of controls or views, and must include the following:</p>
+<ul>
+<li>A default.css file containing every style in your theme</li>
+<li>A README.md file documenting the views and controls your theme styles, and ideally a screenshot of the theme in action</li>
+<li>Optional: Sass files that properly compile into a default.css file</li>
+</ul>
+<p>To contribute your theme:</p>
+<ol>
+<li><p><a href="http://help.github.com/fork-a-repo/">Fork</a> Pixate Freestyle, clone your fork,
+and configure the remotes:</p>
+<pre><code class="lang-bash"># Clone your fork of the repo into the current directory
+git clone https://github.com/&lt;your-username&gt;/pixate-freestyle-ios.git
+# Navigate to the newly cloned directory
+cd pixate-freestyle-ios
+# Assign the original repo to a remote called &quot;upstream&quot;
+git remote add upstream https://github.com/Pixate/pixate-freestyle-ios</code></pre>
+</li>
+<li><p>If you cloned a while ago, get the latest changes from upstream:</p>
+<pre><code class="lang-bash">git checkout master
+git pull upstream master</code></pre>
+</li>
+<li><p>Commit your new theme in the /themes directory</p>
+</li>
+<li><p>Push your topic branch up to your fork:</p>
+<pre><code class="lang-bash">git push origin master</code></pre>
+</li>
+<li><p><a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request</a>
+ with a clear title and description against the <code>master</code> branch.</p>
+</li>
+</ol>
+<p><strong>IMPORTANT</strong>: By submitting a theme, you agree to allow it to be
+licensed under the terms of the <a href="https://github.com/Pixate/pixate-freestyle-ios/blob/master/LICENSE">Apache 2.0 License</a>.</p>
+<a id="compiling"></a><h2 id="compiling-sass">Compiling Sass</h2>
+<p>A theme may include several <a href="http://sass-lang.com">Sass</a> files that, once compiled, generate the CSS that will be used by Pixate Freestyle. Sass allows themes to be modular. You can modify variables to theme the default styles, or edit any part of the Sass to your heart&#39;s content.</p>
+<p>You can simply grab the compiled CSS file from a theme and add it to your project (see <a href="/getting-started/index.html">Getting Started</a>), or you can follow these simple steps to compile the .scss files. Once you&#39;ve installed Freestyle and added a theme&#39;s Sass files to your application, do the following:</p>
+<ul>
+<li>Install <a href="http://sass-lang.com/install">Sass</a> - this requires Ruby, which you should already have if you&#39;re running OS X.</li>
+<li>If you already added the Freestyle default.css file to your project, remove it (it will be replaced by the compiled Sass files).</li>
+<li>Add all of the files in Freestyle/scss to your project in Xcode.</li>
+<li>In XCode, click on your project in the Project Navigator.  </li>
+<li>Click on the <code>Build Phases</code> tab.</li>
+<li>From the top menu under <code>Editor</code>, select <code>Add Build Phase</code>, then <code>Add Build Script Run Phase</code>.</li>
+<li>In the new Run Script field enter: </li>
+</ul>
+<pre><code>source /Users/${USER}/.rvm/environments/default
+${GEM_HOME}/bin/sass ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.scss ${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css</code></pre>
+<ul>
+<li>Do not put anything under <code>Input Files</code> or <code>Output Files</code></li>
+</ul>
+<p>Now, when you build your project, the Sass files should be compiled into a default.css file that will be used by the Pixate Framework. </p>
+
+        </div>
+      </div>
+    </div>
+    <script src="..//js/jquery.js"></script>
+    <script src="..//js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="..//js/google-code-prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+      
+    </script>
+    <script>
+      var _gaq=[['_setAccount','UA-32478444-1'],['_setDomainName', 'pixate.com'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+    </script>
+  </body>
+</html>

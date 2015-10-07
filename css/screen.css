@@ -1,0 +1,228 @@
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", Calibri, Lucida Grande, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #555556;
+  padding-top: 52px;
+  padding-bottom: 24px; }
+
+body strong {
+  font-weight: 600;
+  color: #303031; }
+
+h1, h2, h3 {
+  color: #303031;
+  font-family: "Open Sans", Calibri, Lucida Grande, Arial, sans-serif; }
+
+h1 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -1px;
+  padding-top: 60px;
+  margin-top: -60px;
+  margin-bottom: 12px; }
+
+h2 {
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 24px; }
+
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 24px; }
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal; }
+
+p {
+  margin-bottom: 24px; }
+
+code strong {
+  background-color: rgba(52, 255, 52, 0.2);
+  font-weight: normal; }
+
+.child-link code {
+  display: inline-block;
+  text-decoration: underline;
+  margin-right: 1em;
+  margin-bottom: 12px; }
+
+.navbar-brand {
+  padding: 0px 15px 0px 15px;
+  margin-left: 15px; }
+
+.pixate-logo-dark {
+  display: inline-block;
+  margin-top: 13px;
+  background: url("../img/freestyle-logo.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  height: 40px; }
+
+.logo-docs, .logo-docs:hover {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.btn-search {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -2px;
+  width: 40px;
+  float: right; }
+
+.input-search {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-style: none;
+  float: left; }
+
+.search-wrap {
+  padding-right: 40px;
+  height: auto; }
+
+.form-search {
+  margin-bottom: 0;
+  border-bottom-style: none; }
+
+.dev-iframe {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.extra-body-padding {
+  padding-top: 70px; }
+
+.nav.nav-tabs {
+  margin-bottom: 24px; }
+
+.nav .nav {
+  height: 0;
+  opacity: 0;
+  display: none;
+  margin-left: 1em; }
+
+.nav .nav.active {
+  height: auto;
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease-out; }
+
+.note {
+  font-style: italic; }
+
+.column-list {
+  clear: both; }
+
+.sidebar .nav li a {
+  font-size: 16px;
+  line-size: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.sidebar {
+  position: static;
+  width: 213px;
+  top: 0;
+  bottom: 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 48px;
+  padding-top: 16px; }
+  @media (min-width: 1200px) {
+    .sidebar {
+      width: 262px; } }
+
+.sidebar-fixed {
+  top: 52px; }
+
+.side-nav {
+  margin-top: 48px; }
+
+.screenshot {
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 24px; }
+
+.tab-label {
+  padding: 10px 15px 10px 0;
+  font-weight: 600;
+  margin: 0; }
+
+.screenshot.dark {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0; }
+
+.video-wrapper .video-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.property-table {
+  width: 100%; }
+
+.property-table td {
+  padding: 12px 0; }
+
+.property-table tr {
+  border-bottom: 1px solid #f7f7f7; }
+  .property-table tr:last-child {
+    border-bottom: none; }
+
+.property-name {
+  width: 35%;
+  min-width: 35%;
+  padding-right: 2em; }
+
+.property-value {
+  width: 65%;
+  min-width: 65%; }
+
+.property-comment {
+  display: block;
+  color: #AAA;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic; }
+
+@media (min-width: 992px) {
+  .content-wrapper {
+    position: fixed;
+    top: 52px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; } }
+
+#content {
+  background-color: white; }
+
+#content > ul > li {
+  padding: 0; }
+
+/*# sourceMappingURL=screen.css.map */

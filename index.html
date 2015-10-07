@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=".//css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href=".//js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet">
+    <link href=".//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src=".//js/html5shiv.js"></script>
+    <script src=".//js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link href=".//stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <title>Pixate Freestyle for iOS</title>
+  </head>
+  <body>
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="navbar-brand"><a href=".//index.html" class="logo-docs"><span class="pixate-logo-dark">Pixate</span></a></div>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href=".//">Getting Started</a></li>
+          <li><a href=".//themes/index.html">Themes</a></li>
+          <li><a href=".//style-reference/index.html">Style Reference</a></li>
+          <li><a href=".//dev-reference.html">Developer Reference</a></li>
+          <li><a href="https://github.com/pixate/pixate-freestyle-ios">GitHub</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar">
+            <ul role="navigation" class="nav side-nav">
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#getting-started">Getting Started</a></li>
+              <li><a href="#docs">Docs</a></li>
+              <li><a href="#compiling">Compiling Freestyle Source</a></li>
+              <li><a href="#contributing">Contributing</a></li>
+              <li><a href="#support">Support</a></li>
+              <li><a href="#license">License</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9"><a id="introduction"></a><h1 id="pixate-freestyle">Pixate Freestyle</h1>
+<p>Pixate Freestyle is a native iOS (and <a href="https://github.com/pixate/pixate-freestyle-android">Android</a>) library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of Objective-C with a few lines of CSS. This simplifies and centralizes your styling code, and <a href="http://www.pixate.com/">offers other benefits</a> as well.</p>
+<a id="getting-started"></a><h2 id="getting-started">Getting Started</h2>
+<h3 id="installation">Installation</h3>
+<p>There are several ways to download and install the Pixate Freestyle framework.</p>
+<p>The easiest is to <a href="http://www.pixate.com/downloads/freestyle/PixateFreestyle-2.1.2.pkg">download the installer</a>, which always contains the latest  version, and drag <strong>PixateFreestyle.framework</strong> into your Xcode project. Alternatively, you can download the framework file only (i.e. no samples) by going to the <a href="https://github.com/Pixate/pixate-freestyle-ios/releases">releases section</a> of this repo.</p>
+<p><em>NOTE: The installer will place the files into your <strong>Documents</strong> folder in a folder named <strong>PixateFreestyle</strong></em>. </p>
+<p> Once installed, add the following import to the top of your <strong>main.m</strong> file:</p>
+<pre><code>#import &lt;PixateFreestyle/PixateFreestyle.h&gt;</code></pre>
+<p>In the body of your main method, add the following line before the return:</p>
+<pre><code>[PixateFreestyle initializePixateFreestyle];</code></pre>
+<p>Your main method should look something like this:</p>
+<pre><code>int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        [PixateFreestyle initializePixateFreestyle];
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}</code></pre>
+<p>If you use <a href="http://cocoapods.org">CocoaPods</a>, install the Freestyle cocoapod by adding <strong>PixateFreestyle</strong> to your Podfile:</p>
+<pre><code>pod &#39;PixateFreestyle&#39;</code></pre>
+<h3 id="migrating-from-pixate-framework">Migrating from Pixate Framework</h3>
+<p>If you are migrating from the Pixate Framework, you’ll only need to make a few changes, namely updating your imports to use ‘PixateFreestyle’ and updating your initialization method in your main.m.</p>
+<p>In terms of your ‘#import” lines, just update them to read as follows:</p>
+<pre><code>#import &lt;PixateFreestyle/PixateFreestyle.h&gt;</code></pre>
+<p>And like the Installation step above, just change your main.m to look like the following, you no longer need to use a license key or user name.</p>
+<pre><code>#import &lt;PixateFreestyle/PixateFreestyle.h&gt;
+
+int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        [PixateFreestyle initializePixateFreestyle];
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}</code></pre>
+<h3 id="styling-apps-with-css">Styling Apps with CSS</h3>
+<p>Pixate Freestyle allows you to add IDs, Class&#39;es, and inline styles to your native components, and style them with CSS. Learn more about this <a href="http://pixate.github.io/pixate-freestyle-ios/style-reference/index.html#app_structure">here</a>.</p>
+<p>For now, let’s make a simple app that styles a single button. Follow <a href="http://player.vimeo.com/video/79832578">this short video</a> and then add the following CSS code to a new file, <code>default.css</code>, in your Xcode project.</p>
+<pre><code>```
+view {
+  background-color: #ffffff
+}
+
+.btn-green {
+  color            : #446620;
+  background-color : linear-gradient(#87c44a, #b4da77);
+  border-width     : 1px;
+  border-color     : #84a254;
+  border-style     : solid;
+  border-radius    : 10px;
+  font-size        : 13px;
+}
+```</code></pre>
+<h3 id="moving-faster-with-themes">Moving Faster with Themes</h3>
+<p>You can build the style of your app piece-by-piece using the method above. For even faster development, use a pre-built <a href="themes">Freestyle theme</a>. Themes have pre-built CSS and Sass that can be quickly customized to style an entire app. Learn more <a href="themes">here</a>.</p>
+<a id="docs"></a><h2 id="docs">Docs</h2>
+<p>You can find the latest Pixate Freestyle documentation <a href="http://pixate.github.io/pixate-freestyle-ios">here</a>.</p>
+<a id="compiling"></a><h2 id="compiling-freestyle-source">Compiling Freestyle Source</h2>
+<p>To compile the Pixate Freestyle source outside of Xcode or your project, just clone the repo and go into the <strong>scripts/</strong> directory. From there, run the &#39;<strong>build_framework.sh</strong>&#39; script. It will compile the framework and create a &quot;FAT&quot; binary and place it in a <strong>build/</strong> folder at the root level of the repo.</p>
+<a id="contributing"></a><h2 id="contributing">Contributing</h2>
+<p>Pixate welcomes contributions to our product. Just fork, make your changes, and submit a pull request. All contributors must sign a CLA (contributor license agreement).</p>
+<p>To contribute on behalf of yourself, sign the individual CLA here:</p>
+<p> <a href="http://www.pixate.com/cla-individual.html"><a href="http://www.pixate.com/cla-individual.html">http://www.pixate.com/cla-individual.html</a></a></p>
+<p>To contribute on behalf of your employer, sign the company CLA here:</p>
+<p> <a href="http://www.pixate.com/cla-company.html"><a href="http://www.pixate.com/cla-company.html">http://www.pixate.com/cla-company.html</a></a></p>
+<p>All contributions:</p>
+<ol>
+<li>MUST be be licensed using the Apache License, Version 2.0</li>
+<li>authors MAY retain copyright by adding their copyright notice to the appropriate flies</li>
+</ol>
+<p>More information on the Apache License can be found here: <a href="http://www.apache.org/foundation/license-faq.html"><a href="http://www.apache.org/foundation/license-faq.html">http://www.apache.org/foundation/license-faq.html</a></a></p>
+<a id="support"></a><h2 id="support">Support</h2>
+<p>Pixate offers various levels of free and paid support. Please visit our <a href="http://www.pixate.com/support.html">support site</a> for more details.</p>
+<a id="license"></a><h2 id="license">License</h2>
+<p>Except as otherwise noted, Pixate Freestyle for iOS is licensed under the Apache License, Version 2.0 (<a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a>).</p>
+
+        </div>
+      </div>
+    </div>
+    <script src=".//js/jquery.js"></script>
+    <script src=".//js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=".//js/google-code-prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+      
+    </script>
+    <script>
+      var _gaq=[['_setAccount','UA-32478444-1'],['_setDomainName', 'pixate.com'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+    </script>
+  </body>
+</html>
