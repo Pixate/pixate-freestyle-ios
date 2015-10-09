@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>DDLogger Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PixateFreestyle </a></h1>
+				<a id="developerHome" href="../index.html">Pixate, Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">DDLogger Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/didAddLogger">&nbsp;&nbsp;&nbsp;&nbsp;- didAddLogger</option>
+	
+	<option value="//api/name/flush">&nbsp;&nbsp;&nbsp;&nbsp;- flush</option>
+	
+	<option value="//api/name/logFormatter">&nbsp;&nbsp;&nbsp;&nbsp;- logFormatter</option>
+	
+	<option value="//api/name/loggerName">&nbsp;&nbsp;&nbsp;&nbsp;- loggerName</option>
+	
+	<option value="//api/name/loggerQueue">&nbsp;&nbsp;&nbsp;&nbsp;- loggerQueue</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didAddLogger">didAddLogger</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/flush">flush</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logFormatter">logFormatter</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loggerName">loggerName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loggerQueue">loggerQueue</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="DDLogger Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">DDLogger Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">DDLog.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logFormatter">&ndash;&nbsp;logFormatter</a></code>
+		<span class="tooltip"><p>Formatters may optionally be added to any logger.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didAddLogger">&ndash;&nbsp;didAddLogger</a></code>
+		<span class="tooltip"><p>Since logging is asynchronous, adding and removing loggers is also asynchronous.
+In other words, the loggers are added and removed at appropriate times with regards to log messages.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/flush">&ndash;&nbsp;flush</a></code>
+		<span class="tooltip"><p>Some loggers may buffer IO for optimization purposes.
+For example, a database logger may only save occasionaly as the disk IO is slow.
+In such loggers, this method should be implemented to flush any pending IO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loggerQueue">&ndash;&nbsp;loggerQueue</a></code>
+		<span class="tooltip"><p>Each logger is executed concurrently with respect to the other loggers.
+Thus, a dedicated dispatch queue is used for each logger.
+Logger implementations may optionally choose to provide their own dispatch queue.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loggerName">&ndash;&nbsp;loggerName</a></code>
+		<span class="tooltip"><p>If the logger implementation does not choose to provide its own queue,
+one will automatically be created for it.
+The created queue will receive its name from this method.
+This may be helpful for debugging or profiling reasons.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/didAddLogger" title="didAddLogger"></a>
+	<h3 class="subsubtitle method-title">didAddLogger</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Since logging is asynchronous, adding and removing loggers is also asynchronous.
+In other words, the loggers are added and removed at appropriate times with regards to log messages.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)didAddLogger</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Since logging is asynchronous, adding and removing loggers is also asynchronous.
+In other words, the loggers are added and removed at appropriate times with regards to log messages.</p>
+
+<ul>
+<li>Loggers will not receive log messages that were executed prior to when they were added.</li>
+<li>Loggers will not receive log messages that were executed after they were removed.</li>
+</ul>
+
+
+<p>These methods are executed in the logging thread/queue.
+This is the same thread/queue that will execute every logMessage: invocation.
+Loggers may use these methods for thread synchronization or other setup/teardown tasks.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DDLog.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/flush" title="flush"></a>
+	<h3 class="subsubtitle method-title">flush</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Some loggers may buffer IO for optimization purposes.
+For example, a database logger may only save occasionaly as the disk IO is slow.
+In such loggers, this method should be implemented to flush any pending IO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)flush</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Some loggers may buffer IO for optimization purposes.
+For example, a database logger may only save occasionaly as the disk IO is slow.
+In such loggers, this method should be implemented to flush any pending IO.</p>
+
+<p>This allows invocations of DDLog&rsquo;s flushLog method to be propogated to loggers that need it.</p>
+
+<p>Note that DDLog&rsquo;s flushLog method is invoked automatically when the application quits,
+and it may be also invoked manually by the developer prior to application crashes, or other such reasons.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DDLog.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/logFormatter" title="logFormatter"></a>
+	<h3 class="subsubtitle method-title">logFormatter</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Formatters may optionally be added to any logger.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;DDLogFormatter&gt;)logFormatter</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Formatters may optionally be added to any logger.</p>
+
+<p>If no formatter is set, the logger simply logs the message as it is given in logMessage,
+or it may use its own built in formatting style.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DDLog.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loggerName" title="loggerName"></a>
+	<h3 class="subsubtitle method-title">loggerName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If the logger implementation does not choose to provide its own queue,
+one will automatically be created for it.
+The created queue will receive its name from this method.
+This may be helpful for debugging or profiling reasons.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)loggerName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the logger implementation does not choose to provide its own queue,
+one will automatically be created for it.
+The created queue will receive its name from this method.
+This may be helpful for debugging or profiling reasons.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DDLog.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loggerQueue" title="loggerQueue"></a>
+	<h3 class="subsubtitle method-title">loggerQueue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Each logger is executed concurrently with respect to the other loggers.
+Thus, a dedicated dispatch queue is used for each logger.
+Logger implementations may optionally choose to provide their own dispatch queue.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (dispatch_queue_t)loggerQueue</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Each logger is executed concurrently with respect to the other loggers.
+Thus, a dedicated dispatch queue is used for each logger.
+Logger implementations may optionally choose to provide their own dispatch queue.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DDLog.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-04-02)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

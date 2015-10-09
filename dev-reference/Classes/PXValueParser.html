@@ -1,0 +1,1711 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>PXValueParser Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">PixateFreestyle </a></h1>
+				<a id="developerHome" href="../index.html">Pixate, Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">PXValueParser Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/lexemesForSource:">&nbsp;&nbsp;&nbsp;&nbsp;+ lexemesForSource:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/parseAnimationDirectionList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnimationDirectionList:</option>
+	
+	<option value="//api/name/parseAnimationFillModeList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnimationFillModeList:</option>
+	
+	<option value="//api/name/parseAnimationInfos:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnimationInfos:</option>
+	
+	<option value="//api/name/parseAnimationPlayStateList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnimationPlayStateList:</option>
+	
+	<option value="//api/name/parseAnimationTimingFunctionList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseAnimationTimingFunctionList:</option>
+	
+	<option value="//api/name/parseBorder:">&nbsp;&nbsp;&nbsp;&nbsp;- parseBorder:</option>
+	
+	<option value="//api/name/parseBorderRadiusList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseBorderRadiusList:</option>
+	
+	<option value="//api/name/parseBorderStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- parseBorderStyle:</option>
+	
+	<option value="//api/name/parseBorderStyleList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseBorderStyleList:</option>
+	
+	<option value="//api/name/parseColor:">&nbsp;&nbsp;&nbsp;&nbsp;- parseColor:</option>
+	
+	<option value="//api/name/parseFloat:">&nbsp;&nbsp;&nbsp;&nbsp;- parseFloat:</option>
+	
+	<option value="//api/name/parseFloatList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseFloatList:</option>
+	
+	<option value="//api/name/parseInsets:">&nbsp;&nbsp;&nbsp;&nbsp;- parseInsets:</option>
+	
+	<option value="//api/name/parseNameList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseNameList:</option>
+	
+	<option value="//api/name/parseOffsets:">&nbsp;&nbsp;&nbsp;&nbsp;- parseOffsets:</option>
+	
+	<option value="//api/name/parsePaint:">&nbsp;&nbsp;&nbsp;&nbsp;- parsePaint:</option>
+	
+	<option value="//api/name/parsePaints:">&nbsp;&nbsp;&nbsp;&nbsp;- parsePaints:</option>
+	
+	<option value="//api/name/parseSeconds:">&nbsp;&nbsp;&nbsp;&nbsp;- parseSeconds:</option>
+	
+	<option value="//api/name/parseSecondsList:">&nbsp;&nbsp;&nbsp;&nbsp;- parseSecondsList:</option>
+	
+	<option value="//api/name/parseShadow:">&nbsp;&nbsp;&nbsp;&nbsp;- parseShadow:</option>
+	
+	<option value="//api/name/parseSize:">&nbsp;&nbsp;&nbsp;&nbsp;- parseSize:</option>
+	
+	<option value="//api/name/parseTransitionInfos:">&nbsp;&nbsp;&nbsp;&nbsp;- parseTransitionInfos:</option>
+	
+	<option value="//api/name/parseURL:">&nbsp;&nbsp;&nbsp;&nbsp;- parseURL:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lexemesForSource:">lexemesForSource:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnimationDirectionList:">parseAnimationDirectionList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnimationFillModeList:">parseAnimationFillModeList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnimationInfos:">parseAnimationInfos:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnimationPlayStateList:">parseAnimationPlayStateList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseAnimationTimingFunctionList:">parseAnimationTimingFunctionList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseBorder:">parseBorder:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseBorderRadiusList:">parseBorderRadiusList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseBorderStyle:">parseBorderStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseBorderStyleList:">parseBorderStyleList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseColor:">parseColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseFloat:">parseFloat:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseFloatList:">parseFloatList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseInsets:">parseInsets:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseNameList:">parseNameList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseOffsets:">parseOffsets:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parsePaint:">parsePaint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parsePaints:">parsePaints:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseSeconds:">parseSeconds:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseSecondsList:">parseSecondsList:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseShadow:">parseShadow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseSize:">parseSize:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseTransitionInfos:">parseTransitionInfos:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseURL:">parseURL:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="PXValueParser Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">PXValueParser Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">PXParserBase</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">PXValueParser.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>PXValueParser is responsible for converting a list of lexemes into a concrete type. Since it is possible that the
+same sequence of tokens may represent different concrete values, it is up to the caller to designate which type is
+expected from the lexeme sequence.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lexemesForSource:">+&nbsp;lexemesForSource:</a></code>
+		<span class="tooltip"><p>Convert a source string into an array of lexemes.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseAnimationInfos:">&ndash;&nbsp;parseAnimationInfos:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of animation infos, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseTransitionInfos:">&ndash;&nbsp;parseTransitionInfos:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of transition infos, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseAnimationDirectionList:">&ndash;&nbsp;parseAnimationDirectionList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of animation directions, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseAnimationFillModeList:">&ndash;&nbsp;parseAnimationFillModeList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of animation file modes, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseAnimationPlayStateList:">&ndash;&nbsp;parseAnimationPlayStateList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of animation play states, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseAnimationTimingFunctionList:">&ndash;&nbsp;parseAnimationTimingFunctionList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of animation timing functions, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseBorder:">&ndash;&nbsp;parseBorder:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to border properties</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseBorderRadiusList:">&ndash;&nbsp;parseBorderRadiusList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of radii, each represented by a CGSize</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseBorderStyle:">&ndash;&nbsp;parseBorderStyle:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a border style</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseBorderStyleList:">&ndash;&nbsp;parseBorderStyleList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of border styles</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseColor:">&ndash;&nbsp;parseColor:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a color</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseFloat:">&ndash;&nbsp;parseFloat:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a float</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseFloatList:">&ndash;&nbsp;parseFloatList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of floats, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseNameList:">&ndash;&nbsp;parseNameList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of names, each separated by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parsePaint:">&ndash;&nbsp;parsePaint:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a paint</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parsePaints:">&ndash;&nbsp;parsePaints:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of paints, one for each side.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseSecondsList:">&ndash;&nbsp;parseSecondsList:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a list of seconds, each separatebed by a comma</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseShadow:">&ndash;&nbsp;parseShadow:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a shadow</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseSize:">&ndash;&nbsp;parseSize:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a size</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseSeconds:">&ndash;&nbsp;parseSeconds:</a></code>
+		<span class="tooltip"><p>Conver the lexeme array to seconds</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseURL:">&ndash;&nbsp;parseURL:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a URL</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseInsets:">&ndash;&nbsp;parseInsets:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a UIEdgeInset</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parseOffsets:">&ndash;&nbsp;parseOffsets:</a></code>
+		<span class="tooltip"><p>Convert the lexeme array to a PXOffsets</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/lexemesForSource:" title="lexemesForSource:"></a>
+	<h3 class="subsubtitle method-title">lexemesForSource:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a source string into an array of lexemes.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)lexemesForSource:(NSString *)<em>source</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>source</em></dt>
+			<dd><p>The source to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert a source string into an array of lexemes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/parseAnimationDirectionList:" title="parseAnimationDirectionList:"></a>
+	<h3 class="subsubtitle method-title">parseAnimationDirectionList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of animation directions, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnimationDirectionList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of animation directions, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseAnimationFillModeList:" title="parseAnimationFillModeList:"></a>
+	<h3 class="subsubtitle method-title">parseAnimationFillModeList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of animation file modes, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnimationFillModeList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of animation file modes, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseAnimationInfos:" title="parseAnimationInfos:"></a>
+	<h3 class="subsubtitle method-title">parseAnimationInfos:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of animation infos, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnimationInfos:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of animation infos, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseAnimationPlayStateList:" title="parseAnimationPlayStateList:"></a>
+	<h3 class="subsubtitle method-title">parseAnimationPlayStateList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of animation play states, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnimationPlayStateList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of animation play states, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseAnimationTimingFunctionList:" title="parseAnimationTimingFunctionList:"></a>
+	<h3 class="subsubtitle method-title">parseAnimationTimingFunctionList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of animation timing functions, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseAnimationTimingFunctionList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of animation timing functions, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseBorder:" title="parseBorder:"></a>
+	<h3 class="subsubtitle method-title">parseBorder:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to border properties</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (PXBorderInfo *)parseBorder:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to border properties</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseBorderRadiusList:" title="parseBorderRadiusList:"></a>
+	<h3 class="subsubtitle method-title">parseBorderRadiusList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of radii, each represented by a CGSize</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseBorderRadiusList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of radii, each represented by a CGSize</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseBorderStyle:" title="parseBorderStyle:"></a>
+	<h3 class="subsubtitle method-title">parseBorderStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a border style</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (PXBorderStyle)parseBorderStyle:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a border style</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseBorderStyleList:" title="parseBorderStyleList:"></a>
+	<h3 class="subsubtitle method-title">parseBorderStyleList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of border styles</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseBorderStyleList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of border styles</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseColor:" title="parseColor:"></a>
+	<h3 class="subsubtitle method-title">parseColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a color</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIColor *)parseColor:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a color</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseFloat:" title="parseFloat:"></a>
+	<h3 class="subsubtitle method-title">parseFloat:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a float</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)parseFloat:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a float</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseFloatList:" title="parseFloatList:"></a>
+	<h3 class="subsubtitle method-title">parseFloatList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of floats, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseFloatList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of floats, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseInsets:" title="parseInsets:"></a>
+	<h3 class="subsubtitle method-title">parseInsets:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a UIEdgeInset</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIEdgeInsets)parseInsets:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a UIEdgeInset</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseNameList:" title="parseNameList:"></a>
+	<h3 class="subsubtitle method-title">parseNameList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of names, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseNameList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexeme</em></dt>
+			<dd><p>An Array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of names, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseOffsets:" title="parseOffsets:"></a>
+	<h3 class="subsubtitle method-title">parseOffsets:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a PXOffsets</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (PXOffsets *)parseOffsets:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a PXOffsets</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parsePaint:" title="parsePaint:"></a>
+	<h3 class="subsubtitle method-title">parsePaint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a paint</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;PXPaint&gt;)parsePaint:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a paint</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parsePaints:" title="parsePaints:"></a>
+	<h3 class="subsubtitle method-title">parsePaints:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of paints, one for each side.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parsePaints:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of paints, one for each side.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseSeconds:" title="parseSeconds:"></a>
+	<h3 class="subsubtitle method-title">parseSeconds:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Conver the lexeme array to seconds</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)parseSeconds:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An Array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Conver the lexeme array to seconds</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseSecondsList:" title="parseSecondsList:"></a>
+	<h3 class="subsubtitle method-title">parseSecondsList:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of seconds, each separatebed by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseSecondsList:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of seconds, each separatebed by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseShadow:" title="parseShadow:"></a>
+	<h3 class="subsubtitle method-title">parseShadow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a shadow</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id&lt;PXShadowPaint&gt;)parseShadow:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a shadow</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseSize:" title="parseSize:"></a>
+	<h3 class="subsubtitle method-title">parseSize:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a size</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGSize)parseSize:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a size</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseTransitionInfos:" title="parseTransitionInfos:"></a>
+	<h3 class="subsubtitle method-title">parseTransitionInfos:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a list of transition infos, each separated by a comma</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)parseTransitionInfos:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a list of transition infos, each separated by a comma</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parseURL:" title="parseURL:"></a>
+	<h3 class="subsubtitle method-title">parseURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert the lexeme array to a URL</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSURL *)parseURL:(NSArray *)<em>lexemes</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>lexemes</em></dt>
+			<dd><p>An array of lexemes to convert</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Convert the lexeme array to a URL</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PXValueParser.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Pixate, Inc. All rights reserved. (Last updated: 2014-04-02)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
