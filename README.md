@@ -2,6 +2,8 @@
 
 Pixate Freestyle is a native iOS (and [Android](https://github.com/pixate/pixate-freestyle-android)) library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of Objective-C with a few lines of CSS. This simplifies and centralizes your styling code, and [offers other benefits](http://www.freestyle.org/) as well.
 
+> **Note: Pixate Freestyle iOS is no longer being directly supported. You may want to consider [StylingKit](https://github.com/StylingKit/StylingKit) which is a maintained (as of 2017-08) fork of Pixate Freestyle. Pixate Freestyle has problems with naming conflicts with some Apple classes on iOS 10 and 11.**
+
 ## Getting Started
 
 ### Installation
